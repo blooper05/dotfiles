@@ -25,9 +25,10 @@ NeoBundle 'taichouchou2/rsense-0.3', { 'build' : {
     \     'unix' : 'ruby etc/config.rb > ~/.rsense',
     \ } }
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 
+" NeoBundle 'Lokaltog/vim-powerline'
 " NeoBundle 'bling/vim-airline'
 " Neobundle 'Shougo/vimfiler.vim'
 " Neobundle 'Shougo/vimshell.vim'
@@ -66,6 +67,7 @@ language message C
 language time C
 " Show line number.
 set number
+nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
 " Show <TAB> and <CR>
 set list
 " Don't wrap long line.
