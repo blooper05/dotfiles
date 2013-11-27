@@ -28,8 +28,6 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 
-" NeoBundle 'Lokaltog/vim-powerline'
-" NeoBundle 'bling/vim-airline'
 " Neobundle 'Shougo/vimfiler.vim'
 " Neobundle 'Shougo/vimshell.vim'
 
@@ -70,7 +68,7 @@ language time C
 set number
 nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
 " Show <TAB> and <CR>
-set list
+" set list
 " Don't wrap long line.
 set nowrap
 " Always display statusline.
@@ -111,18 +109,18 @@ set autoindent
 " Enable smart indent.
 set smartindent
 " Substitute <Tab> with blanks.
-set tabstop=4
+set tabstop=2
 " Spaces instead <Tab>.
 set softtabstop=0
 " Auto indent width.
-set shiftwidth=4
+set shiftwidth=2
 
 " Auto Command {{{1
 
 " Automatically removing trailing spaces.
 autocmd BufWritePre * :%s/\s\+$//ge
 " Automatically replacing <Tab> by spaces.
-autocmd BufWritePre * :%s/\t/    /ge
+autocmd BufWritePre * :%s/\t/  /ge
 
 " Plugin {{{1
 
