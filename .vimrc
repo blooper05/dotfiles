@@ -19,15 +19,19 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'Shougo/neocomplcache-rsense'
 NeoBundle 'taichouchou2/rsense-0.3', { 'build' : {
     \     'unix' : 'ruby etc/config.rb > ~/.rsense',
     \ } }
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-haml'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 
+" NeoBundle 'Yggdroot/indentLine'
 " Neobundle 'Shougo/vimfiler.vim'
 " Neobundle 'Shougo/vimshell.vim'
 
@@ -205,6 +209,13 @@ let g:ref_refe_cmd = expand('~/.vim/ref/rubyrefm/refe-1_9_3')
 " neocomplcache-rsense {{{2
 " Set $RSENSE_HOME path.
 let g:neocomplcache#sources#rsense#home_directory = expand('~/.vim/bundle/rsense-0.3')
+
+" vim-rspec {{{2
+" Plugin key-mappings.
+nnoremap <silent> <Leader>c :call RunCurrentSpecFile()<CR>
+nnoremap <silent> <Leader>n :call RunNearestSpec()<CR>
+nnoremap <silent> <Leader>l :call RunLastSpec()<CR>
+nnoremap <silent> <Leader>a :call RunAllSpecs()<CR>
 
 " Folding {{{1
 
