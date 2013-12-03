@@ -202,6 +202,18 @@ let g:syntastic_enable_signs = 1
 " Automatically opne and close the location list.
 let g:syntastic_auto_loc_list = 2
 
+" vim-fugitive {{{2
+" The prefix key.
+nnoremap [git]    <Nop>
+nmap     <Space>g [git]
+" Plugin key-mappings.
+nnoremap <silent> [git]s :<C-u>Gstatus<CR>
+nnoremap <silent> [git]d :<C-u>Gdiff<CR>
+nnoremap <silent> [git]l :<C-u>Glog<CR>
+nnoremap <silent> [git]a :<C-u>Gwrite<CR>
+nnoremap <silent> [git]c :<C-u>Gcommit<CR>
+nnoremap <silent> [git]r :<C-u>Gread<CR>
+
 " vim-ref {{{2
 " Set the reference path.
 let g:ref_refe_cmd = expand('~/.vim/ref/rubyrefm/refe-1_9_3')
