@@ -43,7 +43,7 @@ NeoBundleCheck
 
 syntax enable
 set background=dark
-let g:solarized_termcolors = 256
+" let g:solarized_termcolors = 256
 let g:solarized_bold = 0
 let g:solarized_italic = 0
 let g:solarized_underline = 0
@@ -95,6 +95,9 @@ set splitright
 
 " Edit {{{1
 
+" Setting of the encoding to use for a save and reading.
+set encoding=utf-8
+set fileencodings=ucs-bom,iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 " Exchange tab to spaces.
 set expandtab
 " Enable backspace delete indent and newline.
