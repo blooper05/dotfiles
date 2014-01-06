@@ -75,6 +75,9 @@ nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
 " set list
 " Don't wrap long line.
 set nowrap
+" Highlight columns longer than 80 characters.
+highlight turn gui=standout cterm=standout
+call matchadd("turn", '.\%>81v')
 " Always display statusline.
 set laststatus=2
 " Show command on statusline.
@@ -216,6 +219,7 @@ nnoremap <silent> [git]l :<C-u>Glog<CR>
 nnoremap <silent> [git]a :<C-u>Gwrite<CR>
 nnoremap <silent> [git]c :<C-u>Gcommit<CR>
 nnoremap <silent> [git]r :<C-u>Gread<CR>
+nnoremap <silent> [git]b :<C-u>Gblame<CR>
 
 " vim-ref {{{2
 " Set the reference path.
@@ -231,6 +235,68 @@ nnoremap <silent> <Leader>c :call RunCurrentSpecFile()<CR>
 nnoremap <silent> <Leader>n :call RunNearestSpec()<CR>
 nnoremap <silent> <Leader>l :call RunLastSpec()<CR>
 nnoremap <silent> <Leader>a :call RunAllSpecs()<CR>
+
+" lightline.vim {{{2
+let g:lightline = {
+    \ 'colorscheme' : 'solarized',
+    \ 'mode_map'    : { 'c' : 'NORMAL' },
+    \ 'active'      : {
+    \   'left'      : [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+    \ },
+    \ 'component_function' : {
+    \   'modified'     : 'MyModified',
+    \   'readonly'     : 'MyReadonly',
+    \   'fugitive'     : 'MyFugitive',
+    \   'filename'     : 'MyFilename',
+    \   'fileformat'   : 'MyFileformat',
+    \   'filetype'     : 'MyFiletype',
+    \   'fileencoding' : 'MyFileencoding',
+    \   'mode'         : 'MyMode',
+    \ },
+    \ 'separator'    : { 'left' : '⮀', 'right' : '⮂' },
+    \ 'subseparator' : { 'left' : '⮁', 'right' : '⮃' }
+    \ }
+
+function! MyModified()
+  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+endfunction
+
+function! MyReadonly()
+  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '⭤' : ''
+endfunction
+
+function! MyFilename()
+  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+      \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
+      \  &ft == 'unite' ? unite#get_status_string() :
+      \  &ft == 'vimshell' ? vimshell#get_status_string() :
+      \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
+      \ ('' != MyModified() ? ' ' . MyModified() : '')
+endfunction
+
+function! MyFugitive()
+  if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
+    let _ = fugitive#head()
+    return strlen(_) ? '⭠ '._ : ''
+  endif
+  return ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? &fileformat : ''
+endfunction
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+endfunction
+
+function! MyFileencoding()
+  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+endfunction
+
+function! MyMode()
+  return winwidth(0) > 60 ? lightline#mode() : ''
+endfunction
 
 " Folding {{{1
 
