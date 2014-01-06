@@ -11,7 +11,7 @@ colorscheme solarized
 
 " gVim {{{1
 
-set guifont=M+2VM+IPAG\ circle:h14
+set guifont=Ricty\ for\ Powerline:h14
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
