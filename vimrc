@@ -11,10 +11,17 @@ NeoBundle 'Shougo/vimproc', { 'build' : {
     \ } }
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'tpope/vim-endwise'
+NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'anyakichi/vim-surround'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'tsukkee/unite-help'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
@@ -24,6 +31,7 @@ NeoBundle 'taichouchou2/rsense-0.3', { 'build' : {
     \     'unix' : 'ruby etc/config.rb > ~/.rsense',
     \ } }
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'basyura/unite-rails'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'itchyny/lightline.vim'
@@ -31,7 +39,6 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 " NeoBundle 'Yggdroot/indentLine'
 " Neobundle 'Shougo/vimfiler.vim'
-" Neobundle 'Shougo/vimshell.vim'
 
 filetype plugin indent on
 
@@ -101,6 +108,9 @@ set splitright
 " Setting of the encoding to use for a save and reading.
 set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp,utf-8,cp932,euc-jp,default,latin
+" Edit and reload vimrc immediately.
+nnoremap <silent> <F5> :<C-u>tabnew $MYVIMRC<CR>
+nnoremap <silent> <F6> :<C-u>source $MYVIMRC<CR>
 " Exchange tab to spaces.
 set expandtab
 " Enable backspace delete indent and newline.
@@ -170,6 +180,16 @@ function! s:my_cr_function()
   return neocomplcache#smart_close_popup() . "\<CR>"
 endfunction
 
+" switch.vim {{{2
+" Plugin key-mappings.
+nnoremap <silent> - :Switch<CR>
+
+" vimshell.vim {{{2
+let g:vimshell_prompt_expr = 'getcwd()." > "'
+let g:vimshell_prompt_pattern = '^\f\+ > '
+" Plugin key-mappings.
+nnoremap <silent> <Space>s :VimShellPop<CR>
+
 " unite.vim {{{2
 " Start in insert mode.
 let g:unite_enable_start_insert = 1
@@ -179,28 +199,31 @@ let g:unite_enable_split_vertically = 1
 nnoremap [unite]  <Nop>
 nmap     <Space>u [unite]
 " Plugin key-mappings.
+nnoremap <silent> [unite]f   :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
-nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
-nnoremap <silent> [unite]r   :<C-u>Unite register<CR>
-nnoremap <silent> [unite]o   :<C-u>Unite outline<CR>
+nnoremap <silent> [unite]g   :<C-u>Unite grep<CR>
 nnoremap <silent> [unite]u   :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]d   :<C-u>Unite directory_mru<CR>
+nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]r   :<C-u>Unite register<CR>
 nnoremap <silent> [unite]k   :<C-u>Unite bookmark<CR>
-nnoremap <silent> [unite]s   :<C-u>Unite source<CR>
-nnoremap <silent> [unite]f   :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> [unite]g   :<C-u>Unite grep<CR>
-nnoremap <silent> [unite]h   :<C-u>Unite help<CR>
-nnoremap <silent> [unite];   :<C-u>Unite history/command<CR>
-nnoremap <silent> [unite]/   :<C-u>Unite history/search<CR>
-nnoremap <silent> [unite]y   :<C-u>Unite history/yank<CR>
 nnoremap <silent> [unite]a   :<C-u>UniteBookmarkAdd<CR>
-nnoremap <silent> [unite]n   :<C-u>Unite neobundle/install:!<CR>
-nnoremap <silent> [unite]e   :<C-u>Unite snippet<CR>
-nnoremap <silent> [unite]q   :<C-u>Unite quickfix<CR>
-" nnoremap <silent> [unite]p   :<C-u>Unite ref/perldoc<CR>
-nnoremap <silent> [unite]p   :<C-u>Unite ref/refe<CR>
+nnoremap <silent> [unite]h   :<C-u>Unite help<CR>
+nnoremap <silent> [unite]e   :<C-u>Unite ref/refe<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite mapping<CR>
-nnoremap <silent> [unite]l   :<C-u>Unite colorscheme -auto-preview<CR>
+nnoremap <silent> [unite]s   :<C-u>Unite neosnippet<CR>
+
+" unite-rails {{{2
+" The prefix key.
+nnoremap [rails]  <Nop>
+nmap     <Space>r [rails]
+" Plugin key-mappings.
+nnoremap <silent> [rails]m   :<C-u>Unite rails/model<CR>
+nnoremap <silent> [rails]v   :<C-u>Unite rails/view<CR>
+nnoremap <silent> [rails]c   :<C-u>Unite rails/controller<CR>
+nnoremap <silent> [rails]s   :<C-u>Unite rails/spec<CR>
+nnoremap <silent> [rails]g   :<C-u>Unite rails/config<CR>
+nnoremap <silent> [rails]l   :<C-u>Unite rails/log<CR>
 
 " syntastic {{{2
 " Use the :sign interface to note errors.
