@@ -1,9 +1,7 @@
 " NeoBundle {{{1
 
-set nocompatible
-
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
@@ -47,7 +45,7 @@ set background=dark
 let g:solarized_bold = 0
 let g:solarized_italic = 0
 let g:solarized_underline = 0
-let g:solarized_visibility = 'low'
+" let g:solarized_visibility = 'low'
 colorscheme solarized
 
 " Search {{{1
@@ -61,7 +59,7 @@ set incsearch
 " Highlight search result.
 set hlsearch
 " Clear highlight.
-nnoremap <ESC><ESC> :nohlsearch <CR>
+nnoremap <silent> <ESC><ESC> :nohlsearch <CR>
 
 " View {{{1
 
@@ -72,7 +70,7 @@ language time C
 set number
 nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
 " Show <TAB> and <CR>
-" set list
+set list
 " Don't wrap long line.
 set nowrap
 " Highlight columns longer than 80 characters.
@@ -91,6 +89,8 @@ set wildmenu
 set wildmode=list:longest,full
 " Highlight current line.
 set cursorline
+autocmd WinEnter,BufRead * set cursorline
+autocmd WinLeave * set nocursorline
 " Splitting a window will put the new window below the current one.
 set splitbelow
 " Splitting a window will put the new window right the current one.
@@ -160,14 +160,14 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
     \: "\<TAB>"
 " For snippet_complete marker.
 if has('conceal')
-    set conceallevel=2 concealcursor=i
+  set conceallevel=2 concealcursor=i
 endif
 
 " vim-endwise {{{2
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-    return neocomplcache#smart_close_popup() . "\<CR>"
+  return neocomplcache#smart_close_popup() . "\<CR>"
 endfunction
 
 " unite.vim {{{2
@@ -176,7 +176,7 @@ let g:unite_enable_start_insert = 1
 " Start in vsplit mode.
 let g:unite_enable_split_vertically = 1
 " The prefix key.
-nnoremap [unite]    <Nop>
+nnoremap [unite]  <Nop>
 nmap     <Space>u [unite]
 " Plugin key-mappings.
 nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
@@ -205,7 +205,7 @@ nnoremap <silent> [unite]l   :<C-u>Unite colorscheme -auto-preview<CR>
 " syntastic {{{2
 " Use the :sign interface to note errors.
 let g:syntastic_enable_signs = 1
-" Automatically opne and close the location list.
+" Automatically open and close the location list.
 let g:syntastic_auto_loc_list = 2
 
 " vim-fugitive {{{2
