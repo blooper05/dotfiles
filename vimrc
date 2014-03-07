@@ -32,6 +32,7 @@ NeoBundle 'taichouchou2/rsense-0.3', { 'build' : {
     \ } }
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
+NeoBundle 'Keithbsmiley/rspec.vim'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'itchyny/lightline.vim'
