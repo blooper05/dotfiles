@@ -25,6 +25,7 @@ NeoBundle 'tsukkee/unite-help'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'Shougo/neocomplcache-rsense'
 NeoBundle 'taichouchou2/rsense-0.3', { 'build' : {
@@ -35,6 +36,8 @@ NeoBundle 'basyura/unite-rails'
 NeoBundle 'Keithbsmiley/rspec.vim'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 
@@ -189,7 +192,7 @@ nnoremap <silent> - :Switch<CR>
 let g:vimshell_prompt_expr = 'getcwd()." > "'
 let g:vimshell_prompt_pattern = '^\f\+ > '
 " Plugin key-mappings.
-nnoremap <silent> <Space>s :VimShellPop<CR>
+nnoremap <silent> <Space>s :VimShellTab<CR>
 
 " unite.vim {{{2
 " Start in insert mode.
@@ -259,6 +262,10 @@ nnoremap <silent> <Leader>c :call RunCurrentSpecFile()<CR>
 nnoremap <silent> <Leader>n :call RunNearestSpec()<CR>
 nnoremap <silent> <Leader>l :call RunLastSpec()<CR>
 nnoremap <silent> <Leader>a :call RunAllSpecs()<CR>
+
+" simple-javascript-indenter {{{2
+let g:SimpleJsIndenter_BriefMode = 1
+let g:SimpleJsIndenter_CaseIndentLevel = -1
 
 " lightline.vim {{{2
 let g:lightline = {
