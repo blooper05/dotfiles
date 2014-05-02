@@ -38,11 +38,13 @@ NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
+NeoBundle 'mklabs/vim-backbone'
+NeoBundle 'kakkyz81/evervim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 
 " NeoBundle 'Yggdroot/indentLine'
-" Neobundle 'Shougo/vimfiler.vim'
+" NeoBundle 'Shougo/vimfiler.vim'
 
 filetype plugin indent on
 
@@ -242,11 +244,14 @@ nmap     <Space>g [git]
 " Plugin key-mappings.
 nnoremap <silent> [git]s :<C-u>Gstatus<CR>
 nnoremap <silent> [git]d :<C-u>Gdiff<CR>
-nnoremap <silent> [git]l :<C-u>Glog<CR>
 nnoremap <silent> [git]a :<C-u>Gwrite<CR>
 nnoremap <silent> [git]c :<C-u>Gcommit<CR>
 nnoremap <silent> [git]r :<C-u>Gread<CR>
 nnoremap <silent> [git]b :<C-u>Gblame<CR>
+
+" gitv {{{2
+nnoremap <silent> [git]l :<C-u>Gitv<CR>
+nnoremap <silent> [git]f :<C-u>Gitv!<CR>
 
 " vim-ref {{{2
 " Set the reference path.

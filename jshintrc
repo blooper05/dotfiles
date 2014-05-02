@@ -1,0 +1,17 @@
+{
+  "bitwise"  : true,
+  "camelcase": true,
+  "curly"    : true,
+  "eqeqeq"   : true,
+  "indent"   : 2,
+  "latedef"  : true,
+  "newcap"   : true,
+  "noarg"    : true,
+  "noempty"  : true,
+  "undef"    : true,
+  "unused"   : true,
+  "strict"   : true,
+  "trailing" : true,
+  "maxlen"   : 80,
+  "devel"    : true
+}
