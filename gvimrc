@@ -24,6 +24,7 @@ if has('multi_byte_ime') || has('xim')
 endif
 set nobackup
 set noswapfile
+set noundofile
 set clipboard+=unnamed
 
 " Folding {{{1
