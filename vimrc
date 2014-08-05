@@ -18,6 +18,8 @@ NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'anyakichi/vim-surround'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'sjl/gundo.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
@@ -102,9 +104,9 @@ set ruler
 set wildmenu
 set wildmode=list:longest,full
 " Highlight current line.
-set cursorline
-autocmd WinEnter,BufRead * set cursorline
-autocmd WinLeave * set nocursorline
+" set cursorline
+" autocmd WinEnter,BufRead * set cursorline
+" autocmd WinLeave * set nocursorline
 " Splitting a window will put the new window below the current one.
 set splitbelow
 " Splitting a window will put the new window right the current one.
@@ -191,6 +193,12 @@ endfunction
 " Plugin key-mappings.
 nnoremap <silent> - :Switch<CR>
 
+" vim-easy-align {{{2
+" Start interactive EasyAlign in visual mode
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object
+nmap <Leader>z <Plug>(EasyAlign)
+
 " vimshell.vim {{{2
 let g:vimshell_prompt_expr = 'getcwd()." > "'
 let g:vimshell_prompt_pattern = '^\f\+ > '
@@ -220,6 +228,17 @@ nnoremap <silent> [unite]e   :<C-u>Unite ref/refe<CR>
 nnoremap <silent> [unite]m   :<C-u>Unite mapping<CR>
 nnoremap <silent> [unite]s   :<C-u>Unite neosnippet<CR>
 
+call unite#custom_default_action('file', 'tabdrop')
+call unite#custom#profile('action', 'context', {
+      \ 'start_insert' : 1
+      \ })
+
+if executable('ag')
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+    let g:unite_source_grep_recursive_opt = ''
+endif
+
 " unite-rails {{{2
 " The prefix key.
 nnoremap [rails]  <Nop>
@@ -237,6 +256,7 @@ nnoremap <silent> [rails]l   :<C-u>Unite rails/log<CR>
 let g:syntastic_enable_signs = 1
 " Automatically open and close the location list.
 let g:syntastic_auto_loc_list = 2
+let g:syntastic_ruby_checkers = ['rubocop']
 
 " vim-fugitive {{{2
 " The prefix key.
@@ -268,6 +288,7 @@ nnoremap <silent> <Leader>c :call RunCurrentSpecFile()<CR>
 nnoremap <silent> <Leader>n :call RunNearestSpec()<CR>
 nnoremap <silent> <Leader>l :call RunLastSpec()<CR>
 nnoremap <silent> <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = '!bundle exec rspec -fd -c {spec}'
 
 " simple-javascript-indenter {{{2
 let g:SimpleJsIndenter_BriefMode = 1
