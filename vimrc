@@ -68,12 +68,16 @@ colorscheme solarized
 
 " Ignore the case of normal letters.
 set ignorecase
+
 " If the search pattern contains upper case characters, override ignorecase option.
 set smartcase
+
 " Enable incremental search.
 set incsearch
+
 " Highlight search result.
 set hlsearch
+
 " Clear highlight.
 nnoremap <silent> <ESC><ESC> :nohlsearch <CR>
 
@@ -82,33 +86,45 @@ nnoremap <silent> <ESC><ESC> :nohlsearch <CR>
 " Use English interface.
 language message C
 language time C
+
 " Show line number.
 set number
-nnoremap <F3> :<C-u>setlocal relativenumber!<CR>
+nnoremap <silent><F3> :<C-u>setlocal relativenumber!<CR>
+
 " Show <TAB> and <CR>
 set list
+
 " Don't wrap long line.
 set nowrap
-" Highlight columns longer than 80 characters.
-highlight turn gui=standout cterm=standout
-call matchadd("turn", '.\%>81v')
+
 " Always display statusline.
 set laststatus=2
+
 " Show command on statusline.
 set showcmd
+
 " Show title.
 set title
+
 " Show line and column display.
 set ruler
+
 " Enable wildmode.
 set wildmenu
 set wildmode=list:longest,full
-" Highlight current line.
+
+" " Highlight current line.
 " set cursorline
 " autocmd WinEnter,BufRead * set cursorline
 " autocmd WinLeave * set nocursorline
+
+" Highlight columns longer than 80 characters.
+highlight turn gui=standout cterm=standout
+call matchadd("turn", '.\%>81v')
+
 " Splitting a window will put the new window below the current one.
 set splitbelow
+
 " Splitting a window will put the new window right the current one.
 set splitright
 
@@ -117,17 +133,23 @@ set splitright
 " Setting of the encoding to use for a save and reading.
 set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp,utf-8,cp932,euc-jp,default,latin
-" Edit and reload vimrc immediately.
-nnoremap <silent> <F5> :<C-u>tabnew $MYVIMRC<CR>
-nnoremap <silent> <F6> :<C-u>source $MYVIMRC<CR>
+
 " Exchange tab to spaces.
 set expandtab
+
 " Enable backspace delete indent and newline.
 set backspace=indent,eol,start
+
 " Highlight parenthesis.
 set showmatch
+
 " Ignore case on insert completion.
 set infercase
+
+" Edit and reload vimrc immediately.
+nnoremap <silent><F5> :<C-u>tab drop $MYVIMRC<CR>
+nnoremap <silent><F6> :<C-u>source $MYVIMRC<CR>
+
 " Insert blank line in normal mode.
 nnoremap <CR> o<ESC>
 
@@ -135,12 +157,16 @@ nnoremap <CR> o<ESC>
 
 " Enable auto indent.
 set autoindent
+
 " Enable smart indent.
 set smartindent
+
 " Substitute <Tab> with blanks.
 set tabstop=2
+
 " Spaces instead <Tab>.
 set softtabstop=0
+
 " Auto indent width.
 set shiftwidth=2
 
@@ -148,6 +174,7 @@ set shiftwidth=2
 
 " Automatically removing trailing spaces.
 autocmd BufWritePre * :%s/\s\+$//ge
+
 " Automatically replacing <Tab> by spaces.
 autocmd BufWritePre * :%s/\t/  /ge
 
@@ -184,14 +211,14 @@ endif
 
 " vim-endwise {{{2
 " <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+inoremap <silent><CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
   return neocomplcache#smart_close_popup() . "\<CR>"
 endfunction
 
 " switch.vim {{{2
 " Plugin key-mappings.
-nnoremap <silent> - :Switch<CR>
+nnoremap <silent>- :Switch<CR>
 
 " vim-easy-align {{{2
 " Start interactive EasyAlign in visual mode
@@ -203,7 +230,7 @@ nmap <Leader>z <Plug>(EasyAlign)
 let g:vimshell_prompt_expr = 'getcwd()." > "'
 let g:vimshell_prompt_pattern = '^\f\+ > '
 " Plugin key-mappings.
-nnoremap <silent> <Space>s :VimShellTab<CR>
+nnoremap <silent><Space>s :VimShellTab<CR>
 
 " unite.vim {{{2
 " Start in insert mode.
@@ -214,19 +241,19 @@ let g:unite_enable_split_vertically = 1
 nnoremap [unite]  <Nop>
 nmap     <Space>u [unite]
 " Plugin key-mappings.
-nnoremap <silent> [unite]f   :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> [unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
-nnoremap <silent> [unite]g   :<C-u>Unite grep<CR>
-nnoremap <silent> [unite]u   :<C-u>Unite file_mru<CR>
-nnoremap <silent> [unite]d   :<C-u>Unite directory_mru<CR>
-nnoremap <silent> [unite]b   :<C-u>Unite buffer<CR>
-nnoremap <silent> [unite]r   :<C-u>Unite register<CR>
-nnoremap <silent> [unite]k   :<C-u>Unite bookmark<CR>
-nnoremap <silent> [unite]a   :<C-u>UniteBookmarkAdd<CR>
-nnoremap <silent> [unite]h   :<C-u>Unite help<CR>
-nnoremap <silent> [unite]e   :<C-u>Unite ref/refe<CR>
-nnoremap <silent> [unite]m   :<C-u>Unite mapping<CR>
-nnoremap <silent> [unite]s   :<C-u>Unite neosnippet<CR>
+nnoremap <silent>[unite]f   :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent>[unite]c   :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent>[unite]g   :<C-u>Unite grep<CR>
+nnoremap <silent>[unite]u   :<C-u>Unite file_mru<CR>
+nnoremap <silent>[unite]d   :<C-u>Unite directory_mru<CR>
+nnoremap <silent>[unite]b   :<C-u>Unite buffer<CR>
+nnoremap <silent>[unite]r   :<C-u>Unite register<CR>
+nnoremap <silent>[unite]k   :<C-u>Unite bookmark<CR>
+nnoremap <silent>[unite]a   :<C-u>UniteBookmarkAdd<CR>
+nnoremap <silent>[unite]h   :<C-u>Unite help<CR>
+nnoremap <silent>[unite]e   :<C-u>Unite ref/refe<CR>
+nnoremap <silent>[unite]m   :<C-u>Unite mapping<CR>
+nnoremap <silent>[unite]s   :<C-u>Unite neosnippet<CR>
 
 call unite#custom_default_action('file', 'tabdrop')
 call unite#custom#profile('action', 'context', {
@@ -244,12 +271,12 @@ endif
 nnoremap [rails]  <Nop>
 nmap     <Space>r [rails]
 " Plugin key-mappings.
-nnoremap <silent> [rails]m   :<C-u>Unite rails/model<CR>
-nnoremap <silent> [rails]v   :<C-u>Unite rails/view<CR>
-nnoremap <silent> [rails]c   :<C-u>Unite rails/controller<CR>
-nnoremap <silent> [rails]s   :<C-u>Unite rails/spec<CR>
-nnoremap <silent> [rails]g   :<C-u>Unite rails/config<CR>
-nnoremap <silent> [rails]l   :<C-u>Unite rails/log<CR>
+nnoremap <silent>[rails]m   :<C-u>Unite rails/model<CR>
+nnoremap <silent>[rails]v   :<C-u>Unite rails/view<CR>
+nnoremap <silent>[rails]c   :<C-u>Unite rails/controller<CR>
+nnoremap <silent>[rails]s   :<C-u>Unite rails/spec<CR>
+nnoremap <silent>[rails]g   :<C-u>Unite rails/config<CR>
+nnoremap <silent>[rails]l   :<C-u>Unite rails/log<CR>
 
 " syntastic {{{2
 " Use the :sign interface to note errors.
@@ -263,16 +290,16 @@ let g:syntastic_ruby_checkers = ['rubocop']
 nnoremap [git]    <Nop>
 nmap     <Space>g [git]
 " Plugin key-mappings.
-nnoremap <silent> [git]s :<C-u>Gstatus<CR>
-nnoremap <silent> [git]d :<C-u>Gdiff<CR>
-nnoremap <silent> [git]a :<C-u>Gwrite<CR>
-nnoremap <silent> [git]c :<C-u>Gcommit<CR>
-nnoremap <silent> [git]r :<C-u>Gread<CR>
-nnoremap <silent> [git]b :<C-u>Gblame<CR>
+nnoremap <silent>[git]s :<C-u>Gstatus<CR>
+nnoremap <silent>[git]d :<C-u>Gdiff<CR>
+nnoremap <silent>[git]a :<C-u>Gwrite<CR>
+nnoremap <silent>[git]c :<C-u>Gcommit<CR>
+nnoremap <silent>[git]r :<C-u>Gread<CR>
+nnoremap <silent>[git]b :<C-u>Gblame<CR>
 
 " gitv {{{2
-nnoremap <silent> [git]l :<C-u>Gitv<CR>
-nnoremap <silent> [git]f :<C-u>Gitv!<CR>
+nnoremap <silent>[git]l :<C-u>Gitv<CR>
+nnoremap <silent>[git]f :<C-u>Gitv!<CR>
 
 " vim-ref {{{2
 " Set the reference path.
@@ -284,10 +311,10 @@ let g:neocomplcache#sources#rsense#home_directory = expand('~/.vim/bundle/rsense
 
 " vim-rspec {{{2
 " Plugin key-mappings.
-nnoremap <silent> <Leader>c :call RunCurrentSpecFile()<CR>
-nnoremap <silent> <Leader>n :call RunNearestSpec()<CR>
-nnoremap <silent> <Leader>l :call RunLastSpec()<CR>
-nnoremap <silent> <Leader>a :call RunAllSpecs()<CR>
+nnoremap <silent><Leader>c :call RunCurrentSpecFile()<CR>
+nnoremap <silent><Leader>n :call RunNearestSpec()<CR>
+nnoremap <silent><Leader>l :call RunLastSpec()<CR>
+nnoremap <silent><Leader>a :call RunAllSpecs()<CR>
 let g:rspec_command = '!bundle exec rspec -fd -c {spec}'
 
 " simple-javascript-indenter {{{2
