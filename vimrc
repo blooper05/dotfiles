@@ -79,7 +79,7 @@ set incsearch
 set hlsearch
 
 " Clear highlight.
-nnoremap <silent> <ESC><ESC> :nohlsearch <CR>
+nnoremap <silent><ESC><ESC> :<C-u>nohlsearch <CR>
 
 " View {{{1
 
