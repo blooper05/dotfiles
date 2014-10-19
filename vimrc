@@ -3,7 +3,7 @@
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', { 'build' : {
@@ -31,7 +31,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'Shougo/neocomplcache-rsense'
-NeoBundle 'taichouchou2/rsense-0.3', { 'build' : {
+NeoBundle 'm2ym/rsense', { 'build' : {
+    \     'mac'  : 'ruby etc/config.rb > ~/.rsense',
     \     'unix' : 'ruby etc/config.rb > ~/.rsense',
     \ } }
 NeoBundle 'tpope/vim-rails'
@@ -49,6 +50,8 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 " NeoBundle 'Yggdroot/indentLine'
 " NeoBundle 'Shougo/vimfiler.vim'
+
+call neobundle#end()
 
 filetype plugin indent on
 
@@ -219,7 +222,7 @@ endfunction
 
 " switch.vim {{{2
 " Plugin key-mappings.
-nnoremap <silent>- :Switch<CR>
+nnoremap <silent>- :<C-u>Switch<CR>
 
 " vim-easy-align {{{2
 " Start interactive EasyAlign in visual mode
@@ -231,7 +234,7 @@ nmap <Leader>z <Plug>(EasyAlign)
 let g:vimshell_prompt_expr = 'getcwd()." > "'
 let g:vimshell_prompt_pattern = '^\f\+ > '
 " Plugin key-mappings.
-nnoremap <silent><Space>s :VimShellTab<CR>
+nnoremap <silent><Space>s :<C-u>VimShellTab<CR>
 
 " unite.vim {{{2
 " Start in insert mode.
@@ -312,10 +315,10 @@ let g:neocomplcache#sources#rsense#home_directory = expand('~/.vim/bundle/rsense
 
 " vim-rspec {{{2
 " Plugin key-mappings.
-nnoremap <silent><Leader>c :call RunCurrentSpecFile()<CR>
-nnoremap <silent><Leader>n :call RunNearestSpec()<CR>
-nnoremap <silent><Leader>l :call RunLastSpec()<CR>
-nnoremap <silent><Leader>a :call RunAllSpecs()<CR>
+nnoremap <silent><Leader>c :<C-u>call RunCurrentSpecFile()<CR>
+nnoremap <silent><Leader>n :<C-u>call RunNearestSpec()<CR>
+nnoremap <silent><Leader>l :<C-u>call RunLastSpec()<CR>
+nnoremap <silent><Leader>a :<C-u>call RunAllSpecs()<CR>
 let g:rspec_command = '!bundle exec rspec -fd -c {spec}'
 
 " simple-javascript-indenter {{{2
