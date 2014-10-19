@@ -7,7 +7,8 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', { 'build' : {
-    \     'unix' : 'make -f make_unix.mak',
+    \     'mac'  : 'make -f make_mac.mak',
+    \     'unix' : 'gmake',
     \ } }
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -255,7 +256,7 @@ nnoremap <silent>[unite]e   :<C-u>Unite ref/refe<CR>
 nnoremap <silent>[unite]m   :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]s   :<C-u>Unite neosnippet<CR>
 
-call unite#custom_default_action('file', 'tabdrop')
+call unite#custom_default_action('file', 'tabswitch')
 call unite#custom#profile('action', 'context', {
       \ 'start_insert' : 1
       \ })
