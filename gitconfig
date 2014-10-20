@@ -1,0 +1,13 @@
+[user]
+  name  =
+  email =
+[core]
+  editor       = vim -c 'set fenc=utf-8'
+  excludesfile = ~/.gitignore
+[push]
+  default = simple
+[color]
+  ui     = auto
+  diff   = auto
+  status = auto
+  branch = auto
