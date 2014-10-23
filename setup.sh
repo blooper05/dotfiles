@@ -27,13 +27,30 @@ while getopts cfis OPT ; do
   esac
 done
 
+NORMAL=$(tput sgr0)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+RED=$(tput setaf 1)
+
+green() {
+  echo "$GREEN$*$NORMAL"
+}
+
+yellow() {
+  echo "$YELLOW$*$NORMAL"
+}
+
+red() {
+  echo "$RED$*$NORMAL"
+}
+
 if [ "$FLG_S" = 'TRUE' ]; then
   for file in $DOTFILES ; do
     ln -s $DOTDIR/$file $HOME/.$file
     if [ $? -eq 0 ]; then
-      echo 'success'
+      green 'success'
     else
-      echo 'fail'
+      red 'fail'
     fi
   done
 fi
@@ -42,9 +59,9 @@ if [ "$FLG_I" = 'TRUE' ]; then
   NEOBUNDLE_URI=https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh
   curl -sL $NEOBUNDLE_URI | sh > /dev/null 2>&1
   if [ $? -eq 0 ]; then
-    echo 'success'
+    green 'success'
   else
-    echo 'fail'
+    red 'fail'
   fi
 
   RUBYREFM_DIR=$HOME/.vim/ref/rubyrefm
@@ -52,8 +69,8 @@ if [ "$FLG_I" = 'TRUE' ]; then
   mkdir -p $RUBYREFM_DIR
   curl -sL $RUBYREFM_URI | tar xz -C $RUBYREFM_DIR --strip=1 > /dev/null 2>&1
   if [ $? -eq 0 ]; then
-    echo 'success'
+    green 'success'
   else
-    echo 'fail'
+    red 'fail'
   fi
 fi
