@@ -44,6 +44,9 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle 'mklabs/vim-backbone'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'kakkyz81/evervim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -176,11 +179,15 @@ set shiftwidth=2
 
 " Auto Command {{{1
 
-" Automatically removing trailing spaces.
-autocmd BufWritePre * :%s/\s\+$//ge
+augroup AutoRemoveTrailingSpaces
+  autocmd!
+  autocmd BufWritePre * :%s/\s\+$//ge
+augroup END
 
-" Automatically replacing <Tab> by spaces.
-autocmd BufWritePre * :%s/\t/  /ge
+augroup AutoReplaceTabBySpaces
+  autocmd!
+  autocmd BufWritePre * :%s/\t/  /ge
+augroup END
 
 " Plugin {{{1
 
@@ -327,6 +334,32 @@ nnoremap <silent><Leader>a :<C-u>call RunAllSpecs()<CR>
 let g:SimpleJsIndenter_BriefMode = 1
 " The some more smart case indent.
 let g:SimpleJsIndenter_CaseIndentLevel = -1
+
+" vim-markdown {{{2
+augroup MarkdownSettings
+  autocmd!
+  " Set markdown filetype file.
+  autocmd BufNewFile,BufRead *.md set filetype=markdown
+  " Set markdown indent style.
+  autocmd FileType markdown set tabstop=4 shiftwidth=4
+  " Disable AutoRemoveTrailingSpaces.
+  autocmd FileType markdown autocmd! AutoRemoveTrailingSpaces
+augroup END
+
+" previm {{{2
+" Plugin key-mappings.
+nnoremap <silent><Leader>p :<C-u>PrevimOpen<CR>
+
+" evervim {{{2
+" Set Evernote developer token.
+let g:evervim_devtoken = ''
+" The prefix key.
+nnoremap [evervim] <Nop>
+nmap     <Space>e  [evervim]
+" Plugin key-mappings.
+nnoremap <silent>[evervim]l :<C-u>EvervimNotebookList<CR>
+nnoremap <silent>[evervim]c :<C-u>EvervimCreateNote<CR>
+nnoremap         [evervim]s :<C-u>EvervimSearchByQuery<Space>
 
 " lightline.vim {{{2
 let g:lightline = {
