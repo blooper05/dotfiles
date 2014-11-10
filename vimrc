@@ -267,7 +267,7 @@ endif
 nnoremap [unite]  <Nop>
 nmap     <Space>u [unite]
 " Plugin key-mappings.
-nnoremap <silent>[unite]f  :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent>[unite]f  :<C-u>UniteWithBufferDir -buffer-name=files file file/new directory/new<CR>
 nnoremap <silent>[unite]a  :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file<CR>
 nnoremap <silent>[unite]g  :<C-u>Unite grep<CR>
 nnoremap <silent>[unite]mf :<C-u>Unite file_mru<CR>
@@ -278,6 +278,11 @@ nnoremap <silent>[unite]h  :<C-u>Unite help<CR>
 nnoremap <silent>[unite]e  :<C-u>Unite ref/refe<CR>
 nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]s  :<C-u>Unite neosnippet<CR>
+augroup UniteKeyMappings
+  autocmd!
+  autocmd FileType unite imap <buffer>jj    <Plug>(unite_insert_leave)
+  autocmd FileType unite imap <buffer><C-w> <Plug>(unite_delete_backward_path)
+augroup END
 
 " syntastic {{{2
 " Use the :sign interface to note errors.
