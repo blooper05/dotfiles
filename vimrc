@@ -30,11 +30,6 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'supermomonga/neocomplete-rsense.vim'
-NeoBundle 'marcus/rsense', { 'build' : {
-    \     'mac'  : 'ruby etc/config.rb > ~/.rsense',
-    \     'unix' : 'ruby etc/config.rb > ~/.rsense',
-    \ } }
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'Keithbsmiley/rspec.vim'
@@ -203,6 +198,11 @@ inoremap <silent><CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
   return neocomplete#close_popup() . "\<CR>"
 endfunction
+" Set the dictionary path.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'ruby'    : expand('~/.vim/dict/ruby.dict'),
+    \ }
 
 " neosnippet.vim {{{2
 " SuperTab like snippets behavior.
@@ -308,12 +308,6 @@ nnoremap <silent>[git]f :<C-u>Gitv!<CR>
 " vim-ref {{{2
 " Set the reference path.
 let g:ref_refe_cmd = expand('~/.vim/ref/rubyrefm/refe-1_9_3')
-
-" neocomplete-rsense {{{2
-" Force to overwrite 'completefunc' option.
-let g:neocomplete#force_overwrite_completefunc = 1
-" Set $RSENSE_HOME path.
-let g:neocomplete#sources#rsense#home_directory = expand('~/.vim/bundle/rsense')
 
 " unite-rails {{{2
 " The prefix key.
