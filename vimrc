@@ -21,6 +21,7 @@ NeoBundle 'anyakichi/vim-surround'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'sjl/gundo.vim'
+NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
@@ -43,11 +44,9 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'kakkyz81/evervim'
+NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
-
-" NeoBundle 'Yggdroot/indentLine'
-" NeoBundle 'Shougo/vimfiler.vim'
 
 call neobundle#end()
 
