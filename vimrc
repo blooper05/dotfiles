@@ -10,7 +10,7 @@ NeoBundle 'Shougo/vimproc.vim', { 'build' : {
     \     'mac'  : 'make -f make_mac.mak',
     \     'unix' : 'gmake',
     \ } }
-NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'jiangmiao/auto-pairs'
@@ -30,8 +30,8 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'Shougo/neocomplcache-rsense.vim'
-NeoBundle 'm2ym/rsense', { 'build' : {
+NeoBundle 'supermomonga/neocomplete-rsense.vim'
+NeoBundle 'marcus/rsense', { 'build' : {
     \     'mac'  : 'ruby etc/config.rb > ~/.rsense',
     \     'unix' : 'ruby etc/config.rb > ~/.rsense',
     \ } }
@@ -191,21 +191,17 @@ augroup END
 
 " Plugin {{{1
 
-" neocomplcache.vim {{{2
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
+" neocomplete.vim {{{2
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
+let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 2
-" Use camel case completion.
-let g:neocomplcache_enable_camel_case_completion = 1
-" Use underbar completion.
-let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 2
 " <CR>: close popup and save indent.
 inoremap <silent><CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-  return neocomplcache#smart_close_popup() . "\<CR>"
+  return neocomplete#close_popup() . "\<CR>"
 endfunction
 
 " neosnippet.vim {{{2
@@ -289,6 +285,8 @@ augroup END
 let g:syntastic_enable_signs = 1
 " Automatically open and close the location list.
 let g:syntastic_auto_loc_list = 2
+" Set syntax checkers.
+let g:syntastic_ruby_checkers = ['rubocop']
 
 " vim-fugitive {{{2
 " The prefix key.
@@ -311,9 +309,11 @@ nnoremap <silent>[git]f :<C-u>Gitv!<CR>
 " Set the reference path.
 let g:ref_refe_cmd = expand('~/.vim/ref/rubyrefm/refe-1_9_3')
 
-" neocomplcache-rsense {{{2
+" neocomplete-rsense {{{2
+" Force to overwrite 'completefunc' option.
+let g:neocomplete#force_overwrite_completefunc = 1
 " Set $RSENSE_HOME path.
-let g:neocomplcache#sources#rsense#home_directory = expand('~/.vim/bundle/rsense')
+let g:neocomplete#sources#rsense#home_directory = expand('~/.vim/bundle/rsense')
 
 " unite-rails {{{2
 " The prefix key.
