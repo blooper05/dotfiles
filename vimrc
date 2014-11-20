@@ -13,6 +13,7 @@ NeoBundle 'Shougo/vimproc.vim', { 'build' : {
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'bkad/CamelCaseMotion'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'vim-scripts/matchit.zip'
@@ -30,6 +31,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
+NeoBundle 'kmnk/vim-unite-giti'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
@@ -216,6 +218,18 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 
+" CamelCaseMotion {{{2
+" Plugin key-mappings.
+map <silent>w <Plug>CamelCaseMotion_w
+map <silent>b <Plug>CamelCaseMotion_b
+map <silent>e <Plug>CamelCaseMotion_e
+omap <silent>iw <Plug>CamelCaseMotion_iw
+vmap <silent>iw <Plug>CamelCaseMotion_iw
+omap <silent>ib <Plug>CamelCaseMotion_ib
+vmap <silent>ib <Plug>CamelCaseMotion_ib
+omap <silent>ie <Plug>CamelCaseMotion_ie
+vmap <silent>ie <Plug>CamelCaseMotion_ie
+
 " switch.vim {{{2
 " Plugin key-mappings.
 nnoremap <silent>- :<C-u>Switch<CR>
@@ -292,17 +306,23 @@ let g:syntastic_ruby_checkers = ['rubocop']
 nnoremap [git]    <Nop>
 nmap     <Space>g [git]
 " Plugin key-mappings.
-nnoremap <silent>[git]s :<C-u>Gstatus<CR>
+" nnoremap <silent>[git]s :<C-u>Gstatus<CR>
 nnoremap <silent>[git]d :<C-u>Gdiff<CR>
 nnoremap <silent>[git]a :<C-u>Gwrite<CR>
 nnoremap <silent>[git]c :<C-u>Gcommit<CR>
 nnoremap <silent>[git]r :<C-u>Gread<CR>
-nnoremap <silent>[git]b :<C-u>Gblame<CR>
+" nnoremap <silent>[git]b :<C-u>Gblame<CR>
 
-" gitv {{{2
+" " gitv {{{2
+" " Plugin key-mappings.
+" nnoremap <silent>[git]l :<C-u>Gitv<CR>
+" nnoremap <silent>[git]f :<C-u>Gitv!<CR>
+
+" vim-unite-giti {{{2
 " Plugin key-mappings.
-nnoremap <silent>[git]l :<C-u>Gitv<CR>
-nnoremap <silent>[git]f :<C-u>Gitv!<CR>
+nnoremap <silent>[git]l :<C-u>Unite giti/log<CR>
+nnoremap <silent>[git]b :<C-u>Unite giti/branch<CR>
+nnoremap <silent>[git]s :<C-u>Unite giti/status<CR>
 
 " vim-ref {{{2
 " Set the reference path.
@@ -316,6 +336,7 @@ nmap     <Space>r [rails]
 nnoremap <silent>[rails]m :<C-u>Unite rails/model<CR>
 nnoremap <silent>[rails]v :<C-u>Unite rails/view<CR>
 nnoremap <silent>[rails]c :<C-u>Unite rails/controller<CR>
+nnoremap <silent>[rails]h :<C-u>Unite rails/helper<CR>
 nnoremap <silent>[rails]s :<C-u>Unite rails/spec<CR>
 nnoremap <silent>[rails]g :<C-u>Unite rails/config<CR>
 nnoremap <silent>[rails]l :<C-u>Unite rails/log<CR>
