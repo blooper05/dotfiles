@@ -150,7 +150,7 @@ set showmatch
 set infercase
 
 " Edit and reload vimrc immediately.
-nnoremap <silent><F5> :<C-u>tab drop $MYVIMRC<CR>
+nnoremap <silent><F5> :<C-u>tabnew $MYVIMRC<CR>
 nnoremap <silent><F6> :<C-u>source $MYVIMRC<CR>
 
 " Insert blank line in normal mode.
@@ -320,9 +320,9 @@ nnoremap <silent>[git]r :<C-u>Gread<CR>
 
 " vim-unite-giti {{{2
 " Plugin key-mappings.
-nnoremap <silent>[git]l :<C-u>Unite giti/log<CR>
-nnoremap <silent>[git]b :<C-u>Unite giti/branch<CR>
-nnoremap <silent>[git]s :<C-u>Unite giti/status<CR>
+nnoremap <silent>[git]l :<C-u>Unite giti/log -no-start-insert<CR>
+nnoremap <silent>[git]b :<C-u>Unite giti/branch -no-start-insert<CR>
+nnoremap <silent>[git]s :<C-u>Unite giti/status -no-start-insert<CR>
 
 " vim-ref {{{2
 " Set the reference path.
