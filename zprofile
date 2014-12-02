@@ -1,8 +1,8 @@
-# .zsh_profile
+# .zprofile
 
 # Get the aliases and functions
 if [ -f ~/.zshrc ]; then
-	. ~/.zshrc
+  . ~/.zshrc
 fi
 
 # User specific environment and startup programs
@@ -10,5 +10,3 @@ fi
 PATH=$PATH:$HOME/bin
 
 export PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
