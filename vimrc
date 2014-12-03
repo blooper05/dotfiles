@@ -26,6 +26,7 @@ NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'tsukkee/unite-help'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
@@ -185,6 +186,12 @@ augroup AutoReplaceTabBySpaces
   autocmd BufWritePre * :%s/\t/  /ge
 augroup END
 
+augroup AutoCommentOff
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions-=r
+  autocmd BufEnter * setlocal formatoptions-=o
+augroup END
+
 " Plugin {{{1
 
 " neocomplete.vim {{{2
@@ -281,6 +288,7 @@ nnoremap <silent>[unite]a  :<C-u>UniteWithCurrentDir -buffer-name=files buffer f
 nnoremap <silent>[unite]g  :<C-u>Unite grep<CR>
 nnoremap <silent>[unite]mf :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]md :<C-u>Unite directory_mru<CR>
+nnoremap <silent>[unite]o  :<C-u>Unite outline<CR>
 nnoremap <silent>[unite]b  :<C-u>Unite buffer<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite register<CR>
 nnoremap <silent>[unite]h  :<C-u>Unite help<CR>
