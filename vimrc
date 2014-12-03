@@ -150,6 +150,9 @@ set showmatch
 " Ignore case on insert completion.
 set infercase
 
+" Auto reload if file is changed.
+set autoread
+
 " Edit and reload vimrc immediately.
 nnoremap <silent><F5> :<C-u>tabnew $MYVIMRC<CR>
 nnoremap <silent><F6> :<C-u>source $MYVIMRC<CR>
