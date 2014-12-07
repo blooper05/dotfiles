@@ -132,6 +132,15 @@ set splitbelow
 " Splitting a window will put the new window right the current one.
 set splitright
 
+" Create equally sized splits.
+set equalalways
+
+" Don't redraw during macro execution.
+set lazyredraw
+
+" Optimize for fast terminal connections.
+set ttyfast
+
 " Edit {{{1
 
 " Settings of the encoding to use for a save and reading.
@@ -156,6 +165,14 @@ set autoread
 " Edit and reload vimrc immediately.
 nnoremap <silent><F5> :<C-u>tabnew $MYVIMRC<CR>
 nnoremap <silent><F6> :<C-u>source $MYVIMRC<CR>
+
+" Turn off swap files.
+set nobackup
+set noswapfile
+set noundofile
+
+" Use system clipboard.
+set clipboard+=unnamed
 
 " Insert blank line in normal mode.
 nnoremap <CR> o<ESC>

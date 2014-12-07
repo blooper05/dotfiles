@@ -22,10 +22,6 @@ set guioptions-=b
 if has('multi_byte_ime') || has('xim')
   highlight CursorIM guifg=NONE guibg=LightMagenta
 endif
-set nobackup
-set noswapfile
-set noundofile
-set clipboard+=unnamed
 
 " Folding {{{1
 
