@@ -31,6 +31,7 @@ NeoBundle 'tsukkee/unite-help'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'idanarye/vim-merginal'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'kmnk/vim-unite-giti'
 NeoBundle 'thinca/vim-ref'
@@ -354,6 +355,10 @@ nnoremap <silent>[git]a :<C-u>Gwrite<CR>
 nnoremap <silent>[git]c :<C-u>Gcommit<CR>
 nnoremap <silent>[git]r :<C-u>Gread<CR>
 " nnoremap <silent>[git]b :<C-u>Gblame<CR>
+
+" vim-merginal {{{2
+" Plugin key-mappings.
+nnoremap <silent>[git]B :<C-u>MerginalToggle<CR>
 
 " " gitv {{{2
 " " Plugin key-mappings.
