@@ -12,6 +12,7 @@ colorscheme solarized
 " gVim {{{1
 
 set guifont=Ricty\ for\ Powerline:h14
+
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
@@ -19,6 +20,7 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 set guioptions-=b
+
 if has('multi_byte_ime') || has('xim')
   highlight CursorIM guifg=NONE guibg=LightMagenta
 endif
