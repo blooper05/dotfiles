@@ -270,7 +270,7 @@ vmap <silent><Enter> <Plug>(EasyAlign)
 
 " gundo.vim {{{2
 " Plugin key-mappings.
-nnoremap <silent><Space>h :<C-u>GundoToggle<CR>
+nnoremap <silent><Space>U :<C-u>GundoToggle<CR>
 
 " vimfiler.vim {{{2
 " Use vimfiler as default explorer.
@@ -327,8 +327,8 @@ nnoremap <silent>[unite]o  :<C-u>Unite outline<CR>
 nnoremap <silent>[unite]b  :<C-u>Unite buffer<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite register<CR>
 nnoremap <silent>[unite]h  :<C-u>Unite help<CR>
-nnoremap <silent>[unite]e  :<C-u>Unite ref/refe<CR>
-nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
+nnoremap <silent>[unite]R  :<C-u>Unite ref/refe<CR>
+nnoremap <silent>[unite]M  :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]s  :<C-u>Unite neosnippet<CR>
 augroup UniteKeyMappings
   autocmd!
@@ -385,7 +385,7 @@ nnoremap <silent>[rails]v :<C-u>Unite rails/view<CR>
 nnoremap <silent>[rails]c :<C-u>Unite rails/controller<CR>
 nnoremap <silent>[rails]h :<C-u>Unite rails/helper<CR>
 nnoremap <silent>[rails]s :<C-u>Unite rails/spec<CR>
-nnoremap <silent>[rails]g :<C-u>Unite rails/config<CR>
+nnoremap <silent>[rails]C :<C-u>Unite rails/config<CR>
 nnoremap <silent>[rails]l :<C-u>Unite rails/log<CR>
 
 " vim-rspec {{{2
