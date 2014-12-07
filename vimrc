@@ -68,6 +68,37 @@ let g:solarized_underline = 0
 " let g:solarized_visibility = 'low'
 colorscheme solarized
 
+" Basic {{{1
+
+" Use English interface.
+language message C
+language time C
+
+" Settings of the encoding to use for a save and reading.
+set encoding=utf-8
+set fileencodings=ucs-bom,iso-2022-jp,utf-8,cp932,euc-jp,default,latin
+
+" Auto reload if file is changed.
+set autoread
+
+" Turn off swap files.
+set nobackup
+set noswapfile
+set noundofile
+
+" Use system clipboard.
+set clipboard+=unnamed
+
+" Don't redraw during macro execution.
+set lazyredraw
+
+" Optimize for fast terminal connections.
+set ttyfast
+
+" Edit and reload vimrc immediately.
+nnoremap <silent><F5> :<C-u>tabnew $MYVIMRC<CR>
+nnoremap <silent><F6> :<C-u>source $MYVIMRC<CR>
+
 " Search {{{1
 
 " Ignore the case of normal letters.
@@ -86,10 +117,6 @@ set hlsearch
 nnoremap <silent><ESC><ESC> :<C-u>nohlsearch <CR>
 
 " View {{{1
-
-" Use English interface.
-language message C
-language time C
 
 " Show line number.
 set number
@@ -135,17 +162,7 @@ set splitright
 " Create equally sized splits.
 set equalalways
 
-" Don't redraw during macro execution.
-set lazyredraw
-
-" Optimize for fast terminal connections.
-set ttyfast
-
 " Edit {{{1
-
-" Settings of the encoding to use for a save and reading.
-set encoding=utf-8
-set fileencodings=ucs-bom,iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 
 " Exchange tab to spaces.
 set expandtab
@@ -158,21 +175,6 @@ set showmatch
 
 " Ignore case on insert completion.
 set infercase
-
-" Auto reload if file is changed.
-set autoread
-
-" Edit and reload vimrc immediately.
-nnoremap <silent><F5> :<C-u>tabnew $MYVIMRC<CR>
-nnoremap <silent><F6> :<C-u>source $MYVIMRC<CR>
-
-" Turn off swap files.
-set nobackup
-set noswapfile
-set noundofile
-
-" Use system clipboard.
-set clipboard+=unnamed
 
 " Insert blank line in normal mode.
 nnoremap <CR> o<ESC>
