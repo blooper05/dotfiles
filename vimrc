@@ -271,6 +271,18 @@ vmap <silent><Enter> <Plug>(EasyAlign)
 " Plugin key-mappings.
 nnoremap <silent><Space>h :<C-u>GundoToggle<CR>
 
+" vimfiler.vim {{{2
+" Use vimfiler as default explorer.
+let g:vimfiler_as_default_explorer = 1
+" Enable file operation commands.
+let g:vimfiler_safe_mode_by_default = 0
+" The prefix key.
+nnoremap [filer]  <Nop>
+nmap     <Space>f [filer]
+" Plugin key-mappings.
+nnoremap <silent>[filer]n :<C-u>VimFilerBufferDir<CR>
+nnoremap <silent>[filer]c :<C-u>VimFilerCreate<CR>
+
 " vimshell.vim {{{2
 " Prompt settings.
 let g:vimshell_prompt_expr = 'getcwd()." > "'
