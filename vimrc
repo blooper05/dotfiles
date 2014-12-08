@@ -30,17 +30,22 @@ NeoBundle 'Shougo/unite-outline'
 NeoBundle 'tsukkee/unite-help'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'idanarye/vim-merginal'
 NeoBundle 'gregsexton/gitv'
-NeoBundle 'kmnk/vim-unite-giti'
+NeoBundle 'cohama/agit.vim'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'Keithbsmiley/rspec.vim'
 NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'marijnh/tern_for_vim', { 'build' : {
+    \     'unix' : 'npm install',
+    \ } }
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle 'mklabs/vim-backbone'
@@ -349,27 +354,21 @@ let g:syntastic_ruby_checkers = ['rubocop']
 nnoremap [git]    <Nop>
 nmap     <Space>g [git]
 " Plugin key-mappings.
-" nnoremap <silent>[git]s :<C-u>Gstatus<CR>
+nnoremap <silent>[git]s :<C-u>Gstatus<CR>
 nnoremap <silent>[git]d :<C-u>Gdiff<CR>
 nnoremap <silent>[git]a :<C-u>Gwrite<CR>
 nnoremap <silent>[git]c :<C-u>Gcommit<CR>
 nnoremap <silent>[git]r :<C-u>Gread<CR>
-" nnoremap <silent>[git]b :<C-u>Gblame<CR>
+nnoremap <silent>[git]b :<C-u>Gblame<CR>
 
 " vim-merginal {{{2
 " Plugin key-mappings.
 nnoremap <silent>[git]B :<C-u>MerginalToggle<CR>
 
-" " gitv {{{2
-" " Plugin key-mappings.
-" nnoremap <silent>[git]l :<C-u>Gitv<CR>
-" nnoremap <silent>[git]f :<C-u>Gitv!<CR>
-
-" vim-unite-giti {{{2
+" gitv {{{2
 " Plugin key-mappings.
-nnoremap <silent>[git]l :<C-u>Unite giti/log -no-start-insert<CR>
-nnoremap <silent>[git]b :<C-u>Unite giti/branch -no-start-insert<CR>
-nnoremap <silent>[git]s :<C-u>Unite giti/status -no-start-insert<CR>
+nnoremap <silent>[git]l :<C-u>Gitv<CR>
+nnoremap <silent>[git]f :<C-u>Gitv!<CR>
 
 " vim-ref {{{2
 " Set the reference path.
@@ -394,6 +393,7 @@ nnoremap <silent><Leader>c :<C-u>call RunCurrentSpecFile()<CR>
 nnoremap <silent><Leader>n :<C-u>call RunNearestSpec()<CR>
 nnoremap <silent><Leader>l :<C-u>call RunLastSpec()<CR>
 nnoremap <silent><Leader>a :<C-u>call RunAllSpecs()<CR>
+let g:rspec_command = 'Dispatch rspec {spec}'
 
 " simple-javascript-indenter {{{2
 " Use brief mode.
