@@ -146,6 +146,9 @@ set title
 " Show line and column display.
 set ruler
 
+" Display double-width symbols properly.
+set ambiwidth=double
+
 " Enable wildmode.
 set wildmenu
 set wildmode=list:longest,full
@@ -184,6 +187,13 @@ set infercase
 
 " Insert blank line in normal mode.
 nnoremap <CR> o<ESC>
+
+" Command-line mode key-mappings.
+cnoremap <C-a> <Home>
+cnoremap <C-b> <Left>
+cnoremap <C-d> <Del>
+cnoremap <C-e> <End>
+cnoremap <C-f> <Right>
 
 " Syntax {{{1
 
@@ -297,6 +307,7 @@ let g:vimshell_prompt_pattern = '^\f\+ > '
 nnoremap [shell]  <Nop>
 nmap     <Space>s [shell]
 " Plugin key-mappings.
+nnoremap <silent>[shell]t :<C-u>VimShellTab -create<CR>
 nnoremap <silent>[shell]n :<C-u>VimShellBufferDir -popup<CR>
 nnoremap <silent>[shell]c :<C-u>VimShellCreate -popup<CR>
 
@@ -367,8 +378,8 @@ nnoremap <silent>[git]B :<C-u>MerginalToggle<CR>
 
 " gitv {{{2
 " Plugin key-mappings.
-nnoremap <silent>[git]l :<C-u>Gitv<CR>
-nnoremap <silent>[git]f :<C-u>Gitv!<CR>
+nnoremap <silent>[git]l :<C-u>Agit<CR>
+nnoremap <silent>[git]f :<C-u>AgitFile<CR>
 
 " vim-ref {{{2
 " Set the reference path.
