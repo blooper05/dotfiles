@@ -1,6 +1,7 @@
 #!/bin/sh
 
 DOTFILES='
+  agignore
   gitconfig
   gitignore
   gvimrc
