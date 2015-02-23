@@ -47,3 +47,18 @@ setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
+
+peco-history() {
+  BUFFER=$(fc -l -n 1 | tac | peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+}
+zle -N peco-history
+bindkey '^r' peco-history
+
+peco-kill() {
+  PID=`ps aux | peco | awk '{ print $2 }'`
+  echo "kill pid: $PID"
+  kill $PID
+}
+zle -N peco-kill
+bindkey '^k' peco-kill

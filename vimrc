@@ -310,6 +310,7 @@ nmap     <Space>s [shell]
 nnoremap <silent>[shell]t :<C-u>VimShellTab -create<CR>
 nnoremap <silent>[shell]n :<C-u>VimShellBufferDir -popup<CR>
 nnoremap <silent>[shell]c :<C-u>VimShellCreate -popup<CR>
+nnoremap <silent>[shell]i :<C-u>VimShellInteractive rails c<CR>
 
 " unite.vim {{{2
 " Use start insert by default.

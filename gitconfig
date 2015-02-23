@@ -7,6 +7,10 @@
   excludesfile = ~/.gitignore
 [push]
   default = simple
+[pull]
+  rebase = true
+[rebase]
+  autostash = true
 [help]
   autocorrect = 1
 [color]
