@@ -33,8 +33,8 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'idanarye/vim-merginal'
-NeoBundle 'gregsexton/gitv'
 NeoBundle 'cohama/agit.vim'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
@@ -377,10 +377,15 @@ nnoremap <silent>[git]b :<C-u>Gblame<CR>
 " Plugin key-mappings.
 nnoremap <silent>[git]B :<C-u>MerginalToggle<CR>
 
-" gitv {{{2
+" agit.vim {{{2
 " Plugin key-mappings.
 nnoremap <silent>[git]l :<C-u>Agit<CR>
 nnoremap <silent>[git]f :<C-u>AgitFile<CR>
+
+" vim-gitgutter {{{2
+" Make the sign color have the same color of the theme background.
+highlight clear SignColumn
+call gitgutter#highlight#define_highlights()
 
 " vim-ref {{{2
 " Set the reference path.
