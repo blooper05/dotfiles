@@ -48,6 +48,7 @@ NeoBundle 'marijnh/tern_for_vim', { 'build' : {
     \ } }
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'jiangmiao/simple-javascript-indenter'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mklabs/vim-backbone'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
@@ -82,7 +83,7 @@ language time C
 
 " Settings of the encoding to use for a save and reading.
 set encoding=utf-8
-set fileencodings=ucs-bom,iso-2022-jp,utf-8,cp932,euc-jp,default,latin
+" set fileencodings=ucs-bom,iso-2022-jp,utf-8,cp932,euc-jp,default,latin
 
 " Auto reload if file is changed.
 set autoread
