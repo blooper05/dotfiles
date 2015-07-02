@@ -6,6 +6,8 @@ DOTFILES='
   gitignore
   gvimrc
   jshintrc
+  pryrc
+  rspec
   rubocop.yml
   tmux.conf
   vimrc

@@ -159,9 +159,9 @@ set wildmode=list:longest,full
 " autocmd WinEnter,BufRead * set cursorline
 " autocmd WinLeave * set nocursorline
 
-" Highlight columns longer than 80 characters.
-highlight turn gui=standout cterm=standout
-call matchadd("turn", '.\%>81v')
+" " Highlight columns longer than 80 characters.
+" highlight turn gui=standout cterm=standout
+" call matchadd("turn", '.\%>81v')
 
 " Splitting a window will put the new window below the current one.
 set splitbelow
