@@ -49,7 +49,14 @@ setopt pushd_ignore_dups
 setopt correct
 
 peco-history() {
-  BUFFER=$(fc -l -n 1 | tac | peco --query "$LBUFFER")
+  case ${OSTYPE} in
+    darwin*)
+      BUFFER=$(fc -l -n 1 | tail -r | peco --query "$LBUFFER")
+      ;;
+    linux*)
+      BUFFER=$(fc -l -n 1 | tac | peco --query "$LBUFFER")
+      ;;
+  esac
   CURSOR=$#BUFFER
 }
 zle -N peco-history
