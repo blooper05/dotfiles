@@ -2,6 +2,7 @@
 
 DOTFILES='
   agignore
+  gemrc
   gitconfig
   gitignore
   gvimrc
