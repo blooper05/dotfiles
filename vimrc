@@ -245,6 +245,8 @@ inoremap <silent><CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
   return neocomplete#close_popup() . "\<CR>"
 endfunction
+" Set the cache path.
+let g:neocomplete#data_directory = expand('~/.vim/cache/neocomplete')
 " Set the dictionary path.
 let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
@@ -263,6 +265,8 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+" Set the cache path.
+let g:neosnippet#data_directory = expand('~/.vim/cache/neosnippet')
 
 " CamelCaseMotion {{{2
 " Plugin key-mappings.
@@ -312,6 +316,8 @@ nnoremap <silent>[shell]t :<C-u>VimShellTab -create<CR>
 nnoremap <silent>[shell]n :<C-u>VimShellBufferDir -popup<CR>
 nnoremap <silent>[shell]c :<C-u>VimShellCreate -popup<CR>
 nnoremap <silent>[shell]i :<C-u>VimShellInteractive rails c<CR>
+" Set the cache path.
+let g:vimshell_data_directory = expand('~/.vim/cache/vimshell')
 
 " unite.vim {{{2
 " Use start insert by default.
@@ -353,6 +359,13 @@ augroup UniteKeyMappings
   autocmd FileType unite imap <buffer>jj    <Plug>(unite_insert_leave)
   autocmd FileType unite imap <buffer><C-w> <Plug>(unite_delete_backward_path)
 augroup END
+" Set the cache path.
+let g:unite_data_directory = expand('~/.vim/cache/unite')
+
+" neomru.vim {{{2
+" Set the cache path.
+let g:neomru#file_mru_path = expand('~/.vim/cache/neomru/file')
+let g:neomru#directory_mru_path = expand('~/.vim/cache/neomru/directory')
 
 " syntastic {{{2
 " Use the :sign interface to note errors.
@@ -444,6 +457,8 @@ nmap     <Space>e  [evervim]
 nnoremap <silent>[evervim]l :<C-u>EvervimNotebookList<CR>
 nnoremap <silent>[evervim]c :<C-u>EvervimCreateNote<CR>
 nnoremap         [evervim]s :<C-u>EvervimSearchByQuery<Space>
+" Set the work path.
+let g:evervim_workdir = expand('~/.vim/cache/evervim')
 
 " lightline.vim {{{2
 let g:lightline = {
