@@ -52,23 +52,36 @@ setopt pushd_ignore_dups
 setopt correct
 
 peco-history() {
-  case ${OSTYPE} in
-    darwin*)
-      BUFFER=$(fc -l -n 1 | tail -r | peco --query "$LBUFFER")
-      ;;
-    linux*)
-      BUFFER=$(fc -l -n 1 | tac | peco --query "$LBUFFER")
-      ;;
-  esac
+  local tac
+  if which tac > /dev/null; then
+    tac='tac'
+  else
+    tac='tail -r'
+  fi
+  BUFFER=$(fc -ln 1 | eval $tac | peco --query "$LBUFFER")
   CURSOR=$#BUFFER
+  zle redisplay
 }
 zle -N peco-history
 bindkey '^r' peco-history
 
 peco-kill() {
-  PID=`ps aux | peco | awk '{ print $2 }'`
-  echo "kill pid: $PID"
-  kill $PID
+  for pid in $(ps aux | peco | awk '{ print $2 }'); do
+    echo "peco-kill: kill process pid: $pid"
+    kill $pid
+  done
+  zle redisplay
 }
 zle -N peco-kill
 bindkey '^k' peco-kill
+
+peco-src() {
+  for selected_dir in $(ghq list | peco --query "$LBUFFER"); do
+    BUFFER="cd $(ghq root)/$selected_dir"
+    zle accept-line
+  done
+  zle redisplay
+}
+zle -N peco-src
+bindkey '^s' peco-src
+stty -ixon
