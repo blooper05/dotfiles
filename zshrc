@@ -5,6 +5,10 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias ls='ls -FG'
+alias la='ls -AFG'
+alias ll='ls -FGhl'
+alias lla='ls -AFGhl'
 
 # Source global definitions
 if [ -f /etc/zshrc ]; then
