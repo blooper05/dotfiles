@@ -43,6 +43,7 @@ NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'slim-template/vim-slim'
 NeoBundle 'marijnh/tern_for_vim', { 'build' : {
     \     'unix' : 'npm install',
     \ } }
@@ -51,6 +52,9 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mklabs/vim-backbone'
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'ujihisa/neco-look'
+NeoBundle 'koron/codic-vim'
+NeoBundle 'rhysd/unite-codic.vim'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'kakkyz81/evervim'
@@ -354,6 +358,7 @@ nnoremap <silent>[unite]h  :<C-u>Unite help<CR>
 nnoremap <silent>[unite]R  :<C-u>Unite ref/refe<CR>
 nnoremap <silent>[unite]M  :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]s  :<C-u>Unite neosnippet<CR>
+nnoremap <silent>[unite]c  :<C-u>Unite codic<CR>
 augroup UniteKeyMappings
   autocmd!
   autocmd FileType unite imap <buffer>jj    <Plug>(unite_insert_leave)
@@ -395,6 +400,11 @@ nnoremap <silent>[git]B :<C-u>MerginalToggle<CR>
 " Plugin key-mappings.
 nnoremap <silent>[git]l :<C-u>Agit<CR>
 nnoremap <silent>[git]f :<C-u>AgitFile<CR>
+augroup AgitKeyMappings
+  autocmd!
+  autocmd FileType agit nmap <buffer>cp <Plug>(agit-git-cherry-pick)
+  autocmd FileType agit nmap <buffer>rv <Plug>(agit-git-revert)
+augroup END
 
 " vim-gitgutter {{{2
 " Make the sign color have the same color of the theme background.
