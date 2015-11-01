@@ -307,6 +307,8 @@ nmap     <Space>f [filer]
 " Plugin key-mappings.
 nnoremap <silent>[filer]n :<C-u>VimFilerBufferDir<CR>
 nnoremap <silent>[filer]c :<C-u>VimFilerCreate<CR>
+" Set the cache path.
+let g:vimfiler_data_directory = expand('~/.vim/cache/vimfiler')
 
 " vimshell.vim {{{2
 " Prompt settings.
