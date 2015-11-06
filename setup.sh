@@ -2,6 +2,7 @@
 
 DOTFILES='
   agignore
+  bundle
   gemrc
   gitconfig
   gitignore
