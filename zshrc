@@ -51,6 +51,13 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
 
+export RBENV_ROOT=/usr/local/var/rbenv
+# export RUBYGEMS_GEMDEPS=-
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+if [ ! -f $RBENV_ROOT/default-gems ]; then
+  echo bundler > $RBENV_ROOT/default-gems
+fi
+
 peco-history() {
   local tac
   if which tac > /dev/null; then
