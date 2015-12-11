@@ -7,7 +7,7 @@ get_battery() {
 }
 
 is_charging() {
-  pmset -g ps | grep -E '\<charging' >/dev/null 2>&1
+  pmset -g ps | grep -E '\<charging;' >/dev/null 2>&1
 }
 
 battery_color() {
