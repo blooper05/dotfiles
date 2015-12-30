@@ -97,6 +97,9 @@ set nobackup
 set noswapfile
 set noundofile
 
+" Set the cache path.
+set viminfo+=n~/.vim/cache/viminfo
+
 " Use system clipboard.
 set clipboard+=unnamed
 
