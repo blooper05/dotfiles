@@ -27,6 +27,7 @@ NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'sorah/unite-ghq'
 NeoBundle 'tsukkee/unite-help'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
@@ -353,17 +354,19 @@ nmap     <Space>u [unite]
 " Plugin key-mappings.
 nnoremap <silent>[unite]f  :<C-u>UniteWithBufferDir -buffer-name=files file file/new directory/new<CR>
 nnoremap <silent>[unite]a  :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru file<CR>
+nnoremap <silent>[unite]p  :<C-u>Unite file_rec/git:--cached:--others:--exclude-standard:--cached:<CR>
 nnoremap <silent>[unite]g  :<C-u>Unite grep<CR>
+nnoremap <silent>[unite]s  :<C-u>Unite ghq<CR>
 nnoremap <silent>[unite]mf :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]md :<C-u>Unite directory_mru<CR>
 nnoremap <silent>[unite]o  :<C-u>Unite outline<CR>
 nnoremap <silent>[unite]b  :<C-u>Unite buffer<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite register<CR>
-nnoremap <silent>[unite]h  :<C-u>Unite help<CR>
+nnoremap <silent>[unite]H  :<C-u>Unite help<CR>
 nnoremap <silent>[unite]R  :<C-u>Unite ref/refe<CR>
 nnoremap <silent>[unite]M  :<C-u>Unite mapping<CR>
-nnoremap <silent>[unite]s  :<C-u>Unite neosnippet<CR>
-nnoremap <silent>[unite]c  :<C-u>Unite codic<CR>
+nnoremap <silent>[unite]S  :<C-u>Unite neosnippet<CR>
+nnoremap <silent>[unite]C  :<C-u>Unite codic<CR>
 augroup UniteKeyMappings
   autocmd!
   autocmd FileType unite imap <buffer>jj    <Plug>(unite_insert_leave)
