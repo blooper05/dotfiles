@@ -57,6 +57,7 @@ NeoBundle 'ujihisa/neco-look'
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
 NeoBundle 'kannokanno/previm'
+NeoBundle 'rhysd/vim-grammarous'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'kakkyz81/evervim'
 NeoBundle 'Yggdroot/indentLine'
@@ -386,6 +387,7 @@ let g:syntastic_enable_signs = 1
 " Automatically open and close the location list.
 let g:syntastic_auto_loc_list = 2
 " Set syntax checkers.
+let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_javascript_checkers = ['jshint']
 
