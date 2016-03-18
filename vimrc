@@ -469,6 +469,10 @@ augroup END
 " Plugin key-mappings.
 nnoremap <silent><Leader>p :<C-u>PrevimOpen<CR>
 
+" github-complete.vim {{{2
+" Use neocomplete.
+let g:github_complete_enable_neocomplete = 1
+
 " evervim {{{2
 " Set Evernote developer token.
 let g:evervim_devtoken = ''
