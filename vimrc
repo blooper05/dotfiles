@@ -223,6 +223,9 @@ set softtabstop=0
 " Auto indent width.
 set shiftwidth=2
 
+" Stop syntax highlight of too long lines
+set synmaxcol=160
+
 " Auto Command {{{1
 
 augroup AutoRemoveTrailingSpaces
