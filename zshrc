@@ -52,7 +52,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt correct
 
-export LESS=-inqMRSF
+export LESS=-inqMRS
 export LESSCHARSET=utf-8
 
 export RBENV_ROOT=/usr/local/var/rbenv
