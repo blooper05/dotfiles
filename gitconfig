@@ -1,6 +1,5 @@
 [user]
-  name  =
-  email =
+  useConfigOnly = true
 [core]
   editor       = vim -c 'set fenc=utf-8'
   pager        = less
