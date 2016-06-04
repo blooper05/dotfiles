@@ -40,7 +40,7 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'Keithbsmiley/rspec.vim'
-NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'janko-m/vim-test'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-haml'
@@ -443,13 +443,13 @@ nnoremap <silent>[rails]s :<C-u>Unite rails/spec<CR>
 nnoremap <silent>[rails]C :<C-u>Unite rails/config<CR>
 nnoremap <silent>[rails]l :<C-u>Unite rails/log<CR>
 
-" vim-rspec {{{2
+" vim-test {{{2
 " Plugin key-mappings.
-nnoremap <silent><Leader>c :<C-u>call RunCurrentSpecFile()<CR>
-nnoremap <silent><Leader>n :<C-u>call RunNearestSpec()<CR>
-nnoremap <silent><Leader>l :<C-u>call RunLastSpec()<CR>
-nnoremap <silent><Leader>a :<C-u>call RunAllSpecs()<CR>
-let g:rspec_command = 'Dispatch rspec {spec}'
+nnoremap <silent><Leader>c :<C-u>TestFile<CR>
+nnoremap <silent><Leader>n :<C-u>TestNearest<CR>
+nnoremap <silent><Leader>l :<C-u>TestLast<CR>
+nnoremap <silent><Leader>a :<C-u>TestSuite<CR>
+let test#strategy = 'dispatch'
 
 " simple-javascript-indenter {{{2
 " Use brief mode.
