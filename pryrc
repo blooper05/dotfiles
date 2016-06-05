@@ -1,15 +1,15 @@
-# Awesome Print
+### Editor ###
+Pry.config.editor = 'vim'
+
+### Hirb ###
 begin
-  require 'awesome_print'
-  Pry.config.print = proc do |output, value|
-    Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)
-  end
+  require 'hirb'
 rescue LoadError
-  puts 'no awesome_print :('
+  puts 'no hirb :('
 end
 
-# Hirb
 if defined? Hirb
+  # Slightly dirty hack to fully support in-session Hirb.disable/enable toggling
   Hirb::View.instance_eval do
     def enable_output_method
       @output_method = true
@@ -28,7 +28,27 @@ if defined? Hirb
   Hirb.enable
 end
 
-# Editor
-Pry.config.editor = 'vim'
+### Awesome Print ###
+begin
+  require 'awesome_print'
+  Pry.config.print = proc do |output, value|
+    Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)
+  end
+rescue LoadError
+  puts 'no awesome_print :('
+end
+
+### pry-byebug ###
+if defined?(PryByebug)
+  Pry.commands.alias_command 'c', 'continue'
+  Pry.commands.alias_command 's', 'step'
+  Pry.commands.alias_command 'n', 'next'
+  Pry.commands.alias_command 'f', 'finish'
+end
+
+# Hit Enter to repeat last command
+Pry::Commands.command(/^$/, 'repeat last command') do
+  _pry_.run_command Pry.history.to_a.last
+end
 
 # vim: set ft=ruby:
