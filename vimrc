@@ -386,6 +386,8 @@ let g:neomru#file_mru_path = expand('~/.vim/cache/neomru/file')
 let g:neomru#directory_mru_path = expand('~/.vim/cache/neomru/directory')
 
 " syntastic {{{2
+" Disable syntastic checks on quit.
+let g:syntastic_check_on_wq = 0
 " Use the :sign interface to note errors.
 let g:syntastic_enable_signs = 1
 " Automatically open and close the location list.
