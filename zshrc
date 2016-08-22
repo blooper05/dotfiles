@@ -1,6 +1,36 @@
-# .zshrc
+# zplug {{{1
 
-# User specific aliases and functions
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+zplug "glidenote/hub-zsh-completion"
+zplug "mollifier/anyframe"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+
+zplug check || zplug install
+
+zplug load --verbose
+
+# Environment Variable {{{1
+
+# XDG Base Directory Specification
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+# Language
+export LANGUAGE="en_US.UTF-8"
+export LANG="${LANGUAGE}"
+export LC_ALL="${LANGUAGE}"
+export LC_CTYPE="${LANGUAGE}"
+
+# Tools
+export EDITOR=nvim
+export PAGER=less
+
+# Alias {{{1
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -10,51 +40,64 @@ alias ll='ls -FGhl'
 alias lt='ls -FGhlt'
 alias la='ls -AFGhl'
 
-# Source global definitions
-if [ -f /etc/zshrc ]; then
-    . /etc/zshrc
-fi
+# Key Binding {{{1
 
-# ------------------------------
+# Use Emacs mode.
 bindkey -e
 
-autoload -Uz colors; colors
-autoload -Uz vcs_info
-setopt prompt_subst
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr '+'
-zstyle ':vcs_info:git:*' unstagedstr '*'
-zstyle ':vcs_info:git:*' formats "%F{yellow}<%b%u%c>%f "
-zstyle ':vcs_info:git:*' actionformats '[%b|%a]'
-precmd () { vcs_info }
+# History {{{1
 
-[[ -n $VIMRUNTIME ]] && vim='%F{red}*vim*%f '
+# Set the history file path and its size.
+export HISTFILE=$XDG_DATA_HOME/zsh/history
+export HISTSIZE=10000 # in memory
+export SAVEHIST=10000 # on file
 
-PROMPT='${vim}%F{green}%n%f@%F{cyan}%m%f:%F{blue}%~%f ${vcs_info_msg_0_}%# '
-
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+setopt hist_ignore_dups
 setopt hist_ignore_all_dups
-setopt hist_save_nodups
+setopt hist_save_no_dups
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
+setopt share_history
+setopt hist_reduce_blanks
+setopt inc_append_history
+setopt hist_no_functions
+setopt extended_history
+setopt append_history
+setopt hist_verify
+setopt bang_hist
 
-autoload -Uz compinit; compinit
+# Completion {{{1
+
+autoload -Uz compinit && compinit -u -d $XDG_DATA_HOME/zsh/compdump
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' format '%B%d%b'
+zstyle ':completion:*' format '%B%d%b%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 setopt list_packed
+setopt correct
+setopt correct_all
+
+# Moving {{{1
 
 setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
-setopt correct
 
+# Tools {{{1
+
+# Homebrew-file {{{2
+export HOMEBREW_BREWFILE=$XDG_CONFIG_HOME/brewfile/Brewfile
+if [ -f $(brew --prefix)/etc/brew-wrap ]; then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+
+# Less {{{2
 export LESS=-inqMRS
 export LESSCHARSET=utf-8
+export LESSHISTFILE=$XDG_DATA_HOME/less/history
 
+# Ruby {{{2
 export RBENV_ROOT=/usr/local/var/rbenv
 # export RUBYGEMS_GEMDEPS=-
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
@@ -62,37 +105,16 @@ if [ ! -f $RBENV_ROOT/default-gems ]; then
   echo bundler > $RBENV_ROOT/default-gems
 fi
 
-peco-history() {
-  local tac
-  if which tac > /dev/null; then
-    tac='tac'
-  else
-    tac='tail -r'
-  fi
-  BUFFER=$(fc -ln 1 | eval $tac | peco --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle redisplay
-}
-zle -N peco-history
-bindkey '^r' peco-history
+# fzf {{{2
+export FZF_DEFAULT_OPTS='--extended --cycle --reverse --ansi --select-1 --exit-0'
 
-peco-kill() {
-  for pid in $(ps aux | peco | awk '{ print $2 }'); do
-    echo "peco-kill: kill process pid: $pid"
-    kill $pid
-  done
-  zle redisplay
-}
-zle -N peco-kill
-bindkey '^k' peco-kill
-
-peco-src() {
-  for selected_dir in $(ghq list | peco --query "$LBUFFER"); do
-    BUFFER="cd $(ghq root)/$selected_dir"
-    zle accept-line
-  done
-  zle redisplay
-}
-zle -N peco-src
-bindkey '^s' peco-src
+# anyframe {{{2
+bindkey '^k' anyframe-widget-kill
+bindkey '^r' anyframe-widget-put-history
+bindkey '^s' anyframe-widget-cd-ghq-repository
 stty -ixon
+
+# hub {{{2
+alias git='hub'
+
+# vim:set foldmethod=marker:
