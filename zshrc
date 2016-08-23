@@ -117,4 +117,6 @@ stty -ixon
 # hub {{{2
 alias git='hub'
 
+# Folding {{{1
+
 # vim:set foldmethod=marker:
