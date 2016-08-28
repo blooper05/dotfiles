@@ -52,6 +52,7 @@ export HISTFILE=$XDG_DATA_HOME/zsh/history
 export HISTSIZE=10000 # in memory
 export SAVEHIST=10000 # on file
 
+# Don't record an event that was recorded just before.
 setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
