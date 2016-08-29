@@ -2,6 +2,7 @@
 # tap repositories and their packages
 
 tap caskroom/cask
+cask appcleaner
 cask bettertouchtool
 cask chatwork
 cask clipy
