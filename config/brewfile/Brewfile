@@ -2,11 +2,18 @@
 # tap repositories and their packages
 
 tap caskroom/cask
+cask bettertouchtool
 cask chatwork
+cask clipy
+cask flux
 cask google-chrome
 cask google-japanese-ime
 cask iterm2
+cask karabiner
+cask keepingyouawake
+cask postico
 cask slack
+cask zoomus
 
 tap homebrew/core
 brew autoconf
@@ -36,6 +43,7 @@ brew libpng
 brew libsodium
 brew libtiff
 brew libtool
+brew mackup
 brew mas
 brew node
 brew openssl
