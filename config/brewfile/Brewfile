@@ -5,7 +5,9 @@ tap caskroom/cask
 cask appcleaner
 cask bettertouchtool
 cask chatwork
+cask cheatsheet
 cask clipy
+cask dropbox
 cask flux
 cask google-chrome
 cask google-japanese-ime
@@ -54,9 +56,9 @@ brew pixman
 brew pkg-config
 brew python
 brew python3
+brew rbenv
 brew rbenv-binstubs
 brew rbenv-default-gems
-brew rbenv
 brew readline
 brew reattach-to-user-namespace
 brew ruby-build
@@ -77,3 +79,9 @@ brew brew-file
 
 tap sanemat/font
 brew ricty --powerline --vim-powerline
+
+# App Store applications
+appstore 409183694 Keynote
+appstore 402398561 MindNode Pro
+appstore 568494494 Pocket
+appstore 880001334 Reeder
