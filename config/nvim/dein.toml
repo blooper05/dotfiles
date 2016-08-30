@@ -494,6 +494,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'kakkyz81/evervim'
+build = 'pip install markdown'
 hook_add = '''
   " Set Evernote developer token.
   let g:evervim_devtoken = ''
@@ -504,6 +505,8 @@ hook_add = '''
   nnoremap <silent>[evervim]l :<C-u>EvervimNotebookList<CR>
   nnoremap <silent>[evervim]c :<C-u>EvervimCreateNote<CR>
   nnoremap         [evervim]s :<C-u>EvervimSearchByQuery<Space>
+  " Set the work path.
+  let g:evervim_workdir = expand('~/.cache/evervim')
 '''
 
 # Folding {{{1
