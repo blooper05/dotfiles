@@ -15,6 +15,9 @@ zplug load --verbose
 
 # Environment Variable {{{1
 
+# PATH
+export PATH=/usr/local/bin:$PATH
+
 # XDG Base Directory Specification
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
