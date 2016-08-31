@@ -103,6 +103,7 @@ export LESSHISTFILE=$XDG_DATA_HOME/less/history
 
 # Ruby {{{2
 export GEMRC=$XDG_CONFIG_HOME/gem/gemrc
+export PRYRC=$XDG_CONFIG_HOME/pry/pryrc
 export BUNDLE_CONFIG=$XDG_CONFIG_HOME/bundler/config
 export RBENV_ROOT=/usr/local/var/rbenv
 # export RUBYGEMS_GEMDEPS=-
