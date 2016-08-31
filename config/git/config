@@ -1,10 +1,9 @@
 [user]
   useConfigOnly = true
 [core]
-  editor       = nvim
-  pager        = less
-  excludesfile = ~/.gitignore
-  quotepath    = false
+  editor    = nvim
+  pager     = less
+  quotepath = false
 [push]
   default = simple
 [fetch]
