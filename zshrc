@@ -102,6 +102,7 @@ export LESSCHARSET=utf-8
 export LESSHISTFILE=$XDG_DATA_HOME/less/history
 
 # Ruby {{{2
+export GEMRC=$XDG_CONFIG_HOME/gem/gemrc
 export RBENV_ROOT=/usr/local/var/rbenv
 # export RUBYGEMS_GEMDEPS=-
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
