@@ -1,35 +1,31 @@
 #!/bin/bash
 
-airport_path='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
+readonly AIRPORT_PATH='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
+readonly INFO=($($AIRPORT_PATH --getinfo | grep -E '^ *(agrCtlRSSI|state|lastTxRate|SSID):' | awk '{print $2}'))
+readonly RSSI=${INFO[0]}
+readonly STAT=${INFO[1]}
+readonly RATE=${INFO[2]}
+readonly SSID=${INFO[3]}
+readonly SIGNALS=(▂ ▅ ▇)
 
-signals=(▂ ▅ ▇)
-
-info=($($airport_path --getinfo | grep -E '^ *(agrCtlRSSI|state|lastTxRate|SSID):' | awk '{print $2}'))
-
-if [[ ${#info[@]} -eq 0 ]]; then
+if [[ ${#INFO[@]} -eq 0 ]]; then
   echo offline
   exit 1
 fi
 
-rssi="${info[0]}"
-stat="${info[1]}"
-rate="${info[2]}"
-ssid="${info[3]}"
+if [[ RATE -eq 0 ]]; then
+  echo no_wifi
+  exit 1
+fi
 
-for ((j = 0; j < "${#signals[@]}"; j++))
-do
-  if (( $j == 0 && $rssi > -100 )) ||
-     (( $j == 1 && $rssi > -80  )) ||
-     (( $j == 2 && $rssi > -50  )); then
-     signal="${signal}${signals[$j]} "
+for (( i = 0; i < ${#SIGNALS[@]}; i++ )); do
+  if (( i == 0 && -100 < RSSI )) ||
+     (( i == 1 &&  -80 < RSSI )) ||
+     (( i == 2 &&  -50 < RSSI )); then
+     signal="${signal}${SIGNALS[i]} "
   else
      signal="${signal}  "
   fi
 done
 
-if [ "$rate" = 0 ]; then
-  echo no_wifi
-  exit 1
-fi
-
-echo -e "${ssid} ${rate}Mbs ${signal}"
+echo -e "${SSID} ${RATE}Mbs ${signal}"
