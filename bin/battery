@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BATTERY_DANGER=20
+readonly BATTERY_DANGER=20
 
 get_battery() {
   pmset -g ps | grep -o '[0-9]\+%'
@@ -10,20 +10,20 @@ is_charging() {
   pmset -g ps | grep -E '\<charging;' >/dev/null 2>&1
 }
 
-battery_color() {
-  local battery percentage
-  battery="${1:-$(get_battery)}"
-  percentage="${1:-$(get_battery | tr -d '%')}"
+battery_with_color() {
+  local battery color
+
+  battery=$(get_battery | tr -d '%')
 
   if is_charging; then
-    [[ -n $percentage ]] && echo -e "#[fg=colour46]${battery}#[default]"
+    color=colour46
+  elif [[ battery -lt BATTERY_DANGER ]]; then
+    color=red
   else
-    if [[ $percentage -ge $BATTERY_DANGER ]]; then
-      echo -e "#[fg=blue]${battery}#[default]"
-    else
-      echo -e "#[fg=red]${battery}#[default]"
-    fi
+    color=blue
   fi
+
+  echo -e "#[fg=${color}]${battery}%#[default]"
 }
 
-battery_color
+battery_with_color
