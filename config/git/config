@@ -4,6 +4,8 @@
   editor    = nvim
   pager     = less
   quotepath = false
+[color]
+  ui = auto
 [push]
   default = simple
 [fetch]
@@ -14,7 +16,5 @@
   autostash = true
 [help]
   autocorrect = 1
-[color]
-  ui = auto
 [ghq]
   root = ~/src
