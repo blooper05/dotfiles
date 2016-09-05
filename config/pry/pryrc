@@ -1,6 +1,9 @@
 ### Editor ###
 Pry.config.editor = 'nvim'
 
+### History ###
+Pry.config.history.file = "#{ENV['XDG_DATA_HOME']}/pry/history"
+
 ### Hirb ###
 begin
   require 'hirb'
