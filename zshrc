@@ -96,6 +96,10 @@ if [ -f $(brew --prefix)/etc/brew-wrap ]; then
   source $(brew --prefix)/etc/brew-wrap
 fi
 
+# Neovim {{{2
+alias vi='nvim'
+alias vim='nvim'
+
 # Less {{{2
 export LESS=-inqMRS
 export LESSCHARSET=utf-8
@@ -105,6 +109,8 @@ export LESSHISTFILE=$XDG_DATA_HOME/less/history
 export GEMRC=$XDG_CONFIG_HOME/gem/gemrc
 export PRYRC=$XDG_CONFIG_HOME/pry/pryrc
 export BUNDLE_CONFIG=$XDG_CONFIG_HOME/bundler/config
+
+# rbenv {{{2
 export RBENV_ROOT=/usr/local/var/rbenv
 # export RUBYGEMS_GEMDEPS=-
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
@@ -122,6 +128,7 @@ bindkey '^s' anyframe-widget-cd-ghq-repository
 stty -ixon
 
 # hub {{{2
+export HUB_CONFIG=$XDG_DATA_HOME/hub/config
 eval "$(hub alias -s)"
 
 # Folding {{{1
