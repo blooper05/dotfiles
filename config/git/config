@@ -6,6 +6,8 @@
   quotepath = false
 [color]
   ui = auto
+[commit]
+  template = ~/.config/git/template
 [push]
   default = simple
 [fetch]
