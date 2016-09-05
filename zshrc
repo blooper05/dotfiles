@@ -122,7 +122,7 @@ bindkey '^s' anyframe-widget-cd-ghq-repository
 stty -ixon
 
 # hub {{{2
-alias git='hub'
+eval "$(hub alias -s)"
 
 # Folding {{{1
 
