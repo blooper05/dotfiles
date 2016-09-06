@@ -1,7 +1,7 @@
 # Basic {{{1
 
 # Use Zsh as default shell.
-set -g default-command 'which reattach-to-user-namespace > /dev/null 2>&1 && reattach-to-user-namespace -l zsh || zsh'
+set -g default-command 'which reattach-to-user-namespace >/dev/null 2>&1 && reattach-to-user-namespace -l zsh || zsh'
 
 # Don't wait for escape sequences.
 set -s escape-time 0
@@ -12,15 +12,39 @@ set -g allow-rename off
 # Set display time for status line messages.
 set -g display-time 3000
 
+# Set the history limit.
+set -g history-limit 10000
+
+# Start window index from 1.
+set -g base-index 1
+
 # View {{{1
 
 # Set terminal type.
 set -g default-terminal xterm-256color
 
-# Show status bar at top.
+# Set terminal emulator window titles.
+set -g set-titles on
+set -g set-titles-string '#T @ #H'
+
+# Set statusbar reload interval(s).
+set -g status-interval 10
+
+# Show statusbar at top.
 set -g status-position top
 
-# Color Schema [Solarized 256] {{{2
+# Show statusbar in the center.
+set -g status-justify centre
+
+# Set statusbar length.
+set -g status-left-length 90
+set -g status-right-length 90
+
+# Make statusbar more useful.
+set -g status-left 'tmux:[#P]'
+set -g status-right '#($(dirname $(readlink $XDG_CONFIG_HOME))/bin/wifi) #($(dirname $(readlink $XDG_CONFIG_HOME))/bin/battery)  [%Y-%m-%d(%a) %H:%M]'
+
+# Color Schema [Solarized 256] {{{1
 
 # Default statusbar colors
 set -g status-bg colour235 # base02
@@ -65,56 +89,36 @@ set -g prefix C-t
 bind C-t send-prefix
 
 # Reload tmux.conf immediately.
-bind r source ~/.tmux.conf
+bind r source $XDG_CONFIG_HOME/tmux/config
 
-# Synchronize panes.
-bind e setw synchronize-panes on
-bind E setw synchronize-panes off
+# Create a new window.
+bind c new-window
 
-# Base {{{1
-# mouse
-set -g mouse on
-bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
-bind -n WheelDownPane select-pane -t= \; send-keys -M
-
-# Windows
-set -g base-index 1
-bind-key c new-window
+# Select windows.
 bind Space choose-window
 
-# Panes
-bind b break-pane
-
+# Move around between panes like Vim.
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
 bind C-h select-pane -L
 bind C-j select-pane -D
 bind C-k select-pane -U
 bind C-l select-pane -R
 
-bind h resize-pane -L
-bind j resize-pane -D
-bind k resize-pane -U
-bind l resize-pane -R
+# Resize panes like Vim.
+bind < resize-pane -L 10
+bind - resize-pane -D 10
+bind + resize-pane -U 10
+bind > resize-pane -R 10
 
-bind H resize-pane -L 10
-bind J resize-pane -D 10
-bind K resize-pane -U 10
-bind L resize-pane -R 10
+# Break panes.
+bind b break-pane
 
-#Views
-
-# menubar
-set -g set-titles on
-set -g set-titles-string '#20(whoami)@#H:#20(pwd)'
-
-# statusbar
-set -g status-interval 10
-set -g status-justify 'centre'
-set -g status-left-length 90
-set -g status-right '#($(dirname $(readlink ~/.tmux.conf))/bin/wifi)  #($(dirname $(readlink ~/.tmux.conf))/bin/battery)   #(date "+%a %b %e %R")'
-set -g status-right-length 90
-
-# history
-set -g history-limit 10000
+# Synchronize panes.
+bind e setw synchronize-panes on
+bind E setw synchronize-panes off
 
 # Folding {{{1
 
