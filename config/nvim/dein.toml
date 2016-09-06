@@ -460,6 +460,10 @@ repo = 'kchmck/vim-coffee-script'
 on_ft = 'coffee'
 
 [[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
@@ -469,8 +473,6 @@ on_ft = 'markdown'
 hook_add = '''
   augroup MarkdownSettings
     autocmd!
-    " Set markdown filetype file.
-    autocmd BufNewFile,BufRead *.md set filetype=markdown
     " Set markdown indent style.
     autocmd FileType markdown set tabstop=4 shiftwidth=4
     " Disable AutoRemoveTrailingSpaces.
