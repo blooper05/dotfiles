@@ -115,7 +115,9 @@ export RBENV_ROOT=/usr/local/var/rbenv
 # export RUBYGEMS_GEMDEPS=-
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 if [ ! -f $RBENV_ROOT/default-gems ]; then
-  echo bundler > $RBENV_ROOT/default-gems
+  echo bundler    >> $RBENV_ROOT/default-gems
+  echo fastri     >> $RBENV_ROOT/default-gems
+  echo rcodetools >> $RBENV_ROOT/default-gems
 fi
 
 # tmux {{{2
