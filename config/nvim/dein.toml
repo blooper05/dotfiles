@@ -181,6 +181,17 @@ repo = 'anyakichi/vim-surround'
 # Util {{{1
 
 [[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_add = '''
+  " Plugin key-mappings.
+  nmap n <Plug>(anzu-n-with-echo)
+  nmap N <Plug>(anzu-N-with-echo)
+  nmap * <Plug>(anzu-star-with-echo)
+  nmap # <Plug>(anzu-sharp-with-echo)
+  nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
+'''
+
+[[plugins]]
 repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
