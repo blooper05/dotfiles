@@ -18,6 +18,9 @@ set -g history-limit 10000
 # Start window index from 1.
 set -g base-index 1
 
+# Start pane index from 1.
+set -g pane-base-index 1
+
 # View {{{1
 
 # Set terminal type.
