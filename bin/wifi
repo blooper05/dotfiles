@@ -28,4 +28,4 @@ for (( i = 0; i < ${#SIGNALS[@]}; i++ )); do
   fi
 done
 
-echo -e "${SSID} ${RATE}Mbs ${signal}"
+echo -e "#[fg=white]${SSID} ${RATE}Mbs ${signal}#[default]"
