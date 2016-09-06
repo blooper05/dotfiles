@@ -11,7 +11,7 @@ zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
 zplug check || zplug install
 
-zplug load --verbose
+zplug load
 
 # Environment Variable {{{1
 
@@ -117,6 +117,29 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 if [ ! -f $RBENV_ROOT/default-gems ]; then
   echo bundler > $RBENV_ROOT/default-gems
 fi
+
+# tmux {{{2
+function is_tmux_runnning() { [ ! -z "$TMUX" ]; }
+function is_interactive() { [ ! -z "$PS1" ]; }
+function is_ssh_running() { [ ! -z "$SSH_CONECTION" ]; }
+function tmux_automatically_attach_session()
+{
+  if ! is_tmux_runnning && is_interactive && ! is_ssh_running; then
+    if tmux has-session >/dev/null 2>&1 && tmux list-sessions | grep -qE '.*]$'; then
+      tmux list-sessions
+      echo -n 'tmux: attach? (y/N/num) '
+      read
+      if [[ "$REPLY" =~ ^[Yy]$ ]] || [[ "$REPLY" == '' ]]; then
+        tmux attach-session
+      elif [[ "$REPLY" =~ ^[0-9]+$ ]]; then
+        tmux attach -t "$REPLY"
+      fi
+    else
+      tmux -f $XDG_CONFIG_HOME/tmux/config new-session
+    fi
+  fi
+}
+tmux_automatically_attach_session
 
 # fzf {{{2
 export FZF_DEFAULT_OPTS='--extended --cycle --reverse --ansi --select-1 --exit-0'
