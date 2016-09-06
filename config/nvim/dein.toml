@@ -181,6 +181,9 @@ repo = 'anyakichi/vim-surround'
 # Util {{{1
 
 [[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
 repo = 'osyo-manga/vim-anzu'
 hook_add = '''
   " Plugin key-mappings.
