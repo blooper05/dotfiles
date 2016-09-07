@@ -56,6 +56,7 @@ brew pango
 brew pcre
 brew pixman
 brew pkg-config
+brew postgresql
 brew python
 brew python3
 brew rbenv
