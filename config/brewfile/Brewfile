@@ -50,6 +50,8 @@ brew libtiff
 brew libtool
 brew mackup
 brew mas
+brew mcrypt
+brew mhash
 brew node
 brew openssl
 brew pango
