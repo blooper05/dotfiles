@@ -11,6 +11,7 @@ cask dropbox
 cask flux
 cask google-chrome
 cask google-japanese-ime
+cask hosts
 cask iterm2
 cask karabiner
 cask keepingyouawake
@@ -38,9 +39,11 @@ brew ghq
 brew git
 brew glib
 brew gobject-introspection
+brew graphviz
 brew harfbuzz
 brew hub
 brew icu4c
+brew imagemagick
 brew jpeg
 brew libevent
 brew libffi
