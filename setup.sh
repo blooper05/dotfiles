@@ -1,41 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
-DOTFILES='
-  agignore
-  bundle
-  gemrc
-  gitconfig
-  gitignore
-  gvimrc
-  jshintrc
-  pryrc
-  rspec
-  rubocop.yml
-  tmux.conf
-  vimrc
-  vimshrc
-  zprofile
-  zshrc
-'
-
-CMDNAME=$(basename $0)
-DOTDIR=$(cd $(dirname $0); pwd)
-
-while getopts cfis OPT ; do
-  case "$OPT" in
-    c) FLG_C='TRUE' ;;
-    f) FLG_F='TRUE' ;;
-    i) FLG_I='TRUE' ;;
-    s) FLG_S='TRUE' ;;
-    *) echo "Usage: $CMDNAME [-c] [-f] [-is]" 1>&2
-       exit 1 ;;
-  esac
-done
-
-NORMAL=$(tput sgr0)
-GREEN=$(tput setaf 2)
-YELLOW=$(tput setaf 3)
-RED=$(tput setaf 1)
+readonly NORMAL=$(tput sgr0)
+readonly GREEN=$(tput setaf 2)
+readonly YELLOW=$(tput setaf 3)
+readonly RED=$(tput setaf 1)
 
 green() {
   echo "$GREEN$*$NORMAL"
@@ -49,33 +17,41 @@ red() {
   echo "$RED$*$NORMAL"
 }
 
-if [ "$FLG_S" = 'TRUE' ]; then
-  for file in $DOTFILES ; do
-    ln -s $DOTDIR/$file $HOME/.$file
-    if [ $? -eq 0 ]; then
-      green 'success'
-    else
-      red 'fail'
-    fi
-  done
-fi
+readonly DOTDIR=$(cd "$(dirname "$0")" || pwd)
+readonly DOTFILES='
+  config
+  mackup.cfg
+  zshrc
+'
 
-if [ "$FLG_I" = 'TRUE' ]; then
-  NEOBUNDLE_URI=https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh
-  curl -sL $NEOBUNDLE_URI | sh > /dev/null 2>&1
+for file in $DOTFILES ; do
+  ln -fns "$DOTDIR/$file" "$HOME/.$file"
   if [ $? -eq 0 ]; then
     green 'success'
   else
     red 'fail'
   fi
+done
 
-  RUBYREFM_DIR=$HOME/.vim/ref/rubyrefm
-  RUBYREFM_URI=http://cache.ruby-lang.org/pub/ruby/doc/ruby-refm-1.9.3-dynamic-20120829.tar.gz
-  mkdir -p $RUBYREFM_DIR
-  curl -sL $RUBYREFM_URI | tar xz -C $RUBYREFM_DIR --strip=1 > /dev/null 2>&1
+readonly SHARE_DIR=$HOME/.local/share
+readonly SHARE_DIRS='
+  less
+  pry
+  zsh
+'
+
+for dir in $SHARE_DIRS ; do
+  mkdir -p "$SHARE_DIR/$dir"
   if [ $? -eq 0 ]; then
     green 'success'
   else
     red 'fail'
   fi
-fi
+done
+
+sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/Resources/FullRoman.tiff    /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/full_ascii.tiff
+sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/Resources/HalfKatakana.tiff /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/half_katakana.tiff
+sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/Resources/Hiragana.tiff     /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/hiragana.tiff
+sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/Resources/Katakana.tiff     /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/full_katakana.tiff
+sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/Resources/Roman.tiff        /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/direct.tiff
+sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/Resources/Roman.tiff        /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/half_ascii.tiff
