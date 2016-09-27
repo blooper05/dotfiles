@@ -79,6 +79,8 @@ brew zeromq
 brew zplug
 brew zsh
 
+tap homebrew/services
+
 tap neovim/neovim
 brew neovim
 
@@ -89,7 +91,7 @@ tap sanemat/font
 brew ricty --powerline --vim-powerline
 
 # App Store applications
-appstore 409183694 Keynote
-appstore 402398561 MindNode Pro
-appstore 568494494 Pocket
-appstore 880001334 Reeder
+appstore 409183694 Keynote (6.6.2)
+appstore 402398561 MindNode Pro (1.11.5)
+appstore 568494494 Pocket (1.6.2)
+appstore 880001334 Reeder (3.0.1)
