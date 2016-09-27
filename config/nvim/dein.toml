@@ -1,3 +1,4 @@
+# TODO: denite.nvim
 # Basic {{{1
 
 [[plugins]]
@@ -23,6 +24,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+depends = ['vim-fugitive', 'vimfiler.vim', 'vimshell.vim', 'unite.vim', 'gundo']
 hook_add = '''
   let g:lightline = {
       \ 'colorscheme' : 'solarized',
@@ -93,7 +95,7 @@ repo = 'Yggdroot/indentLine'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-depends = ['context_filetype.vim']
+depends = 'context_filetype.vim'
 build = 'pip3 install neovim'
 on_i = 1
 hook_add = '''
@@ -134,6 +136,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+on_source = 'neosnippet.vim'
 
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
@@ -147,6 +150,7 @@ on_i = 1
 
 [[plugins]]
 repo = 'bkad/CamelCaseMotion'
+on_map = '<Plug>CamelCaseMotion_'
 hook_add = '''
   " Plugin key-mappings.
   map <silent>w  <Plug>CamelCaseMotion_w
@@ -167,9 +171,11 @@ hook_add = '''
 
 [[plugins]]
 repo = 'vim-scripts/matchit.zip'
+on_map = '%'
 
 [[plugins]]
 repo = 'AndrewRadev/switch.vim'
+on_map = '-'
 hook_add = '''
   " Plugin key-mappings.
   let g:switch_mapping = '-'
@@ -177,14 +183,18 @@ hook_add = '''
 
 [[plugins]]
 repo = 'anyakichi/vim-surround'
+depends = 'vim-repeat'
+on_map = ['cs', 'ds', ['v', 's']]
 
 # Util {{{1
 
 [[plugins]]
 repo = 'tpope/vim-repeat'
+on_map = '.'
 
 [[plugins]]
 repo = 'osyo-manga/vim-anzu'
+on_map = '<Plug>'
 hook_add = '''
   " Plugin key-mappings.
   nmap n <Plug>(anzu-n-with-echo)
@@ -196,9 +206,11 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
+on_map = ['gc', 'g<', 'g>']
 
 [[plugins]]
 repo = 'junegunn/vim-easy-align'
+on_map = '<Plug>(EasyAlign)'
 hook_add = '''
   " Plugin key-mappings.
   xmap <silent><Enter> <Plug>(EasyAlign)
@@ -207,6 +219,7 @@ hook_add = '''
 [[plugins]]
 repo = 'sjl/gundo.vim'
 build = 'pip install neovim'
+on_cmd = 'Gundo'
 hook_add = '''
   " Plugin key-mappings.
   nnoremap <silent><Space>U :<C-u>GundoToggle<CR>
@@ -216,6 +229,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/vimshell.vim'
+on_map = '<Plug>'
 hook_add = '''
   " The prefix key.
   nnoremap [shell]  <Nop>
@@ -234,6 +248,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/vimfiler.vim'
+on_map = '<Plug>'
 hook_add = '''
   " The prefix key.
   nnoremap [filer]  <Nop>
@@ -249,7 +264,8 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/unite.vim'
-depends = ['neomru.vim', 'unite-outline', 'unite-ghq', 'unite-help']
+depends = ['neomru.vim', 'unite-outline', 'unite-ghq', 'unite-help', 'vim-ref-ri', 'unite-rails', 'unite-codic.vim']
+on_map = '<Plug>'
 hook_add = '''
   " The prefix key.
   nnoremap [unite]  <Nop>
@@ -431,11 +447,11 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tpope/vim-rails'
-on_ft = 'ruby'
+# on_ft = 'ruby'
 
 [[plugins]]
 repo = 'basyura/unite-rails'
-on_ft = 'ruby'
+# on_ft = 'ruby'
 on_source = 'unite.vim'
 hook_add = '''
   " The prefix key.
