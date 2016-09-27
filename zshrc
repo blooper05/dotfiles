@@ -57,6 +57,7 @@ export SAVEHIST=10000 # on file
 
 # Don't record an event that was recorded just before.
 setopt hist_ignore_dups
+# TODO: Add comments
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_expire_dups_first
@@ -109,6 +110,7 @@ export LESSHISTFILE=$XDG_DATA_HOME/less/history
 export GEMRC=$XDG_CONFIG_HOME/gem/gemrc
 export PRYRC=$XDG_CONFIG_HOME/pry/pryrc
 export BUNDLE_CONFIG=$XDG_CONFIG_HOME/bundler/config
+export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
 
 # rbenv {{{2
 export RBENV_ROOT=/usr/local/var/rbenv
