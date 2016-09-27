@@ -122,6 +122,9 @@ if [ ! -f $RBENV_ROOT/default-gems ]; then
   echo rcodetools >> $RBENV_ROOT/default-gems
 fi
 
+# Node.js {{{2
+export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
+
 # tmux {{{2
 function is_tmux_runnning() { [ ! -z "$TMUX" ]; }
 function is_interactive() { [ ! -z "$PS1" ]; }
