@@ -3,6 +3,7 @@
 
 tap caskroom/cask
 cask appcleaner
+cask avira-antivirus
 cask bettertouchtool
 cask chatwork
 cask cheatsheet
@@ -74,6 +75,7 @@ brew shellcheck
 brew sqlite
 brew the_platinum_searcher
 brew tmux
+brew utf8proc
 brew xz
 brew zeromq
 brew zplug
@@ -91,7 +93,9 @@ tap sanemat/font
 brew ricty --powerline --vim-powerline
 
 # App Store applications
+appstore 412448059 ForkLift (2.6.6)
 appstore 409183694 Keynote (6.6.2)
 appstore 402398561 MindNode Pro (1.11.5)
 appstore 568494494 Pocket (1.6.2)
 appstore 880001334 Reeder (3.0.1)
+appstore 425955336 Skitch (2.7.8)
