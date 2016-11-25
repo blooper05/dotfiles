@@ -17,6 +17,7 @@ cask iterm2
 cask karabiner
 cask keepingyouawake
 cask microsoft-office
+cask night-owl
 cask postico
 cask skype
 cask slack
@@ -66,7 +67,7 @@ brew postgresql
 brew python
 brew python3
 brew rbenv
-brew rbenv-binstubs
+brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
 brew readline
 brew reattach-to-user-namespace
