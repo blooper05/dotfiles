@@ -2,13 +2,18 @@
 # tap repositories and their packages
 
 tap caskroom/cask
+cask adobe-photoshop-cc
+cask adobe-photoshop-lightroom
 cask appcleaner
 cask avira-antivirus
 cask bettertouchtool
 cask chatwork
 cask cheatsheet
 cask clipy
+cask cooviewer
+cask docker
 cask dropbox
+cask duet
 cask flux
 cask google-chrome
 cask google-japanese-ime
@@ -16,7 +21,10 @@ cask hosts
 cask iterm2
 cask karabiner
 cask keepingyouawake
+cask kindle
+cask lastfm
 cask microsoft-office
+cask mplayerx
 cask night-owl
 cask postico
 cask skype
@@ -24,65 +32,30 @@ cask slack
 cask zoomus
 
 tap homebrew/core
-brew autoconf
-brew automake
 brew awscli
-brew cairo
-brew cmake
-brew czmq
-brew doxygen
-brew fontconfig
-brew fontforge
-brew freetype
 brew fzf
-brew gdbm
-brew gettext
 brew ghq
 brew git
-brew glib
-brew gobject-introspection
 brew graphviz
-brew harfbuzz
 brew hub
-brew icu4c
 brew imagemagick
-brew jpeg
-brew libevent
-brew libffi
-brew libpng
-brew libsodium
-brew libtiff
-brew libtool
 brew mackup
 brew mas
-brew mcrypt
-brew mhash
 brew node
-brew openssl
-brew pango
-brew pcre
-brew pixman
-brew pkg-config
 brew postgresql
 brew python
 brew python3
 brew rbenv
 brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
-brew readline
 brew reattach-to-user-namespace
 brew ruby-build
 brew shellcheck
 brew sqlite
 brew the_platinum_searcher
 brew tmux
-brew utf8proc
-brew xz
-brew zeromq
 brew zplug
 brew zsh
-
-tap homebrew/services
 
 tap neovim/neovim
 brew neovim
