@@ -29,6 +29,7 @@ cask night-owl
 cask postico
 cask skype
 cask slack
+cask vox
 cask zoomus
 
 tap homebrew/core
