@@ -17,7 +17,7 @@ red() {
   echo "$RED$*$NORMAL"
 }
 
-readonly DOTDIR=$(cd "$(dirname "$0")" || pwd)
+readonly DOTDIR=$(cd "$(dirname "$0")" && pwd)
 readonly DOTFILES='
   config
   mackup.cfg
