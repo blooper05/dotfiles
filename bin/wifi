@@ -1,22 +1,24 @@
 #!/bin/bash
 
 readonly AIRPORT_PATH='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
-readonly INFO=($($AIRPORT_PATH --getinfo | grep -E '^ *(agrCtlRSSI|state|lastTxRate|SSID):' | awk '{print $2}'))
-readonly RSSI=${INFO[0]}
-readonly STAT=${INFO[1]}
-readonly RATE=${INFO[2]}
-readonly SSID=${INFO[3]}
-readonly SIGNALS=(▂ ▅ ▇)
+readonly INFO=($($AIRPORT_PATH -I | grep -E '^ *(agrCtlRSSI|state|lastTxRate|SSID):' | awk '{print $2}'))
 
 if [[ ${#INFO[@]} -eq 0 ]]; then
   echo offline
   exit 1
 fi
 
+readonly RSSI=${INFO[0]}
+readonly STAT=${INFO[1]}
+readonly RATE=${INFO[2]}
+readonly SSID=${INFO[3]}
+
 if [[ RATE -eq 0 ]]; then
   echo no_wifi
   exit 1
 fi
+
+readonly SIGNALS=(▂ ▅ ▇)
 
 for (( i = 0; i < ${#SIGNALS[@]}; i++ )); do
   if (( i == 0 && -100 < RSSI )) ||
