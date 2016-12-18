@@ -45,7 +45,7 @@ set -g status-right-length 90
 
 # Make statusbar more useful.
 set -g status-left 'tmux:[#P]'
-set -g status-right '#($(dirname $(readlink $XDG_CONFIG_HOME))/bin/wifi) #(battery -t)  [%Y-%m-%d(%a) %H:%M]'
+set -g status-right '#($(dirname $(readlink $XDG_CONFIG_HOME))/bin/wifi) #(battery -t) %a %b %e %R '
 
 # Color Schema [Solarized 256] {{{1
 
