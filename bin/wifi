@@ -24,9 +24,9 @@ for (( i = 0; i < ${#SIGNALS[@]}; i++ )); do
   if (( i == 0 && -100 < RSSI )) ||
      (( i == 1 &&  -80 < RSSI )) ||
      (( i == 2 &&  -50 < RSSI )); then
-     signal="${signal}${SIGNALS[i]} "
+     signal="${signal}${SIGNALS[i]}"
   else
-     signal="${signal}  "
+     signal="${signal} "
   fi
 done
 
