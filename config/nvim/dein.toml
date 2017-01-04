@@ -508,6 +508,9 @@ repo = 'elzr/vim-json'
 on_ft = 'json'
 
 [[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
