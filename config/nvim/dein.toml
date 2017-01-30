@@ -427,17 +427,21 @@ repo = 'Shougo/context_filetype.vim'
 repo = 'thinca/vim-ref'
 depends = ['vim-ref-ri']
 
+# [[plugins]]
+# repo = 'osyo-manga/vim-monster'
+# on_ft = 'ruby'
+# hook_add = '''
+#   " Set async completion.
+#   let g:monster#completion#rcodetools#backend = 'async_rct_complete'
+#   " Use deoplete.nvim.
+#   let g:deoplete#sources#omni#input_patterns = {
+#     \ 'ruby' : '[^. *\t]\.\w*\|\h\w*::',
+#     \ }
+# '''
+
 [[plugins]]
-repo = 'osyo-manga/vim-monster'
+repo = 'Shougo/deoplete-rct'
 on_ft = 'ruby'
-hook_add = '''
-  " Set async completion.
-  let g:monster#completion#rcodetools#backend = 'async_rct_complete'
-  " Use deoplete.nvim.
-  let g:deoplete#sources#omni#input_patterns = {
-    \ 'ruby' : '[^. *\t]\.\w*\|\h\w*::',
-    \ }
-'''
 
 [[plugins]]
 repo = 'yuku-t/vim-ref-ri'
