@@ -126,6 +126,10 @@ fi
 # Node.js {{{2
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 
+# nodebrew {{{2
+export NODEBREW_ROOT=/usr/local/var/nodebrew
+export PATH=$NODEBREW_ROOT/current/bin:$PATH
+
 # tmux {{{2
 function is_tmux_runnning() { [ ! -z "$TMUX" ]; }
 function is_interactive() { [ ! -z "$PS1" ]; }

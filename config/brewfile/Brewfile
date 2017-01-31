@@ -43,7 +43,7 @@ brew hub
 brew imagemagick
 brew mackup
 brew mas
-brew node
+brew nodebrew
 brew postgresql
 brew python
 brew python3
