@@ -9,6 +9,7 @@ cask bettertouchtool
 cask chatwork
 cask cheatsheet
 cask clipy
+cask cmd-eikana
 cask cooviewer
 cask docker
 cask dropbox
@@ -19,13 +20,14 @@ cask google-japanese-ime
 cask hosts
 cask insomnia
 cask iterm2
-cask karabiner
 cask keepingyouawake
 cask kindle
+cask lacaille
 cask lastfm
 cask microsoft-office
 cask mplayerx
 cask night-owl
+cask openemu
 cask postico
 cask skype
 cask slack
