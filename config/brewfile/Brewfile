@@ -40,6 +40,7 @@ brew awscli
 brew fzf
 brew ghq
 brew git
+brew go
 brew graphviz
 brew hub
 brew imagemagick
