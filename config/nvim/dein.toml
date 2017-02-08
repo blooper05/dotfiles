@@ -15,13 +15,14 @@ build = 'make'
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
 hook_add = '''
-  " let g:solarized_termcolors = 256
+  " Use solarized as colorscheme.
+  au MyAutoCmd VimEnter * nested colorscheme solarized
+  " Assume a dark background.
+  set background=dark
+  " Stop displaying these typefaces.
   let g:solarized_bold = 0
   let g:solarized_italic = 0
   let g:solarized_underline = 0
-  " let g:solarized_visibility = 'low'
-  set background=dark
-  au MyAutoCmd VimEnter * nested colorscheme solarized
 '''
 
 [[plugins]]
