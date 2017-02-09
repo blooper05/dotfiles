@@ -118,13 +118,18 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = ['neosnippet-snippets', 'context_filetype.vim']
-on_i = 1
 on_ft = 'snippet'
 hook_add = '''
   " Plugin key-mappings.
   imap <C-k> <Plug>(neosnippet_expand_or_jump)
   smap <C-k> <Plug>(neosnippet_expand_or_jump)
   xmap <C-k> <Plug>(neosnippet_expand_target)
+  " Enable snipMate compatibility feature.
+  let g:neosnippet#enable_snipmate_compatibility = 1
+  " Expand the function prototype.
+  let g:neosnippet#enable_completed_snippet = 1
+  " Expand snippets by a word boundary.
+  let g:neosnippet#expand_word_boundary = 1
   " SuperTab like snippets behavior.
   imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
      \ "\<Plug>(neosnippet_expand_or_jump)" :
