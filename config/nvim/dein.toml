@@ -147,11 +147,7 @@ repo = 'Shougo/neosnippet-snippets'
 on_source = 'neosnippet.vim'
 
 [[plugins]]
-repo = 'jiangmiao/auto-pairs'
-on_i = 1
-
-[[plugins]]
-repo = 'tpope/vim-endwise'
+repo = 'cohama/lexima.vim'
 on_i = 1
 
 # TextObject {{{1
