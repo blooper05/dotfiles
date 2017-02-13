@@ -186,9 +186,19 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'anyakichi/vim-surround'
-depends = 'vim-repeat'
-on_map = ['cs', 'ds', ['v', 's']]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+depends = ['vim-operator-user', 'vim-repeat']
+on_map = '<Plug>'
+hook_add = '''
+  " Plugin key-mappings.
+  omap <silent>s <Plug>(operator-surround-append)
+  xmap <silent>s <Plug>(operator-surround-append)
+  map <silent>ds <Plug>(operator-surround-delete)a
+  map <silent>cs <Plug>(operator-surround-replace)a
+'''
 
 # Util {{{1
 
