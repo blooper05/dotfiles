@@ -190,7 +190,7 @@ repo = 'kana/vim-operator-user'
 
 [[plugins]]
 repo = 'rhysd/vim-operator-surround'
-depends = ['vim-operator-user', 'vim-repeat']
+depends = ['vim-operator-user']
 on_map = '<Plug>'
 hook_add = '''
   " Plugin key-mappings.
