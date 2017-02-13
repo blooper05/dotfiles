@@ -349,7 +349,7 @@ hook_add = '''
 repo = 'neomake/neomake'
 on_event = 'BufWritePost'
 hook_add = '''
-  " Runs Neomake on the current file on every write
+  " Runs Neomake on the current file on every write.
   au MyAutoCmd BufWritePost * Neomake
   " Sign settings.
   let g:neomake_error_sign   = { 'text': '>>', 'texthl': 'ErrorMsg' }
