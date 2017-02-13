@@ -203,10 +203,6 @@ hook_add = '''
 # Util {{{1
 
 [[plugins]]
-repo = 'tpope/vim-repeat'
-on_map = '.'
-
-[[plugins]]
 repo = 'osyo-manga/vim-anzu'
 on_map = '<Plug>'
 hook_add = '''
