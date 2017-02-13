@@ -48,8 +48,8 @@ hook_add = '''
       \   'fileencoding' : 'LightLineFileencoding',
       \   'mode'         : 'LightLineMode',
       \ },
-      \ 'separator'    : { 'left' : '⮀', 'right' : '⮂' },
-      \ 'subseparator' : { 'left' : '⮁', 'right' : '⮃' },
+      \ 'separator'    : { 'left' : "\ue0b0", 'right' : "\ue0b2" },
+      \ 'subseparator' : { 'left' : "\ue0b1", 'right' : "\ue0b3" },
       \ }
 
   function! LightLineModified()
@@ -57,7 +57,7 @@ hook_add = '''
   endfunction
 
   function! LightLineReadonly()
-    return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '⭤' : ''
+    return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? "\ue0a2" : ''
   endfunction
 
   function! LightLineFilename()
@@ -72,7 +72,7 @@ hook_add = '''
   function! LightLineFugitive()
     if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
       let branch = fugitive#head()
-      return branch !=# '' ? '⭠ '.branch : ''
+      return branch !=# '' ? "\ue0a0 ".branch : ''
     endif
     return ''
   endfunction
