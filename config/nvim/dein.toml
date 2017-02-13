@@ -340,17 +340,14 @@ hook_add = '''
 # Runner {{{1
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
+repo = 'neomake/neomake'
+on_event = 'BufWritePost'
 hook_add = '''
-  " Disable syntastic checks on quit.
-  let g:syntastic_check_on_wq = 0
-  " Use the :sign interface to note errors.
-  let g:syntastic_enable_signs = 1
-  " Automatically open and close the location list.
-  let g:syntastic_auto_loc_list = 2
-  " Set syntax checkers.
-  let g:syntastic_sh_checkers = ['shellcheck']
-  let g:syntastic_ruby_checkers = ['rubocop']
+  " Runs Neomake on the current file on every write
+  au MyAutoCmd BufWritePost * Neomake
+  " Sign settings.
+  let g:neomake_error_sign   = { 'text': '>>', 'texthl': 'ErrorMsg' }
+  let g:neomake_warning_sign = { 'text': '>>', 'texthl': 'Todo' }
 '''
 
 [[plugins]]
