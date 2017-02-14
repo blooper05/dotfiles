@@ -93,8 +93,8 @@ set title
 " Show line and column display.
 set ruler
 
-" Display double-width symbols properly.
-set ambiwidth=double
+" " Display double-width symbols properly.
+" set ambiwidth=double
 
 " Enable wildmode.
 set wildmenu
