@@ -285,7 +285,7 @@ hook_source = '''
   " Use pt in denite sources.
   if executable('pt')
     call denite#custom#var('file_rec', 'command',
-          \ ['pt', '--follow', '--nocolor', '--nogroup', '-g:', ''])
+          \ ['pt', '--follow', '--nocolor', '--nogroup', '-g', ''])
     call denite#custom#var('grep', 'command', ['pt'])
     call denite#custom#var('grep', 'default_opts',
           \ ['--nogroup', '--nocolor', '--smart-case'])
