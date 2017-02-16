@@ -187,6 +187,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'kana/vim-operator-user'
+on_source = 'rhysd/vim-operator-surround'
 
 [[plugins]]
 repo = 'rhysd/vim-operator-surround'
