@@ -1,5 +1,4 @@
 # TODO: denite.nvim
-# TODO: deol.nvim
 
 # Basic {{{1
 
@@ -239,22 +238,14 @@ hook_add = '''
 # File {{{1
 
 [[plugins]]
-repo = 'Shougo/vimshell.vim'
+repo = 'Shougo/deol.nvim'
 on_map = '<Plug>'
 hook_add = '''
   " The prefix key.
-  nnoremap [shell]  <Nop>
-  nmap     <Space>s [shell]
+  nnoremap [deol]   <Nop>
+  nmap     <Space>s [deol]
   " Plugin key-mappings.
-  nnoremap <silent>[shell]t :<C-u>VimShellTab -create<CR>
-  nnoremap <silent>[shell]c :<C-u>VimShellCreate -popup<CR>
-  nnoremap <silent>[shell]n :<C-u>VimShellBufferDir -popup<CR>
-  nnoremap <silent>[shell]i :<C-u>VimShellInteractive rails c<CR>
-  " Prompt settings.
-  let g:vimshell_prompt_expr = 'getcwd()." > "'
-  let g:vimshell_prompt_pattern = '^\f\+ > '
-  " Set the setting file path.
-  let g:vimshell_vimshrc_path = $XDG_CONFIG_HOME . '/nvim/vimshrc'
+  nnoremap <silent>[deol]n :<C-u>call deol#new({ 'command': 'zsh' })<CR><CR>
 '''
 
 [[plugins]]
