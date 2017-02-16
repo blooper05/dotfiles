@@ -332,9 +332,11 @@ hook_add = '''
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
+on_cmd = 'QuickRun'
 
 [[plugins]]
 repo = 'vim-scripts/sudo.vim'
+on_cmd = ['SudoRead', 'SudoWrite']
 
 [[plugins]]
 repo = 'janko-m/vim-test'
