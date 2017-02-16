@@ -315,6 +315,7 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/unite.vim'
 depends = ['vim-ref-ri', 'unite-rails', 'unite-codic.vim']
+on_source = 'denite.nvim'
 
 # Runner {{{1
 
