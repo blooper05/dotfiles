@@ -313,12 +313,8 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'tsukkee/unite-help'
-on_source = 'unite.vim'
-hook_add = '''
-  " Plugin key-mappings.
-  nnoremap <silent>[unite]H  :<C-u>Unite help<CR>
-'''
+repo = 'Shougo/unite.vim'
+depends = ['vim-ref-ri', 'unite-rails', 'unite-codic.vim']
 
 # Runner {{{1
 
