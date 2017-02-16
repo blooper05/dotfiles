@@ -298,19 +298,10 @@ hook_source = '''
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
-on_source = 'unite.vim'
+on_source = 'denite.nvim'
 hook_add = '''
   " Plugin key-mappings.
-  nnoremap <silent>[unite]mf :<C-u>Unite file_mru<CR>
-  nnoremap <silent>[unite]md :<C-u>Unite directory_mru<CR>
-'''
-
-[[plugins]]
-repo = 'Shougo/unite-outline'
-on_source = 'unite.vim'
-hook_add = '''
-  " Plugin key-mappings.
-  nnoremap <silent>[unite]o  :<C-u>Unite outline<CR>
+  nnoremap <silent>[denite]mf :<C-u>Denite file_mru -default-action=tabswitch -direction=top<CR>
 '''
 
 [[plugins]]
