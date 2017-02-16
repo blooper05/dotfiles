@@ -305,11 +305,11 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'sorah/unite-ghq'
-on_source = 'unite.vim'
+repo = 'Jagua/vim-denite-ghq'
+on_source = 'denite.nvim'
 hook_add = '''
   " Plugin key-mappings.
-  nnoremap <silent>[unite]s  :<C-u>Unite ghq<CR>
+  nnoremap <silent>[denite]s :<C-u>Denite ghq -direction=top<CR>
 '''
 
 [[plugins]]
