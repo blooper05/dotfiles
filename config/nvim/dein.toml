@@ -483,17 +483,7 @@ hook_add = '''
 repo = 'kchmck/vim-coffee-script'
 on_ft = 'coffee'
 
-[[plugins]]
-repo = 'elzr/vim-json'
-on_ft = 'json'
-
-[[plugins]]
-repo = 'ekalinin/Dockerfile.vim'
-
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
+# Markdown {{{2
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
 on_ft = 'markdown'
@@ -519,22 +509,41 @@ hook_add = '''
 [[plugins]]
 repo = 'tyru/open-browser.vim'
 
+# English {{{2
 [[plugins]]
 repo = 'ujihisa/neco-look'
 on_source = 'deoplete.nvim'
 
 [[plugins]]
 repo = 'koron/codic-vim'
+depends = ['unite-codic.vim']
 
 [[plugins]]
 repo = 'rhysd/unite-codic.vim'
+on_source = 'codic-vim'
 hook_add = '''
   " Plugin key-mappings.
-  nnoremap <silent>[unite]C  :<C-u>Unite codic<CR>
+  nnoremap <silent>[denite]C :<C-u>Denite unite:codic<CR>
 '''
 
+# Others {{{2
 [[plugins]]
-repo = 'rhysd/vim-grammarous'
+repo = 'ekalinin/Dockerfile.vim'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+on_ft = 'yaml'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'darfink/vim-plist'
 
 [[plugins]]
 repo = 'rhysd/github-complete.vim'
@@ -559,9 +568,6 @@ hook_add = '''
   " Set the work path.
   let g:evervim_workdir = expand('~/.cache/evervim')
 '''
-
-[[plugins]]
-repo = 'darfink/vim-plist'
 
 # Folding {{{1
 
