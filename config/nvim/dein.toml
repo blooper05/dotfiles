@@ -401,6 +401,7 @@ depends = ['context_filetype.vim']
 
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
+on_source = 'vim-precious'
 
 [[plugins]]
 repo = 'thinca/vim-ref'
