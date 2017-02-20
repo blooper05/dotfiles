@@ -25,6 +25,7 @@ hook_add = '''
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
+# FIXME
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 depends = ['vim-fugitive', 'vimfiler.vim', 'vimshell.vim', 'unite.vim', 'gundo']
@@ -338,6 +339,7 @@ on_cmd = 'QuickRun'
 repo = 'vim-scripts/sudo.vim'
 on_cmd = ['SudoRead', 'SudoWrite']
 
+# FIXME
 [[plugins]]
 repo = 'janko-m/vim-test'
 hook_add = '''
