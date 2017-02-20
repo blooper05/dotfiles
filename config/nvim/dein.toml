@@ -356,16 +356,23 @@ repo = 'tpope/vim-dispatch'
 # Git {{{1
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
+repo = 'lambdalisue/gina.vim'
 hook_add = '''
   " The prefix key.
   nnoremap [git]    <Nop>
   nmap     <Space>g [git]
   " Plugin key-mappings.
-  nnoremap <silent>[git]s :<C-u>Gstatus<CR>
+  nnoremap <silent>[git]s :<C-u>Gina status<CR>
+  nnoremap <silent>[git]c :<C-u>Gina commit<CR>
+  nnoremap <silent>[git]B :<C-u>Gina branch -a<CR>
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+  " Plugin key-mappings.
   nnoremap <silent>[git]d :<C-u>Gdiff<CR>
   nnoremap <silent>[git]a :<C-u>Gwrite<CR>
-  nnoremap <silent>[git]c :<C-u>Gcommit<CR>
   nnoremap <silent>[git]r :<C-u>Gread<CR>
   nnoremap <silent>[git]b :<C-u>Gblame<CR>
 '''
@@ -381,13 +388,6 @@ hook_add = '''
     nmap <buffer>cp <Plug>(agit-git-cherry-pick)
     nmap <buffer>rv <Plug>(agit-git-revert)
   endfunction
-'''
-
-[[plugins]]
-repo = 'idanarye/vim-merginal'
-hook_add = '''
-  " Plugin key-mappings.
-  nnoremap <silent>[git]B :<C-u>MerginalToggle<CR>
 '''
 
 [[plugins]]
