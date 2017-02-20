@@ -254,8 +254,8 @@ hook_add = '''
   nnoremap [filer]  <Nop>
   nmap     <Space>f [filer]
   " Plugin key-mappings.
-  nnoremap <silent>[filer]n :<C-u>VimFilerBufferDir -double<CR>
-  nnoremap <silent>[filer]c :<C-u>VimFilerCurrentDir -double<CR>
+  nnoremap <silent>[filer]n :<C-u>VimFilerBufferDir<CR>
+  nnoremap <silent>[filer]c :<C-u>VimFilerCurrentDir<CR>
   " Use vimfiler as default explorer.
   let g:vimfiler_as_default_explorer = 1
   " Enable file operation commands.
