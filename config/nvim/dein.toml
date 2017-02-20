@@ -407,50 +407,39 @@ on_source = 'vim-precious'
 repo = 'thinca/vim-ref'
 depends = ['vim-ref-ri']
 
-# [[plugins]]
-# repo = 'osyo-manga/vim-monster'
-# on_ft = 'ruby'
-# hook_add = '''
-#   " Set async completion.
-#   let g:monster#completion#rcodetools#backend = 'async_rct_complete'
-#   " Use deoplete.nvim.
-#   let g:deoplete#sources#omni#input_patterns = {
-#     \ 'ruby' : '[^. *\t]\.\w*\|\h\w*::',
-#     \ }
-# '''
-
+# Ruby {{{2
 [[plugins]]
 repo = 'Shougo/deoplete-rct'
 on_ft = 'ruby'
 
 [[plugins]]
 repo = 'yuku-t/vim-ref-ri'
-on_source = 'vim-ref'
+on_source = ['vim-ref', 'unite.vim']
 hook_add = '''
   " Plugin key-mappings.
-  nnoremap <silent>[unite]R  :<C-u>Unite ref/ri<CR>
+  nnoremap <silent>[denite]R :<C-u>Denite unite:ref/ri<CR>
 '''
 
 [[plugins]]
 repo = 'tpope/vim-rails'
-# on_ft = 'ruby'
+on_ft = 'ruby'
 
 [[plugins]]
 repo = 'basyura/unite-rails'
-# on_ft = 'ruby'
+on_ft = 'ruby'
 on_source = 'unite.vim'
 hook_add = '''
   " The prefix key.
   nnoremap [rails]  <Nop>
   nmap     <Space>r [rails]
   " Plugin key-mappings.
-  nnoremap <silent>[rails]m :<C-u>Unite rails/model<CR>
-  nnoremap <silent>[rails]v :<C-u>Unite rails/view<CR>
-  nnoremap <silent>[rails]c :<C-u>Unite rails/controller<CR>
-  nnoremap <silent>[rails]h :<C-u>Unite rails/helper<CR>
-  nnoremap <silent>[rails]s :<C-u>Unite rails/spec<CR>
-  nnoremap <silent>[rails]C :<C-u>Unite rails/config<CR>
-  nnoremap <silent>[rails]l :<C-u>Unite rails/log<CR>
+  nnoremap <silent>[rails]m :<C-u>Denite unite:rails/model<CR>
+  nnoremap <silent>[rails]v :<C-u>Denite unite:rails/view<CR>
+  nnoremap <silent>[rails]c :<C-u>Denite unite:rails/controller<CR>
+  nnoremap <silent>[rails]h :<C-u>Denite unite:rails/helper<CR>
+  nnoremap <silent>[rails]s :<C-u>Denite unite:rails/spec<CR>
+  nnoremap <silent>[rails]C :<C-u>Denite unite:rails/config<CR>
+  nnoremap <silent>[rails]l :<C-u>Denite unite:rails/log<CR>
 '''
 
 [[plugins]]
