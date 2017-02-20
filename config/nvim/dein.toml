@@ -395,6 +395,7 @@ repo = 'airblade/vim-gitgutter'
 
 # FileType {{{1
 
+# General {{{2
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
