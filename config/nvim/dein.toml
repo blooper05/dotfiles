@@ -446,6 +446,11 @@ hook_add = '''
 repo = 'Keithbsmiley/rspec.vim'
 on_ft = 'ruby'
 
+# Go {{{2
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
 [[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft = 'html'
