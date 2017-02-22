@@ -22,6 +22,7 @@ hook_add = '''
   let g:solarized_underline = 0
 '''
 
+# FIXME
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
@@ -96,8 +97,8 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-depends = ['context_filetype.vim']
 build = 'pip3 install neovim'
+depends = ['context_filetype.vim']
 on_i = 1
 hook_add = '''
   " Use deoplete.
@@ -115,7 +116,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
-depends = ['neosnippet-snippets', 'context_filetype.vim']
+depends = ['context_filetype.vim', 'neosnippet-snippets']
 on_ft = 'snippet'
 hook_add = '''
   " Plugin key-mappings.
@@ -532,6 +533,7 @@ hook_add = '''
 # Others {{{2
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
+on_ft = 'Dockerfile'
 
 [[plugins]]
 repo = 'elzr/vim-json'
@@ -547,6 +549,9 @@ on_ft = 'toml'
 
 [[plugins]]
 repo = 'darfink/vim-plist'
+on_ft = 'xml'
+
+# Service {{{1
 
 [[plugins]]
 repo = 'rhysd/github-complete.vim'
@@ -559,8 +564,6 @@ hook_add = '''
 repo = 'kakkyz81/evervim'
 build = 'pip install markdown'
 hook_add = '''
-  " Set Evernote developer token.
-  let g:evervim_devtoken = ''
   " The prefix key.
   nnoremap [evervim] <Nop>
   nmap     <Space>e  [evervim]
@@ -570,6 +573,8 @@ hook_add = '''
   nnoremap         [evervim]s :<C-u>EvervimSearchByQuery<Space>
   " Set the work path.
   let g:evervim_workdir = expand('~/.cache/evervim')
+  " Set Evernote developer token.
+  let g:evervim_devtoken = ''
 '''
 
 # Folding {{{1
