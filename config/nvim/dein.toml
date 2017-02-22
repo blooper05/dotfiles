@@ -417,6 +417,10 @@ repo = 'Shougo/deoplete-rct'
 on_ft = 'ruby'
 
 [[plugins]]
+repo = 'killphi/vim-ruby-refactoring'
+on_ft = 'ruby'
+
+[[plugins]]
 repo = 'yuku-t/vim-ref-ri'
 on_source = ['vim-ref', 'unite.vim']
 hook_add = '''
