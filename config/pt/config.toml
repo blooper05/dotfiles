@@ -1,4 +1,5 @@
 ignore = [
   'node_modules',
+  'vendor/assets',
   'vendor/bundle',
 ]
