@@ -467,7 +467,7 @@ on_ft = 'go'
 # HTML {{{2
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_ft = 'html'
+on_ft = ['html', 'eruby', 'haml', 'slim']
 
 [[plugins]]
 repo = 'tpope/vim-haml'
