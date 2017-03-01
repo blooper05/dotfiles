@@ -19,4 +19,4 @@
 [help]
   autocorrect = 1
 [ghq]
-  root = ~/src
+  root = ~/dev/src
