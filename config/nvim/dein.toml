@@ -358,6 +358,7 @@ repo = 'tpope/vim-dispatch'
 
 # Git {{{1
 
+# FIXME
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
 hook_add = '''
