@@ -131,6 +131,10 @@ export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 export NODEBREW_ROOT=/usr/local/var/nodebrew
 export PATH=$NODEBREW_ROOT/current/bin:$PATH
 
+# Go {{{2
+export GOPATH=$HOME/dev
+export PATH=$GOPATH/bin:$PATH
+
 # tmux {{{2
 function is_tmux_runnning() { [ ! -z "$TMUX" ]; }
 function is_interactive() { [ ! -z "$PS1" ]; }
