@@ -31,6 +31,7 @@ export LC_ALL="${LANGUAGE}"
 export LC_CTYPE="${LANGUAGE}"
 
 # Tools
+export SHELL=zsh
 export EDITOR=nvim
 export PAGER=less
 
