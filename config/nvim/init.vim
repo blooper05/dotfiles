@@ -53,6 +53,9 @@ set lazyredraw
 nnoremap <silent><F5> :<C-u>tabnew $MYVIMRC<CR>
 nnoremap <silent><F6> :<C-u>source $MYVIMRC<CR>
 
+" Exit terminal mode easily.
+tnoremap <silent><ESC> <C-\><C-n>
+
 " Search {{{1
 
 " Ignore the case of normal letters.
