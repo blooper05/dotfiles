@@ -49,6 +49,7 @@ for dir in $SHARE_DIRS ; do
   fi
 done
 
+# FIXME
 defaults write com.apple.screencapture location "$HOME/Downloads/"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
