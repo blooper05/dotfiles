@@ -47,6 +47,7 @@ brew imagemagick
 brew mackup
 brew mas
 brew nodebrew
+brew packer
 brew postgresql
 brew python
 brew python3
