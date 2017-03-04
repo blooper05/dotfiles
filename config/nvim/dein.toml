@@ -546,6 +546,10 @@ repo = 'ekalinin/Dockerfile.vim'
 on_ft = 'Dockerfile'
 
 [[plugins]]
+repo = 'evanmiller/nginx-vim-syntax'
+on_ft = 'nginx'
+
+[[plugins]]
 repo = 'elzr/vim-json'
 on_ft = 'json'
 
