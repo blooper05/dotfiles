@@ -369,11 +369,22 @@ hook_add = '''
   nnoremap <silent>[git]s :<C-u>Gina status<CR>
   nnoremap <silent>[git]c :<C-u>Gina commit<CR>
   nnoremap <silent>[git]B :<C-u>Gina branch -a<CR>
-  autocmd FileType gina-branch call s:my_gina_setting()
-  function! s:my_gina_setting()
-    nmap <buffer>co <Plug>(gina-branch-checkout)
-    nmap <buffer>ct <Plug>(gina-branch-checkout-track)
-  endfunction
+  call gina#custom#mapping#nmap(
+       \  'branch', 'co',
+       \  '<Plug>(gina-commit-checkout)'
+       \)
+  call gina#custom#mapping#nmap(
+       \  'branch', 'ct',
+       \  '<Plug>(gina-commit-checkout-track)'
+       \)
+  call gina#custom#mapping#nmap(
+       \  'branch', 'M',
+       \  '<Plug>(gina-branch-move)'
+       \)
+  call gina#custom#mapping#nmap(
+       \  'branch', 'D',
+       \  '<Plug>(gina-branch-delete)'
+       \)
 '''
 
 [[plugins]]
