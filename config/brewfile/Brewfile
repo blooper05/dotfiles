@@ -56,6 +56,7 @@ brew rbenv
 brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
 brew reattach-to-user-namespace
+brew redis
 brew ruby-build
 brew shellcheck
 brew sqlite
