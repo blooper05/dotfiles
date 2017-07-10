@@ -159,7 +159,7 @@ function tmux_automatically_attach_session()
 tmux_automatically_attach_session
 
 # fzf {{{2
-export FZF_DEFAULT_OPTS='--extended --cycle --reverse --ansi --select-1 --exit-0'
+export FZF_DEFAULT_OPTS='--extended --cycle --reverse --ansi --select-1 --exit-0 --no-mouse --multi'
 
 # anyframe {{{2
 bindkey '^k' anyframe-widget-kill
