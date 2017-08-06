@@ -267,7 +267,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
-depends = ['neomru.vim', 'vim-denite-ghq', 'unite.vim']
+depends = ['neomru.vim', 'vim-denite-ghq', 'unite.vim', 'denite-rails']
 on_cmd = 'Denite'
 hook_add = '''
   " The prefix key.
@@ -317,7 +317,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'Shougo/unite.vim'
-depends = ['vim-ref-ri', 'unite-rails', 'unite-codic.vim']
+depends = ['vim-ref-ri', 'unite-codic.vim']
 on_source = 'denite.nvim'
 
 # Runner {{{1
@@ -451,21 +451,20 @@ repo = 'tpope/vim-rails'
 on_ft = 'ruby'
 
 [[plugins]]
-repo = 'basyura/unite-rails'
+repo = '5t111111/denite-rails'
 on_ft = 'ruby'
-on_source = 'unite.vim'
+on_source = 'denite.nvim'
 hook_add = '''
   " The prefix key.
   nnoremap [rails]  <Nop>
   nmap     <Space>r [rails]
   " Plugin key-mappings.
-  nnoremap <silent>[rails]m :<C-u>Denite unite:rails/model<CR>
-  nnoremap <silent>[rails]v :<C-u>Denite unite:rails/view<CR>
-  nnoremap <silent>[rails]c :<C-u>Denite unite:rails/controller<CR>
-  nnoremap <silent>[rails]h :<C-u>Denite unite:rails/helper<CR>
-  nnoremap <silent>[rails]s :<C-u>Denite unite:rails/spec<CR>
-  nnoremap <silent>[rails]C :<C-u>Denite unite:rails/config<CR>
-  nnoremap <silent>[rails]l :<C-u>Denite unite:rails/log<CR>
+  nnoremap <silent>[rails]r :<C-u>Denite rails:dwim<CR>
+  nnoremap <silent>[rails]m :<C-u>Denite rails:model<CR>
+  nnoremap <silent>[rails]v :<C-u>Denite rails:view<CR>
+  nnoremap <silent>[rails]c :<C-u>Denite rails:controller<CR>
+  nnoremap <silent>[rails]h :<C-u>Denite rails:helper<CR>
+  nnoremap <silent>[rails]t :<C-u>Denite rails:test<CR>
 '''
 
 [[plugins]]
