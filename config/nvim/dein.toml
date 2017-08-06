@@ -228,7 +228,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'sjl/gundo.vim'
-build = 'pip install neovim'
+build = 'pip2 install neovim'
 on_cmd = 'Gundo'
 hook_add = '''
   " Plugin key-mappings.
@@ -597,7 +597,7 @@ on_ft = 'xml'
 
 [[plugins]]
 repo = 'kakkyz81/evervim'
-build = 'pip install markdown'
+build = 'pip2 install markdown'
 hook_add = '''
   " The prefix key.
   nnoremap [evervim] <Nop>
