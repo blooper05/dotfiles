@@ -13,7 +13,6 @@ cask cooviewer
 cask docker
 cask dropbox
 cask duet
-cask flux
 cask google-chrome
 cask google-japanese-ime
 cask hosts
