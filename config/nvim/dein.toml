@@ -386,6 +386,18 @@ hook_add = '''
        \  'branch', 'D',
        \  '<Plug>(gina-branch-delete)'
        \)
+  nnoremap <silent>[git]l :<C-u>Gina log<CR>
+  nnoremap <silent>[git]f :<C-u>Gina log -- %<CR>
+  call gina#custom#command#option(
+       \  '/\%(log\|reflog\)',
+       \  '--opener', 'vsplit'
+       \)
+  call gina#custom#command#option(
+       \  'log', '--group', 'log-viewer'
+       \)
+  call gina#custom#command#option(
+       \  'reflog', '--group', 'reflog-viewer'
+       \)
 '''
 
 [[plugins]]
@@ -396,19 +408,6 @@ hook_add = '''
   nnoremap <silent>[git]a :<C-u>Gwrite<CR>
   nnoremap <silent>[git]r :<C-u>Gread<CR>
   nnoremap <silent>[git]b :<C-u>Gblame<CR>
-'''
-
-[[plugins]]
-repo = 'cohama/agit.vim'
-hook_add = '''
-  " Plugin key-mappings.
-  nnoremap <silent>[git]l :<C-u>Agit<CR>
-  nnoremap <silent>[git]f :<C-u>AgitFile<CR>
-  autocmd FileType agit call s:my_agit_setting()
-  function! s:my_agit_setting()
-    nmap <buffer>cp <Plug>(agit-git-cherry-pick)
-    nmap <buffer>rv <Plug>(agit-git-revert)
-  endfunction
 '''
 
 [[plugins]]
