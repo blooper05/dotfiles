@@ -274,12 +274,12 @@ hook_add = '''
   nnoremap [denite] <Nop>
   nmap     <Space>u [denite]
   " Plugin key-mappings.
-  nnoremap <silent>[denite]f :<C-u>Denite file_rec -default-action=tabswitch -direction=top<CR>
-  nnoremap <silent>[denite]g :<C-u>Denite grep -auto-preview -default-action=tabswitch -direction=top -vertical-preview<CR>
-  nnoremap <silent>[denite]b :<C-u>Denite buffer -default-action=tabswitch -direction=top<CR>
-  nnoremap <silent>[denite]r :<C-u>Denite register -direction=top<CR>
-  nnoremap <silent>[denite]o :<C-u>Denite outline -direction=top<CR>
-  nnoremap <silent>[denite]H :<C-u>Denite help -direction=top<CR>
+  nnoremap <silent>[denite]f :<C-u>Denite file_rec -default-action=tabswitch<CR>
+  nnoremap <silent>[denite]g :<C-u>Denite grep -auto-preview -default-action=tabswitch -vertical-preview<CR>
+  nnoremap <silent>[denite]b :<C-u>Denite buffer -default-action=tabswitch<CR>
+  nnoremap <silent>[denite]r :<C-u>Denite register<CR>
+  nnoremap <silent>[denite]o :<C-u>Denite outline<CR>
+  nnoremap <silent>[denite]H :<C-u>Denite help<CR>
 '''
 hook_source = '''
   " " Plugin key-mappings.
@@ -304,7 +304,7 @@ repo = 'Shougo/neomru.vim'
 on_source = 'denite.nvim'
 hook_add = '''
   " Plugin key-mappings.
-  nnoremap <silent>[denite]mf :<C-u>Denite file_mru -default-action=tabswitch -direction=top<CR>
+  nnoremap <silent>[denite]mf :<C-u>Denite file_mru -default-action=tabswitch<CR>
 '''
 
 [[plugins]]
@@ -312,7 +312,7 @@ repo = 'Jagua/vim-denite-ghq'
 on_source = 'denite.nvim'
 hook_add = '''
   " Plugin key-mappings.
-  nnoremap <silent>[denite]s :<C-u>Denite ghq -direction=top<CR>
+  nnoremap <silent>[denite]s :<C-u>Denite ghq<CR>
 '''
 
 [[plugins]]
