@@ -609,7 +609,7 @@ hook_add = '''
   " Set the work path.
   let g:evervim_workdir = expand('~/.cache/evervim')
   " Set Evernote developer token.
-  let g:evervim_devtoken = ''
+  let g:evervim_devtoken = $EVERNOTE_DEVTOKEN
 '''
 
 # Folding {{{1
