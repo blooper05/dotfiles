@@ -12,11 +12,7 @@ function green() { echo "$GREEN$*$NORMAL"; }
 function yellow() { echo "$YELLOW$*$NORMAL"; }
 
 readonly DOTDIR=$(cd "$(dirname "$0")" && pwd)
-readonly DOTFILES='
-  config
-  mackup.cfg
-  zshrc
-'
+readonly DOTFILES='config mackup.cfg zshrc'
 for file in $DOTFILES
 do
   if ln -fns "$DOTDIR/$file" "$HOME/.$file"; then
@@ -27,11 +23,7 @@ do
 done
 
 readonly SHARE_DIR=$HOME/.local/share
-readonly SHARE_DIRS='
-  less
-  pry
-  zsh
-'
+readonly SHARE_DIRS='less pry zsh'
 for dir in $SHARE_DIRS
 do
   if mkdir -p "$SHARE_DIR/$dir"; then
