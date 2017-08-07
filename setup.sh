@@ -3,21 +3,13 @@
 set -eux
 
 readonly NORMAL=$(tput sgr0)
+readonly RED=$(tput setaf 1)
 readonly GREEN=$(tput setaf 2)
 readonly YELLOW=$(tput setaf 3)
-readonly RED=$(tput setaf 1)
 
-green() {
-  echo "$GREEN$*$NORMAL"
-}
-
-yellow() {
-  echo "$YELLOW$*$NORMAL"
-}
-
-red() {
-  echo "$RED$*$NORMAL"
-}
+function red() { echo "$RED$*$NORMAL"; }
+function green() { echo "$GREEN$*$NORMAL"; }
+function yellow() { echo "$YELLOW$*$NORMAL"; }
 
 readonly DOTDIR=$(cd "$(dirname "$0")" && pwd)
 readonly DOTFILES='
