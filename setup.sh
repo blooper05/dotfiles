@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eux
+
 readonly NORMAL=$(tput sgr0)
 readonly GREEN=$(tput setaf 2)
 readonly YELLOW=$(tput setaf 3)
