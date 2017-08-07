@@ -17,7 +17,6 @@ readonly DOTFILES='
   mackup.cfg
   zshrc
 '
-
 for file in $DOTFILES ; do
   ln -fns "$DOTDIR/$file" "$HOME/.$file"
   if [ $? -eq 0 ]; then
@@ -33,7 +32,6 @@ readonly SHARE_DIRS='
   pry
   zsh
 '
-
 for dir in $SHARE_DIRS ; do
   mkdir -p "$SHARE_DIR/$dir"
   if [ $? -eq 0 ]; then
