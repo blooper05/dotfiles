@@ -19,8 +19,7 @@ readonly DOTFILES='
 '
 for file in $DOTFILES
 do
-  ln -fns "$DOTDIR/$file" "$HOME/.$file"
-  if [ $? -eq 0 ]; then
+  if ln -fns "$DOTDIR/$file" "$HOME/.$file"; then
     green 'success'
   else
     red 'fail'
@@ -35,8 +34,7 @@ readonly SHARE_DIRS='
 '
 for dir in $SHARE_DIRS
 do
-  mkdir -p "$SHARE_DIR/$dir"
-  if [ $? -eq 0 ]; then
+  if mkdir -p "$SHARE_DIR/$dir"; then
     green 'success'
   else
     red 'fail'
