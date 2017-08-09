@@ -71,8 +71,8 @@ brew zsh
 tap rcmdnk/file
 brew brew-file
 
-tap sanemat/font
-brew ricty --with-powerline
+# tap sanemat/font
+# brew ricty --with-powerline
 
 # App Store applications
 appstore 443987910 1Password (6.8)
