@@ -24,7 +24,7 @@ set -g pane-base-index 1
 # View {{{1
 
 # Set terminal type.
-set -g default-terminal xterm-256color
+set -g default-terminal screen-256color
 
 # Set terminal emulator window titles.
 set -g set-titles on
