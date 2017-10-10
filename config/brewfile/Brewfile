@@ -64,7 +64,7 @@ brew shellcheck
 brew sqlite
 brew terraform
 brew tmux
-brew yarn --ignore-dependencies
+brew yarn --without-node
 brew zplug
 brew zsh
 
