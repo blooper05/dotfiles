@@ -1,41 +1,6 @@
 
 # tap repositories and their packages
 
-tap caskroom/cask
-cask adobe-creative-cloud
-cask appcleaner
-cask avira-antivirus
-cask bettertouchtool
-cask chatwork
-cask cheatsheet
-cask clipy
-cask cooviewer
-cask docker
-cask dropbox
-cask duet
-cask google-chrome
-cask google-japanese-ime
-cask hosts
-cask iina
-cask insomnia
-cask iterm2
-cask karabiner-elements
-cask keepingyouawake
-cask kindle
-cask lacaille
-cask lastfm
-cask microsoft-office
-cask night-owl
-cask openemu
-cask postico
-cask rubymotion
-cask skitch
-cask skype
-cask slack
-cask vox
-cask zeplin
-cask zoomus
-
 tap homebrew/core
 brew awscli
 brew exa
@@ -69,6 +34,41 @@ brew tmux
 brew yarn --without-node
 brew zplug
 brew zsh
+
+tap caskroom/cask
+cask slack
+cask cheatsheet
+cask skype
+cask appcleaner
+cask karabiner-elements
+cask lacaille
+cask zoomus
+cask keepingyouawake
+cask avira-antivirus
+cask iterm2
+cask dropbox
+cask insomnia
+cask chatwork
+cask hosts
+cask cooviewer
+cask docker
+cask kindle
+cask adobe-creative-cloud
+cask clipy
+cask lastfm
+cask duet
+cask night-owl
+cask iina
+cask microsoft-office
+cask vox
+cask google-chrome
+cask postico
+cask google-japanese-ime
+cask bettertouchtool
+cask skitch
+cask rubymotion
+cask zeplin
+cask openemu
 
 tap cema-sp/tap
 brew alacritty
