@@ -38,6 +38,8 @@ cask zoomus
 
 tap homebrew/core
 brew awscli
+brew exa
+brew fd
 brew fzf
 brew ghq
 brew git
@@ -68,11 +70,17 @@ brew yarn --without-node
 brew zplug
 brew zsh
 
+tap cema-sp/tap
+brew alacritty
+
 tap rcmdnk/file
 brew brew-file
 
 tap sanemat/font
 brew ricty --with-powerline
+
+tap sbdchd/skim
+brew skim
 
 # App Store applications
 appstore 443987910 1Password (6.8)
