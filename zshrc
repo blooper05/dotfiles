@@ -94,7 +94,6 @@ setopt pushd_ignore_dups
 # Tools {{{1
 
 # Homebrew-file {{{2
-export HOMEBREW_BREWFILE=$XDG_CONFIG_HOME/brewfile/Brewfile
 if [ -f $(brew --prefix)/etc/brew-wrap ]; then
   source $(brew --prefix)/etc/brew-wrap
 fi
