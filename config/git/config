@@ -1,9 +1,10 @@
 [user]
   useConfigOnly = true
 [core]
-  editor    = nvim
-  pager     = less
-  quotepath = false
+  editor      = nvim
+  pager       = less
+  quotepath   = false
+  commentChar = \"
 [color]
   ui = auto
 [commit]
