@@ -73,6 +73,19 @@ setopt append_history
 setopt hist_verify
 setopt bang_hist
 
+zshaddhistory() {
+  local line=${1%%$'\n'}
+  local cmd=${line%% *}
+
+  [[ ${#line} -ge 5
+    && ${cmd} != (cd)
+    && ${cmd} != (kill)
+    && ${cmd} != (l[slta])
+    && ${cmd} != (man)
+    && ${cmd} != (rm)
+  ]]
+}
+
 # Completion {{{1
 
 autoload -Uz compinit && compinit -u -d $XDG_DATA_HOME/zsh/compdump
