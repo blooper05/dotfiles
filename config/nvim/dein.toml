@@ -367,7 +367,7 @@ hook_add = '''
   nnoremap [git]    <Nop>
   nmap     <Space>g [git]
   " Plugin key-mappings.
-  nnoremap <silent>[git]s :<C-u>Gina status<CR>
+  nnoremap <silent>[git]s :<C-u>Gina status -s<CR>
   nnoremap <silent>[git]c :<C-u>Gina commit<CR>
   nnoremap <silent>[git]B :<C-u>Gina branch -a<CR>
   call gina#custom#mapping#nmap(
