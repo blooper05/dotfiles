@@ -17,6 +17,7 @@ zplug load
 # Environment Variable {{{1
 
 # PATH
+typeset -U path PATH
 export PATH=/usr/local/bin:$PATH
 
 # XDG Base Directory Specification
