@@ -1,7 +1,7 @@
 [core]
   editor      = nvim
   pager       = less
-  quotepath   = false
+  quotePath   = false
   commentChar = \"
 [commit]
   template = ~/.config/git/template
@@ -14,7 +14,7 @@
 [push]
   default = simple
 [rebase]
-  autostash = true
+  autoStash = true
 [user]
   useConfigOnly = true
 [ghq]
