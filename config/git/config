@@ -15,7 +15,8 @@
 [push]
   followTags = true
 [rebase]
-  autoStash = true
+  autoSquash = true
+  autoStash  = true
 [user]
   useConfigOnly = true
 [ghq]
