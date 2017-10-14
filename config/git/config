@@ -10,6 +10,8 @@
   prune = true
 [help]
   autocorrect = 1
+[pretty]
+  pretty = %C(red)%h%C(auto) - %s %C(green)%cr%C(auto) %C(blue)<%an>%C(auto)%C(yellow)%d%C(auto)
 [pull]
   rebase = true
 [push]
