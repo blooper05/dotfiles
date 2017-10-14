@@ -511,13 +511,6 @@ on_ft = 'coffee'
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
 on_ft = 'markdown'
-hook_add = '''
-  augroup MarkdownSettings
-    autocmd!
-    " Set markdown indent style.
-    autocmd FileType markdown set tabstop=4 shiftwidth=4
-  augroup END
-'''
 
 [[plugins]]
 repo = 'kannokanno/previm'
