@@ -3,6 +3,9 @@
   commentChar = \"
 [commit]
   template = ~/.config/git/template
+[diff]
+  compactionHeuristic = true
+  algorithm           = histogram
 [fetch]
   prune = true
 [help]
