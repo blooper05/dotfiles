@@ -10,7 +10,6 @@
 [pull]
   rebase = true
 [push]
-  default = simple
 [rebase]
   autoStash = true
 [user]
