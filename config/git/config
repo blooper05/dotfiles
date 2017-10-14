@@ -13,6 +13,7 @@
 [pull]
   rebase = true
 [push]
+  followTags = true
 [rebase]
   autoStash = true
 [user]
