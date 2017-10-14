@@ -1,6 +1,4 @@
 [core]
-  editor      = nvim
-  pager       = less
   quotePath   = false
   commentChar = \"
 [commit]
