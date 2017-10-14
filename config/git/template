@@ -11,8 +11,6 @@
 " 👕  :shirt:       Lintエラーの修正やコードスタイルの修正
 " 🚀  :rocket:      パフォーマンス改善
 " 🆙  :up:          依存パッケージなどのアップデート
-" 🔒  :lock:        新機能の公開範囲の制限
-" 👮  :cop:         セキュリティ関連の改善
 
 " ==== The Seven Rules ====
 " 1. Separate subject from body with a blank line
