@@ -1,6 +1,8 @@
 [core]
   quotePath   = false
   commentChar = \"
+[alias]
+  log = log --graph --pretty=pretty
 [commit]
   template = ~/.config/git/template
 [diff]
