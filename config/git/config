@@ -19,6 +19,8 @@
   autoStash  = true
 [status]
   short = true
+[stash]
+  showPatch = true
 [user]
   useConfigOnly = true
 [ghq]
