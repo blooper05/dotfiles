@@ -516,8 +516,6 @@ hook_add = '''
     autocmd!
     " Set markdown indent style.
     autocmd FileType markdown set tabstop=4 shiftwidth=4
-    " Disable AutoRemoveTrailingSpaces.
-    autocmd FileType markdown autocmd! AutoRemoveTrailingSpaces
   augroup END
 '''
 

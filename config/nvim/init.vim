@@ -158,9 +158,20 @@ set synmaxcol=160
 
 " Auto Command {{{1
 
+function! s:rstrip()
+  let s:cursor = getpos('.')
+  if &filetype == 'markdown'
+    %s/\v(\s{2})?(\s+)?$/\1/e
+    match Underlined /\v\s{2}$/
+  else
+    %s/\v\s+$//e
+  endif
+  call setpos('.', s:cursor)
+endfunction
+
 augroup AutoRemoveTrailingSpaces
   autocmd!
-  autocmd BufWritePre * :%s/\s\+$//ge
+  autocmd BufWritePre * call s:rstrip()
 augroup END
 
 augroup AutoReplaceTabBySpaces
