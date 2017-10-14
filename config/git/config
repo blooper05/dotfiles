@@ -3,8 +3,6 @@
   pager       = less
   quotepath   = false
   commentChar = \"
-[color]
-  ui = auto
 [commit]
   template = ~/.config/git/template
 [fetch]
