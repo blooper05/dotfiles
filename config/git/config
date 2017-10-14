@@ -21,6 +21,9 @@
   short = true
 [stash]
   showPatch = true
+[url "git@github.com:"]
+  pushInsteadOf = https://github.com/
+  pushInsteadOf = git://github.com/
 [user]
   useConfigOnly = true
 [ghq]
