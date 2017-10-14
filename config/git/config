@@ -17,6 +17,8 @@
 [rebase]
   autoSquash = true
   autoStash  = true
+[status]
+  short = true
 [user]
   useConfigOnly = true
 [ghq]
