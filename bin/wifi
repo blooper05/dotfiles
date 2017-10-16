@@ -24,7 +24,8 @@ readonly SIGNALS=(▂ ▅ ▇)
 
 signal=''
 
-for (( i = 0; i < ${#SIGNALS[@]}; i++ )); do
+for (( i = 0; i < ${#SIGNALS[@]}; i++ ))
+do
   if (( i == 0 && -100 < RSSI )) ||
      (( i == 1 &&  -80 < RSSI )) ||
      (( i == 2 &&  -50 < RSSI )); then
