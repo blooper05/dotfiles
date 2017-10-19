@@ -33,6 +33,9 @@ do
   fi
 done
 
+sudo scutil --set ComputerName まっくぶっくぷろ
+sudo scutil --set LocalHostName MacBookPro
+
 defaults write com.apple.screencapture location "$HOME/Downloads/"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
