@@ -1,5 +1,5 @@
 ### Editor ###
-Pry.config.editor = 'nvim'
+Pry.config.editor = ENV['EDITOR']
 
 ### History ###
 Pry.config.history.file = "#{ENV['XDG_DATA_HOME']}/pry/history"
