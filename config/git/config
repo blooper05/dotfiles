@@ -6,8 +6,8 @@
 [commit]
   template = ~/.config/git/template
 [diff]
-  compactionHeuristic = true
-  algorithm           = histogram
+  indentHeuristic = true
+  algorithm       = histogram
 [fetch]
   prune = true
 [help]
