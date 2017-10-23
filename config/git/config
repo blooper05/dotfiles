@@ -12,6 +12,12 @@
   prune = true
 [help]
   autocorrect = 1
+[interactive]
+  diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+[pager]
+  log  = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+  show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+  diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [pretty]
   pretty = %C(red)%h%C(auto) - %s %C(green)%cr%C(auto) %C(blue)<%an>%C(auto)%C(yellow)%d%C(auto)
 [pull]
