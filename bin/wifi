@@ -2,8 +2,8 @@
 
 set -eux
 
-readonly AIRPORT_PATH='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
-readonly INFO=($($AIRPORT_PATH -I | grep -E '^ *(agrCtlRSSI|state|lastTxRate|SSID):' | awk '{print $2}'))
+readonly AIRPORT='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
+readonly INFO=($($AIRPORT -I | grep -E '^ *(agrCtlRSSI|state|lastTxRate|SSID):' | awk '{print $2}'))
 
 if [[ ${#INFO[@]} -eq 0 ]]; then
   echo offline
