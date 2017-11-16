@@ -547,7 +547,7 @@ repo = 'ekalinin/Dockerfile.vim'
 on_ft = 'Dockerfile'
 
 [[plugins]]
-repo = 'evanmiller/nginx-vim-syntax'
+repo = 'chr4/nginx.vim'
 on_ft = 'nginx'
 
 [[plugins]]
