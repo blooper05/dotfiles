@@ -392,8 +392,8 @@ hook_add = '''
        \  'branch', 'D',
        \  '<Plug>(gina-branch-delete)'
        \)
-  nnoremap <silent>[git]l :<C-u>Gina log<CR>
-  nnoremap <silent>[git]f :<C-u>Gina log -- %<CR>
+  nnoremap <silent>[git]l :<C-u>Gina log --graph<CR>
+  nnoremap <silent>[git]f :<C-u>Gina log --graph -- %<CR>
   call gina#custom#command#option(
        \  '/\%(log\|reflog\)',
        \  '--opener', 'vsplit'
