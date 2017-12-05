@@ -10,7 +10,7 @@ brew ghq
 brew git
 brew go
 brew graphviz
-brew hub
+brew hub --devel
 brew imagemagick
 brew mackup
 brew mas
