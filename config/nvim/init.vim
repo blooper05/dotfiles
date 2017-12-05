@@ -38,7 +38,7 @@ language time C
 
 " Settings of the encoding to use for a save and reading.
 set encoding=utf-8
-" set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
+set fileencodings=utf-8,euc-jp,sjis,cp932,iso-2022-jp
 
 " Auto reload if file is changed.
 set autoread
