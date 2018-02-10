@@ -21,7 +21,6 @@ brew postgresql
 brew python
 brew python3
 brew rbenv
-brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
 brew reattach-to-user-namespace
 brew redis
