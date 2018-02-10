@@ -14,7 +14,8 @@ brew imagemagick
 brew mackup
 brew mas
 brew neovim
-brew nodebrew
+brew node-build
+brew nodenv
 brew packer
 brew postgresql
 brew python

@@ -141,9 +141,9 @@ fi
 # Node.js {{{2
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 
-# nodebrew {{{2
-export NODEBREW_ROOT=/usr/local/var/nodebrew
-export PATH=$NODEBREW_ROOT/current/bin:$PATH
+# nodenv {{{2
+export NODENV_ROOT=/usr/local/var/nodenv
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 # Go {{{2
 export GOPATH=$HOME/dev
