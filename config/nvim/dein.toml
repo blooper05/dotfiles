@@ -404,6 +404,8 @@ hook_add = '''
   call gina#custom#command#option(
        \  'reflog', '--group', 'reflog-viewer'
        \)
+  " Ignore any directory candidates.
+  let g:gina#action#index#discard_directories = 1
 '''
 
 [[plugins]]
