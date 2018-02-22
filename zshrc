@@ -179,6 +179,8 @@ export FZF_DEFAULT_OPTS='--extended --cycle --reverse --ansi --select-1 --exit-0
 bindkey '^k' anyframe-widget-kill
 bindkey '^r' anyframe-widget-put-history
 bindkey '^s' anyframe-widget-cd-ghq-repository
+bindkey '^g^a' anyframe-widget-git-add
+bindkey '^g^b' anyframe-widget-checkout-git-branch
 stty -ixon
 
 # hub {{{2
