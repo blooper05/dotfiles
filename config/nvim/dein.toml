@@ -438,8 +438,15 @@ depends = ['vim-ref-ri']
 
 # Ruby {{{2
 [[plugins]]
-repo = 'Shougo/deoplete-rct'
+repo = 'osyo-manga/vim-monster'
 on_ft = 'ruby'
+hook_add = '''
+  " FIXME
+  let g:monster#completion#solargraph#backend = 'async_solargraph_suggest'
+  let g:deoplete#sources#omni#input_patterns = {
+  \   'ruby' : '[^. *\t]\.\|\h\w*::',
+  \}
+'''
 
 [[plugins]]
 repo = 'killphi/vim-ruby-refactoring'
