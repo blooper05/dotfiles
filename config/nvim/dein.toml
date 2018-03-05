@@ -329,15 +329,8 @@ on_source = 'denite.nvim'
 # Runner {{{1
 
 [[plugins]]
-repo = 'neomake/neomake'
+repo = 'w0rp/ale'
 on_event = 'BufWritePost'
-hook_add = '''
-  " Runs Neomake on the current file on every write.
-  autocmd MyAutoCmd BufWritePost * Neomake
-  " Sign settings.
-  let g:neomake_error_sign   = { 'text': '>>', 'texthl': 'ErrorMsg' }
-  let g:neomake_warning_sign = { 'text': '>>', 'texthl': 'Todo' }
-'''
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
