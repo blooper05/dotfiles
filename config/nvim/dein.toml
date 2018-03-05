@@ -614,22 +614,23 @@ on_ft = 'xml'
 #   let g:github_complete_enable_neocomplete = 1
 # '''
 
-[[plugins]]
-repo = 'kakkyz81/evervim'
-build = 'pip2 install markdown'
-hook_add = '''
-  " The prefix key.
-  nnoremap [evervim] <Nop>
-  nmap     <Space>e  [evervim]
-  " Plugin key-mappings.
-  nnoremap <silent>[evervim]l :<C-u>EvervimNotebookList<CR>
-  nnoremap <silent>[evervim]c :<C-u>EvervimCreateNote<CR>
-  nnoremap         [evervim]s :<C-u>EvervimSearchByQuery<Space>
-  " Set the work path.
-  let g:evervim_workdir = expand('~/.cache/evervim')
-  " Set Evernote developer token.
-  let g:evervim_devtoken = $EVERNOTE_DEVTOKEN
-'''
+# FIXME
+# [[plugins]]
+# repo = 'kakkyz81/evervim'
+# build = 'pip2 install markdown'
+# hook_add = '''
+#   " The prefix key.
+#   nnoremap [evervim] <Nop>
+#   nmap     <Space>e  [evervim]
+#   " Plugin key-mappings.
+#   nnoremap <silent>[evervim]l :<C-u>EvervimNotebookList<CR>
+#   nnoremap <silent>[evervim]c :<C-u>EvervimCreateNote<CR>
+#   nnoremap         [evervim]s :<C-u>EvervimSearchByQuery<Space>
+#   " Set the work path.
+#   let g:evervim_workdir = expand('~/.cache/evervim')
+#   " Set Evernote developer token.
+#   let g:evervim_devtoken = $EVERNOTE_DEVTOKEN
+# '''
 
 # Folding {{{1
 
