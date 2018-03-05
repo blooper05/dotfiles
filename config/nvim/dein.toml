@@ -568,6 +568,9 @@ hook_add = '''
 
 # Others {{{2
 [[plugins]]
+repo = 'mechatroner/rainbow_csv'
+
+[[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
 on_ft = 'Dockerfile'
 
