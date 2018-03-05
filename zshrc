@@ -134,8 +134,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ ! -f $RBENV_ROOT/default-gems ]; then
   echo bundler    >> $RBENV_ROOT/default-gems
   echo neovim     >> $RBENV_ROOT/default-gems
-  echo fastri     >> $RBENV_ROOT/default-gems
-  echo rcodetools >> $RBENV_ROOT/default-gems
+  echo solargraph >> $RBENV_ROOT/default-gems
 fi
 
 # Node.js {{{2
