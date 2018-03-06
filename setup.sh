@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eux
+set -ex
 
 readonly NORMAL=$(tput sgr0)
 readonly RED=$(tput setaf 1)
