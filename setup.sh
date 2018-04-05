@@ -2,6 +2,21 @@
 
 set -ex
 
+# System Preferences >> General >> Appearance: Graphite
+defaults write NSGlobalDomain AppleAquaColorVariant -int 6
+
+# System Preferences >> General >> Sidebar icon size: Small
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+
+sudo scutil --set ComputerName まっくぶっくぷろ
+sudo scutil --set LocalHostName MacBookPro
+
+defaults write com.apple.screencapture location "$HOME/Downloads/"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew -v
+
 readonly NORMAL=$(tput sgr0)
 readonly RED=$(tput setaf 1)
 readonly GREEN=$(tput setaf 2)
@@ -32,12 +47,6 @@ do
     red 'fail'
   fi
 done
-
-sudo scutil --set ComputerName まっくぶっくぷろ
-sudo scutil --set LocalHostName MacBookPro
-
-defaults write com.apple.screencapture location "$HOME/Downloads/"
-defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 # FIXME
 # sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/PlugIns/JapaneseIM.appex/Contents/Resources/FullRoman.tiff    /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/full_ascii.tiff
