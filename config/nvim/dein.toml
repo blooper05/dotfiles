@@ -564,6 +564,9 @@ hook_add = '''
 repo = 'mechatroner/rainbow_csv'
 
 [[plugins]]
+repo = 'aklt/plantuml-syntax'
+
+[[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
 on_ft = 'Dockerfile'
 
