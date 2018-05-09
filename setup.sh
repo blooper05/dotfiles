@@ -16,6 +16,12 @@ killall Dock
 # System Preferences >> Desktop & Screen Saver >> Screen Saver
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Flurry path /System/Library/Screen\ Savers/Flurry.saver/ type 0
 
+# System Preferences >> Dock >> Position on screen: Right
+defaults write com.apple.dock orientation right
+
+# System Preferences >> Dock >> Double-click a window's title bar to: minimize
+defaults write NSGlobalDomain AppleActionOnDoubleClick Minimize
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
