@@ -8,6 +8,14 @@ defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 # System Preferences >> General >> Sidebar icon size: Small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
+# System Preferences >> Desktop & Screen Saver >> Desktop
+ln -fns ~/Library/Mobile\ Documents/com~apple~CloudDocs/splash7.png ~/Pictures/splash7.png
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/splash7.png'"
+killall Dock
+
+# System Preferences >> Desktop & Screen Saver >> Screen Saver
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Flurry path /System/Library/Screen\ Savers/Flurry.saver/ type 0
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
