@@ -42,6 +42,10 @@ defaults write com.apple.dock mru-spaces -int 0
 # System Preferences >> Mission Control >> Dashboard: As Overlay
 defaults write com.apple.dashboard dashboard-enabled-state -int 3
 
+# System Preferences >> Language & Region >> Preferred languages: English / 日本語
+defaults write NSGlobalDomain AppleLanguages "(en-JP,ja-JP)"
+defaults write NSGlobalDomain NSLinguisticDataAssetsRequested "(en,en_JP,ja,ja_JP)"
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
