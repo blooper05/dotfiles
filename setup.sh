@@ -2,6 +2,8 @@
 
 set -ex
 
+softwareupdate --install --all --restart
+
 # System Preferences >> General >> Appearance: Graphite
 defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 
