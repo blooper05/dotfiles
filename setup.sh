@@ -27,6 +27,15 @@ defaults write com.apple.dock orientation right
 # System Preferences >> Dock >> Double-click a window's title bar to: minimize
 defaults write NSGlobalDomain AppleActionOnDoubleClick Minimize
 
+# System Preferences >> Dock >> Minimize windows into application icon
+defaults write com.apple.dock minimize-to-application -int 1
+
+# System Preferences >> Dock >> Animate opening applications
+defaults write com.apple.dock launchanim -int 0
+
+# System Preferences >> Dock >> Automatically hide and show the Dock
+defaults write com.apple.dock autohide -int 1
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
