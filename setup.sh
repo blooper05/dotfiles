@@ -36,6 +36,12 @@ defaults write com.apple.dock launchanim -int 0
 # System Preferences >> Dock >> Automatically hide and show the Dock
 defaults write com.apple.dock autohide -int 1
 
+# System Preferences >> Mission Control >> Automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -int 0
+
+# System Preferences >> Mission Control >> Dashboard: As Overlay
+defaults write com.apple.dashboard dashboard-enabled-state -int 3
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
