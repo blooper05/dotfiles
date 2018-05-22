@@ -12,9 +12,10 @@ brew git-secrets
 brew go
 brew graphviz
 brew hub --devel
-brew imagemagick
+brew imagemagick@6
 brew mackup
 brew mas
+brew mitmproxy
 brew neovim
 brew node-build
 brew nodenv
@@ -30,6 +31,7 @@ brew ripgrep
 brew ruby-build
 brew shellcheck
 brew sqlite
+brew ssh-copy-id
 brew terraform
 brew tmux
 brew yarn --without-node
