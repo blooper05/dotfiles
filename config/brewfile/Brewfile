@@ -74,6 +74,9 @@ cask rubymotion
 cask zeplin
 cask openemu
 
+tap mscharley/homebrew
+brew alacritty
+
 tap rcmdnk/file
 brew brew-file
 
