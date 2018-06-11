@@ -11,7 +11,7 @@ brew git-flow-avh
 brew git-secrets
 brew go
 brew graphviz
-brew hub --devel
+brew hub
 brew imagemagick@6
 brew mackup
 brew mas
