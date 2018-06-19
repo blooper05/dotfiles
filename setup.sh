@@ -2,8 +2,10 @@
 
 set -ex
 
+# App Store >> Updates
 softwareupdate --install --all --restart
 
+# Disk Utility >> First Aid
 diskutil verifyDisk disk0
 diskutil verifyVolume 'Macintosh HD'
 
