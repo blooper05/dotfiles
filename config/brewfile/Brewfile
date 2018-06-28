@@ -66,7 +66,6 @@ cask duet
 cask flume
 cask google-chrome
 cask google-japanese-ime
-cask hosts
 cask iina
 cask insomnia
 cask karabiner-elements
@@ -82,6 +81,7 @@ cask rubymotion
 cask skitch
 cask skype
 cask slack
+cask switchhosts
 cask vox
 cask zeplin
 cask zoomus
