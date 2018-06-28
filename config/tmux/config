@@ -1,7 +1,7 @@
 # Basic {{{1
 
 # Use Zsh as default shell.
-set -g default-command 'which reattach-to-user-namespace >/dev/null 2>&1 && reattach-to-user-namespace -l zsh || zsh'
+set -g default-command 'type reattach-to-user-namespace >/dev/null 2>&1 && reattach-to-user-namespace -l zsh || zsh'
 
 # Don't wait for escape sequences.
 set -s escape-time 0

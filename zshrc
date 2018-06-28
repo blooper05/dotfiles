@@ -130,7 +130,7 @@ export RUBYGEMS_GEMDEPS=-
 
 # rbenv {{{2
 export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if type rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ ! -f $RBENV_ROOT/default-gems ]; then
   echo bundler    >> $RBENV_ROOT/default-gems
   echo neovim     >> $RBENV_ROOT/default-gems
@@ -142,7 +142,7 @@ export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 
 # nodenv {{{2
 export NODENV_ROOT=/usr/local/var/nodenv
-if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+if type nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 # Go {{{2
 export GOPATH=$HOME/dev
