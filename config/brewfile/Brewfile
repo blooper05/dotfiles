@@ -22,7 +22,6 @@ brew nodenv
 brew packer
 brew postgresql
 brew python
-brew python3
 brew rbenv
 brew rbenv-default-gems
 brew reattach-to-user-namespace
@@ -39,39 +38,6 @@ brew zplug
 brew zsh
 
 tap caskroom/cask
-cask slack
-cask flume
-cask cheatsheet
-cask skype
-cask appcleaner
-cask karabiner-elements
-cask lacaille
-cask zoomus
-cask keepingyouawake
-cask avira-antivirus
-cask dropbox
-cask insomnia
-cask chatwork
-cask hosts
-cask cooviewer
-cask docker
-cask kindle
-cask adobe-creative-cloud
-cask clipy
-cask lastfm
-cask duet
-cask night-owl
-cask iina
-cask microsoft-office
-cask vox
-cask google-chrome
-cask postico
-cask google-japanese-ime
-cask bettertouchtool
-cask skitch
-cask rubymotion
-cask zeplin
-cask openemu
 
 tap mscharley/homebrew
 brew alacritty
@@ -81,6 +47,44 @@ brew brew-file
 
 tap sanemat/font
 brew ricty --with-powerline
+
+# Other Homebrew packages
+brew python3
+
+# Other Cask applications
+cask adobe-creative-cloud
+cask appcleaner
+cask avira-antivirus
+cask bettertouchtool
+cask chatwork
+cask cheatsheet
+cask clipy
+cask cooviewer
+cask docker
+cask dropbox
+cask duet
+cask flume
+cask google-chrome
+cask google-japanese-ime
+cask hosts
+cask iina
+cask insomnia
+cask karabiner-elements
+cask keepingyouawake
+cask kindle
+cask lacaille
+cask lastfm
+cask microsoft-office
+cask night-owl
+cask openemu
+cask postico
+cask rubymotion
+cask skitch
+cask skype
+cask slack
+cask vox
+cask zeplin
+cask zoomus
 
 # App Store applications
 appstore 443987910 1Password (6.8.4)
