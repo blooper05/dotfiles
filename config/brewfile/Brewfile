@@ -41,6 +41,23 @@ brew zsh
 tap homebrew/services
 
 tap homebrew/cask
+cask adobe-creative-cloud
+cask avira-antivirus
+cask chatwork
+cask clipy
+cask docker
+cask duet
+cask google-chrome
+cask iina
+cask karabiner-elements
+cask kindle
+cask lastfm
+cask night-owl
+cask postico
+cask skitch
+cask slack
+cask vox
+cask zoomus
 
 tap mscharley/homebrew
 brew alacritty --HEAD
@@ -52,39 +69,22 @@ tap sanemat/font
 brew ricty --with-powerline
 
 # Other Cask applications
-cask adobe-creative-cloud
 cask appcleaner
-cask avira-antivirus
 cask bettertouchtool
-cask chatwork
 cask cheatsheet
-cask clipy
 cask cooviewer
-cask docker
 cask dropbox
-cask duet
 cask flume
-cask google-chrome
 cask google-japanese-ime
-cask iina
 cask insomnia
-cask karabiner-elements
 cask keepingyouawake
-cask kindle
 cask lacaille
-cask lastfm
 cask microsoft-office
-cask night-owl
 cask openemu
-cask postico
 cask rubymotion
-cask skitch
 cask skype
-cask slack
 cask switchhosts
-cask vox
 cask zeplin
-cask zoomus
 
 # App Store applications
 appstore 443987910 1Password (6.8.9)
