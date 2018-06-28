@@ -22,6 +22,7 @@ brew nodenv
 brew packer
 brew postgresql
 brew python
+brew python@2
 brew rbenv
 brew rbenv-default-gems
 brew reattach-to-user-namespace
@@ -37,7 +38,9 @@ brew yarn --without-node
 brew zplug
 brew zsh
 
-tap caskroom/cask
+tap homebrew/services
+
+tap homebrew/cask
 
 tap mscharley/homebrew
 brew alacritty --HEAD
@@ -47,9 +50,6 @@ brew brew-file
 
 tap sanemat/font
 brew ricty --with-powerline
-
-# Other Homebrew packages
-brew python3
 
 # Other Cask applications
 cask adobe-creative-cloud
