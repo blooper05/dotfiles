@@ -57,9 +57,6 @@ sudo scutil --set LocalHostName MacBookPro
 defaults write com.apple.screencapture location "$HOME/Downloads/"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew -v
-
 readonly NORMAL=$(tput sgr0)
 readonly RED=$(tput setaf 1)
 readonly GREEN=$(tput setaf 2)
@@ -90,6 +87,10 @@ do
     red 'fail'
   fi
 done
+
+if ! type brew > /dev/null; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # FIXME
 # sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/PlugIns/JapaneseIM.appex/Contents/Resources/FullRoman.tiff    /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/full_ascii.tiff
