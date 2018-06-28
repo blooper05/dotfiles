@@ -40,7 +40,7 @@ brew zsh
 tap caskroom/cask
 
 tap mscharley/homebrew
-brew alacritty
+brew alacritty --HEAD
 
 tap rcmdnk/file
 brew brew-file
