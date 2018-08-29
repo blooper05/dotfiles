@@ -34,6 +34,7 @@ brew sqlite
 brew ssh-copy-id
 brew terraform
 brew tmux
+brew yamllint
 brew yarn --without-node
 brew zplug
 brew zsh
