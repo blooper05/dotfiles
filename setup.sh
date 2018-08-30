@@ -58,6 +58,9 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 # System Preferences >> Displays >> Night Shift >> to: 3:59
 # System Preferences >> Displays >> Night Shift >> Color Temperature
 
+# System Preferences >> Keyboard >> Keyboard >> Key Repeat
+defaults write NSGlobalDomain KeyRepeat -int 2
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
