@@ -64,6 +64,8 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # System Preferences >> Keyboard >> Keyboard >> Delay Until Repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+# System Preferences >> Keyboard >> Keyboard >> Adjust keyboard brightness in low light
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
