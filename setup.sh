@@ -107,8 +107,10 @@ if ! type brew > /dev/null; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew install rcmdnk/file/brew-file
-brew file install HOMEBREW_BREWFILE=~/.config/brewfile/Brewfile
+if ! type brew-file > /dev/null; then
+  brew install rcmdnk/file/brew-file
+  brew file install HOMEBREW_BREWFILE=~/.config/brewfile/Brewfile
+fi
 
 sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/PlugIns/JapaneseIM.appex/Contents/Resources/FullRoman.tiff    /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/full_ascii.tiff
 sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/PlugIns/JapaneseIM.appex/Contents/Resources/HalfKatakana.tiff /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/half_katakana.tiff
