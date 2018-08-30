@@ -51,6 +51,13 @@ defaults write NSGlobalDomain NSLinguisticDataAssetsRequested "(en,en_JP,ja,ja_J
 # System Preferences >> Security & Privacy >> Firewall >> Firewall: On
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
+# System Preferences >> Notifications
+# System Preferences >> Displays >> Display >> Automatically adjust brightness
+# System Preferences >> Displays >> Night Shift >> Schedule: Custom
+# System Preferences >> Displays >> Night Shift >> From: 4:00
+# System Preferences >> Displays >> Night Shift >> to: 3:59
+# System Preferences >> Displays >> Night Shift >> Color Temperature
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
