@@ -44,32 +44,6 @@ tap homebrew/services
 tap homebrew/cask
 cask adobe-creative-cloud
 cask avira-antivirus
-cask cheatsheet
-cask cooviewer
-cask dropbox
-cask flume
-cask google-japanese-ime
-cask insomnia
-cask keepingyouawake
-cask lacaille
-cask night-owl
-cask postico
-cask skype
-cask switchhosts
-cask zeplin
-
-tap mscharley/homebrew
-brew alacritty --HEAD
-
-tap rcmdnk/file
-brew brew-file
-
-tap sanemat/font
-brew ricty --with-powerline
-
-# Other Cask applications
-cask appcleaner
-cask bettertouchtool
 cask clipy
 cask docker
 cask duet
@@ -83,6 +57,31 @@ cask rubymotion
 cask slack
 cask vox
 cask zoomus
+
+tap mscharley/homebrew
+brew alacritty --HEAD
+
+tap rcmdnk/file
+brew brew-file
+
+tap sanemat/font
+brew ricty --with-powerline
+
+# Other Cask applications
+cask appcleaner
+cask bettertouchtool
+cask cooviewer
+cask dropbox
+cask flume
+cask google-japanese-ime
+cask insomnia
+cask keepingyouawake
+cask lacaille
+cask night-owl
+cask postico
+cask skype
+cask switchhosts
+cask zeplin
 
 # App Store applications
 appstore 443987910 1Password (6.8.9)
