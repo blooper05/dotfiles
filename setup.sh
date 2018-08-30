@@ -61,6 +61,9 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 # System Preferences >> Keyboard >> Keyboard >> Key Repeat
 defaults write NSGlobalDomain KeyRepeat -int 2
 
+# System Preferences >> Keyboard >> Keyboard >> Delay Until Repeat
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
 
