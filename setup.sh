@@ -71,6 +71,7 @@ sudo scutil --set LocalHostName MacBookPro
 
 defaults write com.apple.screencapture location "$HOME/Downloads/"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 readonly NORMAL=$(tput sgr0)
 readonly RED=$(tput setaf 1)
