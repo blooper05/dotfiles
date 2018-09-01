@@ -15,6 +15,7 @@ brew hub
 brew imagemagick@6
 brew mackup
 brew mas
+brew mcrypt
 brew mitmproxy
 brew neovim
 brew node-build
