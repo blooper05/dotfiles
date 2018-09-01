@@ -124,3 +124,4 @@ cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf "$HOME/Library/Fonts"
 fc-cache -vf
 
 open /usr/local/Caskroom/adobe-creative-cloud/latest/Creative\ Cloud\ Installer.app
+open /usr/local/Caskroom/rubymotion/latest/RubyMotion\ Installer.app
