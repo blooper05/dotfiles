@@ -16,8 +16,8 @@ defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # System Preferences >> Desktop & Screen Saver >> Desktop
-ln -fns ~/Library/Mobile\ Documents/com~apple~CloudDocs/splash7.png ~/Pictures/splash7.png
-# sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/splash7.png'"
+ln -fns ~/Library/Mobile\ Documents/com~apple~CloudDocs/desktop.png ~/Pictures/desktop.png
+# sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/desktop.png'"
 # killall Dock
 
 # System Preferences >> Desktop & Screen Saver >> Screen Saver
