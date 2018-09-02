@@ -65,12 +65,35 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # System Preferences >> Keyboard >> Keyboard >> Adjust keyboard brightness in low light: off
+# System Preferences >> Keyboard >> Text >> Correct spelling automatically: off
+# System Preferences >> Keyboard >> Text >> Use smart quotes and dashes: off
+# System Preferences >> Keyboard >> Shortcuuts >> Restore Defaults
+# System Preferences >> Keyboard >> Shortcuuts >> Spotlight >> Show Spotlight search: Control + Space
+# System Preferences >> Keyboard >> Shortcuuts >> Spotlight >> Show Finder search window: Control + Option + Space
+# System Preferences >> Trackpad >> Point & Click >> Look up & data detectors: off
+# System Preferences >> Trackpad >> Point & Click >> Tap to click: on
+# System Preferences >> Trackpad >> Point & Click >> Tracking speed: 3
+# System Preferences >> Trackpad >> Point & Click >> Force click and haptic feedback: off
+# System Preferences >> Trackpad >> More Gestures >> Swipe between full-screen apps: Swipe left or right with four fingers
+# System Preferences >> Trackpad >> More Gestures >> Notification Center: off
+# System Preferences >> Trackpad >> More Gestures >> Mission Control: Swipe up with four fingers
+# System Preferences >> iCloud >> iCloud Drive: on
+# System Preferences >> iCloud >> iCloud Drive >> Options >> Documents >> Keynote: on
+# System Preferences >> iCloud >> iCloud Drive >> Options >> Documents >> System Preferences: on
+# System Preferences >> iCloud >> Find My Mac: on
+# System Preferences >> App Store >> Install app updates: on
+# System Preferences >> App Store >> Install macOS updates: on
+# System Preferences >> Extensions: off
 
 # System Preferences >> Sharing >> Computer Name: まっくぶっくぷろ
 sudo scutil --set ComputerName まっくぶっくぷろ
 
 # System Preferences >> Sharing >> Computer Name >> Edit... >> Local Hostname: MacBookPro
 sudo scutil --set LocalHostName MacBookPro
+
+# System Preferences >> Touch ID: index finger
+# System Preferences >> Siri >> Show Siri in menu bar: off
+# System Preferences >> Date & Time >> Clock >> Date options: Show date
 
 defaults write com.apple.screencapture location "$HOME/Downloads/"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
