@@ -4,6 +4,7 @@ set -ex
 
 # App Store >> Updates
 softwareupdate --install --all --restart || exit
+sleep 30
 
 # Disk Utility >> First Aid
 diskutil verifyDisk disk0
