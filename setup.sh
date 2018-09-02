@@ -66,7 +66,10 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # System Preferences >> Keyboard >> Keyboard >> Adjust keyboard brightness in low light: off
 
+# System Preferences >> Sharing >> Computer Name: まっくぶっくぷろ
 sudo scutil --set ComputerName まっくぶっくぷろ
+
+# System Preferences >> Sharing >> Computer Name >> Edit... >> Local Hostname: MacBookPro
 sudo scutil --set LocalHostName MacBookPro
 
 defaults write com.apple.screencapture location "$HOME/Downloads/"
