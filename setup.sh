@@ -15,12 +15,12 @@ defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 # System Preferences >> General >> Sidebar icon size: Small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
-# System Preferences >> Desktop & Screen Saver >> Desktop
+# System Preferences >> Desktop & Screen Saver >> Desktop: ~/Pictures/desktop.png
 ln -fns ~/Library/Mobile\ Documents/com~apple~CloudDocs/desktop.png ~/Pictures/desktop.png
 # sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/desktop.png'"
 # killall Dock
 
-# System Preferences >> Desktop & Screen Saver >> Screen Saver
+# System Preferences >> Desktop & Screen Saver >> Screen Saver: Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Flurry path /System/Library/Screen\ Savers/Flurry.saver/ type 0
 
 # System Preferences >> Dock >> Position on screen: Right
@@ -29,16 +29,16 @@ defaults write com.apple.dock orientation right
 # System Preferences >> Dock >> Double-click a window's title bar to: minimize
 defaults write NSGlobalDomain AppleActionOnDoubleClick Minimize
 
-# System Preferences >> Dock >> Minimize windows into application icon
+# System Preferences >> Dock >> Minimize windows into application icon: on
 defaults write com.apple.dock minimize-to-application -int 1
 
-# System Preferences >> Dock >> Animate opening applications
+# System Preferences >> Dock >> Animate opening applications: off
 defaults write com.apple.dock launchanim -int 0
 
-# System Preferences >> Dock >> Automatically hide and show the Dock
+# System Preferences >> Dock >> Automatically hide and show the Dock: on
 defaults write com.apple.dock autohide -int 1
 
-# System Preferences >> Mission Control >> Automatically rearrange Spaces based on most recent use
+# System Preferences >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -int 0
 
 # System Preferences >> Mission Control >> Dashboard: As Overlay
@@ -51,20 +51,20 @@ defaults write NSGlobalDomain NSLinguisticDataAssetsRequested "(en,en_JP,ja,ja_J
 # System Preferences >> Security & Privacy >> Firewall >> Firewall: On
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
-# System Preferences >> Notifications
-# System Preferences >> Displays >> Display >> Automatically adjust brightness
+# System Preferences >> Notifications: off
+# System Preferences >> Displays >> Display >> Automatically adjust brightness: off
 # System Preferences >> Displays >> Night Shift >> Schedule: Custom
 # System Preferences >> Displays >> Night Shift >> From: 4:00
 # System Preferences >> Displays >> Night Shift >> to: 3:59
-# System Preferences >> Displays >> Night Shift >> Color Temperature
+# System Preferences >> Displays >> Night Shift >> Color Temperature: More Warm
 
-# System Preferences >> Keyboard >> Keyboard >> Key Repeat
+# System Preferences >> Keyboard >> Keyboard >> Key Repeat: Fast
 defaults write NSGlobalDomain KeyRepeat -int 2
 
-# System Preferences >> Keyboard >> Keyboard >> Delay Until Repeat
+# System Preferences >> Keyboard >> Keyboard >> Delay Until Repeat: Short
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-# System Preferences >> Keyboard >> Keyboard >> Adjust keyboard brightness in low light
+# System Preferences >> Keyboard >> Keyboard >> Adjust keyboard brightness in low light: off
 
 sudo scutil --set ComputerName まっくぶっくぷろ
 sudo scutil --set LocalHostName MacBookPro
