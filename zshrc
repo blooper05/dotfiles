@@ -184,6 +184,7 @@ bindkey '^g^b' anyframe-widget-checkout-git-branch
 stty -ixon
 
 # hub {{{2
+export HUB_CONFIG=$XDG_DATA_HOME/hub/config
 eval "$(hub alias -s)"
 
 # Folding {{{1
