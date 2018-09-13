@@ -15,55 +15,6 @@
                 },
                 "rules": [
                     {
-                        "description": "コマンドキーを単体で押したときに、英数・かなキーを送信する。（左コマンドキーは英数、右コマンドキーはかな） (rev 2)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command",
-                                        "lazy": true
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_eisuu"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_command",
-                                        "lazy": true
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_kana"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "each key setting",
                         "manipulators": [
                             {
@@ -419,7 +370,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "a"
@@ -824,7 +775,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "y"
@@ -1624,7 +1575,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "e"
@@ -2167,7 +2118,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "y"
@@ -2866,7 +2817,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "y"
@@ -3007,7 +2958,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "t"
@@ -3145,7 +3096,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "w"
@@ -3185,7 +3136,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "u"
@@ -3731,7 +3682,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "i"
@@ -4427,7 +4378,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "x"
+                                        "key_code": "l"
                                     },
                                     {
                                         "key_code": "o"
@@ -4502,6 +4453,85 @@
                                         "modifiers": [
                                             "left_option"
                                         ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "「’」 -> backspace",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "^ja$"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.apple\\.loginwindow$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "left_command -> E, right_command -> J",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_eisuu"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_kana"
                                     }
                                 ],
                                 "type": "basic"

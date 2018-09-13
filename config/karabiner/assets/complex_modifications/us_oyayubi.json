@@ -1,5 +1,5 @@
 {
-  "title": "us oyayubi shift",
+  "title": "us_oyayubi",
   "rules": [
     {
       "description": "each key setting",
@@ -342,7 +342,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "a"
@@ -747,7 +747,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "y"
@@ -1547,7 +1547,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "e"
@@ -2090,7 +2090,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "y"
@@ -2789,7 +2789,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "y"
@@ -2930,7 +2930,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "t"
@@ -3068,7 +3068,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "w"
@@ -3108,7 +3108,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "u"
@@ -3654,7 +3654,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "i"
@@ -4350,7 +4350,7 @@
           },
           "to": [
             {
-              "key_code": "x"
+              "key_code": "l"
             },
             {
               "key_code": "o"
@@ -4425,6 +4425,38 @@
               "modifiers": [
                 "left_option"
               ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "^ja$"
+                }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.loginwindow$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "「’」 -> backspace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "quote"
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
             }
           ],
           "conditions": [
