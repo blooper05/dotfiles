@@ -56,10 +56,10 @@ cask insomnia
 cask keepingyouawake
 cask microsoft-office
 cask openemu
-cask quip
-cask skype
-cask switchhosts
-cask zeplin
+cask rubymotion
+cask slack
+cask vox
+cask zoomus
 
 tap mscharley/homebrew
 brew alacritty --HEAD
@@ -81,11 +81,10 @@ cask iina
 cask karabiner-elements
 cask kindle
 cask night-owl
-cask postico
-cask rubymotion
-cask slack
-cask vox
-cask zoomus
+cask quip
+cask skype
+cask switchhosts
+cask zeplin
 
 # App Store applications
 appstore 443987910 1Password (6.8.9)
