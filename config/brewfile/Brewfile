@@ -51,15 +51,16 @@ cask bettertouchtool
 cask cooviewer
 cask dropbox
 cask flume
-cask google-japanese-ime
-cask insomnia
-cask keepingyouawake
-cask microsoft-office
-cask openemu
-cask rubymotion
-cask slack
-cask tableplus
-cask zeplin
+cask google-chrome
+cask iina
+cask karabiner-elements
+cask kindle
+cask night-owl
+cask quip
+cask skype
+cask switchhosts
+cask vox
+cask zoomus
 
 tap mscharley/homebrew
 brew alacritty --HEAD
@@ -76,16 +77,16 @@ cask avira-antivirus
 cask clipy
 cask docker
 cask duet
-cask google-chrome
-cask iina
-cask karabiner-elements
-cask kindle
-cask night-owl
-cask quip
-cask skype
-cask switchhosts
-cask vox
-cask zoomus
+cask forklift
+cask google-japanese-ime
+cask insomnia
+cask keepingyouawake
+cask microsoft-office
+cask openemu
+cask rubymotion
+cask slack
+cask tableplus
+cask zeplin
 
 # App Store applications
 appstore 443987910 1Password (6.8.9)
