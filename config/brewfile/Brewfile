@@ -58,9 +58,8 @@ cask kindle
 cask night-owl
 cask quip
 cask skype
-cask switchhosts
-cask vox
-cask zoomus
+cask tableplus
+cask zeplin
 
 tap mscharley/homebrew
 brew alacritty --HEAD
@@ -85,8 +84,8 @@ cask microsoft-office
 cask openemu
 cask rubymotion
 cask slack
-cask tableplus
-cask zeplin
+cask vox
+cask zoomus
 
 # App Store applications
 appstore 443987910 1Password (6.8.9)
