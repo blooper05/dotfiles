@@ -62,7 +62,7 @@ cask tableplus
 cask zeplin
 
 tap mscharley/homebrew
-brew alacritty --HEAD
+brew alacritty
 
 tap rcmdnk/file
 brew brew-file
