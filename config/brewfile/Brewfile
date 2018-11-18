@@ -48,7 +48,6 @@ tap homebrew/cask
 cask adobe-creative-cloud
 cask astro
 cask bettertouchtool
-cask cooviewer
 cask dropbox
 cask flume
 cask google-chrome
@@ -89,6 +88,7 @@ cask zoomus
 
 # App Store applications
 appstore 443987910 1Password (6.8.9)
+appstore 1206246482 EdgeView 2 (2.475)
 appstore 409183694 Keynote (8.1)
 appstore 539883307 LINE (5.9.3)
 appstore 1289197285 MindNode (5.1.3)
