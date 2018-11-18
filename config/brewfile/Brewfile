@@ -46,8 +46,9 @@ tap homebrew/services
 
 tap homebrew/cask
 cask adobe-creative-cloud
-cask astro
-cask bettertouchtool
+cask appcleaner
+cask avira-antivirus
+cask clipy
 cask dropbox
 cask flume
 cask google-chrome
@@ -68,9 +69,8 @@ brew ricty --with-powerline
 
 # Other Cask applications
 cask alacritty
-cask appcleaner
-cask avira-antivirus
-cask clipy
+cask astro
+cask bettertouchtool
 cask docker
 cask duet
 cask forklift
