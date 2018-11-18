@@ -185,6 +185,9 @@ stty -ixon
 export HUB_CONFIG=$XDG_DATA_HOME/hub/config
 eval "$(hub alias -s)"
 
+# gpg {{{2
+export GPG_TTY=$(tty)
+
 # Folding {{{1
 
 # vim:set foldmethod=marker:
