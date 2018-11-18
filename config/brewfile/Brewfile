@@ -60,9 +60,6 @@ cask skype
 cask tableplus
 cask zeplin
 
-tap mscharley/homebrew
-brew alacritty
-
 tap rcmdnk/file
 brew brew-file
 
@@ -70,6 +67,7 @@ tap sanemat/font
 brew ricty --with-powerline
 
 # Other Cask applications
+cask alacritty
 cask appcleaner
 cask avira-antivirus
 cask clipy
