@@ -20,6 +20,9 @@ ln -fns ~/Library/Mobile\ Documents/com~apple~CloudDocs/desktop.png ~/Pictures/d
 # sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '~/Pictures/desktop.png'"
 # killall Dock
 
+# System Preferences >> Desktop & Screen Saver >> Start after: 5 Minutes
+defaults -currentHost write com.apple.screensaver idleTime -int 300
+
 # System Preferences >> Desktop & Screen Saver >> Screen Saver: Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Flurry path /System/Library/Screen\ Savers/Flurry.saver/ type 0
 
