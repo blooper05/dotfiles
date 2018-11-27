@@ -86,7 +86,6 @@ cask vox
 cask zoomus
 
 # App Store applications
-appstore 443987910 1Password (6.8.9)
 appstore 1333542190 1Password 7 (7.2.1)
 appstore 1206246482 EdgeView 2 (2.475)
 appstore 409183694 Keynote (8.3)
