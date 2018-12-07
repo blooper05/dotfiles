@@ -40,6 +40,7 @@ brew terraform
 brew tmux
 brew yamllint
 brew yarn --without-node
+brew zeromq
 brew zplug
 brew zsh
 
