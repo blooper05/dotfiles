@@ -115,7 +115,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/neosnippet.vim'
+repo = 'Shougo/neosnippet.vim' # TODO: deoppet.nvim
 depends = ['context_filetype.vim', 'neosnippet-snippets']
 on_ft = 'snippet'
 hook_add = '''
@@ -142,7 +142,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'Shougo/neosnippet-snippets' # TODO: deoppet-snippets
 on_source = 'neosnippet.vim'
 
 [[plugins]]
@@ -255,7 +255,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/vimfiler.vim'
+repo = 'Shougo/vimfiler.vim' # TODO: defx.nvim
 on_map = '<Plug>'
 hook_add = '''
   " The prefix key.
@@ -331,6 +331,10 @@ on_source = 'denite.nvim'
 [[plugins]]
 repo = 'w0rp/ale'
 on_event = 'BufWritePost'
+hook_add = '''
+  " Never check buffers on changes.
+  let g:ale_lint_on_text_changed = 'never'
+'''
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
