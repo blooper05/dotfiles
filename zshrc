@@ -188,6 +188,10 @@ eval "$(hub alias -s)"
 # gpg {{{2
 export GPG_TTY=$(tty)
 
+# Terraform {{{2
+export TF_CLI_ARGS_plan="--parallelism=30"
+export TF_CLI_ARGS_apply="--parallelism=30"
+
 # Folding {{{1
 
 # vim:set foldmethod=marker:
