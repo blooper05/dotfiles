@@ -3,6 +3,8 @@
 
 tap homebrew/core
 brew awscli
+brew elm
+brew elm-format
 brew fd
 brew fzf
 brew ghq
