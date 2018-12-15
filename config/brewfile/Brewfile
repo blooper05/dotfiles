@@ -46,6 +46,9 @@ brew zeromq
 brew zplug
 brew zsh
 
+tap homebrew/cask-drivers
+cask sonos
+
 tap homebrew/services
 
 tap homebrew/cask
