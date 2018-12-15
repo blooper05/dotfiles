@@ -53,29 +53,7 @@ tap homebrew/services
 
 tap homebrew/cask
 cask adobe-creative-cloud
-cask appcleaner
-cask bettertouchtool
-cask docker
-cask duet
-cask forklift
-cask google-japanese-ime
-cask insomnia
-cask keepingyouawake
-cask krisp
-cask night-owl
-cask quip
-cask skype
-cask tableplus
-cask zeplin
-
-tap rcmdnk/file
-brew brew-file
-
-tap sanemat/font
-brew ricty --with-powerline
-
-# Other Cask applications
-cask alacritty
+cask amazon-music
 cask avira-antivirus
 cask clipy
 cask dropbox
@@ -90,6 +68,29 @@ cask rubymotion
 cask slack
 cask vox
 cask zoomus
+
+tap rcmdnk/file
+brew brew-file
+
+tap sanemat/font
+brew ricty --with-powerline
+
+# Other Cask applications
+cask alacritty
+cask appcleaner
+cask bettertouchtool
+cask docker
+cask duet
+cask forklift
+cask google-japanese-ime
+cask insomnia
+cask keepingyouawake
+cask krisp
+cask night-owl
+cask quip
+cask skype
+cask tableplus
+cask zeplin
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.2.1)
