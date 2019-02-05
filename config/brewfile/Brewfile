@@ -66,6 +66,7 @@ cask microsoft-office
 cask openemu
 cask rubymotion
 cask slack
+cask tableplus
 cask vox
 cask zoomus
 
@@ -89,7 +90,8 @@ cask krisp
 cask night-owl
 cask quip
 cask skype
-cask tableplus
+cask station
+cask unshaky
 cask zeplin
 
 # App Store applications
