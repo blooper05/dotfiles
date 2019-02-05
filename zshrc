@@ -7,7 +7,7 @@ zplug "Code-Hex/battery", as:command, from:gh-r
 zplug "bhilburn/powerlevel9k", as:theme
 zplug "glidenote/hub-zsh-completion"
 zplug "mollifier/anyframe"
-zplug "nishidayuya/git-cococo", as:command, use:exe/git-cococo
+zplug "blooper05/git-cococo", as:command, use:exe/git-cococo
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
