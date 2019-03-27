@@ -523,6 +523,11 @@ hook_add = '''
 repo = 'kchmck/vim-coffee-script'
 on_ft = 'coffee'
 
+# Elm {{{2
+[[plugins]]
+repo = 'elmcast/elm-vim'
+on_ft = 'elm'
+
 # Markdown {{{2
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
