@@ -56,6 +56,31 @@ cask adobe-creative-cloud
 cask amazon-music
 cask avira-antivirus
 cask clipy
+cask drawio
+cask duet
+cask forklift
+cask google-japanese-ime
+cask insomnia
+cask keepingyouawake
+cask krisp
+cask night-owl
+cask quip
+cask skype
+cask station
+cask unshaky
+cask zeplin
+
+tap rcmdnk/file
+brew brew-file
+
+tap sanemat/font
+brew ricty --with-powerline
+
+# Other Cask applications
+cask alacritty
+cask appcleaner
+cask bettertouchtool
+cask docker
 cask dropbox
 cask flume
 cask google-chrome
@@ -69,30 +94,6 @@ cask slack
 cask tableplus
 cask vox
 cask zoomus
-
-tap rcmdnk/file
-brew brew-file
-
-tap sanemat/font
-brew ricty --with-powerline
-
-# Other Cask applications
-cask alacritty
-cask appcleaner
-cask bettertouchtool
-cask docker
-cask duet
-cask forklift
-cask google-japanese-ime
-cask insomnia
-cask keepingyouawake
-cask krisp
-cask night-owl
-cask quip
-cask skype
-cask station
-cask unshaky
-cask zeplin
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.2.1)
