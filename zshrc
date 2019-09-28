@@ -131,9 +131,13 @@ export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
 export RBENV_ROOT=/usr/local/var/rbenv
 if type rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ ! -f $RBENV_ROOT/default-gems ]; then
-  echo bundler    >> $RBENV_ROOT/default-gems
-  echo neovim     >> $RBENV_ROOT/default-gems
-  echo solargraph >> $RBENV_ROOT/default-gems
+  echo bundler             >> $RBENV_ROOT/default-gems
+  echo neovim              >> $RBENV_ROOT/default-gems
+  echo rubocop             >> $RBENV_ROOT/default-gems
+  echo rubocop-inflector   >> $RBENV_ROOT/default-gems
+  echo rubocop-performance >> $RBENV_ROOT/default-gems
+  echo rubocop-rspec       >> $RBENV_ROOT/default-gems
+  echo solargraph          >> $RBENV_ROOT/default-gems
 fi
 
 # Node.js {{{2
