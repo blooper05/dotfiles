@@ -65,9 +65,9 @@ cask forklift
 cask google-japanese-ime
 cask insomnia
 cask keepingyouawake
-cask night-owl
-cask quip
-cask skype
+cask microsoft-office
+cask openemu
+cask rubymotion
 cask station
 cask unshaky
 cask zeplin
@@ -86,9 +86,9 @@ cask google-chrome
 cask iina
 cask karabiner-elements
 cask kindle
-cask microsoft-office
-cask openemu
-cask rubymotion
+cask night-owl
+cask quip
+cask skype
 cask tableplus
 cask vox
 cask zoomus
