@@ -49,6 +49,7 @@ brew zplug
 brew zsh
 
 tap homebrew/cask-drivers
+cask silicon-labs-vcp-driver
 cask sonos
 
 tap homebrew/services
