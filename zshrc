@@ -61,11 +61,20 @@ export SAVEHIST=10000 # on file
 
 # Don't record an event that was recorded just before.
 setopt hist_ignore_dups
-# TODO: Add comments
+
+# Don't record an event that was already recorded (not just before).
 setopt hist_ignore_all_dups
+
+# Omit duplicate older commands when writing out the history file.
 setopt hist_save_no_dups
+
+# Remove the oldest history event that has a duplicate before a unique event.
 setopt hist_expire_dups_first
+
+# Don't display duplicates, even if the duplicates are not contiguous.
 setopt hist_find_no_dups
+
+# TODO: Add comments
 setopt share_history
 setopt hist_reduce_blanks
 setopt inc_append_history
