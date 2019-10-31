@@ -17,6 +17,7 @@ brew go
 brew graphviz
 brew hub
 brew imagemagick@6
+brew jq
 brew jsonlint --ignore-dependencies
 brew mackup
 brew mas
