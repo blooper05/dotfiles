@@ -60,6 +60,7 @@ cask amazon-music
 cask avira-antivirus
 cask clipy
 cask drawio
+cask flume
 cask forklift
 cask google-japanese-ime
 cask insomnia
@@ -81,7 +82,7 @@ cask appcleaner
 cask bettertouchtool
 cask docker
 cask dropbox
-cask flume
+cask font-cica
 cask google-chrome
 cask iina
 cask karabiner-elements
