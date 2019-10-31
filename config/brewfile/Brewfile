@@ -9,6 +9,7 @@ brew fd
 brew fzf
 brew ghq
 brew git
+brew git-crypt
 brew git-flow-avh
 brew git-secrets
 brew gnupg
