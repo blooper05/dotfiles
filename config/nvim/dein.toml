@@ -6,16 +6,16 @@ repo = 'Shougo/dein.vim'
 # View {{{1
 
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
+repo = 'lifepillar/vim-solarized8'
 hook_add = '''
   " Use solarized as colorscheme.
-  autocmd MyAutoCmd VimEnter * nested colorscheme solarized
+  autocmd MyAutoCmd VimEnter * nested colorscheme solarized8
+  " Enable 24-bit RGB color in the TUI.
+  set termguicolors
   " Assume a dark background.
   set background=dark
-  " Stop displaying these typefaces.
-  let g:solarized_bold = 0
-  let g:solarized_italic = 0
-  let g:solarized_underline = 0
+  " Make the background transparent.
+  let g:solarized_termtrans = 1
 '''
 
 # FIXME
