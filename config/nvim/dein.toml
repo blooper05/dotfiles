@@ -18,7 +18,6 @@ hook_add = '''
   let g:solarized_termtrans = 1
 '''
 
-# FIXME
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
