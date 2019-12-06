@@ -43,7 +43,7 @@ brew ssh-copy-id
 brew tfenv
 brew tmux
 brew yamllint
-brew yarn --without-node
+brew yarn --ignore-dependencies
 brew zeromq
 brew zplug
 brew zsh
