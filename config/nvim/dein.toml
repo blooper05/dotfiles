@@ -401,16 +401,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
-hook_add = '''
-  " Plugin key-mappings.
-  nnoremap <silent>[git]d :<C-u>Gdiff<CR>
-  nnoremap <silent>[git]a :<C-u>Gwrite<CR>
-  nnoremap <silent>[git]r :<C-u>Gread<CR>
-  nnoremap <silent>[git]b :<C-u>Gblame<CR>
-'''
-
-[[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
   " Plugin key-mappings.
