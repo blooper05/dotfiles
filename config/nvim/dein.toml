@@ -49,15 +49,15 @@ hook_add = '''
       \ }
 
   function! LightLineModified()
-    return &ft =~ 'help\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+    return &ft =~ 'help\|gundo\|diff' ? '' : &modified ? '+' : &modifiable ? '' : '-'
   endfunction
 
   function! LightLineReadonly()
-    return &ft !~? 'help\|gundo' && &readonly ? "\ue0a2" : ''
+    return &ft !~? 'help\|gundo\|diff' && &readonly ? "\ue0a2" : ''
   endfunction
 
   function! LightLineGina()
-    if &ft !~? 'help\|gundo' && exists('g:loaded_gina')
+    if &ft !~? 'help\|gundo\|diff' && exists('g:loaded_gina')
       let branch = gina#component#repo#branch()
       return branch !=# '' ? "\ue0a0 ".branch : ''
     endif
@@ -65,7 +65,9 @@ hook_add = '''
   endfunction
 
   function! LightLineFilename()
-    return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
+    let fname = expand('%:t')
+    return fname =~ '__Gundo' ? '' :
+         \ ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
          \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
          \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
   endfunction
@@ -83,7 +85,9 @@ hook_add = '''
   endfunction
 
   function! LightLineMode()
-    return winwidth(0) > 60 ? lightline#mode() : ''
+    let fname = expand('%:t')
+    return fname =~ '__Gundo' ? 'Gundo' :
+         \ winwidth(0) > 60 ? lightline#mode() : ''
   endfunction
 '''
 
