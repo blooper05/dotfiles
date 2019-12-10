@@ -357,7 +357,6 @@ repo = 'tpope/vim-dispatch'
 
 # Git {{{1
 
-# FIXME
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
 hook_add = '''
@@ -365,39 +364,48 @@ hook_add = '''
   nnoremap [git]    <Nop>
   nmap     <Space>g [git]
   " Plugin key-mappings.
-  nnoremap <silent>[git]s :<C-u>Gina status -s<CR>
+  nnoremap <silent>[git]a :<C-u>Gina add --ignore-errors -- %<CR>
+  nnoremap <silent>[git]r :<C-u>Gina reset --quiet -- %<CR>
+  nnoremap <silent>[git]b :<C-u>Gina blame<CR>
+  nnoremap <silent>[git]B :<C-u>Gina branch<CR>
   nnoremap <silent>[git]c :<C-u>Gina commit<CR>
-  nnoremap <silent>[git]B :<C-u>Gina branch -a<CR>
-  call gina#custom#mapping#nmap(
-       \  'branch', 'co',
-       \  '<Plug>(gina-commit-checkout)'
-       \)
-  call gina#custom#mapping#nmap(
-       \  'branch', 'ct',
-       \  '<Plug>(gina-commit-checkout-track)'
-       \)
-  call gina#custom#mapping#nmap(
-       \  'branch', 'M',
-       \  '<Plug>(gina-branch-move)'
-       \)
-  call gina#custom#mapping#nmap(
-       \  'branch', 'D',
-       \  '<Plug>(gina-branch-delete)'
-       \)
-  nnoremap <silent>[git]l :<C-u>Gina log --graph<CR>
-  nnoremap <silent>[git]f :<C-u>Gina log --graph -- %<CR>
-  call gina#custom#command#option(
-       \  '/\%(log\|reflog\)',
-       \  '--opener', 'vsplit'
-       \)
-  call gina#custom#command#option(
-       \  'log', '--group', 'log-viewer'
-       \)
-  call gina#custom#command#option(
-       \  'reflog', '--group', 'reflog-viewer'
-       \)
-  " Ignore any directory candidates.
-  let g:gina#action#index#discard_directories = 1
+  nnoremap <silent>[git]l :<C-u>Gina log<CR>
+  nnoremap <silent>[git]f :<C-u>Gina log -- %<CR>
+  nnoremap <silent>[git]d :<C-u>Gina patch<CR>
+  nnoremap <silent>[git]R :<C-u>Gina reflog<CR>
+  nnoremap <silent>[git]s :<C-u>Gina status<CR>
+  " gina-blame
+  let g:gina#command#blame#formatter#format = '%au%= on %ti %ma%in'
+  let g:gina#command#blame#formatter#timestamp_months = 0
+  let g:gina#command#blame#formatter#timestamp_format1 = '%Y-%m-%d'
+  let g:gina#command#blame#formatter#timestamp_format2 = '%Y-%m-%d'
+  let g:gina#command#blame#use_default_mappings = 0
+  call gina#custom#mapping#nmap('blame', '<CR>', '<Plug>(gina-show-commit-split)')
+  " gina-branch
+  let g:gina#command#branch#use_default_mappings = 0
+  call gina#custom#mapping#nmap('branch', 'co', '<Plug>(gina-commit-checkout)')
+  call gina#custom#mapping#nmap('branch', 'ct', '<Plug>(gina-commit-checkout-track)')
+  call gina#custom#mapping#nmap('branch', 'M',  '<Plug>(gina-branch-move)')
+  call gina#custom#mapping#nmap('branch', 'D',  '<Plug>(gina-branch-delete)')
+  call gina#custom#command#option('branch', '--all')
+  call gina#custom#command#option('branch', '--opener', 'split')
+  call gina#custom#command#option('branch', '--group', 'gina-branch-viewer')
+  " gina-commit
+  call gina#custom#command#option('commit', '--opener', 'split')
+  call gina#custom#command#option('commit', '--group', 'gina-commit-viewer')
+  " gina-log
+  call gina#custom#command#option('log', '--graph')
+  call gina#custom#command#option('log', '--opener', 'vsplit')
+  call gina#custom#command#option('log', '--group', 'gina-log-viewer')
+  " gina-patch
+  call gina#custom#command#option('patch', '--oneside')
+  " gina-reflog
+  call gina#custom#command#option('reflog', '--opener', 'vsplit')
+  call gina#custom#command#option('reflog', '--group', 'gina-reflog-viewer')
+  " gina-status
+  call gina#custom#command#option('status', '--short')
+  call gina#custom#command#option('status', '--opener', 'split')
+  call gina#custom#command#option('status', '--group', 'gina-status-viewer')
 '''
 
 [[plugins]]
