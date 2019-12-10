@@ -94,13 +94,11 @@ repo = 'Shougo/deoplete.nvim'
 build = 'pip3 install neovim'
 depends = ['context_filetype.vim']
 on_i = 1
-hook_add = '''
+hook_source = '''
   " Use deoplete.
   let g:deoplete#enable_at_startup = 1
   " Use smartcase.
-  let g:deoplete#enable_smart_case = 1
-  " Set minimum syntax keyword length.
-  let g:deoplete#auto_complete_start_length = 2
+  call deoplete#custom#option('smart_case', v:true)
   " <CR>: close popup and save indent.
   inoremap <silent><CR> <C-r>=<SID>my_cr_function()<CR>
   function! s:my_cr_function() abort
