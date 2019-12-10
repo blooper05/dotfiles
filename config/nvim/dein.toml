@@ -21,21 +21,23 @@ hook_add = '''
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 
-# FIXME
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = ['vim-fugitive', 'vimfiler.vim', 'vimshell.vim', 'unite.vim', 'gundo']
+depends = ['gina.vim', 'vimfiler.vim', 'vimshell.vim', 'unite.vim', 'gundo']
 hook_add = '''
+  " Get rid of redundant mode display.
+  set noshowmode
+
   let g:lightline = {
       \ 'colorscheme' : 'solarized',
       \ 'mode_map'    : { 'c' : 'NORMAL' },
       \ 'active'      : {
-      \   'left'      : [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ],
+      \   'left'      : [ [ 'mode', 'paste' ], [ 'gina', 'filename' ] ],
       \ },
       \ 'component_function' : {
       \   'modified'     : 'LightLineModified',
       \   'readonly'     : 'LightLineReadonly',
-      \   'fugitive'     : 'LightLineFugitive',
+      \   'gina'         : 'LightLineGina',
       \   'filename'     : 'LightLineFilename',
       \   'fileformat'   : 'LightLineFileformat',
       \   'filetype'     : 'LightLineFiletype',
@@ -54,6 +56,14 @@ hook_add = '''
     return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? "\ue0a2" : ''
   endfunction
 
+  function! LightLineGina()
+    if &ft !~? 'help\|vimfiler\|gundo' && exists('g:loaded_gina')
+      let branch = gina#component#repo#branch()
+      return branch !=# '' ? "\ue0a0 ".branch : ''
+    endif
+    return ''
+  endfunction
+
   function! LightLineFilename()
     return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
          \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
@@ -61,14 +71,6 @@ hook_add = '''
          \  &ft == 'vimshell' ? vimshell#get_status_string() :
          \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
          \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
-  endfunction
-
-  function! LightLineFugitive()
-    if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
-      let branch = fugitive#head()
-      return branch !=# '' ? "\ue0a0 ".branch : ''
-    endif
-    return ''
   endfunction
 
   function! LightLineFileformat()
