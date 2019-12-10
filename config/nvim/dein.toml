@@ -412,6 +412,10 @@ hook_add = '''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  " Plugin key-mappings.
+  let g:gitgutter_map_keys = 0
+'''
 
 # FileType {{{1
 
