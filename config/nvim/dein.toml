@@ -227,12 +227,6 @@ hook_add = '''
   nnoremap <silent><Space>U :<C-u>GundoToggle<CR>
 '''
 
-[[plugins]]
-repo = 'chrisbra/vim-diff-enhanced'
-hook_add = '''
-  let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=histogram")'
-'''
-
 # File {{{1
 
 [[plugins]]
