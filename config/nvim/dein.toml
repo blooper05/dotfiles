@@ -374,14 +374,14 @@ hook_add = '''
   nnoremap <silent>[git]d :<C-u>Gina patch<CR>
   nnoremap <silent>[git]R :<C-u>Gina reflog<CR>
   nnoremap <silent>[git]s :<C-u>Gina status<CR>
-  " gina-blame
+  " gina-buffer-blame specific settings.
   let g:gina#command#blame#formatter#format = '%au%= on %ti %ma%in'
   let g:gina#command#blame#formatter#timestamp_months = 0
   let g:gina#command#blame#formatter#timestamp_format1 = '%Y-%m-%d'
   let g:gina#command#blame#formatter#timestamp_format2 = '%Y-%m-%d'
   let g:gina#command#blame#use_default_mappings = 0
   call gina#custom#mapping#nmap('blame', '<CR>', '<Plug>(gina-show-commit-split)')
-  " gina-branch
+  " gina-buffer-branch specific settings.
   let g:gina#command#branch#use_default_mappings = 0
   call gina#custom#mapping#nmap('branch', 'co', '<Plug>(gina-commit-checkout)')
   call gina#custom#mapping#nmap('branch', 'ct', '<Plug>(gina-commit-checkout-track)')
@@ -390,19 +390,19 @@ hook_add = '''
   call gina#custom#command#option('branch', '--all')
   call gina#custom#command#option('branch', '--opener', 'split')
   call gina#custom#command#option('branch', '--group', 'gina-branch-viewer')
-  " gina-commit
+  " gina-buffer-commit specific settings.
   call gina#custom#command#option('commit', '--opener', 'split')
   call gina#custom#command#option('commit', '--group', 'gina-commit-viewer')
-  " gina-log
+  " gina-buffer-log specific settings.
   call gina#custom#command#option('log', '--graph')
   call gina#custom#command#option('log', '--opener', 'vsplit')
   call gina#custom#command#option('log', '--group', 'gina-log-viewer')
-  " gina-patch
+  " gina-buffer-patch specific settings.
   call gina#custom#command#option('patch', '--oneside')
-  " gina-reflog
+  " gina-buffer-reflog specific settings.
   call gina#custom#command#option('reflog', '--opener', 'vsplit')
   call gina#custom#command#option('reflog', '--group', 'gina-reflog-viewer')
-  " gina-status
+  " gina-buffer-status specific settings.
   call gina#custom#command#option('status', '--short')
   call gina#custom#command#option('status', '--opener', 'split')
   call gina#custom#command#option('status', '--group', 'gina-status-viewer')
