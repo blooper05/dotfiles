@@ -23,7 +23,7 @@ repo = 'Yggdroot/indentLine'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = ['gundo', 'gina.vim', 'deol.nvim', 'defx.nvim', 'denite.nvim']
+depends = ['gundo', 'gina.vim', 'defx.nvim', 'denite.nvim']
 hook_add = '''
   " Get rid of redundant mode display.
   set noshowmode
