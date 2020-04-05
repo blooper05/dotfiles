@@ -7,7 +7,8 @@ softwareupdate --install --all --restart && sleep 30
 
 # Disk Utility >> First Aid
 diskutil verifyDisk disk0
-diskutil verifyVolume 'Macintosh HD'
+diskutil verifyVolume disk0s1
+diskutil verifyVolume disk0s2
 
 # System Preferences >> General >> Appearance: Graphite
 defaults write NSGlobalDomain AppleAquaColorVariant -int 6
