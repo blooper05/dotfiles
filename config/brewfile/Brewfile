@@ -60,6 +60,7 @@ cask appcleaner
 cask avira-antivirus
 cask bettertouchtool
 cask clipy
+cask docker
 cask drawio
 cask flume
 cask forklift
@@ -84,7 +85,6 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Cask applications
-cask docker
 cask dropbox
 cask font-cica
 cask google-chrome
