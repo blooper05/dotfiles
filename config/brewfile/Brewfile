@@ -69,6 +69,7 @@ cask deepl
 cask docker
 cask drawio
 cask dropbox
+cask figma
 cask flume
 cask forklift
 cask google-chrome
