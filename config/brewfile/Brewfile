@@ -66,6 +66,7 @@ cask keepingyouawake
 cask microsoft-office
 cask openemu
 cask rubymotion
+cask skype
 cask station
 cask tableplus
 cask unshaky
@@ -92,7 +93,6 @@ cask karabiner-elements
 cask kindle
 cask night-owl
 cask quip
-cask skype
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.3.2)
