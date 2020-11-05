@@ -29,8 +29,6 @@ brew neovim
 brew node-build
 brew nodenv
 brew postgresql
-brew python
-brew python@2
 brew rbenv
 brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
