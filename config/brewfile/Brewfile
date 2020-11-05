@@ -68,6 +68,7 @@ cask openemu
 cask rubymotion
 cask station
 cask unshaky
+cask vox
 cask zeplin
 cask zoomus
 
@@ -92,7 +93,6 @@ cask night-owl
 cask quip
 cask skype
 cask tableplus
-cask vox
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.3.2)
