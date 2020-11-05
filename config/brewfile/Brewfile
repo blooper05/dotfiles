@@ -65,6 +65,7 @@ cask drawio
 cask dropbox
 cask flume
 cask forklift
+cask google-chrome
 cask google-japanese-ime
 cask insomnia
 cask keepingyouawake
@@ -87,7 +88,6 @@ brew brew-file
 
 # Other Cask applications
 cask font-cica
-cask google-chrome
 cask iina
 cask karabiner-elements
 cask kindle
