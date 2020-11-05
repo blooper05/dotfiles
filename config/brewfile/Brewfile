@@ -69,6 +69,7 @@ cask rubymotion
 cask station
 cask unshaky
 cask zeplin
+cask zoomus
 
 tap kwilczynski/pkenv
 brew pkenv
@@ -92,7 +93,6 @@ cask quip
 cask skype
 cask tableplus
 cask vox
-cask zoomus
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.3.2)
