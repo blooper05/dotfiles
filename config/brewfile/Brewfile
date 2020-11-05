@@ -75,6 +75,7 @@ cask kindle
 cask microsoft-office
 cask night-owl
 cask openemu
+cask quip
 cask rubymotion
 cask skype
 cask station
@@ -92,7 +93,6 @@ brew brew-file
 
 # Other Cask applications
 cask font-cica
-cask quip
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.3.2)
