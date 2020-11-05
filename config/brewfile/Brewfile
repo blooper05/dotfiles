@@ -73,6 +73,7 @@ cask karabiner-elements
 cask keepingyouawake
 cask kindle
 cask microsoft-office
+cask night-owl
 cask openemu
 cask rubymotion
 cask skype
@@ -91,7 +92,6 @@ brew brew-file
 
 # Other Cask applications
 cask font-cica
-cask night-owl
 cask quip
 
 # App Store applications
