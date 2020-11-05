@@ -71,6 +71,7 @@ cask iina
 cask insomnia
 cask karabiner-elements
 cask keepingyouawake
+cask kindle
 cask microsoft-office
 cask openemu
 cask rubymotion
@@ -90,7 +91,6 @@ brew brew-file
 
 # Other Cask applications
 cask font-cica
-cask kindle
 cask night-owl
 cask quip
 
