@@ -58,6 +58,7 @@ cask alacritty
 cask amazon-music
 cask appcleaner
 cask avira-antivirus
+cask bettertouchtool
 cask clipy
 cask drawio
 cask flume
@@ -83,7 +84,6 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Cask applications
-cask bettertouchtool
 cask docker
 cask dropbox
 cask font-cica
