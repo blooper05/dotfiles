@@ -62,6 +62,7 @@ cask bettertouchtool
 cask clipy
 cask docker
 cask drawio
+cask dropbox
 cask flume
 cask forklift
 cask google-japanese-ime
@@ -85,7 +86,6 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Cask applications
-cask dropbox
 cask font-cica
 cask google-chrome
 cask iina
