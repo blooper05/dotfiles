@@ -30,6 +30,7 @@ brew neovim
 brew node-build
 brew nodenv
 brew nushell
+brew pyenv
 brew rbenv
 brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
