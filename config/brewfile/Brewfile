@@ -97,6 +97,9 @@ cask vox
 cask zeplin
 cask zoomus
 
+tap k1LoW/tap
+brew awsdo
+
 tap kwilczynski/pkenv
 brew pkenv
 
