@@ -32,6 +32,7 @@ brew postgresql
 brew rbenv
 brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
+brew readline
 brew reattach-to-user-namespace
 brew redis
 brew ripgrep
