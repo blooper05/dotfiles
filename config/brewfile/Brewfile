@@ -69,6 +69,7 @@ cask google-chrome
 cask google-japanese-ime
 cask iina
 cask insomnia
+cask karabiner-elements
 cask keepingyouawake
 cask microsoft-office
 cask openemu
@@ -89,7 +90,6 @@ brew brew-file
 
 # Other Cask applications
 cask font-cica
-cask karabiner-elements
 cask kindle
 cask night-owl
 cask quip
