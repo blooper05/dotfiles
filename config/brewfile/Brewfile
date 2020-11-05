@@ -56,6 +56,7 @@ tap homebrew/cask
 cask adobe-creative-cloud
 cask alacritty
 cask amazon-music
+cask appcleaner
 cask avira-antivirus
 cask clipy
 cask drawio
@@ -82,7 +83,6 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Cask applications
-cask appcleaner
 cask bettertouchtool
 cask docker
 cask dropbox
