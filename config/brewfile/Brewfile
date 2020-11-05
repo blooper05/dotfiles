@@ -100,6 +100,9 @@ cask zoomus
 tap k1LoW/tap
 brew awsdo
 
+tap kayac/tap
+brew ecspresso
+
 tap kwilczynski/pkenv
 brew pkenv
 
