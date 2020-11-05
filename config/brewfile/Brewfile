@@ -28,7 +28,6 @@ brew mitmproxy
 brew neovim
 brew node-build
 brew nodenv
-brew packer
 brew postgresql
 brew python
 brew python@2
@@ -73,6 +72,9 @@ cask rubymotion
 cask station
 cask unshaky
 cask zeplin
+
+tap kwilczynski/pkenv
+brew pkenv
 
 tap rcmdnk/file
 brew brew-file
