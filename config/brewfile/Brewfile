@@ -79,6 +79,8 @@ cask microsoft-office
 cask ngrok
 cask night-owl
 cask notion
+cask obs
+cask obs-virtualcam
 cask openemu
 cask quip
 cask rubymotion
