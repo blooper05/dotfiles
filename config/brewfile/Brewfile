@@ -67,6 +67,7 @@ cask microsoft-office
 cask openemu
 cask rubymotion
 cask station
+cask tableplus
 cask unshaky
 cask vox
 cask zeplin
@@ -92,7 +93,6 @@ cask kindle
 cask night-owl
 cask quip
 cask skype
-cask tableplus
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.3.2)
