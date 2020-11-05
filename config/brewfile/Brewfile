@@ -13,6 +13,7 @@ brew git
 brew git-crypt
 brew git-flow-avh
 brew git-secrets
+brew gitmoji
 brew gnupg
 brew go
 brew graphviz
