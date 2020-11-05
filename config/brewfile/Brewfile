@@ -59,6 +59,7 @@ tap homebrew/cask
 cask adobe-creative-cloud
 cask alacritty
 cask amazon-music
+cask amazon-workspaces
 cask appcleaner
 cask avira-antivirus
 cask bettertouchtool
