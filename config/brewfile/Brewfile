@@ -76,6 +76,7 @@ cask karabiner-elements
 cask keepingyouawake
 cask kindle
 cask microsoft-office
+cask ngrok
 cask night-owl
 cask openemu
 cask quip
