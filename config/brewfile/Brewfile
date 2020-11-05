@@ -115,12 +115,12 @@ cask miro-formerly-realtimeboard
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.6)
-appstore 571213070 DaVinci Resolve (16.2.5)
-appstore 1206246482 EdgeView 2 (2.842)
-appstore 409183694 Keynote (10.1)
-appstore 539883307 LINE (6.2.2)
-appstore 1289197285 MindNode (7.3.2)
+appstore 571213070 DaVinci Resolve (16.2.7)
+appstore 1206246482 EdgeView 2 (2.843)
+appstore 409183694 Keynote (10.2)
+appstore 539883307 LINE (6.3.2)
+appstore 1289197285 MindNode (7.3.3)
 appstore 568494494 Pocket (1.8.5)
 appstore 413449473 ReceiptKeeper (1.1.3)
 appstore 880001334 Reeder (3.2.3)
-appstore 585829637 Todoist (7.3.2)
+appstore 585829637 Todoist (7.4)
