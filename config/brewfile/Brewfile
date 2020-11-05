@@ -29,6 +29,7 @@ brew mitmproxy
 brew neovim
 brew node-build
 brew nodenv
+brew nushell
 brew rbenv
 brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
@@ -39,6 +40,7 @@ brew ruby-build
 brew shellcheck
 brew sqlite
 brew ssh-copy-id
+brew starship
 brew tfenv
 brew tmux
 brew yamllint
