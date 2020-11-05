@@ -43,7 +43,6 @@ brew tfenv
 brew tmux
 brew yamllint
 brew yarn --ignore-dependencies
-brew zeromq
 brew zplug
 brew zsh
 
