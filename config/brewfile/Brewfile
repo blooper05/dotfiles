@@ -44,6 +44,7 @@ brew ssh-copy-id
 brew starship
 brew tfenv
 brew tmux
+brew watch
 brew yamllint
 brew yarn --ignore-dependencies
 brew zplug
