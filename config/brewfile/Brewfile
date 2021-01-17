@@ -23,7 +23,6 @@ brew jq
 brew jsonlint --ignore-dependencies
 brew mackup
 brew mas
-brew mcrypt
 brew mitmproxy
 brew neovim
 brew node-build
