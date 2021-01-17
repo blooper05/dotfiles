@@ -55,6 +55,7 @@ cask sonos
 
 tap homebrew/cask-fonts
 cask font-cica
+cask font-hackgen-nerd
 
 tap homebrew/services
 
