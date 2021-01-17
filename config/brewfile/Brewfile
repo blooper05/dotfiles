@@ -8,6 +8,7 @@ brew elm-format
 brew exa
 brew fd
 brew fzf
+brew gh
 brew ghq
 brew git
 brew git-crypt
@@ -18,7 +19,6 @@ brew gnupg
 brew go
 brew graphviz
 brew hadolint
-brew hub
 brew imagemagick
 brew jq
 brew jsonlint --ignore-dependencies
