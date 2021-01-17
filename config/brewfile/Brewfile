@@ -18,7 +18,6 @@ brew git-secrets
 brew gitmoji
 brew gnupg
 brew go
-brew graphviz
 brew hadolint
 brew imagemagick
 brew jq
