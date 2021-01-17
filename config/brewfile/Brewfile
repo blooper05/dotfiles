@@ -43,6 +43,8 @@ brew sqlite
 brew ssh-copy-id
 brew starship
 brew tfenv
+brew tflint
+brew tfsec
 brew tmux
 brew watch
 brew yamllint
