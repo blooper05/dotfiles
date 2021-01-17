@@ -136,7 +136,7 @@ done
 
 curl -fsSL https://raw.github.com/rcmdnk/homebrew-file/install/install.sh | sh
 
-brew file install HOMEBREW_BREWFILE=~/.config/brewfile/Brewfile
+brew file install
 
 sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/PlugIns/JapaneseIM.appex/Contents/Resources/FullRoman.tiff    /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/full_ascii.tiff
 sudo ln -fns /System/Library/Input\ Methods/JapaneseIM.app/Contents/PlugIns/JapaneseIM.appex/Contents/Resources/HalfKatakana.tiff /Library/Input\ Methods/GoogleJapaneseInput.app/Contents/Resources/half_katakana.tiff
