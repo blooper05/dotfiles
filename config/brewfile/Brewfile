@@ -7,7 +7,6 @@ brew elm
 brew elm-format
 brew exa
 brew fd
-brew fzf
 brew gh
 brew ghq
 brew git
@@ -39,6 +38,7 @@ brew reattach-to-user-namespace
 brew ripgrep
 brew ruby-build
 brew shellcheck
+brew sk
 brew sqlite
 brew ssh-copy-id
 brew starship
