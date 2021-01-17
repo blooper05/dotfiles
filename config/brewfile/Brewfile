@@ -121,7 +121,7 @@ brew brew-file
 cask miro-formerly-realtimeboard
 
 # App Store applications
-appstore 1333542190 1Password 7 (7.6)
+appstore 1333542190 1Password 7 (7.7)
 appstore 571213070 DaVinci Resolve (16.2.7)
 appstore 1206246482 EdgeView 2 (2.910)
 appstore 409183694 Keynote (10.3.9)
