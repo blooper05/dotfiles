@@ -53,6 +53,9 @@ tap homebrew/cask-drivers
 cask silicon-labs-vcp-driver
 cask sonos
 
+tap homebrew/cask-fonts
+cask font-cica
+
 tap homebrew/services
 
 tap homebrew/cask
@@ -113,7 +116,6 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Cask applications
-cask font-cica
 cask miro-formerly-realtimeboard
 
 # App Store applications
