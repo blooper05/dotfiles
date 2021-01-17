@@ -22,6 +22,7 @@ brew hadolint
 brew jq
 brew jsonlint --ignore-dependencies
 brew mackup
+brew markdownlint-cli --ignore-dependencies
 brew mas
 brew mitmproxy
 brew neovim
