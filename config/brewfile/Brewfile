@@ -19,7 +19,6 @@ brew gitmoji
 brew gnupg
 brew go
 brew hadolint
-brew imagemagick
 brew jq
 brew jsonlint --ignore-dependencies
 brew mackup
