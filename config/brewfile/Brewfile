@@ -60,8 +60,6 @@ cask font-cica
 cask font-hackgen-nerd
 cask font-source-han-code-jp
 
-tap homebrew/services
-
 tap homebrew/cask
 cask adobe-creative-cloud
 cask alacritty
