@@ -134,13 +134,7 @@ do
   fi
 done
 
-if ! type brew > /dev/null; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-if ! type brew-file > /dev/null; then
-  brew install rcmdnk/file/brew-file
-fi
+curl -fsSL https://raw.github.com/rcmdnk/homebrew-file/install/install.sh | sh
 
 brew file install HOMEBREW_BREWFILE=~/.config/brewfile/Brewfile
 brew services start postgresql
