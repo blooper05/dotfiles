@@ -88,6 +88,7 @@ cask keepingyouawake
 cask kindle
 cask krisp
 cask microsoft-office
+cask miro
 cask mmhmm
 cask ngrok
 cask night-owl
@@ -118,9 +119,6 @@ brew pkenv
 
 tap rcmdnk/file
 brew brew-file
-
-# Other Cask applications
-cask miro-formerly-realtimeboard
 
 # App Store applications
 appstore 1333542190 1Password 7 (7.7)
