@@ -33,14 +33,12 @@ brew pyenv
 brew rbenv
 brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
-brew readline
 brew reattach-to-user-namespace
 brew ripgrep
 brew ruby-build
 brew rust
 brew shellcheck
 brew sk
-brew sqlite
 brew ssh-copy-id
 brew starship
 brew tfenv
