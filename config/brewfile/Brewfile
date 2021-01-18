@@ -47,7 +47,7 @@ brew tfsec
 brew tmux
 brew watch
 brew yamllint --ignore-dependencies
-brew yarn --ignore-dependencies
+brew yarn
 brew zplug
 brew zsh
 
