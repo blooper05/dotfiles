@@ -2,29 +2,29 @@
 # tap repositories and their packages
 
 tap homebrew/core
-brew awscli
+brew awscli --ignore-dependencies
 brew elm
 brew elm-format
 brew emojify
 brew exa
 brew fd
-brew fzf
+brew fzf --ignore-dependencies
 brew gh
 brew ghq
 brew git
 brew git-crypt
 brew git-flow-avh
 brew git-secrets
-brew gitmoji
+brew gitmoji --ignore-dependencies
 brew gnupg
 brew go
 brew hadolint
 brew jq
 brew jsonlint --ignore-dependencies
-brew mackup
+brew mackup --ignore-dependencies
 brew markdownlint-cli --ignore-dependencies
-brew mas
-brew mitmproxy
+brew mas --ignore-dependencies
+brew mitmproxy --ignore-dependencies
 brew neovim
 brew node-build
 brew nodenv
@@ -48,7 +48,7 @@ brew tflint
 brew tfsec
 brew tmux
 brew watch
-brew yamllint
+brew yamllint --ignore-dependencies
 brew yarn --ignore-dependencies
 brew zplug
 brew zsh
