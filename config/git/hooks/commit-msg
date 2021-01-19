@@ -1,4 +1,7 @@
 #!/bin/sh
+
+git secrets --commit_msg_hook -- "$@"
+
 ### gitlint commit-msg hook start ###
 
 # Determine whether we have a tty available by trying to access it.
