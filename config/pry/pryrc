@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
 ### Editor ###
 Pry.config.editor = ENV['EDITOR']
 
 ### History ###
-Pry.config.history.file = "#{ENV['XDG_DATA_HOME']}/pry/history"
+Pry.config.history_file = "#{ENV['XDG_DATA_HOME']}/pry/history"
 
 ### Hirb ###
 begin
   require 'hirb'
+  require 'hirb-unicode'
 rescue LoadError
   puts 'no hirb :('
 end
