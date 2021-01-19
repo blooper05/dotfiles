@@ -10,7 +10,7 @@ set -s escape-time 0
 set -g display-time 3000
 
 # Set the history limit.
-set -g history-limit 10000
+set -g history-limit 1000000
 
 # Start window index from 1.
 set -g base-index 1
