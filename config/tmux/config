@@ -29,7 +29,7 @@ set -g default-terminal screen-256color
 # Set status-bar reload interval(s).
 set -g status-interval 5
 
-# Show statusbar at top.
+# Show status-bar at the top.
 set -g status-position top
 
 # Show statusbar in the center.
