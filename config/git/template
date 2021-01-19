@@ -21,6 +21,8 @@
 " 🔧 - :wrench:              - Add or update configuration files.
 " ✏️  - :pencil2:             - Fix typos.
 " 🚚 - :truck:               - Move or rename resources (e.g.: files, paths, routes).
+"
+" NOTE: refs. Gitmoji (https://gitmoji.dev/)
 
 " ==== The Seven Rules ====
 " 1. Separate subject from body with a blank line
