@@ -26,8 +26,8 @@ set -g pane-base-index 1
 # Set the default terminal.
 set -g default-terminal screen-256color
 
-# Set statusbar reload interval(s).
-set -g status-interval 10
+# Set status-bar reload interval(s).
+set -g status-interval 5
 
 # Show statusbar at top.
 set -g status-position top
