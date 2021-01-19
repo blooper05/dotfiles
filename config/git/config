@@ -1,5 +1,6 @@
 [core]
   quotePath   = false
+  hooksPath   = ~/.config/git/hooks
   commentChar = \"
 [alias]
   graph = log --graph --pretty=pretty
