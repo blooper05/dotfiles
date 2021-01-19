@@ -1,13 +1,15 @@
 
-# Created by https://www.gitignore.io/api/vim,osx
+# Created by https://www.toptal.com/developers/gitignore/api/vim,osx
+# Edit at https://www.toptal.com/developers/gitignore?templates=vim,osx
 
 ### OSX ###
-*.DS_Store
+# General
+.DS_Store
 .AppleDouble
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 
 # Thumbnails
 ._*
@@ -29,17 +31,24 @@ Temporary Items
 .apdisk
 
 ### Vim ###
-# swap
+# Swap
 [._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
 [._]*.sw[a-p]
-[._]s[a-v][a-z]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
 [._]sw[a-p]
-# session
+
+# Session
 Session.vim
-# temporary
+Sessionx.vim
+
+# Temporary
 .netrwhist
 *~
-# auto-generated tag files
+# Auto-generated tag files
 tags
+# Persistent undo
+[._]*.un~
 
-# End of https://www.gitignore.io/api/vim,osx
+# End of https://www.toptal.com/developers/gitignore/api/vim,osx
