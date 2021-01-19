@@ -6,9 +6,6 @@ set -g default-command "${SHELL}"
 # Don't wait for escape sequences.
 set -s escape-time 0
 
-# Don't rename windows automatically.
-set -g allow-rename off
-
 # Set display time for status line messages.
 set -g display-time 3000
 
