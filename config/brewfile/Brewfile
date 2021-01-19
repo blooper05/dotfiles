@@ -15,6 +15,7 @@ brew git
 brew git-crypt
 brew git-flow-avh
 brew git-secrets
+brew gitlint --ignore-dependencies
 brew gitmoji --ignore-dependencies
 brew gnupg
 brew go
