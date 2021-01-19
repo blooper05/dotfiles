@@ -26,10 +26,6 @@ set -g pane-base-index 1
 # Set terminal type.
 set -g default-terminal screen-256color
 
-# Set terminal emulator window titles.
-set -g set-titles on
-set -g set-titles-string '#T @ #H'
-
 # Set statusbar reload interval(s).
 set -g status-interval 10
 
