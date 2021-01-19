@@ -32,10 +32,10 @@ set -g status-interval 5
 # Show status-bar at the top.
 set -g status-position top
 
-# Show statusbar in the center.
+# Show status-bar in the center.
 set -g status-justify centre
 
-# Set statusbar length.
+# Set status-bar length.
 set -g status-left-length 90
 set -g status-right-length 90
 
