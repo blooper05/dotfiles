@@ -34,7 +34,6 @@ brew pyenv
 brew rbenv
 brew rbenv-binstubs --HEAD
 brew rbenv-default-gems
-brew reattach-to-user-namespace
 brew ripgrep
 brew ruby-build
 brew rust
