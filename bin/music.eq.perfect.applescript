@@ -1,3 +1,5 @@
+#!/usr/bin/osascript
+
 tell application "Music"
 	activate
 	set newPreset to make new EQ preset
