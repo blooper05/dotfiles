@@ -120,6 +120,7 @@ bind < resize-pane -L 10
 bind - resize-pane -D 10
 bind + resize-pane -U 10
 bind > resize-pane -R 10
+bind = select-layout tiled
 
 # Break panes.
 bind b break-pane
