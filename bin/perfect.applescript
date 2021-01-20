@@ -1,4 +1,4 @@
-tell application "iTunes"
+tell application "Music"
 	activate
 	set newPreset to make new EQ preset
 	set name of newPreset to "Perfect (Limiter ver.)"
