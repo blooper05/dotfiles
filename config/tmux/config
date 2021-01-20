@@ -91,7 +91,7 @@ setw -g window-status-bell-style    fg=colour235,bg=colour160 # base02, red
 # Use vi keybindings in copy mode.
 setw -g mode-keys vi
 bind-key -T copy-mode-vi v send-keys -X begin-selection
-bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'reattach-to-user-namespace pbcopy'
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel pbcopy
 
 # Unbind default keybinding.
 unbind C-b
