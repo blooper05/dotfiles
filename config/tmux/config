@@ -101,7 +101,7 @@ set -g prefix C-t
 bind C-t send-prefix
 
 # Reload tmux.conf immediately.
-bind r source $XDG_CONFIG_HOME/tmux/config
+bind r source $XDG_CONFIG_HOME/tmux/tmux.conf
 
 # Create a new window.
 bind c new-window
