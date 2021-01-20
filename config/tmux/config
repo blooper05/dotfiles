@@ -114,10 +114,6 @@ bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
-bind C-h select-pane -L
-bind C-j select-pane -D
-bind C-k select-pane -U
-bind C-l select-pane -R
 
 # Resize panes like Vim.
 bind < resize-pane -L 10
