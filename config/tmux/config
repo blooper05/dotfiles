@@ -122,7 +122,7 @@ bind + resize-pane -U 10
 bind > resize-pane -R 10
 bind = select-layout tiled
 
-# Break panes.
+# Break a pane.
 bind b break-pane
 
 # Synchronize panes.
