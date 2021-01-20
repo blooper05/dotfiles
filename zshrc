@@ -177,7 +177,7 @@ function tmux_automatically_attach_session()
         tmux attach -t "$REPLY"
       fi
     else
-      tmux -f $XDG_CONFIG_HOME/tmux/config new-session
+      tmux new-session
     fi
   fi
 }
