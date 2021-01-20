@@ -2,37 +2,38 @@
 
 set -eux
 
-readonly AIRPORT='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
-readonly INFO=($($AIRPORT -I | grep -E '^ *(agrCtlRSSI|state|lastTxRate|SSID):' | awk '{print $2}'))
+macos_airport_status() {
+  /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
+}
 
-if [[ ${#INFO[@]} -eq 0 ]]; then
-  echo offline
-  exit 1
-fi
+get_wifi_ssid() {
+  local key='SSID'
+  macos_airport_status | grep -e "\b$key:\B" | (read -r _ value && echo "$value")
+}
 
-readonly RSSI=${INFO[0]}
-readonly STAT=${INFO[1]}
-readonly RATE=${INFO[2]}
-readonly SSID=${INFO[3]}
+get_wifi_rssi() {
+  local key='agrCtlRSSI'
+  macos_airport_status | grep -e "\b$key:\B" | (read -r _ value && echo "$value")
+}
 
-if [[ RATE -eq 0 ]]; then
-  echo no_wifi
-  exit 1
-fi
+print_icon() {
+  readonly ICON_0='⚋ '
+  readonly ICON_1='⚊ '
+  readonly ICON_2='⚍ '
+  readonly ICON_3='⚌ '
+  readonly ICON_4='☱ '
+  readonly ICON_5='☰ '
 
-readonly SIGNALS=(▂ ▅ ▇)
+  local rssi
+  rssi=$(get_wifi_rssi)
 
-signal=''
-
-for (( i = 0; i < ${#SIGNALS[@]}; i++ ))
-do
-  if (( i == 0 && -100 < RSSI )) ||
-     (( i == 1 &&  -80 < RSSI )) ||
-     (( i == 2 &&  -50 < RSSI )); then
-     signal="${signal}${SIGNALS[i]}"
-  else
-     signal="${signal} "
+  if [[ -z $rssi ]]; then echo "$ICON_0"
+  elif [[ $rssi -lt -90 ]]; then echo "$ICON_1"
+  elif [[ $rssi -lt -80 ]]; then echo "$ICON_2"
+  elif [[ $rssi -lt -70 ]]; then echo "$ICON_3"
+  elif [[ $rssi -lt -60 ]]; then echo "$ICON_4"
+  elif [[ $rssi -lt -50 ]]; then echo "$ICON_5"
   fi
-done
+}
 
-echo "#[fg=white]${SSID} ${RATE}Mbs ${signal}#[default]"
+echo "$(get_wifi_ssid) $(print_icon)"
