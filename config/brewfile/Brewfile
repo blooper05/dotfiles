@@ -106,6 +106,9 @@ cask vox
 cask zeplin
 cask zoom
 
+tap clementtsang/bottom
+brew bottom
+
 tap k1LoW/tap
 brew awsdo
 
