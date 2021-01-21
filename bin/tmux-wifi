@@ -17,12 +17,12 @@ get_wifi_rssi() {
 }
 
 print_icon() {
-  local -r ICON_0='⚋ '
-  local -r ICON_1='⚊ '
-  local -r ICON_2='⚍ '
-  local -r ICON_3='⚌ '
-  local -r ICON_4='☱ '
-  local -r ICON_5='☰ '
+  local -r ICON_0=' ⚋ '
+  local -r ICON_1=' ⚊ '
+  local -r ICON_2=' ⚍ '
+  local -r ICON_3=' ⚌ '
+  local -r ICON_4=' ☱ '
+  local -r ICON_5=' ☰ '
 
   local -r RSSI=$(get_wifi_rssi)
 
@@ -35,4 +35,4 @@ print_icon() {
   fi
 }
 
-echo "$(get_wifi_ssid) $(print_icon)"
+echo "$(get_wifi_ssid)$(print_icon)"
