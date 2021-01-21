@@ -430,6 +430,8 @@ hook_add = '''
   call gina#custom#command#option('status', '--short')
   call gina#custom#command#option('status', '--opener', 'split')
   call gina#custom#command#option('status', '--group', 'gina-status-viewer')
+  " Ignore any directory candidates.
+  let g:gina#action#index#discard_directories = 1
 '''
 
 [[plugins]]
