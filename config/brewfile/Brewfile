@@ -4,6 +4,7 @@
 tap homebrew/core
 brew awscli --ignore-dependencies
 brew bat
+brew dust
 brew elm
 brew elm-format
 brew emojify
