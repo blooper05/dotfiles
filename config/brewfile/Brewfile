@@ -40,6 +40,7 @@ brew rbenv-default-gems
 brew ripgrep
 brew ruby-build
 brew rust
+brew sd
 brew shellcheck
 brew sk
 brew ssh-copy-id
