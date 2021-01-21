@@ -19,7 +19,7 @@ zplug load
 
 # PATH
 typeset -U path PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # XDG Base Directory Specification
 export XDG_CONFIG_HOME=$HOME/.config
