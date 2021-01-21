@@ -3,6 +3,7 @@
 
 tap homebrew/core
 brew awscli --ignore-dependencies
+brew bat
 brew elm
 brew elm-format
 brew emojify
