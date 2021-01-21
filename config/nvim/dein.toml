@@ -443,6 +443,14 @@ hook_add = '''
 
 # FileType {{{1
 
+# liuchengxu/vista.vim
+# mattn/efm-langserver
+# mattn/vim-lsp-settings
+# neoclide/coc.nvim
+# prabirshrestha/vim-lsp
+# scrooloose/vim-slumlord
+# tbodt/deoplete-tabnine
+
 # General {{{2
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
