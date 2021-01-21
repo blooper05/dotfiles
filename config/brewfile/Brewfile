@@ -32,6 +32,7 @@ brew neovim
 brew node-build
 brew nodenv
 brew nushell
+brew procs
 brew pyenv
 brew rbenv
 brew rbenv-binstubs --HEAD
