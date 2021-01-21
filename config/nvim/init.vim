@@ -15,6 +15,7 @@ endif
 let &runtimepath = s:dein_repo_dir . ',' . &runtimepath
 
 let s:toml_file = fnamemodify(expand('<sfile>'), ':h') . '/dein.toml'
+
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir, [$MYVIMRC, s:toml_file])
   call dein#load_toml(s:toml_file)
@@ -111,6 +112,12 @@ set splitright
 
 " Create equally sized splits.
 set equalalways
+
+" Use smarter algorithms in vimdiff.
+set diffopt+=iwhite
+set diffopt+=vertical
+set diffopt+=algorithm:histogram
+set diffopt+=indent-heuristic
 
 " Edit {{{1
 
