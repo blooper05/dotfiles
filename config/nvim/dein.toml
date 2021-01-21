@@ -2,6 +2,11 @@
 
 [[plugins]]
 repo = 'Shougo/dein.vim'
+depends = ['dein-ui.vim']
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+on_source = 'dein.vim'
 
 # View {{{1
 
