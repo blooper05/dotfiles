@@ -3,7 +3,6 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "Code-Hex/battery", as:command, from:gh-r
 zplug "bhilburn/powerlevel9k", as:theme
 zplug "glidenote/hub-zsh-completion"
 zplug "mollifier/anyframe"
