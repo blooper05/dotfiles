@@ -7,32 +7,31 @@ macos_airport_status() {
 }
 
 get_wifi_ssid() {
-  local key='SSID'
-  macos_airport_status | grep -e "\b$key:\B" | (read -r _ value && echo "$value")
+  local -r KEY='SSID'
+  macos_airport_status | grep -e "\b$KEY:\B" | (read -r _ value && echo "$value")
 }
 
 get_wifi_rssi() {
-  local key='agrCtlRSSI'
-  macos_airport_status | grep -e "\b$key:\B" | (read -r _ value && echo "$value")
+  local -r KEY='agrCtlRSSI'
+  macos_airport_status | grep -e "\b$KEY:\B" | (read -r _ value && echo "$value")
 }
 
 print_icon() {
-  readonly ICON_0='⚋ '
-  readonly ICON_1='⚊ '
-  readonly ICON_2='⚍ '
-  readonly ICON_3='⚌ '
-  readonly ICON_4='☱ '
-  readonly ICON_5='☰ '
+  local -r ICON_0='⚋ '
+  local -r ICON_1='⚊ '
+  local -r ICON_2='⚍ '
+  local -r ICON_3='⚌ '
+  local -r ICON_4='☱ '
+  local -r ICON_5='☰ '
 
-  local rssi
-  rssi=$(get_wifi_rssi)
+  local -r RSSI=$(get_wifi_rssi)
 
-  if [[ -z $rssi ]]; then echo "$ICON_0"
-  elif [[ $rssi -lt -90 ]]; then echo "$ICON_1"
-  elif [[ $rssi -lt -80 ]]; then echo "$ICON_2"
-  elif [[ $rssi -lt -70 ]]; then echo "$ICON_3"
-  elif [[ $rssi -lt -60 ]]; then echo "$ICON_4"
-  elif [[ $rssi -lt -50 ]]; then echo "$ICON_5"
+  if [[ -z $RSSI ]]; then echo "$ICON_0"
+  elif [[ $RSSI -lt -90 ]]; then echo "$ICON_1"
+  elif [[ $RSSI -lt -80 ]]; then echo "$ICON_2"
+  elif [[ $RSSI -lt -70 ]]; then echo "$ICON_3"
+  elif [[ $RSSI -lt -60 ]]; then echo "$ICON_4"
+  elif [[ $RSSI -lt -50 ]]; then echo "$ICON_5"
   fi
 }
 
