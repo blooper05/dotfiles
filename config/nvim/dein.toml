@@ -230,11 +230,13 @@ hook_add = '''
 
 [[plugins]]
 repo = 'sjl/gundo.vim'
-build = 'pip2 install neovim'
+build = 'pip3 install neovim'
 on_cmd = 'Gundo'
 hook_add = '''
   " Plugin key-mappings.
   nnoremap <silent><Space>U :<C-u>GundoToggle<CR>
+  " Use python3.
+  let g:gundo_prefer_python3 = 1
 '''
 
 # File {{{1
