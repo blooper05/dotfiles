@@ -161,7 +161,7 @@ set softtabstop=0
 set shiftwidth=2
 
 " Stop syntax highlight of too long lines
-set synmaxcol=160
+set synmaxcol=240
 
 " Auto Command {{{1
 
