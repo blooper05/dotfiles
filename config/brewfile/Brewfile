@@ -49,6 +49,7 @@ brew tfenv
 brew tflint
 brew tfsec
 brew tmux
+brew tokei
 brew watch
 brew yamllint --ignore-dependencies
 brew yarn
