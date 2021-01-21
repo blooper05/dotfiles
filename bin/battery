@@ -1,0 +1,41 @@
+#!/bin/bash
+
+set -eux
+
+macos_battery_status() {
+  /usr/bin/pmset -g batt
+}
+
+get_battery_percentage() {
+  local key='([0-9]|[1-9][0-9]|100)%'
+  macos_battery_status | grep -Eo "\b$key;\B" | tr -d '%;'
+}
+
+is_battery_charging() {
+  local key='charging'
+  macos_battery_status | grep -e "\b$key;\B" -q
+}
+
+print_percentage() {
+  echo " $(get_battery_percentage)%"
+}
+
+print_icon() {
+  readonly ICONS=(
+    '  '
+    '  '
+    '  '
+    '  '
+    '  '
+    '  '
+  )
+  readonly ICON_CHARGING=' ϟ '
+
+  if is_battery_charging; then
+    echo "$ICON_CHARGING"
+  else
+    echo "${ICONS[$(($(get_battery_percentage) / 20))]}"
+  fi
+}
+
+echo "$(print_percentage)$(print_icon) "
