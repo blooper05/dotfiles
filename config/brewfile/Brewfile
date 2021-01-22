@@ -24,6 +24,7 @@ brew go
 brew hadolint
 brew jq
 brew jsonlint --ignore-dependencies
+brew luajit --HEAD
 brew mackup --ignore-dependencies
 brew markdownlint-cli --ignore-dependencies
 brew mas --ignore-dependencies
