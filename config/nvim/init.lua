@@ -45,6 +45,58 @@ vim.o.hlsearch = true
 -- Clear highlight.
 vim.api.nvim_set_keymap('n', '<ESC><ESC>', ':<C-u>nohlsearch<CR>', { noremap = true, silent = true })
 
+-- View {{{1
+
+-- Show line number.
+vim.wo.number = true
+
+-- Show <TAB> and <CR>.
+vim.wo.list = true
+
+-- Don't wrap long line.
+vim.wo.wrap = false
+
+-- Always display statusline.
+vim.o.laststatus = 2
+
+-- Show command on statusline.
+vim.o.showcmd = true
+
+-- Show title.
+vim.o.title = true
+
+-- Show line and column display.
+vim.o.ruler = true
+
+-- -- Display double-width symbols properly.
+-- vim.o.ambiwidth = 'double'
+
+-- Enable wildmode.
+vim.o.wildmenu = true
+vim.o.wildmode = table.concat({
+  vim.o.wildmode,
+  'list:longest',
+  'full',
+}, ',')
+
+-- Splitting a window will put the new window below the current one.
+vim.o.splitbelow = true
+
+-- Splitting a window will put the new window right the current one.
+vim.o.splitright = true
+
+-- Create equally sized splits.
+vim.o.equalalways = true
+
+-- Use smarter algorithms in vimdiff.
+vim.o.diffopt = table.concat({
+  vim.o.diffopt,
+  'iwhite',
+  'vertical',
+  'algorithm:histogram',
+  'indent-heuristic',
+}, ',')
+
 -- Folding {{{1
 
 vim.bo.modeline = true
