@@ -29,7 +29,7 @@ brew mackup --ignore-dependencies
 brew markdownlint-cli --ignore-dependencies
 brew mas --ignore-dependencies
 brew mitmproxy --ignore-dependencies
-brew neovim
+brew neovim --HEAD
 brew node-build
 brew nodenv
 brew nushell
