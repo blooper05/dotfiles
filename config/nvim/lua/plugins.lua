@@ -33,6 +33,15 @@ return require('packer').startup(function()
     -- Use solarized as colorscheme.
     vim.cmd('autocmd MyAutoCmd VimEnter * nested colorscheme solarized8_flat')
   end }
+
+  use { 'nvim-treesitter/nvim-treesitter', config = function()
+    require('nvim-treesitter.configs').setup({
+      ensure_installed      = 'all',
+      highlight             = { enable = true },
+      incremental_selection = { enable = true },
+      indent                = { enable = true },
+    })
+  end }
 end)
 
 -- Folding {{{1
