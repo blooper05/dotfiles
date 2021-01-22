@@ -97,6 +97,34 @@ vim.o.diffopt = table.concat({
   'indent-heuristic',
 }, ',')
 
+-- Edit {{{1
+
+-- Exchange tab to spaces.
+vim.bo.expandtab = true
+
+-- Enable backspace delete indent and newline.
+vim.o.backspace = table.concat({
+  'indent',
+  'eol',
+  'start',
+}, ',')
+
+-- Highlight parenthesis.
+vim.o.showmatch = true
+
+-- Ignore case on insert completion.
+vim.bo.infercase = true
+
+-- Insert blank line in normal mode.
+vim.api.nvim_set_keymap('n', '<CR>', 'o<ESC>', { noremap = true })
+
+-- Command-line mode key-mappings.
+vim.api.nvim_set_keymap('c', '<C-a>', '<Home>',  { noremap = true })
+vim.api.nvim_set_keymap('c', '<C-e>', '<End>',   { noremap = true })
+vim.api.nvim_set_keymap('c', '<C-b>', '<Left>',  { noremap = true })
+vim.api.nvim_set_keymap('c', '<C-f>', '<Right>', { noremap = true })
+vim.api.nvim_set_keymap('c', '<C-d>', '<Del>',   { noremap = true })
+
 -- Folding {{{1
 
 vim.bo.modeline = true
