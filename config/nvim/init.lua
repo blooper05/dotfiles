@@ -145,6 +145,39 @@ vim.bo.shiftwidth = 2
 -- Stop syntax highlight of too long lines
 vim.bo.synmaxcol = 240
 
+-- Auto Command {{{1
+
+-- TODO:
+-- function! s:rstrip()
+--   let s:cursor = getpos('.')
+--   if &filetype == 'markdown'
+--     %s/\v(\s{2})?(\s+)?$/\1/e
+--     match Underlined /\v\s{2}$/
+--   else
+--     %s/\v\s+$//e
+--   endif
+--   call setpos('.', s:cursor)
+-- endfunction
+
+-- TODO:
+-- augroup AutoRemoveTrailingSpaces
+--   autocmd!
+--   autocmd BufWritePre * call s:rstrip()
+-- augroup END
+
+-- TODO:
+-- augroup AutoReplaceTabBySpaces
+--   autocmd!
+--   autocmd BufWritePre * :%s/\t/  /ge
+-- augroup END
+
+-- TODO:
+-- augroup AutoCommentOff
+--   autocmd!
+--   autocmd BufEnter * setlocal formatoptions-=r
+--   autocmd BufEnter * setlocal formatoptions-=o
+-- augroup END
+
 -- Folding {{{1
 
 vim.bo.modeline = true
