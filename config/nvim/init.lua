@@ -1,3 +1,7 @@
+-- Plugins {{{1
+
+require('plugins')
+
 -- Basic {{{1
 
 -- Use English interface.
