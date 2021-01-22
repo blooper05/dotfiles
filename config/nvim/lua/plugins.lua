@@ -20,6 +20,19 @@ return require('packer').startup(function()
   vim.cmd('augroup END')
 
   vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
+
+  -- Appearance {{{1
+
+  use { 'lifepillar/vim-solarized8', config = function()
+    -- Assume a dark background.
+    vim.o.background = 'dark'
+
+    -- Make the background transparent.
+    vim.g.solarized_termtrans = 1
+
+    -- Use solarized as colorscheme.
+    vim.cmd('autocmd MyAutoCmd VimEnter * nested colorscheme solarized8_flat')
+  end }
 end)
 
 -- Folding {{{1
