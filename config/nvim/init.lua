@@ -125,6 +125,26 @@ vim.api.nvim_set_keymap('c', '<C-b>', '<Left>',  { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-f>', '<Right>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-d>', '<Del>',   { noremap = true })
 
+-- Syntax {{{1
+
+-- Enable auto indent.
+vim.bo.autoindent = true
+
+-- Enable smart indent.
+vim.bo.smartindent = true
+
+-- Substitute <Tab> with blanks.
+vim.bo.tabstop = 2
+
+-- Spaces instead <Tab>.
+vim.bo.softtabstop = 0
+
+-- Auto indent width.
+vim.bo.shiftwidth = 2
+
+-- Stop syntax highlight of too long lines
+vim.bo.synmaxcol = 240
+
 -- Folding {{{1
 
 vim.bo.modeline = true
