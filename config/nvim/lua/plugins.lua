@@ -72,6 +72,28 @@ return require('packer').startup(function()
     })
   end,
   }
+
+  -- Completion {{{1
+
+  use { 'nvim-lua/completion-nvim', config = function()
+    -- Set completeopt to have a better completion experience.
+    vim.o.completeopt = table.concat({
+      'menuone',
+      'noinsert',
+      'noselect',
+    }, ',')
+
+    -- Avoid showing message extra message when using completion.
+    vim.o.shortmess = vim.o.shortmess .. 'c'
+
+    -- Change source whenever current source has no complete items.
+    vim.g.completion_auto_change_source = 1
+
+    -- Use completion-nvim in every buffer.
+    vim.cmd([[autocmd BufEnter * lua require('completion').on_attach()]])
+  end,
+  }
+
 end)
 
 -- Folding {{{1
