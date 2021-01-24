@@ -75,6 +75,48 @@ return require('packer').startup(function()
 
   -- Completion {{{1
 
+  use { 'neovim/nvim-lspconfig', config = function()
+    local lspconfig           = require('lspconfig')
+    local lspconfig_root_path = vim.env.XDG_DATA_HOME .. '/nvim-lspconfig'
+
+    lspconfig.bashls.setup({})
+
+    lspconfig.cssls.setup({})
+
+    lspconfig.diagnosticls.setup({})
+
+    lspconfig.dockerls.setup({})
+
+    lspconfig.efm.setup({})
+
+    lspconfig.elmls.setup({})
+
+    lspconfig.html.setup({})
+
+    lspconfig.jsonls.setup({})
+
+    lspconfig.solargraph.setup({})
+
+    lspconfig.sorbet.setup({})
+
+    lspconfig.sqlls.setup({})
+
+    local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
+    local sumneko_bin       = sumneko_root_path .. '/bin/macOS/lua-language-server'
+    local sumneko_ext       = sumneko_root_path .. '/main.lua'
+    lspconfig.sumneko_lua.setup({
+      cmd = { sumneko_bin, '-E', sumneko_ext },
+      settings = { Lua = { diagnostics = { globals = { 'use', 'vim' } } } },
+    })
+
+    lspconfig.terraformls.setup({})
+
+    lspconfig.tsserver.setup({})
+
+    lspconfig.yamlls.setup({})
+  end,
+  }
+
   use { 'nvim-lua/completion-nvim', config = function()
     -- Set completeopt to have a better completion experience.
     vim.o.completeopt = table.concat({
