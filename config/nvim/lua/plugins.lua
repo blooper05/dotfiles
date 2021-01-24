@@ -36,6 +36,14 @@ return require('packer').startup(function()
 
   use { 'glepnir/indent-guides.nvim' }
 
+  use { 'hoob3rt/lualine.nvim', config = function()
+    local lualine = require('lualine')
+    lualine.theme = 'forest_night'
+    lualine.status()
+  end,
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  }
+
   use { 'nvim-treesitter/nvim-treesitter', config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed      = 'all',
