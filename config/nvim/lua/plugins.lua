@@ -34,6 +34,8 @@ return require('packer').startup(function()
     vim.cmd('autocmd MyAutoCmd VimEnter * nested colorscheme solarized8_flat')
   end }
 
+  use { 'glepnir/indent-guides.nvim' }
+
   use { 'nvim-treesitter/nvim-treesitter', config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed      = 'all',
