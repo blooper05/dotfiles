@@ -12,14 +12,16 @@ end
 
 vim.cmd('packadd packer.nvim')
 
+vim.cmd('augroup MyAutoCmd')
+vim.cmd('autocmd!')
+vim.cmd('augroup END')
+
 return require('packer').startup(function()
-  use { 'wbthomason/packer.nvim', opt = true }
-
-  vim.cmd('augroup MyAutoCmd')
-  vim.cmd('autocmd!')
-  vim.cmd('augroup END')
-
-  vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
+  use { 'wbthomason/packer.nvim', opt = true, config = function()
+    -- Run :PackerCompile whenever plugins.lua is updated automatically.
+    vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
+  end,
+  }
 
   -- Appearance {{{1
 
