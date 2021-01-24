@@ -34,7 +34,13 @@ return require('packer').startup(function()
     vim.cmd('autocmd MyAutoCmd VimEnter * nested colorscheme solarized8_flat')
   end }
 
-  use { 'glepnir/indent-guides.nvim' }
+  use { 'glepnir/indent-guides.nvim', config = function()
+    -- Enable 24-bit RGB color in the TUI.
+    vim.o.termguicolors = true
+
+    require('indent_guides').setup({})
+  end,
+  }
 
   use { 'hoob3rt/lualine.nvim', config = function()
     local lualine = require('lualine')
