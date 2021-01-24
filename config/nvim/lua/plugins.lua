@@ -36,6 +36,9 @@ return require('packer').startup(function()
   }
 
   use { 'hoob3rt/lualine.nvim', config = function()
+    -- Get rid of redundant mode display.
+    vim.o.showmode = false
+
     local lualine = require('lualine')
     lualine.theme = 'forest_night'
     lualine.status()
