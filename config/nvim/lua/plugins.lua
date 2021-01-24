@@ -35,14 +35,6 @@ return require('packer').startup(function()
   end,
   }
 
-  use { 'glepnir/indent-guides.nvim', config = function()
-    -- Enable 24-bit RGB color in the TUI.
-    vim.o.termguicolors = true
-
-    require('indent_guides').setup({})
-  end,
-  }
-
   use { 'hoob3rt/lualine.nvim', config = function()
     local lualine = require('lualine')
     lualine.theme = 'forest_night'
@@ -58,6 +50,14 @@ return require('packer').startup(function()
     require('bufferline').setup({})
   end,
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  }
+
+  use { 'glepnir/indent-guides.nvim', config = function()
+    -- Enable 24-bit RGB color in the TUI.
+    vim.o.termguicolors = true
+
+    require('indent_guides').setup({})
+  end,
   }
 
   use { 'nvim-treesitter/nvim-treesitter', config = function()
