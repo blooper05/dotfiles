@@ -50,6 +50,15 @@ return require('packer').startup(function()
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   }
 
+  use { 'akinsho/nvim-bufferline.lua', config = function()
+    -- Enable 24-bit RGB color in the TUI.
+    vim.o.termguicolors = true
+
+    require('bufferline').setup({})
+  end,
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  }
+
   use { 'nvim-treesitter/nvim-treesitter', config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed      = 'all',
