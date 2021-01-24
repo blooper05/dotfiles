@@ -32,7 +32,8 @@ return require('packer').startup(function()
 
     -- Use solarized as colorscheme.
     vim.cmd('autocmd MyAutoCmd VimEnter * nested colorscheme solarized8_flat')
-  end }
+  end,
+  }
 
   use { 'glepnir/indent-guides.nvim', config = function()
     -- Enable 24-bit RGB color in the TUI.
@@ -66,7 +67,8 @@ return require('packer').startup(function()
       incremental_selection = { enable = true },
       indent                = { enable = true },
     })
-  end }
+  end,
+  }
 end)
 
 -- Folding {{{1
