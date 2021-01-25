@@ -75,7 +75,7 @@ return require('packer').startup(function()
   end,
   }
 
-  -- Completion {{{1
+  -- Language Server Protocol {{{1
 
   use { 'neovim/nvim-lspconfig', config = function()
     local lspconfig           = require('lspconfig')
@@ -147,6 +147,8 @@ return require('packer').startup(function()
       execute('!rm -f /tmp/terraformls.zip')
     end,
   }
+
+  -- Completion {{{1
 
   use { 'nvim-lua/completion-nvim', config = function()
     -- Set completeopt to have a better completion experience.
