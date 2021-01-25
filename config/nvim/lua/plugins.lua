@@ -85,7 +85,9 @@ return require('packer').startup(function()
 
     lspconfig.cssls.setup({})
 
-    lspconfig.diagnosticls.setup({})
+    lspconfig.diagnosticls.setup({
+      filetypes = { 'sh' },
+    })
 
     lspconfig.dockerls.setup({})
 
