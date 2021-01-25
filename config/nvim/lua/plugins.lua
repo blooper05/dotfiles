@@ -93,9 +93,15 @@ return require('packer').startup(function()
 
     lspconfig.elmls.setup({})
 
+    lspconfig.gopls.setup({})
+
     lspconfig.html.setup({})
 
     lspconfig.jsonls.setup({})
+
+    lspconfig.rls.setup({})
+
+    lspconfig.rust_analyzer.setup({})
 
     lspconfig.solargraph.setup({})
 
