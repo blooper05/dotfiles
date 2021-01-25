@@ -117,7 +117,11 @@ return require('packer').startup(function()
       settings = { Lua = { diagnostics = { globals = { 'use', 'vim' } } } },
     })
 
-    lspconfig.terraformls.setup({})
+    local terraformls_root_path = lspconfig_root_path .. '/terraformls'
+    local terraformls_bin       = terraformls_root_path .. '/terraform-ls'
+    lspconfig.terraformls.setup({
+      cmd = { terraformls_bin, 'serve' },
+    })
 
     lspconfig.tsserver.setup({})
 
@@ -134,6 +138,13 @@ return require('packer').startup(function()
       execute('!unzip -oq /tmp/sumneko_lua.vsix -d ' .. sumneko_root_path)
       execute('!rm -f /tmp/sumneko_lua.vsix')
       execute('!chmod +x ' .. sumneko_bin)
+
+      local terraformls_root_path = lspconfig_root_path .. '/terraformls'
+      local terraformls_url       = 'https://github.com/hashicorp/terraform-ls/releases/download/v0.12.1/terraform-ls_0.12.1_darwin_amd64.zip'
+
+      execute('!curl -sLJ -o /tmp/terraformls.zip ' .. terraformls_url)
+      execute('!unzip -oq /tmp/terraformls.zip -d ' .. terraformls_root_path)
+      execute('!rm -f /tmp/terraformls.zip')
     end,
   }
 
