@@ -110,8 +110,8 @@ return require('packer').startup(function()
     lspconfig.sqlls.setup({})
 
     local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
-    local sumneko_bin       = sumneko_root_path .. '/bin/macOS/lua-language-server'
-    local sumneko_ext       = sumneko_root_path .. '/main.lua'
+    local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
+    local sumneko_ext       = sumneko_root_path .. '/extension/server/main.lua'
     lspconfig.sumneko_lua.setup({
       cmd = { sumneko_bin, '-E', sumneko_ext },
       settings = { Lua = { diagnostics = { globals = { 'use', 'vim' } } } },
@@ -123,6 +123,18 @@ return require('packer').startup(function()
 
     lspconfig.yamlls.setup({})
   end,
+    run = function()
+      local lspconfig_root_path = vim.env.XDG_DATA_HOME .. '/nvim-lspconfig'
+
+      local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
+      local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
+      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.11.2/lua-1.11.2.vsix'
+
+      execute('!curl -sLJ -o /tmp/sumneko_lua.vsix ' .. sumneko_url)
+      execute('!unzip -oq /tmp/sumneko_lua.vsix -d ' .. sumneko_root_path)
+      execute('!rm -f /tmp/sumneko_lua.vsix')
+      execute('!chmod +x ' .. sumneko_bin)
+    end,
   }
 
   use { 'nvim-lua/completion-nvim', config = function()
