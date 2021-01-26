@@ -85,6 +85,15 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'norcalli/nvim-colorizer.lua',
+    config = function()
+      -- Enable 24-bit RGB color in the TUI.
+      vim.o.termguicolors = true
+
+      require('colorizer').setup({})
+    end,
+  }
+
   -- Language Server Protocol {{{1
 
   use { 'neovim/nvim-lspconfig',
