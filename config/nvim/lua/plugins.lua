@@ -206,6 +206,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'andymass/vim-matchup',
+    config = function()
+      vim.g.matchup_matchparen_offscreen = { method = 'popup' }
+    end,
+  }
+
   -- Search {{{1
 
   use { 'kevinhwang91/nvim-hlslens',
