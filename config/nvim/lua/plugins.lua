@@ -40,6 +40,9 @@ return require('packer').startup(function()
   }
 
   use { 'hoob3rt/lualine.nvim',
+    requires = {
+      { 'kyazdani42/nvim-web-devicons', opt = true },
+    },
     config = function()
       -- Get rid of redundant mode display.
       vim.o.showmode = false
@@ -48,17 +51,18 @@ return require('packer').startup(function()
       lualine.theme = 'forest_night'
       lualine.status()
     end,
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   }
 
   use { 'akinsho/nvim-bufferline.lua',
+    requires = {
+      { 'kyazdani42/nvim-web-devicons', opt = true },
+    },
     config = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.o.termguicolors = true
 
       require('bufferline').setup({})
     end,
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
   }
 
   use { 'glepnir/indent-guides.nvim',
@@ -84,6 +88,25 @@ return require('packer').startup(function()
   -- Language Server Protocol {{{1
 
   use { 'neovim/nvim-lspconfig',
+    run = function()
+      local lspconfig_root_path = vim.env.XDG_DATA_HOME .. '/nvim-lspconfig'
+
+      local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
+      local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
+      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.11.2/lua-1.11.2.vsix'
+
+      execute('!curl -sLJ -o /tmp/sumneko_lua.vsix ' .. sumneko_url)
+      execute('!unzip -oq /tmp/sumneko_lua.vsix -d ' .. sumneko_root_path)
+      execute('!rm -f /tmp/sumneko_lua.vsix')
+      execute('!chmod +x ' .. sumneko_bin)
+
+      local terraformls_root_path = lspconfig_root_path .. '/terraformls'
+      local terraformls_url       = 'https://github.com/hashicorp/terraform-ls/releases/download/v0.12.1/terraform-ls_0.12.1_darwin_amd64.zip'
+
+      execute('!curl -sLJ -o /tmp/terraformls.zip ' .. terraformls_url)
+      execute('!unzip -oq /tmp/terraformls.zip -d ' .. terraformls_root_path)
+      execute('!rm -f /tmp/terraformls.zip')
+    end,
     config = function()
       local lspconfig           = require('lspconfig')
       local lspconfig_root_path = vim.env.XDG_DATA_HOME .. '/nvim-lspconfig'
@@ -136,25 +159,6 @@ return require('packer').startup(function()
 
       lspconfig.yamlls.setup({})
     end,
-    run = function()
-      local lspconfig_root_path = vim.env.XDG_DATA_HOME .. '/nvim-lspconfig'
-
-      local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
-      local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
-      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.11.2/lua-1.11.2.vsix'
-
-      execute('!curl -sLJ -o /tmp/sumneko_lua.vsix ' .. sumneko_url)
-      execute('!unzip -oq /tmp/sumneko_lua.vsix -d ' .. sumneko_root_path)
-      execute('!rm -f /tmp/sumneko_lua.vsix')
-      execute('!chmod +x ' .. sumneko_bin)
-
-      local terraformls_root_path = lspconfig_root_path .. '/terraformls'
-      local terraformls_url       = 'https://github.com/hashicorp/terraform-ls/releases/download/v0.12.1/terraform-ls_0.12.1_darwin_amd64.zip'
-
-      execute('!curl -sLJ -o /tmp/terraformls.zip ' .. terraformls_url)
-      execute('!unzip -oq /tmp/terraformls.zip -d ' .. terraformls_root_path)
-      execute('!rm -f /tmp/terraformls.zip')
-    end,
   }
 
   -- Completion {{{1
@@ -195,13 +199,15 @@ return require('packer').startup(function()
   }
 
   use { 'haya14busa/vim-asterisk',
+    requires = {
+      { 'kevinhwang91/nvim-hlslens' },
+    },
     config = function()
       vim.api.nvim_set_keymap('', '*',  [[<Plug>(asterisk-z*)<Cmd>lua require('hlslens').start()<CR>]],  {})
       vim.api.nvim_set_keymap('', '#',  [[<Plug>(asterisk-z#)<Cmd>lua require('hlslens').start()<CR>]],  {})
       vim.api.nvim_set_keymap('', 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], {})
       vim.api.nvim_set_keymap('', 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], {})
     end,
-    requires = { 'kevinhwang91/nvim-hlslens' },
   }
 
 end)
