@@ -198,6 +198,45 @@ return require('packer').startup(function()
     end,
   }
 
+  -- Fuzzy Finder {{{1
+
+  use { 'nvim-telescope/telescope.nvim',
+    requires = {
+      { 'nvim-lua/popup.nvim'                         },
+      { 'nvim-lua/plenary.nvim'                       },
+      { 'kyazdani42/nvim-web-devicons',    opt = true },
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
+      { 'neovim/nvim-lspconfig',           opt = true },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '[telescope]', '<Nop>',       { noremap = true })
+      vim.api.nvim_set_keymap('n', '<Space>u',    '[telescope]', {})
+
+      vim.api.nvim_set_keymap('n', '[telescope]f', [[<Cmd>lua require('telescope.builtin').git_files()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]g', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]b', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]],   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]r', [[<Cmd>lua require('telescope.builtin').registers()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]h', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], { noremap = true, silent = true })
+
+      require('telescope').setup({
+        defaults = {
+          prompt_position  = 'top',
+          sorting_strategy = 'ascending',
+          layout_strategy  = 'flex',
+
+          mappings = {
+            i = {
+              ['<C-u>'] = false,
+              ['<C-d>'] = false,
+              ['<C-c>'] = false,
+              ['<Esc>'] = require('telescope.actions').close,
+            },
+          },
+        },
+      })
+    end,
+  }
+
   -- Text Object {{{1
 
   use { 'bkad/CamelCaseMotion',
