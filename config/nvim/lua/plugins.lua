@@ -322,10 +322,11 @@ return require('packer').startup(function()
       vim.api.nvim_set_keymap('n', '[gina]B', ':<C-u>Gina branch --all<CR>',       { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[gina]c', ':<C-u>Gina commit<CR>',             { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[gina]l', ':<C-u>Gina log --graph<CR>',        { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[gina]f', ':<C-u>Gina log --graph -- %<CR>',   { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[gina]d', ':<C-u>Gina patch<CR>',              { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[gina]L', ':<C-u>Gina log --graph -- %<CR>',   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[gina]p', ':<C-u>Gina patch<CR>',              { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[gina]R', ':<C-u>Gina reflog<CR>',             { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[gina]s', ':<C-u>Gina status<CR>',             { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[gina]P', ':<C-u>Gina push<CR>',               { noremap = true, silent = true })
 
       -- gina-buffer-blame specific settings.
       vim.call('gina#custom#action#alias', 'blame', 'preview', 'botright show:commit:preview')
@@ -363,6 +364,9 @@ return require('packer').startup(function()
       vim.call('gina#custom#command#option', 'status', '--branch')
       vim.call('gina#custom#command#option', 'status', '--short')
       vim.call('gina#custom#execute', 'status', 'setlocal cursorline')
+
+      -- gina-buffer-push specific settings.
+      vim.call('gina#custom#command#option', 'push', '--verbose')
     end,
   }
 
