@@ -120,35 +120,35 @@ return require('packer').startup(function()
       local lspconfig           = require('lspconfig')
       local lspconfig_root_path = vim.env.XDG_DATA_HOME .. '/nvim-lspconfig'
 
-      lspconfig.bashls.setup({})
+      -- lspconfig.bashls.setup({})
 
-      lspconfig.cssls.setup({})
+      -- lspconfig.cssls.setup({})
 
-      lspconfig.diagnosticls.setup({
-        filetypes = { 'sh' },
-      })
+      -- lspconfig.diagnosticls.setup({
+      --   filetypes = { 'sh' },
+      -- })
 
-      lspconfig.dockerls.setup({})
+      -- lspconfig.dockerls.setup({})
 
-      lspconfig.efm.setup({})
+      -- lspconfig.efm.setup({})
 
-      lspconfig.elmls.setup({})
+      -- lspconfig.elmls.setup({})
 
-      lspconfig.gopls.setup({})
+      -- lspconfig.gopls.setup({})
 
-      lspconfig.html.setup({})
+      -- lspconfig.html.setup({})
 
-      lspconfig.jsonls.setup({})
+      -- lspconfig.jsonls.setup({})
 
-      lspconfig.rls.setup({})
+      -- lspconfig.rls.setup({})
 
-      lspconfig.rust_analyzer.setup({})
+      -- lspconfig.rust_analyzer.setup({})
 
-      lspconfig.solargraph.setup({})
+      -- lspconfig.solargraph.setup({})
 
-      lspconfig.sorbet.setup({})
+      -- lspconfig.sorbet.setup({})
 
-      lspconfig.sqlls.setup({})
+      -- lspconfig.sqlls.setup({})
 
       local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
       local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
@@ -164,9 +164,9 @@ return require('packer').startup(function()
         cmd = { terraformls_bin, 'serve' },
       })
 
-      lspconfig.tsserver.setup({})
+      -- lspconfig.tsserver.setup({})
 
-      lspconfig.yamlls.setup({})
+      -- lspconfig.yamlls.setup({})
     end,
   }
 
