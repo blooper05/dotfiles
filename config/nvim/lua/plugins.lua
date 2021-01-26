@@ -237,6 +237,17 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'nvim-telescope/telescope-packer.nvim',
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '[telescope]p', [[<Cmd>lua require('telescope').extensions.packer.plugins()<CR>]], { noremap = true, silent = true })
+
+      require('telescope').load_extension('packer')
+    end,
+  }
+
   use { 'nvim-telescope/telescope-ghq.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },
