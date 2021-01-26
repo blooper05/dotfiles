@@ -364,9 +364,6 @@ return require('packer').startup(function()
       vim.call('gina#custom#command#option', 'status', '--branch')
       vim.call('gina#custom#command#option', 'status', '--short')
       vim.call('gina#custom#execute', 'status', 'setlocal cursorline')
-
-      -- gina-buffer-push specific settings.
-      vim.call('gina#custom#command#option', 'push', '--verbose')
     end,
   }
 
