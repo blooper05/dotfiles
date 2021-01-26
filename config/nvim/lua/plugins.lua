@@ -212,6 +212,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'AndrewRadev/switch.vim',
+    config = function()
+      vim.g.switch_mapping = '-'
+    end,
+  }
+
   -- Search {{{1
 
   use { 'kevinhwang91/nvim-hlslens',
