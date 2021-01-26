@@ -198,6 +198,14 @@ return require('packer').startup(function()
     end,
   }
 
+  -- Text Object {{{1
+
+  use { 'bkad/CamelCaseMotion',
+    config = function()
+      vim.g.camelcasemotion_key = ''
+    end,
+  }
+
   -- Search {{{1
 
   use { 'kevinhwang91/nvim-hlslens',
