@@ -237,6 +237,17 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'nvim-telescope/telescope-ghq.nvim',
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '[telescope]s', [[<Cmd>lua require('telescope').extensions.ghq.list()<CR>]], { noremap = true, silent = true })
+
+      require('telescope').load_extension('ghq')
+    end,
+  }
+
   -- Text Object {{{1
 
   use { 'bkad/CamelCaseMotion',
