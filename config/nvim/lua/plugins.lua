@@ -303,6 +303,30 @@ return require('packer').startup(function()
     end,
   }
 
+  -- File Explorer {{{1
+
+  use { 'kyazdani42/nvim-tree.lua',
+    requires = {
+      { 'kyazdani42/nvim-web-devicons', opt = true },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '[file]',   '<Nop>',  { noremap = true })
+      vim.api.nvim_set_keymap('n', '<Space>f', '[file]', {})
+
+      vim.api.nvim_set_keymap('n', '[file]c', ':<C-u>NvimTreeToggle<CR>', { noremap = true, silent = true })
+
+      -- Enable 24-bit RGB color in the TUI.
+      vim.o.termguicolors = true
+
+      vim.cmd('autocmd MyAutoCmd FileType NvimTree setlocal cursorline')
+
+      vim.g.nvim_tree_width          = 40
+      vim.g.nvim_tree_follow         = 1
+      vim.g.nvim_tree_indent_markers = 1
+      vim.g.nvim_tree_hide_dotfiles  = 1
+    end,
+  }
+
   -- Text Object {{{1
 
   use { 'bkad/CamelCaseMotion', -- non-lua plugin
