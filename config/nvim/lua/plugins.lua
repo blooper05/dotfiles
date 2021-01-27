@@ -317,6 +317,18 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'rhysd/vim-operator-surround', -- non-lua plugin
+    requires = {
+      { 'kana/vim-operator-user' },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('o', 's',  '<Plug>(operator-surround-append)',   { silent = true })
+      vim.api.nvim_set_keymap('x', 's',  '<Plug>(operator-surround-append)',   { silent = true })
+      vim.api.nvim_set_keymap('',  'ds', '<Plug>(operator-surround-delete)a',  { silent = true })
+      vim.api.nvim_set_keymap('',  'cs', '<Plug>(operator-surround-replace)a', { silent = true })
+    end,
+  }
+
   -- Editing {{{1
 
   use { 'glepnir/prodoc.nvim',
