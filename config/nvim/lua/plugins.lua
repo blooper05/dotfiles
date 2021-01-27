@@ -179,6 +179,30 @@ return require('packer').startup(function()
     end,
   }
 
+  -- Debug Adapter Protocol {{{1
+
+  use { 'mfussenegger/nvim-dap',
+    config = function()
+      vim.api.nvim_set_keymap('n', '[dap]',    '<Nop>', { noremap = true })
+      vim.api.nvim_set_keymap('n', '<Space>d', '[dap]', {})
+
+      vim.api.nvim_set_keymap('n', '[dap]r', [[<Cmd>lua require('dap').repl.open()<CR>]],         { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[dap]b', [[<Cmd>lua require('dap').toggle_breakpoint()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[dap]c', [[<Cmd>lua require('dap').repl.continue()<CR>]],     { noremap = true, silent = true })
+    end,
+  }
+
+  use { 'theHamsta/nvim-dap-virtual-text',
+    requires = {
+      { 'mfussenegger/nvim-dap'           },
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    config = function()
+      -- Show virtual text for current frame.
+      vim.g.dap_virtual_text = true
+    end,
+  }
+
   -- Completion {{{1
 
   use { 'nvim-lua/completion-nvim',
