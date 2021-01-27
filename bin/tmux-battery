@@ -12,8 +12,8 @@ get_battery_percentage() {
 }
 
 is_battery_charging() {
-  local -r KEY='charging'
-  macos_battery_status | grep -e "\b$KEY;\B" -q
+  local -r KEY='charging|charged'
+  macos_battery_status | grep -E "\b$KEY;\B" -q
 }
 
 print_percentage() {
