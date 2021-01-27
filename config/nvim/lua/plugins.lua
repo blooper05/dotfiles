@@ -364,6 +364,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'junegunn/vim-easy-align', -- non-lua plugin
+    config = function()
+      vim.api.nvim_set_keymap('x', '<Enter>', '<Plug>(EasyAlign)', { silent = true })
+    end,
+  }
+
   -- Search {{{1
 
   use { 'kevinhwang91/nvim-hlslens',
