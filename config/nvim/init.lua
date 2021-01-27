@@ -119,6 +119,9 @@ vim.o.showmatch = true
 -- Ignore case on insert completion.
 vim.bo.infercase = true
 
+-- Show the effects of a command incrementally, also in a preview window.
+vim.o.inccommand = 'split'
+
 -- Insert blank line in normal mode.
 vim.api.nvim_set_keymap('n', '<CR>', 'o<ESC>', { noremap = true })
 
