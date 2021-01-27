@@ -306,6 +306,16 @@ return require('packer').startup(function()
     end,
   }
 
+  -- Editing {{{1
+
+  use { 'glepnir/prodoc.nvim',
+    config = function()
+      vim.api.nvim_set_keymap('n', 'gcd', ':<C-u>ProDoc<CR>',     { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', 'gcc', ':<C-u>ProComment<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('x', 'gcc', ':ProComment<CR>',      { noremap = true, silent = true })
+    end,
+  }
+
   use { 'monaqa/dial.nvim',
     config = function()
       vim.api.nvim_set_keymap('n', '<C-a>',  '<Plug>(dial-increment)', {})
