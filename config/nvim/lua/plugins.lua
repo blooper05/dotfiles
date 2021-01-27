@@ -26,7 +26,7 @@ return require('packer').startup(function()
 
   -- Appearance {{{1
 
-  use { 'lifepillar/vim-solarized8',
+  use { 'lifepillar/vim-solarized8', -- non-lua plugin
     config = function()
       -- Assume a dark background.
       vim.o.background = 'dark'
@@ -294,13 +294,13 @@ return require('packer').startup(function()
 
   -- Text Object {{{1
 
-  use { 'bkad/CamelCaseMotion',
+  use { 'bkad/CamelCaseMotion', -- non-lua plugin
     config = function()
       vim.g.camelcasemotion_key = ''
     end,
   }
 
-  use { 'andymass/vim-matchup',
+  use { 'andymass/vim-matchup', -- non-lua plugin
     config = function()
       vim.g.matchup_matchparen_offscreen = { method = 'popup' }
     end,
@@ -350,7 +350,7 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'haya14busa/vim-asterisk',
+  use { 'haya14busa/vim-asterisk', -- non-lua plugin
     requires = {
       { 'kevinhwang91/nvim-hlslens' },
     },
@@ -364,7 +364,7 @@ return require('packer').startup(function()
 
   -- Version Control System {{{1
 
-  use { 'lambdalisue/gina.vim',
+  use { 'lambdalisue/gina.vim', -- non-lua plugin
     config = function()
       vim.api.nvim_set_keymap('n', '[gina]',   '<Nop>',  { noremap = true })
       vim.api.nvim_set_keymap('n', '<Space>g', '[gina]', {})
