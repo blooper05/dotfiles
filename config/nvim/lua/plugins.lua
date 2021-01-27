@@ -317,6 +317,16 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'haya14busa/vim-operator-flashy', -- non-lua plugin
+    requires = {
+      { 'kana/vim-operator-user' },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('',  'y', '<Plug>(operator-flashy)',  {})
+      vim.api.nvim_set_keymap('n', 'Y', '<Plug>(operator-flashy)$', {})
+    end,
+  }
+
   use { 'rhysd/vim-operator-surround', -- non-lua plugin
     requires = {
       { 'kana/vim-operator-user' },
