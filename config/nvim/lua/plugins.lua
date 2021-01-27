@@ -225,6 +225,17 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'norcalli/snippets.nvim',
+    requires = {
+      { 'nvim-lua/completion-nvim' },
+    },
+    config = function()
+      vim.g.completion_enable_snippet = 'snippets.nvim'
+
+      require('snippets').use_suggested_mappings()
+    end,
+  }
+
   use { 'windwp/nvim-autopairs',
     config = function()
       require('nvim-autopairs').setup({})
