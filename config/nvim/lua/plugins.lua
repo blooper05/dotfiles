@@ -339,6 +339,16 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'kana/vim-operator-replace', -- non-lua plugin
+    requires = {
+      { 'kana/vim-operator-user' },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('o', 'p', '<Plug>(operator-replace)', { silent = true })
+      vim.api.nvim_set_keymap('x', 'p', '<Plug>(operator-replace)', { silent = true })
+    end,
+  }
+
   -- Editing {{{1
 
   use { 'glepnir/prodoc.nvim',
