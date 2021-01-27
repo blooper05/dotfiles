@@ -260,7 +260,7 @@ return require('packer').startup(function()
       vim.api.nvim_set_keymap('n', '[telescope]g', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[telescope]b', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]],   { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[telescope]r', [[<Cmd>lua require('telescope.builtin').registers()<CR>]], { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]h', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]H', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], { noremap = true, silent = true })
 
       require('telescope').setup({
         defaults = {
@@ -278,6 +278,18 @@ return require('packer').startup(function()
           },
         },
       })
+    end,
+  }
+
+  use { 'nvim-telescope/telescope-frecency.nvim',
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+      { 'tami5/sql.nvim'                },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '[telescope]h', [[<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>]], { noremap = true, silent = true })
+
+      require('telescope').load_extension('frecency')
     end,
   }
 
