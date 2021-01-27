@@ -282,9 +282,28 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'AndrewRadev/switch.vim',
+  use { 'monaqa/dial.nvim',
     config = function()
-      vim.g.switch_mapping = '-'
+      vim.api.nvim_set_keymap('n', '<C-a>',  '<Plug>(dial-increment)', {})
+      vim.api.nvim_set_keymap('n', '<C-x>',  '<Plug>(dial-decrement)', {})
+      vim.api.nvim_set_keymap('v', '<C-a>',  '<Plug>(dial-increment)', {})
+      vim.api.nvim_set_keymap('v', '<C-x>',  '<Plug>(dial-decrement)', {})
+      vim.api.nvim_set_keymap('v', 'g<C-a>', '<Plug>(dial-increment-additional)', {})
+      vim.api.nvim_set_keymap('v', 'g<C-x>', '<Plug>(dial-decrement-additional)', {})
+
+      local dial = require('dial')
+
+      dial.augends.boolean = dial.augends.common.enum_cyclic({
+        name    = 'boolean',
+        strlist = { 'true', 'false' },
+      })
+      table.insert(dial.searchlist.normal, dial.augends.boolean)
+
+      dial.augends.git_rebase = dial.augends.common.enum_cyclic({
+        name    = 'git_rebase',
+        strlist = { 'pick', 'fixup', 'reword', 'edit', 'squash', 'exec', 'break', 'drop', 'label', 'reset', 'merge' },
+      })
+      table.insert(dial.searchlist.normal, dial.augends.git_rebase)
     end,
   }
 
