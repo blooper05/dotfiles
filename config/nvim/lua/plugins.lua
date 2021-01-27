@@ -431,6 +431,23 @@ return require('packer').startup(function()
     end,
   }
 
+  -- Web Service {{{1
+
+  use { 'pwntester/octo.nvim',
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '[octo]',       '<Nop>',  { noremap = true })
+      vim.api.nvim_set_keymap('n', '[telescope]G', '[octo]', {})
+
+      vim.api.nvim_set_keymap('n', '[octo]i', ':<C-u>Octo issue list states=OPEN<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[octo]p', ':<C-u>Octo pr list states=OPEN<CR>',    { noremap = true, silent = true })
+
+      require('telescope').load_extension('octo')
+    end,
+  }
+
 end)
 
 -- Folding {{{1
