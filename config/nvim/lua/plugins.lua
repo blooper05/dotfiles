@@ -544,6 +544,15 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'vim-test/vim-test', -- non-lua plugin
+    config = function()
+      vim.api.nvim_set_keymap('n', '<Leader>c', ':<C-u>TestFile<CR>',    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>n', ':<C-u>TestNearest<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>l', ':<C-u>TestLast<CR>',    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>a', ':<C-u>TestSuite<CR>',   { noremap = true, silent = true })
+    end,
+  }
+
   -- Web Service {{{1
 
   use { 'pwntester/octo.nvim',
