@@ -426,6 +426,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'mbbill/undotree', -- non-lua plugin
+    config = function()
+      vim.api.nvim_set_keymap('n', '<Space>U', ':<C-u>UndotreeToggle<CR>', { noremap = true, silent = true })
+    end,
+  }
+
   -- Search {{{1
 
   use { 'kevinhwang91/nvim-hlslens',
