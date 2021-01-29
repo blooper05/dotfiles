@@ -426,6 +426,22 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'ntpeters/vim-better-whitespace', -- non-lua plugin
+    config = function()
+      -- Strip whitespaces when I save files.
+      vim.g.strip_whitespace_on_save = true
+      vim.g.strip_whitespace_confirm = false
+
+      vim.g.better_whitespace_filetypes_blacklist = {
+        'diff',
+        'git',
+        'gitcommit',
+        'help',
+        'markdown',
+      }
+    end,
+  }
+
   use { 'mbbill/undotree', -- non-lua plugin
     config = function()
       vim.api.nvim_set_keymap('n', '<Space>U', ':<C-u>UndotreeToggle<CR>', { noremap = true, silent = true })
