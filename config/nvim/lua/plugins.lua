@@ -538,6 +538,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'thinca/vim-quickrun', -- non-lua plugin
+    config = function()
+      vim.api.nvim_set_keymap('n', '<Leader>r', '<Plug>(quickrun)', {})
+    end,
+  }
+
   -- Web Service {{{1
 
   use { 'pwntester/octo.nvim',
