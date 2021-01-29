@@ -432,6 +432,13 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'lambdalisue/suda.vim', -- non-lua plugin
+    config = function()
+      -- Automatically switch a buffer name when the target file is not readable or writable.
+      vim.g.suda_smart_edit = true
+    end,
+  }
+
   -- Search {{{1
 
   use { 'kevinhwang91/nvim-hlslens',
