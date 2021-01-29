@@ -516,6 +516,28 @@ return require('packer').startup(function()
     end,
   }
 
+  -- Runner {{{1
+
+  use { 'dense-analysis/ale', -- non-lua plugin
+    config = function()
+      -- Run linters only when I save files.
+      vim.g.ale_lint_on_text_changed = 'never'
+      vim.g.ale_lint_on_insert_leave = false
+      vim.g.ale_lint_on_enter        = false
+
+      -- Run formatters when I save files.
+      vim.g.ale_fix_on_save = true
+
+      vim.g.ale_fixers = {
+        [ '*' ]    = { 'remove_trailing_lines' },
+        ruby       = { 'rubocop' },
+        javascript = { 'eslint', 'prettier' },
+        typescript = { 'eslint', 'prettier' },
+        terraform  = { 'terraform' },
+      }
+    end,
+  }
+
   -- Web Service {{{1
 
   use { 'pwntester/octo.nvim',
