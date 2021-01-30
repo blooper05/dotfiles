@@ -639,6 +639,12 @@ return require('packer').startup(function()
     end,
   }
 
+  -- nginx {{{2
+  use { 'chr4/nginx.vim', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   -- CSV {{{2
 
   use { 'mechatroner/rainbow_csv', -- non-lua plugin
