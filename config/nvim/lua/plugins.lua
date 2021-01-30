@@ -608,6 +608,13 @@ return require('packer').startup(function()
 
   -- FileType {{{1
 
+  -- Natural Language {{{2
+
+  use { 'ujihisa/neco-look', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   -- Markdown {{{2
 
   use { 'rcmdnk/vim-markdown', -- non-lua plugin
