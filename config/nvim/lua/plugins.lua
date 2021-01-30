@@ -632,6 +632,13 @@ return require('packer').startup(function()
     end,
   }
 
+  -- CSV {{{2
+
+  use { 'mechatroner/rainbow_csv', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   -- Web Service {{{1
 
   use { 'pwntester/octo.nvim',
