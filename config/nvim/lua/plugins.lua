@@ -639,6 +639,13 @@ return require('packer').startup(function()
     end,
   }
 
+  -- Terraform {{{2
+
+  use { 'hashivim/vim-terraform', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   -- nginx {{{2
   use { 'chr4/nginx.vim', -- non-lua plugin
     config = function()
