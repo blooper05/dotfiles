@@ -455,6 +455,16 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'junegunn/goyo.vim', -- non-lua plugin
+    requires = {
+      { 'junegunn/limelight.vim' },
+    },
+    config = function()
+      vim.cmd('autocmd! User GoyoEnter Limelight')
+      vim.cmd('autocmd! User GoyoLeave Limelight!')
+    end,
+  }
+
   -- Search {{{1
 
   use { 'kevinhwang91/nvim-hlslens',
