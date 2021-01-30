@@ -455,6 +455,11 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'yuttie/comfortable-motion.vim', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   use { 'junegunn/goyo.vim', -- non-lua plugin
     requires = {
       { 'junegunn/limelight.vim' },
