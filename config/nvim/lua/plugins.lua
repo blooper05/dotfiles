@@ -632,6 +632,13 @@ return require('packer').startup(function()
     end,
   }
 
+  -- PlantUML {{{2
+
+  use { 'aklt/plantuml-syntax', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   -- CSV {{{2
 
   use { 'mechatroner/rainbow_csv', -- non-lua plugin
