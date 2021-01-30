@@ -620,6 +620,11 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'skanehira/translate.vim', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   -- Markdown {{{2
 
   use { 'rcmdnk/vim-markdown', -- non-lua plugin
