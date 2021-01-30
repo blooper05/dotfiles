@@ -582,6 +582,20 @@ return require('packer').startup(function()
     end,
   }
 
+  -- FileType {{{1
+
+  -- Markdown {{{2
+
+  use { 'rcmdnk/vim-markdown', -- non-lua plugin
+    requires = {
+      { 'joker1007/vim-markdown-quote-syntax' },
+    },
+    config = function()
+      -- Disable the folding configuration.
+      vim.g.vim_markdown_folding_disabled = true
+    end,
+  }
+
   -- Web Service {{{1
 
   use { 'pwntester/octo.nvim',
