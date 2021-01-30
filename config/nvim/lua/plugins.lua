@@ -582,6 +582,15 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'previm/previm',
+    requires = {
+      { 'tyru/open-browser.vim' },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '<Leader>p', ':<C-u>PrevimOpen<CR>', { noremap = true, silent = true })
+    end,
+  }
+
   -- FileType {{{1
 
   -- Markdown {{{2
