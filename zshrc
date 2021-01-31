@@ -60,7 +60,7 @@ alias du='dust'
 alias find='fd'
 alias ps='procs'
 alias grep='rg'
-alias sed='sd'
+# alias sed='sd'
 alias wc='tokei'
 alias top='bottom'
 
