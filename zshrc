@@ -1,4 +1,9 @@
 # Powerlevel10k {{{1
+if [[ -t 0 ]]; then
+  stty stop undef
+  stty start undef
+fi
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -204,7 +209,6 @@ bindkey '^r' anyframe-widget-put-history
 bindkey '^s' anyframe-widget-cd-ghq-repository
 bindkey '^g^a' anyframe-widget-git-add
 bindkey '^g^b' anyframe-widget-checkout-git-branch
-stty -ixon
 
 # ghq {{{2
 export GHQ_ROOT=$XDG_DATA_HOME/ghq
