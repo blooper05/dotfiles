@@ -155,7 +155,7 @@ export NODENV_ROOT=/usr/local/var/nodenv
 if type nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 # Go {{{2
-export GOPATH=$HOME/dev
+export GOPATH=$XDG_DATA_HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 # tmux {{{2
