@@ -597,7 +597,7 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'previm/previm',
+  use { 'previm/previm', -- non-lua plugin
     requires = {
       { 'tyru/open-browser.vim' },
     },
