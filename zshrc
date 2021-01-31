@@ -1,9 +1,14 @@
+# Powerlevel10k {{{1
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # zplug {{{1
 
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "bhilburn/powerlevel9k", as:theme
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "blooper05/anyframe", at:add-skim_support
 zplug "blooper05/git-cococo", as:command, use:exe/git-cococo
 zplug "zsh-users/zsh-completions"
@@ -213,6 +218,9 @@ export GPG_TTY=$(tty)
 # Terraform {{{2
 export TF_CLI_ARGS_plan="--parallelism=30"
 export TF_CLI_ARGS_apply="--parallelism=30"
+
+# Powerlevel10k {{{2
+source $XDG_CONFIG_HOME/zsh/powerlevel10k
 
 # Folding {{{1
 
