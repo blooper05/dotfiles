@@ -159,6 +159,8 @@ return require('packer').startup(function()
 
       -- lspconfig.sqlls.setup({})
 
+      -- lspconfig.sqls.setup({})
+
       local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
       local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
       local sumneko_ext       = sumneko_root_path .. '/extension/server/main.lua'
