@@ -35,7 +35,7 @@ return require('packer').startup(function()
       vim.g.solarized_termtrans = 1
 
       -- Use solarized as colorscheme.
-      vim.cmd('autocmd MyAutoCmd VimEnter * nested colorscheme solarized8_flat')
+      vim.cmd('colorscheme solarized8_flat')
     end,
   }
 
