@@ -14,3 +14,6 @@ init:
 	brew file install
 	brew uninstall --ignore-dependencies node
 	mackup restore
+
+clean:
+	@-$(foreach val,$(DOTFILES), rm -rfv $(HOME)/.$(val);)
