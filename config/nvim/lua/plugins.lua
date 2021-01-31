@@ -101,6 +101,16 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'junegunn/goyo.vim', -- non-lua plugin
+    requires = {
+      { 'junegunn/limelight.vim' },
+    },
+    config = function()
+      vim.cmd('autocmd! User GoyoEnter Limelight')
+      vim.cmd('autocmd! User GoyoLeave Limelight!')
+    end,
+  }
+
   -- Language Server Protocol {{{1
 
   use { 'neovim/nvim-lspconfig',
@@ -459,16 +469,6 @@ return require('packer').startup(function()
 
   use { 'yuttie/comfortable-motion.vim', -- non-lua plugin
     config = function()
-    end,
-  }
-
-  use { 'junegunn/goyo.vim', -- non-lua plugin
-    requires = {
-      { 'junegunn/limelight.vim' },
-    },
-    config = function()
-      vim.cmd('autocmd! User GoyoEnter Limelight')
-      vim.cmd('autocmd! User GoyoLeave Limelight!')
     end,
   }
 
