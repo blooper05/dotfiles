@@ -40,10 +40,10 @@ export PAGER=less
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='ls -FG'
-alias ll='ls -FGhl'
-alias lt='ls -FGhlt'
-alias la='ls -AFGhl'
+alias ls='exa --classify'
+alias ll='exa --classify --long'
+alias lt='exa --classify --long --sort newest'
+alias la='exa --all --classify --long'
 
 # Key Binding {{{1
 
