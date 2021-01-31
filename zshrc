@@ -44,6 +44,15 @@ alias ls='exa --classify'
 alias ll='exa --classify --long'
 alias lt='exa --classify --long --sort newest'
 alias la='exa --all --classify --long'
+alias tree='exa --classify --tree'
+alias cat='bat'
+alias du='dust'
+alias find='fd'
+alias ps='procs'
+alias grep='rg'
+alias sed='sd'
+alias wc='tokei'
+alias top='bottom'
 
 # Key Binding {{{1
 
