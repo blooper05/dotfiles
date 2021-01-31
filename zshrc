@@ -192,6 +192,9 @@ bindkey '^g^a' anyframe-widget-git-add
 bindkey '^g^b' anyframe-widget-checkout-git-branch
 stty -ixon
 
+# ghq {{{2
+export GHQ_ROOT=$XDG_DATA_HOME/ghq
+
 # gh {{{2
 eval "$(gh completion -s zsh)"
 
