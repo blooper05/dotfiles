@@ -224,7 +224,7 @@ export TF_CLI_ARGS_plan="--parallelism=30"
 export TF_CLI_ARGS_apply="--parallelism=30"
 
 # Powerlevel10k {{{2
-source $XDG_CONFIG_HOME/zsh/powerlevel10k
+source $XDG_CONFIG_HOME/zsh/powerlevel10k.zsh
 
 # Folding {{{1
 
