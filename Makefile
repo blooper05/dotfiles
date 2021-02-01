@@ -9,7 +9,6 @@ init:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew install rcmdnk/file/brew-file
 	brew file install
-	brew uninstall --ignore-dependencies node
 	mackup restore
 
 clean:
