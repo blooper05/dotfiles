@@ -1,6 +1,6 @@
 .PHONY: deploy init
 
-DOTFILES      := config local/bin mackup.cfg zshrc
+DOTFILES      := config gem/credentials local/bin mackup.cfg zshrc
 XDG_DATA_HOME := ${HOME}/.local/share
 
 deploy:
