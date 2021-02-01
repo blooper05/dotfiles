@@ -103,7 +103,7 @@ cask obs-ndi
 cask obs-virtualcam
 cask openemu
 cask quip
-cask rubymotion
+# cask rubymotion
 cask skype
 cask spotify
 cask stack-stack
