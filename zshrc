@@ -219,6 +219,10 @@ eval "$(gh completion -s zsh)"
 # gpg {{{2
 export GPG_TTY=$(tty)
 
+# AWS CLI {{{2
+export AWS_CONFIG_FILE=$XDG_CONFIG_HOME/aws/config
+export AWS_SHARED_CREDENTIALS_FILE=$XDG_CONFIG_HOME/aws/credentials
+
 # Terraform {{{2
 export TF_CLI_ARGS_plan="--parallelism=30"
 export TF_CLI_ARGS_apply="--parallelism=30"
