@@ -59,7 +59,7 @@ brew zsh
 
 tap homebrew/cask-drivers
 cask fujifilm-x-webcam
-cask silicon-labs-vcp-driver
+# cask silicon-labs-vcp-driver
 cask sonos
 
 tap homebrew/cask-fonts
