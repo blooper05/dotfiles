@@ -65,7 +65,7 @@ cask sonos
 tap homebrew/cask-fonts
 cask font-cica
 cask font-hackgen-nerd
-cask font-source-han-code-jp
+# cask font-source-han-code-jp
 
 tap homebrew/cask
 cask adobe-creative-cloud
