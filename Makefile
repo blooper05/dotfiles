@@ -7,8 +7,7 @@ deploy:
 
 init:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	brew install rcmdnk/file/brew-file
-	brew file install
+	brew bundle --file $HOME/.local/share/ghq/github.com/blooper05/dotfiles/Brewfile
 	mackup restore
 
 clean:

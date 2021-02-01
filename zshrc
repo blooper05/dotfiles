@@ -134,10 +134,10 @@ setopt pushd_ignore_dups
 
 # Tools {{{1
 
-# Homebrew-file {{{2
-if [ -f $(brew --prefix)/etc/brew-wrap ]; then
-  source $(brew --prefix)/etc/brew-wrap
-fi
+# # Homebrew-file {{{2
+# if [ -f $(brew --prefix)/etc/brew-wrap ]; then
+#   source $(brew --prefix)/etc/brew-wrap
+# fi
 
 # Neovim {{{2
 alias vi='nvim'
