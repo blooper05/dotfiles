@@ -6,7 +6,8 @@ deploy:
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/.$(val);)
 
 init:
-	curl -fsSL https://raw.github.com/rcmdnk/homebrew-file/install/install.sh | sh
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	brew install rcmdnk/file/brew-file
 	brew file install
 	brew uninstall --ignore-dependencies node
 	mackup restore
