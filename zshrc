@@ -62,7 +62,7 @@ alias ps='procs'
 alias grep='rg'
 # alias sed='sd'
 alias wc='tokei'
-alias top='bottom'
+alias top='btm'
 
 # Key Binding {{{1
 
