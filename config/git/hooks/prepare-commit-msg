@@ -2,6 +2,6 @@
 
 git secrets --prepare_commit_msg_hook -- "$@"
 
-# gitmoji as a commit hook
-exec < /dev/tty
-gitmoji --hook $1 $2
+# # gitmoji as a commit hook
+# exec < /dev/tty
+# gitmoji --hook $1 $2
