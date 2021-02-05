@@ -5,8 +5,10 @@
 " ⚡️ - :zap: (perf):                  - Improve performance.
 " 🔥 - :fire: (refactor):             - Remove code or files.
 " 🐛 - :bug: (fix):                   - Fix a bug.
+" 🚑 - :ambulance: (fix):             - Critical hotfix.
 " ✨ - :sparkles: (feat):             - Introduce new features.
 " 📝 - :memo: (docs):                 - Add or update documentation.
+" 🚀 - :rocket: (chore):              - Deploy stuff.
 " 🎉 - :tada: (chore):                - Begin a project.
 " ✅ - :white_check_mark: (test):     - Add or update tests.
 " 🔒 - :lock: (fix):                  - Fix security issues.
@@ -19,8 +21,10 @@
 " ➕ - :heavy_plus_sign: (chore):     - Add a dependency.
 " ➖ - :heavy_minus_sign: (chore):    - Remove a dependency.
 " 🔧 - :wrench: (chore):              - Add or update configuration files.
+" 🔨 - :hammer: (chore):              - Add or update development scripts.
 " ✏️  - :pencil2: (fix):               - Fix typos.
 " 🚚 - :truck: (refactor):            - Move or rename resources (e.g.: files, paths, routes).
+" 💡 - :bulb: (docs):                 - Add or update comments in source code.
 "
 " NOTE: refs. Gitmoji (https://gitmoji.dev/)
 " NOTE: refs. Conventional Commits (https://www.conventionalcommits.org/)
