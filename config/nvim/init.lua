@@ -72,9 +72,6 @@ vim.o.title = true
 -- Show line and column display.
 vim.o.ruler = true
 
--- -- Display double-width symbols properly.
--- vim.o.ambiwidth = 'double'
-
 -- Enable wildmode.
 vim.o.wildmenu = true
 vim.o.wildmode = table.concat({
