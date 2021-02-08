@@ -109,7 +109,6 @@ return require('packer').startup(function()
       vim.cmd('autocmd! User GoyoEnter Limelight')
       vim.cmd('autocmd! User GoyoLeave Limelight!')
     end,
-    disable = true,
   }
 
   -- Language Server Protocol {{{1
