@@ -476,6 +476,13 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'notomo/cmdbuf.nvim',
+    config = function()
+      vim.api.nvim_set_keymap('n', 'q:',    [[<Cmd>lua require('cmdbuf').split_open(vim.o.cmdwinheight)<CR>]],                                                                   { noremap = true })
+      vim.api.nvim_set_keymap('c', '<C-f>', [[<Cmd>lua require('cmdbuf').split_open(vim.o.cmdwinheight, { line = vim.fn.getcmdline(), column = vim.fn.getcmdpos() })<CR><C-c>]], { noremap = true })
+    end,
+  }
+
   -- Search {{{1
 
   use { 'kevinhwang91/nvim-hlslens',
