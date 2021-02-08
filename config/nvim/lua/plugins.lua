@@ -352,6 +352,13 @@ return require('packer').startup(function()
     end,
   }
 
+  -- Terminal {{{1
+
+  use { 'voldikss/vim-floaterm', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   -- Text Object {{{1
 
   use { 'bkad/CamelCaseMotion', -- non-lua plugin
