@@ -155,12 +155,6 @@ vim.bo.synmaxcol = 240
 -- Auto Command {{{1
 
 -- TODO:
--- augroup AutoReplaceTabBySpaces
---   autocmd!
---   autocmd BufWritePre * :%s/\t/  /ge
--- augroup END
-
--- TODO:
 -- augroup AutoCommentOff
 --   autocmd!
 --   autocmd BufEnter * setlocal formatoptions-=r
