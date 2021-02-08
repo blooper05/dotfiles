@@ -10,7 +10,13 @@ vim.cmd('language time C')
 
 -- Settings of the encoding to use for a save and reading.
 vim.o.encoding      = 'utf-8'
-vim.o.fileencodings = 'utf-8,euc-jp,sjis,cp932,iso-2022-jp'
+vim.o.fileencodings = table.concat({
+  'utf-8',
+  'euc-jp',
+  'sjis',
+  'cp932',
+  'iso-2022-jp',
+}, ',')
 
 -- Auto reload if file is changed.
 vim.bo.autoread = true
@@ -19,7 +25,6 @@ vim.bo.autoread = true
 vim.o.clipboard = table.concat({
   'unnamed',
   'unnamedplus',
-  vim.o.clipboard,
 }, ',')
 
 -- Don't redraw during macro execution.
@@ -75,7 +80,6 @@ vim.o.ruler = true
 -- Enable wildmode.
 vim.o.wildmenu = true
 vim.o.wildmode = table.concat({
-  vim.o.wildmode,
   'list:longest',
   'full',
 }, ',')
@@ -91,7 +95,9 @@ vim.o.equalalways = true
 
 -- Use smarter algorithms in vimdiff.
 vim.o.diffopt = table.concat({
-  vim.o.diffopt,
+  'internal',
+  'filler',
+  'closeoff',
   'iwhite',
   'vertical',
   'algorithm:histogram',
