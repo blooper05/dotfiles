@@ -12,15 +12,11 @@ end
 
 vim.cmd('packadd packer.nvim')
 
-vim.cmd('augroup MyAutoCmd')
-vim.cmd('autocmd!')
-vim.cmd('augroup END')
-
 return require('packer').startup(function()
   use { 'wbthomason/packer.nvim', opt = true,
     setup = function()
       -- Run :PackerCompile whenever plugins.lua is updated automatically.
-      vim.cmd('autocmd MyAutoCmd BufWritePost plugins.lua PackerCompile')
+      vim.cmd('autocmd BufWritePost plugins.lua PackerCompile')
     end,
   }
 
@@ -233,7 +229,7 @@ return require('packer').startup(function()
       vim.g.completion_auto_change_source = 1
 
       -- Use completion-nvim in every buffer.
-      vim.cmd([[autocmd MyAutoCmd BufEnter * lua require('completion').on_attach()]])
+      vim.cmd([[autocmd BufEnter * lua require('completion').on_attach()]])
     end,
   }
 
@@ -342,7 +338,7 @@ return require('packer').startup(function()
       -- Enable 24-bit RGB color in the TUI.
       vim.o.termguicolors = true
 
-      vim.cmd('autocmd MyAutoCmd FileType NvimTree setlocal cursorline')
+      vim.cmd('autocmd FileType NvimTree setlocal cursorline')
 
       vim.g.nvim_tree_width          = 40
       vim.g.nvim_tree_follow         = 1
