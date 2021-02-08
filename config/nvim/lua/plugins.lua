@@ -399,11 +399,12 @@ return require('packer').startup(function()
 
   -- Editing {{{1
 
-  use { 'glepnir/prodoc.nvim',
+  use { 'b3nj5m1n/kommentary',
     config = function()
-      vim.api.nvim_set_keymap('n', 'gcd', ':<C-u>ProDoc<CR>',     { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', 'gcc', ':<C-u>ProComment<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('x', 'gcc', ':ProComment<CR>',      { noremap = true, silent = true })
+      require('kommentary.config').configure_language('default', {
+        prefer_single_line_comments = true,
+        -- ignore_whitespace           = false,
+      })
     end,
   }
 
