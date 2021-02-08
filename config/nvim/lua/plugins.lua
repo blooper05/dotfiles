@@ -354,8 +354,10 @@ return require('packer').startup(function()
 
   -- Terminal {{{1
 
-  use { 'voldikss/vim-floaterm', -- non-lua plugin
+  use { 'numtostr/FTerm.nvim',
     config = function()
+      vim.fn.nvim_set_keymap('n', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
+      vim.fn.nvim_set_keymap('t', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
     end,
   }
 
