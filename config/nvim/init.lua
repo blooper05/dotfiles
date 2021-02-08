@@ -136,7 +136,12 @@ vim.api.nvim_set_keymap('c', '<C-f>', '<Right>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-d>', '<Del>',   { noremap = true })
 
 -- Disable auto comments on the next line
-vim.cmd('autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
+vim.cmd('augroup AutoCommentOff')
+vim.cmd('autocmd!')
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=c')
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=r')
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=o')
+vim.cmd('augroup END')
 
 -- Syntax {{{1
 
