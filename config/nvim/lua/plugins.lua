@@ -469,6 +469,8 @@ return require('packer').startup(function()
 
   use { 'yuttie/comfortable-motion.vim', -- non-lua plugin
     config = function()
+      vim.g.comfortable_motion_friction = 120.0
+      vim.g.comfortable_motion_air_drag = 3.0
     end,
   }
 
