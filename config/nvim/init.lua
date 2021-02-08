@@ -26,8 +26,8 @@ vim.o.clipboard = table.concat({
 vim.o.lazyredraw = true
 
 -- Edit and reload vimrc immediately.
-vim.api.nvim_set_keymap('n', '<F5>', ':<C-u>tabnew $MYVIMRC<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<F6>', ':<C-u>source $MYVIMRC<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F5>', ':<C-u>tabnew $MYVIMRC<CR>',  { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F6>', ':<C-u>luafile $MYVIMRC<CR>', { noremap = true, silent = true })
 
 -- Exit terminal mode easily.
 vim.api.nvim_set_keymap('t', '<ESC>', [[<C-\><C-n>]], { noremap = true, silent = true })
