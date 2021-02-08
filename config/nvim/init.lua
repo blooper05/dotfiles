@@ -132,6 +132,9 @@ vim.api.nvim_set_keymap('c', '<C-b>', '<Left>',  { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-f>', '<Right>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-d>', '<Del>',   { noremap = true })
 
+-- Disable auto comments on the next line
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
+
 -- Syntax {{{1
 
 -- Enable auto indent.
@@ -151,15 +154,6 @@ vim.bo.shiftwidth = 2
 
 -- Stop syntax highlight of too long lines
 vim.bo.synmaxcol = 240
-
--- Auto Command {{{1
-
--- TODO:
--- augroup AutoCommentOff
---   autocmd!
---   autocmd BufEnter * setlocal formatoptions-=r
---   autocmd BufEnter * setlocal formatoptions-=o
--- augroup END
 
 -- Folding {{{1
 
