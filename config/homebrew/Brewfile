@@ -122,6 +122,6 @@ mas "EdgeView 2", id: 1206246482
 mas "LINE", id: 539883307
 mas "MindNode", id: 1289197285
 mas "Pocket", id: 568494494
-mas "ReceiptKeeper", id: 413449473
+# mas "ReceiptKeeper", id: 413449473
 mas "Reeder", id: 880001334
 mas "Todoist", id: 585829637
