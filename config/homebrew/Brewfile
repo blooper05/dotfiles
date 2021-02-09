@@ -113,7 +113,7 @@ cask "stack-stack"
 cask "stoplight-studio"
 cask "tableplus"
 cask "vox"
-cask "zeplin"
+# cask "zeplin"
 cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "DaVinci Resolve", id: 571213070
