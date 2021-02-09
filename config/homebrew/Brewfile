@@ -117,7 +117,7 @@ cask "zeplin"
 cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "DaVinci Resolve", id: 571213070
-mas "EdgeView 2", id: 1206246482
+# mas "EdgeView 2", id: 1206246482
 # mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "MindNode", id: 1289197285
