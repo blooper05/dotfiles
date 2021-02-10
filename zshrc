@@ -134,6 +134,9 @@ setopt pushd_ignore_dups
 
 # Tools {{{1
 
+# Homebrew Bundle {{{2
+export HOMEBREW_BUNDLE_FILE=$XDG_CONFIG_HOME/homebrew/Brewfile
+
 # Neovim {{{2
 alias vi='nvim'
 alias vim='nvim'
