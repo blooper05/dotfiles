@@ -413,7 +413,7 @@ return require('packer').startup(function()
     config = function()
       require('kommentary.config').configure_language('default', {
         prefer_single_line_comments = true,
-        -- ignore_whitespace           = false,
+        ignore_whitespace           = false,
       })
     end,
   }
