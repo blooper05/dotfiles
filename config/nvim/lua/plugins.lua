@@ -27,16 +27,16 @@ return require('packer').startup(function()
 
   -- Appearance {{{1
 
-  use { 'lifepillar/vim-solarized8', -- non-lua plugin
+  use { 'glepnir/zephyr-nvim',
     config = function()
       -- Assume a dark background.
       vim.o.background = 'dark'
 
-      -- Make the background transparent.
-      vim.g.solarized_termtrans = 1
+      -- Enable 24-bit RGB color in the TUI.
+      vim.o.termguicolors = true
 
-      -- Use solarized as colorscheme.
-      vim.cmd('colorscheme solarized8_flat')
+      -- Use zephyr as colorscheme.
+      vim.cmd('colorscheme zephyr')
     end,
   }
 
