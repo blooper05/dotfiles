@@ -62,6 +62,7 @@ alias ps='procs'
 # alias grep='rg'
 # alias sed='sd'
 alias top='btm'
+alias watch='watchexec'
 
 # Key Binding {{{1
 
