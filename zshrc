@@ -63,6 +63,7 @@ alias ps='procs'
 # alias sed='sd'
 alias top='btm'
 alias watch='watchexec'
+alias dig='dog'
 alias curl='ht'
 
 # Key Binding {{{1
