@@ -641,6 +641,19 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'ishchow/nvim-deardiary',
+    config = function()
+      require('deardiary.config').journals = {
+        {
+          path        = '~/.local/share/journals',
+          frequencies = { 'daily', 'weekly', 'monthly', 'yearly' },
+        },
+      }
+
+      vim.cmd([[autocmd MyAutoCmd VimEnter * lua require('deardiary').set_current_journal_cwd()]])
+    end,
+  }
+
   -- Markdown {{{2
 
   use { 'rcmdnk/vim-markdown', -- non-lua plugin
