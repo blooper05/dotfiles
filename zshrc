@@ -1,8 +1,19 @@
+# Powerlevel10k {{{1
+if [[ -t 0 ]]; then
+  stty stop undef
+  stty start undef
+fi
+
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # zplug {{{1
 
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "blooper05/anyframe", at:add-skim_support
 zplug "blooper05/git-cococo", as:command, use:exe/git-cococo
 zplug "zsh-users/zsh-completions"
@@ -197,11 +208,6 @@ bindkey '^s' anyframe-widget-cd-ghq-repository
 bindkey '^g^a' anyframe-widget-git-add
 bindkey '^g^b' anyframe-widget-checkout-git-branch
 
-if [[ -t 0 ]]; then
-  stty stop undef
-  stty start undef
-fi
-
 # ghq {{{2
 export GHQ_ROOT=$XDG_DATA_HOME/ghq
 
@@ -219,9 +225,12 @@ export AWS_SHARED_CREDENTIALS_FILE=$XDG_CONFIG_HOME/aws/credentials
 export TF_CLI_ARGS_plan="--parallelism=30"
 export TF_CLI_ARGS_apply="--parallelism=30"
 
+# Powerlevel10k {{{2
+source $XDG_CONFIG_HOME/zsh/powerlevel10k.zsh
+
 # starship {{{2
-eval "$(starship init zsh)"
-export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
+# eval "$(starship init zsh)"
+# export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
 
 # Folding {{{1
 
