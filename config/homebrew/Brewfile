@@ -27,6 +27,7 @@ brew "gitmoji"
 brew "gnupg"
 brew "go"
 brew "hadolint"
+brew "ht-rust"
 brew "jq"
 brew "jsonlint"
 brew "luajit", args: ["HEAD"]
