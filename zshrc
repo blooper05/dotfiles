@@ -1,8 +1,9 @@
-# Powerlevel10k {{{1
+# Initialization {{{1
 
 # Disable START/STOP output control to release the C-s/C-q keybindings.
 tty -s && stty -ixon
 
+# Powerlevel10k Instant Prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
