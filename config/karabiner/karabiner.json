@@ -19,7 +19,22 @@
             "description": "each key setting",
             "manipulators": [
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "^ja$"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  },
+                  {
+                    "bundle_identifiers": [
+                      "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -38,25 +53,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -72,25 +87,25 @@
                     "key_code": "slash"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -109,25 +124,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -143,25 +158,25 @@
                     "key_code": "open_bracket"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -177,25 +192,25 @@
                     "key_code": "close_bracket"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -214,25 +229,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -251,25 +266,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -288,25 +303,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -325,25 +340,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -362,25 +377,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -396,25 +411,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -430,25 +445,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "q"
                 },
@@ -457,25 +472,25 @@
                     "key_code": "period"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -491,25 +506,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -525,25 +540,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -562,25 +577,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "w"
                 },
@@ -592,25 +607,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -629,25 +644,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -663,25 +678,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -700,25 +715,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "e"
                 },
@@ -730,25 +745,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -770,25 +785,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -804,25 +819,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -841,25 +856,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "r"
                 },
@@ -871,25 +886,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -908,25 +923,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -942,25 +957,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -979,25 +994,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "t"
                 },
@@ -1009,25 +1024,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1046,25 +1061,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1083,25 +1098,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1117,25 +1132,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "y"
                 },
@@ -1147,25 +1162,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1184,25 +1199,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1221,25 +1236,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "u"
                 },
@@ -1254,25 +1269,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1291,25 +1306,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1328,25 +1343,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1362,25 +1377,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "i"
                 },
@@ -1392,25 +1407,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1429,25 +1444,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1466,25 +1481,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1500,25 +1515,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "o"
                 },
@@ -1530,25 +1545,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1567,25 +1582,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1604,25 +1619,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1638,25 +1653,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "p"
                 },
@@ -1665,25 +1680,25 @@
                     "key_code": "comma"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1702,25 +1717,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1736,25 +1751,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1773,25 +1788,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "a"
                 },
@@ -1800,25 +1815,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1834,25 +1849,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1868,25 +1883,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1905,25 +1920,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "s"
                 },
@@ -1935,25 +1950,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -1972,25 +1987,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2006,25 +2021,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2043,25 +2058,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "d"
                 },
@@ -2073,25 +2088,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2113,25 +2128,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2147,25 +2162,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2184,25 +2199,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "f"
                 },
@@ -2214,25 +2229,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2251,25 +2266,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2285,25 +2300,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2322,25 +2337,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "g"
                 },
@@ -2352,25 +2367,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2389,25 +2404,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2426,25 +2441,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2463,25 +2478,25 @@
                     "key_code": "h"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "h"
                 },
@@ -2493,25 +2508,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2527,25 +2542,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2564,25 +2579,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2601,25 +2616,25 @@
                     "key_code": "j"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "j"
                 },
@@ -2631,25 +2646,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2668,25 +2683,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2705,25 +2720,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2742,25 +2757,25 @@
                     "key_code": "k"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "k"
                 },
@@ -2772,25 +2787,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2812,25 +2827,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2849,25 +2864,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2886,25 +2901,25 @@
                     "key_code": "l"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "l"
                 },
@@ -2913,25 +2928,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2953,25 +2968,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -2987,25 +3002,25 @@
                     "key_code": "semicolon"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3021,25 +3036,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "semicolon"
                 },
@@ -3051,25 +3066,25 @@
                     "key_code": "n"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3091,25 +3106,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3128,25 +3143,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3162,25 +3177,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3196,25 +3211,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "z"
                 },
@@ -3226,25 +3241,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3260,25 +3275,25 @@
                     "key_code": "hyphen"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3294,25 +3309,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3331,25 +3346,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "x"
                 },
@@ -3361,25 +3376,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3398,25 +3413,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3432,25 +3447,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3469,25 +3484,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "c"
                 },
@@ -3499,25 +3514,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3536,25 +3551,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3570,25 +3585,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3607,25 +3622,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "v"
                 },
@@ -3637,25 +3652,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3674,25 +3689,25 @@
                     "key_code": "i"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3708,25 +3723,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3745,25 +3760,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "b"
                 },
@@ -3775,25 +3790,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3812,25 +3827,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3849,25 +3864,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3883,25 +3898,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "n"
                 },
@@ -3913,25 +3928,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3950,25 +3965,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -3987,25 +4002,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4021,25 +4036,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "m"
                 },
@@ -4051,25 +4066,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4088,25 +4103,25 @@
                     "key_code": "u"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4125,25 +4140,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4162,25 +4177,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "comma"
                 },
@@ -4192,25 +4207,25 @@
                     "key_code": "e"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4229,25 +4244,25 @@
                     "key_code": "a"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4266,25 +4281,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4303,25 +4318,25 @@
                     ]
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "key_code": "period"
                 },
@@ -4333,25 +4348,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4370,25 +4385,25 @@
                     "key_code": "o"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4404,25 +4419,25 @@
                     "key_code": "fn"
                   }
                 ],
+                "type": "basic"
+              },
+              {
                 "conditions": [
                   {
-                    "type": "input_source_if",
                     "input_sources": [
                       {
                         "language": "^ja$"
                       }
-                    ]
+                    ],
+                    "type": "input_source_if"
                   },
                   {
-                    "type": "frontmost_application_unless",
                     "bundle_identifiers": [
                       "^com\\.apple\\.loginwindow$"
-                    ]
+                    ],
+                    "type": "frontmost_application_unless"
                   }
-                ]
-              },
-              {
-                "type": "basic",
+                ],
                 "from": {
                   "simultaneous": [
                     {
@@ -4441,22 +4456,7 @@
                     ]
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "input_source_if",
-                    "input_sources": [
-                      {
-                        "language": "^ja$"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "frontmost_application_unless",
-                    "bundle_identifiers": [
-                      "^com\\.apple\\.loginwindow$"
-                    ]
-                  }
-                ]
+                "type": "basic"
               }
             ]
           },
@@ -4464,7 +4464,22 @@
             "description": "「’」 -> backspace",
             "manipulators": [
               {
-                "type": "basic",
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "language": "^ja$"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  },
+                  {
+                    "bundle_identifiers": [
+                      "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
                 "from": {
                   "key_code": "quote"
                 },
@@ -4473,22 +4488,7 @@
                     "key_code": "delete_or_backspace"
                   }
                 ],
-                "conditions": [
-                  {
-                    "type": "input_source_if",
-                    "input_sources": [
-                      {
-                        "language": "^ja$"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "frontmost_application_unless",
-                    "bundle_identifiers": [
-                      "^com\\.apple\\.loginwindow$"
-                    ]
-                  }
-                ]
+                "type": "basic"
               }
             ]
           },
@@ -4565,97 +4565,121 @@
           "from": {
             "key_code": "f1"
           },
-          "to": {
-            "consumer_key_code": "display_brightness_decrement"
-          }
+          "to": [
+            {
+              "consumer_key_code": "display_brightness_decrement"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f2"
           },
-          "to": {
-            "consumer_key_code": "display_brightness_increment"
-          }
+          "to": [
+            {
+              "consumer_key_code": "display_brightness_increment"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f3"
           },
-          "to": {
-            "key_code": "mission_control"
-          }
+          "to": [
+            {
+              "key_code": "mission_control"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f4"
           },
-          "to": {
-            "key_code": "launchpad"
-          }
+          "to": [
+            {
+              "key_code": "launchpad"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f5"
           },
-          "to": {
-            "key_code": "illumination_decrement"
-          }
+          "to": [
+            {
+              "key_code": "illumination_decrement"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f6"
           },
-          "to": {
-            "key_code": "illumination_increment"
-          }
+          "to": [
+            {
+              "key_code": "illumination_increment"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f7"
           },
-          "to": {
-            "consumer_key_code": "rewind"
-          }
+          "to": [
+            {
+              "consumer_key_code": "rewind"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f8"
           },
-          "to": {
-            "consumer_key_code": "play_or_pause"
-          }
+          "to": [
+            {
+              "consumer_key_code": "play_or_pause"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f9"
           },
-          "to": {
-            "consumer_key_code": "fast_forward"
-          }
+          "to": [
+            {
+              "consumer_key_code": "fast_forward"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f10"
           },
-          "to": {
-            "consumer_key_code": "mute"
-          }
+          "to": [
+            {
+              "consumer_key_code": "mute"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f11"
           },
-          "to": {
-            "consumer_key_code": "volume_decrement"
-          }
+          "to": [
+            {
+              "consumer_key_code": "volume_decrement"
+            }
+          ]
         },
         {
           "from": {
             "key_code": "f12"
           },
-          "to": {
-            "consumer_key_code": "volume_increment"
-          }
+          "to": [
+            {
+              "consumer_key_code": "volume_increment"
+            }
+          ]
         }
       ],
       "name": "Default profile",
@@ -4668,13 +4692,16 @@
           "from": {
             "key_code": "caps_lock"
           },
-          "to": {
-            "key_code": "left_control"
-          }
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ]
         }
       ],
       "virtual_hid_keyboard": {
         "country_code": 0,
+        "indicate_sticky_modifier_keys_state": true,
         "mouse_key_xy_scale": 100
       }
     }
