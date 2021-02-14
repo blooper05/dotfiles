@@ -8,7 +8,7 @@
         "revision": "43668b6a7ce07cb5ba0936fe138185eda271894b"
       },
       "homebrew/cask": {
-        "revision": "ca795d9213f3e91b8fe01f2a42fa652d96ba5d60"
+        "revision": "c06d7b2f1a12f128c7f6a811279796367a6d95ba"
       },
       "homebrew/cask-drivers": {
         "revision": "50c02fd9b729516cfbe469584c7797640e453421"
@@ -17,7 +17,7 @@
         "revision": "3947e683a3c03eff4d3ce695bbf49c2abf5735ef"
       },
       "homebrew/core": {
-        "revision": "67595a105f3cc3e676620c6c6ba3519a306252ae"
+        "revision": "1d3004b52788e9d34b7d46a2760202b0d32fb223"
       },
       "k1low/tap": {
         "revision": "b9ff6a2593cbc586e3e2ee00844a83189ffa8e60"
@@ -1338,12 +1338,6 @@
           "full_name": "microsoft-office"
         }
       },
-      "miro": {
-        "version": "0.4.7",
-        "options": {
-          "full_name": "miro"
-        }
-      },
       "mmhmm": {
         "version": "1.1.1,1611102000",
         "options": {
@@ -1437,7 +1431,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "67595a105f3cc3e676620c6c6ba3519a306252ae",
+        "Homebrew/homebrew-core": "1d3004b52788e9d34b7d46a2760202b0d32fb223",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
