@@ -11,7 +11,7 @@ init:
 	compaudit | xargs sudo chmod g-w
 	mkdir -p "$$HOME/.local/share/zsh"
 	rm -rf "$$HOME/.zcompcache" "$$HOME/.zsh_history" "$$HOME/.zsh_sessions"
-	# mackup restore
+	mackup restore
 
 clean:
 	@-$(foreach val,$(DOTFILES), rm -rfv $(HOME)/.$(val);)
