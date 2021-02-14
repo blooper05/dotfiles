@@ -37,7 +37,7 @@ brew "markdownlint-cli"
 brew "mas"
 brew "mitmproxy"
 brew "neovim", args: ["HEAD"]
-brew "nushell"
+# brew "nushell"
 brew "procs"
 brew "ripgrep"
 brew "rust"
