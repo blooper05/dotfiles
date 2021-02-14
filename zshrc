@@ -149,30 +149,16 @@ export LESS=-inqMRS
 export LESSCHARSET=utf-8
 export LESSHISTFILE=$XDG_DATA_HOME/less/history
 
+# asdf {{{2
+source $(brew --prefix asdf)/asdf.sh
+
 # Ruby {{{2
 export GEMRC=$XDG_CONFIG_HOME/gem/gemrc
 export BUNDLE_CONFIG=$XDG_CONFIG_HOME/bundler/config
 export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
 
-# rbenv {{{2
-export RBENV_ROOT=/usr/local/var/rbenv
-if type rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# if [ ! -f $RBENV_ROOT/default-gems ]; then
-#   echo bundler             >> $RBENV_ROOT/default-gems
-#   echo neovim              >> $RBENV_ROOT/default-gems
-#   echo rubocop             >> $RBENV_ROOT/default-gems
-#   echo rubocop-inflector   >> $RBENV_ROOT/default-gems
-#   echo rubocop-performance >> $RBENV_ROOT/default-gems
-#   echo rubocop-rspec       >> $RBENV_ROOT/default-gems
-#   echo solargraph          >> $RBENV_ROOT/default-gems
-# fi
-
 # Node.js {{{2
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
-
-# nodenv {{{2
-export NODENV_ROOT=/usr/local/var/nodenv
-if type nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 # Go {{{2
 export GOPATH=$XDG_DATA_HOME/go
