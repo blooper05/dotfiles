@@ -14,4 +14,4 @@ init:
 	mackup restore
 
 clean:
-	@-$(foreach val,$(DOTFILES), rm -rfv $(HOME)/.$(val);)
+	@-$(foreach val, $(DOTFILES), rm -rfv $(HOME)/.$(val);)
