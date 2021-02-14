@@ -8,7 +8,7 @@
         "revision": "43668b6a7ce07cb5ba0936fe138185eda271894b"
       },
       "homebrew/cask": {
-        "revision": "019a1ed9b8f226d93c41d6cf31dbb3624aa7b98d"
+        "revision": "ca795d9213f3e91b8fe01f2a42fa652d96ba5d60"
       },
       "homebrew/cask-drivers": {
         "revision": "50c02fd9b729516cfbe469584c7797640e453421"
@@ -17,7 +17,7 @@
         "revision": "3947e683a3c03eff4d3ce695bbf49c2abf5735ef"
       },
       "homebrew/core": {
-        "revision": "e486bf43cdeb9a017a14cb19dd644aba430ffc1b"
+        "revision": "de81c331b57a2bda8932874f86c298033d007d0d"
       },
       "k1low/tap": {
         "revision": "b9ff6a2593cbc586e3e2ee00844a83189ffa8e60"
@@ -1248,12 +1248,6 @@
           "full_name": "appcleaner"
         }
       },
-      "avira-antivirus": {
-        "version": "latest",
-        "options": {
-          "full_name": "avira-antivirus"
-        }
-      },
       "clipy": {
         "version": "1.2.1",
         "options": {
@@ -1449,7 +1443,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "e486bf43cdeb9a017a14cb19dd644aba430ffc1b",
+        "Homebrew/homebrew-core": "de81c331b57a2bda8932874f86c298033d007d0d",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
