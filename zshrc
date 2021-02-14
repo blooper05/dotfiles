@@ -65,7 +65,7 @@ alias top='btm'
 alias watch='watchexec'
 alias dig='dog'
 alias ping='gping'
-alias curl='ht'
+alias curl='xh'
 
 # Key Binding {{{1
 
