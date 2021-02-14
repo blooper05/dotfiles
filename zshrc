@@ -150,6 +150,8 @@ export LESSCHARSET=utf-8
 export LESSHISTFILE=$XDG_DATA_HOME/less/history
 
 # asdf {{{2
+export ASDF_CONFIG_FILE=$XDG_CONFIG_HOME/asdf/asdfrc
+export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
 source $(brew --prefix asdf)/asdf.sh
 
 # Ruby {{{2
