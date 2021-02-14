@@ -17,7 +17,7 @@
         "revision": "3947e683a3c03eff4d3ce695bbf49c2abf5735ef"
       },
       "homebrew/core": {
-        "revision": "d6ca494e7487b31e2e8e0fce20d369633b6e423a"
+        "revision": "e486bf43cdeb9a017a14cb19dd644aba430ffc1b"
       },
       "k1low/tap": {
         "revision": "b9ff6a2593cbc586e3e2ee00844a83189ffa8e60"
@@ -1753,6 +1753,12 @@
         "options": {
           "full_name": "zoom"
         }
+      },
+      "avira-antivirus": {
+        "version": "latest",
+        "options": {
+          "full_name": "avira-antivirus"
+        }
       }
     },
     "mas": {
@@ -1791,7 +1797,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "d6ca494e7487b31e2e8e0fce20d369633b6e423a",
+        "Homebrew/homebrew-core": "e486bf43cdeb9a017a14cb19dd644aba430ffc1b",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
