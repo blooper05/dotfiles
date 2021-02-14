@@ -16,7 +16,7 @@
         },
         "rules": [
           {
-            "description": "each key setting",
+            "description": "US Thumb-Shift",
             "manipulators": [
               {
                 "conditions": [
@@ -4461,7 +4461,7 @@
             ]
           },
           {
-            "description": "「’」 -> backspace",
+            "description": "quote -> delete_or_backspace",
             "manipulators": [
               {
                 "conditions": [
@@ -4493,7 +4493,7 @@
             ]
           },
           {
-            "description": "left_command -> E, right_command -> J",
+            "description": "left_command -> japanese_eisuu, right_command -> japanese_kana",
             "manipulators": [
               {
                 "from": {
