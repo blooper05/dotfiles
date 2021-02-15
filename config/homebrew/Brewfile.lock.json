@@ -8,7 +8,7 @@
         "revision": "43668b6a7ce07cb5ba0936fe138185eda271894b"
       },
       "homebrew/cask": {
-        "revision": "0e297f55d86347227cea88bae1bb1cfe205e6c91"
+        "revision": "0e8bcdf93d579c7d4042f25489e98160275bf962"
       },
       "homebrew/cask-drivers": {
         "revision": "50c02fd9b729516cfbe469584c7797640e453421"
@@ -17,7 +17,7 @@
         "revision": "afac142d7bfdca4ae752e53879053ce1f0d06757"
       },
       "homebrew/core": {
-        "revision": "c677a3c67fad7c86c06a541f5b488c09431a7848"
+        "revision": "2a204488f48fa3aebc5114a951f3ce24221b361f"
       },
       "k1low/tap": {
         "revision": "b17ae350da3a37fc22c1aa42612088586e24de13"
@@ -355,6 +355,33 @@
             "mojave": {
               "url": "https://homebrew.bintray.com/bottles/git-2.30.1.mojave.bottle.tar.gz",
               "sha256": "c84740ee72f1909fe019bba32ccf265b393df5c2fbd5d31886cca5904928f1b9"
+            }
+          }
+        }
+      },
+      "git-delta": {
+        "version": "0.6.0",
+        "bottle": {
+          "rebuild": 0,
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "root_url": "https://homebrew.bintray.com/bottles",
+          "files": {
+            "arm64_big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/git-delta-0.6.0.arm64_big_sur.bottle.tar.gz",
+              "sha256": "4fd61af38041ab4aa62806f93da19660a1679439b5516ec8a9a8bc527c45878b"
+            },
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/git-delta-0.6.0.big_sur.bottle.tar.gz",
+              "sha256": "e76bbea0a4ce5dbbb90106d9fb5f6aaf67ccac5d7f58e2d1b92390e018525fc4"
+            },
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/git-delta-0.6.0.catalina.bottle.tar.gz",
+              "sha256": "aee11642c678a7d1c0865862b4e8c1834e52818a0cb57f2fec8cb9882f6e0c22"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/git-delta-0.6.0.mojave.bottle.tar.gz",
+              "sha256": "13b9a57ef2a7185dec1ca611f02ab94d8d200c0d8a553be82a3f536375e9e76d"
             }
           }
         }
@@ -1215,33 +1242,6 @@
       "kayac/tap/ecspresso": {
         "version": "1.3.3",
         "bottle": false
-      },
-      "git-delta": {
-        "version": "0.6.0",
-        "bottle": {
-          "rebuild": 0,
-          "cellar": ":any_skip_relocation",
-          "prefix": "/usr/local",
-          "root_url": "https://homebrew.bintray.com/bottles",
-          "files": {
-            "arm64_big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/git-delta-0.6.0.arm64_big_sur.bottle.tar.gz",
-              "sha256": "4fd61af38041ab4aa62806f93da19660a1679439b5516ec8a9a8bc527c45878b"
-            },
-            "big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/git-delta-0.6.0.big_sur.bottle.tar.gz",
-              "sha256": "e76bbea0a4ce5dbbb90106d9fb5f6aaf67ccac5d7f58e2d1b92390e018525fc4"
-            },
-            "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/git-delta-0.6.0.catalina.bottle.tar.gz",
-              "sha256": "aee11642c678a7d1c0865862b4e8c1834e52818a0cb57f2fec8cb9882f6e0c22"
-            },
-            "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/git-delta-0.6.0.mojave.bottle.tar.gz",
-              "sha256": "13b9a57ef2a7185dec1ca611f02ab94d8d200c0d8a553be82a3f536375e9e76d"
-            }
-          }
-        }
       }
     },
     "cask": {
@@ -1365,12 +1365,6 @@
           "full_name": "microsoft-office"
         }
       },
-      "mmhmm": {
-        "version": "1.1.1,1611102000",
-        "options": {
-          "full_name": "mmhmm"
-        }
-      },
       "ngrok": {
         "version": "latest",
         "options": {
@@ -1458,7 +1452,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "c677a3c67fad7c86c06a541f5b488c09431a7848",
+        "Homebrew/homebrew-core": "2a204488f48fa3aebc5114a951f3ce24221b361f",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
