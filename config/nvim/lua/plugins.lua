@@ -429,17 +429,17 @@ return require('packer').startup(function()
 
       local dial = require('dial')
 
-      dial.augends.boolean = dial.augends.common.enum_cyclic({
+      dial.augends['custom#boolean'] = dial.common.enum_cyclic({
         name    = 'boolean',
         strlist = { 'true', 'false' },
       })
-      table.insert(dial.searchlist.normal, dial.augends.boolean)
+      table.insert(dial.config.searchlist.normal, 'custom#boolean')
 
-      dial.augends.git_rebase = dial.augends.common.enum_cyclic({
+      dial.augends['custom#git_rebase'] = dial.common.enum_cyclic({
         name    = 'git_rebase',
         strlist = { 'pick', 'fixup', 'reword', 'edit', 'squash', 'exec', 'break', 'drop', 'label', 'reset', 'merge' },
       })
-      table.insert(dial.searchlist.normal, dial.augends.git_rebase)
+      table.insert(dial.config.searchlist.normal, 'custom#git_rebase')
     end,
   }
 
