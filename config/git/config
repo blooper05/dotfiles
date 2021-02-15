@@ -14,11 +14,11 @@
 [help]
   autocorrect = 1
 [interactive]
-  diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+  diffFilter = delta --color-only
 [pager]
-  log  = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-  show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-  diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+  log  = delta
+  show = delta
+  diff = delta
 [pretty]
   pretty = %C(red)%h%C(auto) - %s %C(green)%cr%C(auto) %C(blue)<%an>%C(auto)%C(yellow)%d%C(auto)
 [pull]
@@ -34,6 +34,10 @@
   showPatch = true
 [user]
   useConfigOnly = true
+[delta]
+  line-numbers  = true
+  side-by-side  = true
+  diff-so-fancy = true
 [secrets]
   providers = git secrets --aws-provider
   patterns  = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
