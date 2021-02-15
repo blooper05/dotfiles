@@ -8,7 +8,7 @@
         "revision": "43668b6a7ce07cb5ba0936fe138185eda271894b"
       },
       "homebrew/cask": {
-        "revision": "c06d7b2f1a12f128c7f6a811279796367a6d95ba"
+        "revision": "975890963f4e4a427c16a548a51eeaf535038792"
       },
       "homebrew/cask-drivers": {
         "revision": "50c02fd9b729516cfbe469584c7797640e453421"
@@ -17,10 +17,10 @@
         "revision": "3947e683a3c03eff4d3ce695bbf49c2abf5735ef"
       },
       "homebrew/core": {
-        "revision": "1d3004b52788e9d34b7d46a2760202b0d32fb223"
+        "revision": "1db0ce7f9c734f55c1aa7a7575326df9c2c84d02"
       },
       "k1low/tap": {
-        "revision": "b9ff6a2593cbc586e3e2ee00844a83189ffa8e60"
+        "revision": "b17ae350da3a37fc22c1aa42612088586e24de13"
       },
       "kayac/tap": {
         "revision": "396f9ae42a502d53f68fe760e75ec41fb3cb8a27"
@@ -790,7 +790,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-971e0ca",
+        "version": "HEAD-dc3ca16_1",
         "bottle": {
           "rebuild": 0,
           "cellar": "/usr/local/Cellar",
@@ -1431,7 +1431,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "1d3004b52788e9d34b7d46a2760202b0d32fb223",
+        "Homebrew/homebrew-core": "1db0ce7f9c734f55c1aa7a7575326df9c2c84d02",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
