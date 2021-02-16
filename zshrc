@@ -166,8 +166,8 @@ export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 export GOPATH=$XDG_DATA_HOME/go
 export PATH=$GOPATH/bin:$PATH
 
-# fzf {{{2
-export FZF_DEFAULT_OPTS='--extended --cycle --reverse --ansi --select-1 --exit-0 --no-mouse --multi'
+# skim {{{2
+export SKIM_DEFAULT_OPTIONS='--multi --reverse --ansi --select-1 --exit-0'
 
 # anyframe {{{2
 bindkey '^k' anyframe-widget-kill
