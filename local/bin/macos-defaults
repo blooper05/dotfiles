@@ -12,7 +12,7 @@ defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -s
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 
 # System Preferences >> Dock & Menu Bar >> Position on screen: Right
-defaults write com.apple.dock orientation right
+defaults write com.apple.dock orientation -string 'right'
 
 # System Preferences >> Dock & Menu Bar >> Double-click a window's title bar to: minimize
 defaults write NSGlobalDomain AppleActionOnDoubleClick Minimize
