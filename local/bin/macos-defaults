@@ -34,8 +34,6 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # System Preferences >> Touch ID: index finger
 
-# System Preferences >> Extensions: off
-
 # System Preferences >> Security & Privacy >> Firewall >> Firewall: On
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
