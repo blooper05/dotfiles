@@ -30,7 +30,7 @@ defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool 
 defaults write com.apple.menuextra.clock Show24Hour -bool true
 
 # System Preferences >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
-defaults write com.apple.dock mru-spaces -int 0
+defaults write com.apple.dock mru-spaces -bool false
 
 # System Preferences >> Touch ID: index finger
 
