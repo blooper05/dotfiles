@@ -41,6 +41,10 @@ defaults write com.apple.dock mru-spaces -bool false
 # System Preferences >> Security & Privacy >> Firewall >> Firewall: On
 /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
+# System Preferences >> Software Update >> Automatically keep my Mac up to date: on
+# System Preferences >> Software Update >> Advanced... >> Install macOS updates: on
+# System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
+
 # System Preferences >> Keyboard >> Keyboard >> Key Repeat: Fast
 defaults write NSGlobalDomain KeyRepeat -int 2
 
