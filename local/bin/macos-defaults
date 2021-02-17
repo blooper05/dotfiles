@@ -11,16 +11,16 @@ defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -s
 # System Preferences >> Desktop & Screen Saver >> Screen Saver >> Start after: 5 Minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 
-# System Preferences >> Dock & Menu Bar >> Position on screen: Right
+# System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Position on screen: Right
 defaults write com.apple.dock orientation -string 'right'
 
-# System Preferences >> Dock & Menu Bar >> Minimize windows into application icon: on
+# System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Minimize windows into application icon: on
 defaults write com.apple.dock minimize-to-application -int 1
 
-# System Preferences >> Dock & Menu Bar >> Animate opening applications: off
+# System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Animate opening applications: off
 defaults write com.apple.dock launchanim -int 0
 
-# System Preferences >> Dock & Menu Bar >> Automatically hide and show the Dock: on
+# System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Automatically hide and show the Dock: on
 defaults write com.apple.dock autohide -int 1
 
 # System Preferences >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
