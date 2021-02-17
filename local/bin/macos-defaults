@@ -45,6 +45,9 @@ defaults write com.apple.dock mru-spaces -bool false
 # System Preferences >> Software Update >> Advanced... >> Install macOS updates: on
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 
+# System Preferences >> Network >> Wi-Fi >> Advanced... >> DNS >> DNS Servers:
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4
+
 # System Preferences >> Keyboard >> Keyboard >> Key Repeat: Fast
 defaults write NSGlobalDomain KeyRepeat -int 2
 
