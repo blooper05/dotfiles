@@ -23,6 +23,9 @@ defaults write com.apple.dock launchanim -bool false
 # System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Automatically hide and show the Dock: on
 defaults write com.apple.dock autohide -bool true
 
+# System Preferences >> Dock & Menu Bar >> Battery >> Show Percentage: on
+defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool true
+
 # System Preferences >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -int 0
 
