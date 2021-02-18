@@ -105,6 +105,11 @@ defaults write com.apple.inputmethod.Kotoeri JIMPrefFullWidthNumeralCharactersKe
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
 
 # System Preferences >> Trackpad >> Point & Click >> Look up & data detectors: off
+defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -bool false
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -bool false
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerTapGesture -bool false
+
 # System Preferences >> Trackpad >> Point & Click >> Tap to click: on
 # System Preferences >> Trackpad >> Point & Click >> Tracking speed: 3
 # System Preferences >> Trackpad >> Point & Click >> Force click and haptic feedback: off
