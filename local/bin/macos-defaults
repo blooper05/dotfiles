@@ -81,6 +81,9 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # System Preferences >> Keyboard >> Shortcuuts >> Spotlight >> Show Spotlight search: Control + Space
 # System Preferences >> Keyboard >> Shortcuuts >> Spotlight >> Show Finder search window: Control + Option + Space
 
+# System Preferences >> Keyboard >> Dictation >> Shortcut: Off
+defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
+
 # System Preferences >> Trackpad >> Point & Click >> Look up & data detectors: off
 # System Preferences >> Trackpad >> Point & Click >> Tap to click: on
 # System Preferences >> Trackpad >> Point & Click >> Tracking speed: 3
