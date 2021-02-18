@@ -77,9 +77,17 @@ defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# System Preferences >> Keyboard >> Shortcuuts >> Restore Defaults
-# System Preferences >> Keyboard >> Shortcuuts >> Spotlight >> Show Spotlight search: Control + Space
-# System Preferences >> Keyboard >> Shortcuuts >> Spotlight >> Show Finder search window: Control + Option + Space
+# System Preferences >> Keyboard >> Shortcuts >> Input Sources >> Select the previous input source: off
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{ enabled = 0; value = { parameters = (32, 49, 262144); type = standard; }; }'
+
+# System Preferences >> Keyboard >> Shortcuts >> Input Sources >> Select next source in input menu: off
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 '{ enabled = 0; value = { parameters = (32, 49, 786432); type = standard; }; }'
+
+# System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Spotlight search: Control + Space
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ enabled = 1; value = { parameters = (32, 49, 262144); type = standard; }; }'
+
+# System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Finder search window: Control + Option + Space
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '{ enabled = 1; value = { parameters = (32, 49, 786432); type = standard; }; }'
 
 # System Preferences >> Keyboard >> Dictation >> Shortcut: Off
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
