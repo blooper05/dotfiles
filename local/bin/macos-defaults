@@ -32,11 +32,11 @@ defaults write com.apple.menuextra.clock Show24Hour -bool true
 # System Preferences >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -bool false
 
-# System Preferences >> Notifications >>
-# System Preferences >> Internet Accounts >>
-# System Preferences >> Wallet & Apple Pay >>
-# System Preferences >> Touch ID: index finger
-# System Preferences >> Security & Privacy >> General >> Use your Apple Watch to unlock apps and your Mac: on
+# TODO: System Preferences >> Notifications >>
+# TODO: System Preferences >> Internet Accounts >>
+# TODO: System Preferences >> Wallet & Apple Pay >>
+# TODO: System Preferences >> Touch ID: index finger
+# TODO: System Preferences >> Security & Privacy >> General >> Use your Apple Watch to unlock apps and your Mac: on
 
 # System Preferences >> Security & Privacy >> Firewall >> Firewall: On
 /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
