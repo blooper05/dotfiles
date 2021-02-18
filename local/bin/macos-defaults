@@ -95,6 +95,9 @@ defaults write com.apple.inputmethod.Kotoeri JIMPrefAutocorrectionKey -bool fals
 # System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Windows-like shortcuts: on
 defaults write com.apple.inputmethod.Kotoeri JIMPrefWindowsModeKey -bool true
 
+# System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Candidate window >> Font: HackGen35Nerd Console Regular
+defaults write com.apple.inputmethod.Kotoeri JIMPrefCandidateWindowFontKey -string 'HackGen35NerdConsole-Regular'
+
 # System Preferences >> Keyboard >> Dictation >> Shortcut: Off
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
 
