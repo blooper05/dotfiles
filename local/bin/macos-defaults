@@ -115,7 +115,9 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -bool true
 
-# System Preferences >> Trackpad >> Point & Click >> Tracking speed: 3
+# System Preferences >> Trackpad >> Point & Click >> Tracking speed: 2
+defaults write NSGlobalDomain com.apple.trackpad.scaling -int 2
+
 # System Preferences >> Trackpad >> Point & Click >> Force click and haptic feedback: off
 # System Preferences >> Trackpad >> More Gestures >> Swipe between full-screen apps: Swipe left or right with four fingers
 # System Preferences >> Trackpad >> More Gestures >> Notification Center: off
