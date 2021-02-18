@@ -92,6 +92,9 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '{ en
 # System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Correct spelling: off
 defaults write com.apple.inputmethod.Kotoeri JIMPrefAutocorrectionKey -bool false
 
+# System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Windows-like shortcuts: on
+defaults write com.apple.inputmethod.Kotoeri JIMPrefWindowsModeKey -bool true
+
 # System Preferences >> Keyboard >> Dictation >> Shortcut: Off
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
 
