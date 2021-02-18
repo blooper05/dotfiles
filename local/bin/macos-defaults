@@ -45,6 +45,7 @@ defaults write com.apple.dock mru-spaces -bool false
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
+sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
 
 # System Preferences >> Network >> Wi-Fi >> Advanced... >> DNS >> DNS Servers:
 networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4
