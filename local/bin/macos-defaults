@@ -89,6 +89,9 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ en
 # System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Finder search window: Control + Option + Space
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '{ enabled = 1; value = { parameters = (32, 49, 786432); type = standard; }; }'
 
+# System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Correct spelling: off
+defaults write com.apple.inputmethod.Kotoeri JIMPrefAutocorrectionKey -bool false
+
 # System Preferences >> Keyboard >> Dictation >> Shortcut: Off
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
 
