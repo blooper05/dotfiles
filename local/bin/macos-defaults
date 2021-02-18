@@ -119,6 +119,10 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -bool tru
 defaults write NSGlobalDomain com.apple.trackpad.scaling -int 2
 
 # System Preferences >> Trackpad >> Point & Click >> Force click and haptic feedback: off
+defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -bool false
+defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool true
+defaults write com.apple.preference.trackpad ForceClickSavedState -bool false
+
 # System Preferences >> Trackpad >> More Gestures >> Swipe between full-screen apps: Swipe left or right with four fingers
 # System Preferences >> Trackpad >> More Gestures >> Notification Center: off
 # System Preferences >> Trackpad >> More Gestures >> Mission Control: Swipe up with four fingers
