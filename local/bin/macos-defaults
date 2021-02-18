@@ -55,6 +55,9 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # System Preferences >> Keyboard >> Keyboard >> Adjust keyboard brightness in low light: off
+# FIXME: defaults write com.apple.BezelServices kDim -bool false
+# FIXME: sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Keyboard Enabled' -bool false
+
 # System Preferences >> Keyboard >> Text >> Correct spelling automatically: off
 # System Preferences >> Keyboard >> Text >> Use smart quotes and dashes: off
 # System Preferences >> Keyboard >> Shortcuuts >> Restore Defaults
