@@ -64,6 +64,10 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # FIXME: defaults write com.apple.BezelServices kDim -bool false
 # FIXME: sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Keyboard Enabled' -bool false
 
+# System Preferences >> Keyboard >> Keyboard >> Customize Control Strip... >>
+defaults write com.apple.controlstrip MiniCustomized -array 'com.apple.system.brightness' 'com.apple.system.volume' 'com.apple.system.mute'
+defaults write com.apple.controlstrip FullCustomized -array 'com.apple.system.group.brightness' 'com.apple.system.mission-control' 'com.apple.system.launchpad' 'com.apple.system.group.keyboard-brightness' 'com.apple.system.group.media' 'com.apple.system.group.volume'
+
 # System Preferences >> Keyboard >> Text >> Correct spelling automatically: off
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain WebAutomaticSpellingCorrectionEnabled -bool false
