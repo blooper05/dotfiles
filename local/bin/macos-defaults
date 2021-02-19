@@ -130,6 +130,10 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
 
 # System Preferences >> Trackpad >> More Gestures >> Swipe between full-screen apps: Swipe left or right with four fingers
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
+
 # System Preferences >> Trackpad >> More Gestures >> Mission Control: Swipe up with four fingers
 
 # System Preferences >> Displays >> Display >> Automatically adjust brightness: off
