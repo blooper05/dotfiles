@@ -167,4 +167,5 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
+# Get Hammerspoon to follow the XDG Base Directory Specification
 defaults write org.hammerspoon.Hammerspoon MJConfigFile "$HOME/.config/hammerspoon/init.lua"
