@@ -162,6 +162,9 @@ sudo scutil --set ComputerName まっくぶっくぷろ
 # System Preferences >> Sharing >> Computer Name >> Edit... >> Local Hostname: MacBookPro
 sudo scutil --set LocalHostName MacBookPro
 
+# Wipe all app icons from the Dock
+defaults write com.apple.dock persistent-apps -array
+
 # Save screenshots to the Downloads directory
 defaults write com.apple.screencapture location -string "$HOME/Downloads/"
 
