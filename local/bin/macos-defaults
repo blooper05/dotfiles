@@ -158,7 +158,9 @@ sudo scutil --set ComputerName まっくぶっくぷろ
 # System Preferences >> Sharing >> Computer Name >> Edit... >> Local Hostname: MacBookPro
 sudo scutil --set LocalHostName MacBookPro
 
-defaults write com.apple.screencapture location "$HOME/Downloads/"
+# Save screenshots to the Downloads directory
+defaults write com.apple.screencapture location -string "$HOME/Downloads/"
+
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
