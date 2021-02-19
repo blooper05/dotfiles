@@ -33,7 +33,11 @@ defaults write com.apple.menuextra.clock Show24Hour -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # TODO: System Preferences >> Notifications >>
-# TODO: System Preferences >> Internet Accounts >>
+# TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
+# TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
+# TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> Reeder: on
+# TODO: System Preferences >> Internet Accounts >> iCloud >> Photos: on
+# TODO: System Preferences >> Internet Accounts >> iCloud >> Find My Mac: on
 # TODO: System Preferences >> Wallet & Apple Pay >>
 # TODO: System Preferences >> Touch ID: index finger
 # TODO: System Preferences >> Security & Privacy >> General >> Use your Apple Watch to unlock apps and your Mac: on
@@ -153,11 +157,6 @@ sudo scutil --set ComputerName まっくぶっくぷろ
 
 # System Preferences >> Sharing >> Computer Name >> Edit... >> Local Hostname: MacBookPro
 sudo scutil --set LocalHostName MacBookPro
-
-# System Preferences >> iCloud >> iCloud Drive: on
-# System Preferences >> iCloud >> iCloud Drive >> Options >> Documents >> Keynote: on
-# System Preferences >> iCloud >> iCloud Drive >> Options >> Documents >> System Preferences: on
-# System Preferences >> iCloud >> Find My Mac: on
 
 defaults write com.apple.screencapture location "$HOME/Downloads/"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
