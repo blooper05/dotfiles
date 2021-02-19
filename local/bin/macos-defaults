@@ -123,6 +123,7 @@ defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -int 0
 defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool true
 defaults write com.apple.preference.trackpad ForceClickSavedState -bool false
 
+# System Preferences >> Trackpad >> More Gestures >> Swipe between pages: Swipe with three fingers
 # System Preferences >> Trackpad >> More Gestures >> Swipe between full-screen apps: Swipe left or right with four fingers
 # System Preferences >> Trackpad >> More Gestures >> Mission Control: Swipe up with four fingers
 
