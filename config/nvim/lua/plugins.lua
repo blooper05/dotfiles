@@ -27,7 +27,7 @@ return require('packer').startup(function()
 
   -- Appearance {{{1
 
-  use { 'Th3Whit3Wolf/one-nvim',
+  use { 'glepnir/zephyr-nvim',
     config = function()
       -- Assume a dark background.
       vim.o.background = 'dark'
@@ -35,8 +35,8 @@ return require('packer').startup(function()
       -- Enable 24-bit RGB color in the TUI.
       vim.o.termguicolors = true
 
-      -- Use one-nvim as colorscheme.
-      vim.cmd('colorscheme one-nvim')
+      -- Use zephyr as colorscheme.
+      vim.cmd('colorscheme zephyr')
     end,
   }
 
