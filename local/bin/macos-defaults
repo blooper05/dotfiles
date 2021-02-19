@@ -154,8 +154,6 @@ sudo scutil --set ComputerName まっくぶっくぷろ
 # System Preferences >> Sharing >> Computer Name >> Edit... >> Local Hostname: MacBookPro
 sudo scutil --set LocalHostName MacBookPro
 
-# System Preferences >> App Store >> Install app updates: on
-# System Preferences >> App Store >> Install macOS updates: on
 # System Preferences >> iCloud >> iCloud Drive: on
 # System Preferences >> iCloud >> iCloud Drive >> Options >> Documents >> Keynote: on
 # System Preferences >> iCloud >> iCloud Drive >> Options >> Documents >> System Preferences: on
