@@ -144,8 +144,8 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwi
 # FIXME: sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Display Enabled' -bool false
 
 # System Preferences >> Displays >> Night Shift >> Schedule: Custom
-# System Preferences >> Displays >> Night Shift >> From: 4:00
-# System Preferences >> Displays >> Night Shift >> to: 3:59
+# System Preferences >> Displays >> Night Shift >> From: 5:00
+# System Preferences >> Displays >> Night Shift >> to: 4:59
 # System Preferences >> Displays >> Night Shift >> Color Temperature: More Warm
 
 # System Preferences >> Sharing >> Computer Name: まっくぶっくぷろ
