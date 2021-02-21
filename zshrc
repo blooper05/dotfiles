@@ -155,9 +155,7 @@ export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
 source $(brew --prefix asdf)/asdf.sh
 
 # Ruby {{{2
-export GEMRC=$XDG_CONFIG_HOME/gem/gemrc
 export BUNDLE_CONFIG=$XDG_CONFIG_HOME/bundler/config
-export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem/specs
 
 # Node.js {{{2
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
