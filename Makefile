@@ -1,6 +1,6 @@
 .PHONY: deploy init clean
 
-DOTFILES := config local/bin mackup.cfg zshrc
+DOTFILES := config local/bin mackup mackup.cfg zshrc
 
 deploy:
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/.$(val);)
