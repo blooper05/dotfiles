@@ -5,19 +5,19 @@
         "revision": "10397cdc717cfe8c24497523e47bbd0b32770a05"
       },
       "homebrew/bundle": {
-        "revision": "1528860218da1b1a9c8c84f56a47393854f52b96"
+        "revision": "05ad77b2c2633684508624fe773586778ab01ffc"
       },
       "homebrew/cask": {
-        "revision": "ecd6575b8d5ee5a4dbd86e07be4e1118516b642f"
+        "revision": "869cb4e3fe89fbbba18f4cc1e8d49b449d640eda"
       },
       "homebrew/cask-drivers": {
-        "revision": "88ac160237ba076ea93285151ef4fef8bc221c86"
+        "revision": "ad9df26a099615bc825fa376fe5c2a14a03fa8f0"
       },
       "homebrew/cask-fonts": {
-        "revision": "266ef729ae51b8d6e47ff99a83e3479907ab96e0"
+        "revision": "8030e59f3b5c66f77af004ee2ea34375d00e50ed"
       },
       "homebrew/core": {
-        "revision": "1f59b0fefd805574fbe0f8878d15bc2dcdcd51f7"
+        "revision": "f0564c11e93047432603e210ca474feab2e925fc"
       },
       "k1low/tap": {
         "revision": "b6c9c64168896481d26a37f7b8755a3d4482fb9f"
@@ -1019,7 +1019,7 @@
         }
       },
       "tfsec": {
-        "version": "0.38.5",
+        "version": "0.38.6",
         "bottle": {
           "rebuild": 0,
           "cellar": ":any_skip_relocation",
@@ -1027,20 +1027,20 @@
           "root_url": "https://homebrew.bintray.com/bottles",
           "files": {
             "arm64_big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/tfsec-0.38.5.arm64_big_sur.bottle.tar.gz",
-              "sha256": "c2d76a9d9e659e9fd82b180812c0d43b89f660758e1d4805d268063eea621e13"
+              "url": "https://homebrew.bintray.com/bottles/tfsec-0.38.6.arm64_big_sur.bottle.tar.gz",
+              "sha256": "9f602a5388fa8ca3f6dc26d3173ffb822e7225d9dc6f1184844721f4fa5a8614"
             },
             "big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/tfsec-0.38.5.big_sur.bottle.tar.gz",
-              "sha256": "07115c8b22a51af5b756fb16c07cb8e378e6a32dfd295a444e66f4adf81b2f29"
+              "url": "https://homebrew.bintray.com/bottles/tfsec-0.38.6.big_sur.bottle.tar.gz",
+              "sha256": "9d2815c521bec124b74c200b13ce8fc822c1db28cd81f68f4564f422f63d9c5d"
             },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/tfsec-0.38.5.catalina.bottle.tar.gz",
-              "sha256": "c81446c95004f15ad87a0c7a756a00c7d4b29702959de792f8d6cac994071133"
+              "url": "https://homebrew.bintray.com/bottles/tfsec-0.38.6.catalina.bottle.tar.gz",
+              "sha256": "66ff8e504eaafd1f0bae22b2832f9b63990921187579d59780cbcd08e46e1efc"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/tfsec-0.38.5.mojave.bottle.tar.gz",
-              "sha256": "2fe5cfcca6719169343848c95f5a09695de0a5bbdad98068107ff5630f6ad623"
+              "url": "https://homebrew.bintray.com/bottles/tfsec-0.38.6.mojave.bottle.tar.gz",
+              "sha256": "fbceb608c9682ac965d5d3c0641fc409970f46c8bc1b3bac4b863518a25793a1"
             }
           }
         }
@@ -1286,6 +1286,12 @@
           "full_name": "hammerspoon"
         }
       },
+      "hyperswitch": {
+        "version": "0.2.592-dev",
+        "options": {
+          "full_name": "hyperswitch"
+        }
+      },
       "iina": {
         "version": "1.2.0,129",
         "options": {
@@ -1387,12 +1393,6 @@
         "options": {
           "full_name": "zoom"
         }
-      },
-      "hyperswitch": {
-        "version": "0.2.592-dev",
-        "options": {
-          "full_name": "hyperswitch"
-        }
       }
     },
     "mas": {
@@ -1425,9 +1425,9 @@
   "system": {
     "macos": {
       "big_sur": {
-        "HOMEBREW_VERSION": "3.0.1",
+        "HOMEBREW_VERSION": "3.0.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "1f59b0fefd805574fbe0f8878d15bc2dcdcd51f7",
+        "Homebrew/homebrew-core": "f0564c11e93047432603e210ca474feab2e925fc",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
