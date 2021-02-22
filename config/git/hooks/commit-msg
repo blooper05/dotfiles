@@ -11,8 +11,8 @@ stdin_available=1
 (exec < /dev/tty) 2> /dev/null || stdin_available=0
 
 if [ $stdin_available -eq 1 ]; then
-    # Now that we know we have a functional tty, set stdin to it so we can ask the user questions :-)
-    exec < /dev/tty
+  # Now that we know we have a functional tty, set stdin to it so we can ask the user questions :-)
+  exec < /dev/tty
 fi
 
 gitlint --staged --msg-filename "$1" run-hook
