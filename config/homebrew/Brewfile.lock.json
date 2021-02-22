@@ -8,7 +8,7 @@
         "revision": "1528860218da1b1a9c8c84f56a47393854f52b96"
       },
       "homebrew/cask": {
-        "revision": "8c35fb9aa5adf79ebbd10e52d1c679cfb3da62dd"
+        "revision": "121ad56e100b3e79915fd0dbf2c389f9b8fb2f63"
       },
       "homebrew/cask-drivers": {
         "revision": "88ac160237ba076ea93285151ef4fef8bc221c86"
@@ -17,7 +17,7 @@
         "revision": "266ef729ae51b8d6e47ff99a83e3479907ab96e0"
       },
       "homebrew/core": {
-        "revision": "3b87ec1a149830977f90bd46782dc6c14200f56d"
+        "revision": "471b57ba54760b5fec4053b617d3fec5353ad0d0"
       },
       "k1low/tap": {
         "revision": "b6c9c64168896481d26a37f7b8755a3d4482fb9f"
@@ -1377,7 +1377,7 @@
         }
       },
       "tableplus": {
-        "version": "3.12.2,358",
+        "version": "3.12.4,360",
         "options": {
           "full_name": "tableplus"
         }
@@ -1421,7 +1421,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3b87ec1a149830977f90bd46782dc6c14200f56d",
+        "Homebrew/homebrew-core": "471b57ba54760b5fec4053b617d3fec5353ad0d0",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
