@@ -461,6 +461,7 @@ return require('packer').startup(function()
         'gitcommit',
         'help',
         'markdown',
+        'packer',
       }
     end,
   }
