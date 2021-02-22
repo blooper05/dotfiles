@@ -527,7 +527,7 @@ return require('packer').startup(function()
       vim.api.nvim_set_keymap('n', '[gina]p', ':<C-u>Gina patch<CR>',              { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[gina]R', ':<C-u>Gina reflog<CR>',             { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[gina]s', ':<C-u>Gina status<CR>',             { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[gina]P', ':<C-u>Gina push<CR>',               { noremap = true, silent = true })
+      -- vim.api.nvim_set_keymap('n', '[gina]P', ':<C-u>Gina push<CR>',               { noremap = true, silent = true })
 
       -- gina-buffer-blame specific settings.
       vim.call('gina#custom#action#alias', 'blame', 'preview', 'botright show:commit:preview')
