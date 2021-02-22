@@ -8,7 +8,7 @@
         "revision": "1528860218da1b1a9c8c84f56a47393854f52b96"
       },
       "homebrew/cask": {
-        "revision": "e4b57b2fe636825baf73cac32f9153481dbb91d8"
+        "revision": "ecd6575b8d5ee5a4dbd86e07be4e1118516b642f"
       },
       "homebrew/cask-drivers": {
         "revision": "88ac160237ba076ea93285151ef4fef8bc221c86"
@@ -17,7 +17,7 @@
         "revision": "266ef729ae51b8d6e47ff99a83e3479907ab96e0"
       },
       "homebrew/core": {
-        "revision": "a01fac785ab67cc86f2d5ecc4e2fcb13a3ce62cb"
+        "revision": "1f59b0fefd805574fbe0f8878d15bc2dcdcd51f7"
       },
       "k1low/tap": {
         "revision": "b6c9c64168896481d26a37f7b8755a3d4482fb9f"
@@ -1387,6 +1387,12 @@
         "options": {
           "full_name": "zoom"
         }
+      },
+      "hyperswitch": {
+        "version": "0.2.592-dev",
+        "options": {
+          "full_name": "hyperswitch"
+        }
       }
     },
     "mas": {
@@ -1421,7 +1427,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "a01fac785ab67cc86f2d5ecc4e2fcb13a3ce62cb",
+        "Homebrew/homebrew-core": "1f59b0fefd805574fbe0f8878d15bc2dcdcd51f7",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
