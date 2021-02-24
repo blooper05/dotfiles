@@ -112,7 +112,7 @@ zshaddhistory() {
     && ${cmd} != (cd)
     && ${cmd} != (cp|mv|rm|mkdir)
     && ${cmd} != (kill)
-    && ${cmd} != (l[slta])
+    && ${cmd} != (l[slta]|tree)
     && ${cmd} != (man)
   ]]
 }
