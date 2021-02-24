@@ -134,6 +134,8 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 setopt list_packed
 setopt correct
 setopt correct_all
+CORRECT_IGNORE='_*'
+CORRECT_IGNORE_FILE='.*'
 
 # Moving {{{1
 
