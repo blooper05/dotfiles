@@ -136,6 +136,9 @@ setopt correct
 setopt correct_all
 CORRECT_IGNORE='_*'
 CORRECT_IGNORE_FILE='.*'
+# alias cp='nocorrect cp'
+# alias mv='nocorrect mv'
+# alias mkdir='nocorrect mkdir'
 
 # Moving {{{1
 
