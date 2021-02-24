@@ -8,7 +8,7 @@
         "revision": "05ad77b2c2633684508624fe773586778ab01ffc"
       },
       "homebrew/cask": {
-        "revision": "845d899eec4956cdd00316b38295a9a6835febba"
+        "revision": "5c6998f6c2a7ffd297f2c57815bd7ac80a5805ed"
       },
       "homebrew/cask-drivers": {
         "revision": "ac7d79788a5f4a897d5de163b8e17ee7fc2b0723"
@@ -17,7 +17,7 @@
         "revision": "568b3a271cb2a34388c2919a65b69a0cbd28efa2"
       },
       "homebrew/core": {
-        "revision": "e1c5ae44ead7c5ce204d3c8ceef80e29b17f6878"
+        "revision": "97e9d1f96b976d74aa0736fac65aa7ad890035b9"
       },
       "k1low/tap": {
         "revision": "16b2f5274bf93125894148c28249f5e9b9ca8849"
@@ -1211,6 +1211,33 @@
       "kayac/tap/ecspresso": {
         "version": "1.3.3",
         "bottle": false
+      },
+      "git": {
+        "version": "2.30.1",
+        "bottle": {
+          "rebuild": 0,
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "root_url": "https://homebrew.bintray.com/bottles",
+          "files": {
+            "arm64_big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/git-2.30.1.arm64_big_sur.bottle.tar.gz",
+              "sha256": "53c147ae99043706072a5ada0ecf764a8f386fb4f3afa7aa20546cc33a349d84"
+            },
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/git-2.30.1.big_sur.bottle.tar.gz",
+              "sha256": "c0be5c5895bd3a85bd83953fd9f6fec3864d8ea419b4678b43afaac7217b9853"
+            },
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/git-2.30.1.catalina.bottle.tar.gz",
+              "sha256": "0dd5f43dc263da3d87a83216392fedd96774bd0c9f89e2dc717c549b1803e8d6"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/git-2.30.1.mojave.bottle.tar.gz",
+              "sha256": "c84740ee72f1909fe019bba32ccf265b393df5c2fbd5d31886cca5904928f1b9"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1421,7 +1448,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "e1c5ae44ead7c5ce204d3c8ceef80e29b17f6878",
+        "Homebrew/homebrew-core": "97e9d1f96b976d74aa0736fac65aa7ad890035b9",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
