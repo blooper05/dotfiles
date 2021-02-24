@@ -790,7 +790,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-6b7cc45_1",
+        "version": "HEAD-7d82aaa_1",
         "bottle": {
           "rebuild": 1,
           "cellar": "/usr/local/Cellar",
