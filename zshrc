@@ -185,6 +185,7 @@ eval "$(gh completion -s zsh)"
 
 # gpg {{{2
 export GPG_TTY=$(tty)
+export GNUPGHOME=$XDG_DATA_HOME/gnupg
 
 # AWS CLI {{{2
 export AWS_CONFIG_FILE=$XDG_CONFIG_HOME/aws/config
