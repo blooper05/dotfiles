@@ -47,9 +47,9 @@ export PAGER=less
 
 # Alias {{{1
 
-alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias rm='rm -i'
 alias ls='exa --classify --group-directories-first'
 alias ll='exa --classify --group-directories-first --long'
 alias lt='exa --classify --group-directories-first --long --sort newest'
