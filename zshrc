@@ -110,10 +110,10 @@ zshaddhistory() {
 
   [[ ${#line} -ge 5
     && ${cmd} != (cd)
+    && ${cmd} != (cp|mv|rm|mkdir)
     && ${cmd} != (kill)
     && ${cmd} != (l[slta])
     && ${cmd} != (man)
-    && ${cmd} != (rm)
   ]]
 }
 
