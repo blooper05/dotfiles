@@ -8,16 +8,16 @@
         "revision": "05ad77b2c2633684508624fe773586778ab01ffc"
       },
       "homebrew/cask": {
-        "revision": "615e1cc427cbff7b8741f1c11aa2a8297d7e09b5"
+        "revision": "d1be06409c28fca7b7c1a42d110d92b9db69f9cc"
       },
       "homebrew/cask-drivers": {
-        "revision": "cecc25dfcd82607d79647cf0744bddb1d9828416"
+        "revision": "ac7d79788a5f4a897d5de163b8e17ee7fc2b0723"
       },
       "homebrew/cask-fonts": {
         "revision": "568b3a271cb2a34388c2919a65b69a0cbd28efa2"
       },
       "homebrew/core": {
-        "revision": "d2b25e00f469f2b11b32e461b4665453c7df4856"
+        "revision": "e3ae8a6a07da48813f3f8b7d17453bd8e13b0196"
       },
       "k1low/tap": {
         "revision": "b6c9c64168896481d26a37f7b8755a3d4482fb9f"
@@ -511,7 +511,7 @@
         }
       },
       "go": {
-        "version": "1.15.8",
+        "version": "1.16",
         "bottle": {
           "rebuild": 0,
           "cellar": "/usr/local/Cellar",
@@ -519,20 +519,20 @@
           "root_url": "https://homebrew.bintray.com/bottles",
           "files": {
             "arm64_big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/go-1.15.8.arm64_big_sur.bottle.tar.gz",
-              "sha256": "5075e91f2c7fe5496d9fe50267b090d7372dd6b305eedd3424193c265fc268b8"
+              "url": "https://homebrew.bintray.com/bottles/go-1.16.arm64_big_sur.bottle.tar.gz",
+              "sha256": "c1f259427b953cb5564af663538a696bb79820f1b23b7baa940ab2c4e21bc684"
             },
             "big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/go-1.15.8.big_sur.bottle.tar.gz",
-              "sha256": "96827fc4e223eaaffe52876ee6828c54f6f264cfeb42ca2335064fb1b708e62f"
+              "url": "https://homebrew.bintray.com/bottles/go-1.16.big_sur.bottle.tar.gz",
+              "sha256": "f23bdf4231ea64207fd112500f2c1fd9569366b31f6c843a815c5c75e4be6c5c"
             },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/go-1.15.8.catalina.bottle.tar.gz",
-              "sha256": "61a70ed89335dc8819b278670bf2919a69fa3909a316a3acc6aa2d2ac07a1374"
+              "url": "https://homebrew.bintray.com/bottles/go-1.16.catalina.bottle.tar.gz",
+              "sha256": "dfd8a82a4b7d9f4136eb6af4dca507cc136cebb74e843eeb3ba0ecd1ad94a3a2"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/go-1.15.8.mojave.bottle.tar.gz",
-              "sha256": "3500c34a8659c2c1f0fe4f0e41dc0a64d77841f31bde38e0c94139698a1e02b1"
+              "url": "https://homebrew.bintray.com/bottles/go-1.16.mojave.bottle.tar.gz",
+              "sha256": "c54706ee25e7ac3006f8d7f9bbb059131eca3b750e03736671d4faaffc399977"
             }
           }
         }
@@ -1262,16 +1262,16 @@
           "full_name": "docker"
         }
       },
-      "font-cica": {
-        "version": "5.0.2",
-        "options": {
-          "full_name": "font-cica"
-        }
-      },
       "font-hackgen-nerd": {
         "version": "2.2.3",
         "options": {
           "full_name": "font-hackgen-nerd"
+        }
+      },
+      "fujifilm-x-webcam": {
+        "version": "2.1.0,z0lr203j",
+        "options": {
+          "full_name": "fujifilm-x-webcam"
         }
       },
       "google-chrome": {
@@ -1421,7 +1421,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "d2b25e00f469f2b11b32e461b4665453c7df4856",
+        "Homebrew/homebrew-core": "e3ae8a6a07da48813f3f8b7d17453bd8e13b0196",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.1"
