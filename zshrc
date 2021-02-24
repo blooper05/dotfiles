@@ -95,6 +95,7 @@ setopt hist_expire_dups_first
 setopt hist_find_no_dups
 
 # TODO: Add comments
+setopt hist_ignore_space
 setopt share_history
 setopt hist_reduce_blanks
 setopt inc_append_history
