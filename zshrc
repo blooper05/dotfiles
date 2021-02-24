@@ -120,7 +120,7 @@ zshaddhistory() {
     && ${cmd} != (man)
     && ${cmd} != (open)
     && ${cmd} != (vi|vim|nvim)
-  ]]
+  ]] && whence ${${(z)1}[1]} >| /dev/null || return 1
 }
 
 # Completion {{{1
