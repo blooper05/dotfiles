@@ -109,6 +109,7 @@ zshaddhistory() {
   local cmd=${line%% *}
 
   [[ ${#line} -ge 5
+    && ${cmd} != (brew)
     && ${cmd} != (cd)
     && ${cmd} != (cp|mv|rm|mkdir)
     && ${cmd} != (kill)
