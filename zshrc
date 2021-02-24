@@ -116,6 +116,7 @@ zshaddhistory() {
     && ${cmd} != (kill)
     && ${cmd} != (l[slta]|tree)
     && ${cmd} != (man)
+    && ${cmd} != (open)
     && ${cmd} != (vi|vim|nvim)
   ]]
 }
