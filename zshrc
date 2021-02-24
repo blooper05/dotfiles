@@ -112,6 +112,7 @@ zshaddhistory() {
     && ${cmd} != (brew)
     && ${cmd} != (cd)
     && ${cmd} != (cp|mv|rm|mkdir)
+    && ${cmd} != (echo|cat)
     && ${cmd} != (kill)
     && ${cmd} != (l[slta]|tree)
     && ${cmd} != (man)
