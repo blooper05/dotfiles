@@ -251,23 +251,23 @@ colors:
   # Normal colors
   normal:
     black:   '#000000'
-    red:     '#ff6c6b'
+    red:     '#e95678'
     green:   '#98be65'
-    yellow:  '#ecbe7b'
+    yellow:  '#f0c674'
     blue:    '#51afef'
     magenta: '#d16d9e'
-    cyan:    '#3bb6c4'
+    cyan:    '#44bcc9'
     white:   '#ffffff'
 
   # Bright colors
   bright:
     black:   '#000000'
-    red:     '#ff6c6b'
+    red:     '#e95678'
     green:   '#98be65'
-    yellow:  '#ecbe7b'
+    yellow:  '#f0c674'
     blue:    '#51afef'
     magenta: '#d16d9e'
-    cyan:    '#3bb6c4'
+    cyan:    '#44bcc9'
     white:   '#ffffff'
 
   # Dim colors
