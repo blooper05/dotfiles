@@ -46,6 +46,7 @@ brew "shellcheck"
 brew "sk"
 # brew "ssh-copy-id", link: true
 # brew "starship"
+brew "task"
 brew "tflint"
 brew "tfsec"
 brew "tmux"
