@@ -66,7 +66,6 @@ alias watch='watchexec'
 alias dig='dog'
 alias ping='gping'
 alias curl='xh'
-alias git='bit'
 
 # Key Binding {{{1
 
@@ -182,10 +181,6 @@ bindkey '^r' anyframe-widget-put-history
 bindkey '^s' anyframe-widget-cd-ghq-repository
 bindkey '^g^a' anyframe-widget-git-add
 bindkey '^g^b' anyframe-widget-checkout-git-branch
-
-# bit {{{2
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/bit bit
 
 # ghq {{{2
 export GHQ_ROOT=$XDG_DATA_HOME/ghq
