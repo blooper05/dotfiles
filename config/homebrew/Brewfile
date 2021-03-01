@@ -47,6 +47,7 @@ brew "sk"
 # brew "ssh-copy-id", link: true
 # brew "starship"
 brew "task"
+brew "timewarrior"
 brew "tflint"
 brew "tfsec"
 brew "tmux"
