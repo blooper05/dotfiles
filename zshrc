@@ -200,6 +200,10 @@ export AWS_SHARED_CREDENTIALS_FILE=$XDG_CONFIG_HOME/aws/credentials
 export TF_CLI_ARGS_plan="--parallelism=30"
 export TF_CLI_ARGS_apply="--parallelism=30"
 
+# Taskwarrior {{{2
+export TASKDATA=$XDG_DATA_HOME/task
+export TASKRC=$XDG_CONFIG_HOME/task/taskrc
+
 # Powerlevel10k {{{2
 source $XDG_CONFIG_HOME/zsh/powerlevel10k.zsh
 
