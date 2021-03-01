@@ -204,6 +204,9 @@ export TF_CLI_ARGS_apply="--parallelism=30"
 export TASKDATA=$XDG_DATA_HOME/task
 export TASKRC=$XDG_CONFIG_HOME/task/taskrc
 
+# Timewarrior {{{2
+export TIMEWARRIORDB=$XDG_DATA_HOME/timew
+
 # Powerlevel10k {{{2
 source $XDG_CONFIG_HOME/zsh/powerlevel10k.zsh
 
