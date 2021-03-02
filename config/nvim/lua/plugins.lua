@@ -55,7 +55,7 @@ return require('packer').startup(function()
       vim.o.showmode = false
 
       local lualine = require('lualine')
-      lualine.options.theme = 'OceanicNext'
+      lualine.options.theme = 'auto'
       lualine.status()
     end,
   }
