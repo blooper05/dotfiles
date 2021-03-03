@@ -3,6 +3,9 @@
 # Disable START/STOP output control to release the C-s/C-q keybindings.
 tty -s && stty -ixon
 
+# gpg {{{2
+export GPG_TTY=$(tty)
+
 # Powerlevel10k Instant Prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -189,7 +192,6 @@ export GHQ_ROOT=$XDG_DATA_HOME/ghq
 eval "$(gh completion -s zsh)"
 
 # gpg {{{2
-export GPG_TTY=$(tty)
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 
 # AWS CLI {{{2
