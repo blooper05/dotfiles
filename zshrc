@@ -3,7 +3,7 @@
 # Disable START/STOP output control to release the C-s/C-q keybindings.
 tty -s && stty -ixon
 
-# gpg {{{2
+# Set GPG TTY.
 export GPG_TTY=$(tty)
 
 # Powerlevel10k Instant Prompt
