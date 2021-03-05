@@ -8,7 +8,7 @@
         "revision": "3fbca9f51db8e7255f4b2f48daba1e04a2d99ad6"
       },
       "homebrew/cask": {
-        "revision": "857db9b926b1535e2f813b4dcaa03d2f007ffbee"
+        "revision": "c419b5e2015dceadc1668e22f9fd6e221a3730ed"
       },
       "homebrew/cask-drivers": {
         "revision": "7693ea5c58ac72be65395cad87f73704d844cf40"
@@ -17,7 +17,7 @@
         "revision": "4231da8701b04ac276b7f8569d7476a64dad331f"
       },
       "homebrew/core": {
-        "revision": "8ab2c0c17ece49209983cae16102729d14c231d7"
+        "revision": "c8f8fd0fa27bed07d32c39cc59d3c86e6f6f60ef"
       },
       "k1low/tap": {
         "revision": "ba75c487962627dd39fb0876b8afc82e0b1730e5"
@@ -1311,7 +1311,7 @@
         }
       },
       "docker": {
-        "version": "3.2.0,61504",
+        "version": "3.2.1,61626",
         "options": {
           "full_name": "docker"
         }
@@ -1475,7 +1475,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.4",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "8ab2c0c17ece49209983cae16102729d14c231d7",
+        "Homebrew/homebrew-core": "c8f8fd0fa27bed07d32c39cc59d3c86e6f6f60ef",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.2"
