@@ -8,7 +8,7 @@
         "revision": "3fbca9f51db8e7255f4b2f48daba1e04a2d99ad6"
       },
       "homebrew/cask": {
-        "revision": "c419b5e2015dceadc1668e22f9fd6e221a3730ed"
+        "revision": "993c14bf9f32f74d3994b7e194cfdf4f28288c38"
       },
       "homebrew/cask-drivers": {
         "revision": "7693ea5c58ac72be65395cad87f73704d844cf40"
@@ -17,10 +17,10 @@
         "revision": "4231da8701b04ac276b7f8569d7476a64dad331f"
       },
       "homebrew/core": {
-        "revision": "c8f8fd0fa27bed07d32c39cc59d3c86e6f6f60ef"
+        "revision": "fa4991b9612780d13c31897df939d4c397519dc1"
       },
       "k1low/tap": {
-        "revision": "ba75c487962627dd39fb0876b8afc82e0b1730e5"
+        "revision": "cc84098c1fa02c3aa643c8709b0969757f75fc00"
       },
       "kayac/tap": {
         "revision": "e74da551e822d37d8f465643050ce1845aca46c4"
@@ -1073,7 +1073,7 @@
         }
       },
       "tfsec": {
-        "version": "0.39.5",
+        "version": "0.39.6",
         "bottle": {
           "rebuild": 0,
           "cellar": ":any_skip_relocation",
@@ -1081,20 +1081,20 @@
           "root_url": "https://homebrew.bintray.com/bottles",
           "files": {
             "arm64_big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/tfsec-0.39.5.arm64_big_sur.bottle.tar.gz",
-              "sha256": "f817b009c29968dc3ef178ef209c8171f3106aecb16f882dbdbedc8319c46a01"
+              "url": "https://homebrew.bintray.com/bottles/tfsec-0.39.6.arm64_big_sur.bottle.tar.gz",
+              "sha256": "10ff5a738bc854a2afefdeb237d3454dbcb1926678dfcdc0a20a0bbfffb2258a"
             },
             "big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/tfsec-0.39.5.big_sur.bottle.tar.gz",
-              "sha256": "138e28b96a8315e41e836718d4d16228adf7333b453178b91de6be87428a0ff6"
+              "url": "https://homebrew.bintray.com/bottles/tfsec-0.39.6.big_sur.bottle.tar.gz",
+              "sha256": "60f7b72fc31c2b3ff284fef3a6780e4a0d230bf259c41402c5385215bf5bd582"
             },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/tfsec-0.39.5.catalina.bottle.tar.gz",
-              "sha256": "e4b96246bfd7966f9aae7a333e430eb71a2ad9fe8b9eba209f18e46aecf3f426"
+              "url": "https://homebrew.bintray.com/bottles/tfsec-0.39.6.catalina.bottle.tar.gz",
+              "sha256": "1787a26a4a8d632cfa3c5c9b4ebcd7becc3ef629a8feff58169a326f3465f072"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/tfsec-0.39.5.mojave.bottle.tar.gz",
-              "sha256": "cd38840831c6f9a5b3067c0e6f117aa051f2644655302cc49f9796a0afc10401"
+              "url": "https://homebrew.bintray.com/bottles/tfsec-0.39.6.mojave.bottle.tar.gz",
+              "sha256": "f9a23aa6d12487110c4dd7729aacde806656ce10e3a7b9914c5a5c6163cd5500"
             }
           }
         }
@@ -1329,7 +1329,7 @@
         }
       },
       "google-chrome": {
-        "version": "89.0.4389.72,4389.72",
+        "version": "89.0.4389.82,4389.82",
         "options": {
           "full_name": "google-chrome"
         }
@@ -1347,7 +1347,7 @@
         }
       },
       "iina": {
-        "version": "1.2.0,129",
+        "version": "1.1.2,128",
         "options": {
           "full_name": "iina"
         }
@@ -1419,7 +1419,7 @@
         }
       },
       "spotify": {
-        "version": "1.1.53.608.g7ed9c03a,1.1.53.608.g7ed9c03a-19",
+        "version": "1.1.54.592.gc0b20638,1.1.54.592.gc0b20638-31",
         "options": {
           "full_name": "spotify"
         }
@@ -1475,7 +1475,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.4",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "c8f8fd0fa27bed07d32c39cc59d3c86e6f6f60ef",
+        "Homebrew/homebrew-core": "fa4991b9612780d13c31897df939d4c397519dc1",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.2"
