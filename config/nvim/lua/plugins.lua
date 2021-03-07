@@ -186,7 +186,9 @@ return require('packer').startup(function()
         cmd = { terraformls_bin, 'serve' },
       })
 
-      -- lspconfig.tsserver.setup({})
+      lspconfig.tsserver.setup({
+        cmd = { 'yarn', 'typescript-language-server', '--stdio' }
+      })
 
       -- lspconfig.yamlls.setup({})
     end,
