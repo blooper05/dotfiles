@@ -122,7 +122,7 @@ return require('packer').startup(function()
 
       local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
       local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
-      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.11.2/lua-1.11.2.vsix'
+      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.18.0/lua-1.18.0.vsix'
 
       execute('!curl -sLJ -o /tmp/sumneko_lua.vsix ' .. sumneko_url)
       execute('!unzip -oq /tmp/sumneko_lua.vsix -d ' .. sumneko_root_path)
