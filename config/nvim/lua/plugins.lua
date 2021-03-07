@@ -130,7 +130,7 @@ return require('packer').startup(function()
       execute('!chmod +x ' .. sumneko_bin)
 
       local terraformls_root_path = lspconfig_root_path .. '/terraformls'
-      local terraformls_url       = 'https://github.com/hashicorp/terraform-ls/releases/download/v0.12.1/terraform-ls_0.12.1_darwin_amd64.zip'
+      local terraformls_url       = 'https://github.com/hashicorp/terraform-ls/releases/download/v0.14.0/terraform-ls_0.14.0_darwin_amd64.zip'
 
       execute('!curl -sLJ -o /tmp/terraformls.zip ' .. terraformls_url)
       execute('!unzip -oq /tmp/terraformls.zip -d ' .. terraformls_root_path)
