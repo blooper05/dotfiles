@@ -8,19 +8,19 @@
         "revision": "3fbca9f51db8e7255f4b2f48daba1e04a2d99ad6"
       },
       "homebrew/cask": {
-        "revision": "2147908e068cc0ba84516e30007bccf494045143"
+        "revision": "1bedbb70c0c4e1bf854b9bcbecab43b5144fc479"
       },
       "homebrew/cask-drivers": {
         "revision": "7693ea5c58ac72be65395cad87f73704d844cf40"
       },
       "homebrew/cask-fonts": {
-        "revision": "5960b423cce7ad5395a2171640e0d72e9e1a3738"
+        "revision": "6baca60c50aaf1630cea254f7d49bb52a5d5474c"
       },
       "homebrew/core": {
-        "revision": "c828841c2f993c6c974ec1b354354896251040da"
+        "revision": "37e10782b5b61184b0e425352adf4cd32f3a28e2"
       },
       "k1low/tap": {
-        "revision": "eabfe36d39025f65cf7e49fb54ce49a61fd54e15"
+        "revision": "86eaf174f9c5e39e5964c5451601f6277fda8bd6"
       },
       "kayac/tap": {
         "revision": "e74da551e822d37d8f465643050ce1845aca46c4"
@@ -561,7 +561,7 @@
         }
       },
       "gping": {
-        "version": "1.2.0",
+        "version": "1.2.1",
         "bottle": {
           "rebuild": 0,
           "cellar": ":any_skip_relocation",
@@ -569,20 +569,20 @@
           "root_url": "https://homebrew.bintray.com/bottles",
           "files": {
             "arm64_big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/gping-1.2.0.arm64_big_sur.bottle.tar.gz",
-              "sha256": "4deb2a242ab4de0d179b8328c74fb585cdbc0078e6074bea366415606e0b1f86"
+              "url": "https://homebrew.bintray.com/bottles/gping-1.2.1.arm64_big_sur.bottle.tar.gz",
+              "sha256": "fc164e14a50a5dc25400542b55cc403051f70bf87f11dc3ea0a4d19d48943b3a"
             },
             "big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/gping-1.2.0.big_sur.bottle.tar.gz",
-              "sha256": "ad76726fb0897f1960e045b31d6a080a1c699a5ebe187f1b5f3fabb1575afe90"
+              "url": "https://homebrew.bintray.com/bottles/gping-1.2.1.big_sur.bottle.tar.gz",
+              "sha256": "8574a0fd314ddfd911b85dc9a1cf4463e15cb470f867eab5eae9f9ccaa4af7a4"
             },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/gping-1.2.0.catalina.bottle.tar.gz",
-              "sha256": "c8162661b26ec98036c7abd06916867fb715f1c6b0881fe41ce7bbd292773f07"
+              "url": "https://homebrew.bintray.com/bottles/gping-1.2.1.catalina.bottle.tar.gz",
+              "sha256": "3346653e1695fd5eaa23d8b62ab16292e25b143679ef8f8effb61b3b82cfc8ae"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/gping-1.2.0.mojave.bottle.tar.gz",
-              "sha256": "9c0a56c20f3c378227ae9288ff6b88d0eb2f3f1cbd33dcb493226dab1b894ad8"
+              "url": "https://homebrew.bintray.com/bottles/gping-1.2.1.mojave.bottle.tar.gz",
+              "sha256": "1511dcaf2f0eaad03a622d04ec8c6dbfc1fcff831aa10e8faea836b19995cc3a"
             }
           }
         }
@@ -1502,7 +1502,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.4",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "c828841c2f993c6c974ec1b354354896251040da",
+        "Homebrew/homebrew-core": "37e10782b5b61184b0e425352adf4cd32f3a28e2",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.2"
