@@ -8,19 +8,19 @@
         "revision": "3fbca9f51db8e7255f4b2f48daba1e04a2d99ad6"
       },
       "homebrew/cask": {
-        "revision": "d050b68d62c211b324486a16cf0c95faf96ff33a"
+        "revision": "7b66aba4820f1062c80ca9e424c63a3c98f0ba3e"
       },
       "homebrew/cask-drivers": {
-        "revision": "0abe09f7c66968738f5c969fb5b17a4081d987a6"
+        "revision": "58ab8ec5ff9709654196ea62b4cb1cf403b4367c"
       },
       "homebrew/cask-fonts": {
-        "revision": "9899ab349852a15fbc634721356bec10e05d5f11"
+        "revision": "599a31c5f6a546bd3e94e71379b0c5d99a798775"
       },
       "homebrew/core": {
-        "revision": "1793b7f13fd90e331a399d26dae123771b28134f"
+        "revision": "56b24645da8023dbfa93359b80d391924e7bfaa3"
       },
       "k1low/tap": {
-        "revision": "61982ce2797ff1750dd57510662c509b2d089d1a"
+        "revision": "01876c76e1d7684982b8dc099842e1981ab80c83"
       },
       "kayac/tap": {
         "revision": "7fa6249773e4523a66ae900a4419c5dcb0e920ce"
@@ -507,7 +507,7 @@
         }
       },
       "go": {
-        "version": "1.16",
+        "version": "1.16.2",
         "bottle": {
           "rebuild": 0,
           "cellar": "/usr/local/Cellar",
@@ -515,20 +515,20 @@
           "root_url": "https://homebrew.bintray.com/bottles",
           "files": {
             "arm64_big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/go-1.16.arm64_big_sur.bottle.tar.gz",
-              "sha256": "c1f259427b953cb5564af663538a696bb79820f1b23b7baa940ab2c4e21bc684"
+              "url": "https://homebrew.bintray.com/bottles/go-1.16.2.arm64_big_sur.bottle.tar.gz",
+              "sha256": "b5e7afc5fe32df4a9f66f7467be5ec25266c649a942dba2fadf59ec0b31c6f33"
             },
             "big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/go-1.16.big_sur.bottle.tar.gz",
-              "sha256": "f23bdf4231ea64207fd112500f2c1fd9569366b31f6c843a815c5c75e4be6c5c"
+              "url": "https://homebrew.bintray.com/bottles/go-1.16.2.big_sur.bottle.tar.gz",
+              "sha256": "b4b8fd4d0e53711f7ad6333146708a1ea61a7063abcfa086f57b1cf3c820e070"
             },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/go-1.16.catalina.bottle.tar.gz",
-              "sha256": "dfd8a82a4b7d9f4136eb6af4dca507cc136cebb74e843eeb3ba0ecd1ad94a3a2"
+              "url": "https://homebrew.bintray.com/bottles/go-1.16.2.catalina.bottle.tar.gz",
+              "sha256": "ad0e76d44fb2f21cd125dc7fb97d2625688ed0cd33c02f9df77efa0a7315f82f"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/go-1.16.mojave.bottle.tar.gz",
-              "sha256": "c54706ee25e7ac3006f8d7f9bbb059131eca3b750e03736671d4faaffc399977"
+              "url": "https://homebrew.bintray.com/bottles/go-1.16.2.mojave.bottle.tar.gz",
+              "sha256": "17f5ec09c5cdd9251800b402b277df9443d4718c291ff3de4c1a58066c47f991"
             }
           }
         }
@@ -818,7 +818,7 @@
         }
       },
       "procs": {
-        "version": "0.11.3",
+        "version": "0.11.4",
         "bottle": {
           "rebuild": 0,
           "cellar": ":any_skip_relocation",
@@ -826,20 +826,20 @@
           "root_url": "https://homebrew.bintray.com/bottles",
           "files": {
             "arm64_big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/procs-0.11.3.arm64_big_sur.bottle.tar.gz",
-              "sha256": "3008bb790329683036c24cf85abe1088f6058db3a3eb54e033a42f24878df0aa"
+              "url": "https://homebrew.bintray.com/bottles/procs-0.11.4.arm64_big_sur.bottle.tar.gz",
+              "sha256": "197d9df98f18130c417b90864018e382c5b2237890bec9283a7a4cff57c4383b"
             },
             "big_sur": {
-              "url": "https://homebrew.bintray.com/bottles/procs-0.11.3.big_sur.bottle.tar.gz",
-              "sha256": "94ee0bcfdb8ff6a0aa12591593a8b70a0f77cc5a2b7159bd34d34b34bff92a61"
+              "url": "https://homebrew.bintray.com/bottles/procs-0.11.4.big_sur.bottle.tar.gz",
+              "sha256": "44c7ab94d61b0046b581dd89d1c4cca542212a1a3b97c3192463e03692472387"
             },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/procs-0.11.3.catalina.bottle.tar.gz",
-              "sha256": "74096d5074fa5171235dbeef0d8ba9c227f6da4128b9094e393651795bd20a8f"
+              "url": "https://homebrew.bintray.com/bottles/procs-0.11.4.catalina.bottle.tar.gz",
+              "sha256": "922ae4411101a6edf61a87d40d581847bef955865285dd319b37de975be534c4"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/procs-0.11.3.mojave.bottle.tar.gz",
-              "sha256": "38eb93c5e9ecb2b684fee7bbc9c7e479f72df7e4799b202891a7158ae53ea02b"
+              "url": "https://homebrew.bintray.com/bottles/procs-0.11.4.mojave.bottle.tar.gz",
+              "sha256": "920049d40859ca273f310813ec77514e92b79c05c042151708820b72e12f16de"
             }
           }
         }
@@ -1296,7 +1296,7 @@
     },
     "cask": {
       "1password": {
-        "version": "7.7",
+        "version": "7.8",
         "options": {
           "full_name": "1password"
         }
@@ -1356,13 +1356,13 @@
         }
       },
       "google-chrome": {
-        "version": "89.0.4389.82,4389.82",
+        "version": "89.0.4389.90,4389.90",
         "options": {
           "full_name": "google-chrome"
         }
       },
       "hammerspoon": {
-        "version": "0.9.84",
+        "version": "0.9.85",
         "options": {
           "full_name": "hammerspoon"
         }
@@ -1380,7 +1380,7 @@
         }
       },
       "insomnia": {
-        "version": "2021.1.0",
+        "version": "2021.1.1",
         "options": {
           "full_name": "insomnia"
         }
@@ -1428,7 +1428,7 @@
         }
       },
       "notion": {
-        "version": "2.0.15",
+        "version": "2.0.16",
         "options": {
           "full_name": "notion"
         }
@@ -1440,7 +1440,7 @@
         }
       },
       "sonos": {
-        "version": "12.2.2",
+        "version": "13.0",
         "options": {
           "full_name": "sonos"
         }
@@ -1473,7 +1473,7 @@
     "mas": {
       "DaVinci Resolve": {
         "id": "571213070",
-        "version": "17.0.0"
+        "version": "17.1.0"
       },
       "LINE": {
         "id": "539883307",
@@ -1502,7 +1502,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.5",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "1793b7f13fd90e331a399d26dae123771b28134f",
+        "Homebrew/homebrew-core": "56b24645da8023dbfa93359b80d391924e7bfaa3",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.2"
