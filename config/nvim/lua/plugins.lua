@@ -54,9 +54,11 @@ return require('packer').startup(function()
       -- Get rid of redundant mode display.
       vim.o.showmode = false
 
-      local lualine = require('lualine')
-      lualine.options.theme = 'auto'
-      lualine.status()
+      require('lualine').setup({
+        options = {
+          theme = 'auto',
+        },
+      })
     end,
   }
 
