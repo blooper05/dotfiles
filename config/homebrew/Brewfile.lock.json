@@ -8,19 +8,19 @@
         "revision": "3fbca9f51db8e7255f4b2f48daba1e04a2d99ad6"
       },
       "homebrew/cask": {
-        "revision": "6a506eefa6ed460c16734d4eb92d330119b14991"
+        "revision": "f59605ac988938c52be3b08b172f2fa500df31be"
       },
       "homebrew/cask-drivers": {
-        "revision": "7200097e238ae48a680be8fa32cd11540274674b"
+        "revision": "105299a4983f8aae330b9a9b3764dc27c95e428f"
       },
       "homebrew/cask-fonts": {
         "revision": "918c102bbee01b809d97257bc6253f75c1bb4a2e"
       },
       "homebrew/core": {
-        "revision": "a1a25cef6484e8fc09c746e19dd4ea9dc48f2d41"
+        "revision": "3f7c96754c6767921ca209bea16c88e944c1feab"
       },
       "k1low/tap": {
-        "revision": "c1ac054d0cb7087956fa1a55686c610627eed3fe"
+        "revision": "802a1b2ae0fba10de3669a0d9dc79150a21f0cdb"
       },
       "kayac/tap": {
         "revision": "7fa6249773e4523a66ae900a4419c5dcb0e920ce"
@@ -1450,7 +1450,7 @@
         }
       },
       "tableplus": {
-        "version": "3.12.4,360",
+        "version": "3.12.5,364",
         "options": {
           "full_name": "tableplus"
         }
@@ -1492,9 +1492,9 @@
   "system": {
     "macos": {
       "big_sur": {
-        "HOMEBREW_VERSION": "3.0.7",
+        "HOMEBREW_VERSION": "3.0.8",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "a1a25cef6484e8fc09c746e19dd4ea9dc48f2d41",
+        "Homebrew/homebrew-core": "3f7c96754c6767921ca209bea16c88e944c1feab",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.2"
