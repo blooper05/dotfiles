@@ -222,29 +222,43 @@ return require('packer').startup(function()
 
   -- Completion {{{1
 
-  use { 'nvim-lua/completion-nvim',
+  use { 'hrsh7th/nvim-compe',
     config = function()
       -- Set completeopt to have a better completion experience.
       vim.o.completeopt = table.concat({
         'menuone',
-        'noinsert',
         'noselect',
       }, ',')
 
       -- Avoid showing message extra message when using completion.
       vim.o.shortmess = vim.o.shortmess .. 'c'
 
-      -- Change source whenever current source has no complete items.
-      vim.g.completion_auto_change_source = 1
+      require('compe').setup({
+        source = {
+          path            = true;
+          buffer          = true;
+          tags            = true;
+          spell           = true;
+          calc            = true;
+          emoji           = true;
+          nvim_lsp        = true;
+          nvim_lua        = true;
+          snippets_nvim   = true;
+          nvim_treesitter = true;
+        };
+      })
 
-      -- Use completion-nvim in every buffer.
-      vim.cmd([[autocmd MyAutoCmd BufEnter * lua require('completion').on_attach()]])
+      vim.api.nvim_set_keymap('i', '<C-Space>', [[compe#complete()]],              { noremap = true, silent = true, expr = true })
+      vim.api.nvim_set_keymap('i', '<CR>',      [[compe#confirm('<CR>')]],         { noremap = true, silent = true, expr = true })
+      vim.api.nvim_set_keymap('i', '<C-e>',     [[compe#close('<C-e>')]],          { noremap = true, silent = true, expr = true })
+      vim.api.nvim_set_keymap('i', '<C-f>',     [[compe#scroll({ 'delta': +4 })]], { noremap = true, silent = true, expr = true })
+      vim.api.nvim_set_keymap('i', '<C-d>',     [[compe#scroll({ 'delta': -4 })]], { noremap = true, silent = true, expr = true })
     end,
   }
 
   use { 'norcalli/snippets.nvim',
     requires = {
-      { 'nvim-lua/completion-nvim' },
+      { 'hrsh7th/nvim-compe' },
     },
     config = function()
       vim.g.completion_enable_snippet = 'snippets.nvim'
