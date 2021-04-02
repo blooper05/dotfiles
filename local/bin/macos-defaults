@@ -150,6 +150,12 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwi
 # TODO: System Preferences >> Displays >> Night Shift >> to: 4:59
 # TODO: System Preferences >> Displays >> Night Shift >> Color Temperature: More Warm
 
+# System Preferences >> Sidecar >> Show Sidebar
+defaults write com.apple.sidecar.display sidebarShown -int 0
+
+# System Preferences >> Sidecar >> Show Touch Bar
+defaults write com.apple.sidecar.display showTouchbar -int 0
+
 # System Preferences >> Sharing >> Computer Name: まっくぶっくぷろ
 sudo scutil --set ComputerName まっくぶっくぷろ
 
