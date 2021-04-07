@@ -124,7 +124,7 @@ return require('packer').startup(function()
 
       local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
       local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
-      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.17.4/lua-1.17.4.vsix'
+      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.20.3/lua-1.20.3.vsix'
 
       execute('!curl -sLJ -o /tmp/sumneko_lua.vsix ' .. sumneko_url)
       execute('!unzip -oq /tmp/sumneko_lua.vsix -d ' .. sumneko_root_path)
@@ -132,7 +132,7 @@ return require('packer').startup(function()
       execute('!chmod +x ' .. sumneko_bin)
 
       local terraformls_root_path = lspconfig_root_path .. '/terraformls'
-      local terraformls_url       = 'https://github.com/hashicorp/terraform-ls/releases/download/v0.14.0/terraform-ls_0.14.0_darwin_amd64.zip'
+      local terraformls_url       = 'https://github.com/hashicorp/terraform-ls/releases/download/v0.15.0/terraform-ls_0.15.0_darwin_amd64.zip'
 
       execute('!curl -sLJ -o /tmp/terraformls.zip ' .. terraformls_url)
       execute('!unzip -oq /tmp/terraformls.zip -d ' .. terraformls_root_path)
