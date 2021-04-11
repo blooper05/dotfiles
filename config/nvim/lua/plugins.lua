@@ -56,7 +56,7 @@ return require('packer').startup(function()
 
       require('lualine').setup({
         options = {
-          -- theme = 'auto',
+          theme = 'auto',
         },
       })
     end,
