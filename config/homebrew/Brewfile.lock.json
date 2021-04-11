@@ -8,7 +8,7 @@
         "revision": "0df097ca87d3bcf762d0f8cbe30eed8c37c35786"
       },
       "homebrew/cask": {
-        "revision": "8e37a1f5726f2f399ff6e5f0a0678ebab56e997a"
+        "revision": "c5e67f1e9182bef7be7540c23533453eeeffc27a"
       },
       "homebrew/cask-drivers": {
         "revision": "d6f47a9550b55bc3865930877116de09defb41e4"
@@ -17,7 +17,7 @@
         "revision": "a0ee021ec62a5bcd78d2ec3c16d90ecf2a0c213b"
       },
       "homebrew/core": {
-        "revision": "1893119f1eb7b31ce64a1fe63376c806c98068ab"
+        "revision": "1967c6aa0b1c4114e81f4fbff855af8210ff9528"
       },
       "k1low/tap": {
         "revision": "2865702f39d70cca89b40261c9c1aa839111dddc"
@@ -1456,6 +1456,12 @@
         "options": {
           "full_name": "zoom"
         }
+      },
+      "session-manager-plugin": {
+        "version": "1.2.30.0",
+        "options": {
+          "full_name": "session-manager-plugin"
+        }
       }
     },
     "mas": {
@@ -1490,7 +1496,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.0.11",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "1893119f1eb7b31ce64a1fe63376c806c98068ab",
+        "Homebrew/homebrew-core": "1967c6aa0b1c4114e81f4fbff855af8210ff9528",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.2"
