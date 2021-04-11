@@ -56,7 +56,7 @@ return require('packer').startup(function()
 
       require('lualine').setup({
         options = {
-          theme = 'auto',
+          -- theme = 'auto',
         },
       })
     end,
@@ -88,6 +88,7 @@ return require('packer').startup(function()
     config = function()
       require('nvim-treesitter.configs').setup({
         ensure_installed      = 'all',
+        ignore_install        = { 'devicetree', 'erlang', 'gdscript', 'haskell', 'nix', 'ocamllex', 'supercollider', 'swift' },
         highlight             = { enable = true },
         incremental_selection = { enable = true },
         indent                = { enable = true },
@@ -124,7 +125,7 @@ return require('packer').startup(function()
 
       local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
       local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
-      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.20.3/lua-1.20.3.vsix'
+      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.20.2/lua-1.20.2.vsix'
 
       execute('!curl -sLJ -o /tmp/sumneko_lua.vsix ' .. sumneko_url)
       execute('!unzip -oq /tmp/sumneko_lua.vsix -d ' .. sumneko_root_path)
