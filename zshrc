@@ -44,7 +44,7 @@ export LC_ALL="${LANGUAGE}"
 export LC_CTYPE="${LANGUAGE}"
 
 # Tools
-export SHELL=zsh
+export SHELL=/usr/local/bin/zsh
 export EDITOR=nvim
 export PAGER=less
 
