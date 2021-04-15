@@ -1370,6 +1370,10 @@
             }
           }
         }
+      },
+      "zinit": {
+        "version": "3.7",
+        "bottle": false
       }
     },
     "cask": {
