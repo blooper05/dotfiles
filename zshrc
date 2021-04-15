@@ -19,6 +19,7 @@ source $ZPLUG_HOME/init.zsh
 zplug "romkatv/powerlevel10k", as:theme, depth:1
 zplug "blooper05/anyframe", at:add-skim_support
 zplug "blooper05/git-cococo", as:command, use:exe/git-cococo
+# zplug "jeffreytse/zsh-vi-mode"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
