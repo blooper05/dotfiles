@@ -45,6 +45,12 @@ source /usr/local/opt/zinit/zinit.zsh
 zinit ice depth:1
 zinit light romkatv/powerlevel10k
 
+zinit ice depth:1 wait lucid \
+  atclone:'dircolors -b LS_COLORS > clrs.zsh' \
+  atpull:'%atclone' pick:'clrs.zsh' nocompile:'!' \
+  atload:'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"'
+zinit light trapd00r/LS_COLORS
+
 zinit ice depth:1 wait lucid atinit:'zicompinit; zicdreplay;'
 zinit light zdharma/fast-syntax-highlighting
 
@@ -150,7 +156,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' format '%B%d%b%f'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:default' menu select=2
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 setopt list_packed
 setopt correct
 setopt correct_all
