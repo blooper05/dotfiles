@@ -16,7 +16,6 @@ fi
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-# zplug "romkatv/powerlevel10k", as:theme, depth:1
 # zplug "blooper05/anyframe", at:add-skim_support
 # zplug "blooper05/git-cococo", as:command, use:exe/git-cococo
 # # zplug "jeffreytse/zsh-vi-mode"
@@ -48,6 +47,18 @@ export LC_CTYPE="${LANGUAGE}"
 export SHELL=/usr/local/bin/zsh
 export EDITOR=nvim
 export PAGER=less
+
+# Zinit {{{1
+
+declare -A ZINIT
+
+ZINIT[HOME_DIR]=$XDG_DATA_HOME/zinit
+ZINIT[ZCOMPDUMP_PATH]=$XDG_DATA_HOME/zsh/compdump
+
+source /usr/local/opt/zinit/zinit.zsh
+
+zinit ice depth:1
+zinit light romkatv/powerlevel10k
 
 # Alias {{{1
 
