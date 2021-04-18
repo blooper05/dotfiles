@@ -16,7 +16,6 @@ fi
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-# zplug "blooper05/git-cococo", as:command, use:exe/git-cococo
 # # zplug "jeffreytse/zsh-vi-mode"
 # zplug "zsh-users/zsh-completions"
 # zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -61,6 +60,9 @@ zinit light romkatv/powerlevel10k
 
 zinit ice depth:1
 zinit light blooper05/anyframe
+
+zinit ice depth:1 wait lucid as:'program' pick:'exe/git-cococo'
+zinit light blooper05/git-cococo
 
 # Alias {{{1
 
