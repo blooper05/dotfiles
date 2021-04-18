@@ -48,6 +48,9 @@ zinit light romkatv/powerlevel10k
 zinit ice depth:1 wait lucid atinit:'zicompinit; zicdreplay;'
 zinit light zdharma/fast-syntax-highlighting
 
+zinit ice depth:1 wait lucid atload:'_zsh_autosuggest_start'
+zinit light zsh-users/zsh-autosuggestions
+
 zinit ice depth:1 wait lucid atpull:'zinit creinstall -q .' blockf
 zinit light zsh-users/zsh-completions
 
