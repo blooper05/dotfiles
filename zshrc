@@ -54,6 +54,9 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice depth:1 wait lucid atpull:'zinit creinstall -q .' blockf
 zinit light zsh-users/zsh-completions
 
+zinit ice depth:1 wait lucid
+zinit light hlissner/zsh-autopair
+
 # zinit ice depth:1 wait lucid
 # zinit light jeffreytse/zsh-vi-mode
 
