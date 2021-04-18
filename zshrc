@@ -16,7 +16,6 @@ fi
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-# zplug "blooper05/anyframe", at:add-skim_support
 # zplug "blooper05/git-cococo", as:command, use:exe/git-cococo
 # # zplug "jeffreytse/zsh-vi-mode"
 # zplug "zsh-users/zsh-completions"
@@ -59,6 +58,9 @@ source /usr/local/opt/zinit/zinit.zsh
 
 zinit ice depth:1
 zinit light romkatv/powerlevel10k
+
+zinit ice depth:1
+zinit light blooper05/anyframe
 
 # Alias {{{1
 
