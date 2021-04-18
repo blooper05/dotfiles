@@ -11,17 +11,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# zplug {{{1
-
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
-# zplug "zsh-users/zsh-syntax-highlighting", defer:2
-
-zplug check || zplug install
-
-zplug load
-
 # Environment Variable {{{1
 
 # PATH
@@ -55,6 +44,9 @@ source /usr/local/opt/zinit/zinit.zsh
 
 zinit ice depth:1
 zinit light romkatv/powerlevel10k
+
+zinit ice depth:1 wait lucid atinit:'zicompinit; zicdreplay;'
+zinit light zdharma/fast-syntax-highlighting
 
 zinit ice depth:1 wait lucid atpull:'zinit creinstall -q .' blockf
 zinit light zsh-users/zsh-completions
@@ -148,7 +140,6 @@ zshaddhistory() {
 
 # Completion {{{1
 
-autoload -Uz compinit && compinit -u -d $XDG_DATA_HOME/zsh/compdump
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' format '%B%d%b%f'
 zstyle ':completion:*' group-name ''
