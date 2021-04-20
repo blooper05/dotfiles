@@ -5,19 +5,19 @@
         "revision": "ee6489bd2f7d162fc73af773b91a8d93f1b6cff3"
       },
       "homebrew/bundle": {
-        "revision": "0df097ca87d3bcf762d0f8cbe30eed8c37c35786"
+        "revision": "9ee0d9912401eca4f21310bd19876a8cbac63f6d"
       },
       "homebrew/cask": {
-        "revision": "02fe5f8d315494bf7c2e3cd051380b1180a4dc0e"
+        "revision": "44d719b77c38ebd8f2d7928f924330d3f0be333e"
       },
       "homebrew/cask-drivers": {
-        "revision": "9f7315e0149eaf96e5891f6f968871a3e5c599ee"
+        "revision": "49cfed7c041eebfe697b20ae0d37e797399d4e04"
       },
       "homebrew/cask-fonts": {
-        "revision": "1d0d28c76a9d01a86469a78d5c048a09c4ae434c"
+        "revision": "f1252dc6342c2020015d87a317eec8df2e72ff72"
       },
       "homebrew/core": {
-        "revision": "b15434995998396a480506dac8cd3411d471d039"
+        "revision": "99c06facec5f01b0201d3a88ad3280634053c807"
       },
       "k1low/tap": {
         "revision": "2865702f39d70cca89b40261c9c1aa839111dddc"
@@ -631,25 +631,25 @@
         }
       },
       "hadolint": {
-        "version": "2.1.0",
+        "version": "2.2.0",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "big_sur": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:3c01438ad61a74345c9f39e9c0d172b5b3757feb8a291b1e11b12a136e8f83e9",
-              "sha256": "3c01438ad61a74345c9f39e9c0d172b5b3757feb8a291b1e11b12a136e8f83e9"
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:6c0ba0a404410953690f04c169e4445837a989bdc0d5bbcdd14e191c9b9db627",
+              "sha256": "6c0ba0a404410953690f04c169e4445837a989bdc0d5bbcdd14e191c9b9db627"
             },
             "catalina": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:f20a5cf1ebb062e7a2b6a0b273df8658e8d0c5120d0190bcada9b12798a646f3",
-              "sha256": "f20a5cf1ebb062e7a2b6a0b273df8658e8d0c5120d0190bcada9b12798a646f3"
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:b4bb3e92cd109657d342331a2a8ed3f27c10693e329d2ccba34c4853f09df2ae",
+              "sha256": "b4bb3e92cd109657d342331a2a8ed3f27c10693e329d2ccba34c4853f09df2ae"
             },
             "mojave": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:5a84986ce05ea1eac91d811b9aee9cb327280860834bfff2b5fe0157ca84ecaf",
-              "sha256": "5a84986ce05ea1eac91d811b9aee9cb327280860834bfff2b5fe0157ca84ecaf"
+              "url": "https://ghcr.io/v2/homebrew/core/hadolint/blobs/sha256:b307dfc69e486036695da922dd6d7cd51c351e61803f363b1f78b56bb2ed0138",
+              "sha256": "b307dfc69e486036695da922dd6d7cd51c351e61803f363b1f78b56bb2ed0138"
             }
           }
         }
@@ -999,25 +999,25 @@
         }
       },
       "shellcheck": {
-        "version": "0.7.1_1",
+        "version": "0.7.2",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "big_sur": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/shellcheck/blobs/sha256:5ba3cfe883216a700c133e35c3f1612ab70eaca07cfb43bf6ed427b72dd7d552",
-              "sha256": "5ba3cfe883216a700c133e35c3f1612ab70eaca07cfb43bf6ed427b72dd7d552"
+              "url": "https://ghcr.io/v2/homebrew/core/shellcheck/blobs/sha256:516df7bcc8d5b1e7e4b989b472e89d9e3cf5e4dfc977aa45f06c0335c697b77a",
+              "sha256": "516df7bcc8d5b1e7e4b989b472e89d9e3cf5e4dfc977aa45f06c0335c697b77a"
             },
             "catalina": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/shellcheck/blobs/sha256:bd66df0992ced04f98883eada3f14e620f6c76f268cae2adb182b52d3bba1858",
-              "sha256": "bd66df0992ced04f98883eada3f14e620f6c76f268cae2adb182b52d3bba1858"
+              "url": "https://ghcr.io/v2/homebrew/core/shellcheck/blobs/sha256:d4ffbfe9cb1fc1c888c7b6805a6c224810e4137c0bac0aac3041733bb36b7d79",
+              "sha256": "d4ffbfe9cb1fc1c888c7b6805a6c224810e4137c0bac0aac3041733bb36b7d79"
             },
             "mojave": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/shellcheck/blobs/sha256:bcb393cf5a259c69fdf7ef1725243b48c5653b9db17d2cd51ad140ab2d7de9c1",
-              "sha256": "bcb393cf5a259c69fdf7ef1725243b48c5653b9db17d2cd51ad140ab2d7de9c1"
+              "url": "https://ghcr.io/v2/homebrew/core/shellcheck/blobs/sha256:a810166fde56298431a942ec439d5359e871a0727b989788040608876b519b07",
+              "sha256": "a810166fde56298431a942ec439d5359e871a0727b989788040608876b519b07"
             }
           }
         }
@@ -1445,7 +1445,7 @@
         }
       },
       "docker": {
-        "version": "3.3.0,62916",
+        "version": "3.3.1,63152",
         "options": {
           "full_name": "docker"
         }
@@ -1547,7 +1547,7 @@
         }
       },
       "session-manager-plugin": {
-        "version": "1.2.30.0",
+        "version": "1.2.54.0",
         "options": {
           "full_name": "session-manager-plugin"
         }
@@ -1565,7 +1565,7 @@
         }
       },
       "stack-stack": {
-        "version": "3.18.0",
+        "version": "3.30.4",
         "options": {
           "full_name": "stack-stack"
         }
@@ -1577,7 +1577,7 @@
         }
       },
       "zoom": {
-        "version": "5.6.1.560",
+        "version": "5.6.3.706",
         "options": {
           "full_name": "zoom"
         }
@@ -1613,9 +1613,9 @@
   "system": {
     "macos": {
       "big_sur": {
-        "HOMEBREW_VERSION": "3.1.2",
+        "HOMEBREW_VERSION": "3.1.3",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "b15434995998396a480506dac8cd3411d471d039",
+        "Homebrew/homebrew-core": "99c06facec5f01b0201d3a88ad3280634053c807",
         "CLT": "12.4.0.0.1.1610135815",
         "Xcode": "12.0",
         "macOS": "11.2.2"
