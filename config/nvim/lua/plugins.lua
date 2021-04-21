@@ -105,6 +105,7 @@ return require('packer').startup(function()
     end,
   }
 
+  -- use { 'kdav5758/TrueZen.nvim',
   use { 'junegunn/goyo.vim', -- non-lua plugin
     requires = {
       { 'junegunn/limelight.vim' },
