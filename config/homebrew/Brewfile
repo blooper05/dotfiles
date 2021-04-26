@@ -117,6 +117,7 @@ cask "tableplus"
 cask "zoom"
 mas "DaVinci Resolve", id: 571213070
 # mas "EdgeView 2", id: 1206246482
+mas "FANTASIAN", id: 1517339045
 # mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "MindNode", id: 1289197285
