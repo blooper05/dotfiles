@@ -376,8 +376,8 @@ return require('packer').startup(function()
 
   use { 'numtostr/FTerm.nvim',
     config = function()
-      vim.fn.nvim_set_keymap('n', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
-      vim.fn.nvim_set_keymap('t', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('t', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
     end,
   }
 
