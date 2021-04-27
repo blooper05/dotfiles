@@ -40,19 +40,6 @@ return require('packer').startup(function()
     end,
   }
 
-  -- use { 'folke/tokyonight.nvim',
-  --   config = function()
-  --     -- Assume a dark background.
-  --     vim.o.background = 'dark'
-  --
-  --     -- Enable 24-bit RGB color in the TUI.
-  --     vim.o.termguicolors = true
-  --
-  --     -- Use zephyr as colorscheme.
-  --     vim.cmd('colorscheme tokyonight')
-  --   end,
-  -- }
-
   use { 'kyazdani42/nvim-web-devicons',
     config = function()
       require('nvim-web-devicons').setup({})
