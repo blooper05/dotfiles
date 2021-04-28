@@ -616,6 +616,15 @@ return require('packer').startup(function()
         typescript = { 'eslint', 'prettier' },
         terraform  = { 'terraform' },
       }
+
+      -- Run linters or formatters via Docker.
+      local pwd = vim.api.nvim_call_function('getcwd', {})
+
+      vim.g.ale_ruby_rubocop_executable = 'docker-rubocop'
+
+      vim.g.ale_filename_mappings = {
+        ruby = { { pwd, '/app' } },
+      }
     end,
   }
 
