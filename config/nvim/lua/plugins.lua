@@ -119,82 +119,36 @@ return require('packer').startup(function()
   -- Language Server Protocol {{{1
 
   use { 'neovim/nvim-lspconfig',
-    run = function()
-      local lspconfig_root_path = vim.env.XDG_DATA_HOME .. '/nvim-lspconfig'
-
-      execute('!mkdir -p ' .. lspconfig_root_path)
-
-      local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
-      local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
-      local sumneko_url       = 'https://github.com/sumneko/vscode-lua/releases/download/v1.20.2/lua-1.20.2.vsix'
-
-      execute('!curl -sLJ -o /tmp/sumneko_lua.vsix ' .. sumneko_url)
-      execute('!unzip -oq /tmp/sumneko_lua.vsix -d ' .. sumneko_root_path)
-      execute('!rm -f /tmp/sumneko_lua.vsix')
-      execute('!chmod +x ' .. sumneko_bin)
-
-      local terraformls_root_path = lspconfig_root_path .. '/terraformls'
-      local terraformls_url       = 'https://github.com/hashicorp/terraform-ls/releases/download/v0.15.0/terraform-ls_0.15.0_darwin_amd64.zip'
-
-      execute('!curl -sLJ -o /tmp/terraformls.zip ' .. terraformls_url)
-      execute('!unzip -oq /tmp/terraformls.zip -d ' .. terraformls_root_path)
-      execute('!rm -f /tmp/terraformls.zip')
-    end,
     config = function()
-      local lspconfig           = require('lspconfig')
-      local lspconfig_root_path = vim.env.XDG_DATA_HOME .. '/nvim-lspconfig'
+    end,
+  }
 
-      -- lspconfig.bashls.setup({})
+  use { 'kabouzeid/nvim-lspinstall',
+    requires = {
+      { 'neovim/nvim-lspconfig' },
+    },
+    config = function()
+      local lspinstall = require('lspinstall')
 
-      -- lspconfig.cssls.setup({})
+      lspinstall.setup({})
 
-      -- lspconfig.diagnosticls.setup({
-      --   filetypes = { 'sh' },
-      -- })
+      local function setup_servers()
+        local servers = lspinstall.installed_servers()
+        for _, server in pairs(servers) do
+          require('lspconfig')[server].setup({
+            settings = {
+              Lua = { diagnostics = { globals = { 'use', 'vim' } } },
+            },
+          })
+        end
+      end
 
-      -- lspconfig.dockerls.setup({})
+      setup_servers()
 
-      -- lspconfig.efm.setup({})
-
-      -- lspconfig.elmls.setup({})
-
-      -- lspconfig.gopls.setup({})
-
-      -- lspconfig.html.setup({})
-
-      -- lspconfig.jsonls.setup({})
-
-      -- lspconfig.rls.setup({})
-
-      -- lspconfig.rust_analyzer.setup({})
-
-      -- lspconfig.solargraph.setup({})
-
-      -- lspconfig.sorbet.setup({})
-
-      -- lspconfig.sqlls.setup({})
-
-      -- lspconfig.sqls.setup({})
-
-      local sumneko_root_path = lspconfig_root_path .. '/sumneko_lua'
-      local sumneko_bin       = sumneko_root_path .. '/extension/server/bin/macOS/lua-language-server'
-      local sumneko_ext       = sumneko_root_path .. '/extension/server/main.lua'
-      lspconfig.sumneko_lua.setup({
-        cmd = { sumneko_bin, '-E', sumneko_ext },
-        settings = { Lua = { diagnostics = { globals = { 'use', 'vim' } } } },
-      })
-
-      local terraformls_root_path = lspconfig_root_path .. '/terraformls'
-      local terraformls_bin       = terraformls_root_path .. '/terraform-ls'
-      lspconfig.terraformls.setup({
-        cmd = { terraformls_bin, 'serve' },
-      })
-
-      lspconfig.tsserver.setup({
-        cmd = { 'yarn', 'typescript-language-server', '--stdio' }
-      })
-
-      -- lspconfig.yamlls.setup({})
+      lspinstall.post_install_hook = function()
+        setup_servers()
+        vim.cmd('bufdo e')
+      end
     end,
   }
 
