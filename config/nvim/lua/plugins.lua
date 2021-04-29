@@ -499,10 +499,9 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'yuttie/comfortable-motion.vim', -- non-lua plugin
+  use { 'karb94/neoscroll.nvim',
     config = function()
-      vim.g.comfortable_motion_friction = 120.0
-      vim.g.comfortable_motion_air_drag = 3.0
+      require('neoscroll').setup({})
     end,
   }
 
