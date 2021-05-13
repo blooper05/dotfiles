@@ -17,7 +17,7 @@
         "revision": "4db2186115bc3ae1d8032d068d885766da68efd4"
       },
       "homebrew/core": {
-        "revision": "e8ba3ce5599805a903ffd9bb597d5935fca161b0"
+        "revision": "8f462102f9b2222a5381e2fcaa0016a2604efafe"
       },
       "k1low/tap": {
         "revision": "acd45243729337e59dd5d384f0d1831111d02ec0"
@@ -1465,6 +1465,35 @@
       "tfupdate": {
         "version": "0.4.3",
         "bottle": false
+      },
+      "zellij": {
+        "version": "0.8.0",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zellij/blobs/sha256:20b80c378d3cd4e583be3666835ccb5c5340a52977a2c81c9df572464d8bc02e",
+              "sha256": "20b80c378d3cd4e583be3666835ccb5c5340a52977a2c81c9df572464d8bc02e"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zellij/blobs/sha256:cb880aba2e59c61ad0be14f360bbee48911d8814e9604cf56daa29900b6a6df5",
+              "sha256": "cb880aba2e59c61ad0be14f360bbee48911d8814e9604cf56daa29900b6a6df5"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zellij/blobs/sha256:9b357757755d585d7529dbd1d5a066673d34e5dea93de84578e7624ff78f8a1a",
+              "sha256": "9b357757755d585d7529dbd1d5a066673d34e5dea93de84578e7624ff78f8a1a"
+            },
+            "mojave": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/zellij/blobs/sha256:3b43e7d15946e12710e191411daa026cc618fb531c3ce422821113d4222fc930",
+              "sha256": "3b43e7d15946e12710e191411daa026cc618fb531c3ce422821113d4222fc930"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1691,7 +1720,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.1.7",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "e8ba3ce5599805a903ffd9bb597d5935fca161b0",
+        "Homebrew/homebrew-core": "8f462102f9b2222a5381e2fcaa0016a2604efafe",
         "CLT": "12.5.0.22.9",
         "Xcode": "12.5",
         "macOS": "11.3.1"
