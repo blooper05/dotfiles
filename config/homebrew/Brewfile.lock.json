@@ -727,7 +727,7 @@
         }
       },
       "luajit": {
-        "version": "HEAD-75ee3a6",
+        "version": "HEAD-8dc3cd6",
         "bottle": {
           "rebuild": 4,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -867,7 +867,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-bb7d379_2",
+        "version": "HEAD-dc18c1e_2",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
