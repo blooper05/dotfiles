@@ -30,10 +30,10 @@ return require('packer').startup(function()
   use { 'glepnir/zephyr-nvim',
     config = function()
       -- Assume a dark background.
-      vim.o.background = 'dark'
+      vim.opt.background = 'dark'
 
       -- Enable 24-bit RGB color in the TUI.
-      vim.o.termguicolors = true
+      vim.opt.termguicolors = true
 
       -- Use zephyr as colorscheme.
       vim.cmd('colorscheme zephyr')
@@ -52,7 +52,7 @@ return require('packer').startup(function()
     },
     config = function()
       -- Get rid of redundant mode display.
-      vim.o.showmode = false
+      vim.opt.showmode = false
 
       require('lualine').setup({
         options = {
@@ -68,7 +68,7 @@ return require('packer').startup(function()
     },
     config = function()
       -- Enable 24-bit RGB color in the TUI.
-      vim.o.termguicolors = true
+      vim.opt.termguicolors = true
 
       require('bufferline').setup({})
     end,
@@ -77,7 +77,7 @@ return require('packer').startup(function()
   use { 'glepnir/indent-guides.nvim',
     config = function()
       -- Enable 24-bit RGB color in the TUI.
-      vim.o.termguicolors = true
+      vim.opt.termguicolors = true
 
       require('indent_guides').setup({})
     end,
@@ -99,7 +99,7 @@ return require('packer').startup(function()
   use { 'norcalli/nvim-colorizer.lua',
     config = function()
       -- Enable 24-bit RGB color in the TUI.
-      vim.o.termguicolors = true
+      vim.opt.termguicolors = true
 
       require('colorizer').setup({})
     end,
@@ -181,13 +181,13 @@ return require('packer').startup(function()
   use { 'hrsh7th/nvim-compe',
     config = function()
       -- Set completeopt to have a better completion experience.
-      vim.o.completeopt = table.concat({
+      vim.opt.completeopt = {
         'menuone',
         'noselect',
-      }, ',')
+      }
 
       -- Avoid showing message extra message when using completion.
-      vim.o.shortmess = vim.o.shortmess .. 'c'
+      vim.opt.shortmess:append('c')
 
       require('compe').setup({
         source = {
@@ -315,7 +315,7 @@ return require('packer').startup(function()
       vim.api.nvim_set_keymap('n', '[file]c', ':<C-u>NvimTreeToggle<CR>', { noremap = true, silent = true })
 
       -- Enable 24-bit RGB color in the TUI.
-      vim.o.termguicolors = true
+      vim.opt.termguicolors = true
 
       vim.cmd('autocmd MyAutoCmd FileType NvimTree setlocal cursorline')
 

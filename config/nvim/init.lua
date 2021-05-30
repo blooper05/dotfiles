@@ -9,26 +9,26 @@ vim.cmd('language messages C')
 vim.cmd('language time C')
 
 -- Settings of the encoding to use for a save and reading.
-vim.o.encoding      = 'utf-8'
-vim.o.fileencodings = table.concat({
+vim.opt.encoding      = 'utf-8'
+vim.opt.fileencodings = {
   'utf-8',
   'euc-jp',
   'sjis',
   'cp932',
   'iso-2022-jp',
-}, ',')
+}
 
 -- Auto reload if file is changed.
-vim.bo.autoread = true
+vim.opt.autoread = true
 
 -- Use system clipboard.
-vim.o.clipboard = table.concat({
+vim.opt.clipboard = {
   'unnamed',
   'unnamedplus',
-}, ',')
+}
 
 -- Don't redraw during macro execution.
-vim.o.lazyredraw = true
+vim.opt.lazyredraw = true
 
 -- Edit and reload vimrc immediately.
 vim.api.nvim_set_keymap('n', '<F5>', ':<C-u>tabnew $MYVIMRC<CR>',  { noremap = true, silent = true })
@@ -40,16 +40,16 @@ vim.api.nvim_set_keymap('t', '<ESC>', [[<C-\><C-n>]], { noremap = true, silent =
 -- Search {{{1
 
 -- Ignore the case of normal letters.
-vim.o.ignorecase = true
+vim.opt.ignorecase = true
 
 -- If the search pattern contains upper case characters, override ignorecase option.
-vim.o.smartcase = true
+vim.opt.smartcase = true
 
 -- Enable incremental search.
-vim.o.incsearch = true
+vim.opt.incsearch = true
 
 -- Highlight search result.
-vim.o.hlsearch = true
+vim.opt.hlsearch = true
 
 -- Clear highlight.
 vim.api.nvim_set_keymap('n', '<ESC><ESC>', ':<C-u>nohlsearch<CR>', { noremap = true, silent = true })
@@ -57,44 +57,44 @@ vim.api.nvim_set_keymap('n', '<ESC><ESC>', ':<C-u>nohlsearch<CR>', { noremap = t
 -- View {{{1
 
 -- Show line number.
-vim.wo.number = true
+vim.opt.number = true
 
 -- Show <TAB> and <CR>.
-vim.wo.list = true
+vim.opt.list = true
 
 -- Don't wrap long line.
-vim.wo.wrap = false
+vim.opt.wrap = false
 
 -- Always display statusline.
-vim.o.laststatus = 2
+vim.opt.laststatus = 2
 
 -- Show command on statusline.
-vim.o.showcmd = true
+vim.opt.showcmd = true
 
 -- Show title.
-vim.o.title = true
+vim.opt.title = true
 
 -- Show line and column display.
-vim.o.ruler = true
+vim.opt.ruler = true
 
 -- Enable wildmode.
-vim.o.wildmenu = true
-vim.o.wildmode = table.concat({
+vim.opt.wildmenu = true
+vim.opt.wildmode = {
   'list:longest',
   'full',
-}, ',')
+}
 
 -- Splitting a window will put the new window below the current one.
-vim.o.splitbelow = true
+vim.opt.splitbelow = true
 
 -- Splitting a window will put the new window right the current one.
-vim.o.splitright = true
+vim.opt.splitright = true
 
 -- Create equally sized splits.
-vim.o.equalalways = true
+vim.opt.equalalways = true
 
 -- Use smarter algorithms in vimdiff.
-vim.o.diffopt = table.concat({
+vim.opt.diffopt = {
   'internal',
   'filler',
   'closeoff',
@@ -102,28 +102,28 @@ vim.o.diffopt = table.concat({
   'vertical',
   'algorithm:histogram',
   'indent-heuristic',
-}, ',')
+}
 
 -- Edit {{{1
 
 -- Exchange tab to spaces.
-vim.bo.expandtab = true
+vim.opt.expandtab = true
 
 -- Enable backspace delete indent and newline.
-vim.o.backspace = table.concat({
+vim.opt.backspace = {
   'indent',
   'eol',
   'start',
-}, ',')
+}
 
 -- Highlight parenthesis.
-vim.o.showmatch = true
+vim.opt.showmatch = true
 
 -- Ignore case on insert completion.
-vim.bo.infercase = true
+vim.opt.infercase = true
 
 -- Show the effects of a command incrementally, also in a preview window.
-vim.o.inccommand = 'split'
+vim.opt.inccommand = 'split'
 
 -- Insert blank line in normal mode.
 vim.api.nvim_set_keymap('n', '<CR>', 'o<ESC>', { noremap = true })
@@ -146,28 +146,28 @@ vim.cmd('augroup END')
 -- Syntax {{{1
 
 -- Enable auto indent.
-vim.bo.autoindent = true
+vim.opt.autoindent = true
 
 -- Enable smart indent.
-vim.bo.smartindent = true
+vim.opt.smartindent = true
 
 -- Substitute <Tab> with blanks.
-vim.bo.tabstop = 2
+vim.opt.tabstop = 2
 
 -- Spaces instead <Tab>.
-vim.bo.softtabstop = 0
+vim.opt.softtabstop = 0
 
 -- Auto indent width.
-vim.bo.shiftwidth = 2
+vim.opt.shiftwidth = 2
 
 -- Stop syntax highlight of too long lines
-vim.bo.synmaxcol = 240
+vim.opt.synmaxcol = 240
 
 -- Folding {{{1
 
-vim.bo.modeline = true
-vim.o.modelines = 3
-vim.o.fillchars = [[vert:|]]
+vim.opt.modeline = true
+vim.opt.modelines = 3
+vim.opt.fillchars = [[vert:|]]
 -- vim: foldmethod=marker
 -- vim: foldcolumn=3
 -- vim: foldlevel=0
