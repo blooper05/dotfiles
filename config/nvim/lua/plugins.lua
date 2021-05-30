@@ -152,6 +152,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'ahmedkhalf/lsp-rooter.nvim',
+    config = function()
+      require('lsp-rooter').setup({})
+    end
+  }
+
   -- Debug Adapter Protocol {{{1
 
   use { 'mfussenegger/nvim-dap',
