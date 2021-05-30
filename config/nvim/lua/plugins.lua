@@ -563,11 +563,14 @@ return require('packer').startup(function()
       vim.g.ale_fix_on_save = true
 
       vim.g.ale_fixers = {
-        [ '*' ]    = { 'remove_trailing_lines' },
-        ruby       = { 'rubocop' },
-        javascript = { 'eslint', 'prettier' },
-        typescript = { 'eslint', 'prettier' },
-        terraform  = { 'terraform' },
+        [ '*' ]         = { 'remove_trailing_lines' },
+        ruby            = { 'rubocop' },
+        json            = { 'eslint', 'prettier' },
+        javascript      = { 'eslint', 'prettier' },
+        typescript      = { 'eslint', 'prettier' },
+        typescriptreact = { 'eslint', 'prettier' },
+        vue             = { 'eslint', 'prettier' },
+        terraform       = { 'terraform' },
       }
 
       -- Run linters or formatters via Docker.
