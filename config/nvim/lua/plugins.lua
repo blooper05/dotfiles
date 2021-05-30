@@ -88,7 +88,7 @@ return require('packer').startup(function()
     config = function()
       require('nvim-treesitter.configs').setup({
         ensure_installed      = 'all',
-        ignore_install        = { 'devicetree', 'erlang', 'gdscript', 'haskell', 'nix', 'ocamllex', 'supercollider', 'swift' },
+        ignore_install        = { 'haskell' },
         highlight             = { enable = true },
         incremental_selection = { enable = true },
         indent                = { enable = true },
