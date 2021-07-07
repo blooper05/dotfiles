@@ -257,9 +257,12 @@ return require('packer').startup(function()
 
       require('telescope').setup({
         defaults = {
-          prompt_position  = 'top',
           sorting_strategy = 'ascending',
           layout_strategy  = 'flex',
+
+          layout_config = {
+            prompt_position = 'top',
+          },
 
           mappings = {
             i = {
