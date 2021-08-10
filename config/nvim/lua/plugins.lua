@@ -105,14 +105,19 @@ return require('packer').startup(function()
     end,
   }
 
-  -- use { 'kdav5758/TrueZen.nvim',
-  use { 'junegunn/goyo.vim', -- non-lua plugin
+  use { 'Pocco81/TrueZen.nvim',
     requires = {
-      { 'junegunn/limelight.vim' },
+      { 'folke/twilight.nvim' },
     },
     config = function()
-      vim.cmd('autocmd! User GoyoEnter Limelight')
-      vim.cmd('autocmd! User GoyoLeave Limelight!')
+      require('true-zen').setup({
+        integrations = {
+          gitsigns        = true,
+          nvim_bufferline = true,
+          twilight        = true,
+          lualine         = true,
+        },
+      })
     end,
   }
 
