@@ -116,6 +116,11 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'rcarriga/nvim-notify',
+    config = function()
+    end,
+  }
+
   -- Language Server Protocol {{{1
 
   use { 'neovim/nvim-lspconfig',
