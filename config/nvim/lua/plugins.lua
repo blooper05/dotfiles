@@ -162,10 +162,19 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'glepnir/lspsaga.nvim',
+    requires = {
+      { 'neovim/nvim-lspconfig' },
+    },
+    config = function()
+      require('lspsaga').init_lsp_saga({})
+    end,
+  }
+
   use { 'ahmedkhalf/lsp-rooter.nvim',
     config = function()
       require('lsp-rooter').setup({})
-    end
+    end,
   }
 
   -- Debug Adapter Protocol {{{1
