@@ -171,12 +171,6 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'ahmedkhalf/lsp-rooter.nvim',
-    config = function()
-      require('lsp-rooter').setup({})
-    end,
-  }
-
   -- Debug Adapter Protocol {{{1
 
   use { 'mfussenegger/nvim-dap',
@@ -351,6 +345,17 @@ return require('packer').startup(function()
       vim.g.nvim_tree_follow         = 1
       vim.g.nvim_tree_indent_markers = 1
       vim.g.nvim_tree_hide_dotfiles  = 1
+    end,
+  }
+
+  use { 'ahmedkhalf/project.nvim',
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    config = function()
+      require('project_nvim').setup({})
+
+      require('telescope').load_extension('projects')
     end,
   }
 
