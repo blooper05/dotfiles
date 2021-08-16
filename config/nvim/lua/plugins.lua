@@ -353,6 +353,9 @@ return require('packer').startup(function()
       { 'nvim-telescope/telescope.nvim' },
     },
     config = function()
+      vim.g.nvim_tree_update_cwd      = 1
+      vim.g.nvim_tree_respect_buf_cwd = 1
+
       require('project_nvim').setup({})
 
       require('telescope').load_extension('projects')
