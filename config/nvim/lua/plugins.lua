@@ -681,6 +681,7 @@ return require('packer').startup(function()
   use { 'rcmdnk/vim-markdown', -- non-lua plugin
     requires = {
       { 'joker1007/vim-markdown-quote-syntax' },
+      { 'godlygeek/tabular'                   },
     },
     config = function()
       -- Disable the folding configuration.
