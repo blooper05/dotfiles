@@ -719,16 +719,17 @@ return require('packer').startup(function()
 
   use { 'pwntester/octo.nvim',
     requires = {
-      { 'nvim-telescope/telescope.nvim' },
+      { 'nvim-telescope/telescope.nvim'            },
+      { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
       vim.api.nvim_set_keymap('n', '[octo]',       '<Nop>',  { noremap = true })
       vim.api.nvim_set_keymap('n', '[telescope]G', '[octo]', {})
 
-      vim.api.nvim_set_keymap('n', '[octo]i', ':<C-u>Octo issue list states=OPEN<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[octo]p', ':<C-u>Octo pr list states=OPEN<CR>',    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[octo]i', ':<C-u>Octo issue list<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[octo]p', ':<C-u>Octo pr list<CR>',    { noremap = true, silent = true })
 
-      require('telescope').load_extension('octo')
+      require('octo').setup({})
     end,
   }
 
