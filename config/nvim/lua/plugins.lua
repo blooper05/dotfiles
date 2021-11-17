@@ -44,7 +44,7 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'hoob3rt/lualine.nvim',
+  use { 'nvim-lualine/lualine.nvim',
     requires = {
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
@@ -52,11 +52,7 @@ return require('packer').startup(function()
       -- Get rid of redundant mode display.
       vim.opt.showmode = false
 
-      require('lualine').setup({
-        options = {
-          theme = 'auto',
-        },
-      })
+      require('lualine').setup({})
     end,
   }
 
