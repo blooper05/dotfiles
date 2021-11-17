@@ -34,7 +34,7 @@ return require('packer').startup(function()
       vim.opt.termguicolors = true
 
       -- Use zephyr as colorscheme.
-      vim.cmd('colorscheme zephyr')
+      require('zephyr')
     end,
   }
 
