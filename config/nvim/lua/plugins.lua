@@ -6,8 +6,7 @@ local fn  = vim.fn
 local installPath = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
 
 if fn.empty(fn.glob(installPath)) > 0 then
-  execute('!git clone https://github.com/wbthomason/packer.nvim ' .. installPath)
-  execute('packadd packer.nvim')
+  PackerBootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', installPath })
 end
 
 cmd('packadd packer.nvim')
@@ -732,6 +731,11 @@ return require('packer').startup(function()
       require('octo').setup({})
     end,
   }
+
+  -- Plugin Management {{{1
+  if PackerBootstrap then
+    require('packer').sync()
+  end
 
 end)
 
