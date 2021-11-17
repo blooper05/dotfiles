@@ -1,7 +1,7 @@
 -- Plugin Management {{{1
 
-local execute = vim.api.nvim_command
-local fn      = vim.fn
+local cmd = vim.cmd
+local fn  = vim.fn
 
 local installPath = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
 
@@ -10,11 +10,11 @@ if fn.empty(fn.glob(installPath)) > 0 then
   execute('packadd packer.nvim')
 end
 
-vim.cmd('packadd packer.nvim')
+cmd('packadd packer.nvim')
 
-vim.cmd('augroup MyAutoCmd')
-vim.cmd('autocmd!')
-vim.cmd('augroup END')
+cmd('augroup MyAutoCmd')
+cmd('autocmd!')
+cmd('augroup END')
 
 return require('packer').startup(function()
   use { 'wbthomason/packer.nvim', opt = true,
