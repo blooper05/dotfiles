@@ -187,8 +187,7 @@ return require('packer').startup(function()
       { 'nvim-treesitter/nvim-treesitter' },
     },
     config = function()
-      -- Show virtual text for current frame.
-      vim.g.dap_virtual_text = true
+      require('nvim-dap-virtual-text').setup({})
     end,
   }
 
