@@ -121,11 +121,11 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'rcarriga/nvim-notify',
-    config = function()
-      require('notify').setup({})
-    end,
-  }
+  -- use { 'rcarriga/nvim-notify',
+  --   config = function()
+  --     require('notify').setup({})
+  --   end,
+  -- }
 
   -- Language Server Protocol {{{1
 
