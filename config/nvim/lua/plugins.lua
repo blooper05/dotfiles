@@ -78,6 +78,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'sunjon/shade.nvim',
+    config = function()
+      require('shade').setup({})
+    end,
+  }
+
   use { 'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     config = function()
