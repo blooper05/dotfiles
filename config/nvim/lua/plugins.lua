@@ -123,6 +123,7 @@ return require('packer').startup(function()
 
   use { 'rcarriga/nvim-notify',
     config = function()
+      require('notify').setup({})
     end,
   }
 
