@@ -129,36 +129,32 @@ return require('packer').startup(function()
 
   -- Language Server Protocol {{{1
 
-  use { 'neovim/nvim-lspconfig',
-    config = function()
-    end,
-  }
-
-  use { 'kabouzeid/nvim-lspinstall',
+  use { 'williamboman/nvim-lsp-installer',
     requires = {
       { 'neovim/nvim-lspconfig' },
     },
     config = function()
-      local lspinstall = require('lspinstall')
+      local installer = require('nvim-lsp-installer.servers')
+      local servers   = installer.get_available_server_names()
 
-      lspinstall.setup({})
+      for _, name in pairs(servers) do
+        local server_available, server = installer.get_server(name)
 
-      local function setup_servers()
-        local servers = lspinstall.installed_servers()
-        for _, server in pairs(servers) do
-          require('lspconfig')[server].setup({
-            settings = {
-              Lua = { diagnostics = { globals = { 'use', 'vim' } } },
-            },
-          })
+        if server_available then
+          server:on_ready(function()
+            local opts = {}
+
+            if server.name == 'sumneko_lua' then
+              opts.settings = { Lua = { diagnostics = { globals = { 'use', 'vim' } } } }
+            end
+
+            server:setup(opts)
+          end)
+
+          if not server:is_installed() then
+            server:install()
+          end
         end
-      end
-
-      setup_servers()
-
-      lspinstall.post_install_hook = function()
-        setup_servers()
-        vim.cmd('bufdo e')
       end
     end,
   }
