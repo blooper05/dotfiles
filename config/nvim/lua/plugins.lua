@@ -81,8 +81,7 @@ return require('packer').startup(function()
     run = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup({
-        ensure_installed      = 'all',
-        ignore_install        = { 'haskell' },
+        ensure_installed      = 'maintained',
         highlight             = { enable = true },
         incremental_selection = { enable = true },
         indent                = { enable = true },
