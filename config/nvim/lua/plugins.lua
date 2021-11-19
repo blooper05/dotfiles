@@ -347,7 +347,6 @@ return require('packer').startup(function()
 
   use { 'nvim-telescope/telescope.nvim',
     requires = {
-      { 'nvim-lua/popup.nvim'                         },
       { 'nvim-lua/plenary.nvim'                       },
       { 'kyazdani42/nvim-web-devicons',    opt = true },
       { 'nvim-treesitter/nvim-treesitter', opt = true },
@@ -357,11 +356,14 @@ return require('packer').startup(function()
       vim.api.nvim_set_keymap('n', '[telescope]', '<Nop>',       { noremap = true })
       vim.api.nvim_set_keymap('n', '<Space>u',    '[telescope]', {})
 
-      vim.api.nvim_set_keymap('n', '[telescope]f', [[<Cmd>lua require('telescope.builtin').git_files()<CR>]], { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]g', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]b', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]],   { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]r', [[<Cmd>lua require('telescope.builtin').registers()<CR>]], { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]H', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]f', [[<Cmd>lua require('telescope.builtin').git_files()<CR>]],    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]F', [[<Cmd>lua require('telescope.builtin').file_browser()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]g', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]],    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]B', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]],      { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]R', [[<Cmd>lua require('telescope.builtin').registers()<CR>]],    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]H', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]],    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]M', [[<Cmd>lua require('telescope.builtin').man_pages()<CR>]],    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]u', [[<Cmd>lua require('telescope.builtin').resume()<CR>]],       { noremap = true, silent = true })
 
       require('telescope').setup({
         defaults = {
@@ -376,8 +378,7 @@ return require('packer').startup(function()
             i = {
               ['<C-u>'] = false,
               ['<C-d>'] = false,
-              ['<C-c>'] = false,
-              ['<Esc>'] = require('telescope.actions').close,
+              ['<Esc>'] = 'close',
             },
           },
         },
@@ -388,7 +389,7 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope-frecency.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },
-      { 'tami5/sql.nvim'                },
+      { 'tami5/sqlite.lua'              },
     },
     config = function()
       vim.api.nvim_set_keymap('n', '[telescope]h', [[<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>]], { noremap = true, silent = true })
@@ -400,6 +401,7 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope-packer.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },
+      { 'wbthomason/packer.nvim'        },
     },
     config = function()
       vim.api.nvim_set_keymap('n', '[telescope]p', [[<Cmd>lua require('telescope').extensions.packer.plugins()<CR>]], { noremap = true, silent = true })
