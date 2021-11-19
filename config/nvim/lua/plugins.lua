@@ -195,17 +195,17 @@ return require('packer').startup(function()
 
   use { 'hrsh7th/nvim-cmp',
     requires = {
-      { 'neovim/nvim-lspconfig' },
-      { 'hrsh7th/cmp-buffer'    },
-      { 'hrsh7th/cmp-calc'      },
-      { 'hrsh7th/cmp-cmdline',  },
-      { 'hrsh7th/cmp-emoji'     },
-      { 'hrsh7th/cmp-nvim-lsp'  },
-      { 'hrsh7th/cmp-nvim-lua'  },
-      { 'hrsh7th/cmp-path'      },
-      { 'hrsh7th/cmp-vsnip'     },
-      { 'hrsh7th/vim-vsnip'     },
-      { 'onsails/lspkind-nvim'  },
+      { 'neovim/nvim-lspconfig'    },
+      { 'L3MON4D3/LuaSnip'         },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-buffer'       },
+      { 'hrsh7th/cmp-calc'         },
+      { 'hrsh7th/cmp-cmdline',     },
+      { 'hrsh7th/cmp-emoji'        },
+      { 'hrsh7th/cmp-nvim-lsp'     },
+      { 'hrsh7th/cmp-nvim-lua'     },
+      { 'hrsh7th/cmp-path'         },
+      { 'onsails/lspkind-nvim'     },
     },
     config = function()
       -- Set completeopt to have a better completion experience.
@@ -217,12 +217,13 @@ return require('packer').startup(function()
       -- Avoid showing message extra message when using completion.
       vim.opt.shortmess:append('c')
 
-      local cmp = require('cmp')
+      local cmp     = require('cmp')
+      local luasnip = require('luasnip')
 
       cmp.setup({
         snippet = {
           expand = function(args)
-            vim.fn['vsnip#anonymous'](args.body)
+            luasnip.lsp_expand(args.body)
           end,
         },
         mapping = {
@@ -231,10 +232,30 @@ return require('packer').startup(function()
           ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(),      { 'i', 'c' }),
           ['<C-e>']     = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
           ['<CR>']      = cmp.mapping.confirm({ select = true }),
+
+          ['<Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+              luasnip.expand_or_jump()
+            else
+              fallback()
+            end
+          end, { 'i', 's' }),
+
+          ['<S-Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+              cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+              luasnip.jump(-1)
+            else
+              fallback()
+            end
+          end, { 'i', 's' }),
         },
         sources = cmp.config.sources({
+          { name = 'luasnip'  },
           { name = 'nvim_lsp' },
-          { name = 'vsnip'    },
         }, {
           { name = 'buffer'   },
           { name = 'calc'     },
@@ -248,10 +269,10 @@ return require('packer').startup(function()
               calc     = '[Calc]',
               cmdline  = '[Cmd]',
               emoji    = '[Emoji]',
+              luasnip  = '[Snippet]',
               nvim_lsp = '[LSP]',
               nvim_lua = '[Lua]',
               path     = '[Path]',
-              vsnip    = '[Snippet]',
             }),
           }),
         },
@@ -273,17 +294,6 @@ return require('packer').startup(function()
       -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup({
       --   capabilities = capabilities,
       -- })
-    end,
-  }
-
-  use { 'norcalli/snippets.nvim',
-    requires = {
-      { 'hrsh7th/nvim-compe' },
-    },
-    config = function()
-      vim.g.completion_enable_snippet = 'snippets.nvim'
-
-      require('snippets').use_suggested_mappings()
     end,
   }
 
