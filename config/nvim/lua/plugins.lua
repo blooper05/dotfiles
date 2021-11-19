@@ -193,7 +193,20 @@ return require('packer').startup(function()
 
   -- Completion {{{1
 
-  use { 'hrsh7th/nvim-compe',
+  use { 'hrsh7th/nvim-cmp',
+    requires = {
+      { 'neovim/nvim-lspconfig' },
+      { 'hrsh7th/cmp-buffer'    },
+      { 'hrsh7th/cmp-calc'      },
+      { 'hrsh7th/cmp-cmdline',  },
+      { 'hrsh7th/cmp-emoji'     },
+      { 'hrsh7th/cmp-nvim-lsp'  },
+      { 'hrsh7th/cmp-nvim-lua'  },
+      { 'hrsh7th/cmp-path'      },
+      { 'hrsh7th/cmp-vsnip'     },
+      { 'hrsh7th/vim-vsnip'     },
+      { 'onsails/lspkind-nvim'  },
+    },
     config = function()
       -- Set completeopt to have a better completion experience.
       vim.opt.completeopt = {
@@ -204,26 +217,62 @@ return require('packer').startup(function()
       -- Avoid showing message extra message when using completion.
       vim.opt.shortmess:append('c')
 
-      require('compe').setup({
-        source = {
-          path            = true;
-          buffer          = true;
-          tags            = true;
-          spell           = true;
-          calc            = true;
-          emoji           = true;
-          nvim_lsp        = true;
-          nvim_lua        = true;
-          snippets_nvim   = true;
-          nvim_treesitter = true;
-        };
+      local cmp = require('cmp')
+
+      cmp.setup({
+        snippet = {
+          expand = function(args)
+            vim.fn['vsnip#anonymous'](args.body)
+          end,
+        },
+        mapping = {
+          ['<C-d>']     = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+          ['<C-f>']     = cmp.mapping(cmp.mapping.scroll_docs(4),  { 'i', 'c' }),
+          ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(),      { 'i', 'c' }),
+          ['<C-e>']     = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
+          ['<CR>']      = cmp.mapping.confirm({ select = true }),
+        },
+        sources = cmp.config.sources({
+          { name = 'nvim_lsp' },
+          { name = 'vsnip'    },
+        }, {
+          { name = 'buffer'   },
+          { name = 'calc'     },
+          { name = 'emoji'    },
+          { name = 'nvim_lua' },
+        }),
+        formatting = {
+          format = require('lspkind').cmp_format({
+            menu = ({
+              buffer   = '[Buffer]',
+              calc     = '[Calc]',
+              cmdline  = '[Cmd]',
+              emoji    = '[Emoji]',
+              nvim_lsp = '[LSP]',
+              nvim_lua = '[Lua]',
+              path     = '[Path]',
+              vsnip    = '[Snippet]',
+            }),
+          }),
+        },
       })
 
-      vim.api.nvim_set_keymap('i', '<C-Space>', [[compe#complete()]],              { noremap = true, silent = true, expr = true })
-      vim.api.nvim_set_keymap('i', '<CR>',      [[compe#confirm('<CR>')]],         { noremap = true, silent = true, expr = true })
-      vim.api.nvim_set_keymap('i', '<C-e>',     [[compe#close('<C-e>')]],          { noremap = true, silent = true, expr = true })
-      vim.api.nvim_set_keymap('i', '<C-f>',     [[compe#scroll({ 'delta': +4 })]], { noremap = true, silent = true, expr = true })
-      vim.api.nvim_set_keymap('i', '<C-d>',     [[compe#scroll({ 'delta': -4 })]], { noremap = true, silent = true, expr = true })
+      cmp.setup.cmdline('/', {
+        sources = { { name = 'buffer' } },
+      })
+
+      cmp.setup.cmdline(':', {
+        sources = cmp.config.sources({
+          { name = 'path'    },
+        }, {
+          { name = 'cmdline' },
+        }),
+      })
+
+      -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+      -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup({
+      --   capabilities = capabilities,
+      -- })
     end,
   }
 
