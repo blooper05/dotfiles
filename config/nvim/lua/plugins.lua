@@ -425,6 +425,7 @@ return require('packer').startup(function()
 
   use { 'kyazdani42/nvim-tree.lua',
     requires = {
+      { 'ahmedkhalf/project.nvim'                  },
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
@@ -436,12 +437,16 @@ return require('packer').startup(function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
 
+      -- Change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+      vim.g.nvim_tree_respect_buf_cwd = 1
+
       vim.cmd('autocmd MyAutoCmd FileType NvimTree setlocal cursorline')
 
-      vim.g.nvim_tree_width          = 40
-      vim.g.nvim_tree_follow         = 1
-      vim.g.nvim_tree_indent_markers = 1
-      vim.g.nvim_tree_hide_dotfiles  = 1
+      require('nvim-tree').setup({
+        update_cwd          = true,
+        update_focused_file = { enable = true, update_cwd = true },
+        view                = { width  = 40 }
+      })
     end,
   }
 
@@ -450,9 +455,6 @@ return require('packer').startup(function()
       { 'nvim-telescope/telescope.nvim' },
     },
     config = function()
-      vim.g.nvim_tree_update_cwd      = 1
-      vim.g.nvim_tree_respect_buf_cwd = 1
-
       require('project_nvim').setup({})
 
       require('telescope').load_extension('projects')
