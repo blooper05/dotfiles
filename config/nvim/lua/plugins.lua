@@ -138,9 +138,9 @@ return require('packer').startup(function()
       local servers   = installer.get_available_server_names()
 
       for _, name in pairs(servers) do
-        local server_available, server = installer.get_server(name)
+        local serverAvailable, server = installer.get_server(name)
 
-        if server_available then
+        if serverAvailable then
           server:on_ready(function()
             local opts = {}
 
