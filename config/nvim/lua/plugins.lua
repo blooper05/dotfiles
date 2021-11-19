@@ -297,6 +297,15 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'L3MON4D3/LuaSnip',
+    requires = {
+      { 'rafamadriz/friendly-snippets' },
+    },
+    config = function()
+      require('luasnip/loaders/from_vscode').lazy_load()
+    end,
+  }
+
   use { 'windwp/nvim-autopairs',
     config = function()
       local autopairs = require('nvim-autopairs')
