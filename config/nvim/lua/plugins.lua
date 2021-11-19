@@ -463,7 +463,7 @@ return require('packer').startup(function()
 
   -- Terminal {{{1
 
-  use { 'numtostr/FTerm.nvim',
+  use { 'numToStr/FTerm.nvim',
     config = function()
       vim.api.nvim_set_keymap('n', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
       vim.api.nvim_set_keymap('t', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
