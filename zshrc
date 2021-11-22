@@ -52,7 +52,7 @@ zinit ice depth:1 wait lucid \
 zinit light trapd00r/LS_COLORS
 
 zinit ice depth:1 wait lucid atinit:'zicompinit; zicdreplay;'
-zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 zinit ice depth:1 wait lucid atload:'_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
