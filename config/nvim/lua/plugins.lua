@@ -12,9 +12,11 @@ end
 
 cmd('packadd packer.nvim')
 
-cmd('augroup MyAutoCmd')
-cmd('autocmd!')
-cmd('augroup END')
+cmd([[
+  augroup MyAutoCmd
+    autocmd!
+  augroup END
+]])
 
 return require('packer').startup(function()
   use { 'wbthomason/packer.nvim', opt = true,
