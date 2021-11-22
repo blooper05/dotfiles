@@ -66,7 +66,7 @@ zinit light hlissner/zsh-autopair
 # zinit ice depth:1 wait lucid
 # zinit light jeffreytse/zsh-vi-mode
 
-zinit ice depth:1
+zinit ice depth:1 ver:'add-skim_support'
 zinit light blooper05/anyframe
 
 zinit ice depth:1 wait lucid as:'program' pick:'exe/git-cococo'
