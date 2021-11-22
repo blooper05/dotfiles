@@ -235,7 +235,7 @@ export TIMEWARRIORDB=$XDG_DATA_HOME/timew
 # Powerlevel10k {{{2
 source $XDG_CONFIG_HOME/zsh/powerlevel10k.zsh
 
-# starship {{{2
+# # starship {{{2
 # eval "$(starship init zsh)"
 # export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
 
