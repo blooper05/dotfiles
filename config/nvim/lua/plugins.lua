@@ -440,7 +440,7 @@ return require('packer').startup(function()
       -- Change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
       vim.g.nvim_tree_respect_buf_cwd = 1
 
-      vim.cmd('autocmd MyAutoCmd FileType NvimTree setlocal cursorline')
+      vim.cmd('autocmd MyAutoCmd BufWinEnter NvimTree setlocal cursorline')
 
       require('nvim-tree').setup({
         update_cwd          = true,
