@@ -681,7 +681,7 @@ return require('packer').startup(function()
       { 'nvim-lua/plenary.nvim' },
     },
     config = function()
-      require('gitsigns').setup()
+      require('gitsigns').setup({})
     end,
   }
 
