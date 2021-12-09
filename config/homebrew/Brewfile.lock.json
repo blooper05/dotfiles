@@ -8,19 +8,19 @@
         "revision": "44a1e064d0cf9c3ef8d1820be7988f762f222cf5"
       },
       "homebrew/cask": {
-        "revision": "2120166dd80e32ca45d24ae29fd70116688c6248"
+        "revision": "cca22db6636ffa378621ff9c610c7bb32a7c44d2"
       },
       "homebrew/cask-drivers": {
         "revision": "56e638297d1c2e9a7d2151e2e281e863ce9c2a85"
       },
       "homebrew/cask-fonts": {
-        "revision": "9a26765a3c706504a1147e9e5c75fb316c23b3bc"
+        "revision": "a4eee8c045db8c701a7aec1904ba5d2b12ab6a07"
       },
       "homebrew/core": {
-        "revision": "721a46f5263c88343fc27079a88489dc7fa20fea"
+        "revision": "d25a1a6e4001340ebb9e7a7356176caab8bb001a"
       },
       "k1low/tap": {
-        "revision": "5faeddf3e325cde4ee4e705fa46742d70ac84e67"
+        "revision": "ca594aa7d502fcfe0c227e039e1635dca77adb0a"
       },
       "kayac/tap": {
         "revision": "83f94c9ec79a0bfec6899f3a2eb946c437bfbf71"
@@ -1026,7 +1026,7 @@
         }
       },
       "luajit": {
-        "version": "HEAD-f3c8569",
+        "version": "2.0.5",
         "bottle": {
           "rebuild": 4,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1057,11 +1057,6 @@
               "sha256": "c958527ccb075bdc9e61adacd371a2372ffa731c53ffb191fe71f0889ea24869"
             }
           }
-        },
-        "options": {
-          "args": [
-            "HEAD"
-          ]
         }
       },
       "mackup": {
@@ -1191,7 +1186,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-2cd815c",
+        "version": "0.6.0",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1227,11 +1222,6 @@
               "sha256": "be2d90349b6ae9d56f2e365deaf75e9c5122840e7e0bdbd53f4b741274ad159a"
             }
           }
-        },
-        "options": {
-          "args": [
-            "HEAD"
-          ]
         }
       },
       "procs": {
@@ -2232,7 +2222,7 @@
         }
       },
       "insomnia": {
-        "version": "2021.7.0",
+        "version": "2021.7.1",
         "options": {
           "full_name": "insomnia"
         }
@@ -2384,10 +2374,18 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.3.7",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "721a46f5263c88343fc27079a88489dc7fa20fea",
+        "Homebrew/homebrew-core": "85f9f897be6742693ae41c54dd665e6bed5c1f06",
         "CLT": "12.5.0.22.9",
         "Xcode": "12.5.1",
         "macOS": "11.6.1"
+      },
+      "monterey": {
+        "HOMEBREW_VERSION": "3.3.7",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "d25a1a6e4001340ebb9e7a7356176caab8bb001a",
+        "CLT": "13.1.0.0.1.1633545042",
+        "Xcode": "13.1",
+        "macOS": "12.0.1"
       }
     }
   }
