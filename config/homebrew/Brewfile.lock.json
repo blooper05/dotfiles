@@ -2371,14 +2371,6 @@
   },
   "system": {
     "macos": {
-      "big_sur": {
-        "HOMEBREW_VERSION": "3.3.7",
-        "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "85f9f897be6742693ae41c54dd665e6bed5c1f06",
-        "CLT": "12.5.0.22.9",
-        "Xcode": "12.5.1",
-        "macOS": "11.6.1"
-      },
       "monterey": {
         "HOMEBREW_VERSION": "3.3.7",
         "HOMEBREW_PREFIX": "/usr/local",
