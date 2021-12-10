@@ -8,16 +8,16 @@
         "revision": "44a1e064d0cf9c3ef8d1820be7988f762f222cf5"
       },
       "homebrew/cask": {
-        "revision": "cca22db6636ffa378621ff9c610c7bb32a7c44d2"
+        "revision": "333e07b17c26df732150a3d95778df2f8efc39a5"
       },
       "homebrew/cask-drivers": {
-        "revision": "56e638297d1c2e9a7d2151e2e281e863ce9c2a85"
+        "revision": "c525342f32d030c8597d06a467817dd4b9eaafc0"
       },
       "homebrew/cask-fonts": {
         "revision": "a4eee8c045db8c701a7aec1904ba5d2b12ab6a07"
       },
       "homebrew/core": {
-        "revision": "d25a1a6e4001340ebb9e7a7356176caab8bb001a"
+        "revision": "b1f328cf428b6b2f1d3ac2b915bd75fbfc7e104b"
       },
       "k1low/tap": {
         "revision": "ca594aa7d502fcfe0c227e039e1635dca77adb0a"
@@ -2228,7 +2228,7 @@
         }
       },
       "kap": {
-        "version": "3.4.2",
+        "version": "3.5.1",
         "options": {
           "full_name": "kap"
         }
@@ -2300,7 +2300,7 @@
         }
       },
       "sonos": {
-        "version": "13.4,66.4.23090",
+        "version": "13.4.1,66.4.23300",
         "options": {
           "full_name": "sonos"
         }
@@ -2374,7 +2374,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.3.7",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "d25a1a6e4001340ebb9e7a7356176caab8bb001a",
+        "Homebrew/homebrew-core": "b1f328cf428b6b2f1d3ac2b915bd75fbfc7e104b",
         "CLT": "13.1.0.0.1.1633545042",
         "Xcode": "13.1",
         "macOS": "12.0.1"
