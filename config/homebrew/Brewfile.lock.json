@@ -8,19 +8,19 @@
         "revision": "98605110483b68fac97c85f14f86d9120e0c6f88"
       },
       "homebrew/cask": {
-        "revision": "303fccba63e2e8366da449d01cd1ef996bd42eb0"
+        "revision": "1ded80af36dfd7b8097149467ec0b6448788ac06"
       },
       "homebrew/cask-drivers": {
-        "revision": "ccd99ad815bcd1bf0d549517c330a5ff8fda2a36"
+        "revision": "9cd9829d121554de391a790e1a1682c436b0b095"
       },
       "homebrew/cask-fonts": {
         "revision": "67e89af711b03a8a9df84b1eb63abd5c60638cb5"
       },
       "homebrew/core": {
-        "revision": "15376f8a5e4f02cb0f7151276bb522f4b7745309"
+        "revision": "9d10d74e1a8f1ba5bc3587b53fce390d7d549f34"
       },
       "k1low/tap": {
-        "revision": "b920566eacfdee63e37e8f784c1deb75500a7d14"
+        "revision": "ad6c271c957aa814d1ef856640bb66f6c1ac9df2"
       },
       "kayac/tap": {
         "revision": "ddad1346cab0c6ec72a08d5db4c35c12ae7c7188"
@@ -2369,10 +2369,10 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.3.8",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "15376f8a5e4f02cb0f7151276bb522f4b7745309",
+        "Homebrew/homebrew-core": "9d10d74e1a8f1ba5bc3587b53fce390d7d549f34",
         "CLT": "13.1.0.0.1.1633545042",
         "Xcode": "13.1",
-        "macOS": "12.0.1"
+        "macOS": "12.1"
       }
     }
   }
