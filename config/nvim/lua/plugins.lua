@@ -12,17 +12,16 @@ end
 
 cmd('packadd packer.nvim')
 
-cmd([[
-  augroup MyAutoCmd
-    autocmd!
-  augroup END
-]])
-
 return require('packer').startup(function()
   use { 'wbthomason/packer.nvim', opt = true,
     setup = function()
       -- Run :PackerCompile whenever plugins.lua is updated automatically.
-      vim.cmd('autocmd MyAutoCmd BufWritePost plugins.lua source <afile> | PackerCompile')
+      local autoPackerCompile = vim.api.nvim_create_augroup('AutoPackerCompile', { clear = true })
+      vim.api.nvim_create_autocmd('BufWritePost', {
+        group   = autoPackerCompile,
+        pattern = 'plugins.lua',
+        command = 'source <afile> | PackerCompile',
+      })
     end,
   }
 
@@ -442,7 +441,12 @@ return require('packer').startup(function()
       -- Change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
       vim.g.nvim_tree_respect_buf_cwd = 1
 
-      vim.cmd('autocmd MyAutoCmd BufWinEnter NvimTree setlocal cursorline')
+      local cursorline = vim.api.nvim_create_augroup('cursorline', { clear = true })
+      vim.api.nvim_create_autocmd('BufWinEnter', {
+        group   = cursorline,
+        pattern = 'NvimTree',
+        command = 'setlocal cursorline',
+      })
 
       require('nvim-tree').setup({
         update_cwd          = true,
@@ -773,7 +777,13 @@ return require('packer').startup(function()
         },
       }
 
-      vim.cmd([[autocmd MyAutoCmd VimEnter * lua require('deardiary').set_current_journal_cwd()]])
+      local deardiary = vim.api.nvim_create_augroup('deardiary', { clear = true })
+      vim.api.nvim_create_autocmd('VimEnter', {
+        group   = deardiary,
+        callback = function()
+          require('deardiary').set_current_journal_cwd()
+        end,
+      })
     end,
   }
 
