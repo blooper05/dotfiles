@@ -93,7 +93,7 @@ alias top='btm'
 alias watch='watchexec'
 alias dig='dog'
 alias ping='gping'
-alias curl='xh'
+alias curl='xhs --json --follow'
 
 # Key Binding {{{1
 
