@@ -172,6 +172,22 @@ return require('packer').startup(function()
           server:on_ready(function()
             local opts = {}
 
+            if server.name == 'denols' then
+              opts.autostart = false
+            end
+
+            if server.name == 'ltex' then
+              opts.autostart = false
+            end
+
+            if server.name == 'remark_ls' then
+              opts.autostart = false
+            end
+
+            if server.name == 'sorbet' then
+              opts.autostart = false
+            end
+
             if server.name == 'sumneko_lua' then
               opts.settings = { Lua = { diagnostics = { globals = { 'use', 'vim' } } } }
             end
