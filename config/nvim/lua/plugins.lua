@@ -548,10 +548,11 @@ return require('packer').startup(function()
 
   -- Terminal {{{1
 
-  use { 'numToStr/FTerm.nvim',
+  use { 'akinsho/toggleterm.nvim',
     config = function()
-      vim.api.nvim_set_keymap('n', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('t', '<Leader>t', [[<CMD>lua require('FTerm').toggle()<CR>]], { noremap = true, silent = true })
+      require('toggleterm').setup({
+        open_mapping = '<Leader>t',
+      })
     end,
   }
 
