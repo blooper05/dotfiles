@@ -448,7 +448,6 @@ return require('packer').startup(function()
       vim.api.nvim_set_keymap('n', '<Space>u',    '[telescope]', {})
 
       vim.api.nvim_set_keymap('n', '[telescope]f', [[<Cmd>lua require('telescope.builtin').git_files()<CR>]],    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]F', [[<Cmd>lua require('telescope.builtin').file_browser()<CR>]], { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[telescope]g', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]],    { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[telescope]B', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]],      { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[telescope]R', [[<Cmd>lua require('telescope.builtin').registers()<CR>]],    { noremap = true, silent = true })
