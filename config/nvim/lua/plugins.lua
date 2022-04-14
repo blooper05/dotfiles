@@ -447,13 +447,14 @@ return require('packer').startup(function()
       vim.api.nvim_set_keymap('n', '[telescope]', '<Nop>',       { noremap = true })
       vim.api.nvim_set_keymap('n', '<Space>u',    '[telescope]', {})
 
-      vim.api.nvim_set_keymap('n', '[telescope]f', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]],   { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]g', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]],    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]B', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]],      { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]R', [[<Cmd>lua require('telescope.builtin').registers()<CR>]],    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]H', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]],    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]M', [[<Cmd>lua require('telescope.builtin').man_pages()<CR>]],    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]u', [[<Cmd>lua require('telescope.builtin').resume()<CR>]],       { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]f', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]],  { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]g', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]],   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]*', [[<Cmd>lua require('telescope.builtin').grep_string()<CR>]], { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]B', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]],     { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]R', [[<Cmd>lua require('telescope.builtin').registers()<CR>]],   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]H', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]],   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]M', [[<Cmd>lua require('telescope.builtin').man_pages()<CR>]],   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]u', [[<Cmd>lua require('telescope.builtin').resume()<CR>]],      { noremap = true, silent = true })
 
       require('telescope').setup({
         defaults = {
