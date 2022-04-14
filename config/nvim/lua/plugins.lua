@@ -99,7 +99,18 @@ return require('packer').startup(function()
         ensure_installed      = 'all',
         highlight             = { enable = true },
         incremental_selection = { enable = true },
-        indent                = { enable = true },
+        indent                = { enable = false },
+      })
+    end,
+  }
+
+  use { 'yioneko/nvim-yati',
+    requires = {
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        yati = { enable = true },
       })
     end,
   }
