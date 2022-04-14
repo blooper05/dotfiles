@@ -69,7 +69,11 @@ return require('packer').startup(function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
 
-      require('bufferline').setup({})
+      require('bufferline').setup({
+        options = {
+          mode = 'tabs',
+        },
+      })
     end,
   }
 
