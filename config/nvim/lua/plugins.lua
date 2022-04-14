@@ -321,11 +321,11 @@ return require('packer').startup(function()
         sources = cmp.config.sources({
           { name = 'luasnip'  },
           { name = 'nvim_lsp' },
+          { name = 'nvim_lua' },
+          { name = 'path'     },
         }, {
           { name = 'buffer'   },
           { name = 'calc'     },
-          { name = 'emoji'    },
-          { name = 'nvim_lua' },
         }),
         formatting = {
           format = require('lspkind').cmp_format({
@@ -341,6 +341,18 @@ return require('packer').startup(function()
             }),
           }),
         },
+      })
+
+      cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
+        sources = cmp.config.sources({
+          { name = 'emoji'    },
+          { name = 'luasnip'  },
+          { name = 'nvim_lsp' },
+          { name = 'path'     },
+        }, {
+          { name = 'buffer'   },
+          { name = 'calc'     },
+        }),
       })
 
       cmp.setup.cmdline('/', {
