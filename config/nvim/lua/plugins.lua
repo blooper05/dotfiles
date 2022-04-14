@@ -77,12 +77,12 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'glepnir/indent-guides.nvim',
+  use { 'lukas-reineke/indent-blankline.nvim',
     config = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
 
-      require('indent_guides').setup({})
+      require('indent_blankline').setup({})
     end,
   }
 
