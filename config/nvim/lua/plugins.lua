@@ -237,6 +237,15 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'rcarriga/nvim-dap-ui',
+    requires = {
+      { 'mfussenegger/nvim-dap' },
+    },
+    config = function()
+      require('dapui').setup({})
+    end,
+  }
+
   use { 'theHamsta/nvim-dap-virtual-text',
     requires = {
       { 'mfussenegger/nvim-dap'           },
