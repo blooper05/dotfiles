@@ -47,7 +47,6 @@ return require('packer').startup(function()
 
   use { 'nvim-lualine/lualine.nvim',
     requires = {
-      { 'kyazdani42/nvim-tree.lua',     opt = true },
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
@@ -57,9 +56,6 @@ return require('packer').startup(function()
       require('lualine').setup({
         options = {
           globalstatus = true,
-        },
-        extensions = {
-          'nvim-tree',
         },
       })
     end,
@@ -514,34 +510,27 @@ return require('packer').startup(function()
 
   -- File Explorer {{{1
 
-  use { 'kyazdani42/nvim-tree.lua',
+  use { 'nvim-neo-tree/neo-tree.nvim',
     requires = {
-      { 'ahmedkhalf/project.nvim'                  },
+      { 'MunifTanjim/nui.nvim'                     },
+      { 'nvim-lua/plenary.nvim'                    },
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
       vim.api.nvim_set_keymap('n', '[file]',   '<Nop>',  { noremap = true })
       vim.api.nvim_set_keymap('n', '<Space>f', '[file]', {})
 
-      vim.api.nvim_set_keymap('n', '[file]c', ':<C-u>NvimTreeToggle<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[file]c', ':<C-u>NeoTreeRevealToggle<CR>', { noremap = true, silent = true })
 
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
 
-      -- Change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
-      vim.g.nvim_tree_respect_buf_cwd = 1
-
-      local cursorline = vim.api.nvim_create_augroup('cursorline', { clear = true })
-      vim.api.nvim_create_autocmd('BufWinEnter', {
-        group   = cursorline,
-        pattern = 'NvimTree',
-        command = 'setlocal cursorline',
-      })
-
-      require('nvim-tree').setup({
-        update_cwd          = true,
-        update_focused_file = { enable = true, update_cwd = true },
-        view                = { width  = 40 }
+      require('neo-tree').setup({
+        filesystem = {
+          filtered_items = {
+            visible = true,
+          },
+        },
       })
     end,
   }
