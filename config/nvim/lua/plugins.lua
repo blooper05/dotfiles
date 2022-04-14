@@ -115,6 +115,15 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'm-demare/hlargs.nvim',
+    requires = {
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    config = function()
+      require('hlargs').setup({})
+    end,
+  }
+
   use { 'norcalli/nvim-colorizer.lua',
     config = function()
       -- Enable 24-bit RGB color in the TUI.
