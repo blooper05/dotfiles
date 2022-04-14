@@ -77,6 +77,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'petertriho/nvim-scrollbar',
+    config = function()
+      require('scrollbar.handlers.search').setup({})
+    end,
+  }
+
   use { 'lukas-reineke/indent-blankline.nvim',
     config = function()
       -- Enable 24-bit RGB color in the TUI.
