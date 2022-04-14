@@ -271,6 +271,9 @@ return require('packer').startup(function()
       { 'hrsh7th/cmp-nvim-lua'     },
       { 'hrsh7th/cmp-path'         },
       { 'onsails/lspkind-nvim'     },
+      { 'f3fora/cmp-spell'         },
+      { 'uga-rosa/cmp-dictionary'  },
+      { 'ray-x/cmp-treesitter'     },
     },
     config = function()
       -- Set completeopt to have a better completion experience.
@@ -319,25 +322,31 @@ return require('packer').startup(function()
           end, { 'i', 's' }),
         }),
         sources = cmp.config.sources({
-          { name = 'luasnip'  },
-          { name = 'nvim_lsp' },
-          { name = 'nvim_lua' },
-          { name = 'path'     },
+          { name = 'luasnip'    },
+          { name = 'nvim_lsp'   },
+          { name = 'nvim_lua'   },
+          { name = 'path'       },
         }, {
-          { name = 'buffer'   },
-          { name = 'calc'     },
+          { name = 'buffer'     },
+          { name = 'calc'       },
+          { name = 'dictionary' },
+          { name = 'spell'      },
+          { name = 'treesitter' },
         }),
         formatting = {
           format = require('lspkind').cmp_format({
             menu = ({
-              buffer   = '[Buffer]',
-              calc     = '[Calc]',
-              cmdline  = '[Cmd]',
-              emoji    = '[Emoji]',
-              luasnip  = '[Snippet]',
-              nvim_lsp = '[LSP]',
-              nvim_lua = '[Lua]',
-              path     = '[Path]',
+              buffer     = '[Buffer]',
+              calc       = '[Calc]',
+              cmdline    = '[Cmd]',
+              dictionary = '[Dictionary]',
+              emoji      = '[Emoji]',
+              luasnip    = '[Snippet]',
+              nvim_lsp   = '[LSP]',
+              nvim_lua   = '[Lua]',
+              path       = '[Path]',
+              spell      = '[Spell]',
+              treesitter = '[TS]',
             }),
           }),
         },
@@ -345,13 +354,16 @@ return require('packer').startup(function()
 
       cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
         sources = cmp.config.sources({
-          { name = 'emoji'    },
-          { name = 'luasnip'  },
-          { name = 'nvim_lsp' },
-          { name = 'path'     },
+          { name = 'emoji'      },
+          { name = 'luasnip'    },
+          { name = 'nvim_lsp'   },
+          { name = 'path'       },
         }, {
-          { name = 'buffer'   },
-          { name = 'calc'     },
+          { name = 'buffer'     },
+          { name = 'calc'       },
+          { name = 'dictionary' },
+          { name = 'spell'      },
+          { name = 'treesitter' },
         }),
       })
 
