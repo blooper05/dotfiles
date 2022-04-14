@@ -202,12 +202,6 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'j-hui/fidget.nvim',
-    config = function()
-      require('fidget').setup({})
-    end,
-  }
-
   -- Debug Adapter Protocol {{{1
 
   use { 'mfussenegger/nvim-dap',
