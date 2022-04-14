@@ -203,6 +203,12 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'folke/lsp-colors.nvim',
+    config = function()
+      require('lsp-colors').setup({})
+    end,
+  }
+
   use { 'tami5/lspsaga.nvim',
     requires = {
       { 'neovim/nvim-lspconfig' },
