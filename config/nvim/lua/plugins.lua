@@ -98,6 +98,39 @@ return require('packer').startup(function()
     end,
   }
 
+  use { 'norcalli/nvim-colorizer.lua',
+    config = function()
+      -- Enable 24-bit RGB color in the TUI.
+      vim.opt.termguicolors = true
+
+      require('colorizer').setup({})
+    end,
+  }
+
+  use { 'Pocco81/TrueZen.nvim',
+    requires = {
+      { 'folke/twilight.nvim' },
+    },
+    config = function()
+      require('true-zen').setup({
+        integrations = {
+          gitsigns        = true,
+          nvim_bufferline = true,
+          twilight        = true,
+          lualine         = true,
+        },
+      })
+    end,
+  }
+
+  use { 'rcarriga/nvim-notify',
+    config = function()
+      require('notify').setup({})
+    end,
+  }
+
+  -- Treesitter {{{1
+
   use { 'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     config = function()
@@ -127,37 +160,6 @@ return require('packer').startup(function()
     },
     config = function()
       require('hlargs').setup({})
-    end,
-  }
-
-  use { 'norcalli/nvim-colorizer.lua',
-    config = function()
-      -- Enable 24-bit RGB color in the TUI.
-      vim.opt.termguicolors = true
-
-      require('colorizer').setup({})
-    end,
-  }
-
-  use { 'Pocco81/TrueZen.nvim',
-    requires = {
-      { 'folke/twilight.nvim' },
-    },
-    config = function()
-      require('true-zen').setup({
-        integrations = {
-          gitsigns        = true,
-          nvim_bufferline = true,
-          twilight        = true,
-          lualine         = true,
-        },
-      })
-    end,
-  }
-
-  use { 'rcarriga/nvim-notify',
-    config = function()
-      require('notify').setup({})
     end,
   }
 
