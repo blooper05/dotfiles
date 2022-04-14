@@ -203,12 +203,12 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'glepnir/lspsaga.nvim',
+  use { 'tami5/lspsaga.nvim',
     requires = {
       { 'neovim/nvim-lspconfig' },
     },
     config = function()
-      require('lspsaga').init_lsp_saga({})
+      require('lspsaga').setup({})
     end,
   }
 
