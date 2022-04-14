@@ -612,26 +612,33 @@ return require('packer').startup(function()
 
   use { 'monaqa/dial.nvim',
     config = function()
-      vim.api.nvim_set_keymap('n', '<C-a>',  '<Plug>(dial-increment)', {})
-      vim.api.nvim_set_keymap('n', '<C-x>',  '<Plug>(dial-decrement)', {})
-      vim.api.nvim_set_keymap('v', '<C-a>',  '<Plug>(dial-increment)', {})
-      vim.api.nvim_set_keymap('v', '<C-x>',  '<Plug>(dial-decrement)', {})
-      vim.api.nvim_set_keymap('v', 'g<C-a>', '<Plug>(dial-increment-additional)', {})
-      vim.api.nvim_set_keymap('v', 'g<C-x>', '<Plug>(dial-decrement-additional)', {})
+      vim.api.nvim_set_keymap('n', '<C-a>',  require('dial.map').inc_normal(),  { noremap = true })
+      vim.api.nvim_set_keymap('n', '<C-x>',  require('dial.map').dec_normal(),  { noremap = true })
+      vim.api.nvim_set_keymap('v', '<C-a>',  require('dial.map').inc_visual(),  { noremap = true })
+      vim.api.nvim_set_keymap('v', '<C-x>',  require('dial.map').dec_visual(),  { noremap = true })
+      vim.api.nvim_set_keymap('v', 'g<C-a>', require('dial.map').inc_gvisual(), { noremap = true })
+      vim.api.nvim_set_keymap('v', 'g<C-x>', require('dial.map').dec_gvisual(), { noremap = true })
 
-      local dial = require('dial')
+      local augend = require('dial.augend')
 
-      dial.augends['custom#boolean'] = dial.common.enum_cyclic({
-        name    = 'boolean',
-        strlist = { 'true', 'false' },
+      require('dial.config').augends:register_group({
+        default = {
+          augend.integer.alias.decimal_int,
+          augend.integer.alias.hex,
+          augend.date.alias['%Y/%m/%d'],
+          augend.date.alias['%Y-%m-%d'],
+          augend.date.alias['%m/%d'],
+          augend.date.alias['%H:%M'],
+          augend.constant.alias.ja_weekday_full,
+          augend.constant.alias.bool,
+          augend.semver.alias.semver,
+          augend.constant.new({
+            elements = { 'pick', 'fixup', 'reword', 'edit', 'squash', 'exec', 'break', 'drop', 'label', 'reset', 'merge' },
+            word     = true,
+            cyclic   = true,
+          }),
+        },
       })
-      table.insert(dial.config.searchlist.normal, 'custom#boolean')
-
-      dial.augends['custom#git_rebase'] = dial.common.enum_cyclic({
-        name    = 'git_rebase',
-        strlist = { 'pick', 'fixup', 'reword', 'edit', 'squash', 'exec', 'break', 'drop', 'label', 'reset', 'merge' },
-      })
-      table.insert(dial.config.searchlist.normal, 'custom#git_rebase')
     end,
   }
 
