@@ -66,7 +66,7 @@ vim.opt.list = true
 vim.opt.wrap = false
 
 -- Always display statusline.
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
 
 -- Show command on statusline.
 vim.opt.showcmd = true

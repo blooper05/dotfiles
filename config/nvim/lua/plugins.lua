@@ -47,13 +47,21 @@ return require('packer').startup(function()
 
   use { 'nvim-lualine/lualine.nvim',
     requires = {
+      { 'kyazdani42/nvim-tree.lua',     opt = true },
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
       -- Get rid of redundant mode display.
       vim.opt.showmode = false
 
-      require('lualine').setup({})
+      require('lualine').setup({
+        options = {
+          globalstatus = true,
+        },
+        extensions = {
+          'nvim-tree',
+        },
+      })
     end,
   }
 
