@@ -26,7 +26,7 @@ return require('packer').startup(function()
 
   -- Appearance {{{1
 
-  use { 'glepnir/zephyr-nvim',
+  use { 'EdenEast/nightfox.nvim',
     config = function()
       -- Assume a dark background.
       vim.opt.background = 'dark'
@@ -34,8 +34,8 @@ return require('packer').startup(function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
 
-      -- Use zephyr as colorscheme.
-      require('zephyr')
+      -- Use nordfox as colorscheme.
+      vim.cmd('colorscheme nordfox')
     end,
   }
 
