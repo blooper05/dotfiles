@@ -172,20 +172,10 @@ return require('packer').startup(function()
           server:on_ready(function()
             local opts = {}
 
-            if server.name == 'denols' then
-              opts.autostart = false
-            end
-
-            if server.name == 'ltex' then
-              opts.autostart = false
-            end
-
-            if server.name == 'remark_ls' then
-              opts.autostart = false
-            end
-
-            if server.name == 'sorbet' then
-              opts.autostart = false
+            for serverName in pairs({ 'denols', 'ltex', 'remark_ls', 'sorbet' }) do
+              if server.name == serverName then
+                opts.autostart = false
+              end
             end
 
             if server.name == 'sumneko_lua' then
