@@ -569,8 +569,15 @@ return require('packer').startup(function()
   }
 
   use { 'andymass/vim-matchup', -- non-lua plugin
+    requires = {
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
     config = function()
       vim.g.matchup_matchparen_offscreen = { method = 'popup' }
+
+      require('nvim-treesitter.configs').setup({
+        matchup = { enable = true },
+      })
     end,
   }
 
