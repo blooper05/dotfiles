@@ -82,7 +82,7 @@ return require('packer').startup(function()
     end,
   }
 
-  use { 'sunjon/shade.nvim',
+  use { 'sunjon/shade.nvim', disable = true,
     config = function()
       require('shade').setup({})
     end,
