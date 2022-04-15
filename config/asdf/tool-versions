@@ -1,5 +1,6 @@
 deno 1.20.6
 dotenv-linter 3.2.0
+editorconfig-checker 2.4.0
 elm 0.19.1
 golang 1.18.1
 nodejs 17.9.0
