@@ -40,6 +40,7 @@
 [delta]
   diff-so-fancy = true
   line-numbers  = true
+  navigate      = true
   side-by-side  = true
 [secrets]
   providers = git secrets --aws-provider
