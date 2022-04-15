@@ -38,7 +38,6 @@ brew "neovim", args: ["HEAD"]
 brew "procs"
 brew "ripgrep"
 brew "sd"
-brew "shellcheck"
 brew "sk"
 brew "sops"
 # brew "ssh-copy-id", link: true
