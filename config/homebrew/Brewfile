@@ -37,7 +37,6 @@ brew "neovim", args: ["HEAD"]
 # brew "nushell"
 brew "procs"
 brew "ripgrep"
-brew "rust"
 brew "sd"
 brew "shellcheck"
 brew "sk"
