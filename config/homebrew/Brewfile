@@ -104,6 +104,7 @@ cask "stoplight-studio"
 cask "tableplus"
 cask "todoist"
 # cask "vox"
+cask "wezterm"
 # cask "zeplin"
 cask "zoom"
 mas "DaVinci Resolve", id: 571213070
