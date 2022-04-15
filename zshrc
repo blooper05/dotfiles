@@ -192,6 +192,11 @@ export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
 export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=$XDG_CONFIG_HOME/asdf/tool-versions
 source $(brew --prefix asdf)/asdf.sh
 
+# Ruby {{{2
+export BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundler
+export BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundler
+export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundler
+
 # Node.js {{{2
 export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 
