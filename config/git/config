@@ -16,6 +16,8 @@
   autocorrect = 1
 [interactive]
   diffFilter = delta --color-only
+[merge]
+  conflictstyle = zdiff3
 [pager]
   log  = delta
   show = delta
