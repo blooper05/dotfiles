@@ -19,9 +19,9 @@
 [merge]
   conflictstyle = zdiff3
 [pager]
+  diff = delta
   log  = delta
   show = delta
-  diff = delta
 [pretty]
   pretty = %C(red)%h%C(auto) - %s %C(green)%cr%C(auto) %C(blue)<%an>%C(auto)%C(yellow)%d%C(auto)
 [pull]
