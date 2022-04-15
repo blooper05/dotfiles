@@ -11,7 +11,7 @@ end
 
 vim.cmd('packadd packer.nvim')
 
-return require('packer').startup(function()
+local function packerStartup(use)
   use { 'wbthomason/packer.nvim', opt = true,
     setup = function()
       -- Run :PackerCompile whenever plugins.lua is updated automatically.
@@ -928,7 +928,15 @@ return require('packer').startup(function()
     require('packer').sync()
   end
 
-end)
+end
+
+return require('packer').startup({
+  packerStartup,
+
+  config = {
+    max_jobs = 8,
+  },
+})
 
 -- Folding {{{1
 
