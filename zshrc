@@ -52,10 +52,10 @@ zinit ice depth:1 wait lucid \
   atload:'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"'
 zinit light trapd00r/LS_COLORS
 
-zinit ice depth:1 wait lucid atinit:'zicompinit; zicdreplay;'
+zinit ice depth:1 wait lucid atinit:'ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay;'
 zinit light zdharma-continuum/fast-syntax-highlighting
 
-zinit ice depth:1 wait lucid atload:'_zsh_autosuggest_start'
+zinit ice depth:1 wait lucid atload:'!_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
 
 zinit ice depth:1 wait lucid atpull:'zinit creinstall -q .' blockf
