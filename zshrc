@@ -6,11 +6,6 @@ tty -s && stty -ixon
 # Set GPG TTY.
 export GPG_TTY=$(tty)
 
-# Powerlevel10k Instant Prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Environment Variable {{{1
 
 # PATH
@@ -42,9 +37,6 @@ ZINIT[HOME_DIR]=$XDG_DATA_HOME/zinit
 ZINIT[ZCOMPDUMP_PATH]=$XDG_DATA_HOME/zsh/compdump
 
 source /usr/local/opt/zinit/zinit.zsh
-
-zinit ice depth:1
-zinit light romkatv/powerlevel10k
 
 zinit ice depth:1 wait lucid \
   atclone:'dircolors -b LS_COLORS > clrs.zsh' \
@@ -236,9 +228,6 @@ export TASKRC=$XDG_CONFIG_HOME/task/taskrc
 
 # Timewarrior {{{2
 export TIMEWARRIORDB=$XDG_DATA_HOME/timew
-
-# Powerlevel10k {{{2
-source $XDG_CONFIG_HOME/zsh/powerlevel10k.zsh
 
 # # starship {{{2
 # eval "$(starship init zsh)"
