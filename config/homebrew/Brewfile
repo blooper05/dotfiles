@@ -39,7 +39,7 @@ brew "sd"
 brew "sk"
 brew "sops"
 # brew "ssh-copy-id", link: true
-# brew "starship"
+brew "starship"
 brew "task"
 brew "taskwarrior-tui"
 brew "timewarrior"
