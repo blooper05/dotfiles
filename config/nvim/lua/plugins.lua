@@ -475,6 +475,18 @@ local function packerStartup(use)
     end,
   }
 
+  use { 'folke/todo-comments.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim'         },
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '[telescope]t', ':<C-u>TodoTelescope<CR>', { noremap = true, silent = true })
+
+      require('todo-comments').setup({})
+    end,
+  }
+
   use { 'nvim-telescope/telescope-packer.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },
