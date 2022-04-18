@@ -157,7 +157,7 @@ export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 
 # Go {{{2
 export GOPATH=$XDG_DATA_HOME/go
-export PATH=$GOPATH/bin:$PATH
+export PATH=$PATH:$GOPATH/bin
 
 # skim {{{2
 export SKIM_DEFAULT_OPTIONS='--multi --reverse --ansi --select-1 --exit-0'
