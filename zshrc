@@ -187,7 +187,7 @@ export TF_CLI_ARGS_plan="--parallelism=30"
 export TF_CLI_ARGS_apply="--parallelism=30"
 
 # Docker {{{2
-export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
+export DOCKER_CONFIG=$XDG_DATA_HOME/docker
 
 # Taskwarrior {{{2
 export TASKDATA=$XDG_DATA_HOME/task
