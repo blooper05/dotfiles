@@ -326,7 +326,7 @@ shell:
   args:
     - --login
     - -c
-    - tmux new-session -A -s main
+    - zellij attach --create main
 
 # Startup directory
 #
