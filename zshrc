@@ -199,7 +199,7 @@ export TIMEWARRIORDB=$XDG_DATA_HOME/timew
 # Sheldon {{{2
 eval "$(sheldon source)"
 
-# starship {{{2
+# Starship {{{2
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
 
