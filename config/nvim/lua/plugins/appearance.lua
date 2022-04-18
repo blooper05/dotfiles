@@ -56,8 +56,15 @@ return {
 
   {
     'petertriho/nvim-scrollbar',
+    requires = {
+      { 'kevinhwang91/nvim-hlslens', opt = true },
+    },
     config = function()
-      require('scrollbar.handlers.search').setup({})
+      require('scrollbar').setup({
+        handlers = {
+          search = true,
+        },
+      })
     end,
   },
 
