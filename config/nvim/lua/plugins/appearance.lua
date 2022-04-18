@@ -103,19 +103,12 @@ return {
   },
 
   {
-    'Pocco81/TrueZen.nvim',
+    'folke/zen-mode.nvim',
     requires = {
       { 'folke/twilight.nvim' },
     },
     config = function()
-      require('true-zen').setup({
-        integrations = {
-          gitsigns        = true,
-          nvim_bufferline = true,
-          twilight        = true,
-          lualine         = true,
-        },
-      })
+      require('zen-mode').setup({})
     end,
   },
 
