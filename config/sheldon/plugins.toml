@@ -1,0 +1,39 @@
+[plugins.zsh-defer]
+github = 'romkatv/zsh-defer'
+
+[templates]
+defer = { value = 'zsh-defer source "{{ file }}"', each = true }
+
+[plugins.LS_COLORS]
+github = 'trapd00r/LS_COLORS'
+apply  = ['defer']
+
+[plugins.fast-syntax-highlighting]
+github = 'zdharma-continuum/fast-syntax-highlighting'
+apply  = ['defer']
+
+[plugins.zsh-autosuggestions]
+github = 'zsh-users/zsh-autosuggestions'
+apply  = ['defer']
+
+[plugins.zsh-completions]
+github = 'zsh-users/zsh-completions'
+apply  = ['defer']
+
+[plugins.zsh-autopair]
+github = 'hlissner/zsh-autopair'
+apply  = ['defer']
+
+# [plugins.zsh-vi-mode]
+# github = 'jeffreytse/zsh-vi-mode'
+# apply  = ['defer']
+
+[plugins.anyframe]
+github = 'blooper05/anyframe'
+branch = 'add-skim_support'
+apply  = ['defer']
+
+[plugins.git-cococo]
+github = 'blooper05/git-cococo'
+use    = ['exe/git-cococo']
+apply  = ['defer']

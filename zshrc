@@ -29,42 +29,6 @@ export SHELL=/usr/local/bin/zsh
 export EDITOR=nvim
 export PAGER=less
 
-# Zinit {{{1
-
-declare -A ZINIT
-
-ZINIT[HOME_DIR]=$XDG_DATA_HOME/zinit
-ZINIT[ZCOMPDUMP_PATH]=$XDG_DATA_HOME/zsh/compdump
-
-source /usr/local/opt/zinit/zinit.zsh
-
-zinit ice depth:1 wait lucid \
-  atclone:'dircolors -b LS_COLORS > clrs.zsh' \
-  atpull:'%atclone' pick:'clrs.zsh' nocompile:'!' \
-  atload:'zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"'
-zinit light trapd00r/LS_COLORS
-
-zinit ice depth:1 wait lucid atinit:'ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay;'
-zinit light zdharma-continuum/fast-syntax-highlighting
-
-zinit ice depth:1 wait lucid atload:'!_zsh_autosuggest_start'
-zinit light zsh-users/zsh-autosuggestions
-
-zinit ice depth:1 wait lucid atpull:'zinit creinstall -q .' blockf
-zinit light zsh-users/zsh-completions
-
-zinit ice depth:1 wait lucid
-zinit light hlissner/zsh-autopair
-
-# zinit ice depth:1 wait lucid
-# zinit light jeffreytse/zsh-vi-mode
-
-zinit ice depth:1 ver:'add-skim_support'
-zinit light blooper05/anyframe
-
-zinit ice depth:1 wait lucid as:'program' pick:'exe/git-cococo'
-zinit light blooper05/git-cococo
-
 # Alias {{{1
 
 alias cp='cp -i'
@@ -228,6 +192,9 @@ export TASKRC=$XDG_CONFIG_HOME/task/taskrc
 
 # Timewarrior {{{2
 export TIMEWARRIORDB=$XDG_DATA_HOME/timew
+
+# Sheldon {{{2
+eval "$(sheldon source)"
 
 # starship {{{2
 eval "$(starship init zsh)"
