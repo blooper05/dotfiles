@@ -918,6 +918,13 @@ local function packerStartup(use)
     end,
   }
 
+  -- Jsonnet {{{2
+
+  use { 'google/vim-jsonnet', -- non-lua plugin
+    config = function()
+    end,
+  }
+
   -- Web Service {{{1
 
   use { 'pwntester/octo.nvim',
