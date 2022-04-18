@@ -70,11 +70,18 @@ return {
 
   {
     'lukas-reineke/indent-blankline.nvim',
+    requires = {
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
+    },
     config = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
 
-      require('indent_blankline').setup({})
+      require('indent_blankline').setup({
+        indent_blankline_use_treesitter = true,
+        show_current_context            = true,
+        show_current_context_start      = true,
+      })
     end,
   },
 
