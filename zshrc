@@ -175,7 +175,7 @@ export GHQ_ROOT=$XDG_DATA_HOME/ghq
 # gh {{{2
 eval "$(gh completion -s zsh)"
 
-# gpg {{{2
+# GnuPG {{{2
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 
 # AWS CLI {{{2
