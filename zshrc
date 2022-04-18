@@ -229,9 +229,9 @@ export TASKRC=$XDG_CONFIG_HOME/task/taskrc
 # Timewarrior {{{2
 export TIMEWARRIORDB=$XDG_DATA_HOME/timew
 
-# # starship {{{2
-# eval "$(starship init zsh)"
-# export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
+# starship {{{2
+eval "$(starship init zsh)"
+export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
 
 # Folding {{{1
 
