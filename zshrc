@@ -160,7 +160,7 @@ export GOPATH=$XDG_DATA_HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # skim {{{2
-export SKIM_DEFAULT_OPTIONS='--multi --reverse --ansi --select-1 --exit-0'
+export SKIM_DEFAULT_OPTIONS='--multi --layout=reverse --ansi --select-1 --exit-0'
 
 # anyframe {{{2
 bindkey '^k' anyframe-widget-kill
