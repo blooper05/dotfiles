@@ -251,7 +251,7 @@ local function packerStartup(use)
       { 'saadparwaiz1/cmp_luasnip' },
       { 'hrsh7th/cmp-buffer'       },
       { 'hrsh7th/cmp-calc'         },
-      { 'hrsh7th/cmp-cmdline',     },
+      { 'hrsh7th/cmp-cmdline'      },
       { 'hrsh7th/cmp-emoji'        },
       { 'hrsh7th/cmp-nvim-lsp'     },
       { 'hrsh7th/cmp-nvim-lua'     },
@@ -308,10 +308,10 @@ local function packerStartup(use)
           end, { 'i', 's' }),
         }),
         sources = cmp.config.sources({
-          { name = 'luasnip'    },
-          { name = 'nvim_lsp'   },
-          { name = 'nvim_lua'   },
-          { name = 'path'       },
+          { name = 'luasnip'  },
+          { name = 'nvim_lsp' },
+          { name = 'nvim_lua' },
+          { name = 'path'     },
         }, {
           { name = 'buffer'     },
           { name = 'calc'       },
@@ -321,7 +321,7 @@ local function packerStartup(use)
         }),
         formatting = {
           format = require('lspkind').cmp_format({
-            menu = ({
+            menu = {
               buffer     = '[Buffer]',
               calc       = '[Calc]',
               cmdline    = '[Cmd]',
@@ -333,17 +333,17 @@ local function packerStartup(use)
               path       = '[Path]',
               spell      = '[Spell]',
               treesitter = '[TS]',
-            }),
+            },
           }),
         },
       })
 
       cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
         sources = cmp.config.sources({
-          { name = 'emoji'      },
-          { name = 'luasnip'    },
-          { name = 'nvim_lsp'   },
-          { name = 'path'       },
+          { name = 'emoji'    },
+          { name = 'luasnip'  },
+          { name = 'nvim_lsp' },
+          { name = 'path'     },
         }, {
           { name = 'buffer'     },
           { name = 'calc'       },
@@ -361,7 +361,7 @@ local function packerStartup(use)
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({
-          { name = 'path'    },
+          { name = 'path' },
         }, {
           { name = 'cmdline' },
         }),
@@ -782,7 +782,7 @@ local function packerStartup(use)
       vim.g.ale_fix_on_save = true
 
       vim.g.ale_fixers = {
-        [ '*' ]         = { 'remove_trailing_lines' },
+        ['*']           = { 'remove_trailing_lines' },
         ruby            = { 'rubocop' },
         json            = { 'eslint', 'prettier' },
         javascript      = { 'eslint', 'prettier' },
@@ -893,6 +893,7 @@ local function packerStartup(use)
   }
 
   -- nginx {{{2
+
   use { 'chr4/nginx.vim', -- non-lua plugin
     config = function()
     end,
@@ -927,7 +928,6 @@ local function packerStartup(use)
   if PackerBootstrap then
     require('packer').sync()
   end
-
 end
 
 return require('packer').startup({
