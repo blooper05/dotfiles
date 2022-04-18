@@ -857,7 +857,7 @@ local function packerStartup(use)
 
       local deardiary = vim.api.nvim_create_augroup('deardiary', { clear = true })
       vim.api.nvim_create_autocmd('VimEnter', {
-        group   = deardiary,
+        group    = deardiary,
         callback = function()
           require('deardiary').set_current_journal_cwd()
         end,
