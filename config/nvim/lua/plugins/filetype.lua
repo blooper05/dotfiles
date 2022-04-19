@@ -15,6 +15,24 @@ return {
     event = 'VimEnter',
   },
 
+  -- CSV
+
+  {
+    'mechatroner/rainbow_csv', -- non-lua plugin
+    config = function()
+    end,
+    ft = 'csv',
+  },
+
+  -- Jsonnet
+
+  {
+    'google/vim-jsonnet', -- non-lua plugin
+    config = function()
+    end,
+    ft = 'jsonnet',
+  },
+
   -- Markdown
 
   {
@@ -53,23 +71,5 @@ return {
     'chr4/nginx.vim', -- non-lua plugin
     config = function()
     end,
-  },
-
-  -- CSV
-
-  {
-    'mechatroner/rainbow_csv', -- non-lua plugin
-    config = function()
-    end,
-    ft = 'csv',
-  },
-
-  -- Jsonnet
-
-  {
-    'google/vim-jsonnet', -- non-lua plugin
-    config = function()
-    end,
-    ft = 'jsonnet',
   },
 }
