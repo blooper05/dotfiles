@@ -56,13 +56,4 @@ return {
     end,
     ft = 'plantuml',
   },
-
-  -- nginx
-
-  {
-    'chr4/nginx.vim', -- non-lua plugin
-    config = function()
-    end,
-    ft = 'nginx',
-  },
 }
