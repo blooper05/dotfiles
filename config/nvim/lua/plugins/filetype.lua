@@ -15,26 +15,6 @@ return {
     event = 'VimEnter',
   },
 
-  {
-    'ishchow/nvim-deardiary',
-    config = function()
-      require('deardiary.config').journals = {
-        {
-          path        = '~/.local/share/journals',
-          frequencies = { 'daily', 'weekly', 'monthly', 'yearly' },
-        },
-      }
-
-      local deardiary = vim.api.nvim_create_augroup('deardiary', { clear = true })
-      vim.api.nvim_create_autocmd('VimEnter', {
-        group    = deardiary,
-        callback = function()
-          require('deardiary').set_current_journal_cwd()
-        end,
-      })
-    end,
-  },
-
   -- Markdown
 
   {
