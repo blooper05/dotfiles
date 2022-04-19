@@ -1,10 +1,11 @@
 return {
-  -- Natural Language {{{2
+  -- Natural Language
 
   {
     'koron/codic-vim', -- non-lua plugin
     config = function()
     end,
+    event = 'VimEnter',
   },
 
   {
