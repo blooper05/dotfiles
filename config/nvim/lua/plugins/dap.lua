@@ -9,6 +9,7 @@ return {
       vim.api.nvim_set_keymap('n', '[dap]b', [[<Cmd>lua require('dap').toggle_breakpoint()<CR>]], { noremap = true, silent = true })
       vim.api.nvim_set_keymap('n', '[dap]c', [[<Cmd>lua require('dap').continue()<CR>]],          { noremap = true, silent = true })
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -19,6 +20,7 @@ return {
     config = function()
       require('dapui').setup({})
     end,
+    after = 'nvim-dap',
   },
 
   {
@@ -30,5 +32,6 @@ return {
     config = function()
       require('nvim-dap-virtual-text').setup({})
     end,
+    after = 'nvim-dap',
   },
 }
