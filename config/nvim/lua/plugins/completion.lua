@@ -70,10 +70,10 @@ return {
           { name = 'path'     },
         }, {
           { name = 'buffer'     },
-          { name = 'calc'       },
-          { name = 'dictionary' },
-          { name = 'spell'      },
           { name = 'treesitter' },
+          { name = 'spell'      },
+          { name = 'dictionary' },
+          { name = 'calc'       },
         }),
         formatting = {
           format = require('lspkind').cmp_format({
@@ -96,22 +96,24 @@ return {
 
       cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
         sources = cmp.config.sources({
-          { name = 'emoji'    },
           { name = 'luasnip'  },
           { name = 'nvim_lsp' },
           { name = 'path'     },
+          { name = 'emoji'    },
         }, {
           { name = 'buffer'     },
-          { name = 'calc'       },
-          { name = 'dictionary' },
-          { name = 'spell'      },
           { name = 'treesitter' },
+          { name = 'spell'      },
+          { name = 'dictionary' },
+          { name = 'calc'       },
         }),
       })
 
       cmp.setup.cmdline('/', {
         mapping = cmp.mapping.preset.cmdline(),
-        sources = { { name = 'buffer' } },
+        sources = {
+          { name = 'buffer' },
+        },
       })
 
       cmp.setup.cmdline(':', {
