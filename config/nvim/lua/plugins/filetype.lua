@@ -75,12 +75,13 @@ return {
     end,
   },
 
-  -- CSV {{{2
+  -- CSV
 
   {
     'mechatroner/rainbow_csv', -- non-lua plugin
     config = function()
     end,
+    ft = 'csv',
   },
 
   -- Jsonnet {{{2
