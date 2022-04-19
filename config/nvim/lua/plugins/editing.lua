@@ -97,5 +97,6 @@ return {
     config = function()
       require('neoscroll').setup({})
     end,
+    event = 'VimEnter',
   },
 }
