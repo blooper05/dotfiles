@@ -75,7 +75,12 @@ return {
     'mbbill/undotree', -- non-lua plugin
     config = function()
       vim.api.nvim_set_keymap('n', '<Space>U', ':<C-u>UndotreeToggle<CR>', { noremap = true, silent = true })
+
+      vim.g.undotree_WindowLayout       = 2
+      vim.g.undotree_SetFocusWhenToggle = true
+      vim.g.undotree_ShortIndicators    = true
     end,
+    event = 'VimEnter',
   },
 
   {
