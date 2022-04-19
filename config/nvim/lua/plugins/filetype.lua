@@ -66,11 +66,12 @@ return {
     ft = 'terraform',
   },
 
-  -- nginx {{{2
+  -- nginx
 
   {
     'chr4/nginx.vim', -- non-lua plugin
     config = function()
     end,
+    ft = 'nginx',
   },
 }
