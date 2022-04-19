@@ -134,8 +134,28 @@ return {
   { 'hrsh7th/cmp-nvim-lsp',     after = 'nvim-cmp' },
   { 'hrsh7th/cmp-buffer',       after = 'nvim-cmp' },
   { 'ray-x/cmp-treesitter',     after = 'nvim-cmp' },
-  { 'f3fora/cmp-spell',         after = 'nvim-cmp' },
-  { 'uga-rosa/cmp-dictionary',  after = 'nvim-cmp' },
+
+  {
+    'f3fora/cmp-spell',
+    config = function()
+      vim.api.nvim_create_user_command('SpellCheckingOn',  'setlocal spell spelllang=en_us', { force = true })
+      vim.api.nvim_create_user_command('SpellCheckingOff', 'setlocal nospell',               { force = true })
+    end,
+    after = 'nvim-cmp',
+  },
+
+  {
+    'uga-rosa/cmp-dictionary',
+    config = function()
+      require('cmp_dictionary').setup({
+        dic = {
+          ['*'] = { '/usr/share/dict/words' },
+        },
+      })
+    end,
+    after = 'nvim-cmp',
+  },
+
   { 'hrsh7th/cmp-nvim-lua',     after = 'nvim-cmp' },
   { 'hrsh7th/cmp-cmdline',      after = 'nvim-cmp' },
   { 'hrsh7th/cmp-path',         after = 'nvim-cmp' },
