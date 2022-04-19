@@ -136,14 +136,17 @@ return {
     after = 'friendly-snippets',
   },
 
-  { 'saadparwaiz1/cmp_luasnip',             after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-nvim-lsp',                 after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-nvim-lsp-document-symbol', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-buffer',                   after = 'nvim-cmp' },
-  { 'ray-x/cmp-treesitter',                 after = 'nvim-cmp' },
+  { 'saadparwaiz1/cmp_luasnip',             requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-nvim-lsp',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-nvim-lsp-document-symbol', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-buffer',                   requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'ray-x/cmp-treesitter',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
 
   {
     'f3fora/cmp-spell',
+    requires = {
+      { 'hrsh7th/nvim-cmp' },
+    },
     config = function()
       vim.api.nvim_create_user_command('SpellCheckingOn',  'setlocal spell spelllang=en_us', { force = true })
       vim.api.nvim_create_user_command('SpellCheckingOff', 'setlocal nospell',               { force = true })
@@ -153,6 +156,9 @@ return {
 
   {
     'uga-rosa/cmp-dictionary',
+    requires = {
+      { 'hrsh7th/nvim-cmp' },
+    },
     config = function()
       require('cmp_dictionary').setup({
         dic = {
@@ -163,11 +169,11 @@ return {
     after = 'nvim-cmp',
   },
 
-  { 'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-cmdline',  after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-path',     after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-calc',     after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-emoji',    after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-nvim-lua', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-cmdline',  requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-path',     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-calc',     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-emoji',    requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
 
   {
     'windwp/nvim-autopairs',
