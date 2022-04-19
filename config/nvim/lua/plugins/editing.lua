@@ -49,6 +49,7 @@ return {
     config = function()
       vim.api.nvim_set_keymap('x', '<Enter>', '<Plug>(EasyAlign)', { silent = true })
     end,
+    event = 'VimEnter',
   },
 
   {
