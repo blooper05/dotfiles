@@ -1,3 +1,5 @@
+local colorscheme = 'nightfox.nvim'
+
 return {
   {
     'EdenEast/nightfox.nvim',
@@ -35,6 +37,7 @@ return {
         },
       })
     end,
+    after = colorscheme,
   },
 
   {
@@ -52,6 +55,7 @@ return {
         },
       })
     end,
+    after = colorscheme,
   },
 
   {
@@ -66,6 +70,7 @@ return {
         },
       })
     end,
+    after = colorscheme,
   },
 
   {
