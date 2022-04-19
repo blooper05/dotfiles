@@ -2,12 +2,6 @@ return {
   -- Natural Language {{{2
 
   {
-    'ujihisa/neco-look', -- non-lua plugin
-    config = function()
-    end,
-  },
-
-  {
     'koron/codic-vim', -- non-lua plugin
     config = function()
     end,
