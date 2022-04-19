@@ -57,12 +57,13 @@ return {
     ft = 'plantuml',
   },
 
-  -- Terraform {{{2
+  -- Terraform
 
   {
     'hashivim/vim-terraform', -- non-lua plugin
     config = function()
     end,
+    ft = 'terraform',
   },
 
   -- nginx {{{2
