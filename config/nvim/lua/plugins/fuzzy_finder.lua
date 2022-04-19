@@ -2,10 +2,10 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     requires = {
-      { 'nvim-lua/plenary.nvim'                       },
+      { 'nvim-lua/plenary.nvim' },
       { 'kyazdani42/nvim-web-devicons',    opt = true },
-      { 'nvim-treesitter/nvim-treesitter', opt = true },
       { 'neovim/nvim-lspconfig',           opt = true },
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
     },
     config = function()
       vim.api.nvim_set_keymap('n', '[telescope]', '<Nop>',       { noremap = true })
@@ -39,6 +39,7 @@ return {
         },
       })
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -52,6 +53,7 @@ return {
 
       require('telescope').load_extension('frecency')
     end,
+    after = 'telescope.nvim',
   },
 
   {
@@ -65,6 +67,7 @@ return {
 
       require('todo-comments').setup({})
     end,
+    after = 'telescope.nvim',
   },
 
   {
@@ -78,6 +81,7 @@ return {
 
       require('telescope').load_extension('packer')
     end,
+    after = 'telescope.nvim',
   },
 
   {
@@ -90,5 +94,6 @@ return {
 
       require('telescope').load_extension('ghq')
     end,
+    after = 'telescope.nvim',
   },
 }
