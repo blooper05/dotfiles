@@ -4,6 +4,7 @@ return {
     requires = {
       { 'neovim/nvim-lspconfig'    },
       { 'L3MON4D3/LuaSnip'         },
+      { 'onsails/lspkind-nvim'     },
       { 'saadparwaiz1/cmp_luasnip' },
       { 'hrsh7th/cmp-buffer'       },
       { 'hrsh7th/cmp-calc'         },
@@ -12,7 +13,6 @@ return {
       { 'hrsh7th/cmp-nvim-lsp'     },
       { 'hrsh7th/cmp-nvim-lua'     },
       { 'hrsh7th/cmp-path'         },
-      { 'onsails/lspkind-nvim'     },
       { 'f3fora/cmp-spell'         },
       { 'uga-rosa/cmp-dictionary'  },
       { 'ray-x/cmp-treesitter'     },
@@ -126,6 +126,7 @@ return {
         }),
       })
     end,
+    after = { 'LuaSnip', 'lspkind-nvim' },
   },
 
   {
