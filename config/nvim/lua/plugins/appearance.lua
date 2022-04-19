@@ -88,13 +88,16 @@ return {
         show_current_context_start      = true,
       })
     end,
+    event = 'VimEnter',
   },
 
   {
-    'sunjon/shade.nvim', disable = true,
+    'sunjon/shade.nvim',
     config = function()
       require('shade').setup({})
     end,
+    event = 'VimEnter',
+    disable = true,
   },
 
   {
@@ -105,6 +108,7 @@ return {
 
       require('colorizer').setup({})
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -115,6 +119,7 @@ return {
     config = function()
       require('zen-mode').setup({})
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -122,5 +127,6 @@ return {
     config = function()
       require('notify').setup({})
     end,
+    event = 'VimEnter',
   },
 }
