@@ -42,12 +42,13 @@ return {
   {
     'ahmedkhalf/project.nvim',
     requires = {
-      { 'nvim-telescope/telescope.nvim' },
+      { 'nvim-telescope/telescope.nvim', opt = true },
     },
     config = function()
       require('project_nvim').setup({})
 
       require('telescope').load_extension('projects')
     end,
+    event = 'VimEnter',
   },
 }
