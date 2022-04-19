@@ -164,11 +164,16 @@ return {
 
   {
     'windwp/nvim-autopairs',
+    requires = {
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
+    },
     config = function()
       local autopairs = require('nvim-autopairs')
       local rule = require('nvim-autopairs.rule')
 
-      autopairs.setup({})
+      autopairs.setup({
+        check_ts = true,
+      })
 
       autopairs.add_rules({
         rule(' ', ' '):with_pair(function(opts)
@@ -198,5 +203,6 @@ return {
           :use_key(']'),
       })
     end,
+    event = 'VimEnter',
   },
 }
