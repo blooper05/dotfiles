@@ -2,20 +2,9 @@ return {
   {
     'hrsh7th/nvim-cmp',
     requires = {
-      { 'neovim/nvim-lspconfig'    },
-      { 'L3MON4D3/LuaSnip'         },
-      { 'onsails/lspkind-nvim'     },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { 'hrsh7th/cmp-buffer'       },
-      { 'hrsh7th/cmp-calc'         },
-      { 'hrsh7th/cmp-cmdline'      },
-      { 'hrsh7th/cmp-emoji'        },
-      { 'hrsh7th/cmp-nvim-lsp'     },
-      { 'hrsh7th/cmp-nvim-lua'     },
-      { 'hrsh7th/cmp-path'         },
-      { 'f3fora/cmp-spell'         },
-      { 'uga-rosa/cmp-dictionary'  },
-      { 'ray-x/cmp-treesitter'     },
+      { 'neovim/nvim-lspconfig' },
+      { 'L3MON4D3/LuaSnip'      },
+      { 'onsails/lspkind-nvim'  },
     },
     config = function()
       -- Set completeopt to have a better completion experience.
@@ -140,6 +129,18 @@ return {
     event = 'VimEnter',
     after = 'friendly-snippets',
   },
+
+  { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-nvim-lsp',     after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-buffer',       after = 'nvim-cmp' },
+  { 'ray-x/cmp-treesitter',     after = 'nvim-cmp' },
+  { 'f3fora/cmp-spell',         after = 'nvim-cmp' },
+  { 'uga-rosa/cmp-dictionary',  after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-nvim-lua',     after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-cmdline',      after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-path',         after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-calc',         after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-emoji',        after = 'nvim-cmp' },
 
   {
     'windwp/nvim-autopairs',
