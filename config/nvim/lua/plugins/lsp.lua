@@ -34,6 +34,7 @@ return {
         end
       end
     end,
+    after = 'nvim-lspconfig',
   },
 
   {
