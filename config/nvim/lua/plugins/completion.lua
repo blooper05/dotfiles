@@ -29,6 +29,7 @@ return {
 
       local cmp     = require('cmp')
       local luasnip = require('luasnip')
+      local lspkind = require('lspkind')
 
       cmp.setup({
         snippet = {
@@ -76,7 +77,7 @@ return {
           { name = 'calc'       },
         }),
         formatting = {
-          format = require('lspkind').cmp_format({
+          format = lspkind.cmp_format({
             menu = {
               buffer     = '[Buffer]',
               calc       = '[Calc]',
@@ -124,11 +125,6 @@ return {
           { name = 'cmdline' },
         }),
       })
-
-      -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-      -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup({
-      --   capabilities = capabilities,
-      -- })
     end,
   },
 
