@@ -68,6 +68,7 @@ return {
         'packer',
       }
     end,
+    event = 'VimEnter',
   },
 
   {
