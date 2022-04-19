@@ -1,9 +1,13 @@
 return {
   {
     'numToStr/Comment.nvim',
+    requires = {
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
+    },
     config = function()
       require('Comment').setup({})
     end,
+    event = 'VimEnter',
   },
 
   {
