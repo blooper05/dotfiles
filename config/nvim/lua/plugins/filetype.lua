@@ -50,12 +50,13 @@ return {
     ft = 'markdown',
   },
 
-  -- PlantUML {{{2
+  -- PlantUML
 
   {
     'aklt/plantuml-syntax', -- non-lua plugin
     config = function()
     end,
+    ft = 'plantuml',
   },
 
   -- Terraform {{{2
