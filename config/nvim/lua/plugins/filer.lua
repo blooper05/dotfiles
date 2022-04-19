@@ -2,20 +2,33 @@ return {
   {
     'nvim-neo-tree/neo-tree.nvim',
     requires = {
-      { 'MunifTanjim/nui.nvim'                     },
-      { 'nvim-lua/plenary.nvim'                    },
+      { 'MunifTanjim/nui.nvim'  },
+      { 'nvim-lua/plenary.nvim' },
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
       vim.api.nvim_set_keymap('n', '[file]',   '<Nop>',  { noremap = true })
       vim.api.nvim_set_keymap('n', '<Space>f', '[file]', {})
 
-      vim.api.nvim_set_keymap('n', '[file]c', ':<C-u>NeoTreeRevealToggle<CR>', { noremap = true, silent = true })
-
-      -- Enable 24-bit RGB color in the TUI.
-      vim.opt.termguicolors = true
+      vim.api.nvim_set_keymap('n', '[file]c', ':<C-u>Neotree toggle reveal<CR>', { noremap = true, silent = true })
 
       require('neo-tree').setup({
+        window = {
+          mappings = {
+            ['o'] = 'open',
+            ['x'] = 'open_split',
+            ['v'] = 'open_vsplit',
+            ['t'] = 'open_tabnew',
+            ['a'] = 'add',
+            ['d'] = 'delete',
+            ['r'] = 'rename',
+            ['y'] = 'copy_to_clipboard',
+            ['m'] = 'cut_to_clipboard',
+            ['p'] = 'paste_from_clipboard',
+            ['q'] = 'close_window',
+            ['R'] = 'refresh',
+          },
+        },
         filesystem = {
           filtered_items = {
             visible = true,
@@ -23,6 +36,7 @@ return {
         },
       })
     end,
+    event = 'VimEnter',
   },
 
   {
