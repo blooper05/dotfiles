@@ -84,11 +84,12 @@ return {
     ft = 'csv',
   },
 
-  -- Jsonnet {{{2
+  -- Jsonnet
 
   {
     'google/vim-jsonnet', -- non-lua plugin
     config = function()
     end,
+    ft = 'jsonnet',
   },
 }
