@@ -11,6 +11,22 @@ return {
   },
 
   {
+    'folke/todo-comments.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'folke/trouble.nvim',            opt = true },
+      { 'nvim-telescope/telescope.nvim', opt = true },
+    },
+    config = function()
+      vim.api.nvim_set_keymap('n', '[lsp]t',       ':<C-u>TodoTrouble<CR>',   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]t', ':<C-u>TodoTelescope<CR>', { noremap = true, silent = true })
+
+      require('todo-comments').setup({})
+    end,
+    after = { 'trouble.nvim', 'telescope.nvim' },
+  },
+
+  {
     'monaqa/dial.nvim',
     config = function()
       vim.api.nvim_set_keymap('n', '<C-a>',  require('dial.map').inc_normal(),  { noremap = true })

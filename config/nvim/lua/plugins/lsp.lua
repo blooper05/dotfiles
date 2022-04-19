@@ -63,7 +63,7 @@ return {
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '[lsp]t', '<Cmd>TroubleToggle<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[lsp]l', '<Cmd>TroubleToggle<CR>', { noremap = true, silent = true })
 
       require('trouble').setup({})
     end,
