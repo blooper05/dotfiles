@@ -35,7 +35,7 @@ return {
     end,
   },
 
-  -- Markdown {{{2
+  -- Markdown
 
   {
     'rcmdnk/vim-markdown', -- non-lua plugin
@@ -47,6 +47,7 @@ return {
       -- Disable the folding configuration.
       vim.g.vim_markdown_folding_disabled = true
     end,
+    ft = 'markdown',
   },
 
   -- PlantUML {{{2
