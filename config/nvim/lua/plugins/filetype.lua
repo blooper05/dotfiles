@@ -12,6 +12,7 @@ return {
     'skanehira/translate.vim', -- non-lua plugin
     config = function()
     end,
+    event = 'VimEnter',
   },
 
   {
