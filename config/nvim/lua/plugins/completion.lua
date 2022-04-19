@@ -37,6 +37,23 @@ return {
             luasnip.lsp_expand(args.body)
           end,
         },
+        formatting = {
+          format = lspkind.cmp_format({
+            menu = {
+              buffer     = '[Buffer]',
+              calc       = '[Calc]',
+              cmdline    = '[Cmd]',
+              dictionary = '[Dictionary]',
+              emoji      = '[Emoji]',
+              luasnip    = '[Snippet]',
+              nvim_lsp   = '[LSP]',
+              nvim_lua   = '[Lua]',
+              path       = '[Path]',
+              spell      = '[Spell]',
+              treesitter = '[TS]',
+            },
+          }),
+        },
         mapping = cmp.mapping.preset.insert({
           ['<C-b>']     = cmp.mapping.scroll_docs(-4),
           ['<C-f>']     = cmp.mapping.scroll_docs(4),
@@ -76,23 +93,6 @@ return {
           { name = 'dictionary' },
           { name = 'calc'       },
         }),
-        formatting = {
-          format = lspkind.cmp_format({
-            menu = {
-              buffer     = '[Buffer]',
-              calc       = '[Calc]',
-              cmdline    = '[Cmd]',
-              dictionary = '[Dictionary]',
-              emoji      = '[Emoji]',
-              luasnip    = '[Snippet]',
-              nvim_lsp   = '[LSP]',
-              nvim_lua   = '[Lua]',
-              path       = '[Path]',
-              spell      = '[Spell]',
-              treesitter = '[TS]',
-            },
-          }),
-        },
       })
 
       cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
