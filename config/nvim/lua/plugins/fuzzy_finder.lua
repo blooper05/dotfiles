@@ -37,6 +37,23 @@ return {
             },
           },
         },
+        pickers = {
+          live_grep = {
+            additional_args = function()
+              return { '--hidden', '--glob=!.git/' }
+            end,
+          },
+
+          grep_string = {
+            additional_args = function()
+              return { '--hidden', '--glob=!.git/' }
+            end,
+          },
+
+          find_files = {
+            find_command = { 'fd', '--type=file', '--hidden', '--exclude=.git/' },
+          },
+        },
       })
     end,
     event = 'VimEnter',
