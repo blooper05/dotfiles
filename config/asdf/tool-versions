@@ -15,7 +15,7 @@ rust 1.60.0
 shellcheck 0.8.0
 shfmt 3.4.3
 stylua 0.13.1
-terraform 1.1.7
+terraform 1.1.9
 terraform-docs 0.16.0
 terraform-ls 0.27.0
 terraform-lsp 0.0.12
