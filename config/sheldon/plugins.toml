@@ -37,3 +37,6 @@ apply  = ['defer']
 github = 'blooper05/git-cococo'
 use    = ['exe/git-cococo']
 apply  = ['defer']
+
+[plugins.compinit]
+inline = 'autoload -Uz compinit && zsh-defer compinit'
