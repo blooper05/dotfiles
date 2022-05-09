@@ -4,6 +4,7 @@
   commentChar = \"
 [alias]
   graph = log --graph --pretty=pretty
+  ignore = !curl -sL https://www.toptal.com/developers/gitignore/api/$@
 [commit]
   template = ~/.config/git/template
 [diff]
