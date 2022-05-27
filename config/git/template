@@ -23,8 +23,8 @@
 " 🔨 - :hammer: chore:           - Add or update development scripts.
 " ➕ - :heavy_plus_sign: chore:  - Add a dependency.
 " ➖ - :heavy_minus_sign: chore: - Remove a dependency.
-" ⬇️  - :arrow_down: chore:       - Downgrade dependencies.
 " ⬆️  - :arrow_up: chore:         - Upgrade dependencies.
+" ⬇️  - :arrow_down: chore:       - Downgrade dependencies.
 "
 " NOTE: refs. Gitmoji (https://gitmoji.dev/)
 " NOTE: refs. Conventional Commits (https://www.conventionalcommits.org/)
