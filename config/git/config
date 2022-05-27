@@ -18,7 +18,8 @@
 [interactive]
   diffFilter = delta --color-only
 [merge]
-  conflictstyle = zdiff3
+  conflictstyle = diff3
+  # conflictstyle = zdiff3
 [pager]
   diff = delta
   log  = delta
