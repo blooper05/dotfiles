@@ -11,7 +11,7 @@
 " 🔥 - :fire: refactor:          - Remove code or files.
 " 🎨 - :art: style:              - Improve structure / format of the code.
 " ⚡️ - :zap: perf:               - Improve performance.
-" ✅ - :white_check_mark: test:  - Add or update tests.
+" ✅ - :white_check_mark: test:  - Add, update, or pass tests.
 " 📝 - :memo: docs:              - Add or update documentation.
 " 💡 - :bulb: docs:              - Add or update comments in source code.
 " 💚 - :green_heart: ci:         - Fix CI Build.
