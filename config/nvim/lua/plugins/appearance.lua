@@ -83,9 +83,10 @@ return {
       vim.opt.termguicolors = true
 
       require('indent_blankline').setup({
-        indent_blankline_use_treesitter = true,
-        show_current_context            = true,
-        show_current_context_start      = true,
+        indent_blankline_use_treesitter       = true,
+        indent_blankline_use_treesitter_scope = true,
+        show_current_context                  = true,
+        show_current_context_start            = true,
       })
     end,
     event = 'VimEnter',
