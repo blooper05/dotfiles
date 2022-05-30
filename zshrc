@@ -61,7 +61,7 @@ bindkey -e
 # History {{{1
 
 # Set the history file path and its size.
-export HISTFILE=$XDG_DATA_HOME/zsh/history
+export HISTFILE=$XDG_STATE_HOME/zsh/history
 export HISTSIZE=10000 # in memory
 export SAVEHIST=10000 # on file
 
@@ -142,7 +142,7 @@ alias vim='nvim'
 # Less {{{2
 export LESS=-inqMRS
 export LESSCHARSET=utf-8
-export LESSHISTFILE=$XDG_DATA_HOME/less/history
+export LESSHISTFILE=$XDG_STATE_HOME/less/history
 
 # asdf {{{2
 export ASDF_CONFIG_FILE=$XDG_CONFIG_HOME/asdf/asdfrc
