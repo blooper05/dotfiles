@@ -326,7 +326,7 @@ shell:
   args:
     - --login
     - -c
-    - zellij attach --create main
+    - zellij --layout compact attach --create main
 
 # Startup directory
 #
