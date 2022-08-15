@@ -103,8 +103,8 @@ defaults write com.apple.inputmethod.Kotoeri JIMPrefAutocorrectionKey -bool fals
 # System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Windows-like shortcuts: on
 defaults write com.apple.inputmethod.Kotoeri JIMPrefWindowsModeKey -bool true
 
-# System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Candidate window >> Font: HackGen35Nerd Console Regular
-defaults write com.apple.inputmethod.Kotoeri JIMPrefCandidateWindowFontKey -string 'HackGen35NerdConsole-Regular'
+# System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Candidate window >> Font: HackGen35 Console NFJ Regular
+defaults write com.apple.inputmethod.Kotoeri JIMPrefCandidateWindowFontKey -string 'HackGen35ConsoleNFJ-Regular'
 
 # System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Full-width numeral characters: off
 defaults write com.apple.inputmethod.Kotoeri JIMPrefFullWidthNumeralCharactersKey -bool false
