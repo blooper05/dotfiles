@@ -2,6 +2,7 @@
   quotePath   = false
   hooksPath   = ~/.config/git/hooks
   commentChar = \"
+  pager       = delta
 [alias]
   graph = log --graph --pretty=pretty
   ignore = !curl -sL https://www.toptal.com/developers/gitignore/api/$@
@@ -21,10 +22,6 @@
   diffFilter = delta --color-only
 [merge]
   conflictstyle = zdiff3
-[pager]
-  diff = delta
-  log  = delta
-  show = delta
 [pretty]
   pretty = %C(red)%h%C(auto) - %s %C(green)%cr%C(auto) %C(blue)<%an>%C(auto)%C(yellow)%d%C(auto)
 [pull]
