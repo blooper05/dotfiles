@@ -3,6 +3,8 @@
   hooksPath   = ~/.config/git/hooks
   commentChar = \"
   pager       = delta
+[add.interactive]
+  useBuiltin = false
 [alias]
   graph = log --graph --pretty=pretty
   ignore = !curl -sL https://www.toptal.com/developers/gitignore/api/$@
