@@ -5,7 +5,7 @@
         "revision": "2e38269fe756295375640628b2ef788edc42c312"
       },
       "homebrew/cask": {
-        "revision": "7eb97cddbca0b49e7cec050343aa2ad169b279c0"
+        "revision": "c9f661587277b124733578b51f5adf6598d9aa04"
       },
       "homebrew/cask-drivers": {
         "revision": "b5a5dfa80433515c3ba169c932d847a869304d95"
@@ -14,10 +14,10 @@
         "revision": "5a7553fed5e4df680878d06aaa7376a4c4a25b57"
       },
       "homebrew/core": {
-        "revision": "42c5d286e721dbdd132f1cb0100551887bc5779f"
+        "revision": "a052cbe4a6cd14fed53a07be5dbfbcfbdd53df15"
       },
       "k1low/tap": {
-        "revision": "f62728509405016e4a3c3c02ab7a266307f19054"
+        "revision": "96bb9384ac60ca081be6969a19ab095e75ccea80"
       },
       "kayac/tap": {
         "revision": "643fda295f0e109aec66b9440d944c29ccecce58"
@@ -1180,7 +1180,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-2bed0d1_1",
+        "version": "HEAD-48a4657_1",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1932,7 +1932,7 @@
         }
       },
       "ngrok": {
-        "version": "3.0.6,mStkVrofaG9,a",
+        "version": "3.0.7,j2rZLxwzCw2,a",
         "options": {
           "full_name": "ngrok"
         }
@@ -1992,7 +1992,7 @@
         }
       },
       "zoom": {
-        "version": "5.11.6.9890",
+        "version": "5.11.9.10046",
         "options": {
           "full_name": "zoom"
         }
@@ -2030,7 +2030,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.9",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "42c5d286e721dbdd132f1cb0100551887bc5779f",
+        "Homebrew/homebrew-core": "a052cbe4a6cd14fed53a07be5dbfbcfbdd53df15",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4",
         "macOS": "12.5"
