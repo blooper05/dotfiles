@@ -115,7 +115,7 @@ return {
   {
     'folke/zen-mode.nvim',
     requires = {
-      { 'folke/twilight.nvim', opt = true },
+      { 'folke/twilight.nvim' },
     },
     config = function()
       require('zen-mode').setup({})
