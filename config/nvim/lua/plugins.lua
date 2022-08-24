@@ -22,26 +22,26 @@ local function packerStartup(use)
     end,
   }
 
-  for _, plugin in ipairs(require('plugins.appearance'))    do use(plugin) end
-  for _, plugin in ipairs(require('plugins.treesitter'))    do use(plugin) end
+  for _, plugin in ipairs(require('plugins.appearance'))   do use(plugin) end
+  for _, plugin in ipairs(require('plugins.treesitter'))   do use(plugin) end
 
-  for _, plugin in ipairs(require('plugins.lsp'))           do use(plugin) end
-  for _, plugin in ipairs(require('plugins.completion'))    do use(plugin) end
+  for _, plugin in ipairs(require('plugins.lsp'))          do use(plugin) end
+  for _, plugin in ipairs(require('plugins.completion'))   do use(plugin) end
 
-  for _, plugin in ipairs(require('plugins.fuzzy_finder'))  do use(plugin) end
-  for _, plugin in ipairs(require('plugins.filer'))         do use(plugin) end
-  for _, plugin in ipairs(require('plugins.terminal'))      do use(plugin) end
+  for _, plugin in ipairs(require('plugins.fuzzy_finder')) do use(plugin) end
+  for _, plugin in ipairs(require('plugins.filer'))        do use(plugin) end
+  for _, plugin in ipairs(require('plugins.terminal'))     do use(plugin) end
 
-  for _, plugin in ipairs(require('plugins.text_object'))   do use(plugin) end
-  for _, plugin in ipairs(require('plugins.editing'))       do use(plugin) end
-  for _, plugin in ipairs(require('plugins.search'))        do use(plugin) end
+  for _, plugin in ipairs(require('plugins.text_object'))  do use(plugin) end
+  for _, plugin in ipairs(require('plugins.editing'))      do use(plugin) end
+  for _, plugin in ipairs(require('plugins.search'))       do use(plugin) end
 
-  for _, plugin in ipairs(require('plugins.dap'))           do use(plugin) end
-  for _, plugin in ipairs(require('plugins.runner'))        do use(plugin) end
+  for _, plugin in ipairs(require('plugins.dap'))          do use(plugin) end
+  for _, plugin in ipairs(require('plugins.runner'))       do use(plugin) end
 
-  for _, plugin in ipairs(require('plugins.filetype'))      do use(plugin) end
-  for _, plugin in ipairs(require('plugins.vcs'))           do use(plugin) end
-  for _, plugin in ipairs(require('plugins.web'))           do use(plugin) end
+  for _, plugin in ipairs(require('plugins.filetype'))     do use(plugin) end
+  for _, plugin in ipairs(require('plugins.vcs'))          do use(plugin) end
+  for _, plugin in ipairs(require('plugins.web'))          do use(plugin) end
 
   if PackerBootstrap then
     require('packer').sync()
