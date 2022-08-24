@@ -101,17 +101,6 @@ return {
   },
 
   {
-    'norcalli/nvim-colorizer.lua',
-    config = function()
-      -- Enable 24-bit RGB color in the TUI.
-      vim.opt.termguicolors = true
-
-      require('colorizer').setup({})
-    end,
-    event = 'VimEnter',
-  },
-
-  {
     'folke/zen-mode.nvim',
     requires = {
       { 'folke/twilight.nvim' },
@@ -126,6 +115,17 @@ return {
           vim.cmd([[:silent lua require('shade').toggle()]])
         end,
       })
+    end,
+    event = 'VimEnter',
+  },
+
+  {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      -- Enable 24-bit RGB color in the TUI.
+      vim.opt.termguicolors = true
+
+      require('colorizer').setup({})
     end,
     event = 'VimEnter',
   },
