@@ -31,8 +31,8 @@ vim.opt.clipboard = {
 vim.opt.lazyredraw = true
 
 -- Edit and reload vimrc immediately.
-vim.api.nvim_set_keymap('n', '<F5>', ':<C-u>tabnew $MYVIMRC<CR>',  { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<F6>', ':<C-u>luafile $MYVIMRC<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F5>', '<Cmd>tabnew $MYVIMRC<CR>',  { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F6>', '<Cmd>luafile $MYVIMRC<CR>', { noremap = true, silent = true })
 
 -- Exit terminal mode easily.
 vim.api.nvim_set_keymap('t', '<ESC>', [[<C-\><C-n>]], { noremap = true, silent = true })
@@ -52,7 +52,7 @@ vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
 -- Clear highlight.
-vim.api.nvim_set_keymap('n', '<ESC><ESC>', ':<C-u>nohlsearch<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<ESC><ESC>', '<Cmd>nohlsearch<CR>', { noremap = true, silent = true })
 
 -- View {{{1
 

@@ -10,7 +10,7 @@ return {
       vim.api.nvim_set_keymap('n', '[file]',   '<Nop>',  { noremap = true })
       vim.api.nvim_set_keymap('n', '<Space>f', '[file]', {})
 
-      vim.api.nvim_set_keymap('n', '[file]c', ':<C-u>Neotree toggle reveal<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[file]c', '<Cmd>Neotree toggle reveal<CR>', { noremap = true, silent = true })
 
       require('neo-tree').setup({
         window = {

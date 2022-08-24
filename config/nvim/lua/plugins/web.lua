@@ -9,8 +9,8 @@ return {
       vim.api.nvim_set_keymap('n', '[octo]',       '<Nop>',  { noremap = true })
       vim.api.nvim_set_keymap('n', '[telescope]G', '[octo]', {})
 
-      vim.api.nvim_set_keymap('n', '[octo]i', ':<C-u>Octo issue list<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[octo]p', ':<C-u>Octo pr list<CR>',    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[octo]i', '<Cmd>Octo issue list<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[octo]p', '<Cmd>Octo pr list<CR>',    { noremap = true, silent = true })
 
       require('octo').setup({})
     end,

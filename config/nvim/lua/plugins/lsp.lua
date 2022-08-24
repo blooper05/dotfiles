@@ -46,10 +46,10 @@ return {
       { 'neovim/nvim-lspconfig' },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '[lsp]r', '<Cmd>Lspsaga rename<CR>',             { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[lsp]a', '<Cmd>Lspsaga code_action<CR>',        { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('x', '[lsp]a', ':<C-u>Lspsaga range_code_action<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[lsp]d', '<Cmd>Lspsaga hover_doc<CR>',          { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[lsp]r', '<Cmd>Lspsaga rename<CR>',            { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[lsp]a', '<Cmd>Lspsaga code_action<CR>',       { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('x', '[lsp]a', '<Cmd>Lspsaga range_code_action<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[lsp]d', '<Cmd>Lspsaga hover_doc<CR>',         { noremap = true, silent = true })
 
       require('lspsaga').setup({})
     end,

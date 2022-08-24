@@ -18,8 +18,8 @@ return {
       { 'nvim-telescope/telescope.nvim', opt = true },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '[lsp]t',       ':<C-u>TodoTrouble<CR>',   { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]t', ':<C-u>TodoTelescope<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[lsp]t',       '<Cmd>TodoTrouble<CR>',   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '[telescope]t', '<Cmd>TodoTelescope<CR>', { noremap = true, silent = true })
 
       require('todo-comments').setup({})
     end,
@@ -90,7 +90,7 @@ return {
   {
     'mbbill/undotree', -- non-lua plugin
     config = function()
-      vim.api.nvim_set_keymap('n', '<Space>U', ':<C-u>UndotreeToggle<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Space>U', '<Cmd>UndotreeToggle<CR>', { noremap = true, silent = true })
 
       vim.g.undotree_WindowLayout       = 2
       vim.g.undotree_SetFocusWhenToggle = true

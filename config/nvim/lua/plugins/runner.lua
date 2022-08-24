@@ -54,10 +54,10 @@ return {
   {
     'vim-test/vim-test', -- non-lua plugin
     config = function()
-      vim.api.nvim_set_keymap('n', '<Leader>c', ':<C-u>TestFile<CR>',    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '<Leader>n', ':<C-u>TestNearest<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '<Leader>l', ':<C-u>TestLast<CR>',    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '<Leader>a', ':<C-u>TestSuite<CR>',   { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>c', '<Cmd>TestFile<CR>',    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>n', '<Cmd>TestNearest<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>l', '<Cmd>TestLast<CR>',    { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>a', '<Cmd>TestSuite<CR>',   { noremap = true, silent = true })
     end,
   },
 
@@ -67,7 +67,7 @@ return {
       { 'tyru/open-browser.vim' },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '<Leader>p', ':<C-u>PrevimOpen<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<Leader>p', '<Cmd>PrevimOpen<CR>', { noremap = true, silent = true })
     end,
   },
 
