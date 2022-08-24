@@ -93,12 +93,11 @@ return {
   },
 
   {
-    'sunjon/shade.nvim',
+    'jghauser/shade.nvim',
     config = function()
       require('shade').setup({})
     end,
     event = 'VimEnter',
-    disable = true,
   },
 
   {
@@ -118,7 +117,15 @@ return {
       { 'folke/twilight.nvim' },
     },
     config = function()
-      require('zen-mode').setup({})
+      require('zen-mode').setup({
+        on_open = function(_)
+          vim.cmd([[:silent lua require('shade').toggle()]])
+        end,
+
+        on_close = function()
+          vim.cmd([[:silent lua require('shade').toggle()]])
+        end,
+      })
     end,
     event = 'VimEnter',
   },
