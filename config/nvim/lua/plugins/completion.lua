@@ -178,11 +178,12 @@ return {
   {
     'f3fora/cmp-spell',
     requires = {
-      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/nvim-cmp'                                },
+      { 'psliwka/vim-dirtytalk', run = ':DirtytalkUpdate' },
     },
     config = function()
-      vim.api.nvim_create_user_command('SpellCheckingOn',  'setlocal spell spelllang=en_us', { force = true })
-      vim.api.nvim_create_user_command('SpellCheckingOff', 'setlocal nospell',               { force = true })
+      vim.api.nvim_create_user_command('SpellCheckingOn',  'setlocal spell spelllang=en_us,programming', { force = true })
+      vim.api.nvim_create_user_command('SpellCheckingOff', 'setlocal nospell',                           { force = true })
     end,
     after = 'nvim-cmp',
   },
