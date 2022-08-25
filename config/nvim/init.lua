@@ -31,8 +31,8 @@ vim.opt.clipboard = {
 vim.opt.lazyredraw = true
 
 -- Edit and reload vimrc immediately.
-vim.keymap.set('n', '<F5>', '<Cmd>tabnew $MYVIMRC<CR>',  { silent = true })
-vim.keymap.set('n', '<F6>', '<Cmd>luafile $MYVIMRC<CR>', { silent = true })
+vim.keymap.set('n', '<F5>', function() vim.cmd('tabedit $MYVIMRC') end, { silent = true })
+vim.keymap.set('n', '<F6>', function() vim.cmd('luafile $MYVIMRC') end, { silent = true })
 
 -- Exit terminal mode easily.
 vim.keymap.set('t', '<ESC>', [[<C-\><C-n>]], { silent = true })
@@ -52,7 +52,7 @@ vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
 -- Clear highlight.
-vim.keymap.set('n', '<ESC><ESC>', '<Cmd>nohlsearch<CR>', { silent = true })
+vim.keymap.set('n', '<ESC><ESC>', function() vim.cmd('nohlsearch') end, { silent = true })
 
 -- View {{{1
 
@@ -138,16 +138,12 @@ vim.keymap.set('c', '<C-d>', '<Del>',   {})
 -- Disable auto comments on the next line
 local noAutoComment = vim.api.nvim_create_augroup('NoAutoComment', { clear = true })
 vim.api.nvim_create_autocmd('BufEnter', {
-  group   = noAutoComment,
-  command = 'setlocal formatoptions-=c',
-})
-vim.api.nvim_create_autocmd('BufEnter', {
-  group   = noAutoComment,
-  command = 'setlocal formatoptions-=r',
-})
-vim.api.nvim_create_autocmd('BufEnter', {
-  group   = noAutoComment,
-  command = 'setlocal formatoptions-=o',
+  group    = noAutoComment,
+  callback = function()
+    vim.cmd('setlocal formatoptions-=c')
+    vim.cmd('setlocal formatoptions-=r')
+    vim.cmd('setlocal formatoptions-=o')
+  end,
 })
 
 -- Syntax {{{1
