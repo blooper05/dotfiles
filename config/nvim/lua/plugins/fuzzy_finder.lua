@@ -11,14 +11,14 @@ return {
       vim.keymap.set('n', '[telescope]', '<Nop>',       {})
       vim.keymap.set('n', '<Space>u',    '[telescope]', { remap = true })
 
-      vim.keymap.set('n', '[telescope]f', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]],  { silent = true })
-      vim.keymap.set('n', '[telescope]g', [[<Cmd>lua require('telescope.builtin').live_grep()<CR>]],   { silent = true })
-      vim.keymap.set('n', '[telescope]*', [[<Cmd>lua require('telescope.builtin').grep_string()<CR>]], { silent = true })
-      vim.keymap.set('n', '[telescope]B', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]],     { silent = true })
-      vim.keymap.set('n', '[telescope]R', [[<Cmd>lua require('telescope.builtin').registers()<CR>]],   { silent = true })
-      vim.keymap.set('n', '[telescope]H', [[<Cmd>lua require('telescope.builtin').help_tags()<CR>]],   { silent = true })
-      vim.keymap.set('n', '[telescope]M', [[<Cmd>lua require('telescope.builtin').man_pages()<CR>]],   { silent = true })
-      vim.keymap.set('n', '[telescope]u', [[<Cmd>lua require('telescope.builtin').resume()<CR>]],      { silent = true })
+      vim.keymap.set('n', '[telescope]f', require('telescope.builtin').find_files,  { silent = true })
+      vim.keymap.set('n', '[telescope]g', require('telescope.builtin').live_grep,   { silent = true })
+      vim.keymap.set('n', '[telescope]*', require('telescope.builtin').grep_string, { silent = true })
+      vim.keymap.set('n', '[telescope]B', require('telescope.builtin').buffers,     { silent = true })
+      vim.keymap.set('n', '[telescope]R', require('telescope.builtin').registers,   { silent = true })
+      vim.keymap.set('n', '[telescope]H', require('telescope.builtin').help_tags,   { silent = true })
+      vim.keymap.set('n', '[telescope]M', require('telescope.builtin').man_pages,   { silent = true })
+      vim.keymap.set('n', '[telescope]u', require('telescope.builtin').resume,      { silent = true })
 
       require('telescope').setup({
         defaults = {
@@ -66,7 +66,7 @@ return {
       { 'tami5/sqlite.lua'              },
     },
     config = function()
-      vim.keymap.set('n', '[telescope]h', [[<Cmd>lua require('telescope').extensions.frecency.frecency()<CR>]], { silent = true })
+      vim.keymap.set('n', '[telescope]h', require('telescope').extensions.frecency.frecency, { silent = true })
 
       require('telescope').load_extension('frecency')
     end,
@@ -80,7 +80,7 @@ return {
       { 'wbthomason/packer.nvim'        },
     },
     config = function()
-      vim.keymap.set('n', '[telescope]p', [[<Cmd>lua require('telescope').extensions.packer.packer()<CR>]], { silent = true })
+      vim.keymap.set('n', '[telescope]p', require('telescope').extensions.packer.packer, { silent = true })
 
       require('telescope').load_extension('packer')
     end,
@@ -93,7 +93,7 @@ return {
       { 'nvim-telescope/telescope.nvim' },
     },
     config = function()
-      vim.keymap.set('n', '[telescope]s', [[<Cmd>lua require('telescope').extensions.ghq.list()<CR>]], { silent = true })
+      vim.keymap.set('n', '[telescope]s', require('telescope').extensions.ghq.list, { silent = true })
 
       require('telescope').load_extension('ghq')
     end,

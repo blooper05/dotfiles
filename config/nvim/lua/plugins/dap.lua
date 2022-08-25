@@ -5,9 +5,9 @@ return {
       vim.keymap.set('n', '[dap]',    '<Nop>', {})
       vim.keymap.set('n', '<Space>d', '[dap]', { remap = true })
 
-      vim.keymap.set('n', '[dap]r', [[<Cmd>lua require('dap').repl.open()<CR>]],         { silent = true })
-      vim.keymap.set('n', '[dap]b', [[<Cmd>lua require('dap').toggle_breakpoint()<CR>]], { silent = true })
-      vim.keymap.set('n', '[dap]c', [[<Cmd>lua require('dap').continue()<CR>]],          { silent = true })
+      vim.keymap.set('n', '[dap]r', require('dap').repl.open,         { silent = true })
+      vim.keymap.set('n', '[dap]b', require('dap').toggle_breakpoint, { silent = true })
+      vim.keymap.set('n', '[dap]c', require('dap').continue,          { silent = true })
     end,
     event = 'VimEnter',
   },
