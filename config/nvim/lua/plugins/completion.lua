@@ -131,6 +131,39 @@ return {
     },
     config = function()
       require('luasnip.loaders.from_vscode').lazy_load()
+
+      local luasnip = require('luasnip')
+      local s       = luasnip.snippet
+      local i       = luasnip.insert_node
+      local fmt     = require('luasnip.extras.fmt').fmt
+
+      luasnip.add_snippets('gina-commit', {
+        s('sparkles',            fmt('✨ feat({}): ',     { i(1, 'scope') })),
+        s('bug',                 fmt('🐛 fix({}): ',      { i(1, 'scope') })),
+        s('ambulance',           fmt('🚑 fix({}): ',      { i(1, 'scope') })),
+        s('lock',                fmt('🔒 fix({}): ',      { i(1, 'scope') })),
+        s('pencil2',             fmt('✏️ fix({}): ',       { i(1, 'scope') })),
+        s('recycle',             fmt('♻️ refactor({}): ',  { i(1, 'scope') })),
+        s('truck',               fmt('🚚 refactor({}): ', { i(1, 'scope') })),
+        s('fire',                fmt('🔥 refactor({}): ', { i(1, 'scope') })),
+        s('art',                 fmt('🎨 style({}): ',    { i(1, 'scope') })),
+        s('rotating_light',      fmt('🚨 style({}): ',    { i(1, 'scope') })),
+        s('zap',                 fmt('⚡️ perf({}): ',     { i(1, 'scope') })),
+        s('white_check_mark',    fmt('✅ test({}): ',     { i(1, 'scope') })),
+        s('memo',                fmt('📝 docs({}): ',     { i(1, 'scope') })),
+        s('bulb',                fmt('💡 docs({}): ',     { i(1, 'scope') })),
+        s('green_heart',         fmt('💚 ci({}): ',       { i(1, 'scope') })),
+        s('construction_worker', fmt('👷 ci({}): ',       { i(1, 'scope') })),
+        s('tada',                fmt('🎉 chore({}): ',    { i(1, 'scope') })),
+        s('bookmark',            fmt('🔖 chore({}): ',    { i(1, 'scope') })),
+        s('rocket',              fmt('🚀 chore({}): ',    { i(1, 'scope') })),
+        s('wrench',              fmt('🔧 chore({}): ',    { i(1, 'scope') })),
+        s('hammer',              fmt('🔨 chore({}): ',    { i(1, 'scope') })),
+        s('heavy_plus_sign',     fmt('➕ chore({}): ',    { i(1, 'scope') })),
+        s('heavy_minus_sign',    fmt('➖ chore({}): ',    { i(1, 'scope') })),
+        s('arrow_up',            fmt('⬆️ chore({}): ',     { i(1, 'scope') })),
+        s('arrow_down',          fmt('⬇️ chore({}): ',     { i(1, 'scope') })),
+      })
     end,
     event = 'VimEnter',
     after = 'friendly-snippets',
