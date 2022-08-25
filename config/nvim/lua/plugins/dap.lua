@@ -18,6 +18,8 @@ return {
       { 'mfussenegger/nvim-dap' },
     },
     config = function()
+      vim.keymap.set('n', '[dap]d', require('dapui').toggle, { silent = true })
+
       require('dapui').setup({})
     end,
     after = 'nvim-dap',
