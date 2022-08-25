@@ -133,6 +133,9 @@ return {
   {
     'rcarriga/nvim-notify',
     config = function()
+      -- Enable 24-bit RGB color in the TUI.
+      vim.opt.termguicolors = true
+
       require('notify').setup({})
     end,
     event = 'VimEnter',
