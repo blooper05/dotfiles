@@ -107,13 +107,8 @@ return {
     },
     config = function()
       require('zen-mode').setup({
-        on_open = function(_)
-          vim.cmd([[:silent lua require('shade').toggle()]])
-        end,
-
-        on_close = function()
-          vim.cmd([[:silent lua require('shade').toggle()]])
-        end,
+        on_open  = function() vim.cmd([[silent lua require('shade').toggle()]]) end,
+        on_close = function() vim.cmd([[silent lua require('shade').toggle()]]) end,
       })
     end,
     event = 'VimEnter',
