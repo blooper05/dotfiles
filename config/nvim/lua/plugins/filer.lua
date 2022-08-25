@@ -7,10 +7,10 @@ return {
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '[file]',   '<Nop>',  { noremap = true })
-      vim.api.nvim_set_keymap('n', '<Space>f', '[file]', {})
+      vim.keymap.set('n', '[file]',   '<Nop>',  {})
+      vim.keymap.set('n', '<Space>f', '[file]', { remap = true })
 
-      vim.api.nvim_set_keymap('n', '[file]c', '<Cmd>Neotree toggle reveal<CR>', { noremap = true, silent = true })
+      vim.keymap.set('n', '[file]c', '<Cmd>Neotree toggle reveal<CR>', { silent = true })
 
       require('neo-tree').setup({
         window = {

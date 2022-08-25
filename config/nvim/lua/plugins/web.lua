@@ -6,11 +6,11 @@ return {
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '[octo]',       '<Nop>',  { noremap = true })
-      vim.api.nvim_set_keymap('n', '[telescope]G', '[octo]', {})
+      vim.keymap.set('n', '[octo]',       '<Nop>',  {})
+      vim.keymap.set('n', '[telescope]G', '[octo]', { remap = true })
 
-      vim.api.nvim_set_keymap('n', '[octo]i', '<Cmd>Octo issue list<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[octo]p', '<Cmd>Octo pr list<CR>',    { noremap = true, silent = true })
+      vim.keymap.set('n', '[octo]i', '<Cmd>Octo issue list<CR>', { silent = true })
+      vim.keymap.set('n', '[octo]p', '<Cmd>Octo pr list<CR>',    { silent = true })
 
       require('octo').setup({})
     end,

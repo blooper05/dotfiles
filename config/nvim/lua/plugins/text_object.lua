@@ -26,8 +26,8 @@ return {
       { 'kana/vim-operator-user' },
     },
     config = function()
-      vim.api.nvim_set_keymap('',  'y', '<Plug>(operator-flashy)',  {})
-      vim.api.nvim_set_keymap('n', 'Y', '<Plug>(operator-flashy)$', {})
+      vim.keymap.set('',  'y', '<Plug>(operator-flashy)',  { remap = true })
+      vim.keymap.set('n', 'Y', '<Plug>(operator-flashy)$', { remap = true })
     end,
   },
 
@@ -37,10 +37,10 @@ return {
       { 'kana/vim-operator-user' },
     },
     config = function()
-      vim.api.nvim_set_keymap('o', 's',  '<Plug>(operator-surround-append)',   { silent = true })
-      vim.api.nvim_set_keymap('x', 's',  '<Plug>(operator-surround-append)',   { silent = true })
-      vim.api.nvim_set_keymap('',  'ds', '<Plug>(operator-surround-delete)a',  { silent = true })
-      vim.api.nvim_set_keymap('',  'cs', '<Plug>(operator-surround-replace)a', { silent = true })
+      vim.keymap.set('o', 's',  '<Plug>(operator-surround-append)',   { remap = true, silent = true })
+      vim.keymap.set('x', 's',  '<Plug>(operator-surround-append)',   { remap = true, silent = true })
+      vim.keymap.set('',  'ds', '<Plug>(operator-surround-delete)a',  { remap = true, silent = true })
+      vim.keymap.set('',  'cs', '<Plug>(operator-surround-replace)a', { remap = true, silent = true })
     end,
   },
 
@@ -50,8 +50,8 @@ return {
       { 'kana/vim-operator-user' },
     },
     config = function()
-      vim.api.nvim_set_keymap('o', 'p', '<Plug>(operator-replace)', { silent = true })
-      vim.api.nvim_set_keymap('x', 'p', '<Plug>(operator-replace)', { silent = true })
+      vim.keymap.set('o', 'p', '<Plug>(operator-replace)', { remap = true, silent = true })
+      vim.keymap.set('x', 'p', '<Plug>(operator-replace)', { remap = true, silent = true })
     end,
   },
 }

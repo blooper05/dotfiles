@@ -31,11 +31,11 @@ vim.opt.clipboard = {
 vim.opt.lazyredraw = true
 
 -- Edit and reload vimrc immediately.
-vim.api.nvim_set_keymap('n', '<F5>', '<Cmd>tabnew $MYVIMRC<CR>',  { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<F6>', '<Cmd>luafile $MYVIMRC<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<F5>', '<Cmd>tabnew $MYVIMRC<CR>',  { silent = true })
+vim.keymap.set('n', '<F6>', '<Cmd>luafile $MYVIMRC<CR>', { silent = true })
 
 -- Exit terminal mode easily.
-vim.api.nvim_set_keymap('t', '<ESC>', [[<C-\><C-n>]], { noremap = true, silent = true })
+vim.keymap.set('t', '<ESC>', [[<C-\><C-n>]], { silent = true })
 
 -- Search {{{1
 
@@ -52,7 +52,7 @@ vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
 -- Clear highlight.
-vim.api.nvim_set_keymap('n', '<ESC><ESC>', '<Cmd>nohlsearch<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<ESC><ESC>', '<Cmd>nohlsearch<CR>', { silent = true })
 
 -- View {{{1
 
@@ -126,14 +126,14 @@ vim.opt.infercase = true
 vim.opt.inccommand = 'split'
 
 -- Insert blank line in normal mode.
-vim.api.nvim_set_keymap('n', '<CR>', 'o<ESC>', { noremap = true })
+vim.keymap.set('n', '<CR>', 'o<ESC>', {})
 
 -- Command-line mode key-mappings.
-vim.api.nvim_set_keymap('c', '<C-a>', '<Home>',  { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-e>', '<End>',   { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-b>', '<Left>',  { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-f>', '<Right>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-d>', '<Del>',   { noremap = true })
+vim.keymap.set('c', '<C-a>', '<Home>',  {})
+vim.keymap.set('c', '<C-e>', '<End>',   {})
+vim.keymap.set('c', '<C-b>', '<Left>',  {})
+vim.keymap.set('c', '<C-f>', '<Right>', {})
+vim.keymap.set('c', '<C-d>', '<Del>',   {})
 
 -- Disable auto comments on the next line
 local noAutoComment = vim.api.nvim_create_augroup('NoAutoComment', { clear = true })

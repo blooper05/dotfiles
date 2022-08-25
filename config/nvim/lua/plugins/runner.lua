@@ -47,17 +47,17 @@ return {
   {
     'thinca/vim-quickrun', -- non-lua plugin
     config = function()
-      vim.api.nvim_set_keymap('n', '<Leader>r', '<Plug>(quickrun)', {})
+      vim.keymap.set('n', '<Leader>r', '<Plug>(quickrun)', { remap = true })
     end,
   },
 
   {
     'vim-test/vim-test', -- non-lua plugin
     config = function()
-      vim.api.nvim_set_keymap('n', '<Leader>c', '<Cmd>TestFile<CR>',    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '<Leader>n', '<Cmd>TestNearest<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '<Leader>l', '<Cmd>TestLast<CR>',    { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '<Leader>a', '<Cmd>TestSuite<CR>',   { noremap = true, silent = true })
+      vim.keymap.set('n', '<Leader>c', '<Cmd>TestFile<CR>',    { silent = true })
+      vim.keymap.set('n', '<Leader>n', '<Cmd>TestNearest<CR>', { silent = true })
+      vim.keymap.set('n', '<Leader>l', '<Cmd>TestLast<CR>',    { silent = true })
+      vim.keymap.set('n', '<Leader>a', '<Cmd>TestSuite<CR>',   { silent = true })
     end,
   },
 
@@ -67,7 +67,7 @@ return {
       { 'tyru/open-browser.vim' },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '<Leader>p', '<Cmd>PrevimOpen<CR>', { noremap = true, silent = true })
+      vim.keymap.set('n', '<Leader>p', '<Cmd>PrevimOpen<CR>', { silent = true })
     end,
   },
 

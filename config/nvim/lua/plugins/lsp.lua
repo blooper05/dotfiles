@@ -34,8 +34,8 @@ return {
         end
       end
 
-      vim.api.nvim_set_keymap('n', '[lsp]',    '<Nop>', { noremap = true })
-      vim.api.nvim_set_keymap('n', '<Space>l', '[lsp]', {})
+      vim.keymap.set('n', '[lsp]',    '<Nop>', {})
+      vim.keymap.set('n', '<Space>l', '[lsp]', { remap = true })
     end,
     after = 'nvim-lspconfig',
   },
@@ -46,10 +46,10 @@ return {
       { 'neovim/nvim-lspconfig' },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '[lsp]r', '<Cmd>Lspsaga rename<CR>',            { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[lsp]a', '<Cmd>Lspsaga code_action<CR>',       { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('x', '[lsp]a', '<Cmd>Lspsaga range_code_action<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[lsp]d', '<Cmd>Lspsaga hover_doc<CR>',         { noremap = true, silent = true })
+      vim.keymap.set('n', '[lsp]r', '<Cmd>Lspsaga rename<CR>',            { silent = true })
+      vim.keymap.set('n', '[lsp]a', '<Cmd>Lspsaga code_action<CR>',       { silent = true })
+      vim.keymap.set('x', '[lsp]a', '<Cmd>Lspsaga range_code_action<CR>', { silent = true })
+      vim.keymap.set('n', '[lsp]d', '<Cmd>Lspsaga hover_doc<CR>',         { silent = true })
 
       require('lspsaga').setup({})
     end,
@@ -63,7 +63,7 @@ return {
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '[lsp]l', '<Cmd>TroubleToggle<CR>', { noremap = true, silent = true })
+      vim.keymap.set('n', '[lsp]l', '<Cmd>TroubleToggle<CR>', { silent = true })
 
       require('trouble').setup({})
     end,

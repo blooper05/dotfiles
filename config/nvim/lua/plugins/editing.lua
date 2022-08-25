@@ -18,8 +18,8 @@ return {
       { 'nvim-telescope/telescope.nvim', opt = true },
     },
     config = function()
-      vim.api.nvim_set_keymap('n', '[lsp]t',       '<Cmd>TodoTrouble<CR>',   { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '[telescope]t', '<Cmd>TodoTelescope<CR>', { noremap = true, silent = true })
+      vim.keymap.set('n', '[lsp]t',       '<Cmd>TodoTrouble<CR>',   { silent = true })
+      vim.keymap.set('n', '[telescope]t', '<Cmd>TodoTelescope<CR>', { silent = true })
 
       require('todo-comments').setup({})
     end,
@@ -29,12 +29,12 @@ return {
   {
     'monaqa/dial.nvim',
     config = function()
-      vim.api.nvim_set_keymap('n', '<C-a>',  require('dial.map').inc_normal(),  { noremap = true })
-      vim.api.nvim_set_keymap('n', '<C-x>',  require('dial.map').dec_normal(),  { noremap = true })
-      vim.api.nvim_set_keymap('v', '<C-a>',  require('dial.map').inc_visual(),  { noremap = true })
-      vim.api.nvim_set_keymap('v', '<C-x>',  require('dial.map').dec_visual(),  { noremap = true })
-      vim.api.nvim_set_keymap('v', 'g<C-a>', require('dial.map').inc_gvisual(), { noremap = true })
-      vim.api.nvim_set_keymap('v', 'g<C-x>', require('dial.map').dec_gvisual(), { noremap = true })
+      vim.keymap.set('n', '<C-a>',  require('dial.map').inc_normal(),  {})
+      vim.keymap.set('n', '<C-x>',  require('dial.map').dec_normal(),  {})
+      vim.keymap.set('v', '<C-a>',  require('dial.map').inc_visual(),  {})
+      vim.keymap.set('v', '<C-x>',  require('dial.map').dec_visual(),  {})
+      vim.keymap.set('v', 'g<C-a>', require('dial.map').inc_gvisual(), {})
+      vim.keymap.set('v', 'g<C-x>', require('dial.map').dec_gvisual(), {})
 
       local augend = require('dial.augend')
 
@@ -63,7 +63,7 @@ return {
   {
     'junegunn/vim-easy-align', -- non-lua plugin
     config = function()
-      vim.api.nvim_set_keymap('x', '<Enter>', '<Plug>(EasyAlign)', { silent = true })
+      vim.keymap.set('x', '<Enter>', '<Plug>(EasyAlign)', { remap = true, silent = true })
     end,
     event = 'VimEnter',
   },
@@ -90,7 +90,7 @@ return {
   {
     'mbbill/undotree', -- non-lua plugin
     config = function()
-      vim.api.nvim_set_keymap('n', '<Space>U', '<Cmd>UndotreeToggle<CR>', { noremap = true, silent = true })
+      vim.keymap.set('n', '<Space>U', '<Cmd>UndotreeToggle<CR>', { silent = true })
 
       vim.g.undotree_WindowLayout       = 2
       vim.g.undotree_SetFocusWhenToggle = true
