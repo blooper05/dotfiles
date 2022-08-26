@@ -13,9 +13,10 @@ return {
   {
     'folke/todo-comments.nvim',
     requires = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'folke/trouble.nvim',            opt = true },
-      { 'nvim-telescope/telescope.nvim', opt = true },
+      { 'nvim-lua/plenary.nvim'                       },
+      { 'folke/trouble.nvim',              opt = true },
+      { 'nvim-telescope/telescope.nvim',   opt = true },
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
     },
     config = function()
       vim.keymap.set('n', '[lsp]t',       function() vim.cmd('TodoTrouble') end,   { silent = true })
