@@ -2,12 +2,14 @@ return {
   {
     'mfussenegger/nvim-dap',
     config = function()
+      local dap = require('dap')
+
       vim.keymap.set('n', '[dap]',    '<Nop>', {})
       vim.keymap.set('n', '<Space>d', '[dap]', { remap = true })
 
-      vim.keymap.set('n', '[dap]r', require('dap').repl.open,         { silent = true })
-      vim.keymap.set('n', '[dap]b', require('dap').toggle_breakpoint, { silent = true })
-      vim.keymap.set('n', '[dap]c', require('dap').continue,          { silent = true })
+      vim.keymap.set('n', '[dap]r', dap.repl.open,         { silent = true })
+      vim.keymap.set('n', '[dap]b', dap.toggle_breakpoint, { silent = true })
+      vim.keymap.set('n', '[dap]c', dap.continue,          { silent = true })
     end,
     event = 'VimEnter',
   },
@@ -18,9 +20,15 @@ return {
       { 'mfussenegger/nvim-dap' },
     },
     config = function()
-      vim.keymap.set('n', '[dap]d', require('dapui').toggle, { silent = true })
+      local dap, dapui = require('dap'), require('dapui')
 
-      require('dapui').setup({})
+      vim.keymap.set('n', '[dap]d', dapui.toggle, { silent = true })
+
+      dap.listeners.after.event_initialized['dapui_config'] = function() dapui.open() end
+      dap.listeners.before.event_terminated['dapui_config'] = function() dapui.close() end
+      dap.listeners.before.event_exited['dapui_config']     = function() dapui.close() end
+
+      dapui.setup({})
     end,
     after = 'nvim-dap',
   },
