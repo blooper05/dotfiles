@@ -8,7 +8,7 @@ return {
       { 'nvim-treesitter/nvim-treesitter', opt = true },
     },
     config = function()
-      builtin = require('telescope.builtin')
+      local builtin = require('telescope.builtin')
 
       vim.keymap.set('n', '[telescope]', '<Nop>',       {})
       vim.keymap.set('n', '<Space>u',    '[telescope]', { remap = true })
