@@ -70,7 +70,7 @@ return {
         },
       })
     end,
-    after = colorscheme,
+    after = { colorscheme, 'nvim-hlslens' },
   },
 
   {
