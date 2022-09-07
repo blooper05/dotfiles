@@ -2,9 +2,12 @@ return {
   {
     'kevinhwang91/nvim-hlslens',
     config = function()
-      vim.keymap.set('', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], { silent = true })
-      vim.keymap.set('', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], { silent = true })
+      local hlslens = require('hlslens')
+
+      vim.keymap.set('n', 'n', function() vim.cmd([[execute('normal! ' . v:count1 . 'n')]]) hlslens.start() end, { silent = true })
+      vim.keymap.set('n', 'N', function() vim.cmd([[execute('normal! ' . v:count1 . 'N')]]) hlslens.start() end, { silent = true })
     end,
+    event = 'VimEnter',
   },
 
   {
