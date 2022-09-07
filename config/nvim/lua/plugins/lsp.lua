@@ -82,14 +82,14 @@ return {
   {
     'folke/trouble.nvim',
     requires = {
-      { 'neovim/nvim-lspconfig' },
+      { 'neovim/nvim-lspconfig'                    },
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
     config = function()
-      vim.keymap.set('n', '[lsp]l', '<Cmd>TroubleToggle<CR>', { silent = true })
+      vim.keymap.set('n', '[lsp]l', function() vim.cmd('TroubleToggle') end, { silent = true })
 
       require('trouble').setup({})
     end,
-    after = 'nvim-lsp-installer',
+    after = 'mason.nvim',
   },
 }
