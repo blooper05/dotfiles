@@ -20,6 +20,9 @@ return {
       vim.keymap.set('', '#',  [[<Plug>(asterisk-z#)<Cmd>lua require('hlslens').start()<CR>]],  { remap = true })
       vim.keymap.set('', 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
       vim.keymap.set('', 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
+
+      vim.g['asterisk#keeppos'] = true
     end,
+    event = 'VimEnter',
   },
 }
