@@ -65,7 +65,7 @@ return {
     'nvim-telescope/telescope-frecency.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },
-      { 'tami5/sqlite.lua'              },
+      { 'kkharji/sqlite.lua'            },
     },
     config = function()
       vim.keymap.set('n', '[telescope]h', require('telescope').extensions.frecency.frecency, { silent = true })
