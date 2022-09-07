@@ -1,41 +1,63 @@
 return {
   {
-    'williamboman/nvim-lsp-installer',
+    'williamboman/mason.nvim',
     requires = {
-      { 'neovim/nvim-lspconfig' },
+      { 'neovim/nvim-lspconfig'             },
+      { 'williamboman/mason-lspconfig.nvim' },
     },
     config = function()
-      local installer = require('nvim-lsp-installer.servers')
-      local servers   = installer.get_available_server_names()
-
-      for _, name in pairs(servers) do
-        local serverAvailable, server = installer.get_server(name)
-
-        if serverAvailable then
-          server:on_ready(function()
-            local opts = {}
-
-            for serverName in pairs({ 'denols', 'ltex', 'remark_ls', 'sorbet' }) do
-              if server.name == serverName then
-                opts.autostart = false
-              end
-            end
-
-            if server.name == 'sumneko_lua' then
-              opts.settings = { Lua = { diagnostics = { globals = { 'use', 'vim' } } } }
-            end
-
-            server:setup(opts)
-          end)
-
-          if not server:is_installed() then
-            server:install()
-          end
-        end
-      end
-
       vim.keymap.set('n', '[lsp]',    '<Nop>', {})
       vim.keymap.set('n', '<Space>l', '[lsp]', { remap = true })
+
+      local mason          = require('mason')
+      local masonLspconfig = require('mason-lspconfig')
+      local nvimLspconfig  = require('lspconfig')
+
+      local servers = {
+        'bashls',
+        'cssls',
+        'cssmodules_ls',
+        'dockerls',
+        'elmls',
+        'eslint',
+        'grammarly',
+        'html',
+        'jsonls',
+        'jsonnet_ls',
+        'pylsp',
+        'remark_ls',
+        'solargraph',
+        -- 'sorbet',
+        'sqlls',
+        'sqls',
+        'stylelint_lsp',
+        'sumneko_lua',
+        'tailwindcss',
+        'taplo',
+        'terraformls',
+        'tsserver',
+        'vuels',
+        'yamlls',
+      }
+
+      mason.setup({})
+
+      masonLspconfig.setup({
+        ensure_installed       = servers,
+        automatic_installation = true,
+      })
+
+      masonLspconfig.setup_handlers({
+        function(server_name)
+          nvimLspconfig[server_name].setup({})
+        end,
+
+        ['sumneko_lua'] = function()
+          nvimLspconfig.sumneko_lua.setup({
+            settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
+          })
+        end,
+      })
     end,
     after = 'nvim-lspconfig',
   },
