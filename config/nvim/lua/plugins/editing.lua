@@ -66,7 +66,8 @@ return {
   {
     'junegunn/vim-easy-align', -- non-lua plugin
     config = function()
-      vim.keymap.set('x', '<Enter>', '<Plug>(EasyAlign)', { remap = true, silent = true })
+      vim.keymap.set('n', 'ga', '<Plug>(EasyAlign)', { remap = true, silent = true })
+      vim.keymap.set('x', 'ga', '<Plug>(EasyAlign)', { remap = true, silent = true })
     end,
     event = 'VimEnter',
   },
