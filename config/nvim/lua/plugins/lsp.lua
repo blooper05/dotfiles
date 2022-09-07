@@ -63,19 +63,20 @@ return {
   },
 
   {
-    'tami5/lspsaga.nvim',
+    'glepnir/lspsaga.nvim',
     requires = {
       { 'neovim/nvim-lspconfig' },
     },
     config = function()
-      vim.keymap.set('n', '[lsp]r', '<Cmd>Lspsaga rename<CR>',            { silent = true })
-      vim.keymap.set('n', '[lsp]a', '<Cmd>Lspsaga code_action<CR>',       { silent = true })
-      vim.keymap.set('x', '[lsp]a', '<Cmd>Lspsaga range_code_action<CR>', { silent = true })
-      vim.keymap.set('n', '[lsp]d', '<Cmd>Lspsaga hover_doc<CR>',         { silent = true })
+      vim.keymap.set('n', '[lsp]r', function() vim.cmd('Lspsaga rename') end,            { silent = true })
+      vim.keymap.set('n', '[lsp]a', function() vim.cmd('Lspsaga code_action') end,       { silent = true })
+      vim.keymap.set('x', '[lsp]a', function() vim.cmd('Lspsaga range_code_action') end, { silent = true })
+      vim.keymap.set('n', '[lsp]d', function() vim.cmd('Lspsaga hover_doc') end,         { silent = true })
+      vim.keymap.set('n', '[lsp]f', function() vim.cmd('Lspsaga lsp_finder') end,        { silent = true })
 
-      require('lspsaga').setup({})
+      require('lspsaga').init_lsp_saga({})
     end,
-    after = 'nvim-lsp-installer',
+    after = 'mason.nvim',
   },
 
   {
