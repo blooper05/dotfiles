@@ -10,7 +10,7 @@ return {
       vim.keymap.set('n', '[file]',   '<Nop>',  {})
       vim.keymap.set('n', '<Space>f', '[file]', { remap = true })
 
-      vim.keymap.set('n', '[file]c', '<Cmd>Neotree toggle reveal<CR>', { silent = true })
+      vim.keymap.set('n', '[file]c', function() vim.cmd('Neotree toggle reveal') end, { silent = true })
 
       require('neo-tree').setup({
         filesystem = {
