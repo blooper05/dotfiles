@@ -36,10 +36,9 @@ return {
   -- Markdown
 
   {
-    'rcmdnk/vim-markdown', -- non-lua plugin
+    'preservim/vim-markdown', -- non-lua plugin
     requires = {
-      { 'joker1007/vim-markdown-quote-syntax' },
-      { 'godlygeek/tabular'                   },
+      { 'godlygeek/tabular' },
     },
     config = function()
       -- Disable the folding configuration.
