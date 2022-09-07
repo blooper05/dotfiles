@@ -86,6 +86,7 @@ return {
         'help',
         'markdown',
         'packer',
+        'toggleterm',
       }
     end,
     event = 'VimEnter',

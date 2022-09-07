@@ -6,5 +6,6 @@ return {
         open_mapping = '<Leader>t',
       })
     end,
+    event = 'VimEnter',
   },
 }
