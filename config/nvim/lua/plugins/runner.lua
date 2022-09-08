@@ -11,50 +11,22 @@ return {
       null_ls.setup({
         sources = {
           null_ls.builtins.diagnostics.actionlint,
-          -- null_ls.builtins.diagnostics.alex,
           null_ls.builtins.diagnostics.editorconfig_checker,
-          null_ls.builtins.diagnostics.eslint.with({
-            prefer_local = 'node_modules/.bin',
-          }),
-          null_ls.builtins.diagnostics.gitlint,
+          null_ls.builtins.diagnostics.gitlint.with({ filetypes = { 'gina-commit', 'gitcommit' } }),
           null_ls.builtins.diagnostics.hadolint,
           null_ls.builtins.diagnostics.jsonlint,
-          null_ls.builtins.diagnostics.markdownlint.with({
-            prefer_local = 'node_modules/.bin',
-          }),
-          null_ls.builtins.diagnostics.rubocop.with({
-            prefer_local = '.bundle/bin',
-          }),
           null_ls.builtins.diagnostics.shellcheck,
-          null_ls.builtins.diagnostics.textlint.with({
-            filetypes    = { 'markdown', 'text' },
-            prefer_local = 'node_modules/.bin',
-          }),
           null_ls.builtins.diagnostics.yamllint,
-          null_ls.builtins.formatting.eslint.with({
-            prefer_local = 'node_modules/.bin',
-          }),
-          null_ls.builtins.formatting.markdownlint.with({
-            prefer_local = 'node_modules/.bin',
-          }),
-          null_ls.builtins.formatting.prettier.with({
-            prefer_local = 'node_modules/.bin',
-          }),
-          null_ls.builtins.formatting.rubocop.with({
-            prefer_local = '.bundle/bin',
-          }),
+          null_ls.builtins.formatting.eslint.with({ prefer_local = 'node_modules/.bin' }),
+          null_ls.builtins.formatting.markdownlint.with({ prefer_local = 'node_modules/.bin' }),
+          null_ls.builtins.formatting.packer,
+          null_ls.builtins.formatting.prettier.with({ prefer_local = 'node_modules/.bin' }),
+          null_ls.builtins.formatting.rubocop.with({ prefer_local = '.bundle/bin' }),
           null_ls.builtins.formatting.shfmt,
-          -- null_ls.builtins.formatting.sqlformat,
-          -- null_ls.builtins.formatting.sql_formatter,
-          -- null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.taplo,
-          -- null_ls.builtins.formatting.terrafmt,
+          null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.terraform_fmt,
-          null_ls.builtins.formatting.textlint.with({
-            filetypes    = { 'markdown', 'text' },
-            prefer_local = 'node_modules/.bin',
-          }),
-          null_ls.builtins.formatting.trim_newlines,
+          null_ls.builtins.formatting.textlint.with({ filetypes = { 'markdown', 'text' }, prefer_local = 'node_modules/.bin' }),
+          -- null_ls.builtins.formatting.trim_newlines,
           -- null_ls.builtins.formatting.trim_whitespace,
         },
 
