@@ -93,6 +93,30 @@ return {
   },
 
   {
+    'kevinhwang91/nvim-ufo',
+    requires = {
+      { 'kevinhwang91/promise-async'      },
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    config = function()
+      vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+      vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
+
+      vim.o.fillchars      = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+      vim.o.foldcolumn     = '1'
+      vim.o.foldlevel      = 99
+      vim.o.foldlevelstart = 99
+
+      require('ufo').setup({
+        provider_selector = function(_)
+          return { 'treesitter', 'indent' }
+        end,
+      })
+    end,
+    event = 'VimEnter',
+  },
+
+  {
     'jghauser/shade.nvim',
     config = function()
       require('shade').setup({})
