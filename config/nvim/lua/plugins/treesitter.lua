@@ -22,7 +22,7 @@ return {
         yati = { enable = true },
       })
     end,
-    event = 'VimEnter',
+    after = 'nvim-treesitter',
   },
 
   {
@@ -33,6 +33,6 @@ return {
     config = function()
       require('hlargs').setup({})
     end,
-    event = 'VimEnter',
+    after = 'nvim-treesitter',
   },
 }

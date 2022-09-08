@@ -19,7 +19,7 @@ return {
         matchup = { enable = true },
       })
     end,
-    event = 'VimEnter',
+    after = 'nvim-treesitter',
   },
 
   {
