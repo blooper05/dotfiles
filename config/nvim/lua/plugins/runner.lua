@@ -60,13 +60,28 @@ return {
   },
 
   {
-    'vim-test/vim-test', -- non-lua plugin
+    'nvim-neotest/neotest',
+    requires = {
+      { 'antoinemadec/FixCursorHold.nvim' },
+      { 'nvim-lua/plenary.nvim'           },
+      { 'nvim-treesitter/nvim-treesitter' },
+      { 'olimorris/neotest-rspec'         },
+    },
     config = function()
-      vim.keymap.set('n', '<Leader>c', '<Cmd>TestFile<CR>',    { silent = true })
-      vim.keymap.set('n', '<Leader>n', '<Cmd>TestNearest<CR>', { silent = true })
-      vim.keymap.set('n', '<Leader>l', '<Cmd>TestLast<CR>',    { silent = true })
-      vim.keymap.set('n', '<Leader>a', '<Cmd>TestSuite<CR>',   { silent = true })
+      local neotest = require('neotest')
+
+      vim.keymap.set('n', '<Leader>c', function() neotest.run.run(vim.fn.expand('%')) end, { silent = true })
+      vim.keymap.set('n', '<Leader>n', function() neotest.run.run()                   end, { silent = true })
+      vim.keymap.set('n', '<Leader>l', function() neotest.run.run_last()              end, { silent = true })
+      vim.keymap.set('n', '<Leader>a', function() neotest.run.run(vim.fn.getcwd())    end, { silent = true })
+
+      neotest.setup({
+        adapters = {
+          require('neotest-rspec'),
+        },
+      })
     end,
+    event = 'VimEnter',
   },
 
   {
