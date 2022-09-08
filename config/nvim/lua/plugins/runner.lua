@@ -47,8 +47,14 @@ return {
   {
     'michaelb/sniprun', run = 'bash ./install.sh',
     config = function()
-      vim.keymap.set('n', '<Leader>r', '<Plug>SnipRun', { silent = true })
-      vim.keymap.set('v', '<Leader>r', '<Plug>SnipRun', { silent = true })
+      local sniprun = require('sniprun')
+
+      vim.keymap.set('n', '<Leader>r', sniprun.run, { silent = true })
+      vim.keymap.set('v', '<Leader>r', sniprun.run, { silent = true })
+
+      sniprun.setup({
+        display = { 'TerminalWithCode' },
+      })
     end,
     event = 'VimEnter',
   },
