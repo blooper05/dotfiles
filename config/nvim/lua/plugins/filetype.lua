@@ -33,6 +33,16 @@ return {
     ft = 'jsonnet',
   },
 
+  -- Markdown
+
+  {
+    'gaoDean/autolist.nvim',
+    config = function()
+      require('autolist').setup({})
+    end,
+    ft = 'markdown',
+  },
+
   -- PlantUML
 
   {
