@@ -68,11 +68,11 @@ return {
       { 'neovim/nvim-lspconfig' },
     },
     config = function()
-      vim.keymap.set('n', '[lsp]r', function() vim.cmd('Lspsaga rename') end,            { silent = true })
-      vim.keymap.set('n', '[lsp]a', function() vim.cmd('Lspsaga code_action') end,       { silent = true })
+      vim.keymap.set('n', '[lsp]r', function() vim.cmd('Lspsaga rename')            end, { silent = true })
+      vim.keymap.set('n', '[lsp]a', function() vim.cmd('Lspsaga code_action')       end, { silent = true })
       vim.keymap.set('x', '[lsp]a', function() vim.cmd('Lspsaga range_code_action') end, { silent = true })
-      vim.keymap.set('n', '[lsp]d', function() vim.cmd('Lspsaga hover_doc') end,         { silent = true })
-      vim.keymap.set('n', '[lsp]f', function() vim.cmd('Lspsaga lsp_finder') end,        { silent = true })
+      vim.keymap.set('n', '[lsp]d', function() vim.cmd('Lspsaga hover_doc')         end, { silent = true })
+      vim.keymap.set('n', '[lsp]f', function() vim.cmd('Lspsaga lsp_finder')        end, { silent = true })
 
       require('lspsaga').init_lsp_saga({})
     end,

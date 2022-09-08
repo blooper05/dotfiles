@@ -19,7 +19,7 @@ return {
       { 'nvim-treesitter/nvim-treesitter', opt = true },
     },
     config = function()
-      vim.keymap.set('n', '[lsp]t',       function() vim.cmd('TodoTrouble') end,   { silent = true })
+      vim.keymap.set('n', '[lsp]t',       function() vim.cmd('TodoTrouble')   end, { silent = true })
       vim.keymap.set('n', '[telescope]t', function() vim.cmd('TodoTelescope') end, { silent = true })
 
       require('todo-comments').setup({})
