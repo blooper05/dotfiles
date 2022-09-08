@@ -9,8 +9,9 @@ return {
   },
 
   {
-    'skanehira/translate.vim', -- non-lua plugin
+    'uga-rosa/translate.nvim',
     config = function()
+      require('translate').setup({})
     end,
     event = 'VimEnter',
   },
