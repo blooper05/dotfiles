@@ -44,6 +44,17 @@ return {
     ft = 'markdown',
   },
 
+  {
+    'previm/previm', -- non-lua plugin
+    requires = {
+      { 'tyru/open-browser.vim' },
+    },
+    config = function()
+      vim.keymap.set('n', '<Leader>p', function() vim.cmd('PrevimOpen') end, { silent = true })
+    end,
+    ft = 'markdown',
+  },
+
   -- PlantUML
 
   {

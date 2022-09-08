@@ -84,15 +84,5 @@ return {
     event = 'VimEnter',
   },
 
-  {
-    'previm/previm', -- non-lua plugin
-    requires = {
-      { 'tyru/open-browser.vim' },
-    },
-    config = function()
-      vim.keymap.set('n', '<Leader>p', '<Cmd>PrevimOpen<CR>', { silent = true })
-    end,
-  },
-
   -- TODO: { 'renerocksai/telekasten.nvim' },
 }
