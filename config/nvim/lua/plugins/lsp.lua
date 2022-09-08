@@ -25,7 +25,7 @@ return {
         'jsonls',
         'jsonnet_ls',
         'pylsp',
-        'remark_ls',
+        -- 'remark_ls',
         'solargraph',
         -- 'sorbet',
         'sqlls',
