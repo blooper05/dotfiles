@@ -43,16 +43,6 @@ return {
     ft = 'markdown',
   },
 
-  {
-    'ellisonleao/glow.nvim',
-    config = function()
-      vim.keymap.set('n', '<Leader>p', function() vim.cmd('Glow') end, { silent = true })
-
-      require('glow').setup({})
-    end,
-    ft = 'markdown',
-  },
-
   -- PlantUML
 
   {
