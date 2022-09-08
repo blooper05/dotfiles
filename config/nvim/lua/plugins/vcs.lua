@@ -5,20 +5,20 @@ return {
       vim.keymap.set('n', '[gina]',   '<Nop>',  {})
       vim.keymap.set('n', '<Space>g', '[gina]', { remap = true })
 
-      vim.keymap.set('n', '[gina]a', '<Cmd>Gina add -- %:p<CR>',           { silent = true })
-      vim.keymap.set('n', '[gina]r', '<Cmd>Gina reset --quiet -- %:p<CR>', { silent = true })
-      vim.keymap.set('n', '[gina]B', '<Cmd>Gina blame<CR>',                { silent = true })
-      vim.keymap.set('n', '[gina]b', '<Cmd>Gina branch --all<CR>',         { silent = true })
-      vim.keymap.set('n', '[gina]c', '<Cmd>Gina commit<CR>',               { silent = true })
-      vim.keymap.set('n', '[gina]C', '<Cmd>Gina commit --amend<CR>',       { silent = true })
-      vim.keymap.set('n', '[gina]l', '<Cmd>Gina log --graph<CR>',          { silent = true })
-      vim.keymap.set('n', '[gina]L', '<Cmd>Gina log --graph -- %:p<CR>',   { silent = true })
-      vim.keymap.set('n', '[gina]d', '<Cmd>Gina compare<CR>',              { silent = true })
-      vim.keymap.set('n', '[gina]D', '<Cmd>Gina compare --cached<CR>',     { silent = true })
-      vim.keymap.set('n', '[gina]p', '<Cmd>Gina patch %:p<CR>',            { silent = true })
-      vim.keymap.set('n', '[gina]R', '<Cmd>Gina reflog<CR>',               { silent = true })
-      vim.keymap.set('n', '[gina]s', '<Cmd>Gina status<CR>',               { silent = true })
-      -- vim.keymap.set('n', '[gina]P', '<Cmd>Gina push<CR>',                 { silent = true })
+      vim.keymap.set('n', '[gina]a', function() vim.cmd('Gina add -- %:p')           end, { silent = true })
+      vim.keymap.set('n', '[gina]r', function() vim.cmd('Gina reset --quiet -- %:p') end, { silent = true })
+      vim.keymap.set('n', '[gina]B', function() vim.cmd('Gina blame')                end, { silent = true })
+      vim.keymap.set('n', '[gina]b', function() vim.cmd('Gina branch --all')         end, { silent = true })
+      vim.keymap.set('n', '[gina]c', function() vim.cmd('Gina commit')               end, { silent = true })
+      vim.keymap.set('n', '[gina]C', function() vim.cmd('Gina commit --amend')       end, { silent = true })
+      vim.keymap.set('n', '[gina]l', function() vim.cmd('Gina log --graph')          end, { silent = true })
+      vim.keymap.set('n', '[gina]L', function() vim.cmd('Gina log --graph -- %:p')   end, { silent = true })
+      vim.keymap.set('n', '[gina]d', function() vim.cmd('Gina compare')              end, { silent = true })
+      vim.keymap.set('n', '[gina]D', function() vim.cmd('Gina compare --cached')     end, { silent = true })
+      vim.keymap.set('n', '[gina]p', function() vim.cmd('Gina patch %:p')            end, { silent = true })
+      vim.keymap.set('n', '[gina]R', function() vim.cmd('Gina reflog')               end, { silent = true })
+      vim.keymap.set('n', '[gina]s', function() vim.cmd('Gina status')               end, { silent = true })
+      -- vim.keymap.set('n', '[gina]P', function() vim.cmd('Gina push')                 end, { silent = true })
 
       -- gina-buffer-blame specific settings.
       vim.call('gina#custom#action#alias', 'blame', 'preview', 'botright show:commit:preview')
@@ -39,15 +39,15 @@ return {
       vim.call('gina#custom#command#option', 'commit', '--verbose')
 
       -- gina-buffer-log specific settings.
-      vim.call('gina#custom#action#alias', 'log', 'preview', 'botright show:commit:preview')
-      vim.call('gina#custom#action#alias', 'log', 'changes', 'botright changes:of:preview')
+      vim.call('gina#custom#action#alias', 'log', 'preview', 'vsplit show:commit:preview')
+      vim.call('gina#custom#action#alias', 'log', 'changes', 'vsplit changes:of:preview')
       vim.call('gina#custom#mapping#nmap', 'log', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], { noremap = true, silent = true })
       vim.call('gina#custom#mapping#nmap', 'log', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], { noremap = true, silent = true })
       vim.call('gina#custom#execute', 'log', 'setlocal cursorline')
 
       -- gina-buffer-reflog specific settings.
-      vim.call('gina#custom#action#alias', 'reflog', 'preview', 'botright show:commit:preview')
-      vim.call('gina#custom#action#alias', 'reflog', 'changes', 'botright changes:of:preview')
+      vim.call('gina#custom#action#alias', 'reflog', 'preview', 'vsplit show:commit:preview')
+      vim.call('gina#custom#action#alias', 'reflog', 'changes', 'vsplit changes:of:preview')
       vim.call('gina#custom#mapping#nmap', 'reflog', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], { noremap = true, silent = true })
       vim.call('gina#custom#mapping#nmap', 'reflog', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], { noremap = true, silent = true })
       vim.call('gina#custom#execute', 'reflog', 'setlocal cursorline')
@@ -57,6 +57,7 @@ return {
       vim.call('gina#custom#command#option', 'status', '--short')
       vim.call('gina#custom#execute', 'status', 'setlocal cursorline')
     end,
+    event = 'VimEnter',
   },
 
   {
