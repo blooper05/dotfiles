@@ -101,6 +101,14 @@ return {
   },
 
   {
+    'luukvbaal/stabilize.nvim',
+    config = function()
+      require('stabilize').setup({})
+    end,
+    event = 'VimEnter',
+  },
+
+  {
     'folke/zen-mode.nvim',
     requires = {
       { 'folke/twilight.nvim' },
