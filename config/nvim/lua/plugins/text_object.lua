@@ -4,6 +4,7 @@ return {
     config = function()
       vim.g.camelcasemotion_key = ''
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -18,6 +19,7 @@ return {
         matchup = { enable = true },
       })
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -29,6 +31,7 @@ return {
       vim.keymap.set('',  'y', '<Plug>(operator-flashy)',  { remap = true })
       vim.keymap.set('n', 'Y', '<Plug>(operator-flashy)$', { remap = true })
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -42,6 +45,7 @@ return {
       vim.keymap.set('',  'ds', '<Plug>(operator-surround-delete)a',  { remap = true, silent = true })
       vim.keymap.set('',  'cs', '<Plug>(operator-surround-replace)a', { remap = true, silent = true })
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -53,5 +57,6 @@ return {
       vim.keymap.set('o', 'p', '<Plug>(operator-replace)', { remap = true, silent = true })
       vim.keymap.set('x', 'p', '<Plug>(operator-replace)', { remap = true, silent = true })
     end,
+    event = 'VimEnter',
   },
 }
