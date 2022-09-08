@@ -1,15 +1,15 @@
 return {
   {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
+    'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup({
         ensure_installed      = 'all',
-        highlight             = { enable = true },
-        incremental_selection = { enable = true },
+        highlight             = { enable = true  },
+        incremental_selection = { enable = true  },
         indent                = { enable = false },
       })
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -22,6 +22,7 @@ return {
         yati = { enable = true },
       })
     end,
+    event = 'VimEnter',
   },
 
   {
@@ -32,5 +33,6 @@ return {
     config = function()
       require('hlargs').setup({})
     end,
+    event = 'VimEnter',
   },
 }
