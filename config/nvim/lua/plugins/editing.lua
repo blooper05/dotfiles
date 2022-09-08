@@ -93,18 +93,6 @@ return {
   },
 
   {
-    'ThePrimeagen/refactoring.nvim',
-    requires = {
-      { 'nvim-lua/plenary.nvim'           },
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
-    config = function()
-      require('refactoring').setup({})
-    end,
-    event = 'VimEnter',
-  },
-
-  {
     'mbbill/undotree', -- non-lua plugin
     config = function()
       vim.keymap.set('n', '<Space>U', function() vim.cmd('UndotreeToggle') end, { silent = true })
