@@ -62,16 +62,6 @@ return {
   },
 
   {
-    'previm/previm', -- non-lua plugin
-    requires = {
-      { 'tyru/open-browser.vim' },
-    },
-    config = function()
-      vim.keymap.set('n', '<Leader>p', '<Cmd>PrevimOpen<CR>', { silent = true })
-    end,
-  },
-
-  {
     'ishchow/nvim-deardiary',
     config = function()
       require('deardiary.config').journals = {
