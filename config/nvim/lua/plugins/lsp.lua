@@ -92,4 +92,15 @@ return {
     end,
     after = 'mason.nvim',
   },
+
+  {
+    'j-hui/fidget.nvim',
+    requires = {
+      { 'neovim/nvim-lspconfig' },
+    },
+    config = function()
+      require('fidget').setup({})
+    end,
+    after = 'mason.nvim',
+  },
 }
