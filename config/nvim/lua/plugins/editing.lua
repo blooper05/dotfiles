@@ -2,12 +2,31 @@ return {
   {
     'numToStr/Comment.nvim',
     requires = {
+      { 'JoosepAlviste/nvim-ts-context-commentstring' },
       { 'nvim-treesitter/nvim-treesitter', opt = true },
     },
     config = function()
-      require('Comment').setup({})
+      require('Comment').setup({
+        pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+      })
     end,
-    event = 'VimEnter',
+    after = 'nvim-ts-context-commentstring',
+  },
+
+  {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    requires = {
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        context_commentstring = {
+          enable         = true,
+          enable_autocmd = false,
+        },
+      })
+    end,
+    after = 'nvim-treesitter',
   },
 
   {
