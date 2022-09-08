@@ -45,10 +45,12 @@ return {
   },
 
   {
-    'thinca/vim-quickrun', -- non-lua plugin
+    'michaelb/sniprun', run = 'bash ./install.sh',
     config = function()
-      vim.keymap.set('n', '<Leader>r', '<Plug>(quickrun)', { remap = true })
+      vim.keymap.set('n', '<Leader>r', '<Plug>SnipRun', { silent = true })
+      vim.keymap.set('v', '<Leader>r', '<Plug>SnipRun', { silent = true })
     end,
+    event = 'VimEnter',
   },
 
   {
