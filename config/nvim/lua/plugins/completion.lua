@@ -255,4 +255,22 @@ return {
     end,
     event = 'VimEnter',
   },
+
+  {
+    'danymat/neogen',
+    requires = {
+      { 'L3MON4D3/LuaSnip'                },
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    config = function()
+      local neogen = require('neogen')
+
+      vim.keymap.set('n', '<Leader>d', neogen.generate, { silent = true })
+
+      neogen.setup({
+        snippet_engine = 'luasnip',
+      })
+    end,
+    after = 'LuaSnip',
+  },
 }
