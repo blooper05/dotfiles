@@ -42,4 +42,13 @@ return {
     end,
     event = 'VimEnter',
   },
+
+  {
+    'lambdalisue/suda.vim', -- non-lua plugin
+    config = function()
+      -- Automatically switch a buffer name when the target file is not readable or writable.
+      vim.g.suda_smart_edit = true
+    end,
+    event = 'VimEnter',
+  },
 }
