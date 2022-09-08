@@ -209,6 +209,9 @@ return {
   { 'hrsh7th/cmp-calc',     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'hrsh7th/cmp-emoji',    requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
 
+  -- TODO: { 'zbirenbaum/copilot.lua' },
+  -- TODO: { 'zbirenbaum/copilot-cmp' },
+
   {
     'windwp/nvim-autopairs',
     requires = {
