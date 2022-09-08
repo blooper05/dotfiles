@@ -13,35 +13,68 @@ return {
           null_ls.builtins.diagnostics.actionlint,
           -- null_ls.builtins.diagnostics.alex,
           null_ls.builtins.diagnostics.editorconfig_checker,
+          null_ls.builtins.diagnostics.eslint.with({
+            prefer_local = 'node_modules/.bin',
+          }),
           null_ls.builtins.diagnostics.gitlint,
           null_ls.builtins.diagnostics.hadolint,
           null_ls.builtins.diagnostics.jsonlint,
+          null_ls.builtins.diagnostics.markdownlint.with({
+            prefer_local = 'node_modules/.bin',
+          }),
+          null_ls.builtins.diagnostics.rubocop.with({
+            prefer_local = '.bundle/bin',
+          }),
           null_ls.builtins.diagnostics.shellcheck,
+          null_ls.builtins.diagnostics.textlint.with({
+            filetypes    = { 'markdown', 'text' },
+            prefer_local = 'node_modules/.bin',
+          }),
           null_ls.builtins.diagnostics.yamllint,
-          null_ls.builtins.formatting.eslint,
-          null_ls.builtins.formatting.markdownlint,
-          null_ls.builtins.formatting.prettier,
-          null_ls.builtins.formatting.rubocop,
+          null_ls.builtins.formatting.eslint.with({
+            prefer_local = 'node_modules/.bin',
+          }),
+          null_ls.builtins.formatting.markdownlint.with({
+            prefer_local = 'node_modules/.bin',
+          }),
+          null_ls.builtins.formatting.prettier.with({
+            prefer_local = 'node_modules/.bin',
+          }),
+          null_ls.builtins.formatting.rubocop.with({
+            prefer_local = '.bundle/bin',
+          }),
           null_ls.builtins.formatting.shfmt,
+          -- null_ls.builtins.formatting.sqlformat,
+          -- null_ls.builtins.formatting.sql_formatter,
           -- null_ls.builtins.formatting.stylua,
+          null_ls.builtins.formatting.taplo,
           -- null_ls.builtins.formatting.terrafmt,
           null_ls.builtins.formatting.terraform_fmt,
+          null_ls.builtins.formatting.textlint.with({
+            filetypes    = { 'markdown', 'text' },
+            prefer_local = 'node_modules/.bin',
+          }),
           null_ls.builtins.formatting.trim_newlines,
           -- null_ls.builtins.formatting.trim_whitespace,
         },
-        on_attach = function(client)
-          if client.resolved_capabilities.document_formatting then
-            local lspFormatting = vim.api.nvim_create_augroup('LspFormatting', { clear = true })
+
+        on_attach = function(client, bufnr)
+          local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+
+          if client.supports_method('textDocument/formatting') then
+            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
             vim.api.nvim_create_autocmd('BufWritePre', {
-              group   = lspFormatting,
-              pattern = '<buffer>',
-              command = 'lua vim.lsp.buf.formatting_sync()',
+              group    = augroup,
+              buffer   = bufnr,
+              callback = function()
+                vim.lsp.buf.format({ bufnr = bufnr })
+              end
             })
           end
         end,
       })
     end,
-    after = 'nvim-lsp-installer',
+    after = 'mason.nvim',
   },
 
   {
