@@ -60,22 +60,6 @@ return {
   },
 
   {
-    'petertriho/nvim-scrollbar',
-    requires = {
-      { 'kevinhwang91/nvim-hlslens', opt = true },
-    },
-    config = function()
-      require('scrollbar').setup({
-        handlers = {
-          search = true,
-        },
-      })
-    end,
-    after = { 'colorscheme', 'nvim-hlslens' },
-    event = 'BufReadPre'
-  },
-
-  {
     'lukas-reineke/indent-blankline.nvim',
     requires = {
       { 'nvim-treesitter/nvim-treesitter', opt = true },
@@ -92,6 +76,22 @@ return {
       })
     end,
     after = 'colorscheme',
+    event = 'BufReadPre'
+  },
+
+  {
+    'petertriho/nvim-scrollbar',
+    requires = {
+      { 'kevinhwang91/nvim-hlslens', opt = true },
+    },
+    config = function()
+      require('scrollbar').setup({
+        handlers = {
+          search = true,
+        },
+      })
+    end,
+    after = { 'colorscheme', 'nvim-hlslens' },
     event = 'BufReadPre'
   },
 
