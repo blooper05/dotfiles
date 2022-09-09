@@ -144,7 +144,13 @@ return {
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
 
-      require('notify').setup({})
+      -- Use as the default notify function.
+      vim.notify = require('notify')
+
+      vim.notify.setup({
+        max_width     = 80,
+        minimum_width = 80,
+      })
     end,
     event = 'VimEnter',
   },
