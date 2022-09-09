@@ -72,6 +72,7 @@ return {
       })
     end,
     after = { 'colorscheme', 'nvim-hlslens' },
+    event = 'BufReadPre'
   },
 
   {
@@ -91,6 +92,7 @@ return {
       })
     end,
     after = 'colorscheme',
+    event = 'BufReadPre'
   },
 
   {
