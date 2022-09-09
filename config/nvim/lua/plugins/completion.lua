@@ -168,11 +168,16 @@ return {
     after = 'friendly-snippets',
   },
 
-  { 'saadparwaiz1/cmp_luasnip',             requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-buffer',                   requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-calc',                     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-cmdline',                  requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-emoji',                    requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'hrsh7th/cmp-nvim-lsp',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'hrsh7th/cmp-nvim-lsp-document-symbol', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-buffer',                   requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-nvim-lua',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'hrsh7th/cmp-path',                     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'ray-x/cmp-treesitter',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  { 'saadparwaiz1/cmp_luasnip',             requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
 
   {
     'f3fora/cmp-spell',
@@ -201,12 +206,6 @@ return {
     end,
     after = 'nvim-cmp',
   },
-
-  { 'hrsh7th/cmp-nvim-lua', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-cmdline',  requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-path',     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-calc',     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-emoji',    requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
 
   -- TODO: { 'zbirenbaum/copilot.lua' },
   -- TODO: { 'zbirenbaum/copilot-cmp' },
