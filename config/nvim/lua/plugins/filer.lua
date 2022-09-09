@@ -20,7 +20,7 @@ return {
         },
       })
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -29,6 +29,8 @@ return {
       { 'nvim-telescope/telescope.nvim', opt = true },
     },
     config = function()
+      require('telescope').load_extension('projects')
+
       require('project_nvim').setup({
         sync_root_with_cwd  = true,
         respect_buf_cwd     = true,
@@ -37,10 +39,8 @@ return {
           update_root = true,
         },
       })
-
-      require('telescope').load_extension('projects')
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -49,6 +49,6 @@ return {
       -- Automatically switch a buffer name when the target file is not readable or writable.
       vim.g.suda_smart_edit = true
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 }
