@@ -152,6 +152,6 @@ return {
         minimum_width = 80,
       })
     end,
-    event = 'VimEnter',
+    event = 'UIEnter',
   },
 }
