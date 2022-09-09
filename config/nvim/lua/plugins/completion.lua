@@ -251,7 +251,7 @@ return {
           :use_key(']'),
       })
     end,
-    event = 'VimEnter',
+    event = 'InsertEnter',
   },
 
   {
