@@ -2,9 +2,9 @@ return {
   {
     'hrsh7th/nvim-cmp',
     requires = {
-      { 'neovim/nvim-lspconfig'                       },
-      { 'L3MON4D3/LuaSnip'                            },
-      { 'onsails/lspkind-nvim', event = 'InsertEnter' },
+      { 'neovim/nvim-lspconfig', opt = true                        },
+      { 'L3MON4D3/LuaSnip',      opt = true                        },
+      { 'onsails/lspkind-nvim',  opt = true, event = 'InsertEnter' },
     },
     config = function()
       -- Set completeopt to have a better completion experience.
@@ -127,7 +127,7 @@ return {
   {
     'L3MON4D3/LuaSnip',
     requires = {
-      { 'rafamadriz/friendly-snippets', event = 'InsertEnter' },
+      { 'rafamadriz/friendly-snippets', opt = true, event = 'InsertEnter' },
     },
     config = function()
       require('luasnip.loaders.from_vscode').lazy_load()
@@ -182,8 +182,8 @@ return {
   {
     'f3fora/cmp-spell',
     requires = {
-      { 'hrsh7th/nvim-cmp'                                                       },
-      { 'psliwka/vim-dirtytalk', run = ':DirtytalkUpdate', event = 'InsertEnter' },
+      { 'hrsh7th/nvim-cmp'                                                                   },
+      { 'psliwka/vim-dirtytalk', run = ':DirtytalkUpdate', opt = true, event = 'InsertEnter' },
     },
     config = function()
       vim.api.nvim_create_user_command('SpellCheckingOn',  'setlocal spell spelllang=en_us,programming', { force = true })
@@ -257,8 +257,8 @@ return {
   {
     'danymat/neogen',
     requires = {
-      { 'L3MON4D3/LuaSnip'                },
       { 'nvim-treesitter/nvim-treesitter' },
+      { 'L3MON4D3/LuaSnip', opt = true    },
     },
     config = function()
       local neogen = require('neogen')
