@@ -2,9 +2,9 @@ return {
   {
     'hrsh7th/nvim-cmp',
     requires = {
-      { 'neovim/nvim-lspconfig' },
-      { 'L3MON4D3/LuaSnip'      },
-      { 'onsails/lspkind-nvim'  },
+      { 'neovim/nvim-lspconfig'                       },
+      { 'L3MON4D3/LuaSnip',     event = 'InsertEnter' },
+      { 'onsails/lspkind-nvim', event = 'InsertEnter' },
     },
     config = function()
       -- Set completeopt to have a better completion experience.
