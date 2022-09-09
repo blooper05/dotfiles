@@ -3,7 +3,7 @@ return {
     'hrsh7th/nvim-cmp',
     requires = {
       { 'neovim/nvim-lspconfig'                       },
-      { 'L3MON4D3/LuaSnip',     event = 'InsertEnter' },
+      { 'L3MON4D3/LuaSnip'                            },
       { 'onsails/lspkind-nvim', event = 'InsertEnter' },
     },
     config = function()
