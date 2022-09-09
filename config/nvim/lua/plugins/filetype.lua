@@ -5,7 +5,7 @@ return {
     'koron/codic-vim', -- non-lua plugin
     config = function()
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -13,7 +13,7 @@ return {
     config = function()
       require('translate').setup({})
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   -- CSV
@@ -47,7 +47,7 @@ return {
   {
     'previm/previm', -- non-lua plugin
     requires = {
-      { 'tyru/open-browser.vim' },
+      { 'tyru/open-browser.vim', opt = true },
     },
     config = function()
       vim.keymap.set('n', '<Leader>p', function() vim.cmd('PrevimOpen') end, { silent = true })
