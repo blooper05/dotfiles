@@ -94,11 +94,11 @@ return {
   },
 
   {
-    'jghauser/shade.nvim',
+    'levouh/tint.nvim',
     config = function()
-      require('shade').setup({})
+      require('tint').setup({})
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -115,10 +115,7 @@ return {
       { 'folke/twilight.nvim' },
     },
     config = function()
-      require('zen-mode').setup({
-        on_open  = function() vim.cmd([[silent lua require('shade').toggle()]]) end,
-        on_close = function() vim.cmd([[silent lua require('shade').toggle()]]) end,
-      })
+      require('zen-mode').setup({})
     end,
     event = 'VimEnter',
   },
