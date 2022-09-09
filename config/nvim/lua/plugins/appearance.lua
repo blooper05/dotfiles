@@ -13,6 +13,7 @@ return {
       -- Use nordfox as colorscheme.
       vim.cmd('colorscheme nordfox')
     end,
+    event = 'UIEnter',
   },
 
   {
@@ -20,6 +21,7 @@ return {
     config = function()
       require('nvim-web-devicons').setup({})
     end,
+    event = 'UIEnter',
   },
 
   {
@@ -89,7 +91,7 @@ return {
         show_current_context_start            = true,
       })
     end,
-    event = 'VimEnter',
+    after = colorscheme,
   },
 
   {
