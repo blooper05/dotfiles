@@ -94,6 +94,14 @@ return {
   },
 
   {
+    'luukvbaal/stabilize.nvim',
+    config = function()
+      require('stabilize').setup({})
+    end,
+    event = 'BufReadPre',
+  },
+
+  {
     'levouh/tint.nvim',
     config = function()
       require('tint').setup({})
@@ -110,14 +118,6 @@ return {
       require('zen-mode').setup({})
     end,
     after = 'twilight.nvim',
-  },
-
-  {
-    'luukvbaal/stabilize.nvim',
-    config = function()
-      require('stabilize').setup({})
-    end,
-    event = 'VimEnter',
   },
 
   {
