@@ -128,7 +128,7 @@ return {
 
       require('colorizer').setup({})
     end,
-    event = 'VimEnter',
+    cmd = 'ColorizerToggle',
   },
 
   {
