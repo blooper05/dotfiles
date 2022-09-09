@@ -79,7 +79,7 @@ return {
         },
       })
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -88,7 +88,7 @@ return {
       vim.keymap.set('n', 'ga', '<Plug>(EasyAlign)', { remap = true, silent = true })
       vim.keymap.set('x', 'ga', '<Plug>(EasyAlign)', { remap = true, silent = true })
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -108,7 +108,7 @@ return {
         'toggleterm',
       }
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -120,7 +120,7 @@ return {
       vim.g.undotree_SetFocusWhenToggle = true
       vim.g.undotree_ShortIndicators    = true
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -128,6 +128,6 @@ return {
     config = function()
       require('neoscroll').setup({})
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 }

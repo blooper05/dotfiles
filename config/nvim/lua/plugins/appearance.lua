@@ -75,7 +75,7 @@ return {
         show_current_context_start            = true,
       })
     end,
-    event = 'BufReadPre'
+    event = 'BufReadPre',
   },
 
   {
@@ -90,7 +90,7 @@ return {
         },
       })
     end,
-    event = 'BufReadPre'
+    event = 'BufReadPre',
   },
 
   {
