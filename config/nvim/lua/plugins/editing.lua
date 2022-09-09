@@ -43,7 +43,7 @@ return {
 
       require('todo-comments').setup({})
     end,
-    after = { 'trouble.nvim', 'telescope.nvim' },
+    after = 'nvim-treesitter',
   },
 
   {
