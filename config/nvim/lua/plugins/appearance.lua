@@ -1,5 +1,3 @@
-local colorscheme = 'nightfox.nvim'
-
 return {
   {
     'EdenEast/nightfox.nvim',
@@ -13,6 +11,7 @@ return {
       -- Use nordfox as colorscheme.
       vim.cmd('colorscheme nordfox')
     end,
+    as = 'colorscheme',
     event = 'UIEnter',
   },
 
@@ -39,7 +38,7 @@ return {
         },
       })
     end,
-    after = colorscheme,
+    after = 'colorscheme',
   },
 
   {
@@ -57,7 +56,7 @@ return {
         },
       })
     end,
-    after = colorscheme,
+    after = 'colorscheme',
   },
 
   {
@@ -72,7 +71,7 @@ return {
         },
       })
     end,
-    after = { colorscheme, 'nvim-hlslens' },
+    after = { 'colorscheme', 'nvim-hlslens' },
   },
 
   {
@@ -91,7 +90,7 @@ return {
         show_current_context_start            = true,
       })
     end,
-    after = colorscheme,
+    after = 'colorscheme',
   },
 
   {
