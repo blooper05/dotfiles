@@ -75,7 +75,6 @@ return {
         show_current_context_start            = true,
       })
     end,
-    after = 'colorscheme',
     event = 'BufReadPre'
   },
 
@@ -91,7 +90,6 @@ return {
         },
       })
     end,
-    after = { 'colorscheme', 'nvim-hlslens' },
     event = 'BufReadPre'
   },
 
