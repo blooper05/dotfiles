@@ -127,7 +127,7 @@ return {
   {
     'L3MON4D3/LuaSnip',
     requires = {
-      { 'rafamadriz/friendly-snippets' },
+      { 'rafamadriz/friendly-snippets', event = 'InsertEnter' },
     },
     config = function()
       require('luasnip.loaders.from_vscode').lazy_load()
@@ -165,7 +165,6 @@ return {
         s('arrow_down',          fmt('⬇️ chore({}): ',     { i(1, 'scope') })),
       })
     end,
-    event = 'VimEnter',
     after = 'friendly-snippets',
   },
 
