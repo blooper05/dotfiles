@@ -102,9 +102,10 @@ return {
       { 'neovim/nvim-lspconfig'                    },
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
-    config = function()
+    setup = function()
       vim.keymap.set('n', '[lsp]l', function() vim.cmd('TroubleToggle') end, { silent = true })
-
+    end,
+    config = function()
       require('trouble').setup({})
     end,
     after = 'nvim-lspconfig',
