@@ -79,7 +79,8 @@ return {
         },
       })
     end,
-    event = 'BufReadPre',
+    cmd = { 'DialIncrement', 'DialDecrement' },
+    keys = { '<C-a>', '<C-x>', 'g<C-a>', 'g<C-x>' },
   },
 
   {
