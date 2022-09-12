@@ -110,7 +110,7 @@ return {
         'toggleterm',
       }
     end,
-    event = 'BufReadPre',
+    event = 'BufWinEnter',
   },
 
   {
