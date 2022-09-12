@@ -69,6 +69,17 @@ return {
   },
 
   {
+    'j-hui/fidget.nvim',
+    requires = {
+      { 'neovim/nvim-lspconfig' },
+    },
+    config = function()
+      require('fidget').setup({})
+    end,
+    after = 'nvim-lspconfig',
+  },
+
+  {
     'glepnir/lspsaga.nvim',
     requires = {
       { 'neovim/nvim-lspconfig' },
@@ -95,17 +106,6 @@ return {
       vim.keymap.set('n', '[lsp]l', function() vim.cmd('TroubleToggle') end, { silent = true })
 
       require('trouble').setup({})
-    end,
-    after = 'nvim-lspconfig',
-  },
-
-  {
-    'j-hui/fidget.nvim',
-    requires = {
-      { 'neovim/nvim-lspconfig' },
-    },
-    config = function()
-      require('fidget').setup({})
     end,
     after = 'nvim-lspconfig',
   },
