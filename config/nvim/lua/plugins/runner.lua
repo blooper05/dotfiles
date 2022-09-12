@@ -46,7 +46,8 @@ return {
         end,
       })
     end,
-    after = 'mason.nvim',
+    after = 'nvim-lspconfig',
+    event = 'BufWinEnter',
   },
 
   {
