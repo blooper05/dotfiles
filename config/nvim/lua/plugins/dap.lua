@@ -12,7 +12,8 @@ return {
       vim.keymap.set('n', '[dap]b', dap.toggle_breakpoint, { silent = true })
       vim.keymap.set('n', '[dap]c', dap.continue,          { silent = true })
     end,
-    event = 'BufWinEnter',
+    cmd = { 'DapToggleBreakpoint', 'DapToggleRepl' },
+    keys = '[dap]',
   },
 
   {
