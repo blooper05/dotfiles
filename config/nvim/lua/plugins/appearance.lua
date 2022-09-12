@@ -48,10 +48,11 @@ return {
     requires = {
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
-    config = function()
+    setup = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
-
+    end,
+    config = function()
       require('bufferline').setup({
         options = {
           mode = 'tabs',
