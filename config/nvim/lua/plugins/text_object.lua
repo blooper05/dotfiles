@@ -1,10 +1,10 @@
 return {
   {
     'bkad/CamelCaseMotion', -- non-lua plugin
-    config = function()
+    setup = function()
       vim.g.camelcasemotion_key = ''
     end,
-    event = 'VimEnter',
+    event = 'BufWinEnter',
   },
 
   {
