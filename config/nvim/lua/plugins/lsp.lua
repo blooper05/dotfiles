@@ -82,6 +82,7 @@ return {
       require('fidget').setup({})
     end,
     after = 'nvim-lspconfig',
+    event = 'BufWinEnter',
   },
 
   {
@@ -100,6 +101,7 @@ return {
       require('lspsaga').init_lsp_saga({})
     end,
     after = 'nvim-lspconfig',
+    event = 'BufWinEnter',
   },
 
   {
@@ -115,5 +117,6 @@ return {
       require('trouble').setup({})
     end,
     after = 'nvim-lspconfig',
+    event = 'BufWinEnter',
   },
 }
