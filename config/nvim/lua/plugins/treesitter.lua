@@ -9,7 +9,7 @@ return {
         indent                = { enable = false },
       })
     end,
-    event = 'VimEnter',
+    event = 'BufReadPre',
   },
 
   {
