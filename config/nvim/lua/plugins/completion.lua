@@ -186,7 +186,7 @@ return {
       { 'hrsh7th/nvim-cmp'                                                                   },
       { 'psliwka/vim-dirtytalk', run = ':DirtytalkUpdate', opt = true, event = 'InsertEnter' },
     },
-    config = function()
+    setup = function()
       vim.api.nvim_create_user_command('SpellCheckingOn',  'setlocal spell spelllang=en_us,programming', { force = true })
       vim.api.nvim_create_user_command('SpellCheckingOff', 'setlocal nospell',                           { force = true })
     end,
