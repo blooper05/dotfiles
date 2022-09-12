@@ -13,7 +13,7 @@ return {
   {
     'haya14busa/vim-asterisk', -- non-lua plugin
     requires = {
-      { 'kevinhwang91/nvim-hlslens' },
+      { 'kevinhwang91/nvim-hlslens', opt = true },
     },
     config = function()
       vim.keymap.set('', '*',  [[<Plug>(asterisk-z*)<Cmd>lua require('hlslens').start()<CR>]],  { remap = true })
