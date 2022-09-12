@@ -1,14 +1,20 @@
 return {
   {
+    'neovim/nvim-lspconfig',
+    setup = function()
+      vim.keymap.set('n', '[lsp]',    '<Nop>', {})
+      vim.keymap.set('n', '<Space>l', '[lsp]', { remap = true })
+    end,
+    event = 'BufReadPre',
+  },
+
+  {
     'williamboman/mason.nvim',
     requires = {
       { 'neovim/nvim-lspconfig'             },
       { 'williamboman/mason-lspconfig.nvim' },
     },
     config = function()
-      vim.keymap.set('n', '[lsp]',    '<Nop>', {})
-      vim.keymap.set('n', '<Space>l', '[lsp]', { remap = true })
-
       local mason          = require('mason')
       local masonLspconfig = require('mason-lspconfig')
       local nvimLspconfig  = require('lspconfig')
@@ -76,7 +82,7 @@ return {
 
       require('lspsaga').init_lsp_saga({})
     end,
-    after = 'mason.nvim',
+    after = 'nvim-lspconfig',
   },
 
   {
@@ -90,7 +96,7 @@ return {
 
       require('trouble').setup({})
     end,
-    after = 'mason.nvim',
+    after = 'nvim-lspconfig',
   },
 
   {
@@ -101,6 +107,6 @@ return {
     config = function()
       require('fidget').setup({})
     end,
-    after = 'mason.nvim',
+    after = 'nvim-lspconfig',
   },
 }
