@@ -62,7 +62,8 @@ return {
         display = { 'TerminalWithCode' },
       })
     end,
-    event = 'VimEnter',
+    cmd = 'SnipRun',
+    keys = '<Leader>r',
   },
 
   {
