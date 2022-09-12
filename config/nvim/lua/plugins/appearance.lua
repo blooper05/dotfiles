@@ -25,6 +25,14 @@ return {
   },
 
   {
+    'levouh/tint.nvim',
+    config = function()
+      require('tint').setup({})
+    end,
+    event = 'BufReadPre',
+  },
+
+  {
     'nvim-lualine/lualine.nvim',
     requires = {
       { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -101,14 +109,6 @@ return {
     'luukvbaal/stabilize.nvim',
     config = function()
       require('stabilize').setup({})
-    end,
-    event = 'BufReadPre',
-  },
-
-  {
-    'levouh/tint.nvim',
-    config = function()
-      require('tint').setup({})
     end,
     event = 'BufReadPre',
   },
