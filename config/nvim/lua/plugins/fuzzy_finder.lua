@@ -71,8 +71,6 @@ return {
     },
     config = function()
       vim.keymap.set('n', '[telescope]h', require('telescope').extensions.frecency.frecency, { silent = true })
-
-      require('telescope').load_extension('frecency')
     end,
     after = 'telescope.nvim',
   },
@@ -85,8 +83,6 @@ return {
     },
     config = function()
       vim.keymap.set('n', '[telescope]p', require('telescope').extensions.packer.packer, { silent = true })
-
-      require('telescope').load_extension('packer')
     end,
     after = 'telescope.nvim',
   },
@@ -98,8 +94,6 @@ return {
     },
     config = function()
       vim.keymap.set('n', '[telescope]s', require('telescope').extensions.ghq.list, { silent = true })
-
-      require('telescope').load_extension('ghq')
     end,
     after = 'telescope.nvim',
   },
