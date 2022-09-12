@@ -82,7 +82,7 @@ return {
       { 'wbthomason/packer.nvim'        },
     },
     config = function()
-      vim.keymap.set('n', '[telescope]p', require('telescope').extensions.packer.packer, { silent = true })
+      vim.keymap.set('n', '[telescope]P', require('telescope').extensions.packer.packer, { silent = true })
     end,
     after = 'telescope.nvim',
   },

@@ -29,7 +29,13 @@ return {
       { 'nvim-telescope/telescope.nvim', opt = true },
     },
     config = function()
-      require('telescope').load_extension('projects')
+      local function telescopeProjects()
+        local success, telescope = pcall(require, 'telescope')
+
+        if success then telescope.extensions.projects.projects() end
+      end
+
+      vim.keymap.set('n', '[telescope]p', telescopeProjects, { silent = true })
 
       require('project_nvim').setup({
         sync_root_with_cwd  = true,
