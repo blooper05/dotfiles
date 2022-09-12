@@ -106,6 +106,30 @@ return {
   },
 
   {
+    'rcarriga/nvim-notify',
+    requires = {
+      { 'nvim-telescope/telescope.nvim', opt = true },
+    },
+    config = function()
+      vim.keymap.set('n', '[telescope]n', require('telescope').extensions.notify.notify, { silent = true })
+
+      require('telescope').load_extension('notify')
+
+      -- Enable 24-bit RGB color in the TUI.
+      vim.opt.termguicolors = true
+
+      -- Use as the default notify function.
+      vim.notify = require('notify')
+
+      vim.notify.setup({
+        max_width     = 80,
+        minimum_width = 80,
+      })
+    end,
+    event = 'UIEnter',
+  },
+
+  {
     'luukvbaal/stabilize.nvim',
     config = function()
       require('stabilize').setup({})
@@ -134,29 +158,5 @@ return {
       require('colorizer').setup({})
     end,
     cmd = 'ColorizerToggle',
-  },
-
-  {
-    'rcarriga/nvim-notify',
-    requires = {
-      { 'nvim-telescope/telescope.nvim', opt = true },
-    },
-    config = function()
-      vim.keymap.set('n', '[telescope]n', require('telescope').extensions.notify.notify, { silent = true })
-
-      require('telescope').load_extension('notify')
-
-      -- Enable 24-bit RGB color in the TUI.
-      vim.opt.termguicolors = true
-
-      -- Use as the default notify function.
-      vim.notify = require('notify')
-
-      vim.notify.setup({
-        max_width     = 80,
-        minimum_width = 80,
-      })
-    end,
-    event = 'UIEnter',
   },
 }
