@@ -29,10 +29,11 @@ return {
     requires = {
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
-    config = function()
+    setup = function()
       -- Get rid of redundant mode display.
       vim.opt.showmode = false
-
+    end,
+    config = function()
       require('lualine').setup({
         options = {
           globalstatus = true,
