@@ -123,7 +123,8 @@ return {
     config = function()
       vim.keymap.set('n', '<Space>U', function() vim.cmd('UndotreeToggle') end, { silent = true })
     end,
-    event = 'BufReadPre',
+    cmd = 'UndotreeToggle',
+    keys = '<Space>U',
   },
 
   {
