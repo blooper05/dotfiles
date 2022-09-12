@@ -69,10 +69,10 @@ return {
   {
     'nvim-neotest/neotest',
     requires = {
-      { 'antoinemadec/FixCursorHold.nvim' },
-      { 'nvim-lua/plenary.nvim'           },
-      { 'nvim-treesitter/nvim-treesitter' },
-      { 'olimorris/neotest-rspec'         },
+      { 'antoinemadec/FixCursorHold.nvim'      },
+      { 'nvim-lua/plenary.nvim'                },
+      { 'nvim-treesitter/nvim-treesitter'      },
+      { 'olimorris/neotest-rspec', ft = 'ruby' },
     },
     config = function()
       local neotest = require('neotest')
@@ -88,7 +88,7 @@ return {
         },
       })
     end,
-    event = 'VimEnter',
+    keys = { '<Leader>c', '<Leader>n', '<Leader>l', '<Leader>a' },
   },
 
   -- TODO: { 'renerocksai/telekasten.nvim' },
