@@ -6,7 +6,7 @@ return {
       { 'L3MON4D3/LuaSnip',      opt = true                        },
       { 'onsails/lspkind-nvim',  opt = true, event = 'InsertEnter' },
     },
-    config = function()
+    setup = function()
       -- Set completeopt to have a better completion experience.
       vim.opt.completeopt = {
         'menuone',
@@ -15,7 +15,8 @@ return {
 
       -- Avoid showing message extra message when using completion.
       vim.opt.shortmess:append('c')
-
+    end,
+    config = function()
       local cmp     = require('cmp')
       local luasnip = require('luasnip')
       local lspkind = require('lspkind')
