@@ -10,12 +10,17 @@ return {
 
   {
     'williamboman/mason.nvim',
+    config = function()
+      require('mason').setup({})
+    end,
+    event = 'BufReadPre',
+  },
+
     requires = {
       { 'neovim/nvim-lspconfig'             },
       { 'williamboman/mason-lspconfig.nvim' },
     },
     config = function()
-      local mason          = require('mason')
       local masonLspconfig = require('mason-lspconfig')
       local nvimLspconfig  = require('lspconfig')
 
@@ -45,8 +50,6 @@ return {
         'vuels',
         'yamlls',
       }
-
-      mason.setup({})
 
       masonLspconfig.setup({
         ensure_installed       = servers,
