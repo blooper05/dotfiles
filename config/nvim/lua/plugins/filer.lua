@@ -46,7 +46,7 @@ return {
         },
       })
     end,
-    event = 'BufReadPre',
+    event = 'BufWinEnter',
   },
 
   {
