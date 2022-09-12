@@ -2,9 +2,9 @@ return {
   {
     'hrsh7th/nvim-cmp',
     requires = {
-      { 'L3MON4D3/LuaSnip',      opt = true                        },
-      { 'neovim/nvim-lspconfig', opt = true                        },
-      { 'onsails/lspkind-nvim',  opt = true, event = 'InsertEnter' },
+      { 'L3MON4D3/LuaSnip',      opt = true                                             },
+      { 'neovim/nvim-lspconfig', opt = true                                             },
+      { 'onsails/lspkind-nvim',  opt = true, event = { 'InsertEnter' , 'CmdlineEnter' } },
     },
     setup = function()
       -- Set completeopt to have a better completion experience.
@@ -128,7 +128,7 @@ return {
   {
     'L3MON4D3/LuaSnip',
     requires = {
-      { 'rafamadriz/friendly-snippets', opt = true, event = 'InsertEnter' },
+      { 'rafamadriz/friendly-snippets', opt = true, event = { 'InsertEnter' , 'CmdlineEnter' } },
     },
     config = function()
       require('luasnip.loaders.from_vscode').lazy_load()
