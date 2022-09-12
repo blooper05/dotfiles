@@ -95,7 +95,7 @@ return {
 
   {
     'ntpeters/vim-better-whitespace', -- non-lua plugin
-    config = function()
+    setup = function()
       -- Strip whitespaces when I save files.
       vim.g.strip_whitespace_on_save = true
       vim.g.strip_whitespace_confirm = false
