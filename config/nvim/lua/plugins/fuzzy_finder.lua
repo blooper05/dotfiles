@@ -59,7 +59,8 @@ return {
         },
       })
     end,
-    event = 'VimEnter',
+    cmd = 'Telescope',
+    keys = '[telescope]',
   },
 
   {
