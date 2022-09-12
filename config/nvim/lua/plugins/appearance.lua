@@ -83,17 +83,10 @@ return {
 
   {
     'petertriho/nvim-scrollbar',
-    requires = {
-      { 'kevinhwang91/nvim-hlslens', opt = true },
-    },
     config = function()
-      require('scrollbar').setup({
-        handlers = {
-          search = true,
-        },
-      })
+      require('scrollbar').setup({})
     end,
-    after = { 'colorscheme', 'nvim-hlslens' },
+    after = 'colorscheme',
   },
 
   {
