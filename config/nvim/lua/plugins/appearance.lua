@@ -87,7 +87,7 @@ return {
         show_current_context_start            = true,
       })
     end,
-    event = 'BufReadPre',
+    after = 'colorscheme',
   },
 
   {
