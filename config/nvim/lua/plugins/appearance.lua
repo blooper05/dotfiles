@@ -126,10 +126,11 @@ return {
 
   {
     'norcalli/nvim-colorizer.lua',
-    config = function()
+    setup = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
-
+    end,
+    config = function()
       require('colorizer').setup({})
     end,
     cmd = 'ColorizerToggle',
