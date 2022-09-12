@@ -24,14 +24,6 @@ return {
   },
 
   {
-    'levouh/tint.nvim',
-    config = function()
-      require('tint').setup({})
-    end,
-    after = 'colorscheme',
-  },
-
-  {
     'nvim-lualine/lualine.nvim',
     requires = {
       { 'kyazdani42/nvim-web-devicons', opt = true },
@@ -102,6 +94,14 @@ return {
       })
     end,
     after = { 'colorscheme', 'nvim-hlslens' },
+  },
+
+  {
+    'levouh/tint.nvim',
+    config = function()
+      require('tint').setup({})
+    end,
+    after = 'colorscheme',
   },
 
   {
