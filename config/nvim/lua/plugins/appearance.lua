@@ -1,6 +1,6 @@
 return {
   {
-    'EdenEast/nightfox.nvim',
+    'EdenEast/nightfox.nvim', as = 'colorscheme',
     setup = function()
       -- Assume a dark background.
       vim.opt.background = 'dark'
@@ -12,7 +12,6 @@ return {
       -- Use nordfox as colorscheme.
       vim.cmd('colorscheme nordfox')
     end,
-    as = 'colorscheme',
     event = 'UIEnter',
   },
 
