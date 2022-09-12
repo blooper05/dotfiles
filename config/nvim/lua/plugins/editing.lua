@@ -89,7 +89,8 @@ return {
       vim.keymap.set('n', 'ga', '<Plug>(EasyAlign)', { remap = true, silent = true })
       vim.keymap.set('x', 'ga', '<Plug>(EasyAlign)', { remap = true, silent = true })
     end,
-    event = 'BufReadPre',
+    cmd = 'EasyAlign',
+    keys = 'ga',
   },
 
   {
