@@ -24,6 +24,6 @@ return {
       vim.keymap.set('', 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
       vim.keymap.set('', 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
     end,
-    event = 'VimEnter',
+    keys = { '*', '#', 'g*', 'g#' },
   },
 }
