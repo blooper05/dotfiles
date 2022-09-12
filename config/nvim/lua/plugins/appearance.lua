@@ -126,7 +126,7 @@ return {
         minimum_width = 80,
       })
     end,
-    event = 'UIEnter',
+    event = 'BufWinEnter',
   },
 
   {
