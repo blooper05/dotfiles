@@ -16,9 +16,11 @@ return {
     event = 'BufReadPre',
   },
 
+  {
+    'williamboman/mason-lspconfig.nvim',
     requires = {
-      { 'neovim/nvim-lspconfig'             },
-      { 'williamboman/mason-lspconfig.nvim' },
+      { 'neovim/nvim-lspconfig'   },
+      { 'williamboman/mason.nvim' },
     },
     config = function()
       local masonLspconfig = require('mason-lspconfig')
@@ -68,7 +70,7 @@ return {
         end,
       })
     end,
-    after = 'nvim-lspconfig',
+    after = { 'nvim-lspconfig', 'mason.nvim' },
   },
 
   {
