@@ -101,7 +101,8 @@ return {
       require('lspsaga').init_lsp_saga({})
     end,
     after = 'nvim-lspconfig',
-    event = 'BufWinEnter',
+    cmd = 'Lspsaga',
+    keys = '[lsp]',
   },
 
   {
@@ -117,6 +118,7 @@ return {
       require('trouble').setup({})
     end,
     after = 'nvim-lspconfig',
-    event = 'BufWinEnter',
+    cmd = 'TroubleToggle',
+    keys = '[lsp]',
   },
 }
