@@ -102,7 +102,7 @@ return {
         },
       })
     end,
-    event = 'BufReadPre',
+    after = 'colorscheme',
   },
 
   {
