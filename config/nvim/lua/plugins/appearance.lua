@@ -29,7 +29,7 @@ return {
     config = function()
       require('tint').setup({})
     end,
-    event = 'BufReadPre',
+    after = 'colorscheme',
   },
 
   {
