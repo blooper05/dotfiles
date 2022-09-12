@@ -6,10 +6,11 @@ return {
       { 'nvim-lua/plenary.nvim'                    },
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
-    config = function()
+    setup = function()
       vim.keymap.set('n', '[file]',   '<Nop>',  {})
       vim.keymap.set('n', '<Space>f', '[file]', { remap = true })
-
+    end,
+    config = function()
       vim.keymap.set('n', '[file]c', function() vim.cmd('Neotree toggle reveal') end, { silent = true })
 
       require('neo-tree').setup({
@@ -20,7 +21,8 @@ return {
         },
       })
     end,
-    event = 'BufReadPre',
+    cmd = 'Neotree',
+    keys = '[file]',
   },
 
   {
