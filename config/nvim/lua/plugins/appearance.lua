@@ -1,13 +1,14 @@
 return {
   {
     'EdenEast/nightfox.nvim',
-    config = function()
+    setup = function()
       -- Assume a dark background.
       vim.opt.background = 'dark'
 
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
-
+    end,
+    config = function()
       -- Use nordfox as colorscheme.
       vim.cmd('colorscheme nordfox')
     end,
