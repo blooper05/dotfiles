@@ -111,14 +111,18 @@ return {
       { 'nvim-telescope/telescope.nvim', opt = true },
     },
     setup = function()
-      vim.keymap.set('n', '[telescope]n', require('telescope').extensions.notify.notify, { silent = true })
-
-      require('telescope').load_extension('notify')
-
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
     end,
     config = function()
+      local function telescopeNotify()
+        local success, telescope = pcall(require, 'telescope')
+
+        if success then telescope.extensions.notify.notify() end
+      end
+
+      vim.keymap.set('n', '[telescope]n', telescopeNotify, { silent = true })
+
       -- Use as the default notify function.
       vim.notify = require('notify')
 
