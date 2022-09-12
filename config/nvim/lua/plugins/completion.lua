@@ -2,8 +2,8 @@ return {
   {
     'hrsh7th/nvim-cmp',
     requires = {
-      { 'neovim/nvim-lspconfig', opt = true                        },
       { 'L3MON4D3/LuaSnip',      opt = true                        },
+      { 'neovim/nvim-lspconfig', opt = true                        },
       { 'onsails/lspkind-nvim',  opt = true, event = 'InsertEnter' },
     },
     setup = function()
@@ -122,7 +122,7 @@ return {
         }),
       })
     end,
-    after = { 'LuaSnip', 'lspkind-nvim' },
+    after = { 'LuaSnip', 'nvim-lspconfig', 'lspkind-nvim' },
   },
 
   {
