@@ -134,7 +134,7 @@ return {
     config = function()
       require('stabilize').setup({})
     end,
-    event = 'BufReadPre',
+    event = 'BufWinEnter',
   },
 
   {
