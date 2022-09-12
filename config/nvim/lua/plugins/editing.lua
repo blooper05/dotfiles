@@ -132,6 +132,6 @@ return {
     config = function()
       require('neoscroll').setup({})
     end,
-    event = 'BufReadPre',
+    event = 'BufWinEnter',
   },
 }
