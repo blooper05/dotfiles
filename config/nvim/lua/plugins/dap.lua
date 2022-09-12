@@ -1,17 +1,18 @@
 return {
   {
     'mfussenegger/nvim-dap',
-    config = function()
-      local dap = require('dap')
-
+    setup = function()
       vim.keymap.set('n', '[dap]',    '<Nop>', {})
       vim.keymap.set('n', '<Space>d', '[dap]', { remap = true })
+    end,
+    config = function()
+      local dap = require('dap')
 
       vim.keymap.set('n', '[dap]r', dap.repl.open,         { silent = true })
       vim.keymap.set('n', '[dap]b', dap.toggle_breakpoint, { silent = true })
       vim.keymap.set('n', '[dap]c', dap.continue,          { silent = true })
     end,
-    event = 'BufReadPre',
+    event = 'BufWinEnter',
   },
 
   {
