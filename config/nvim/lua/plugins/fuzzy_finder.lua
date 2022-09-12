@@ -7,11 +7,12 @@ return {
       { 'neovim/nvim-lspconfig',           opt = true },
       { 'nvim-treesitter/nvim-treesitter', opt = true },
     },
-    config = function()
-      local builtin = require('telescope.builtin')
-
+    setup = function()
       vim.keymap.set('n', '[telescope]', '<Nop>',       {})
       vim.keymap.set('n', '<Space>u',    '[telescope]', { remap = true })
+    end,
+    config = function()
+      local builtin = require('telescope.builtin')
 
       vim.keymap.set('n', '[telescope]f', builtin.find_files,  { silent = true })
       vim.keymap.set('n', '[telescope]g', builtin.live_grep,   { silent = true })
