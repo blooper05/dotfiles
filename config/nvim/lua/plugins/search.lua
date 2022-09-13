@@ -12,7 +12,7 @@ return {
 
       require('scrollbar.handlers.search').setup({})
     end,
-    keys = { 'n', 'N' },
+    keys = { 'n', 'N', '*', '#', 'g*', 'g#' },
   },
 
   {
@@ -29,6 +29,6 @@ return {
       vim.keymap.set('', 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
       vim.keymap.set('', 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
     end,
-    keys = { '*', '#', 'g*', 'g#' },
+    after = 'nvim-hlslens',
   },
 }
