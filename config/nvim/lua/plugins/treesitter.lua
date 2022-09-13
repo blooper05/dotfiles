@@ -9,7 +9,7 @@ return {
         indent                = { enable = false },
       })
     end,
-    event = 'BufReadPre',
+    event = 'BufWinEnter',
   },
 
   {
