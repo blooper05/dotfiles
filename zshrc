@@ -191,6 +191,7 @@ export AWS_SHARED_CREDENTIALS_FILE=$XDG_CONFIG_HOME/aws/credentials
 # Terraform {{{2
 export TF_CLI_ARGS_plan="--parallelism=30"
 export TF_CLI_ARGS_apply="--parallelism=30"
+export TFLINT_PLUGIN_DIR=$XDG_DATA_HOME/tflint/plugins
 
 # Docker {{{2
 export DOCKER_CONFIG=$XDG_DATA_HOME/docker
