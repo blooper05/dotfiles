@@ -5,7 +5,7 @@ return {
     'koron/codic-vim', -- non-lua plugin
     config = function()
     end,
-    event = 'BufWinEnter',
+    cmd = 'Codic',
   },
 
   {
@@ -13,7 +13,7 @@ return {
     config = function()
       require('translate').setup({})
     end,
-    event = 'BufWinEnter',
+    cmd = 'Translate',
   },
 
   -- CSV
