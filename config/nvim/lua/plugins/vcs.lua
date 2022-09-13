@@ -1,10 +1,11 @@
 return {
   {
     'lambdalisue/gina.vim', -- non-lua plugin
-    config = function()
+    setup = function()
       vim.keymap.set('n', '[gina]',   '<Nop>',  {})
       vim.keymap.set('n', '<Space>g', '[gina]', { remap = true })
-
+    end,
+    config = function()
       vim.keymap.set('n', '[gina]a', function() vim.cmd('Gina add -- %:p')           end, { silent = true })
       vim.keymap.set('n', '[gina]r', function() vim.cmd('Gina reset --quiet -- %:p') end, { silent = true })
       vim.keymap.set('n', '[gina]B', function() vim.cmd('Gina blame')                end, { silent = true })
@@ -57,7 +58,8 @@ return {
       vim.call('gina#custom#command#option', 'status', '--short')
       vim.call('gina#custom#execute', 'status', 'setlocal cursorline')
     end,
-    event = 'VimEnter',
+    cmd = 'Gina',
+    keys = '[gina]',
   },
 
   -- TODO: { 'TimUntersberger/neogit' },
