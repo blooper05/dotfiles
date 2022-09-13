@@ -36,24 +36,30 @@ export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+
 alias ls='exa'
 alias ll='exa --long'
 alias lt='exa --long --sort=newest'
 alias la='exa --all --long'
 alias tree='exa --tree'
 alias exa='exa --classify --icons --group-directories-first'
-alias cat='bat'
-alias du='dust'
+
 alias find='fd'
 alias fd='fd --hidden --exclude=.git/'
-alias ps='procs --sortd=cpu'
 alias grep='rg'
 alias rg='rg --hidden --glob=!.git/'
+
+alias cat='bat'
+alias diff='delta'
 alias sed='sd'
+
+alias du='dust'
+alias ps='procs --sortd=cpu'
 alias top='btm'
+
+alias curl='xhs --json --follow'
 alias dig='dog'
 alias ping='gping'
-alias curl='xhs --json --follow'
 
 # Key Binding {{{1
 
