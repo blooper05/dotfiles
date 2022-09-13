@@ -264,12 +264,13 @@ return {
     config = function()
       local neogen = require('neogen')
 
-      vim.keymap.set('n', '<Leader>d', neogen.generate, { silent = true })
+      vim.keymap.set('n', 'gcd', neogen.generate, { silent = true })
 
       neogen.setup({
         snippet_engine = 'luasnip',
       })
     end,
-    after = 'LuaSnip',
+    cmd = 'Neogen',
+    keys = 'gcd',
   },
 }
