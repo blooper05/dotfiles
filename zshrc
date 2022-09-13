@@ -155,6 +155,7 @@ source $(brew --prefix asdf)/asdf.sh
 export BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundler/config
 export BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundler
 export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundler
+export SOLARGRAPH_CACHE=$XDG_CACHE_HOME/solargraph
 
 # Node.js {{{2
 alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
