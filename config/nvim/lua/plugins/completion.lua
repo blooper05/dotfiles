@@ -98,19 +98,17 @@ return {
         }),
       })
 
-      for _, v in pairs({ '/', '?' }) do
-        cmp.setup.cmdline(v, {
-          mapping = cmp.mapping.preset.cmdline({
-            ['<C-n>'] = cmp.config.disable,
-            ['<C-p>'] = cmp.config.disable,
-          }),
-          sources = cmp.config.sources({
-            { name = 'nvim_lsp_document_symbol' },
-          }, {
-            { name = 'buffer' },
-          }),
-        })
-      end
+      cmp.setup.cmdline({ '/', '?' }, {
+        mapping = cmp.mapping.preset.cmdline({
+          ['<C-n>'] = cmp.config.disable,
+          ['<C-p>'] = cmp.config.disable,
+        }),
+        sources = cmp.config.sources({
+          { name = 'nvim_lsp_document_symbol' },
+        }, {
+          { name = 'buffer' },
+        }),
+      })
 
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline({
