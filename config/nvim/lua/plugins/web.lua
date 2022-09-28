@@ -16,6 +16,7 @@ return {
 
       require('octo').setup({})
     end,
+    after = 'telescope.nvim',
     cmd = 'Octo',
     keys = '[octo]',
   },
