@@ -2,19 +2,19 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "73b77351709591cadc3f4a918b3276ee82cafbad"
+        "revision": "3b4d67881981efdbbaeed6c331e195265a76954e"
       },
       "homebrew/cask": {
-        "revision": "6b71f8bf8070688ae1e085e105faf7dada675779"
+        "revision": "59d68d8d6a7eaf9d623078ecd6c1557c3d59e23b"
       },
       "homebrew/cask-drivers": {
-        "revision": "37448f3a84be134203c6cbb000f18d23f05390d0"
+        "revision": "b82e5e5a189e7320364aeed86389dfd0712b9d8d"
       },
       "homebrew/cask-fonts": {
-        "revision": "99c1c1b3a22253ef633cdac2c0fa83dd29cd3440"
+        "revision": "38ea27e46038777bd34975e9a3a99dce9290dc7d"
       },
       "homebrew/core": {
-        "revision": "c01f1794fc3decce04b71cae03966213fc7af34d"
+        "revision": "fc1bb67d065553020a82bec7c0b90ff644f38541"
       },
       "k1low/tap": {
         "revision": "990da4db7ca1c33777f291631847982529db732c"
@@ -1141,7 +1141,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-2f80839",
+        "version": "HEAD-56998fe",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1984,9 +1984,9 @@
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.6.3",
+        "HOMEBREW_VERSION": "3.6.4",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "c01f1794fc3decce04b71cae03966213fc7af34d",
+        "Homebrew/homebrew-core": "fc1bb67d065553020a82bec7c0b90ff644f38541",
         "CLT": "14.1.0.0.1.1662869207",
         "Xcode": "14.0",
         "macOS": "12.6"
