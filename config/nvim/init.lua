@@ -90,6 +90,9 @@ vim.opt.splitbelow = true
 -- Splitting a window will put the new window right the current one.
 vim.opt.splitright = true
 
+-- Keep the text on the same screen line.
+vim.opt.splitkeep = 'screen'
+
 -- Create equally sized splits.
 vim.opt.equalalways = true
 
