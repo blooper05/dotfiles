@@ -39,6 +39,7 @@ return {
         'jsonnet_ls',
         'pylsp',
         -- 'remark_ls',
+        'ruby_ls',
         'solargraph',
         -- 'sorbet',
         'sqlls',
