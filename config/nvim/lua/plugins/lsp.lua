@@ -74,18 +74,6 @@ return {
   },
 
   {
-    'j-hui/fidget.nvim',
-    requires = {
-      { 'neovim/nvim-lspconfig' },
-    },
-    config = function()
-      require('fidget').setup({})
-    end,
-    after = 'nvim-lspconfig',
-    event = 'BufWinEnter',
-  },
-
-  {
     'glepnir/lspsaga.nvim',
     requires = {
       { 'neovim/nvim-lspconfig' },

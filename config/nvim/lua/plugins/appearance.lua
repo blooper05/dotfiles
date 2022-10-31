@@ -98,6 +98,33 @@ return {
   },
 
   {
+    'folke/noice.nvim',
+    requires = {
+      { 'MunifTanjim/nui.nvim'             },
+      { 'rcarriga/nvim-notify', opt = true },
+    },
+    setup = function()
+      -- Redraw during macro execution.
+      vim.opt.lazyredraw = false
+
+      -- Hide the command-line.
+      vim.opt.cmdheight = 0
+    end,
+    config = function()
+      require('noice').setup({
+        messages = {
+          view        = 'mini',
+          view_search = false,
+        },
+        popupmenu = {
+          backend = 'cmp',
+        },
+      })
+    end,
+    after = 'nvim-cmp',
+  },
+
+  {
     'rcarriga/nvim-notify',
     requires = {
       { 'nvim-telescope/telescope.nvim', opt = true },
