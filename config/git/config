@@ -23,7 +23,7 @@
 [interactive]
   diffFilter = delta --color-only
 [merge]
-  conflictstyle = diff3 # zdiff3
+  conflictstyle = zdiff3
 [pretty]
   pretty = %C(red)%h%C(auto) - %s %C(green)%cr%C(auto) %C(blue)<%an>%C(auto)%C(yellow)%d%C(auto)
 [pull]
