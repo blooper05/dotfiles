@@ -122,7 +122,7 @@ return {
         }),
       })
     end,
-    after = { 'LuaSnip', 'nvim-lspconfig', 'lspkind-nvim' },
+    after = { 'LuaSnip', 'lspkind-nvim' },
   },
 
   {
