@@ -198,6 +198,8 @@ plugins {
 //
 // pane_frames true
 
+pane_frames false
+
 // Define color themes for Zellij
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
@@ -218,10 +220,29 @@ plugins {
 //     }
 // }
 
+themes {
+    nordfox {
+        fg 205 206 207
+        bg 46 52 64
+        black 59 66 82
+        red 191 97 106
+        green 163 190 140
+        yellow 235 203 139
+        blue 129 161 193
+        magenta 180 142 173
+        cyan 136 192 208
+        white 229 233 240
+        orange 201 130 107
+    }
+}
+
+
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
 // theme "default"
+
+theme "nordfox"
 
 // The name of the default layout to load on startup
 // Default: "default"
@@ -232,6 +253,8 @@ plugins {
 // Default: normal
 //
 // default_mode "locked"
+
+default_mode "locked"
 
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
