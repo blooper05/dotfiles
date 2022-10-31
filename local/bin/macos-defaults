@@ -91,11 +91,11 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{ en
 # System Preferences >> Keyboard >> Shortcuts >> Input Sources >> Select next source in input menu: off
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 '{ enabled = 0; value = { parameters = (32, 49, 786432); type = standard; }; }'
 
-# System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Spotlight search: Control + Space
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ enabled = 1; value = { parameters = (32, 49, 262144); type = standard; }; }'
+# System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Spotlight search: off (Control + Space)
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ enabled = 0; value = { parameters = (32, 49, 262144); type = standard; }; }'
 
-# System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Finder search window: Control + Option + Space
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '{ enabled = 1; value = { parameters = (32, 49, 786432); type = standard; }; }'
+# System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Finder search window: off (Control + Option + Space)
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '{ enabled = 0; value = { parameters = (32, 49, 786432); type = standard; }; }'
 
 # System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Correct spelling: off
 defaults write com.apple.inputmethod.Kotoeri JIMPrefAutocorrectionKey -bool false
