@@ -173,6 +173,9 @@ export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 export GOPATH=$XDG_DATA_HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# Perl {{{2
+export PERL_CPANM_HOME=$XDG_DATA_HOME/cpanm
+
 # skim {{{2
 export SKIM_DEFAULT_OPTIONS='--multi --layout=reverse --ansi --select-1 --exit-0'
 
