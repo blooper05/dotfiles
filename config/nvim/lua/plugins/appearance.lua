@@ -113,7 +113,7 @@ return {
     config = function()
       require('noice').setup({
         messages = {
-          view        = 'mini',
+        --   view        = 'mini',
           view_search = false,
         },
         popupmenu = {
