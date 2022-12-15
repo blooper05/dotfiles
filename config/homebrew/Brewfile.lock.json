@@ -14,7 +14,7 @@
         "revision": "fbc1e849516242c696200eb379e5a08013b50a8a"
       },
       "homebrew/core": {
-        "revision": "01e12a0b7d05c721432bc5cb872e252e99006629"
+        "revision": "de93306935703fa00290539cbd3792de2a550411"
       },
       "k1low/tap": {
         "revision": "2d8468c4460cb790bad2e637cca0823fdda917cb"
@@ -2358,7 +2358,7 @@
       "ventura": {
         "HOMEBREW_VERSION": "3.6.15",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "01e12a0b7d05c721432bc5cb872e252e99006629",
+        "Homebrew/homebrew-core": "de93306935703fa00290539cbd3792de2a550411",
         "CLT": "14.2.0.0.1.1668646533",
         "Xcode": "14.1",
         "macOS": "13.1"
