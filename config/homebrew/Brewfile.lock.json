@@ -2215,12 +2215,6 @@
           "full_name": "keepingyouawake"
         }
       },
-      "kindle": {
-        "version": "1.39.65301",
-        "options": {
-          "full_name": "kindle"
-        }
-      },
       "krisp": {
         "version": "1.42.13",
         "options": {
@@ -2347,14 +2341,6 @@
   },
   "system": {
     "macos": {
-      "monterey": {
-        "HOMEBREW_VERSION": "3.6.13",
-        "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "e5f150a81c7dc5e3716c32b5c5bdc7aa5d6a4d6c",
-        "CLT": "14.1.0.0.1.1663981106",
-        "Xcode": "14.1",
-        "macOS": "12.6.1"
-      },
       "ventura": {
         "HOMEBREW_VERSION": "3.6.15",
         "HOMEBREW_PREFIX": "/usr/local",
