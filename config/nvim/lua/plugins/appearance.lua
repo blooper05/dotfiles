@@ -91,10 +91,20 @@ return {
 
   {
     'petertriho/nvim-scrollbar',
+    requires = {
+      { 'kevinhwang91/nvim-hlslens', opt = true },
+      { 'lewis6991/gitsigns.nvim', opt = true },
+    },
     config = function()
-      require('scrollbar').setup({})
+      require('scrollbar').setup({
+        handlers = {
+          gitsigns = true,
+          search = true,
+        },
+      })
     end,
     after = 'colorscheme',
+    wants = { 'nvim-hlslens', 'gitsigns.nvim' },
   },
 
   {

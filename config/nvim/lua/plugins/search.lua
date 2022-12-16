@@ -1,14 +1,9 @@
 return {
   {
     'kevinhwang91/nvim-hlslens',
-    requires = {
-      { 'petertriho/nvim-scrollbar', opt = true },
-    },
     config = function()
       vim.keymap.set('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], { silent = true })
       vim.keymap.set('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], { silent = true })
-
-      require('scrollbar.handlers.search').setup({})
     end,
     keys = { 'n', 'N', '*', '#', 'g*', 'g#' },
   },
