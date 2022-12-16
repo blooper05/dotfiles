@@ -4,8 +4,8 @@
   commentChar = \"
   pager       = delta
 [alias]
-  graph = log --graph --pretty=pretty
-  ignore = !curl -sL https://www.toptal.com/developers/gitignore/api/$@
+  graph  = log --graph --pretty=pretty
+  ignore = !curl --silent --location https://www.toptal.com/developers/gitignore/api/$@
 [branch]
   autoSetupMerge = inherit
 [commit]
