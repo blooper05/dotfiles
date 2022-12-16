@@ -1,42 +1,42 @@
 
 
-" ==== Prefixes ====
-" ✨ feat:     [sparkles]            Introduce new features.
-" 🐛 fix:      [bug]                 Fix a bug.
-" 🚑 fix:      [ambulance]           Critical hotfix.
-" 🔒 fix:      [lock]                Fix security issues.
-" ✏️  fix:      [pencil2]             Fix typos.
-" ♻️  refactor: [recycle]             Refactor code.
-" 🚚 refactor: [truck]               Move or rename resources (e.g.: files, paths, routes).
-" 🔥 refactor: [fire]                Remove code or files.
-" 🎨 style:    [art]                 Improve structure / format of the code.
-" 🚨 style:    [rotating_light]      Fix compiler / linter warnings.
-" ⚡️ perf:     [zap]                 Improve performance.
-" ✅ test:     [white_check_mark]    Add, update, or pass tests.
-" 📝 docs:     [memo]                Add or update documentation.
-" 💡 docs:     [bulb]                Add or update comments in source code.
-" 💚 ci:       [green_heart]         Fix CI Build.
-" 👷 ci:       [construction_worker] Add or update CI build system.
-" 🎉 chore:    [tada]                Begin a project.
-" 🔖 chore:    [bookmark]            Release / Version tags.
-" 🚀 chore:    [rocket]              Deploy stuff.
-" 🔧 chore:    [wrench]              Add or update configuration files.
-" 🔨 chore:    [hammer]              Add or update development scripts.
-" ➕ chore:    [heavy_plus_sign]     Add a dependency.
-" ➖ chore:    [heavy_minus_sign]    Remove a dependency.
-" ⬆️  chore:    [arrow_up]            Upgrade dependencies.
-" ⬇️  chore:    [arrow_down]          Downgrade dependencies.
-"
-" NOTE: refs. Gitmoji (https://gitmoji.dev/)
-" NOTE: refs. Conventional Commits (https://www.conventionalcommits.org/)
+# ==== Prefixes ====
+# ✨ feat:     [sparkles]            Introduce new features.
+# 🐛 fix:      [bug]                 Fix a bug.
+# 🚑 fix:      [ambulance]           Critical hotfix.
+# 🔒 fix:      [lock]                Fix security issues.
+# ✏️  fix:      [pencil2]             Fix typos.
+# ♻️  refactor: [recycle]             Refactor code.
+# 🚚 refactor: [truck]               Move or rename resources (e.g.: files, paths, routes).
+# 🔥 refactor: [fire]                Remove code or files.
+# 🎨 style:    [art]                 Improve structure / format of the code.
+# 🚨 style:    [rotating_light]      Fix compiler / linter warnings.
+# ⚡️ perf:     [zap]                 Improve performance.
+# ✅ test:     [white_check_mark]    Add, update, or pass tests.
+# 📝 docs:     [memo]                Add or update documentation.
+# 💡 docs:     [bulb]                Add or update comments in source code.
+# 💚 ci:       [green_heart]         Fix CI Build.
+# 👷 ci:       [construction_worker] Add or update CI build system.
+# 🎉 chore:    [tada]                Begin a project.
+# 🔖 chore:    [bookmark]            Release / Version tags.
+# 🚀 chore:    [rocket]              Deploy stuff.
+# 🔧 chore:    [wrench]              Add or update configuration files.
+# 🔨 chore:    [hammer]              Add or update development scripts.
+# ➕ chore:    [heavy_plus_sign]     Add a dependency.
+# ➖ chore:    [heavy_minus_sign]    Remove a dependency.
+# ⬆️  chore:    [arrow_up]            Upgrade dependencies.
+# ⬇️  chore:    [arrow_down]          Downgrade dependencies.
+#
+# NOTE: refs. Gitmoji (https://gitmoji.dev/)
+# NOTE: refs. Conventional Commits (https://www.conventionalcommits.org/)
 
-" ==== The Seven Rules ====
-" 1. Separate subject from body with a blank line
-" 2. Limit the subject line to 50 characters
-" 3. Capitalize the subject line
-" 4. Do not end the subject line with a period
-" 5. Use the imperative mood in the subject line
-" 6. Wrap the body at 72 characters
-" 7. Use the body to explain what and why vs. how
-"
-" NOTE: refs. How to Write a Git Commit Message (http://chris.beams.io/posts/git-commit/)
+# ==== The Seven Rules ====
+# 1. Separate subject from body with a blank line
+# 2. Limit the subject line to 50 characters
+# 3. Capitalize the subject line
+# 4. Do not end the subject line with a period
+# 5. Use the imperative mood in the subject line
+# 6. Wrap the body at 72 characters
+# 7. Use the body to explain what and why vs. how
+#
+# NOTE: refs. How to Write a Git Commit Message (http://chris.beams.io/posts/git-commit/)

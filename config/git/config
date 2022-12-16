@@ -1,8 +1,7 @@
 [core]
-  quotePath   = false
-  hooksPath   = ~/.config/git/hooks
-  commentChar = \"
-  pager       = delta
+  quotePath = false
+  hooksPath = ~/.config/git/hooks
+  pager     = delta
 [alias]
   graph  = log --graph --pretty=pretty
   ignore = !curl --silent --location https://www.toptal.com/developers/gitignore/api/$@
