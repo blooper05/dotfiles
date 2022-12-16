@@ -119,6 +119,7 @@ return {
     'folke/noice.nvim',
     requires = {
       { 'MunifTanjim/nui.nvim' },
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
       { 'rcarriga/nvim-notify', opt = true },
     },
     setup = function()
@@ -131,15 +132,21 @@ return {
     config = function()
       require('noice').setup({
         messages = {
-          --   view        = 'mini',
           view_search = false,
         },
         popupmenu = {
           backend = 'cmp',
         },
+        lsp = {
+          override = {
+            ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
+            ['vim.lsp.util.stylize_markdown'] = true,
+            ['cmp.entry.get_documentation'] = true,
+          },
+        },
       })
     end,
-    after = 'nvim-cmp',
+    event = { 'BufNewFile', 'BufReadPost', 'InsertEnter', 'CmdlineEnter' },
   },
 
   {
