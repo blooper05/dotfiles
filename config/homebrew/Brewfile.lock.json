@@ -2150,12 +2150,6 @@
           "full_name": "appcleaner"
         }
       },
-      "deepl": {
-        "version": "3.7.292629",
-        "options": {
-          "full_name": "deepl"
-        }
-      },
       "drawio": {
         "version": "20.6.2",
         "options": {
