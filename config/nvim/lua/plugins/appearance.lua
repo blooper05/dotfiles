@@ -38,6 +38,13 @@ return {
         options = {
           globalstatus = true,
         },
+        extensions = {
+          'man',
+          'neo-tree',
+          'nvim-dap-ui',
+          'quickfix',
+          'toggleterm',
+        },
       })
     end,
     after = 'colorscheme',
