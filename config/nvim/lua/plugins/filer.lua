@@ -2,9 +2,9 @@ return {
   {
     'nvim-neo-tree/neo-tree.nvim',
     requires = {
-      { 'MunifTanjim/nui.nvim'                     },
-      { 'nvim-lua/plenary.nvim'                    },
-      { 'kyazdani42/nvim-web-devicons', opt = true },
+      { 'MunifTanjim/nui.nvim'                    },
+      { 'nvim-lua/plenary.nvim'                   },
+      { 'nvim-tree/nvim-web-devicons', opt = true },
     },
     setup = function()
       vim.keymap.set('n', '[file]',   '<Nop>',  {})

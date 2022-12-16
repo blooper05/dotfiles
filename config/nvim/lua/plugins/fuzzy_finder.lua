@@ -3,7 +3,7 @@ return {
     'nvim-telescope/telescope.nvim',
     requires = {
       { 'nvim-lua/plenary.nvim'                       },
-      { 'kyazdani42/nvim-web-devicons',    opt = true },
+      { 'nvim-tree/nvim-web-devicons',     opt = true },
       { 'neovim/nvim-lspconfig',           opt = true },
       { 'nvim-treesitter/nvim-treesitter', opt = true },
     },

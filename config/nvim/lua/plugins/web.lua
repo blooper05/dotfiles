@@ -2,9 +2,9 @@ return {
   {
     'pwntester/octo.nvim',
     requires = {
-      { 'nvim-lua/plenary.nvim'                    },
-      { 'nvim-telescope/telescope.nvim'            },
-      { 'kyazdani42/nvim-web-devicons', opt = true },
+      { 'nvim-lua/plenary.nvim'                   },
+      { 'nvim-telescope/telescope.nvim'           },
+      { 'nvim-tree/nvim-web-devicons', opt = true },
     },
     setup = function()
       vim.keymap.set('n', '[octo]',       '<Nop>',  {})

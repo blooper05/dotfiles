@@ -17,7 +17,7 @@ return {
   },
 
   {
-    'kyazdani42/nvim-web-devicons',
+    'nvim-tree/nvim-web-devicons',
     config = function()
       require('nvim-web-devicons').setup({})
     end,
@@ -27,7 +27,7 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     requires = {
-      { 'kyazdani42/nvim-web-devicons', opt = true },
+      { 'nvim-tree/nvim-web-devicons', opt = true },
     },
     setup = function()
       -- Get rid of redundant mode display.
@@ -46,7 +46,7 @@ return {
   {
     'akinsho/bufferline.nvim',
     requires = {
-      { 'kyazdani42/nvim-web-devicons', opt = true },
+      { 'nvim-tree/nvim-web-devicons', opt = true },
     },
     setup = function()
       -- Enable 24-bit RGB color in the TUI.
