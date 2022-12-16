@@ -1,6 +1,7 @@
 return {
   {
-    'EdenEast/nightfox.nvim', as = 'colorscheme',
+    'EdenEast/nightfox.nvim',
+    as = 'colorscheme',
     setup = function()
       -- Assume a dark background.
       vim.opt.background = 'dark'
@@ -72,10 +73,10 @@ return {
     end,
     config = function()
       require('indent_blankline').setup({
-        indent_blankline_use_treesitter       = true,
+        indent_blankline_use_treesitter = true,
         indent_blankline_use_treesitter_scope = true,
-        show_current_context                  = true,
-        show_current_context_start            = true,
+        show_current_context = true,
+        show_current_context_start = true,
       })
     end,
     after = 'colorscheme',
@@ -100,7 +101,7 @@ return {
   {
     'folke/noice.nvim',
     requires = {
-      { 'MunifTanjim/nui.nvim'             },
+      { 'MunifTanjim/nui.nvim' },
       { 'rcarriga/nvim-notify', opt = true },
     },
     setup = function()
@@ -113,7 +114,7 @@ return {
     config = function()
       require('noice').setup({
         messages = {
-        --   view        = 'mini',
+          --   view        = 'mini',
           view_search = false,
         },
         popupmenu = {
@@ -137,7 +138,9 @@ return {
       local function telescopeNotify()
         local success, telescope = pcall(require, 'telescope')
 
-        if success then telescope.extensions.notify.notify() end
+        if success then
+          telescope.extensions.notify.notify()
+        end
       end
 
       vim.keymap.set('n', '[telescope]n', telescopeNotify, { silent = true })
@@ -146,7 +149,7 @@ return {
       vim.notify = require('notify')
 
       vim.notify.setup({
-        max_width     = 80,
+        max_width = 80,
         minimum_width = 80,
       })
     end,
@@ -156,7 +159,7 @@ return {
   {
     'folke/zen-mode.nvim',
     requires = {
-      { 'folke/twilight.nvim', opt = true, cmd = 'ZenMode' }
+      { 'folke/twilight.nvim', opt = true, cmd = 'ZenMode' },
     },
     config = function()
       require('zen-mode').setup({})
