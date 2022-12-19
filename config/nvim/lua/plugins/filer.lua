@@ -1,27 +1,27 @@
 return {
   {
-    'nvim-neo-tree/neo-tree.nvim',
+    'nvim-tree/nvim-tree.lua',
     requires = {
-      { 'MunifTanjim/nui.nvim'                    },
-      { 'nvim-lua/plenary.nvim'                   },
       { 'nvim-tree/nvim-web-devicons', opt = true },
     },
     setup = function()
-      vim.keymap.set('n', '[file]',   '<Nop>',  {})
+      -- Avoid loading the plugin and the autoload portions of netrw.
+      vim.g.loaded_netrw       = false
+      vim.g.loaded_netrwPlugin = false
+
+      -- Enable 24-bit RGB color in the TUI.
+      vim.opt.termguicolors = true
+
+      vim.keymap.set('n', '[file]', '<Nop>', {})
       vim.keymap.set('n', '<Space>f', '[file]', { remap = true })
     end,
     config = function()
-      vim.keymap.set('n', '[file]c', function() vim.cmd('Neotree toggle reveal') end, { silent = true })
+      vim.keymap.set('n', '[file]c', function() vim.cmd('NvimTreeToggle') end, { silent = true })
 
-      require('neo-tree').setup({
-        filesystem = {
-          filtered_items = {
-            visible = true,
-          },
-        },
+      require('nvim-tree').setup({
       })
     end,
-    cmd = 'Neotree',
+    cmd = 'NvimTree',
     keys = '[file]',
   },
 

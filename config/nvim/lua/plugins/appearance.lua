@@ -40,8 +40,8 @@ return {
         },
         extensions = {
           'man',
-          'neo-tree',
           'nvim-dap-ui',
+          'nvim-tree',
           'quickfix',
           'toggleterm',
         },
