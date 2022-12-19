@@ -171,11 +171,6 @@ return {
 
       -- Use as the default notify function.
       vim.notify = require('notify')
-
-      vim.notify.setup({
-        max_width = 80,
-        minimum_width = 80,
-      })
     end,
     event = 'BufWinEnter',
   },
