@@ -112,7 +112,7 @@ return {
     config = function()
       require('tint').setup({})
     end,
-    after = 'colorscheme',
+    event = { 'WinEnter', 'WinLeave' }
   },
 
   {
