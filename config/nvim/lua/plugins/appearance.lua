@@ -103,8 +103,8 @@ return {
         },
       })
     end,
-    after = 'colorscheme',
-    wants = { 'nvim-hlslens', 'gitsigns.nvim' },
+    wants = { 'colorscheme', 'nvim-hlslens', 'gitsigns.nvim' },
+    event = 'BufWinEnter',
   },
 
   {
