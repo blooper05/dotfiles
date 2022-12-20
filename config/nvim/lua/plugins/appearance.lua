@@ -173,7 +173,7 @@ return {
       -- Use as the default notify function.
       vim.notify = require('notify')
     end,
-    event = 'BufWinEnter',
+    module = 'notify',
   },
 
   {
