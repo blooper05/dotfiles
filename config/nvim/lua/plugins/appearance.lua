@@ -19,9 +19,8 @@ return {
   {
     'nvim-tree/nvim-web-devicons',
     config = function()
-      require('nvim-web-devicons').setup({})
     end,
-    event = 'UIEnter',
+    module = 'nvim-web-devicons',
   },
 
   {
