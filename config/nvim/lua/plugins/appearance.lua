@@ -18,8 +18,7 @@ return {
 
   {
     'nvim-tree/nvim-web-devicons',
-    config = function()
-    end,
+    config = function() end,
     module = 'nvim-web-devicons',
   },
 
@@ -167,7 +166,7 @@ return {
     config = function()
       require('tint').setup({})
     end,
-    event = { 'WinEnter', 'WinLeave' }
+    event = { 'WinEnter', 'WinLeave' },
   },
 
   {
