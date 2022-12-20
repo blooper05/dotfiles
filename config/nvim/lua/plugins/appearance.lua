@@ -85,7 +85,8 @@ return {
         show_current_context_start = true,
       })
     end,
-    after = 'colorscheme',
+    wants = 'colorscheme',
+    event = 'BufWinEnter',
   },
 
   {
