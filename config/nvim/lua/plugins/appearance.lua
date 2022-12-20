@@ -108,14 +108,6 @@ return {
   },
 
   {
-    'levouh/tint.nvim',
-    config = function()
-      require('tint').setup({})
-    end,
-    event = { 'WinEnter', 'WinLeave' }
-  },
-
-  {
     'folke/noice.nvim',
     requires = {
       { 'MunifTanjim/nui.nvim' },
@@ -174,6 +166,14 @@ return {
       vim.notify = require('notify')
     end,
     module = 'notify',
+  },
+
+  {
+    'levouh/tint.nvim',
+    config = function()
+      require('tint').setup({})
+    end,
+    event = { 'WinEnter', 'WinLeave' }
   },
 
   {
