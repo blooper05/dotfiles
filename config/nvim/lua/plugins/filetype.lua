@@ -64,6 +64,7 @@ return {
         vim.cmd('PrevimOpen')
       end, { silent = true })
     end,
+    wants = 'open-browser.vim',
     ft = 'markdown',
   },
 
