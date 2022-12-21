@@ -80,6 +80,17 @@ return {
   },
 
   {
+    'nvim-telescope/telescope-ghq.nvim',
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    config = function()
+      vim.keymap.set('n', '[telescope]s', require('telescope').extensions.ghq.list, { silent = true })
+    end,
+    after = 'telescope.nvim',
+  },
+
+  {
     'nvim-telescope/telescope-packer.nvim',
     requires = {
       { 'nvim-telescope/telescope.nvim' },
@@ -87,17 +98,6 @@ return {
     },
     config = function()
       vim.keymap.set('n', '[telescope]P', require('telescope').extensions.packer.packer, { silent = true })
-    end,
-    after = 'telescope.nvim',
-  },
-
-  {
-    'nvim-telescope/telescope-ghq.nvim',
-    requires = {
-      { 'nvim-telescope/telescope.nvim' },
-    },
-    config = function()
-      vim.keymap.set('n', '[telescope]s', require('telescope').extensions.ghq.list, { silent = true })
     end,
     after = 'telescope.nvim',
   },
