@@ -11,6 +11,14 @@ return {
   {
     'uga-rosa/translate.nvim',
     config = function()
+      vim.keymap.set('x', '<Leader>te', function()
+        vim.cmd('Translate EN')
+      end, { silent = true })
+
+      vim.keymap.set('x', '<Leader>tj', function()
+        vim.cmd('Translate JA')
+      end, { silent = true })
+
       require('translate').setup({
         default = {
           output = 'replace',
@@ -18,6 +26,7 @@ return {
       })
     end,
     cmd = 'Translate',
+    keys = { '<Leader>te', '<Leader>tj' },
   },
 
   -- CSV
