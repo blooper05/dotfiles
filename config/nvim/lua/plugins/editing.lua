@@ -56,10 +56,10 @@ return {
     config = function()
       local map = require('dial.map')
 
-      vim.keymap.set('n', '<C-a>',  map.inc_normal(),  {})
-      vim.keymap.set('n', '<C-x>',  map.dec_normal(),  {})
-      vim.keymap.set('v', '<C-a>',  map.inc_visual(),  {})
-      vim.keymap.set('v', '<C-x>',  map.dec_visual(),  {})
+      vim.keymap.set('n', '<C-a>', map.inc_normal(), {})
+      vim.keymap.set('n', '<C-x>', map.dec_normal(), {})
+      vim.keymap.set('v', '<C-a>', map.inc_visual(), {})
+      vim.keymap.set('v', '<C-x>', map.dec_visual(), {})
       vim.keymap.set('v', 'g<C-a>', map.inc_gvisual(), {})
       vim.keymap.set('v', 'g<C-x>', map.dec_gvisual(), {})
 
@@ -77,9 +77,21 @@ return {
           augend.constant.alias.bool,
           augend.semver.alias.semver,
           augend.constant.new({
-            elements = { 'pick', 'fixup', 'reword', 'edit', 'squash', 'exec', 'break', 'drop', 'label', 'reset', 'merge' },
-            word     = true,
-            cyclic   = true,
+            elements = {
+              'pick',
+              'fixup',
+              'reword',
+              'edit',
+              'squash',
+              'exec',
+              'break',
+              'drop',
+              'label',
+              'reset',
+              'merge',
+            },
+            word = true,
+            cyclic = true,
           }),
         },
       })
