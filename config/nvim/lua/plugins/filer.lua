@@ -2,6 +2,7 @@ return {
   {
     'nvim-tree/nvim-tree.lua',
     requires = {
+      { 'ahmedkhalf/project.nvim', opt = true },
       { 'nvim-tree/nvim-web-devicons', opt = true },
     },
     setup = function()
@@ -24,8 +25,11 @@ return {
         view = {
           adaptive_size = true,
         },
+        sync_root_with_cwd = true,
+        respect_buf_cwd = true,
         update_focused_file = {
           enable = true,
+          update_root = true,
         },
       })
     end,
@@ -38,23 +42,13 @@ return {
     requires = {
       { 'nvim-telescope/telescope.nvim', opt = true },
     },
+    setup = function()
+      vim.keymap.set('n', '[telescope]p', function()
+        require('telescope').extensions.projects.projects()
+      end, { silent = true })
+    end,
     config = function()
-      local function telescopeProjects()
-        local success, telescope = pcall(require, 'telescope')
-
-        if success then telescope.extensions.projects.projects() end
-      end
-
-      vim.keymap.set('n', '[telescope]p', telescopeProjects, { silent = true })
-
-      require('project_nvim').setup({
-        sync_root_with_cwd  = true,
-        respect_buf_cwd     = true,
-        update_focused_file = {
-          enable      = true,
-          update_root = true,
-        },
-      })
+      require('project_nvim').setup({})
     end,
     event = 'BufWinEnter',
   },
