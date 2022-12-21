@@ -124,50 +124,6 @@ return {
     after = { 'LuaSnip', 'lspkind-nvim' },
   },
 
-  {
-    'L3MON4D3/LuaSnip',
-    requires = {
-      { 'rafamadriz/friendly-snippets', opt = true, event = { 'InsertEnter' , 'CmdlineEnter' } },
-    },
-    config = function()
-      require('luasnip.loaders.from_vscode').lazy_load()
-
-      local luasnip = require('luasnip')
-      local s       = luasnip.snippet
-      local i       = luasnip.insert_node
-      local fmt     = require('luasnip.extras.fmt').fmt
-
-      luasnip.add_snippets('gina-commit', {
-        s('sparkles',            fmt('✨ feat({}): ',     { i(1, 'scope') })),
-        s('bug',                 fmt('🐛 fix({}): ',      { i(1, 'scope') })),
-        s('ambulance',           fmt('🚑 fix({}): ',      { i(1, 'scope') })),
-        s('lock',                fmt('🔒 fix({}): ',      { i(1, 'scope') })),
-        s('pencil2',             fmt('✏️ fix({}): ',       { i(1, 'scope') })),
-        s('recycle',             fmt('♻️ refactor({}): ',  { i(1, 'scope') })),
-        s('truck',               fmt('🚚 refactor({}): ', { i(1, 'scope') })),
-        s('fire',                fmt('🔥 refactor({}): ', { i(1, 'scope') })),
-        s('art',                 fmt('🎨 style({}): ',    { i(1, 'scope') })),
-        s('rotating_light',      fmt('🚨 style({}): ',    { i(1, 'scope') })),
-        s('zap',                 fmt('⚡️ perf({}): ',     { i(1, 'scope') })),
-        s('white_check_mark',    fmt('✅ test({}): ',     { i(1, 'scope') })),
-        s('memo',                fmt('📝 docs({}): ',     { i(1, 'scope') })),
-        s('bulb',                fmt('💡 docs({}): ',     { i(1, 'scope') })),
-        s('green_heart',         fmt('💚 ci({}): ',       { i(1, 'scope') })),
-        s('construction_worker', fmt('👷 ci({}): ',       { i(1, 'scope') })),
-        s('tada',                fmt('🎉 chore({}): ',    { i(1, 'scope') })),
-        s('bookmark',            fmt('🔖 chore({}): ',    { i(1, 'scope') })),
-        s('rocket',              fmt('🚀 chore({}): ',    { i(1, 'scope') })),
-        s('wrench',              fmt('🔧 chore({}): ',    { i(1, 'scope') })),
-        s('hammer',              fmt('🔨 chore({}): ',    { i(1, 'scope') })),
-        s('heavy_plus_sign',     fmt('➕ chore({}): ',    { i(1, 'scope') })),
-        s('heavy_minus_sign',    fmt('➖ chore({}): ',    { i(1, 'scope') })),
-        s('arrow_up',            fmt('⬆️ chore({}): ',     { i(1, 'scope') })),
-        s('arrow_down',          fmt('⬇️ chore({}): ',     { i(1, 'scope') })),
-      })
-    end,
-    after = 'friendly-snippets',
-  },
-
   { 'hrsh7th/cmp-buffer',                   requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'hrsh7th/cmp-calc',                     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'hrsh7th/cmp-cmdline',                  requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
@@ -213,6 +169,50 @@ return {
     'saadparwaiz1/cmp_luasnip',
     requires = { 'L3MON4D3/LuaSnip', 'hrsh7th/nvim-cmp' },
     after = 'nvim-cmp',
+  },
+
+  {
+    'L3MON4D3/LuaSnip',
+    requires = {
+      { 'rafamadriz/friendly-snippets', opt = true, event = { 'InsertEnter' , 'CmdlineEnter' } },
+    },
+    config = function()
+      require('luasnip.loaders.from_vscode').lazy_load()
+
+      local luasnip = require('luasnip')
+      local s       = luasnip.snippet
+      local i       = luasnip.insert_node
+      local fmt     = require('luasnip.extras.fmt').fmt
+
+      luasnip.add_snippets('gina-commit', {
+        s('sparkles',            fmt('✨ feat({}): ',     { i(1, 'scope') })),
+        s('bug',                 fmt('🐛 fix({}): ',      { i(1, 'scope') })),
+        s('ambulance',           fmt('🚑 fix({}): ',      { i(1, 'scope') })),
+        s('lock',                fmt('🔒 fix({}): ',      { i(1, 'scope') })),
+        s('pencil2',             fmt('✏️ fix({}): ',       { i(1, 'scope') })),
+        s('recycle',             fmt('♻️ refactor({}): ',  { i(1, 'scope') })),
+        s('truck',               fmt('🚚 refactor({}): ', { i(1, 'scope') })),
+        s('fire',                fmt('🔥 refactor({}): ', { i(1, 'scope') })),
+        s('art',                 fmt('🎨 style({}): ',    { i(1, 'scope') })),
+        s('rotating_light',      fmt('🚨 style({}): ',    { i(1, 'scope') })),
+        s('zap',                 fmt('⚡️ perf({}): ',     { i(1, 'scope') })),
+        s('white_check_mark',    fmt('✅ test({}): ',     { i(1, 'scope') })),
+        s('memo',                fmt('📝 docs({}): ',     { i(1, 'scope') })),
+        s('bulb',                fmt('💡 docs({}): ',     { i(1, 'scope') })),
+        s('green_heart',         fmt('💚 ci({}): ',       { i(1, 'scope') })),
+        s('construction_worker', fmt('👷 ci({}): ',       { i(1, 'scope') })),
+        s('tada',                fmt('🎉 chore({}): ',    { i(1, 'scope') })),
+        s('bookmark',            fmt('🔖 chore({}): ',    { i(1, 'scope') })),
+        s('rocket',              fmt('🚀 chore({}): ',    { i(1, 'scope') })),
+        s('wrench',              fmt('🔧 chore({}): ',    { i(1, 'scope') })),
+        s('hammer',              fmt('🔨 chore({}): ',    { i(1, 'scope') })),
+        s('heavy_plus_sign',     fmt('➕ chore({}): ',    { i(1, 'scope') })),
+        s('heavy_minus_sign',    fmt('➖ chore({}): ',    { i(1, 'scope') })),
+        s('arrow_up',            fmt('⬆️ chore({}): ',     { i(1, 'scope') })),
+        s('arrow_down',          fmt('⬇️ chore({}): ',     { i(1, 'scope') })),
+      })
+    end,
+    after = 'friendly-snippets',
   },
 
   -- TODO: { 'zbirenbaum/copilot.lua' },
