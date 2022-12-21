@@ -3,8 +3,7 @@ return {
 
   {
     'koron/codic-vim', -- non-lua plugin
-    config = function()
-    end,
+    config = function() end,
     cmd = 'Codic',
   },
 
