@@ -171,29 +171,30 @@ return {
       { 'L3MON4D3/LuaSnip' },
       { 'hrsh7th/nvim-cmp' },
     },
-    after = 'nvim-cmp',
+    after = { 'LuaSnip', 'nvim-cmp' },
   },
 
   {
     'L3MON4D3/LuaSnip',
     requires = {
-      { 'rafamadriz/friendly-snippets', opt = true, event = { 'InsertEnter' , 'CmdlineEnter' } },
+      { 'rafamadriz/friendly-snippets', opt = true },
     },
     config = function()
       require('luasnip.loaders.from_vscode').lazy_load()
 
       local luasnip = require('luasnip')
-      local s       = luasnip.snippet
-      local i       = luasnip.insert_node
-      local fmt     = require('luasnip.extras.fmt').fmt
+      local s = luasnip.snippet
+      local i = luasnip.insert_node
+      local fmt = require('luasnip.extras.fmt').fmt
 
       luasnip.add_snippets('gina-commit', {
+        -- stylua: ignore start
         s('sparkles',            fmt('✨ feat({}): ',     { i(1, 'scope') })),
         s('bug',                 fmt('🐛 fix({}): ',      { i(1, 'scope') })),
         s('ambulance',           fmt('🚑 fix({}): ',      { i(1, 'scope') })),
         s('lock',                fmt('🔒 fix({}): ',      { i(1, 'scope') })),
-        s('pencil2',             fmt('✏️ fix({}): ',       { i(1, 'scope') })),
-        s('recycle',             fmt('♻️ refactor({}): ',  { i(1, 'scope') })),
+        s('pencil2',             fmt('✏️  fix({}): ',      { i(1, 'scope') })),
+        s('recycle',             fmt('♻️  refactor({}): ', { i(1, 'scope') })),
         s('truck',               fmt('🚚 refactor({}): ', { i(1, 'scope') })),
         s('fire',                fmt('🔥 refactor({}): ', { i(1, 'scope') })),
         s('art',                 fmt('🎨 style({}): ',    { i(1, 'scope') })),
@@ -211,11 +212,12 @@ return {
         s('hammer',              fmt('🔨 chore({}): ',    { i(1, 'scope') })),
         s('heavy_plus_sign',     fmt('➕ chore({}): ',    { i(1, 'scope') })),
         s('heavy_minus_sign',    fmt('➖ chore({}): ',    { i(1, 'scope') })),
-        s('arrow_up',            fmt('⬆️ chore({}): ',     { i(1, 'scope') })),
-        s('arrow_down',          fmt('⬇️ chore({}): ',     { i(1, 'scope') })),
+        s('arrow_up',            fmt('⬆️  chore({}): ',    { i(1, 'scope') })),
+        s('arrow_down',          fmt('⬇️  chore({}): ',    { i(1, 'scope') })),
+        -- stylua: ignore end
       })
     end,
-    after = 'friendly-snippets',
+    module = 'luasnip',
   },
 
   -- TODO: { 'zbirenbaum/copilot.lua' },
