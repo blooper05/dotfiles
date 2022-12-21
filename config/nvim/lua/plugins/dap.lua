@@ -38,11 +38,22 @@ return {
   {
     'theHamsta/nvim-dap-virtual-text',
     requires = {
-      { 'mfussenegger/nvim-dap'           },
+      { 'mfussenegger/nvim-dap' },
       { 'nvim-treesitter/nvim-treesitter' },
     },
     config = function()
       require('nvim-dap-virtual-text').setup({})
+    end,
+    after = 'nvim-dap',
+  },
+
+  {
+    'suketa/nvim-dap-ruby',
+    requires = {
+      { 'mfussenegger/nvim-dap' },
+    },
+    config = function()
+      require('dap-ruby').setup({})
     end,
     after = 'nvim-dap',
   },
