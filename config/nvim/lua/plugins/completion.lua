@@ -76,8 +76,8 @@ return {
         }, {
           { name = 'buffer'     },
           { name = 'treesitter' },
-          { name = 'spell'      },
           { name = 'dictionary' },
+          { name = 'spell'      },
           { name = 'calc'       },
         }),
       })
@@ -91,8 +91,8 @@ return {
         }, {
           { name = 'buffer'     },
           { name = 'treesitter' },
-          { name = 'spell'      },
           { name = 'dictionary' },
+          { name = 'spell'      },
           { name = 'calc'       },
         }),
       })
