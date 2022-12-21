@@ -121,19 +121,14 @@ return {
   },
 
   {
-    'mbbill/undotree', -- non-lua plugin
-    setup = function()
-      vim.g.undotree_WindowLayout = 2
-      vim.g.undotree_ShortIndicators = true
-      vim.g.undotree_SetFocusWhenToggle = true
-    end,
+    'debugloop/telescope-undo.nvim',
+    requires = {
+      { 'nvim-telescope/telescope.nvim' },
+    },
     config = function()
-      vim.keymap.set('n', '<Space>U', function()
-        vim.cmd('UndotreeToggle')
-      end, { silent = true })
+      vim.keymap.set('n', '[telescope]U', require('telescope').extensions.undo.undo, { silent = true })
     end,
-    cmd = 'UndotreeToggle',
-    keys = '<Space>U',
+    after = 'telescope.nvim',
   },
 
   {
