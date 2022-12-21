@@ -8,7 +8,7 @@ return {
     config = function()
       local dap = require('dap')
 
-      vim.keymap.set('n', '[dap]r', dap.repl.open,         { silent = true })
+      vim.keymap.set('n', '[dap]r', dap.repl.toggle,       { silent = true })
       vim.keymap.set('n', '[dap]b', dap.toggle_breakpoint, { silent = true })
       vim.keymap.set('n', '[dap]c', dap.continue,          { silent = true })
     end,
