@@ -2,8 +2,8 @@ return {
   {
     'hrsh7th/nvim-cmp',
     requires = {
-      { 'neovim/nvim-lspconfig', opt = true                                             },
-      { 'onsails/lspkind-nvim',  opt = true, event = { 'InsertEnter' , 'CmdlineEnter' } },
+      { 'neovim/nvim-lspconfig', opt = true },
+      { 'onsails/lspkind-nvim', opt = true, module = 'lspkind' },
     },
     setup = function()
       -- Set completeopt to have a better completion experience.
@@ -121,7 +121,7 @@ return {
         }),
       })
     end,
-    after = { 'LuaSnip', 'lspkind-nvim' },
+    event = { 'InsertEnter', 'CmdlineEnter' },
   },
 
   -- stylua: ignore start
