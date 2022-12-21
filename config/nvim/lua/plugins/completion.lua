@@ -124,6 +124,7 @@ return {
     after = { 'LuaSnip', 'lspkind-nvim' },
   },
 
+  -- stylua: ignore start
   { 'hrsh7th/cmp-buffer',                   requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'hrsh7th/cmp-calc',                     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'hrsh7th/cmp-cmdline',                  requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
@@ -133,6 +134,7 @@ return {
   { 'hrsh7th/cmp-nvim-lua',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'hrsh7th/cmp-path',                     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
   { 'ray-x/cmp-treesitter',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
+  -- stylua: ignore end
 
   {
     'f3fora/cmp-spell',
