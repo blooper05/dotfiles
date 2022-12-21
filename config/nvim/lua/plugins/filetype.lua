@@ -32,8 +32,7 @@ return {
 
   {
     'mechatroner/rainbow_csv', -- non-lua plugin
-    config = function()
-    end,
+    config = function() end,
     ft = 'csv',
   },
 
