@@ -3,14 +3,14 @@ return {
     'numToStr/Comment.nvim',
     requires = {
       { 'JoosepAlviste/nvim-ts-context-commentstring', opt = true },
-      { 'nvim-treesitter/nvim-treesitter',             opt = true },
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
     },
     config = function()
       require('Comment').setup({
         pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
       })
     end,
-    after = 'nvim-ts-context-commentstring',
+    keys = { 'gc', 'gb' },
   },
 
   {
@@ -21,12 +21,12 @@ return {
     config = function()
       require('nvim-treesitter.configs').setup({
         context_commentstring = {
-          enable         = true,
+          enable = true,
           enable_autocmd = false,
         },
       })
     end,
-    after = 'nvim-treesitter',
+    module = 'ts_context_commentstring',
   },
 
   {
