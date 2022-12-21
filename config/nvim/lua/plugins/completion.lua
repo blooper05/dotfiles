@@ -167,7 +167,10 @@ return {
 
   {
     'saadparwaiz1/cmp_luasnip',
-    requires = { 'L3MON4D3/LuaSnip', 'hrsh7th/nvim-cmp' },
+    requires = {
+      { 'L3MON4D3/LuaSnip' },
+      { 'hrsh7th/nvim-cmp' },
+    },
     after = 'nvim-cmp',
   },
 
