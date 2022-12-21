@@ -2,12 +2,6 @@ return {
   -- Natural Language
 
   {
-    'koron/codic-vim', -- non-lua plugin
-    config = function() end,
-    cmd = 'Codic',
-  },
-
-  {
     'uga-rosa/translate.nvim',
     config = function()
       vim.keymap.set('x', '<Leader>te', function()
@@ -26,6 +20,12 @@ return {
     end,
     cmd = 'Translate',
     keys = { '<Leader>te', '<Leader>tj' },
+  },
+
+  {
+    'koron/codic-vim', -- non-lua plugin
+    config = function() end,
+    cmd = 'Codic',
   },
 
   -- CSV
