@@ -60,7 +60,9 @@ return {
       { 'tyru/open-browser.vim', opt = true },
     },
     config = function()
-      vim.keymap.set('n', '<Leader>p', function() vim.cmd('PrevimOpen') end, { silent = true })
+      vim.keymap.set('n', '<Leader>p', function()
+        vim.cmd('PrevimOpen')
+      end, { silent = true })
     end,
     ft = 'markdown',
   },
