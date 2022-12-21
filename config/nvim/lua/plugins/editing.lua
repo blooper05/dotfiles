@@ -30,28 +30,6 @@ return {
   },
 
   {
-    'folke/todo-comments.nvim',
-    requires = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'folke/trouble.nvim', opt = true },
-      { 'nvim-telescope/telescope.nvim', opt = true },
-      { 'nvim-treesitter/nvim-treesitter', opt = true },
-    },
-    config = function()
-      vim.keymap.set('n', '[lsp]t', function()
-        vim.cmd('TodoTrouble')
-      end, { silent = true })
-
-      vim.keymap.set('n', '[telescope]t', function()
-        vim.cmd('TodoTelescope')
-      end, { silent = true })
-
-      require('todo-comments').setup({})
-    end,
-    event = 'BufWinEnter',
-  },
-
-  {
     'monaqa/dial.nvim',
     config = function()
       local map = require('dial.map')
@@ -116,6 +94,28 @@ return {
       -- Strip whitespaces when I save files.
       vim.g.strip_whitespace_on_save = true
       vim.g.strip_whitespace_confirm = false
+    end,
+    event = 'BufWinEnter',
+  },
+
+  {
+    'folke/todo-comments.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'folke/trouble.nvim', opt = true },
+      { 'nvim-telescope/telescope.nvim', opt = true },
+      { 'nvim-treesitter/nvim-treesitter', opt = true },
+    },
+    config = function()
+      vim.keymap.set('n', '[lsp]t', function()
+        vim.cmd('TodoTrouble')
+      end, { silent = true })
+
+      vim.keymap.set('n', '[telescope]t', function()
+        vim.cmd('TodoTelescope')
+      end, { silent = true })
+
+      require('todo-comments').setup({})
     end,
     event = 'BufWinEnter',
   },
