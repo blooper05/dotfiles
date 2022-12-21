@@ -6,7 +6,7 @@ return {
     },
     setup = function()
       -- Avoid loading the plugin and the autoload portions of netrw.
-      vim.g.loaded_netrw       = false
+      vim.g.loaded_netrw = false
       vim.g.loaded_netrwPlugin = false
 
       -- Enable 24-bit RGB color in the TUI.
@@ -16,9 +16,17 @@ return {
       vim.keymap.set('n', '<Space>f', '[file]', { remap = true })
     end,
     config = function()
-      vim.keymap.set('n', '[file]c', function() vim.cmd('NvimTreeToggle') end, { silent = true })
+      vim.keymap.set('n', '[file]c', function()
+        vim.cmd('NvimTreeToggle')
+      end, { silent = true })
 
       require('nvim-tree').setup({
+        view = {
+          adaptive_size = true,
+        },
+        update_focused_file = {
+          enable = true,
+        },
       })
     end,
     cmd = 'NvimTree',
