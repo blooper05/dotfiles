@@ -116,16 +116,6 @@ return {
       -- Strip whitespaces when I save files.
       vim.g.strip_whitespace_on_save = true
       vim.g.strip_whitespace_confirm = false
-
-      vim.g.better_whitespace_filetypes_blacklist = {
-        'diff',
-        'git',
-        'gitcommit',
-        'help',
-        'markdown',
-        'packer',
-        'toggleterm',
-      }
     end,
     event = 'BufWinEnter',
   },
