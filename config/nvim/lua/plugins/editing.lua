@@ -123,12 +123,14 @@ return {
   {
     'mbbill/undotree', -- non-lua plugin
     setup = function()
-      vim.g.undotree_WindowLayout       = 2
+      vim.g.undotree_WindowLayout = 2
+      vim.g.undotree_ShortIndicators = true
       vim.g.undotree_SetFocusWhenToggle = true
-      vim.g.undotree_ShortIndicators    = true
     end,
     config = function()
-      vim.keymap.set('n', '<Space>U', function() vim.cmd('UndotreeToggle') end, { silent = true })
+      vim.keymap.set('n', '<Space>U', function()
+        vim.cmd('UndotreeToggle')
+      end, { silent = true })
     end,
     cmd = 'UndotreeToggle',
     keys = '<Space>U',
