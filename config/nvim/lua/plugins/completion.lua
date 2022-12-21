@@ -12,7 +12,7 @@ return {
         'noselect',
       }
 
-      -- Avoid showing message extra message when using completion.
+      -- Avoid showing extra message when using completion.
       vim.opt.shortmess:append('c')
     end,
     config = function()
