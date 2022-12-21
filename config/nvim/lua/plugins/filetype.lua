@@ -40,8 +40,7 @@ return {
 
   {
     'google/vim-jsonnet', -- non-lua plugin
-    config = function()
-    end,
+    config = function() end,
     ft = 'jsonnet',
   },
 
