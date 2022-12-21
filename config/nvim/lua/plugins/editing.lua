@@ -48,7 +48,7 @@ return {
 
       require('todo-comments').setup({})
     end,
-    event = 'BufReadPost',
+    event = 'BufWinEnter',
   },
 
   {
