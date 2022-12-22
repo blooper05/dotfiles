@@ -105,11 +105,13 @@ return {
   {
     'folke/trouble.nvim',
     requires = {
-      { 'neovim/nvim-lspconfig'                   },
+      { 'neovim/nvim-lspconfig' },
       { 'nvim-tree/nvim-web-devicons', opt = true },
     },
     setup = function()
-      vim.keymap.set('n', '[lsp]l', function() vim.cmd('TroubleToggle') end, { silent = true })
+      vim.keymap.set('n', '[lsp]l', function()
+        vim.cmd('TroubleToggle')
+      end, { silent = true })
     end,
     config = function()
       require('trouble').setup({})
