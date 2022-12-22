@@ -26,7 +26,9 @@ return {
     },
     config = function()
       require('nvim-treesitter.configs').setup({
-        yati = { enable = true },
+        yati = {
+          enable = true,
+        },
       })
     end,
     after = 'nvim-treesitter',
