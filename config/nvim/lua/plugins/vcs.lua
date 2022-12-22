@@ -71,6 +71,6 @@ return {
     config = function()
       require('gitsigns').setup({})
     end,
-    event = 'BufWinEnter',
+    event = 'BufReadPost',
   },
 }
