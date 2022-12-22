@@ -21,7 +21,7 @@ return {
           null_ls.builtins.formatting.markdownlint.with({ prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.formatting.packer,
           null_ls.builtins.formatting.prettier.with({ prefer_local = 'node_modules/.bin' }),
-          null_ls.builtins.formatting.rubocop.with({ prefer_local = '.bundle/bin' }),
+          null_ls.builtins.formatting.rubocop.with({ command = 'docker-rubocop' }),
           null_ls.builtins.formatting.shfmt,
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.terraform_fmt,
