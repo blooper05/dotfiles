@@ -6,13 +6,13 @@ return {
       { 'williamboman/mason.nvim', opt = true, module = 'mason' },
     },
     setup = function()
-      vim.keymap.set('n', '[lsp]',    '<Nop>', {})
+      vim.keymap.set('n', '[lsp]', '<Nop>', {})
       vim.keymap.set('n', '<Space>l', '[lsp]', { remap = true })
     end,
     config = function()
-      local mason          = require('mason')
+      local mason = require('mason')
       local masonLspconfig = require('mason-lspconfig')
-      local nvimLspconfig  = require('lspconfig')
+      local nvimLspconfig = require('lspconfig')
 
       local servers = {
         'bashls',
@@ -48,7 +48,7 @@ return {
       })
 
       masonLspconfig.setup({
-        ensure_installed       = servers,
+        ensure_installed = servers,
         automatic_installation = true,
       })
 
