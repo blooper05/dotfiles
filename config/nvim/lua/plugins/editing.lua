@@ -54,6 +54,10 @@ return {
           augend.constant.alias.ja_weekday_full,
           augend.constant.alias.bool,
           augend.semver.alias.semver,
+          augend.case.new({
+            types = { 'camelCase', 'snake_case', 'kebab-case', 'PascalCase', 'SCREAMING_SNAKE_CASE' },
+            cyclic = true,
+          }),
           augend.constant.new({
             elements = {
               'pick',
