@@ -70,18 +70,29 @@ return {
   {
     'nvim-neotest/neotest',
     requires = {
-      { 'antoinemadec/FixCursorHold.nvim'      },
-      { 'nvim-lua/plenary.nvim'                },
-      { 'nvim-treesitter/nvim-treesitter'      },
+      { 'antoinemadec/FixCursorHold.nvim' },
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-treesitter/nvim-treesitter' },
       { 'olimorris/neotest-rspec', ft = 'ruby' },
     },
     config = function()
       local neotest = require('neotest')
 
-      vim.keymap.set('n', '<Leader>c', function() neotest.run.run(vim.fn.expand('%')) end, { silent = true })
-      vim.keymap.set('n', '<Leader>n', function() neotest.run.run()                   end, { silent = true })
-      vim.keymap.set('n', '<Leader>l', function() neotest.run.run_last()              end, { silent = true })
-      vim.keymap.set('n', '<Leader>a', function() neotest.run.run(vim.fn.getcwd())    end, { silent = true })
+      vim.keymap.set('n', '<Leader>c', function()
+        neotest.run.run(vim.fn.expand('%'))
+      end, { silent = true })
+
+      vim.keymap.set('n', '<Leader>n', function()
+        neotest.run.run()
+      end, { silent = true })
+
+      vim.keymap.set('n', '<Leader>l', function()
+        neotest.run.run_last()
+      end, { silent = true })
+
+      vim.keymap.set('n', '<Leader>a', function()
+        neotest.run.run(vim.fn.getcwd())
+      end, { silent = true })
 
       neotest.setup({
         adapters = {
