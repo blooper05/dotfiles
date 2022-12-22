@@ -125,6 +125,9 @@ return {
         messages = {
           view_search = false,
         },
+        popupmenu = {
+          backend = 'cmp',
+        },
         lsp = {
           override = {
             ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
