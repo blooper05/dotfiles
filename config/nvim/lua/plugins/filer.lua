@@ -47,7 +47,7 @@ return {
     config = function()
       require('project_nvim').setup({})
     end,
-    event = 'BufReadPre',
+    event = 'BufReadPost',
   },
 
   {
@@ -56,6 +56,6 @@ return {
       -- Automatically switch a buffer name when the target file is not readable or writable.
       vim.g.suda_smart_edit = true
     end,
-    event = 'BufReadPre',
+    event = 'BufReadPost',
   },
 }

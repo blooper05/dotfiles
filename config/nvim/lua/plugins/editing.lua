@@ -103,7 +103,7 @@ return {
         'toggleterm',
       }
     end,
-    event = 'BufReadPre',
+    event = 'BufReadPost',
   },
 
   {
@@ -125,7 +125,7 @@ return {
 
       require('todo-comments').setup({})
     end,
-    event = 'BufReadPre',
+    event = 'BufReadPost',
   },
 
   {
@@ -144,6 +144,6 @@ return {
     config = function()
       require('neoscroll').setup({})
     end,
-    event = 'BufReadPre',
+    event = 'BufReadPost',
   },
 }

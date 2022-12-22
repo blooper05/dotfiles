@@ -47,7 +47,7 @@ return {
         end,
       })
     end,
-    event = 'BufReadPre',
+    event = 'BufReadPost',
   },
 
   {

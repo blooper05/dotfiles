@@ -84,7 +84,7 @@ return {
         show_current_context_start = true,
       })
     end,
-    event = 'BufReadPre',
+    event = 'BufReadPost',
   },
 
   {
@@ -102,7 +102,7 @@ return {
       })
     end,
     wants = { 'nvim-hlslens', 'gitsigns.nvim' },
-    event = 'BufReadPre',
+    event = 'BufReadPost',
   },
 
   {
