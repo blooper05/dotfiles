@@ -84,8 +84,7 @@ return {
         show_current_context_start = true,
       })
     end,
-    wants = 'colorscheme',
-    event = 'BufWinEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -102,8 +101,8 @@ return {
         },
       })
     end,
-    wants = { 'colorscheme', 'nvim-hlslens', 'gitsigns.nvim' },
-    event = 'BufWinEnter',
+    wants = { 'nvim-hlslens', 'gitsigns.nvim' },
+    event = 'BufReadPre',
   },
 
   {
