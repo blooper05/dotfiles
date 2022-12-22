@@ -4,6 +4,7 @@ return {
     config = function()
       require('toggleterm').setup({
         open_mapping = '<Leader>t',
+        direction = 'float',
       })
     end,
     cmd = 'ToggleTerm',
