@@ -24,55 +24,28 @@ local function packerStartup(use)
     end,
   })
 
-  for _, plugin in ipairs(require('plugins.appearance')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.treesitter')) do
-    use(plugin)
-  end
+  local categories = {
+    'appearance',
+    'treesitter',
+    'lsp',
+    'completion',
+    'fuzzy_finder',
+    'filer',
+    'terminal',
+    'text_object',
+    'editing',
+    'search',
+    'dap',
+    'runner',
+    'filetype',
+    'vcs',
+    'web',
+  }
 
-  for _, plugin in ipairs(require('plugins.lsp')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.completion')) do
-    use(plugin)
-  end
-
-  for _, plugin in ipairs(require('plugins.fuzzy_finder')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.filer')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.terminal')) do
-    use(plugin)
-  end
-
-  for _, plugin in ipairs(require('plugins.text_object')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.editing')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.search')) do
-    use(plugin)
-  end
-
-  for _, plugin in ipairs(require('plugins.dap')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.runner')) do
-    use(plugin)
-  end
-
-  for _, plugin in ipairs(require('plugins.filetype')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.vcs')) do
-    use(plugin)
-  end
-  for _, plugin in ipairs(require('plugins.web')) do
-    use(plugin)
+  for _, plugins in ipairs(categories) do
+    for _, plugin in ipairs(require('plugins.' .. plugins)) do
+      use(plugin)
+    end
   end
 
   if PackerBootstrap then
