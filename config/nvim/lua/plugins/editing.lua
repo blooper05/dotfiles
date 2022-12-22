@@ -95,7 +95,7 @@ return {
       vim.g.strip_whitespace_on_save = true
       vim.g.strip_whitespace_confirm = false
     end,
-    event = 'BufWinEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -117,7 +117,7 @@ return {
 
       require('todo-comments').setup({})
     end,
-    event = 'BufWinEnter',
+    event = 'BufReadPre',
   },
 
   {
@@ -136,6 +136,6 @@ return {
     config = function()
       require('neoscroll').setup({})
     end,
-    event = 'BufWinEnter',
+    event = 'BufReadPre',
   },
 }
