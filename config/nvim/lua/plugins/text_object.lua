@@ -15,7 +15,9 @@ return {
     end,
     config = function()
       require('nvim-treesitter.configs').setup({
-        matchup = { enable = true },
+        matchup = {
+          enable = true,
+        },
       })
     end,
     after = 'nvim-treesitter',
