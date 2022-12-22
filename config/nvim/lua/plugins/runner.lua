@@ -51,7 +51,8 @@ return {
   },
 
   {
-    'michaelb/sniprun', run = 'bash ./install.sh',
+    'michaelb/sniprun',
+    run = 'bash ./install.sh',
     config = function()
       local sniprun = require('sniprun')
 
