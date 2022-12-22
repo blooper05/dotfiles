@@ -10,6 +10,7 @@ return {
       vim.keymap.set('n', '<Space>l', '[lsp]', { remap = true })
     end,
     config = function()
+      local mason          = require('mason')
       local masonLspconfig = require('mason-lspconfig')
       local nvimLspconfig  = require('lspconfig')
 
@@ -41,6 +42,10 @@ return {
         -- 'vuels',
         'yamlls',
       }
+
+      mason.setup({
+        max_concurrent_installers = 8,
+      })
 
       masonLspconfig.setup({
         ensure_installed       = servers,
