@@ -9,7 +9,7 @@ export GPG_TTY=$(tty)
 # Environment Variable {{{1
 
 # PATH
-typeset -U path PATH
+typeset -U path PATH # to avoid duplicate entries
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # XDG Base Directory Specification
