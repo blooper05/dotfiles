@@ -23,6 +23,7 @@ return {
           null_ls.builtins.formatting.prettier.with({ prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.formatting.rubocop.with({ command = 'docker-rubocop' }),
           null_ls.builtins.formatting.shfmt,
+          null_ls.builtins.formatting.sqlfluff,
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.terraform_fmt,
           null_ls.builtins.formatting.textlint.with({ filetypes = { 'markdown', 'text' }, prefer_local = 'node_modules/.bin' }),
