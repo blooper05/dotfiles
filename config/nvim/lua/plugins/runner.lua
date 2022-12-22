@@ -10,6 +10,7 @@ return {
       null_ls.setup({
         sources = {
           null_ls.builtins.diagnostics.actionlint,
+          null_ls.builtins.diagnostics.dotenv_linter,
           null_ls.builtins.diagnostics.editorconfig_checker,
           null_ls.builtins.diagnostics.gitlint.with({ filetypes = { 'gina-commit', 'gitcommit' } }),
           null_ls.builtins.diagnostics.hadolint,
