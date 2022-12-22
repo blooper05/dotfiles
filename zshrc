@@ -1,7 +1,7 @@
 # Initialization {{{1
 
 # Disable START/STOP output control to release the C-s/C-q keybindings.
-tty -s && stty -ixon
+test -t 0 && stty -ixon
 
 # Set GPG TTY.
 export GPG_TTY=$(tty)
