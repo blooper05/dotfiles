@@ -1,27 +1,14 @@
 return {
   {
     'neovim/nvim-lspconfig',
+    requires = {
+      { 'williamboman/mason-lspconfig.nvim', opt = true, module = 'mason-lspconfig' },
+      { 'williamboman/mason.nvim', opt = true, module = 'mason' },
+    },
     setup = function()
       vim.keymap.set('n', '[lsp]',    '<Nop>', {})
       vim.keymap.set('n', '<Space>l', '[lsp]', { remap = true })
     end,
-    event = 'BufReadPre',
-  },
-
-  {
-    'williamboman/mason.nvim',
-    config = function()
-      require('mason').setup({})
-    end,
-    event = 'BufReadPre',
-  },
-
-  {
-    'williamboman/mason-lspconfig.nvim',
-    requires = {
-      { 'neovim/nvim-lspconfig'   },
-      { 'williamboman/mason.nvim' },
-    },
     config = function()
       local masonLspconfig = require('mason-lspconfig')
       local nvimLspconfig  = require('lspconfig')
@@ -72,7 +59,7 @@ return {
         end,
       })
     end,
-    after = { 'nvim-lspconfig', 'mason.nvim' },
+    event = 'BufReadPre',
   },
 
   {
