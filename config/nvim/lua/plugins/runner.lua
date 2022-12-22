@@ -2,7 +2,6 @@ return {
   {
     'jose-elias-alvarez/null-ls.nvim',
     requires = {
-      { 'neovim/nvim-lspconfig' },
       { 'nvim-lua/plenary.nvim' },
     },
     config = function()
@@ -36,18 +35,17 @@ return {
           if client.supports_method('textDocument/formatting') then
             vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
             vim.api.nvim_create_autocmd('BufWritePre', {
-              group    = augroup,
-              buffer   = bufnr,
+              group = augroup,
+              buffer = bufnr,
               callback = function()
                 vim.lsp.buf.format({ bufnr = bufnr })
-              end
+              end,
             })
           end
         end,
       })
     end,
-    after = 'nvim-lspconfig',
-    event = 'BufWinEnter',
+    event = 'BufReadPre',
   },
 
   {
