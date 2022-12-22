@@ -1,10 +1,8 @@
 return {
   {
-    'bkad/CamelCaseMotion', -- non-lua plugin
-    setup = function()
-      vim.g.camelcasemotion_key = ''
-    end,
-    event = 'BufWinEnter',
+    'chaoren/vim-wordmotion', -- non-lua plugin
+    setup = function() end,
+    keys = { 'w', 'W', 'b', 'B', 'e', 'E', 'ge', 'gE', 'aw', 'aW', 'iw', 'iW', '<C-R><C-W>', '<C-R><C-A>' },
   },
 
   {
