@@ -9,7 +9,7 @@ vim.cmd('language messages C')
 vim.cmd('language time C')
 
 -- Settings of the encoding to use for a save and reading.
-vim.opt.encoding      = 'utf-8'
+vim.opt.encoding = 'utf-8'
 vim.opt.fileencodings = {
   'utf-8',
   'euc-jp',
@@ -31,8 +31,13 @@ vim.opt.clipboard = {
 vim.opt.lazyredraw = true
 
 -- Edit and reload vimrc immediately.
-vim.keymap.set('n', '<F5>', function() vim.cmd('tabedit $MYVIMRC') end, { silent = true })
-vim.keymap.set('n', '<F6>', function() vim.cmd('luafile $MYVIMRC') end, { silent = true })
+vim.keymap.set('n', '<F5>', function()
+  vim.cmd('tabedit $MYVIMRC')
+end, { silent = true })
+
+vim.keymap.set('n', '<F6>', function()
+  vim.cmd('luafile $MYVIMRC')
+end, { silent = true })
 
 -- Exit terminal mode easily.
 vim.keymap.set('t', '<ESC>', [[<C-\><C-n>]], { silent = true })
@@ -52,7 +57,9 @@ vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
 -- Clear highlight.
-vim.keymap.set('n', '<ESC><ESC>', function() vim.cmd('nohlsearch') end, { silent = true })
+vim.keymap.set('n', '<ESC><ESC>', function()
+  vim.cmd('nohlsearch')
+end, { silent = true })
 
 -- View {{{1
 
@@ -65,7 +72,7 @@ vim.opt.list = true
 -- Don't wrap long line.
 vim.opt.wrap = false
 
--- Always display statusline.
+-- Always and only the last window display statusline.
 vim.opt.laststatus = 3
 
 -- Show command on statusline.
@@ -132,16 +139,16 @@ vim.opt.inccommand = 'split'
 vim.keymap.set('n', '<CR>', 'o<ESC>', {})
 
 -- Command-line mode key-mappings.
-vim.keymap.set('c', '<C-a>', '<Home>',  {})
-vim.keymap.set('c', '<C-e>', '<End>',   {})
-vim.keymap.set('c', '<C-b>', '<Left>',  {})
+vim.keymap.set('c', '<C-a>', '<Home>', {})
+vim.keymap.set('c', '<C-e>', '<End>', {})
+vim.keymap.set('c', '<C-b>', '<Left>', {})
 vim.keymap.set('c', '<C-f>', '<Right>', {})
-vim.keymap.set('c', '<C-d>', '<Del>',   {})
+vim.keymap.set('c', '<C-d>', '<Del>', {})
 
 -- Disable auto comments on the next line
 local noAutoComment = vim.api.nvim_create_augroup('NoAutoComment', { clear = true })
 vim.api.nvim_create_autocmd('BufEnter', {
-  group    = noAutoComment,
+  group = noAutoComment,
   callback = function()
     vim.cmd('setlocal formatoptions-=c')
     vim.cmd('setlocal formatoptions-=r')
