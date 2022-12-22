@@ -25,6 +25,7 @@ return {
         'html',
         'jsonls',
         'jsonnet_ls',
+        -- 'nginx-language-server',
         'pylsp',
         -- 'remark_ls',
         'ruby_ls',
