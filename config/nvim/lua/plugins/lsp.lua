@@ -63,6 +63,14 @@ return {
             settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
           })
         end,
+
+        ['ruby_ls'] = function()
+          nvimLspconfig.ruby_ls.setup({
+            init_options = {
+              enabledFeatures = { 'codeActions', 'diagnostics', 'documentHighlights', 'documentSymbols', 'inlayHint' },
+            },
+          })
+        end,
       })
     end,
     event = 'BufReadPost',
