@@ -5,8 +5,6 @@
 [alias]
   graph  = log --graph --pretty=pretty
   ignore = !curl --silent --location https://www.toptal.com/developers/gitignore/api/$@
-[branch]
-  autoSetupMerge = inherit
 [commit]
   template = ~/.config/git/template
 [diff]
