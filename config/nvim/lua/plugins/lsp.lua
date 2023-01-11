@@ -2,6 +2,7 @@ return {
   {
     'neovim/nvim-lspconfig',
     requires = {
+      { 'SmiteshP/nvim-navic', opt = true, module = 'nvim-navic' },
       { 'williamboman/mason-lspconfig.nvim', opt = true, module = 'mason-lspconfig' },
       { 'williamboman/mason.nvim', opt = true, module = 'mason' },
     },
@@ -44,6 +45,10 @@ return {
         'yamlls',
       }
 
+      local on_attach = function(client, bufnr)
+        require('nvim-navic').attach(client, bufnr)
+      end
+
       mason.setup({
         max_concurrent_installers = 8,
       })
@@ -55,11 +60,14 @@ return {
 
       masonLspconfig.setup_handlers({
         function(server_name)
-          nvimLspconfig[server_name].setup({})
+          nvimLspconfig[server_name].setup({
+            on_attach = on_attach,
+          })
         end,
 
         ['sumneko_lua'] = function()
           nvimLspconfig.sumneko_lua.setup({
+            on_attach = on_attach,
             settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
           })
         end,
@@ -69,6 +77,7 @@ return {
             init_options = {
               enabledFeatures = { 'codeActions', 'diagnostics', 'documentHighlights', 'documentSymbols', 'inlayHint' },
             },
+            on_attach = on_attach,
           })
         end,
       })

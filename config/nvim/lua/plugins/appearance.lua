@@ -25,6 +25,7 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     requires = {
+      { 'SmiteshP/nvim-navic', opt = true },
       { 'nvim-tree/nvim-web-devicons', opt = true },
     },
     setup = function()
@@ -32,6 +33,8 @@ return {
       vim.opt.showmode = false
     end,
     config = function()
+      local navic = require('nvim-navic')
+
       require('lualine').setup({
         options = {
           globalstatus = true,
@@ -43,8 +46,14 @@ return {
           'quickfix',
           'toggleterm',
         },
+        sections = {
+          lualine_c = {
+            { navic.get_location, cond = navic.is_available },
+          },
+        },
       })
     end,
+    wants = 'nvim-navic',
     after = 'colorscheme',
   },
 
