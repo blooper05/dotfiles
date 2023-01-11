@@ -20,6 +20,7 @@ return {
           null_ls.builtins.diagnostics.shellcheck,
           null_ls.builtins.diagnostics.sqlfluff,
           null_ls.builtins.diagnostics.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
+          null_ls.builtins.diagnostics.tfsec,
           null_ls.builtins.diagnostics.yamllint,
           null_ls.builtins.formatting.eslint.with({ prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.formatting.markdownlint.with({ prefer_local = 'node_modules/.bin' }),
