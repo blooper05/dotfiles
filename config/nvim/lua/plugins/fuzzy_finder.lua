@@ -1,75 +1,118 @@
 return {
   {
     'nvim-telescope/telescope.nvim',
-    requires = {
+    dependencies = {
+      { 'neovim/nvim-lspconfig' },
       { 'nvim-lua/plenary.nvim' },
-      { 'neovim/nvim-lspconfig', opt = true },
-      { 'nvim-tree/nvim-web-devicons', opt = true },
-      { 'nvim-treesitter/nvim-treesitter', opt = true },
+      { 'nvim-tree/nvim-web-devicons' },
+      { 'nvim-treesitter/nvim-treesitter' },
     },
-    setup = function()
-      vim.keymap.set('n', '[telescope]', '<Nop>', {})
-      vim.keymap.set('n', '<Space>u', '[telescope]', { remap = true })
-    end,
-    config = function()
-      local builtin = require('telescope.builtin')
+    opts = {
+      defaults = {
+        sorting_strategy = 'ascending',
+        layout_strategy = 'flex',
 
-      vim.keymap.set('n', '[telescope]f', builtin.find_files, { silent = true })
-      vim.keymap.set('n', '[telescope]g', builtin.live_grep, { silent = true })
-      vim.keymap.set('n', '[telescope]*', builtin.grep_string, { silent = true })
-      vim.keymap.set('n', '[telescope]B', builtin.buffers, { silent = true })
-      vim.keymap.set('n', '[telescope]R', builtin.registers, { silent = true })
-      vim.keymap.set('n', '[telescope]H', builtin.help_tags, { silent = true })
-      vim.keymap.set('n', '[telescope]M', builtin.man_pages, { silent = true })
-      vim.keymap.set('n', '[telescope]u', builtin.resume, { silent = true })
+        layout_config = {
+          prompt_position = 'top',
+        },
 
-      require('telescope').setup({
-        defaults = {
-          sorting_strategy = 'ascending',
-          layout_strategy = 'flex',
-
-          layout_config = {
-            prompt_position = 'top',
-          },
-
-          mappings = {
-            i = {
-              ['<C-u>'] = false,
-              ['<C-a>'] = { '<Home>', type = 'command' },
-              ['<C-e>'] = { '<End>', type = 'command' },
-              ['<C-b>'] = { '<Left>', type = 'command' },
-              ['<C-f>'] = { '<Right>', type = 'command' },
-              ['<C-d>'] = { '<Del>', type = 'command' },
-              ['<Esc>'] = 'close',
-            },
+        mappings = {
+          i = {
+            ['<C-u>'] = false,
+            ['<C-a>'] = { '<Home>', type = 'command' },
+            ['<C-e>'] = { '<End>', type = 'command' },
+            ['<C-b>'] = { '<Left>', type = 'command' },
+            ['<C-f>'] = { '<Right>', type = 'command' },
+            ['<C-d>'] = { '<Del>', type = 'command' },
+            ['<Esc>'] = 'close',
           },
         },
-        pickers = {
-          live_grep = {
-            additional_args = function()
-              return { '--hidden', '--glob=!.git/' }
-            end,
-          },
-
-          grep_string = {
-            additional_args = function()
-              return { '--hidden', '--glob=!.git/' }
-            end,
-          },
-
-          find_files = {
-            find_command = { 'fd', '--type=file', '--hidden', '--exclude=.git/' },
-          },
+      },
+      pickers = {
+        live_grep = {
+          additional_args = function()
+            return { '--hidden', '--glob=!.git/' }
+          end,
         },
-      })
-    end,
+
+        grep_string = {
+          additional_args = function()
+            return { '--hidden', '--glob=!.git/' }
+          end,
+        },
+
+        find_files = {
+          find_command = { 'fd', '--type=file', '--hidden', '--exclude=.git/' },
+        },
+      },
+    },
     cmd = 'Telescope',
-    keys = '[telescope]',
+    keys = {
+      { '[telescope]', '<Nop>' },
+      { '<Space>u', '[telescope]', remap = true },
+
+      {
+        '[telescope]f',
+        function()
+          require('telescope.builtin').find_files()
+        end,
+        silent = true,
+      },
+      {
+        '[telescope]g',
+        function()
+          require('telescope.builtin').live_grep()
+        end,
+        silent = true,
+      },
+      {
+        '[telescope]*',
+        function()
+          require('telescope.builtin').grep_string()
+        end,
+        silent = true,
+      },
+      {
+        '[telescope]B',
+        function()
+          require('telescope.builtin').buffers()
+        end,
+        silent = true,
+      },
+      {
+        '[telescope]R',
+        function()
+          require('telescope.builtin').registers()
+        end,
+        silent = true,
+      },
+      {
+        '[telescope]H',
+        function()
+          require('telescope.builtin').help_tags()
+        end,
+        silent = true,
+      },
+      {
+        '[telescope]M',
+        function()
+          require('telescope.builtin').man_pages()
+        end,
+        silent = true,
+      },
+      {
+        '[telescope]u',
+        function()
+          require('telescope.builtin').resume()
+        end,
+        silent = true,
+      },
+    },
   },
 
   {
     'nvim-telescope/telescope-fzy-native.nvim',
-    requires = {
+    dependencies = {
       { 'nvim-telescope/telescope.nvim' },
     },
     config = function()
@@ -84,41 +127,38 @@ return {
 
       require('telescope').load_extension('fzy_native')
     end,
-    after = 'telescope.nvim',
   },
 
   {
     'nvim-telescope/telescope-frecency.nvim',
-    requires = {
+    dependencies = {
       { 'kkharji/sqlite.lua' },
       { 'nvim-telescope/telescope.nvim' },
     },
-    config = function()
-      vim.keymap.set('n', '[telescope]h', require('telescope').extensions.frecency.frecency, { silent = true })
-    end,
-    after = 'telescope.nvim',
+    keys = {
+      {
+        '[telescope]h',
+        function()
+          require('telescope').extensions.frecency.frecency()
+        end,
+        silent = true,
+      },
+    },
   },
 
   {
     'nvim-telescope/telescope-ghq.nvim',
-    requires = {
+    dependencies = {
       { 'nvim-telescope/telescope.nvim' },
     },
-    config = function()
-      vim.keymap.set('n', '[telescope]s', require('telescope').extensions.ghq.list, { silent = true })
-    end,
-    after = 'telescope.nvim',
-  },
-
-  {
-    'nvim-telescope/telescope-packer.nvim',
-    requires = {
-      { 'nvim-telescope/telescope.nvim' },
-      { 'wbthomason/packer.nvim' },
+    keys = {
+      {
+        '[telescope]s',
+        function()
+          require('telescope').extensions.ghq.list()
+        end,
+        silent = true,
+      },
     },
-    config = function()
-      vim.keymap.set('n', '[telescope]P', require('telescope').extensions.packer.packer, { silent = true })
-    end,
-    after = 'telescope.nvim',
   },
 }

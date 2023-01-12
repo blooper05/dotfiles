@@ -1,7 +1,3 @@
--- Plugins {{{1
-
-require('plugins')
-
 -- Basic {{{1
 
 -- Use English interface.
@@ -175,6 +171,10 @@ vim.opt.shiftwidth = 2
 
 -- Stop syntax highlight of too long lines
 vim.opt.synmaxcol = 240
+
+-- Packages {{{1
+
+require('packages')
 
 -- Folding {{{1
 

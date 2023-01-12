@@ -1,14 +1,10 @@
 return {
   {
     'neovim/nvim-lspconfig',
-    requires = {
-      { 'williamboman/mason-lspconfig.nvim', opt = true, module = 'mason-lspconfig' },
-      { 'williamboman/mason.nvim', opt = true, module = 'mason' },
+    dependencies = {
+      { 'williamboman/mason-lspconfig.nvim' },
+      { 'williamboman/mason.nvim' },
     },
-    setup = function()
-      vim.keymap.set('n', '[lsp]', '<Nop>', {})
-      vim.keymap.set('n', '<Space>l', '[lsp]', { remap = true })
-    end,
     config = function()
       local mason = require('mason')
       local masonLspconfig = require('mason-lspconfig')
@@ -74,58 +70,68 @@ return {
       })
     end,
     event = 'BufReadPost',
+    keys = {
+      { '[lsp]', '<Nop>' },
+      { '<Space>l', '[lsp]', remap = true },
+    },
   },
 
   {
     'glepnir/lspsaga.nvim',
-    requires = {
+    dependencies = {
       { 'neovim/nvim-lspconfig' },
     },
-    setup = function()
-      vim.keymap.set('n', '[lsp]r', function()
-        vim.cmd('Lspsaga rename')
-      end, { silent = true })
-
-      vim.keymap.set('n', '[lsp]a', function()
-        vim.cmd('Lspsaga code_action')
-      end, { silent = true })
-
-      vim.keymap.set('x', '[lsp]a', function()
-        vim.cmd('Lspsaga range_code_action')
-      end, { silent = true })
-
-      vim.keymap.set('n', '[lsp]d', function()
-        vim.cmd('Lspsaga hover_doc')
-      end, { silent = true })
-
-      vim.keymap.set('n', '[lsp]f', function()
-        vim.cmd('Lspsaga lsp_finder')
-      end, { silent = true })
-    end,
     config = function()
       require('lspsaga').init_lsp_saga({})
     end,
-    after = 'nvim-lspconfig',
     cmd = 'Lspsaga',
-    keys = '[lsp]',
+    keys = {
+      {
+        '[lsp]r',
+        function()
+          vim.cmd('Lspsaga rename')
+        end,
+        silent = true,
+      },
+      {
+        '[lsp]a',
+        function()
+          vim.cmd('Lspsaga code_action')
+        end,
+        silent = true,
+      },
+      {
+        '[lsp]d',
+        function()
+          vim.cmd('Lspsaga hover_doc')
+        end,
+        silent = true,
+      },
+      {
+        '[lsp]f',
+        function()
+          vim.cmd('Lspsaga lsp_finder')
+        end,
+        silent = true,
+      },
+    },
   },
 
   {
     'folke/trouble.nvim',
-    requires = {
+    dependencies = {
       { 'neovim/nvim-lspconfig' },
-      { 'nvim-tree/nvim-web-devicons', opt = true },
+      { 'nvim-tree/nvim-web-devicons' },
     },
-    setup = function()
-      vim.keymap.set('n', '[lsp]l', function()
-        vim.cmd('TroubleToggle')
-      end, { silent = true })
-    end,
-    config = function()
-      require('trouble').setup({})
-    end,
-    after = 'nvim-lspconfig',
     cmd = 'TroubleToggle',
-    keys = '[lsp]',
+    keys = {
+      {
+        '[lsp]l',
+        function()
+          vim.cmd('TroubleToggle')
+        end,
+        silent = true,
+      },
+    },
   },
 }

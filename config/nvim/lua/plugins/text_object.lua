@@ -1,16 +1,15 @@
 return {
   {
     'chaoren/vim-wordmotion', -- non-lua plugin
-    setup = function() end,
     keys = { 'w', 'W', 'b', 'B', 'e', 'E', 'ge', 'gE', 'aw', 'aW', 'iw', 'iW', '<C-R><C-W>', '<C-R><C-A>' },
   },
 
   {
     'andymass/vim-matchup', -- non-lua plugin
-    requires = {
-      { 'nvim-treesitter/nvim-treesitter', opt = true },
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter' },
     },
-    setup = function()
+    init = function()
       vim.g.matchup_matchparen_offscreen = { method = 'popup' }
     end,
     config = function()
@@ -20,47 +19,41 @@ return {
         },
       })
     end,
-    after = 'nvim-treesitter',
+    event = 'BufReadPost',
   },
 
   {
     'haya14busa/vim-operator-flashy', -- non-lua plugin
-    requires = {
+    dependencies = {
       { 'kana/vim-operator-user' },
     },
-    config = function()
-      vim.keymap.set('', 'y', '<Plug>(operator-flashy)', { remap = true })
-      vim.keymap.set('n', 'Y', '<Plug>(operator-flashy)$', { remap = true })
-    end,
-    wants = 'vim-operator-user',
-    keys = { 'y', 'Y' },
+    keys = {
+      { 'y', '<Plug>(operator-flashy)', mode = '', remap = true },
+      { 'Y', '<Plug>(operator-flashy)$', mode = 'n', remap = true },
+    },
   },
 
   {
     'rhysd/vim-operator-surround', -- non-lua plugin
-    requires = {
+    dependencies = {
       { 'kana/vim-operator-user' },
     },
-    config = function()
-      vim.keymap.set('o', 's', '<Plug>(operator-surround-append)', { remap = true, silent = true })
-      vim.keymap.set('x', 's', '<Plug>(operator-surround-append)', { remap = true, silent = true })
-      vim.keymap.set('', 'ds', '<Plug>(operator-surround-delete)a', { remap = true, silent = true })
-      vim.keymap.set('', 'cs', '<Plug>(operator-surround-replace)a', { remap = true, silent = true })
-    end,
-    wants = 'vim-operator-user',
-    keys = { 's', 'ds', 'cs' },
+    keys = {
+      { 's', '<Plug>(operator-surround-append)', mode = 'o', remap = true, silent = true },
+      { 's', '<Plug>(operator-surround-append)', mode = 'x', remap = true, silent = true },
+      { 'ds', '<Plug>(operator-surround-delete)a', mode = '', remap = true, silent = true },
+      { 'cs', '<Plug>(operator-surround-replace)a', mode = '', remap = true, silent = true },
+    },
   },
 
   {
     'kana/vim-operator-replace', -- non-lua plugin
-    requires = {
+    dependencies = {
       { 'kana/vim-operator-user' },
     },
-    config = function()
-      vim.keymap.set('o', 'p', '<Plug>(operator-replace)', { remap = true, silent = true })
-      vim.keymap.set('x', 'p', '<Plug>(operator-replace)', { remap = true, silent = true })
-    end,
-    wants = 'vim-operator-user',
-    keys = 'p',
+    keys = {
+      { 'p', '<Plug>(operator-replace)', mode = 'o', remap = true, silent = true },
+      { 'p', '<Plug>(operator-replace)', mode = 'x', remap = true, silent = true },
+    },
   },
 }

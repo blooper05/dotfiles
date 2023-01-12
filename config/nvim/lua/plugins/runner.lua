@@ -1,13 +1,13 @@
 return {
   {
     'jose-elias-alvarez/null-ls.nvim',
-    requires = {
+    dependencies = {
       { 'nvim-lua/plenary.nvim' },
     },
-    config = function()
+    opts = function()
       local null_ls = require('null-ls')
 
-      null_ls.setup({
+      return {
         sources = {
           null_ls.builtins.diagnostics.actionlint,
           null_ls.builtins.diagnostics.dotenv_linter,
@@ -50,56 +50,40 @@ return {
             })
           end
         end,
-      })
+      }
     end,
     event = 'BufReadPost',
   },
 
   {
     'michaelb/sniprun',
-    run = 'bash ./install.sh',
-    config = function()
-      local sniprun = require('sniprun')
-
-      vim.keymap.set('n', '<Leader>r', sniprun.run, { silent = true })
-      vim.keymap.set('v', '<Leader>r', sniprun.run, { silent = true })
-
-      sniprun.setup({
-        display = { 'TerminalWithCode' },
-      })
-    end,
+    build = 'bash ./install.sh',
+    opts = {
+      display = { 'TerminalWithCode' },
+    },
     cmd = 'SnipRun',
-    keys = '<Leader>r',
+    keys = {
+      {
+        '<Leader>r',
+        function()
+          require('sniprun').run()
+        end,
+        mode = { 'n', 'v' },
+        silent = true,
+      },
+    },
   },
 
   {
     'nvim-neotest/neotest',
-    requires = {
+    dependencies = {
       { 'antoinemadec/FixCursorHold.nvim' },
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-treesitter/nvim-treesitter' },
       { 'olimorris/neotest-rspec', ft = 'ruby' },
     },
-    config = function()
-      local neotest = require('neotest')
-
-      vim.keymap.set('n', '<Leader>c', function()
-        neotest.run.run(vim.fn.expand('%'))
-      end, { silent = true })
-
-      vim.keymap.set('n', '<Leader>n', function()
-        neotest.run.run()
-      end, { silent = true })
-
-      vim.keymap.set('n', '<Leader>l', function()
-        neotest.run.run_last()
-      end, { silent = true })
-
-      vim.keymap.set('n', '<Leader>a', function()
-        neotest.run.run(vim.fn.getcwd())
-      end, { silent = true })
-
-      neotest.setup({
+    opts = function()
+      return {
         adapters = {
           require('neotest-rspec')({
             rspec_cmd = function()
@@ -107,9 +91,38 @@ return {
             end,
           }),
         },
-      })
+      }
     end,
-    keys = { '<Leader>c', '<Leader>n', '<Leader>l', '<Leader>a' },
+    keys = {
+      {
+        '<Leader>c',
+        function()
+          require('neotest').run.run(vim.fn.expand('%'))
+        end,
+        silent = true,
+      },
+      {
+        '<Leader>n',
+        function()
+          require('neotest').run.run()
+        end,
+        silent = true,
+      },
+      {
+        '<Leader>l',
+        function()
+          require('neotest').run.run_last()
+        end,
+        silent = true,
+      },
+      {
+        '<Leader>a',
+        function()
+          require('neotest').run.run(vim.fn.getcwd())
+        end,
+        silent = true,
+      },
+    },
   },
 
   -- TODO: { 'renerocksai/telekasten.nvim' },

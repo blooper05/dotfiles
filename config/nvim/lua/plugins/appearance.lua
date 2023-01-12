@@ -1,8 +1,7 @@
 return {
   {
     'EdenEast/nightfox.nvim',
-    as = 'colorscheme',
-    setup = function()
+    init = function()
       -- Assume a dark background.
       vim.opt.background = 'dark'
 
@@ -17,181 +16,164 @@ return {
   },
 
   {
-    'nvim-tree/nvim-web-devicons',
-    config = function() end,
-    module = 'nvim-web-devicons',
-  },
-
-  {
     'nvim-lualine/lualine.nvim',
-    requires = {
-      { 'nvim-tree/nvim-web-devicons', opt = true },
+    dependencies = {
+      { 'EdenEast/nightfox.nvim' },
+      { 'nvim-tree/nvim-web-devicons' },
     },
-    setup = function()
+    init = function()
       -- Get rid of redundant mode display.
       vim.opt.showmode = false
     end,
-    config = function()
-      require('lualine').setup({
-        options = {
-          globalstatus = true,
-        },
-        extensions = {
-          'man',
-          'nvim-dap-ui',
-          'nvim-tree',
-          'quickfix',
-          'toggleterm',
-        },
-      })
-    end,
-    after = 'colorscheme',
+    opts = {
+      options = {
+        globalstatus = true,
+      },
+      extensions = {
+        'man',
+        'nvim-dap-ui',
+        'nvim-tree',
+        'quickfix',
+        'toggleterm',
+      },
+    },
+    event = 'UIEnter',
   },
 
   {
     'akinsho/bufferline.nvim',
-    requires = {
-      { 'nvim-tree/nvim-web-devicons', opt = true },
+    dependencies = {
+      { 'EdenEast/nightfox.nvim' },
+      { 'nvim-tree/nvim-web-devicons' },
     },
-    setup = function()
+    init = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
     end,
-    config = function()
-      require('bufferline').setup({
-        options = {
-          mode = 'tabs',
-        },
-      })
-    end,
-    after = 'colorscheme',
+    opts = {
+      options = {
+        mode = 'tabs',
+      },
+    },
+    event = 'UIEnter',
   },
 
   {
     'lukas-reineke/indent-blankline.nvim',
-    requires = {
-      { 'nvim-treesitter/nvim-treesitter', opt = true },
+    dependencies = {
+      { 'EdenEast/nightfox.nvim' },
+      { 'nvim-treesitter/nvim-treesitter' },
     },
-    setup = function()
+    init = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
     end,
-    config = function()
-      require('indent_blankline').setup({
-        indent_blankline_use_treesitter = true,
-        indent_blankline_use_treesitter_scope = true,
-        show_current_context = true,
-        show_current_context_start = true,
-      })
-    end,
+    opts = {
+      indent_blankline_use_treesitter = true,
+      indent_blankline_use_treesitter_scope = true,
+      show_current_context = true,
+      show_current_context_start = true,
+    },
     event = 'BufReadPost',
   },
 
   {
     'petertriho/nvim-scrollbar',
-    requires = {
-      { 'kevinhwang91/nvim-hlslens', opt = true },
-      { 'lewis6991/gitsigns.nvim', opt = true },
+    dependencies = {
+      { 'kevinhwang91/nvim-hlslens' },
+      { 'lewis6991/gitsigns.nvim' },
     },
-    config = function()
-      require('scrollbar').setup({
-        handlers = {
-          gitsigns = true,
-          search = true,
-        },
-      })
-    end,
-    wants = { 'nvim-hlslens', 'gitsigns.nvim' },
+    opts = {
+      handlers = {
+        gitsigns = true,
+        search = true,
+      },
+    },
     event = 'BufReadPost',
   },
 
   {
     'folke/noice.nvim',
-    requires = {
+    dependencies = {
       { 'MunifTanjim/nui.nvim' },
-      { 'nvim-treesitter/nvim-treesitter', opt = true },
-      { 'rcarriga/nvim-notify', opt = true },
+      { 'nvim-treesitter/nvim-treesitter' },
+      { 'rcarriga/nvim-notify' },
     },
-    setup = function()
+    init = function()
       -- Redraw during macro execution.
       vim.opt.lazyredraw = false
 
       -- Hide the command-line.
       vim.opt.cmdheight = 0
     end,
-    config = function()
-      require('noice').setup({
-        messages = {
-          view_search = false,
+    opts = {
+      messages = {
+        view_search = false,
+      },
+      popupmenu = {
+        backend = 'cmp',
+      },
+      lsp = {
+        override = {
+          ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
+          ['vim.lsp.util.stylize_markdown'] = true,
+          ['cmp.entry.get_documentation'] = true,
         },
-        popupmenu = {
-          backend = 'cmp',
-        },
-        lsp = {
-          override = {
-            ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
-            ['vim.lsp.util.stylize_markdown'] = true,
-            ['cmp.entry.get_documentation'] = true,
-          },
-        },
-        presets = {
-          command_palette = true,
-          long_message_to_split = true,
-        },
-      })
-    end,
+      },
+      presets = {
+        command_palette = true,
+        long_message_to_split = true,
+      },
+    },
     event = { 'BufNewFile', 'BufReadPost', 'InsertEnter', 'CmdlineEnter' },
   },
 
   {
     'rcarriga/nvim-notify',
-    requires = {
-      { 'nvim-telescope/telescope.nvim', opt = true },
+    dependencies = {
+      { 'nvim-telescope/telescope.nvim' },
     },
-    setup = function()
+    init = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
-
-      vim.keymap.set('n', '[telescope]n', function()
-        require('telescope').extensions.notify.notify()
-      end, { silent = true })
     end,
     config = function()
       -- Use as the default notify function.
       vim.notify = require('notify')
     end,
-    module = 'notify',
+    keys = {
+      {
+        '[telescope]n',
+        function()
+          require('telescope').extensions.notify.notify()
+        end,
+        silent = true,
+      },
+    },
   },
 
   {
     'levouh/tint.nvim',
-    config = function()
-      require('tint').setup({})
-    end,
+    config = true,
     event = { 'WinEnter', 'WinLeave' },
   },
 
   {
     'folke/zen-mode.nvim',
-    requires = {
-      { 'folke/twilight.nvim', opt = true },
+    dependencies = {
+      { 'folke/twilight.nvim' },
     },
-    config = function()
-      require('zen-mode').setup({})
-    end,
-    wants = 'twilight.nvim',
+    config = true,
     cmd = 'ZenMode',
   },
 
   {
     'norcalli/nvim-colorizer.lua',
-    setup = function()
+    init = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
     end,
-    config = function()
-      require('colorizer').setup({})
-    end,
+    config = true,
     cmd = 'ColorizerToggle',
   },
 }

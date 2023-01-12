@@ -1,11 +1,23 @@
 return {
   {
     'hrsh7th/nvim-cmp',
-    requires = {
-      { 'neovim/nvim-lspconfig', opt = true },
-      { 'onsails/lspkind-nvim', opt = true, module = 'lspkind' },
+    dependencies = {
+      { 'f3fora/cmp-spell' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-calc' },
+      { 'hrsh7th/cmp-cmdline' },
+      { 'hrsh7th/cmp-emoji' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
+      { 'hrsh7th/cmp-nvim-lua' },
+      { 'hrsh7th/cmp-path' },
+      { 'neovim/nvim-lspconfig' },
+      { 'onsails/lspkind-nvim' },
+      { 'ray-x/cmp-treesitter' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'uga-rosa/cmp-dictionary' },
     },
-    setup = function()
+    init = function()
       -- Set completeopt to have a better completion experience.
       vim.opt.completeopt = {
         'menuone',
@@ -124,62 +136,34 @@ return {
     event = { 'InsertEnter', 'CmdlineEnter' },
   },
 
-  -- stylua: ignore start
-  { 'hrsh7th/cmp-buffer',                   requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-calc',                     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-cmdline',                  requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-emoji',                    requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-nvim-lsp',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-nvim-lsp-document-symbol', requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-nvim-lua',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'hrsh7th/cmp-path',                     requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  { 'ray-x/cmp-treesitter',                 requires = 'hrsh7th/nvim-cmp', after = 'nvim-cmp' },
-  -- stylua: ignore end
-
   {
     'f3fora/cmp-spell',
-    requires = {
-      { 'hrsh7th/nvim-cmp' },
-      { 'psliwka/vim-dirtytalk', opt = true, run = ':DirtytalkUpdate' },
+    dependencies = {
+      { 'psliwka/vim-dirtytalk', build = ':DirtytalkUpdate' },
     },
-    setup = function()
+    init = function()
       vim.opt.spelllang = { 'en_us', 'programming' }
 
       vim.api.nvim_create_user_command('SpellCheckingToggle', function()
         vim.opt.spell = not (vim.api.nvim_win_get_option(0, 'spell'))
       end, { force = true })
     end,
-    after = 'nvim-cmp',
+    config = true,
   },
 
   {
     'uga-rosa/cmp-dictionary',
-    requires = {
-      { 'hrsh7th/nvim-cmp' },
+    opts = {
+      dic = {
+        ['*'] = { '/usr/share/dict/words' },
+      },
     },
-    config = function()
-      require('cmp_dictionary').setup({
-        dic = {
-          ['*'] = { '/usr/share/dict/words' },
-        },
-      })
-    end,
-    after = 'nvim-cmp',
-  },
-
-  {
-    'saadparwaiz1/cmp_luasnip',
-    requires = {
-      { 'L3MON4D3/LuaSnip' },
-      { 'hrsh7th/nvim-cmp' },
-    },
-    after = { 'LuaSnip', 'nvim-cmp' },
   },
 
   {
     'L3MON4D3/LuaSnip',
-    requires = {
-      { 'rafamadriz/friendly-snippets', opt = true },
+    dependencies = {
+      { 'rafamadriz/friendly-snippets' },
     },
     config = function()
       require('luasnip.loaders.from_vscode').lazy_load()
@@ -219,7 +203,6 @@ return {
         -- stylua: ignore end
       })
     end,
-    module = 'luasnip',
   },
 
   -- TODO: { 'zbirenbaum/copilot.lua' },
@@ -227,8 +210,8 @@ return {
 
   {
     'windwp/nvim-autopairs',
-    requires = {
-      { 'nvim-treesitter/nvim-treesitter', opt = true },
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter' },
     },
     config = function()
       local autopairs = require('nvim-autopairs')
@@ -269,20 +252,22 @@ return {
 
   {
     'danymat/neogen',
-    requires = {
+    dependencies = {
+      { 'L3MON4D3/LuaSnip' },
       { 'nvim-treesitter/nvim-treesitter' },
-      { 'L3MON4D3/LuaSnip', opt = true },
     },
-    setup = function()
-      vim.keymap.set('n', 'gcd', function()
-        require('neogen').generate()
-      end, { silent = true })
-    end,
-    config = function()
-      require('neogen').setup({
-        snippet_engine = 'luasnip',
-      })
-    end,
-    module = 'neogen',
+    opts = {
+      snippet_engine = 'luasnip',
+    },
+    cmd = 'Neogen',
+    keys = {
+      {
+        'gcd',
+        function()
+          require('neogen').generate()
+        end,
+        silent = true,
+      },
+    },
   },
 }

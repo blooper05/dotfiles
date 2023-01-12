@@ -3,28 +3,35 @@ return {
 
   {
     'uga-rosa/translate.nvim',
-    config = function()
-      vim.keymap.set('x', '<Leader>te', function()
-        vim.cmd('Translate EN')
-      end, { silent = true })
-
-      vim.keymap.set('x', '<Leader>tj', function()
-        vim.cmd('Translate JA')
-      end, { silent = true })
-
-      require('translate').setup({
-        default = {
-          output = 'replace',
-        },
-      })
-    end,
+    opts = {
+      default = {
+        output = 'replace',
+      },
+    },
     cmd = 'Translate',
-    keys = { '<Leader>te', '<Leader>tj' },
+    keys = {
+      {
+        '<Leader>te',
+        function()
+          vim.cmd('Translate EN')
+        end,
+        mode = 'x',
+        silent = true,
+      },
+
+      {
+        '<Leader>tj',
+        function()
+          vim.cmd('Translate JA')
+        end,
+        mode = 'x',
+        silent = true,
+      },
+    },
   },
 
   {
     'koron/codic-vim', -- non-lua plugin
-    config = function() end,
     cmd = 'Codic',
   },
 
@@ -32,7 +39,6 @@ return {
 
   {
     'mechatroner/rainbow_csv', -- non-lua plugin
-    config = function() end,
     ft = 'csv',
   },
 
@@ -40,7 +46,6 @@ return {
 
   {
     'google/vim-jsonnet', -- non-lua plugin
-    config = function() end,
     ft = 'jsonnet',
   },
 
@@ -53,6 +58,7 @@ return {
 
       autolist.setup()
 
+      -- FIXME: conflicting with nvim-cmp
       autolist.create_mapping_hook('i', '<CR>', autolist.new)
       autolist.create_mapping_hook('i', '<Tab>', autolist.indent)
       autolist.create_mapping_hook('i', '<S-Tab>', autolist.indent, '<C-D>')
@@ -69,23 +75,25 @@ return {
 
   {
     'previm/previm', -- non-lua plugin
-    requires = {
-      { 'tyru/open-browser.vim', opt = true },
+    dependencies = {
+      { 'tyru/open-browser.vim' },
     },
-    config = function()
-      vim.keymap.set('n', '<Leader>p', function()
-        vim.cmd('PrevimOpen')
-      end, { silent = true })
-    end,
-    wants = 'open-browser.vim',
     ft = 'markdown',
+    keys = {
+      {
+        '<Leader>p',
+        function()
+          vim.cmd('PrevimOpen')
+        end,
+        silent = true,
+      },
+    },
   },
 
   -- PlantUML
 
   {
     'aklt/plantuml-syntax', -- non-lua plugin
-    config = function() end,
     ft = 'plantuml',
   },
 }

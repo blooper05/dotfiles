@@ -1,7 +1,7 @@
 return {
   {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
+    build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup({
         ensure_installed = 'all',
@@ -21,7 +21,7 @@ return {
 
   {
     'yioneko/nvim-yati',
-    requires = {
+    dependencies = {
       { 'nvim-treesitter/nvim-treesitter' },
     },
     config = function()
@@ -31,17 +31,15 @@ return {
         },
       })
     end,
-    after = 'nvim-treesitter',
+    event = 'BufReadPost',
   },
 
   {
     'm-demare/hlargs.nvim',
-    requires = {
+    dependencies = {
       { 'nvim-treesitter/nvim-treesitter' },
     },
-    config = function()
-      require('hlargs').setup({})
-    end,
-    after = 'nvim-treesitter',
+    opts = {},
+    event = 'BufReadPost',
   },
 }

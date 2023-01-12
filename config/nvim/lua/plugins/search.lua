@@ -1,39 +1,44 @@
 return {
   {
     'kevinhwang91/nvim-hlslens',
-    config = function()
-      vim.keymap.set('n', 'n', function()
-        vim.cmd([[execute('normal! ' . v:count1 . 'n')]])
-        require('hlslens').start()
-      end, { silent = true })
-
-      vim.keymap.set('n', 'N', function()
-        vim.cmd([[execute('normal! ' . v:count1 . 'N')]])
-        require('hlslens').start()
-      end, { silent = true })
-    end,
-    keys = { 'n', 'N', '*', '#', 'g*', 'g#' },
+    keys = {
+      {
+        'n',
+        function()
+          vim.cmd([[execute('normal! ' . v:count1 . 'n')]])
+          require('hlslens').start()
+        end,
+        silent = true,
+      },
+      {
+        'N',
+        function()
+          vim.cmd([[execute('normal! ' . v:count1 . 'N')]])
+          require('hlslens').start()
+        end,
+        silent = true,
+      },
+    },
   },
 
   {
     'haya14busa/vim-asterisk', -- non-lua plugin
-    requires = {
-      { 'kevinhwang91/nvim-hlslens', opt = true },
+    dependencies = {
+      { 'kevinhwang91/nvim-hlslens' },
     },
-    setup = function()
+    init = function()
       -- Keep cursor position across matches.
       vim.g['asterisk#keeppos'] = true
     end,
-    config = function()
-      vim.keymap.set('n', '*', [[<Plug>(asterisk-z*)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
-      vim.keymap.set('n', '#', [[<Plug>(asterisk-z#)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
-      vim.keymap.set('n', 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
-      vim.keymap.set('n', 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
-      vim.keymap.set('x', '*', [[<Plug>(asterisk-z*)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
-      vim.keymap.set('x', '#', [[<Plug>(asterisk-z#)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
-      vim.keymap.set('x', 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
-      vim.keymap.set('x', 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], { remap = true })
-    end,
-    after = 'nvim-hlslens',
+    keys = {
+      { '*', [[<Plug>(asterisk-z*)<Cmd>lua require('hlslens').start()<CR>]], mode = 'n', remap = true },
+      { '#', [[<Plug>(asterisk-z#)<Cmd>lua require('hlslens').start()<CR>]], mode = 'n', remap = true },
+      { 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], mode = 'n', remap = true },
+      { 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], mode = 'n', remap = true },
+      { '*', [[<Plug>(asterisk-z*)<Cmd>lua require('hlslens').start()<CR>]], mode = 'x', remap = true },
+      { '#', [[<Plug>(asterisk-z#)<Cmd>lua require('hlslens').start()<CR>]], mode = 'x', remap = true },
+      { 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], mode = 'x', remap = true },
+      { 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], mode = 'x', remap = true },
+    },
   },
 }
