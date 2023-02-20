@@ -14,6 +14,7 @@ return {
         'bashls',
         'cssls',
         'cssmodules_ls',
+        'docker_compose_language_service',
         'dockerls',
         'elmls',
         'eslint',
@@ -21,6 +22,7 @@ return {
         'html',
         'jsonls',
         'jsonnet_ls',
+        'lua_ls',
         -- 'nginx-language-server',
         'pylsp',
         -- 'remark_ls',
@@ -30,7 +32,6 @@ return {
         'sqlls',
         'sqls',
         'stylelint_lsp',
-        'sumneko_lua',
         'tailwindcss',
         'taplo',
         'terraformls',
@@ -53,13 +54,11 @@ return {
         function(server_name)
           nvimLspconfig[server_name].setup({})
         end,
-
-        ['sumneko_lua'] = function()
-          nvimLspconfig.sumneko_lua.setup({
+        ['lua_ls'] = function()
+          nvimLspconfig.lua_ls.setup({
             settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
           })
         end,
-
         ['ruby_ls'] = function()
           nvimLspconfig.ruby_ls.setup({
             init_options = {
@@ -80,10 +79,10 @@ return {
     'glepnir/lspsaga.nvim',
     dependencies = {
       { 'neovim/nvim-lspconfig' },
+      { 'nvim-tree/nvim-web-devicons' },
+      { 'nvim-treesitter/nvim-treesitter' },
     },
-    config = function()
-      require('lspsaga').init_lsp_saga({})
-    end,
+    config = true,
     cmd = 'Lspsaga',
     keys = {
       {
