@@ -1,6 +1,12 @@
 return {
   {
     'mfussenegger/nvim-dap',
+    dependencies = {
+      { 'rcarriga/cmp-dap' },
+      { 'rcarriga/nvim-dap-ui' },
+      { 'suketa/nvim-dap-ruby', ft = 'ruby' },
+      { 'theHamsta/nvim-dap-virtual-text' },
+    },
     cmd = { 'DapContinue', 'DapToggleBreakpoint', 'DapToggleRepl' },
     keys = {
       { '[dap]', '<Nop>' },
@@ -32,9 +38,6 @@ return {
 
   {
     'rcarriga/nvim-dap-ui',
-    dependencies = {
-      { 'mfussenegger/nvim-dap' },
-    },
     config = function()
       local dap, dapui = require('dap'), require('dapui')
 
@@ -58,7 +61,6 @@ return {
   {
     'theHamsta/nvim-dap-virtual-text',
     dependencies = {
-      { 'mfussenegger/nvim-dap' },
       { 'nvim-treesitter/nvim-treesitter' },
     },
     config = true,
@@ -68,7 +70,6 @@ return {
     'rcarriga/cmp-dap',
     dependencies = {
       { 'hrsh7th/nvim-cmp' },
-      { 'mfussenegger/nvim-dap' },
     },
     config = function()
       require('cmp').setup({
@@ -83,14 +84,5 @@ return {
         },
       })
     end,
-  },
-
-  {
-    'suketa/nvim-dap-ruby',
-    dependencies = {
-      { 'mfussenegger/nvim-dap' },
-    },
-    config = true,
-    ft = 'ruby',
   },
 }
