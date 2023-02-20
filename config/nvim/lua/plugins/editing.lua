@@ -10,7 +10,10 @@ return {
         pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
       }
     end,
-    keys = { 'gc', 'gb' },
+    keys = {
+      { 'gc', mode = { 'n', 'x' } },
+      { 'gb', mode = { 'n', 'x' } },
+    },
   },
 
   {
@@ -105,7 +108,7 @@ return {
       { 'nvim-telescope/telescope.nvim' },
       { 'nvim-treesitter/nvim-treesitter' },
     },
-    opts = {},
+    config = true,
     event = 'BufReadPost',
     keys = {
       {
@@ -143,7 +146,7 @@ return {
 
   {
     'karb94/neoscroll.nvim',
-    opts = {},
+    config = true,
     event = 'BufReadPost',
   },
 }
