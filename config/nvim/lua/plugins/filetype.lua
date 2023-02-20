@@ -3,8 +3,12 @@ return {
 
   {
     'uga-rosa/translate.nvim',
+    init = function()
+      vim.g.deepl_api_auth_key = ''
+    end,
     opts = {
       default = {
+        command = 'deepl_free',
         output = 'replace',
       },
     },
@@ -88,12 +92,5 @@ return {
         silent = true,
       },
     },
-  },
-
-  -- PlantUML
-
-  {
-    'aklt/plantuml-syntax', -- non-lua plugin
-    ft = 'plantuml',
   },
 }
