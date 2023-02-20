@@ -28,7 +28,7 @@ return {
       vim.opt.shortmess:append('c')
     end,
     config = function()
-      local cmp     = require('cmp')
+      local cmp = require('cmp')
       local luasnip = require('luasnip')
       local lspkind = require('lspkind')
 
@@ -41,16 +41,16 @@ return {
         formatting = {
           format = lspkind.cmp_format({
             menu = {
-              buffer     = '[Buffer]',
-              calc       = '[Calc]',
-              cmdline    = '[Cmd]',
+              buffer = '[Buffer]',
+              calc = '[Calc]',
+              cmdline = '[Cmd]',
               dictionary = '[Dictionary]',
-              emoji      = '[Emoji]',
-              luasnip    = '[Snippet]',
-              nvim_lsp   = '[LSP]',
-              nvim_lua   = '[Lua]',
-              path       = '[Path]',
-              spell      = '[Spell]',
+              emoji = '[Emoji]',
+              luasnip = '[Snippet]',
+              nvim_lsp = '[LSP]',
+              nvim_lua = '[Lua]',
+              path = '[Path]',
+              spell = '[Spell]',
               treesitter = '[TS]',
             },
           }),
@@ -58,7 +58,7 @@ return {
         mapping = cmp.mapping.preset.insert({
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<CR>']  = cmp.mapping.confirm({ select = true }),
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
           ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -81,31 +81,31 @@ return {
           end, { 'i', 's' }),
         }),
         sources = cmp.config.sources({
-          { name = 'luasnip'  },
+          { name = 'luasnip' },
           { name = 'nvim_lsp' },
           { name = 'nvim_lua' },
-          { name = 'path'     },
+          { name = 'path' },
         }, {
-          { name = 'buffer'     },
+          { name = 'buffer' },
           { name = 'treesitter' },
           { name = 'dictionary' },
-          { name = 'spell'      },
-          { name = 'calc'       },
+          { name = 'spell' },
+          { name = 'calc' },
         }),
       })
 
       cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
         sources = cmp.config.sources({
-          { name = 'luasnip'  },
+          { name = 'luasnip' },
           { name = 'nvim_lsp' },
-          { name = 'path'     },
-          { name = 'emoji'    },
+          { name = 'path' },
+          { name = 'emoji' },
         }, {
-          { name = 'buffer'     },
+          { name = 'buffer' },
           { name = 'treesitter' },
           { name = 'dictionary' },
-          { name = 'spell'      },
-          { name = 'calc'       },
+          { name = 'spell' },
+          { name = 'calc' },
         }),
       })
 
@@ -251,13 +251,13 @@ return {
       for _, bracket in pairs(brackets) do
         autopairs.add_rules({
           rule(bracket[1] .. ' ', ' ' .. bracket[2])
-              :with_pair(function()
-                return false
-              end)
-              :with_move(function(opts)
-                return opts.prev_char:match('.%' .. bracket[2]) ~= nil
-              end)
-              :use_key(bracket[2]),
+            :with_pair(function()
+              return false
+            end)
+            :with_move(function(opts)
+              return opts.prev_char:match('.%' .. bracket[2]) ~= nil
+            end)
+            :use_key(bracket[2]),
         })
       end
     end,
