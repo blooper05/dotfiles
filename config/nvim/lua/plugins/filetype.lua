@@ -80,7 +80,7 @@ return {
   {
     'previm/previm', -- non-lua plugin
     dependencies = {
-      { 'tyru/open-browser.vim' },
+      { 'tyru/open-browser.vim' }, -- non-lua plugin
     },
     ft = 'markdown',
     keys = {

@@ -165,7 +165,7 @@ return {
   },
 
   {
-    'psliwka/vim-dirtytalk',
+    'psliwka/vim-dirtytalk', -- non-lua plugin
     build = ':DirtytalkUpdate',
     init = function()
       vim.opt.runtimepath:append(vim.fn.stdpath('data') .. '/site')
@@ -177,7 +177,7 @@ return {
   {
     'L3MON4D3/LuaSnip',
     dependencies = {
-      { 'rafamadriz/friendly-snippets' },
+      { 'rafamadriz/friendly-snippets' }, -- non-lua plugin
     },
     config = function()
       require('luasnip.loaders.from_vscode').lazy_load()
