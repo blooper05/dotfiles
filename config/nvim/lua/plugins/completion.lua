@@ -137,27 +137,41 @@ return {
   },
 
   {
-    'f3fora/cmp-spell',
-    dependencies = {
-      { 'psliwka/vim-dirtytalk', build = ':DirtytalkUpdate' },
-    },
+    'uga-rosa/cmp-dictionary',
     init = function()
-      vim.opt.spelllang = { 'en_us', 'programming' }
-
-      vim.api.nvim_create_user_command('SpellCheckingToggle', function()
-        vim.opt.spell = not (vim.api.nvim_win_get_option(0, 'spell'))
-      end, { force = true })
+      vim.opt.spelllang = { 'en_us' }
     end,
-    config = true,
+    config = function()
+      require('cmp_dictionary').switcher({
+        spelllang = {
+          en_us = '/usr/share/dict/words',
+        },
+      })
+    end,
   },
 
   {
-    'uga-rosa/cmp-dictionary',
-    opts = {
-      dic = {
-        ['*'] = { '/usr/share/dict/words' },
-      },
+    'f3fora/cmp-spell',
+    dependencies = {
+      { 'psliwka/vim-dirtytalk' },
     },
+    init = function()
+      vim.opt.spelllang = { 'en_us' }
+
+      vim.api.nvim_create_user_command('SpellCheckingToggle', function()
+        vim.opt.spell = not vim.api.nvim_win_get_option(0, 'spell')
+      end, { force = true })
+    end,
+  },
+
+  {
+    'psliwka/vim-dirtytalk',
+    build = ':DirtytalkUpdate',
+    init = function()
+      vim.opt.runtimepath:append(vim.fn.stdpath('data') .. '/site')
+
+      vim.opt.spelllang:append('programming')
+    end,
   },
 
   {
