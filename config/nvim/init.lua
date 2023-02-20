@@ -23,6 +23,9 @@ vim.opt.clipboard = {
   'unnamedplus',
 }
 
+-- Disable mouse support.
+vim.opt.mouse = nil
+
 -- Don't redraw during macro execution.
 vim.opt.lazyredraw = true
 
