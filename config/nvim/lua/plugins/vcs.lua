@@ -67,7 +67,16 @@ return {
 
   {
     'lewis6991/gitsigns.nvim',
-    opts = {},
+    init = function()
+      -- Always draw the signcolumn with a space.
+      vim.opt.signcolumn = 'yes:1'
+    end,
+    opts = {
+      numhl = true,
+      word_diff = true,
+      current_line_blame = true,
+    },
     event = 'BufReadPost',
+    cmd = 'Gitsigns',
   },
 }
