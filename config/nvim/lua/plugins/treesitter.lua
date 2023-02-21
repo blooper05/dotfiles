@@ -12,21 +12,6 @@ return {
           enable = true,
         },
         indent = {
-          enable = false,
-        },
-      })
-    end,
-    event = 'BufReadPost',
-  },
-
-  {
-    'yioneko/nvim-yati',
-    dependencies = {
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
-    config = function()
-      require('nvim-treesitter.configs').setup({
-        yati = {
           enable = true,
         },
       })
@@ -39,7 +24,7 @@ return {
     dependencies = {
       { 'nvim-treesitter/nvim-treesitter' },
     },
-    opts = {},
+    config = true,
     event = 'BufReadPost',
   },
 }
