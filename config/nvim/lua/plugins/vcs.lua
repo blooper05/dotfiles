@@ -2,21 +2,6 @@ return {
   {
     'lambdalisue/gina.vim', -- non-lua plugin
     config = function()
-      vim.keymap.set('n', '[gina]a', function() vim.cmd('Gina add -- %:p')                       end, { silent = true })
-      vim.keymap.set('n', '[gina]r', function() vim.cmd('Gina reset --quiet -- %:p')             end, { silent = true })
-      vim.keymap.set('n', '[gina]B', function() vim.cmd('Gina blame')                            end, { silent = true })
-      vim.keymap.set('n', '[gina]b', function() vim.cmd('Gina branch --all --verbose --verbose') end, { silent = true })
-      vim.keymap.set('n', '[gina]c', function() vim.cmd('Gina commit')                           end, { silent = true })
-      vim.keymap.set('n', '[gina]C', function() vim.cmd('Gina commit --amend')                   end, { silent = true })
-      vim.keymap.set('n', '[gina]l', function() vim.cmd('Gina log --graph')                      end, { silent = true })
-      vim.keymap.set('n', '[gina]L', function() vim.cmd('Gina log --graph -- %:p')               end, { silent = true })
-      vim.keymap.set('n', '[gina]d', function() vim.cmd('Gina compare')                          end, { silent = true })
-      vim.keymap.set('n', '[gina]D', function() vim.cmd('Gina compare --cached')                 end, { silent = true })
-      vim.keymap.set('n', '[gina]p', function() vim.cmd('Gina patch %:p')                        end, { silent = true })
-      vim.keymap.set('n', '[gina]R', function() vim.cmd('Gina reflog')                           end, { silent = true })
-      vim.keymap.set('n', '[gina]s', function() vim.cmd('Gina status')                           end, { silent = true })
-      -- vim.keymap.set('n', '[gina]P', function() vim.cmd('Gina push')                             end, { silent = true })
-
       local opts = { noremap = true, silent = true }
 
       -- gina-buffer-blame specific settings.
@@ -58,8 +43,22 @@ return {
     end,
     cmd = 'Gina',
     keys = {
-      { '[gina]', '<Nop>' },
-      { '<Space>g', '[gina]', remap = true },
+      { '[git]', '<Nop>' },
+      { '<Space>g', '[git]', remap = true },
+
+      { '[git]a', function() vim.cmd('Gina add -- %:p') end,                       silent = true },
+      { '[git]r', function() vim.cmd('Gina reset --quiet -- %:p') end,             silent = true },
+      { '[git]B', function() vim.cmd('Gina blame') end,                            silent = true },
+      { '[git]b', function() vim.cmd('Gina branch --all --verbose --verbose') end, silent = true },
+      { '[git]c', function() vim.cmd('Gina commit') end,                           silent = true },
+      { '[git]C', function() vim.cmd('Gina commit --amend') end,                   silent = true },
+      { '[git]l', function() vim.cmd('Gina log --graph') end,                      silent = true },
+      { '[git]L', function() vim.cmd('Gina log --graph -- %:p') end,               silent = true },
+      { '[git]d', function() vim.cmd('Gina compare') end,                          silent = true },
+      { '[git]D', function() vim.cmd('Gina compare --cached') end,                 silent = true },
+      { '[git]p', function() vim.cmd('Gina patch %:p') end,                        silent = true },
+      { '[git]R', function() vim.cmd('Gina reflog') end,                           silent = true },
+      { '[git]s', function() vim.cmd('Gina status') end,                           silent = true },
     },
   },
 
