@@ -25,7 +25,7 @@ return {
   {
     'haya14busa/vim-operator-flashy', -- non-lua plugin
     dependencies = {
-      { 'kana/vim-operator-user' },
+      { 'kana/vim-operator-user' }, -- non-lua plugin
     },
     keys = {
       { 'y', '<Plug>(operator-flashy)', mode = '', remap = true },
@@ -36,7 +36,7 @@ return {
   {
     'rhysd/vim-operator-surround', -- non-lua plugin
     dependencies = {
-      { 'kana/vim-operator-user' },
+      { 'kana/vim-operator-user' }, -- non-lua plugin
     },
     keys = {
       { 's', '<Plug>(operator-surround-append)', mode = 'o', remap = true, silent = true },
@@ -49,7 +49,7 @@ return {
   {
     'kana/vim-operator-replace', -- non-lua plugin
     dependencies = {
-      { 'kana/vim-operator-user' },
+      { 'kana/vim-operator-user' }, -- non-lua plugin
     },
     keys = {
       { 'p', '<Plug>(operator-replace)', mode = 'o', remap = true, silent = true },
