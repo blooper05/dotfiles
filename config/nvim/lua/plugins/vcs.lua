@@ -17,11 +17,13 @@ return {
       vim.keymap.set('n', '[gina]s', function() vim.cmd('Gina status')                           end, { silent = true })
       -- vim.keymap.set('n', '[gina]P', function() vim.cmd('Gina push')                             end, { silent = true })
 
+      local opts = { noremap = true, silent = true }
+
       -- gina-buffer-blame specific settings.
       vim.call('gina#custom#action#alias', 'blame', 'preview', 'botright show:commit:preview')
       vim.call('gina#custom#action#alias', 'blame', 'changes', 'botright changes:of:preview')
-      vim.call('gina#custom#mapping#nmap', 'blame', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], { noremap = true, silent = true })
-      vim.call('gina#custom#mapping#nmap', 'blame', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], { noremap = true, silent = true })
+      vim.call('gina#custom#mapping#nmap', 'blame', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
+      vim.call('gina#custom#mapping#nmap', 'blame', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
       vim.call('gina#custom#execute', 'blame', 'setlocal cursorline')
 
       -- gina-buffer-branch specific settings.
@@ -38,15 +40,15 @@ return {
       -- gina-buffer-log specific settings.
       vim.call('gina#custom#action#alias', 'log', 'preview', 'vertical show:commit:preview')
       vim.call('gina#custom#action#alias', 'log', 'changes', 'vertical changes:of:preview')
-      vim.call('gina#custom#mapping#nmap', 'log', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], { noremap = true, silent = true })
-      vim.call('gina#custom#mapping#nmap', 'log', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], { noremap = true, silent = true })
+      vim.call('gina#custom#mapping#nmap', 'log', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
+      vim.call('gina#custom#mapping#nmap', 'log', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
       vim.call('gina#custom#execute', 'log', 'setlocal cursorline')
 
       -- gina-buffer-reflog specific settings.
       vim.call('gina#custom#action#alias', 'reflog', 'preview', 'vertical show:commit:preview')
       vim.call('gina#custom#action#alias', 'reflog', 'changes', 'vertical changes:of:preview')
-      vim.call('gina#custom#mapping#nmap', 'reflog', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], { noremap = true, silent = true })
-      vim.call('gina#custom#mapping#nmap', 'reflog', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], { noremap = true, silent = true })
+      vim.call('gina#custom#mapping#nmap', 'reflog', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
+      vim.call('gina#custom#mapping#nmap', 'reflog', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
       vim.call('gina#custom#execute', 'reflog', 'setlocal cursorline')
 
       -- gina-buffer-status specific settings.
