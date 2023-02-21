@@ -16,9 +16,10 @@ return {
           null_ls.builtins.diagnostics.gitlint.with({ filetypes = { 'gina-commit', 'gitcommit' } }),
           null_ls.builtins.diagnostics.hadolint,
           null_ls.builtins.diagnostics.jsonlint,
+          null_ls.builtins.diagnostics.markdownlint.with({ prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.diagnostics.rubocop.with({ command = 'docker-rubocop' }),
           null_ls.builtins.diagnostics.shellcheck,
-          null_ls.builtins.diagnostics.sqlfluff,
+          null_ls.builtins.diagnostics.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
           null_ls.builtins.diagnostics.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.diagnostics.tfsec,
           null_ls.builtins.diagnostics.yamllint,
@@ -28,14 +29,13 @@ return {
           null_ls.builtins.formatting.prettier.with({ prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.formatting.rubocop.with({ command = 'docker-rubocop' }),
           null_ls.builtins.formatting.shfmt,
-          null_ls.builtins.formatting.sqlfluff,
+          null_ls.builtins.formatting.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.terraform_fmt,
           null_ls.builtins.formatting.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
           -- null_ls.builtins.formatting.trim_newlines,
           -- null_ls.builtins.formatting.trim_whitespace,
         },
-
         on_attach = function(client, bufnr)
           local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 
@@ -63,14 +63,7 @@ return {
     },
     cmd = 'SnipRun',
     keys = {
-      {
-        '<Leader>r',
-        function()
-          require('sniprun').run()
-        end,
-        mode = { 'n', 'v' },
-        silent = true,
-      },
+      { '<Leader>r', '<Plug>SnipRun', mode = { 'n', 'v' }, silent = true },
     },
   },
 
