@@ -21,6 +21,9 @@
       },
       "kayac/tap": {
         "revision": "b5d0bdb19089b0f461b51270de8c292a2378fa14"
+      },
+      "fujiwara/tap": {
+        "revision": "20dbcc579ef1f77956524c9b7f048ce149402309"
       }
     },
     "brew": {
@@ -2030,6 +2033,10 @@
       },
       "kayac/tap/ecspresso": {
         "version": "2.0.4",
+        "bottle": false
+      },
+      "ecsta": {
+        "version": "0.2.2",
         "bottle": false
       }
     },
