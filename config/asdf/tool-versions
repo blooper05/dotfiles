@@ -1,12 +1,12 @@
 actionlint 1.6.23
 adr-tools 3.0.0
-deno 1.30.3
+deno 1.31.1
 dotenv-linter 3.3.0
 editorconfig-checker 2.7.0
 elm 0.19.1
 golang 1.20.1
 jsonnet 0.19.1
-nodejs 19.6.1
+nodejs 19.7.0
 packer 1.8.6
 perl 5.36.0
 python 3.11.2
