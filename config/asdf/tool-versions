@@ -2,6 +2,7 @@ actionlint 1.6.23
 adr-tools 3.0.0
 deno 1.31.1
 dotenv-linter 3.3.0
+ecspresso 2.1.0
 editorconfig-checker 2.7.0
 elm 0.19.1
 golang 1.20.1
