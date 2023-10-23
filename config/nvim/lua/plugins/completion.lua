@@ -11,6 +11,7 @@ return {
       { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
       { 'hrsh7th/cmp-nvim-lua' },
       { 'hrsh7th/cmp-path' },
+      { 'jcdickinson/codeium.nvim' },
       { 'neovim/nvim-lspconfig' },
       { 'onsails/lspkind-nvim' },
       { 'ray-x/cmp-treesitter' },
@@ -44,6 +45,7 @@ return {
               buffer = '[Buffer]',
               calc = '[Calc]',
               cmdline = '[Cmd]',
+              codeium = '[Codeium]',
               dictionary = '[Dictionary]',
               emoji = '[Emoji]',
               luasnip = '[Snippet]',
@@ -81,6 +83,7 @@ return {
           end, { 'i', 's' }),
         }),
         sources = cmp.config.sources({
+          { name = 'codeium' },
           { name = 'luasnip' },
           { name = 'nvim_lsp' },
           { name = 'nvim_lua' },
@@ -96,6 +99,7 @@ return {
 
       cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
         sources = cmp.config.sources({
+          { name = 'codeium' },
           { name = 'luasnip' },
           { name = 'nvim_lsp' },
           { name = 'path' },
