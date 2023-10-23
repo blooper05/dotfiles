@@ -27,4 +27,31 @@ return {
       },
     },
   },
+
+  {
+    'jackMort/ChatGPT.nvim',
+    dependencies = {
+      { 'MunifTanjim/nui.nvim' },
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope.nvim' },
+    },
+    opts = {
+      keymaps = {
+        scroll_up = false,
+        scroll_down = false,
+      },
+    },
+    cmd = 'ChatGPT',
+  },
+
+  {
+    'jcdickinson/codeium.nvim',
+    dependencies = {
+      { 'hrsh7th/nvim-cmp' },
+      { 'jcdickinson/http.nvim', build = 'cargo build --workspace --release' },
+      { 'nvim-lua/plenary.nvim' },
+    },
+    config = true,
+    cmd = 'Codeium',
+  },
 }
