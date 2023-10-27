@@ -64,6 +64,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # defaults write com.apple.BezelServices kDim -bool false
 # sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Keyboard Enabled' -bool false
 
+# System Settings >> Keyboard >> Press Globe key to: Do Nothing
+defaults write com.apple.HIToolbox AppleFnUsageType -int 0
+
 # System Settings >> Keyboard >> Keyboard Shortcuts... >> Input Sources >> Select the previous input source: off
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{ enabled = 0; value = { parameters = (32, 49, 262144); type = standard; }; }'
 
