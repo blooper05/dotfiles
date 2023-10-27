@@ -11,6 +11,7 @@ golang 1.20.5
 jsonnet 0.20.0
 k6 0.44.1
 kubectl 1.27.0
+kubectx 0.9.5
 nodejs 20.3.0
 packer 1.9.1
 perl 5.36.1
