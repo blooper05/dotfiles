@@ -8,6 +8,8 @@ networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4
 # System Settings >> Network >> Firewall >> Firewall: on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
+# TODO: # System Settings >> Notifications >> ...
+
 # System Settings >> About >> Name: まっくぶっくぷろ
 sudo scutil --set ComputerName まっくぶっくぷろ
 
@@ -156,7 +158,6 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGes
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwipeGesture -int 0
 
-# TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> Reeder: on
