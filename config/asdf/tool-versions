@@ -16,7 +16,7 @@ kubectx 0.9.5
 nodejs 20.3.0
 oci 3.35.0
 packer 1.9.4
-perl 5.36.1
+perl 5.38.0
 python 3.11.4
 ruby 3.2.2
 rust 1.70.0
