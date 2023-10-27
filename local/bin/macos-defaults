@@ -54,6 +54,9 @@ defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -s
 # System Settings >> Lock Screen >> Start Screen Saver when inactive: For 5 minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 
+# System Settings >> Keyboard >> Key repeat rate: Fast
+defaults write NSGlobalDomain KeyRepeat -int 2
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -66,9 +69,6 @@ defaults -currentHost write com.apple.screensaver idleTime -int 300
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
-
-# System Preferences >> Keyboard >> Keyboard >> Key Repeat: Fast
-defaults write NSGlobalDomain KeyRepeat -int 2
 
 # System Preferences >> Keyboard >> Keyboard >> Delay Until Repeat: Short
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
