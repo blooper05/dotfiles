@@ -76,6 +76,10 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ en
 # System Settings >> Keyboard >> Keyboard Shortcuts... >> Spotlight >> Show Finder search window: off
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '{ enabled = 0; value = { parameters = (32, 49, 1572864); type = standard; }; }'
 
+# System Settings >> Keyboard >> Text Input >> Input Sources: ABC and Japanese - Romaji
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = com.apple.inputmethod.Kotoeri.RomajiTyping; InputSourceKind = "Input Mode"; "Input Mode" = com.apple.inputmethod.Japanese; }'
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '{ "Bundle ID" = com.apple.inputmethod.Kotoeri.RomajiTyping; InputSourceKind = "Keyboard Input Method"; }'
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
