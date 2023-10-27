@@ -3,7 +3,7 @@ adr-tools 3.0.0
 awscli 2.13.29
 deno 1.37.2
 dotenv-linter 3.3.0
-ecspresso 2.2.0
+ecspresso 2.2.4
 editorconfig-checker 2.7.0
 elm 0.19.1
 github-cli 2.21.1
