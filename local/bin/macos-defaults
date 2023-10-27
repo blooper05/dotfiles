@@ -11,7 +11,7 @@ defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 # System Settings >> General >> Date & Time >> 24-hour time: on
 defaults write com.apple.menuextra.clock Show24Hour -bool true
 
-# System Preferences >> General >> Sidebar icon size: Small
+# System Settings >> Appearance >> Sidebar icon size: Small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # System Preferences >> Desktop & Screen Saver >> Screen Saver >> Flurry
