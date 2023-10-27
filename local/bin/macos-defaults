@@ -42,7 +42,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # defaults write com.apple.BezelServices dAuto -bool false
 # sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Display Enabled' -bool false
 
-# System Preferences >> Desktop & Screen Saver >> Screen Saver >> Flurry
+# System Settings >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
 
 # System Preferences >> Desktop & Screen Saver >> Screen Saver >> Start after: 5 Minutes
