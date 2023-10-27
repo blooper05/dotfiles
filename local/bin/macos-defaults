@@ -64,6 +64,18 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # defaults write com.apple.BezelServices kDim -bool false
 # sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Keyboard Enabled' -bool false
 
+# System Settings >> Keyboard >> Keyboard Shortcuts... >> Input Sources >> Select the previous input source: off
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{ enabled = 0; value = { parameters = (32, 49, 262144); type = standard; }; }'
+
+# System Settings >> Keyboard >> Keyboard Shortcuts... >> Input Sources >> Select next source in Input menu: off
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 '{ enabled = 0; value = { parameters = (32, 49, 786432); type = standard; }; }'
+
+# System Settings >> Keyboard >> Keyboard Shortcuts... >> Spotlight >> Show Spotlight search: off
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ enabled = 0; value = { parameters = (32, 49, 1048576); type = standard; }; }'
+
+# System Settings >> Keyboard >> Keyboard Shortcuts... >> Spotlight >> Show Finder search window: off
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '{ enabled = 0; value = { parameters = (32, 49, 1572864); type = standard; }; }'
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -97,18 +109,6 @@ defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
 # System Preferences >> Keyboard >> Text >> Use smart quotes and dashes: off
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# System Preferences >> Keyboard >> Shortcuts >> Input Sources >> Select the previous input source: off
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '{ enabled = 0; value = { parameters = (32, 49, 262144); type = standard; }; }'
-
-# System Preferences >> Keyboard >> Shortcuts >> Input Sources >> Select next source in input menu: off
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 '{ enabled = 0; value = { parameters = (32, 49, 786432); type = standard; }; }'
-
-# System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Spotlight search: off (Control + Space)
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ enabled = 0; value = { parameters = (32, 49, 262144); type = standard; }; }'
-
-# System Preferences >> Keyboard >> Shortcuts >> Spotlight >> Show Finder search window: off (Control + Option + Space)
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '{ enabled = 0; value = { parameters = (32, 49, 786432); type = standard; }; }'
 
 # System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Correct spelling: off
 defaults write com.apple.inputmethod.Kotoeri JIMPrefAutocorrectionKey -bool false
