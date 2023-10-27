@@ -65,6 +65,7 @@ defaults -currentHost write com.apple.screensaver idleTime -int 300
 # TODO: # System Settings >> Touch ID & Password >> Touch ID: index finger
 # TODO: # System Settings >> Touch ID & Password >> Touch ID: middle finger
 # TODO: # System Settings >> Touch ID & Password >> Touch ID: index finger (left)
+# TODO: # System Settings >> Touch ID & Password >> Apple Watch: on
 
 # TODO: # System Settings >> Internet Accounts >> iCloud >> Apps Using iCloud >> Photos >> iCloud Photos >> Sync this Mac: on
 # TODO: # System Settings >> Internet Accounts >> iCloud >> Apps Using iCloud >> iCloud Drive >> iCloud Drive >> Sync this Mac: on
@@ -164,8 +165,6 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.twoFingerFromRight
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwipeGesture -int 0
-
-# TODO: System Preferences >> Security & Privacy >> General >> Use your Apple Watch to unlock apps and your Mac: on
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
