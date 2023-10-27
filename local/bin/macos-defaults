@@ -14,6 +14,9 @@ defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 # System Settings >> General >> Date & Time >> 24-hour time: on
 defaults write com.apple.menuextra.clock Show24Hour -bool true
 
+# System Settings >> Sharing >> Local hostname: MacBookPro.local
+sudo scutil --set LocalHostName MacBookPro
+
 # System Settings >> Appearance >> Sidebar icon size: Small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
@@ -161,9 +164,6 @@ defaults write com.apple.sidecar.display sidebarShown -int 0
 
 # System Preferences >> Sidecar >> Show Touch Bar
 defaults write com.apple.sidecar.display showTouchbar -int 0
-
-# System Preferences >> Sharing >> Computer Name >> Edit... >> Local Hostname: MacBookPro
-sudo scutil --set LocalHostName MacBookPro
 
 # Wipe all app icons from the Dock
 defaults write com.apple.dock persistent-apps -array
