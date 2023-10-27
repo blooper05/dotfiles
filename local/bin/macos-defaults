@@ -2,6 +2,9 @@
 
 set -ex
 
+# System Settings >> About >> Name: まっくぶっくぷろ
+sudo scutil --set ComputerName まっくぶっくぷろ
+
 # System Settings >> General >> Software Update >> Automatic updates: On
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true
 
@@ -158,9 +161,6 @@ defaults write com.apple.sidecar.display sidebarShown -int 0
 
 # System Preferences >> Sidecar >> Show Touch Bar
 defaults write com.apple.sidecar.display showTouchbar -int 0
-
-# System Preferences >> Sharing >> Computer Name: まっくぶっくぷろ
-sudo scutil --set ComputerName まっくぶっくぷろ
 
 # System Preferences >> Sharing >> Computer Name >> Edit... >> Local Hostname: MacBookPro
 sudo scutil --set LocalHostName MacBookPro
