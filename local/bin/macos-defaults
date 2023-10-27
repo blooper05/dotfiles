@@ -2,6 +2,9 @@
 
 set -ex
 
+# System Settings >> Wi-Fi >> Details... >> DNS >> DNS Servers:
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4
+
 # System Settings >> Network >> Firewall >> Firewall: on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
@@ -63,9 +66,6 @@ defaults -currentHost write com.apple.screensaver idleTime -int 300
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
-
-# System Preferences >> Network >> Wi-Fi >> Advanced... >> DNS >> DNS Servers:
-networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4
 
 # System Preferences >> Keyboard >> Keyboard >> Key Repeat: Fast
 defaults write NSGlobalDomain KeyRepeat -int 2
