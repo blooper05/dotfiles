@@ -46,6 +46,9 @@ defaults write com.apple.dock launchanim -bool false
 # System Settings >> Desktop & Dock >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -bool false
 
+# System Settings >> Desktop & Dock >> Hot Corners...:
+defaults delete com.apple.dock wvous-br-corner
+
 # TODO: # System Settings >> Displays >> Automatically adjust brightness: off
 # FIXME: defaults write com.apple.BezelServices dAuto -bool false
 # FIXME: sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Display Enabled' -bool false
