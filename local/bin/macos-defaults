@@ -141,6 +141,11 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadTwoFingerFromRightEdgeS
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 0
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.twoFingerFromRightEdgeSwipeGesture -int 0
 
+# System Settings >> Trackpad >> More Gestures >> Mission Control: Swipe Up with Four Fingers
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwipeGesture -int 0
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -153,11 +158,6 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.twoFingerFromRight
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
-
-# System Preferences >> Trackpad >> More Gestures >> Mission Control: Swipe up with four fingers
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwipeGesture -int 0
 
 # TODO: System Preferences >> Displays >> Night Shift >> Schedule: Custom
 # TODO: System Preferences >> Displays >> Night Shift >> From: 5:00
