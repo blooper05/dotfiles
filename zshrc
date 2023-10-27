@@ -10,7 +10,7 @@ export GPG_TTY=$(tty)
 
 # PATH
 typeset -U path PATH # to avoid duplicate entries
-export PATH=$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 
 # XDG Base Directory Specification
 export XDG_CONFIG_HOME=$HOME/.config
@@ -24,7 +24,7 @@ export LANG="${LANGUAGE}"
 export LC_ALL="${LANGUAGE}"
 
 # Tools
-export SHELL=/usr/local/bin/zsh
+export SHELL=/opt/homebrew/bin/zsh
 export EDITOR=nvim
 export PAGER=less
 
