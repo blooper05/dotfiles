@@ -48,6 +48,12 @@ defaults write com.apple.dock mru-spaces -bool false
 # defaults write com.apple.BezelServices dAuto -bool false
 # sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Display Enabled' -bool false
 
+# TODO: System Settings >> Displays >> Night Shift... >> Schedule: Custom
+# TODO: System Settings >> Displays >> Night Shift... >> From: 5:00
+# TODO: System Settings >> Displays >> Night Shift... >> to: 5:00
+# TODO: System Settings >> Displays >> Night Shift... >> Turn on until tomorrow: on
+# TODO: System Settings >> Displays >> Night Shift... >> Color temperature: More Warm
+
 # System Settings >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
 
@@ -161,11 +167,6 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwi
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
-
-# TODO: System Preferences >> Displays >> Night Shift >> Schedule: Custom
-# TODO: System Preferences >> Displays >> Night Shift >> From: 5:00
-# TODO: System Preferences >> Displays >> Night Shift >> to: 4:59
-# TODO: System Preferences >> Displays >> Night Shift >> Color Temperature: More Warm
 
 # System Preferences >> Sidecar >> Show Sidebar
 defaults write com.apple.sidecar.display sidebarShown -int 0
