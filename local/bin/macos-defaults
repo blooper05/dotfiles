@@ -38,6 +38,10 @@ defaults write com.apple.dock autohide -bool true
 # System Settings >> Desktop & Dock >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -bool false
 
+# # System Settings >> Displays >> Automatically adjust brightness: off
+# defaults write com.apple.BezelServices dAuto -bool false
+# sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Display Enabled' -bool false
+
 # System Preferences >> Desktop & Screen Saver >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
 
@@ -149,10 +153,6 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSw
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwipeGesture -int 0
-
-# System Preferences >> Displays >> Display >> Automatically adjust brightness: off
-# FIXME: defaults write com.apple.BezelServices dAuto -bool false
-# FIXME: sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Display Enabled' -bool false
 
 # TODO: System Preferences >> Displays >> Night Shift >> Schedule: Custom
 # TODO: System Preferences >> Displays >> Night Shift >> From: 5:00
