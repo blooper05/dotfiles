@@ -28,8 +28,6 @@ export SHELL=/opt/homebrew/bin/zsh
 export EDITOR=nvim
 export PAGER=less
 
-export ZDOTDIR=$XDG_CONFIG_HOME/zsh
-
 # Alias {{{1
 
 alias cp='cp -i'
