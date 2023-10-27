@@ -122,9 +122,6 @@ defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
 
-# System Preferences >> Keyboard >> Text >> Touch Bar typing suggestions: off
-defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
-
 # System Preferences >> Trackpad >> Point & Click >> Look up & data detectors: off
 defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 0
