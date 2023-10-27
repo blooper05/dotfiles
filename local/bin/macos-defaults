@@ -29,14 +29,14 @@ defaults write com.apple.dock orientation -string 'right'
 # System Settings >> Desktop & Dock >> Dock >> Minimize windows into application icon: on
 defaults write com.apple.dock minimize-to-application -bool true
 
+# System Settings >> Desktop & Dock >> Dock >> Animate opening applications: off
+defaults write com.apple.dock launchanim -bool false
+
 # System Preferences >> Desktop & Screen Saver >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
 
 # System Preferences >> Desktop & Screen Saver >> Screen Saver >> Start after: 5 Minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
-
-# System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Animate opening applications: off
-defaults write com.apple.dock launchanim -bool false
 
 # System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Automatically hide and show the Dock: on
 defaults write com.apple.dock autohide -bool true
