@@ -90,6 +90,10 @@ defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 # System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> All Input Sources >> Add period with double-space: off
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
+# System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> All Input Sources >> Use smart suotes and dashes: off
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -109,10 +113,6 @@ defaults write com.apple.controlstrip FullCustomized -array 'com.apple.system.gr
 
 # System Preferences >> Keyboard >> Text >> Touch Bar typing suggestions: off
 defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
-
-# System Preferences >> Keyboard >> Text >> Use smart quotes and dashes: off
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Correct spelling: off
 defaults write com.apple.inputmethod.Kotoeri JIMPrefAutocorrectionKey -bool false
