@@ -60,6 +60,10 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # System Settings >> Keyboard >> Delay until repeat: Short
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+# # System Settings >> Keyboard >> Adjust keyboard brightness in low light: off
+# defaults write com.apple.BezelServices kDim -bool false
+# sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Keyboard Enabled' -bool false
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -72,10 +76,6 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
-
-# System Preferences >> Keyboard >> Keyboard >> Adjust keyboard brightness in low light: off
-# FIXME: defaults write com.apple.BezelServices kDim -bool false
-# FIXME: sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Keyboard Enabled' -bool false
 
 # System Preferences >> Keyboard >> Keyboard >> Customize Control Strip... >>
 defaults write com.apple.controlstrip MiniCustomized -array 'com.apple.system.brightness' 'com.apple.system.volume' 'com.apple.system.mute'
