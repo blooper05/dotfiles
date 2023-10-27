@@ -2,6 +2,9 @@
 
 set -ex
 
+# System Settings >> General >> Software Update >> Automatic updates: On
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true
+
 # System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
 defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 
@@ -47,9 +50,6 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # System Preferences >> Security & Privacy >> Firewall >> Firewall: On
 /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-
-# System Preferences >> Software Update >> Advanced... >> Install macOS updates: on
-sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
