@@ -5,6 +5,9 @@ set -ex
 # System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
 defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 
+# System Settings >> General >> Date & Time >> 24-hour time: on
+defaults write com.apple.menuextra.clock Show24Hour -bool true
+
 # System Preferences >> General >> Sidebar icon size: Small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
@@ -28,9 +31,6 @@ defaults write com.apple.dock autohide -bool true
 
 # System Preferences >> Dock & Menu Bar >> Battery >> Show Percentage: on
 defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool true
-
-# System Preferences >> Dock & Menu Bar >> Clock >> Use a 24-hour clock: on
-defaults write com.apple.menuextra.clock Show24Hour -bool true
 
 # System Preferences >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -bool false
