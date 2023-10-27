@@ -23,14 +23,14 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 # System Settings >> Control Center >> Battery >> Show Percentage: on
 defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool true
 
+# System Settings >> Desktop & Dock >> Dock >> Position on screen: Right
+defaults write com.apple.dock orientation -string 'right'
+
 # System Preferences >> Desktop & Screen Saver >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
 
 # System Preferences >> Desktop & Screen Saver >> Screen Saver >> Start after: 5 Minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
-
-# System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Position on screen: Right
-defaults write com.apple.dock orientation -string 'right'
 
 # System Preferences >> Dock & Menu Bar >> Dock & Menu Bar >> Minimize windows into application icon: on
 defaults write com.apple.dock minimize-to-application -bool true
