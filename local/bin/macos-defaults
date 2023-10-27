@@ -44,15 +44,15 @@ defaults write com.apple.dock autohide -bool true
 # System Settings >> Desktop & Dock >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -bool false
 
-# # System Settings >> Displays >> Automatically adjust brightness: off
-# defaults write com.apple.BezelServices dAuto -bool false
-# sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Display Enabled' -bool false
+# TODO: # System Settings >> Displays >> Automatically adjust brightness: off
+# FIXME: defaults write com.apple.BezelServices dAuto -bool false
+# FIXME: sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Display Enabled' -bool false
 
-# TODO: System Settings >> Displays >> Night Shift... >> Schedule: Custom
-# TODO: System Settings >> Displays >> Night Shift... >> From: 5:00
-# TODO: System Settings >> Displays >> Night Shift... >> to: 5:00
-# TODO: System Settings >> Displays >> Night Shift... >> Turn on until tomorrow: on
-# TODO: System Settings >> Displays >> Night Shift... >> Color temperature: More Warm
+# TODO: # System Settings >> Displays >> Night Shift... >> Schedule: Custom
+# TODO: # System Settings >> Displays >> Night Shift... >> From: 5:00
+# TODO: # System Settings >> Displays >> Night Shift... >> to: 5:00
+# TODO: # System Settings >> Displays >> Night Shift... >> Turn on until tomorrow: on
+# TODO: # System Settings >> Displays >> Night Shift... >> Color temperature: More Warm
 
 # System Settings >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
@@ -60,9 +60,9 @@ defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -s
 # System Settings >> Lock Screen >> Start Screen Saver when inactive: For 5 minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 
-# TODO: System Settings >> Touch ID & Password >> Touch ID: index finger
-# TODO: System Settings >> Touch ID & Password >> Touch ID: middle finger
-# TODO: System Settings >> Touch ID & Password >> Touch ID: index finger (left)
+# TODO: # System Settings >> Touch ID & Password >> Touch ID: index finger
+# TODO: # System Settings >> Touch ID & Password >> Touch ID: middle finger
+# TODO: # System Settings >> Touch ID & Password >> Touch ID: index finger (left)
 
 # System Settings >> Keyboard >> Key repeat rate: Fast
 defaults write NSGlobalDomain KeyRepeat -int 2
@@ -70,9 +70,9 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 # System Settings >> Keyboard >> Delay until repeat: Short
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-# # System Settings >> Keyboard >> Adjust keyboard brightness in low light: off
-# defaults write com.apple.BezelServices kDim -bool false
-# sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Keyboard Enabled' -bool false
+# TODO: # System Settings >> Keyboard >> Adjust keyboard brightness in low light: off
+# FIXME: defaults write com.apple.BezelServices kDim -bool false
+# FIXME: sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor 'Automatic Keyboard Enabled' -bool false
 
 # System Settings >> Keyboard >> Press Globe key to: Do Nothing
 defaults write com.apple.HIToolbox AppleFnUsageType -int 0
