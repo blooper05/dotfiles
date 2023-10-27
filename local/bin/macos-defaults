@@ -97,6 +97,9 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> Japanese - Romail >> Correct spelling: off
 defaults write com.apple.inputmethod.Kotoeri JIMPrefAutocorrectionKey -bool false
 
+# System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> Japanese - Romaji >> Windows-like shortcuts: on
+defaults write com.apple.inputmethod.Kotoeri JIMPrefWindowsModeKey -bool true
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -116,9 +119,6 @@ defaults write com.apple.controlstrip FullCustomized -array 'com.apple.system.gr
 
 # System Preferences >> Keyboard >> Text >> Touch Bar typing suggestions: off
 defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
-
-# System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Windows-like shortcuts: on
-defaults write com.apple.inputmethod.Kotoeri JIMPrefWindowsModeKey -bool true
 
 # System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Candidate window >> Font: HackGen35 Console NFJ Regular
 defaults write com.apple.inputmethod.Kotoeri JIMPrefCandidateWindowFontKey -string 'HackGen35ConsoleNFJ-Regular'
