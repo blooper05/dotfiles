@@ -28,5 +28,5 @@ terraform 1.5.7
 terraform-docs 0.16.0
 tflint 0.46.1
 tfsec 1.28.1
-tfupdate 0.6.8
+tfupdate 0.8.0
 yarn 1.22.19
