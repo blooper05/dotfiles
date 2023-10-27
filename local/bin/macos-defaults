@@ -53,6 +53,9 @@ defaults write com.apple.dock mru-spaces -bool false
 # System Settings >> Sidecar >> Show Sidebar: Never
 defaults write com.apple.sidecar.display sidebarShown -int 0
 
+# System Settings >> Sidecar >> Show Touch Bar: Never
+defaults write com.apple.sidecar.display showTouchbar -int 0
+
 # TODO: # System Settings >> Displays >> Night Shift... >> Schedule: Custom
 # TODO: # System Settings >> Displays >> Night Shift... >> From: 5:00
 # TODO: # System Settings >> Displays >> Night Shift... >> to: 5:00
@@ -171,9 +174,6 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwi
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
-
-# System Preferences >> Sidecar >> Show Touch Bar
-defaults write com.apple.sidecar.display showTouchbar -int 0
 
 # Wipe all app icons from the Dock
 defaults write com.apple.dock persistent-apps -array
