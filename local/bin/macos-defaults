@@ -87,6 +87,9 @@ defaults write NSGlobalDomain WebAutomaticSpellingCorrectionEnabled -bool false
 # System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> All Input Sources >> Capitalize words automatically: off
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
+# System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> All Input Sources >> Add period with double-space: off
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -103,9 +106,6 @@ sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool tru
 # System Preferences >> Keyboard >> Keyboard >> Customize Control Strip... >>
 defaults write com.apple.controlstrip MiniCustomized -array 'com.apple.system.brightness' 'com.apple.system.volume' 'com.apple.system.mute'
 defaults write com.apple.controlstrip FullCustomized -array 'com.apple.system.group.brightness' 'com.apple.system.mission-control' 'com.apple.system.launchpad' 'com.apple.system.group.keyboard-brightness' 'com.apple.system.group.media' 'com.apple.system.group.volume'
-
-# System Preferences >> Keyboard >> Text >> Add period with double-space: off
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
 # System Preferences >> Keyboard >> Text >> Touch Bar typing suggestions: off
 defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
