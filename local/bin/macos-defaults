@@ -103,6 +103,9 @@ defaults write com.apple.inputmethod.Kotoeri JIMPrefWindowsModeKey -bool true
 # System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> Japanese - Romaji >> Candidate window >> Font: HackGen35 Console NF Regular
 defaults write com.apple.inputmethod.Kotoeri JIMPrefCandidateWindowFontKey -string 'HackGen35ConsoleNF-Regular'
 
+# System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> Japanese - Romaji >> Full-width numeral characters: off
+defaults write com.apple.inputmethod.Kotoeri JIMPrefFullWidthNumeralCharactersKey -bool false
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -122,9 +125,6 @@ defaults write com.apple.controlstrip FullCustomized -array 'com.apple.system.gr
 
 # System Preferences >> Keyboard >> Text >> Touch Bar typing suggestions: off
 defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
-
-# System Preferences >> Keyboard >> Input Sources >> Japanese - Romaji >> Full-width numeral characters: off
-defaults write com.apple.inputmethod.Kotoeri JIMPrefFullWidthNumeralCharactersKey -bool false
 
 # System Preferences >> Keyboard >> Dictation >> Shortcut: Off
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
