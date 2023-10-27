@@ -37,11 +37,11 @@ defaults write com.apple.dock orientation -string 'right'
 # System Settings >> Desktop & Dock >> Dock >> Minimize windows into application icon: on
 defaults write com.apple.dock minimize-to-application -bool true
 
-# System Settings >> Desktop & Dock >> Dock >> Animate opening applications: off
-defaults write com.apple.dock launchanim -bool false
-
 # System Settings >> Desktop & Dock >> Dock >> Automatically hide and show the Dock: on
 defaults write com.apple.dock autohide -bool true
+
+# System Settings >> Desktop & Dock >> Dock >> Animate opening applications: off
+defaults write com.apple.dock launchanim -bool false
 
 # System Settings >> Desktop & Dock >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -bool false
