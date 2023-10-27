@@ -33,7 +33,6 @@ brew "markdownlint-cli"
 brew "mas"
 brew "mitmproxy"
 brew "neovim", args: ["HEAD"]
-brew "oci-cli"
 brew "procs"
 brew "ripgrep"
 brew "sd"
