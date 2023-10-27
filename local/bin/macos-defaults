@@ -112,6 +112,9 @@ defaults write com.apple.inputmethod.Kotoeri JIMPrefFullWidthNumeralCharactersKe
 # System Settings >> Keyboard >> Dictation: off
 defaults write com.apple.HIToolbox AppleDictationAutoEnable -int 0
 
+# System Settings >> Trackpad >> Point & Click >> Tracking speed: 2
+defaults write NSGlobalDomain com.apple.trackpad.scaling -int 2
+
 # System Settings >> Trackpad >> Point & Click >> Look up & data detectors: off
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 0
@@ -135,9 +138,6 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
-
-# System Preferences >> Trackpad >> Point & Click >> Tracking speed: 2
-defaults write NSGlobalDomain com.apple.trackpad.scaling -int 2
 
 # System Preferences >> Trackpad >> Point & Click >> Force click and haptic feedback: off
 defaults write com.apple.AppleMultitouchTrackpad ActuateDetents -int 0
