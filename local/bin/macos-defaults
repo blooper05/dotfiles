@@ -118,6 +118,11 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerTapGesture -int 0
 defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
 
+# System Settings >> Trackpad >> Point & Click >> Tap to click: on
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
 # TODO: System Preferences >> Notifications >>
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> MindNode: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> iCloud Drive >> Options... >> Documents >> 1Password 7: on
@@ -130,11 +135,6 @@ defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
-
-# System Preferences >> Trackpad >> Point & Click >> Tap to click: on
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 0
 
 # System Preferences >> Trackpad >> Point & Click >> Tracking speed: 2
 defaults write NSGlobalDomain com.apple.trackpad.scaling -int 2
