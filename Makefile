@@ -8,7 +8,7 @@ deploy:
 init:
 	"$$HOME/.local/bin/macos-defaults"
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	/opt/homebrew/bin/brew bundle --file="$$HOME/.local/share/ghq/github.com/blooper05/dotfiles/config/homebrew/Brewfile"
+	/opt/homebrew/bin/brew bundle --file="$$HOME/.config/homebrew/Brewfile"
 	mackup restore
 	cut -d ' ' -f 1 "$$HOME/.config/asdf/tool-versions" | while read plugin; do asdf plugin-add "$${plugin}"; done
 	asdf install
