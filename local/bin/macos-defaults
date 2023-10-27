@@ -54,6 +54,10 @@ defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -s
 # System Settings >> Lock Screen >> Start Screen Saver when inactive: For 5 minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 
+# TODO: System Settings >> Touch ID & Password >> Touch ID: index finger
+# TODO: System Settings >> Touch ID & Password >> Touch ID: middle finger
+# TODO: System Settings >> Touch ID & Password >> Touch ID: index finger (left)
+
 # System Settings >> Keyboard >> Key repeat rate: Fast
 defaults write NSGlobalDomain KeyRepeat -int 2
 
@@ -153,7 +157,6 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerVertSwi
 # TODO: System Preferences >> Internet Accounts >> iCloud >> Photos: on
 # TODO: System Preferences >> Internet Accounts >> iCloud >> Find My Mac: on
 # TODO: System Preferences >> Wallet & Apple Pay >>
-# TODO: System Preferences >> Touch ID: index finger
 # TODO: System Preferences >> Security & Privacy >> General >> Use your Apple Watch to unlock apps and your Mac: on
 
 # System Preferences >> Software Update >> Advanced... >> Install app updates from the App Store: on
