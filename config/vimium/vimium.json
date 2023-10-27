@@ -2,6 +2,18 @@
   "settingsVersion": "1.67.4",
   "exclusionRules": [
     {
+      "pattern": "https://mail.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://calendar.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://drive.google.com/*",
+      "passKeys": ""
+    },
+    {
       "pattern": "https://app.slack.com/client/*",
       "passKeys": ""
     },
