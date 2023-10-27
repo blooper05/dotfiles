@@ -26,7 +26,7 @@ sops 3.8.1
 stylua 0.18.2
 terraform 1.6.2
 terraform-docs 0.16.0
-tflint 0.46.1
+tflint 0.48.0
 tfsec 1.28.1
 tfupdate 0.8.0
 yarn 1.22.19
