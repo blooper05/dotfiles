@@ -39,7 +39,6 @@ brew "ripgrep"
 brew "sd"
 brew "sheldon"
 brew "sk"
-brew "sops"
 brew "sqlfluff"
 # brew "ssh-copy-id", link: true
 brew "starship"
