@@ -2,6 +2,9 @@
 
 set -ex
 
+# System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
+defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
+
 # System Preferences >> General >> Sidebar icon size: Small
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
