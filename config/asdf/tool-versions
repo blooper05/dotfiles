@@ -11,7 +11,7 @@ golang 1.21.3
 helm 3.13.1
 jsonnet 0.20.0
 k6 0.47.0
-kubectl 1.27.0
+kubectl 1.28.3
 kubectx 0.9.5
 nodejs 20.3.0
 oci 3.35.0
