@@ -121,9 +121,9 @@ CORRECT_IGNORE_FILE='.*'
 
 # Moving {{{1
 
-setopt auto_cd
-setopt auto_pushd
-setopt pushd_ignore_dups
+setopt auto_cd           # Auto changes to a directory without typing cd.
+setopt auto_pushd        # Push the old directory onto the stack on cd.
+setopt pushd_ignore_dups # Do not store duplicates in the stack.
 
 # Tools {{{1
 
