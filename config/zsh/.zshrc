@@ -85,6 +85,7 @@ setopt append_history         # Allow multiple sessions to append to one history
 setopt hist_verify            # Do not execute immediately upon history expansion.
 setopt bang_hist              # Treat the '!' character specially during expansion.
 
+# Add only functional commands to the history.
 zshaddhistory() {
   local line=${1%%$'\n'}
   local cmd=${line%% *}
