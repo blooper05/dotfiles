@@ -90,7 +90,7 @@ zshaddhistory() {
   local cmd=${line%% *}
 
   [[ ${#line} -ge 5
-    && ${cmd} != (brew|mas|zplug)
+    && ${cmd} != (brew|mas|sheldon)
     && ${cmd} != (cd)
     && ${cmd} != (cp|mv|rm|mkdir)
     && ${cmd} != (echo|cat)
