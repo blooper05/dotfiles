@@ -70,31 +70,20 @@ export HISTFILE=$XDG_STATE_HOME/zsh/history
 export HISTSIZE=10000 # in memory
 export SAVEHIST=10000 # on file
 
-# Don't record an event that was recorded just before.
-setopt hist_ignore_dups
-
-# Don't record an event that was already recorded (not just before).
-setopt hist_ignore_all_dups
-
-# Omit duplicate older commands when writing out the history file.
-setopt hist_save_no_dups
-
-# Remove the oldest history event that has a duplicate before a unique event.
-setopt hist_expire_dups_first
-
-# Don't display duplicates, even if the duplicates are not contiguous.
-setopt hist_find_no_dups
-
-# TODO: Add comments
-setopt hist_ignore_space
-setopt share_history
-setopt hist_reduce_blanks
-setopt inc_append_history
-setopt hist_no_functions
-setopt extended_history
-setopt append_history
-setopt hist_verify
-setopt bang_hist
+setopt hist_ignore_dups       # Do not record an event that was just recorded again.
+setopt hist_ignore_all_dups   # Delete an old recorded event if a new event is a duplicate.
+setopt hist_save_no_dups      # Do not write a duplicate event to the history file.
+setopt hist_expire_dups_first # Expire a duplicate event first when trimming history.
+setopt hist_find_no_dups      # Do not display a previously found event.
+setopt hist_ignore_space      # Do not record an event starting with a space.
+setopt share_history          # Share history between all sessions.
+setopt hist_reduce_blanks     # Remove superfluous blanks from each command line being added to the history list.
+setopt inc_append_history     # Write to the history file immediately, not when the shell exits.
+setopt hist_no_functions      # Do not store function definitions in the history list.
+setopt extended_history       # Write the history file in the ':start:elapsed;command' format.
+setopt append_history         # Allow multiple sessions to append to one history.
+setopt hist_verify            # Do not execute immediately upon history expansion.
+setopt bang_hist              # Treat the '!' character specially during expansion.
 
 zshaddhistory() {
   local line=${1%%$'\n'}
