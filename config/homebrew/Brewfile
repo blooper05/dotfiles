@@ -28,7 +28,6 @@ brew "jql"
 brew "jsonlint"
 brew "luajit", args: ["HEAD"]
 brew "mackup"
-brew "markdownlint-cli"
 brew "mas"
 brew "mitmproxy"
 brew "neovim", args: ["HEAD"]
