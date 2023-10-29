@@ -24,7 +24,6 @@ brew "gitlint"
 brew "gitmoji"
 brew "gnupg"
 brew "gping"
-brew "hadolint"
 brew "jql"
 brew "jsonlint"
 brew "luajit", args: ["HEAD"]
