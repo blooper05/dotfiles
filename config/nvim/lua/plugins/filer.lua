@@ -26,13 +26,9 @@ return {
       { '[file]', '<Nop>' },
       { '<Space>f', '[file]', remap = true },
 
-      {
-        '[file]c',
-        function()
-          require('nvim-tree.api').tree.toggle()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[file]c',  function() require('nvim-tree.api').tree.toggle() end, silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -43,13 +39,9 @@ return {
     },
     event = 'BufReadPost',
     keys = {
-      {
-        '[telescope]p',
-        function()
-          require('telescope').extensions.projects.projects()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[telescope]p', function() require('telescope').extensions.projects.projects() end, silent = true },
+      -- stylua: ignore end
     },
   },
 
