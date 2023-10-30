@@ -87,34 +87,12 @@ return {
       }
     end,
     keys = {
-      {
-        '<Leader>c',
-        function()
-          require('neotest').run.run(vim.fn.expand('%'))
-        end,
-        silent = true,
-      },
-      {
-        '<Leader>n',
-        function()
-          require('neotest').run.run()
-        end,
-        silent = true,
-      },
-      {
-        '<Leader>l',
-        function()
-          require('neotest').run.run_last()
-        end,
-        silent = true,
-      },
-      {
-        '<Leader>a',
-        function()
-          require('neotest').run.run(vim.fn.getcwd())
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '<Leader>c', function() require('neotest').run.run(vim.fn.expand('%')) end, silent = true },
+      { '<Leader>n', function() require('neotest').run.run() end,                   silent = true },
+      { '<Leader>l', function() require('neotest').run.run_last() end,              silent = true },
+      { '<Leader>a', function() require('neotest').run.run(vim.fn.getcwd()) end,    silent = true },
+      -- stylua: ignore end
     },
   },
 
