@@ -6,11 +6,11 @@ deploy:
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/.$(val);)
 
 init:
-	"$$HOME/.local/bin/init-macos"
-	"$$HOME/.local/bin/init-homebrew"
-	"$$HOME/.local/bin/init-mackup"
-	"$$HOME/.local/bin/init-asdf"
-	"$$HOME/.local/bin/init-zsh"
+	@local/bin/init-macos
+	@local/bin/init-homebrew
+	@local/bin/init-mackup
+	@local/bin/init-asdf
+	@local/bin/init-zsh
 
 clean:
 	@-$(foreach val, $(DOTFILES), rm -rfv $(HOME)/.$(val);)
