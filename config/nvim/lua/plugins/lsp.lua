@@ -25,7 +25,7 @@ return {
         'lua_ls',
         -- 'nginx-language-server',
         'pylsp',
-        -- 'remark_ls',
+        'remark_ls',
         'rubocop',
         'ruby_ls',
         'solargraph',
