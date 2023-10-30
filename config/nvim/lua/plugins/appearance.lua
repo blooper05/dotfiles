@@ -142,13 +142,9 @@ return {
       vim.notify = require('notify')
     end,
     keys = {
-      {
-        '[telescope]n',
-        function()
-          require('telescope').extensions.notify.notify()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[telescope]n', function() require('telescope').extensions.notify.notify() end, silent = true },
+      -- stylua: ignore end
     },
   },
 
