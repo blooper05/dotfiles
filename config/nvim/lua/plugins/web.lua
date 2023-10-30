@@ -11,20 +11,10 @@ return {
       { '[octo]', '<Nop>' },
       { '[telescope]G', '[octo]', remap = true },
 
-      {
-        '[octo]i',
-        function()
-          vim.cmd('Octo issue list')
-        end,
-        silent = true,
-      },
-      {
-        '[octo]p',
-        function()
-          vim.cmd('Octo pr list')
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[octo]i',      function() vim.cmd('Octo issue list') end, silent = true },
+      { '[octo]p',      function() vim.cmd('Octo pr list') end,    silent = true },
+      -- stylua: ignore start
     },
   },
 
@@ -45,10 +35,9 @@ return {
   },
 
   {
-    'jcdickinson/codeium.nvim',
+    'Exafunction/codeium.nvim',
     dependencies = {
       { 'hrsh7th/nvim-cmp' },
-      { 'jcdickinson/http.nvim', build = 'cargo build --workspace --release' },
       { 'nvim-lua/plenary.nvim' },
     },
     config = true,
