@@ -338,7 +338,7 @@ shell:
   args:
     - --login
     - -c
-    - zellij --layout compact attach --create main
+    - /opt/homebrew/bin/zellij --layout compact attach --create main
 
 # Startup directory
 #
