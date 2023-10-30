@@ -125,6 +125,9 @@ return {
       numhl = true,
       word_diff = true,
       current_line_blame = true,
+      diff_opts = {
+        ignore_whitespace_change = false,
+      },
     },
     event = 'BufReadPost',
     cmd = 'Gitsigns',
