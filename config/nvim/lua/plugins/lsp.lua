@@ -81,7 +81,7 @@ return {
   },
 
   {
-    'glepnir/lspsaga.nvim',
+    'nvimdev/lspsaga.nvim',
     dependencies = {
       { 'neovim/nvim-lspconfig' },
       { 'nvim-tree/nvim-web-devicons' },
@@ -114,7 +114,7 @@ return {
       {
         '[lsp]f',
         function()
-          vim.cmd('Lspsaga lsp_finder')
+          vim.cmd('Lspsaga finder')
         end,
         silent = true,
       },
