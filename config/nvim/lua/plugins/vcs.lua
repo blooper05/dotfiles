@@ -46,8 +46,6 @@ return {
       { '[git]', '<Nop>' },
       { '<Space>g', '[git]', remap = true },
 
-      { '[git]a', function() vim.cmd('Gina add -- %:p') end,                       silent = true },
-      { '[git]r', function() vim.cmd('Gina reset --quiet -- %:p') end,             silent = true },
       { '[git]B', function() vim.cmd('Gina blame') end,                            silent = true },
       { '[git]b', function() vim.cmd('Gina branch --all --verbose --verbose') end, silent = true },
       { '[git]c', function() vim.cmd('Gina commit') end,                           silent = true },
@@ -69,8 +67,6 @@ return {
   --   },
   --   cmd = 'Gin',
   --   keys = {
-  --     -- { '[git]a', function() vim.cmd('Gin add -- %:p') end,           silent = true },
-  --     -- { '[git]r', function() vim.cmd('Gin reset --quiet -- %:p') end, silent = true },
   --     -- { '[git]B', function() vim.cmd('Gin blame') end,                silent = true },
   --     -- { '[git]b', function() vim.cmd('GinBranch --all') end,          silent = true },
   --     -- { '[git]c', function() vim.cmd('Gin commit') end,               silent = true },
@@ -132,5 +128,9 @@ return {
     },
     event = 'BufReadPost',
     cmd = 'Gitsigns',
+    keys = {
+      { '[git]a', function() require('gitsigns').stage_buffer() end,       silent = true },
+      { '[git]r', function() require('gitsigns').reset_buffer_index() end, silent = true },
+    },
   },
 }
