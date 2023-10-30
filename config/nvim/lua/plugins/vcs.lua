@@ -129,8 +129,14 @@ return {
     event = 'BufReadPost',
     cmd = 'Gitsigns',
     keys = {
-      { '[git]a', function() require('gitsigns').stage_buffer() end,       silent = true },
-      { '[git]r', function() require('gitsigns').reset_buffer_index() end, silent = true },
+      { '[git]a', function() require('gitsigns').stage_buffer() end,        silent = true },
+      { '[git]r', function() require('gitsigns').reset_buffer_index() end,  silent = true },
+      { '[git]]', function() require('gitsigns').next_hunk() end,           silent = true },
+      { '[git][', function() require('gitsigns').prev_hunk() end,           silent = true },
+      { '[git]|', function() require('gitsigns').preview_hunk_inline() end, silent = true },
+      { '[git]<', function() require('gitsigns').stage_hunk() end,          silent = true },
+      { '[git]>', function() require('gitsigns').undo_stage_hunk() end,     silent = true },
+      { '[git]=', function() require('gitsigns').reset_hunk() end,          silent = true },
     },
   },
 }
