@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -ex
+
+cut -d ' ' -f 1 "$HOME/.config/asdf/tool-versions" | while read -r plugin; do /opt/homebrew/bin/asdf plugin-add "${plugin}"; done
+/opt/homebrew/bin/asdf install
