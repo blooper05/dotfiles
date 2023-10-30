@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -ex
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/opt/homebrew/bin/brew bundle --file="$HOME/.config/homebrew/Brewfile"
