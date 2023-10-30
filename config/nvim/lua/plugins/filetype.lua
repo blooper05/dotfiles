@@ -14,23 +14,10 @@ return {
     },
     cmd = 'Translate',
     keys = {
-      {
-        '<Leader>te',
-        function()
-          vim.cmd('Translate EN')
-        end,
-        mode = 'x',
-        silent = true,
-      },
-
-      {
-        '<Leader>tj',
-        function()
-          vim.cmd('Translate JA')
-        end,
-        mode = 'x',
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '<Leader>te', function() vim.cmd('Translate EN') end, mode = 'x', silent = true },
+      { '<Leader>tj', function() vim.cmd('Translate JA') end, mode = 'x', silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -84,13 +71,9 @@ return {
     },
     ft = 'markdown',
     keys = {
-      {
-        '<Leader>p',
-        function()
-          vim.cmd('PrevimOpen')
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '<Leader>p', function() vim.cmd('PrevimOpen') end, silent = true },
+      -- stylua: ignore end
     },
   },
 }
