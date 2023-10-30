@@ -1,7 +1,9 @@
 local wezterm = require('wezterm')
 
-return {
-  font = wezterm.font('HackGen35 Console NF'),
-  font_size = 15.0,
-  color_scheme = 'nordfox',
-}
+local config = wezterm.config_builder()
+
+config.font = wezterm.font('HackGen35 Console NF')
+config.font_size = 15.0
+config.color_scheme = 'nordfox'
+
+return config
