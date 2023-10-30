@@ -37,7 +37,6 @@ return {
         'terraformls',
         'tsserver',
         'volar',
-        -- 'vuels',
         'yamlls',
       }
 
