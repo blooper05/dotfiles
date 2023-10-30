@@ -279,13 +279,9 @@ return {
     },
     cmd = 'Neogen',
     keys = {
-      {
-        'gcd',
-        function()
-          require('neogen').generate()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { 'gcd', function() require('neogen').generate() end, silent = true },
+      -- stylua: ignore end
     },
   },
 }
