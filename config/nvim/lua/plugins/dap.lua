@@ -12,27 +12,11 @@ return {
       { '[dap]', '<Nop>' },
       { '<Space>d', '[dap]', remap = true },
 
-      {
-        '[dap]c',
-        function()
-          require('dap').continue()
-        end,
-        silent = true,
-      },
-      {
-        '[dap]b',
-        function()
-          require('dap').toggle_breakpoint()
-        end,
-        silent = true,
-      },
-      {
-        '[dap]r',
-        function()
-          require('dap').repl.toggle()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[dap]c',   function() require('dap').continue() end,          silent = true },
+      { '[dap]b',   function() require('dap').toggle_breakpoint() end, silent = true },
+      { '[dap]r',   function() require('dap').repl.toggle() end,       silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -48,13 +32,9 @@ return {
       dapui.setup({})
     end,
     keys = {
-      {
-        '[dap]d',
-        function()
-          require('dapui').toggle()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[dap]d', function() require('dapui').toggle() end, silent = true },
+      -- stylua: ignore end
     },
   },
 

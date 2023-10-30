@@ -90,34 +90,12 @@ return {
     config = true,
     cmd = 'Lspsaga',
     keys = {
-      {
-        '[lsp]r',
-        function()
-          vim.cmd('Lspsaga rename')
-        end,
-        silent = true,
-      },
-      {
-        '[lsp]a',
-        function()
-          vim.cmd('Lspsaga code_action')
-        end,
-        silent = true,
-      },
-      {
-        '[lsp]d',
-        function()
-          vim.cmd('Lspsaga hover_doc')
-        end,
-        silent = true,
-      },
-      {
-        '[lsp]f',
-        function()
-          vim.cmd('Lspsaga finder')
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[lsp]r', function() vim.cmd('Lspsaga rename') end,      silent = true },
+      { '[lsp]a', function() vim.cmd('Lspsaga code_action') end, silent = true },
+      { '[lsp]d', function() vim.cmd('Lspsaga hover_doc') end,   silent = true },
+      { '[lsp]f', function() vim.cmd('Lspsaga finder') end,      silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -129,13 +107,9 @@ return {
     },
     cmd = 'TroubleToggle',
     keys = {
-      {
-        '[lsp]l',
-        function()
-          vim.cmd('TroubleToggle')
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[lsp]l', function() vim.cmd('TroubleToggle') end, silent = true },
+      -- stylua: ignore end
     },
   },
 }

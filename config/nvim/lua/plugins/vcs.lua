@@ -14,8 +14,8 @@ return {
       -- gina-buffer-branch specific settings.
       vim.call('gina#custom#mapping#nmap', 'branch', 'co', '<Plug>(gina-commit-checkout)')
       vim.call('gina#custom#mapping#nmap', 'branch', 'ct', '<Plug>(gina-commit-checkout-track)')
-      vim.call('gina#custom#mapping#nmap', 'branch', 'M',  '<Plug>(gina-branch-move)')
-      vim.call('gina#custom#mapping#nmap', 'branch', 'D',  '<Plug>(gina-branch-delete)')
+      vim.call('gina#custom#mapping#nmap', 'branch', 'M', '<Plug>(gina-branch-move)')
+      vim.call('gina#custom#mapping#nmap', 'branch', 'D', '<Plug>(gina-branch-delete)')
       vim.call('gina#custom#execute', 'branch', 'setlocal cursorline')
       vim.call('gina#custom#command#option', 'branch', '--verbose')
 
@@ -46,17 +46,19 @@ return {
       { '[git]', '<Nop>' },
       { '<Space>g', '[git]', remap = true },
 
-      { '[git]B', function() vim.cmd('Gina blame') end,                            silent = true },
-      { '[git]b', function() vim.cmd('Gina branch --all --verbose --verbose') end, silent = true },
-      { '[git]c', function() vim.cmd('Gina commit') end,                           silent = true },
-      { '[git]C', function() vim.cmd('Gina commit --amend') end,                   silent = true },
-      { '[git]l', function() vim.cmd('Gina log --graph') end,                      silent = true },
-      { '[git]L', function() vim.cmd('Gina log --graph -- %:p') end,               silent = true },
-      { '[git]d', function() vim.cmd('Gina compare') end,                          silent = true },
-      { '[git]D', function() vim.cmd('Gina compare --cached') end,                 silent = true },
-      { '[git]p', function() vim.cmd('Gina patch %:p') end,                        silent = true },
-      { '[git]R', function() vim.cmd('Gina reflog') end,                           silent = true },
-      { '[git]s', function() vim.cmd('Gina status') end,                           silent = true },
+      -- stylua: ignore start
+      { '[git]B',   function() vim.cmd('Gina blame') end,                            silent = true },
+      { '[git]b',   function() vim.cmd('Gina branch --all --verbose --verbose') end, silent = true },
+      { '[git]c',   function() vim.cmd('Gina commit') end,                           silent = true },
+      { '[git]C',   function() vim.cmd('Gina commit --amend') end,                   silent = true },
+      { '[git]l',   function() vim.cmd('Gina log --graph') end,                      silent = true },
+      { '[git]L',   function() vim.cmd('Gina log --graph -- %:p') end,               silent = true },
+      { '[git]d',   function() vim.cmd('Gina compare') end,                          silent = true },
+      { '[git]D',   function() vim.cmd('Gina compare --cached') end,                 silent = true },
+      { '[git]p',   function() vim.cmd('Gina patch %:p') end,                        silent = true },
+      { '[git]R',   function() vim.cmd('Gina reflog') end,                           silent = true },
+      { '[git]s',   function() vim.cmd('Gina status') end,                           silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -67,16 +69,18 @@ return {
   --   },
   --   cmd = 'Gin',
   --   keys = {
-  --     -- { '[git]B', function() vim.cmd('Gin blame') end,                silent = true },
-  --     -- { '[git]b', function() vim.cmd('GinBranch --all') end,          silent = true },
-  --     -- { '[git]c', function() vim.cmd('Gin commit') end,               silent = true },
-  --     -- { '[git]C', function() vim.cmd('Gin commit --amend') end,       silent = true },
-  --     -- { '[git]l', function() vim.cmd('GinLog') end,                   silent = true },
-  --     -- { '[git]L', function() vim.cmd('GinLog -- %:p') end,            silent = true },
-  --     -- { '[git]d', function() vim.cmd('GinDiff') end,                  silent = true },
-  --     -- { '[git]D', function() vim.cmd('GinDiff --cached') end,         silent = true },
-  --     -- { '[git]R', function() vim.cmd('Gin reflog') end,               silent = true },
-  --     -- { '[git]s', function() vim.cmd('GinStatus') end,                silent = true },
+  --     -- stylua: ignore start
+  --     -- { '[git]B', function() vim.cmd('Gin blame') end,          silent = true },
+  --     -- { '[git]b', function() vim.cmd('GinBranch --all') end,    silent = true },
+  --     -- { '[git]c', function() vim.cmd('Gin commit') end,         silent = true },
+  --     -- { '[git]C', function() vim.cmd('Gin commit --amend') end, silent = true },
+  --     -- { '[git]l', function() vim.cmd('GinLog') end,             silent = true },
+  --     -- { '[git]L', function() vim.cmd('GinLog -- %:p') end,      silent = true },
+  --     -- { '[git]d', function() vim.cmd('GinDiff') end,            silent = true },
+  --     -- { '[git]D', function() vim.cmd('GinDiff --cached') end,   silent = true },
+  --     -- { '[git]R', function() vim.cmd('Gin reflog') end,         silent = true },
+  --     -- { '[git]s', function() vim.cmd('GinStatus') end,          silent = true },
+  --     -- stylua: ignore end
   --   },
   -- },
 
@@ -96,13 +100,9 @@ return {
     },
     cmd = 'Neogit',
     keys = {
-      {
-        '[git]g',
-        function()
-          require('neogit').open()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[git]g', function() require('neogit').open() end, silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -132,6 +132,7 @@ return {
     event = 'BufReadPost',
     cmd = 'Gitsigns',
     keys = {
+      -- stylua: ignore start
       { '[git]a', function() require('gitsigns').stage_buffer() end,        silent = true },
       { '[git]r', function() require('gitsigns').reset_buffer_index() end,  silent = true },
       { '[git]]', function() require('gitsigns').next_hunk() end,           silent = true },
@@ -140,6 +141,7 @@ return {
       { '[git]<', function() require('gitsigns').stage_hunk() end,          silent = true },
       { '[git]>', function() require('gitsigns').undo_stage_hunk() end,     silent = true },
       { '[git]=', function() require('gitsigns').reset_hunk() end,          silent = true },
+      -- stylua: ignore end
     },
   },
 }
