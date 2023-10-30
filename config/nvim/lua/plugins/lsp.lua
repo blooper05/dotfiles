@@ -28,7 +28,6 @@ return {
         'postgres_lsp',
         'pylsp',
         'remark_ls',
-        'rubocop',
         'ruby_ls',
         'solargraph',
         'sorbet',
