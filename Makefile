@@ -10,9 +10,7 @@ init:
 	"$$HOME/.local/bin/init-homebrew"
 	"$$HOME/.local/bin/init-mackup"
 	"$$HOME/.local/bin/init-asdf"
-	mkdir -p "$$HOME/.local/share/zsh"
-	mkdir -p "$$HOME/.local/state/zsh"
-	rm -rf "$$HOME/.zcompcache" "$$HOME/.zsh_history" "$$HOME/.zsh_sessions"
+	"$$HOME/.local/bin/init-zsh"
 
 clean:
 	@-$(foreach val, $(DOTFILES), rm -rfv $(HOME)/.$(val);)
