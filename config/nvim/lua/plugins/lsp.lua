@@ -33,7 +33,6 @@ return {
         'solargraph',
         'sorbet',
         'sqlls',
-        'sqls',
         'steep',
         'stylelint_lsp',
         'tailwindcss',
