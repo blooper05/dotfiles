@@ -111,20 +111,10 @@ return {
     config = true,
     event = 'BufReadPost',
     keys = {
-      {
-        '[lsp]t',
-        function()
-          vim.cmd('TodoTrouble')
-        end,
-        silent = true,
-      },
-      {
-        '[telescope]t',
-        function()
-          vim.cmd('TodoTelescope')
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[lsp]t',       function() vim.cmd('TodoTrouble') end,   silent = true },
+      { '[telescope]t', function() vim.cmd('TodoTelescope') end, silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -134,13 +124,9 @@ return {
       { 'nvim-telescope/telescope.nvim' },
     },
     keys = {
-      {
-        '[telescope]U',
-        function()
-          require('telescope').extensions.undo.undo()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[telescope]U', function() require('telescope').extensions.undo.undo() end, silent = true },
+      -- stylua: ignore end
     },
   },
 
