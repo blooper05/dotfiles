@@ -6,7 +6,7 @@ deploy:
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/.$(val);)
 
 init:
-	"$$HOME/.local/bin/macos-defaults"
+	"$$HOME/.local/bin/init-macos"
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	/opt/homebrew/bin/brew bundle --file="$$HOME/.config/homebrew/Brewfile"
 	mackup restore
