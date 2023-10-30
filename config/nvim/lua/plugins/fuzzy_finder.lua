@@ -51,62 +51,16 @@ return {
       { '[telescope]', '<Nop>' },
       { '<Space>u', '[telescope]', remap = true },
 
-      {
-        '[telescope]f',
-        function()
-          require('telescope.builtin').find_files()
-        end,
-        silent = true,
-      },
-      {
-        '[telescope]g',
-        function()
-          require('telescope.builtin').live_grep()
-        end,
-        silent = true,
-      },
-      {
-        '[telescope]*',
-        function()
-          require('telescope.builtin').grep_string()
-        end,
-        silent = true,
-      },
-      {
-        '[telescope]B',
-        function()
-          require('telescope.builtin').buffers()
-        end,
-        silent = true,
-      },
-      {
-        '[telescope]R',
-        function()
-          require('telescope.builtin').registers()
-        end,
-        silent = true,
-      },
-      {
-        '[telescope]H',
-        function()
-          require('telescope.builtin').help_tags()
-        end,
-        silent = true,
-      },
-      {
-        '[telescope]M',
-        function()
-          require('telescope.builtin').man_pages()
-        end,
-        silent = true,
-      },
-      {
-        '[telescope]u',
-        function()
-          require('telescope.builtin').resume()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[telescope]f', function() require('telescope.builtin').find_files() end,  silent = true },
+      { '[telescope]g', function() require('telescope.builtin').live_grep() end,   silent = true },
+      { '[telescope]*', function() require('telescope.builtin').grep_string() end, silent = true },
+      { '[telescope]B', function() require('telescope.builtin').buffers() end,     silent = true },
+      { '[telescope]R', function() require('telescope.builtin').registers() end,   silent = true },
+      { '[telescope]H', function() require('telescope.builtin').help_tags() end,   silent = true },
+      { '[telescope]M', function() require('telescope.builtin').man_pages() end,   silent = true },
+      { '[telescope]u', function() require('telescope.builtin').resume() end,      silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -136,13 +90,9 @@ return {
       { 'nvim-telescope/telescope.nvim' },
     },
     keys = {
-      {
-        '[telescope]h',
-        function()
-          require('telescope').extensions.frecency.frecency()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[telescope]h', function() require('telescope').extensions.frecency.frecency() end, silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -152,13 +102,9 @@ return {
       { 'nvim-telescope/telescope.nvim' },
     },
     keys = {
-      {
-        '[telescope]s',
-        function()
-          require('telescope').extensions.ghq.list()
-        end,
-        silent = true,
-      },
+      -- stylua: ignore start
+      { '[telescope]s', function() require('telescope').extensions.ghq.list() end, silent = true },
+      -- stylua: ignore end
     },
   },
 }
