@@ -31,6 +31,7 @@ return {
         -- 'sorbet',
         'sqlls',
         'sqls',
+        'steep',
         'stylelint_lsp',
         'tailwindcss',
         'taplo',
