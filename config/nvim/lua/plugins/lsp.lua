@@ -19,6 +19,7 @@ return {
         'elmls',
         'eslint',
         'grammarly',
+        'helm_ls',
         'html',
         'jsonls',
         'jsonnet_ls',
