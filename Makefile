@@ -8,7 +8,7 @@ deploy:
 init:
 	"$$HOME/.local/bin/init-macos"
 	"$$HOME/.local/bin/init-homebrew"
-	mackup restore
+	"$$HOME/.local/bin/init-mackup"
 	cut -d ' ' -f 1 "$$HOME/.config/asdf/tool-versions" | while read plugin; do asdf plugin-add "$${plugin}"; done
 	asdf install
 	mkdir -p "$$HOME/.local/share/zsh"
