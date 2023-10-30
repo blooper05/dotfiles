@@ -37,7 +37,6 @@ return {
         'tailwindcss',
         'taplo',
         'terraformls',
-        'tflint',
         'tsserver',
         'typeprof',
         'volar',
