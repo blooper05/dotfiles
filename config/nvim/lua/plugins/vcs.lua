@@ -84,10 +84,40 @@ return {
   --   },
   -- },
 
-  -- TODO: { 'TimUntersberger/neogit' },
-  -- TODO: { 'akinsho/git-conflict.nvim' },
-  -- TODO: { 'f-person/git-blame.nvim' },
-  -- TODO: { 'sindrets/diffview.nvim' },
+  {
+    'NeogitOrg/neogit',
+    dependencies = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope.nvim' },
+      { 'sindrets/diffview.nvim' },
+    },
+    opts = {
+      remember_settings = false,
+      integrations = {
+        telescope = true,
+        diffview = true,
+      },
+    },
+    cmd = 'Neogit',
+    keys = {
+      {
+        '[git]g',
+        function()
+          require('neogit').open()
+        end,
+        silent = true,
+      },
+    },
+  },
+
+  {
+    'sindrets/diffview.nvim',
+    dependencies = {
+      { 'nvim-tree/nvim-web-devicons' },
+    },
+    config = true,
+    cmd = { 'DiffviewOpen', 'DiffviewFileHistory', 'DiffviewClose' },
+  },
 
   {
     'lewis6991/gitsigns.nvim',
