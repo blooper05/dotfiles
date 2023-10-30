@@ -68,12 +68,8 @@ return {
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
     end,
-    opts = {
-      indent_blankline_use_treesitter = true,
-      indent_blankline_use_treesitter_scope = true,
-      show_current_context = true,
-      show_current_context_start = true,
-    },
+    main = 'ibl',
+    config = true,
     event = 'BufReadPost',
   },
 
