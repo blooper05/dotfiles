@@ -28,7 +28,7 @@ return {
         -- 'remark_ls',
         'ruby_ls',
         -- 'solargraph',
-        -- 'sorbet',
+        'sorbet',
         'sqlls',
         'sqls',
         'steep',
