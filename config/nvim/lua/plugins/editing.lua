@@ -80,9 +80,10 @@ return {
 
   {
     'junegunn/vim-easy-align', -- non-lua plugin
-    cmd = 'EasyAlign',
+    cmd = { 'EasyAlign', 'LiveEasyAlign' },
     keys = {
       { 'ga', '<Plug>(EasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
+      { 'gA', '<Plug>(LiveEasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
     },
   },
 
