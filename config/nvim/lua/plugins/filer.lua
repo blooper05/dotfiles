@@ -40,6 +40,8 @@ return {
     dependencies = {
       { 'nvim-telescope/telescope.nvim' },
     },
+    main = 'project_nvim',
+    config = true,
     event = 'BufReadPost',
     keys = {
       -- stylua: ignore start
