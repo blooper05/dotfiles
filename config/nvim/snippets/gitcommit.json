@@ -1,0 +1,152 @@
+{
+  "sparkles": {
+    "prefix": "sparkles",
+    "body": [
+      "✨ feat(${1:scope}): "
+    ]
+  },
+  "bug": {
+    "prefix": "bug",
+    "body": [
+      "🐛 fix(${1:scope}): "
+    ]
+  },
+  "ambulance": {
+    "prefix": "ambulance",
+    "body": [
+      "🚑 fix(${1:scope}): "
+    ]
+  },
+  "lock": {
+    "prefix": "lock",
+    "body": [
+      "🔒 fix(${1:scope}): "
+    ]
+  },
+  "pencil2": {
+    "prefix": "pencil2",
+    "body": [
+      "✏️  fix(${1:scope}): "
+    ]
+  },
+  "recycle": {
+    "prefix": "recycle",
+    "body": [
+      "♻️  refactor(${1:scope}): "
+    ]
+  },
+  "truck": {
+    "prefix": "truck",
+    "body": [
+      "🚚 refactor(${1:scope}): "
+    ]
+  },
+  "fire": {
+    "prefix": "fire",
+    "body": [
+      "🔥 refactor(${1:scope}): "
+    ]
+  },
+  "art": {
+    "prefix": "art",
+    "body": [
+      "🎨 style(${1:scope}): "
+    ]
+  },
+  "rotating_light": {
+    "prefix": "rotating_light",
+    "body": [
+      "🚨 style(${1:scope}): "
+    ]
+  },
+  "zap": {
+    "prefix": "zap",
+    "body": [
+      "⚡️ perf(${1:scope}): "
+    ]
+  },
+  "white_check_mark": {
+    "prefix": "white_check_mark",
+    "body": [
+      "✅ test(${1:scope}): "
+    ]
+  },
+  "memo": {
+    "prefix": "memo",
+    "body": [
+      "📝 docs(${1:scope}): "
+    ]
+  },
+  "bulb": {
+    "prefix": "bulb",
+    "body": [
+      "💡 docs(${1:scope}): "
+    ]
+  },
+  "green_heart": {
+    "prefix": "green_heart",
+    "body": [
+      "💚 ci(${1:scope}): "
+    ]
+  },
+  "construction_worker": {
+    "prefix": "construction_worker",
+    "body": [
+      "👷 ci(${1:scope}): "
+    ]
+  },
+  "tada": {
+    "prefix": "tada",
+    "body": [
+      "🎉 chore(${1:scope}): "
+    ]
+  },
+  "bookmark": {
+    "prefix": "bookmark",
+    "body": [
+      "🔖 chore(${1:scope}): "
+    ]
+  },
+  "rocket": {
+    "prefix": "rocket",
+    "body": [
+      "🚀 chore(${1:scope}): "
+    ]
+  },
+  "wrench": {
+    "prefix": "wrench",
+    "body": [
+      "🔧 chore(${1:scope}): "
+    ]
+  },
+  "hammer": {
+    "prefix": "hammer",
+    "body": [
+      "🔨 chore(${1:scope}): "
+    ]
+  },
+  "heavy_plus_sign": {
+    "prefix": "heavy_plus_sign",
+    "body": [
+      "➕ chore(${1:scope}): "
+    ]
+  },
+  "heavy_minus_sign": {
+    "prefix": "heavy_minus_sign",
+    "body": [
+      "➖ chore(${1:scope}): "
+    ]
+  },
+  "arrow_up": {
+    "prefix": "arrow_up",
+    "body": [
+      "⬆️  chore(${1:scope}): "
+    ]
+  },
+  "arrow_down": {
+    "prefix": "arrow_down",
+    "body": [
+      "⬇️  chore(${1:scope}): "
+    ]
+  }
+}
