@@ -98,19 +98,19 @@
   "tada": {
     "prefix": "tada",
     "body": [
-      "🎉 chore(${1:scope}): ${2:title}", "", "$0"
+      "🎉 chore(init): ${1:title}", "", "$0"
     ]
   },
   "bookmark": {
     "prefix": "bookmark",
     "body": [
-      "🔖 chore(${1:scope}): ${2:title}", "", "$0"
+      "🔖 chore(release): ${1:title}", "", "$0"
     ]
   },
   "rocket": {
     "prefix": "rocket",
     "body": [
-      "🚀 chore(${1:scope}): ${2:title}", "", "$0"
+      "🚀 chore(release): ${1:title}", "", "$0"
     ]
   },
   "wrench": {
@@ -128,25 +128,25 @@
   "heavy_plus_sign": {
     "prefix": "heavy_plus_sign",
     "body": [
-      "➕ chore(${1:scope}): ${2:title}", "", "$0"
+      "➕ chore(deps): ${1:title}", "", "$0"
     ]
   },
   "heavy_minus_sign": {
     "prefix": "heavy_minus_sign",
     "body": [
-      "➖ chore(${1:scope}): ${2:title}", "", "$0"
+      "➖ chore(deps): ${1:title}", "", "$0"
     ]
   },
   "arrow_up": {
     "prefix": "arrow_up",
     "body": [
-      "⬆️  chore(${1:scope}): ${2:title}", "", "$0"
+      "⬆️  chore(deps): ${1:title}", "", "$0"
     ]
   },
   "arrow_down": {
     "prefix": "arrow_down",
     "body": [
-      "⬇️  chore(${1:scope}): ${2:title}", "", "$0"
+      "⬇️  chore(deps): ${1:title}", "", "$0"
     ]
   }
 }
