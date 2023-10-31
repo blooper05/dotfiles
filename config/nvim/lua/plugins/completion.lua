@@ -223,9 +223,6 @@ return {
     end,
   },
 
-  -- TODO: { 'zbirenbaum/copilot.lua' },
-  -- TODO: { 'zbirenbaum/copilot-cmp' },
-
   {
     'windwp/nvim-autopairs',
     dependencies = {
