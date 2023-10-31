@@ -5,6 +5,12 @@
       "✨ feat(${1:scope}): ${2:title}", "", "$0"
     ]
   },
+  "Introduce breaking changes.": {
+    "prefix": "boom",
+    "body": [
+      "💥 feat!(${1:scope}): ${2:title}", "", "BREAKING CHANGE: $0"
+    ]
+  },
   "Fix a bug.": {
     "prefix": "bug",
     "body": [
