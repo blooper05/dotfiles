@@ -4,7 +4,7 @@
 # ✨ feat:     [sparkles]            Introduce new features.
 # 🐛 fix:      [bug]                 Fix a bug.
 # 🚑 fix:      [ambulance]           Critical hotfix.
-# 🔒 fix:      [lock]                Fix security issues.
+# 🔒 fix:      [lock]                Fix security or privacy issues.
 # ✏️  fix:      [pencil2]             Fix typos.
 # ♻️  refactor: [recycle]             Refactor code.
 # 🚚 refactor: [truck]               Move or rename resources (e.g.: files, paths, routes).
