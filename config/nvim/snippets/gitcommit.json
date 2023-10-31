@@ -2,151 +2,151 @@
   "sparkles": {
     "prefix": "sparkles",
     "body": [
-      "✨ feat(${1:scope}): "
+      "✨ feat(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "bug": {
     "prefix": "bug",
     "body": [
-      "🐛 fix(${1:scope}): "
+      "🐛 fix(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "ambulance": {
     "prefix": "ambulance",
     "body": [
-      "🚑 fix(${1:scope}): "
+      "🚑 fix(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "lock": {
     "prefix": "lock",
     "body": [
-      "🔒 fix(${1:scope}): "
+      "🔒 fix(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "pencil2": {
     "prefix": "pencil2",
     "body": [
-      "✏️  fix(${1:scope}): "
+      "✏️  fix(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "recycle": {
     "prefix": "recycle",
     "body": [
-      "♻️  refactor(${1:scope}): "
+      "♻️  refactor(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "truck": {
     "prefix": "truck",
     "body": [
-      "🚚 refactor(${1:scope}): "
+      "🚚 refactor(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "fire": {
     "prefix": "fire",
     "body": [
-      "🔥 refactor(${1:scope}): "
+      "🔥 refactor(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "art": {
     "prefix": "art",
     "body": [
-      "🎨 style(${1:scope}): "
+      "🎨 style(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "rotating_light": {
     "prefix": "rotating_light",
     "body": [
-      "🚨 style(${1:scope}): "
+      "🚨 style(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "zap": {
     "prefix": "zap",
     "body": [
-      "⚡️ perf(${1:scope}): "
+      "⚡️ perf(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "white_check_mark": {
     "prefix": "white_check_mark",
     "body": [
-      "✅ test(${1:scope}): "
+      "✅ test(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "memo": {
     "prefix": "memo",
     "body": [
-      "📝 docs(${1:scope}): "
+      "📝 docs(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "bulb": {
     "prefix": "bulb",
     "body": [
-      "💡 docs(${1:scope}): "
+      "💡 docs(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "green_heart": {
     "prefix": "green_heart",
     "body": [
-      "💚 ci(${1:scope}): "
+      "💚 ci(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "construction_worker": {
     "prefix": "construction_worker",
     "body": [
-      "👷 ci(${1:scope}): "
+      "👷 ci(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "tada": {
     "prefix": "tada",
     "body": [
-      "🎉 chore(${1:scope}): "
+      "🎉 chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "bookmark": {
     "prefix": "bookmark",
     "body": [
-      "🔖 chore(${1:scope}): "
+      "🔖 chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "rocket": {
     "prefix": "rocket",
     "body": [
-      "🚀 chore(${1:scope}): "
+      "🚀 chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "wrench": {
     "prefix": "wrench",
     "body": [
-      "🔧 chore(${1:scope}): "
+      "🔧 chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "hammer": {
     "prefix": "hammer",
     "body": [
-      "🔨 chore(${1:scope}): "
+      "🔨 chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "heavy_plus_sign": {
     "prefix": "heavy_plus_sign",
     "body": [
-      "➕ chore(${1:scope}): "
+      "➕ chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "heavy_minus_sign": {
     "prefix": "heavy_minus_sign",
     "body": [
-      "➖ chore(${1:scope}): "
+      "➖ chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "arrow_up": {
     "prefix": "arrow_up",
     "body": [
-      "⬆️  chore(${1:scope}): "
+      "⬆️  chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
   "arrow_down": {
     "prefix": "arrow_down",
     "body": [
-      "⬇️  chore(${1:scope}): "
+      "⬇️  chore(${1:scope}): ${2:title}", "", "$0"
     ]
   }
 }
