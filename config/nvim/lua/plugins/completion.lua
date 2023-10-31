@@ -61,6 +61,9 @@ return {
               spell = '[Spell]',
               treesitter = '[TS]',
             },
+            symbol_map = {
+              Codeium = '',
+            },
           }),
         },
         mapping = cmp.mapping.preset.insert({
