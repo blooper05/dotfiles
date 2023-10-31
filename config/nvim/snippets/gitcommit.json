@@ -17,6 +17,12 @@
       "👔 feat(${1:scope}): ${2:title}", "", "$0"
     ]
   },
+  "Add or update the UI and style files.": {
+    "prefix": "lipstick",
+    "body": [
+      "💄 feat(${1:scope}): ${2:title}", "", "$0"
+    ]
+  },
   "Fix a bug.": {
     "prefix": "bug",
     "body": [

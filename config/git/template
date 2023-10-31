@@ -4,6 +4,7 @@
 # ✨ feat:     [sparkles]            Introduce new features.
 # 💥 feat!:    [boom]                Introduce breaking changes.
 # 👔 feat:     [necktie]             Add or update business logic.
+# 💄 feat:     [lipstick]            Add or update the UI and style files.
 # 🐛 fix:      [bug]                 Fix a bug.
 # 🚑 fix:      [ambulance]           Critical hotfix.
 # 🔒 fix:      [lock]                Fix security or privacy issues.
