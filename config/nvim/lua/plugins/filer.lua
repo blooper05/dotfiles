@@ -20,6 +20,9 @@ return {
         enable = true,
         update_root = true,
       },
+      view = {
+        width = 40,
+      },
     },
     cmd = 'NvimTree',
     keys = {
