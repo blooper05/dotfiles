@@ -1,149 +1,149 @@
 {
-  "sparkles": {
+  "Introduce new features.": {
     "prefix": "sparkles",
     "body": [
       "✨ feat(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "bug": {
+  "Fix a bug.": {
     "prefix": "bug",
     "body": [
       "🐛 fix(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "ambulance": {
+  "Critical hotfix.": {
     "prefix": "ambulance",
     "body": [
       "🚑 fix(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "lock": {
+  "Fix security or privacy issues.": {
     "prefix": "lock",
     "body": [
       "🔒 fix(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "pencil2": {
+  "Fix typos.": {
     "prefix": "pencil2",
     "body": [
       "✏️  fix(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "recycle": {
+  "Refactor code.": {
     "prefix": "recycle",
     "body": [
       "♻️  refactor(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "truck": {
+  "Move or rename resources (e.g.: files, paths, routes).": {
     "prefix": "truck",
     "body": [
       "🚚 refactor(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "fire": {
+  "Remove code or files.": {
     "prefix": "fire",
     "body": [
       "🔥 refactor(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "art": {
+  "Improve structure / format of the code.": {
     "prefix": "art",
     "body": [
       "🎨 style(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "rotating_light": {
+  "Fix compiler / linter warnings.": {
     "prefix": "rotating_light",
     "body": [
       "🚨 style(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "zap": {
+  "Improve performance.": {
     "prefix": "zap",
     "body": [
       "⚡️ perf(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "white_check_mark": {
+  "Add, update, or pass tests.": {
     "prefix": "white_check_mark",
     "body": [
       "✅ test(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "memo": {
+  "Add or update documentation.": {
     "prefix": "memo",
     "body": [
       "📝 docs(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "bulb": {
+  "Add or update comments in source code.": {
     "prefix": "bulb",
     "body": [
       "💡 docs(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "green_heart": {
+  "Fix CI Build.": {
     "prefix": "green_heart",
     "body": [
       "💚 ci(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "construction_worker": {
+  "Add or update CI build system.": {
     "prefix": "construction_worker",
     "body": [
       "👷 ci(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "tada": {
+  "Begin a project.": {
     "prefix": "tada",
     "body": [
       "🎉 chore(init): ${1:title}", "", "$0"
     ]
   },
-  "bookmark": {
+  "Release / Version tags.": {
     "prefix": "bookmark",
     "body": [
       "🔖 chore(release): ${1:title}", "", "$0"
     ]
   },
-  "rocket": {
+  "Deploy stuff.": {
     "prefix": "rocket",
     "body": [
       "🚀 chore(release): ${1:title}", "", "$0"
     ]
   },
-  "wrench": {
+  "Add or update configuration files.": {
     "prefix": "wrench",
     "body": [
       "🔧 chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "hammer": {
+  "Add or update development scripts.": {
     "prefix": "hammer",
     "body": [
       "🔨 chore(${1:scope}): ${2:title}", "", "$0"
     ]
   },
-  "heavy_plus_sign": {
+  "Add a dependency.": {
     "prefix": "heavy_plus_sign",
     "body": [
       "➕ chore(deps): ${1:title}", "", "$0"
     ]
   },
-  "heavy_minus_sign": {
+  "Remove a dependency.": {
     "prefix": "heavy_minus_sign",
     "body": [
       "➖ chore(deps): ${1:title}", "", "$0"
     ]
   },
-  "arrow_up": {
+  "Upgrade dependencies.": {
     "prefix": "arrow_up",
     "body": [
       "⬆️  chore(deps): ${1:title}", "", "$0"
     ]
   },
-  "arrow_down": {
+  "Downgrade dependencies.": {
     "prefix": "arrow_down",
     "body": [
       "⬇️  chore(deps): ${1:title}", "", "$0"
