@@ -91,11 +91,11 @@ return {
           end, { 'i', 's' }),
         }),
         sources = cmp.config.sources({
-          { name = 'codeium' },
           { name = 'luasnip' },
           { name = 'nvim_lsp' },
           { name = 'nvim_lua' },
           { name = 'path' },
+          { name = 'codeium' },
         }, {
           { name = 'buffer' },
           { name = 'treesitter' },
@@ -107,11 +107,11 @@ return {
 
       cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
         sources = cmp.config.sources({
-          { name = 'codeium' },
           { name = 'luasnip' },
           { name = 'nvim_lsp' },
           { name = 'path' },
           { name = 'emoji' },
+          { name = 'codeium' },
         }, {
           { name = 'buffer' },
           { name = 'treesitter' },
