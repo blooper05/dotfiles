@@ -2,21 +2,15 @@ return {
   -- Natural Language
 
   {
-    'uga-rosa/translate.nvim',
-    init = function()
-      vim.g.deepl_api_auth_key = ''
-    end,
+    'potamides/pantran.nvim',
     opts = {
-      default = {
-        command = 'deepl_free',
-        output = 'replace',
-      },
+      default_engine = 'google',
     },
-    cmd = 'Translate',
+    cmd = 'Pantran',
     keys = {
       -- stylua: ignore start
-      { '<Leader>te', function() vim.cmd('Translate EN') end, mode = 'x', silent = true },
-      { '<Leader>tj', function() vim.cmd('Translate JA') end, mode = 'x', silent = true },
+      { '<Leader>te', function() require('pantran').range_translate({ target = 'en' }) end, mode = 'x', silent = true },
+      { '<Leader>tj', function() require('pantran').range_translate({ target = 'ja' }) end, mode = 'x', silent = true },
       -- stylua: ignore end
     },
   },
@@ -83,6 +77,4 @@ return {
       -- stylua: ignore end
     },
   },
-
-  -- TODO: { 'potamides/pantran.nvim' },
 }
