@@ -149,7 +149,9 @@ return {
 
   {
     'levouh/tint.nvim',
-    config = true,
+    opts = {
+      highlight_ignore_patterns = { 'Telescope.*' },
+    },
     event = { 'WinEnter', 'WinLeave' },
   },
 
