@@ -84,6 +84,8 @@ return {
   --   },
   -- },
 
+  -- TODO: { 'dinhhuy258/git.nvim' },
+
   {
     'NeogitOrg/neogit',
     dependencies = {
