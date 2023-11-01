@@ -57,7 +57,7 @@ return {
 
   {
     'michaelb/sniprun',
-    build = 'bash ./install.sh',
+    build = 'sh install.sh',
     opts = {
       display = { 'TerminalWithCode' },
     },
