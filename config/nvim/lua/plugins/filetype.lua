@@ -44,22 +44,29 @@ return {
 
   {
     'gaoDean/autolist.nvim',
+    dependencies = {
+      { 'windwp/nvim-autopairs' }, -- FIXME: conflicted with
+    },
     config = function()
       local autolist = require('autolist')
 
       autolist.setup()
 
-      -- FIXME: conflicting with nvim-cmp
-      autolist.create_mapping_hook('i', '<CR>', autolist.new)
-      autolist.create_mapping_hook('i', '<Tab>', autolist.indent)
-      autolist.create_mapping_hook('i', '<S-Tab>', autolist.indent, '<C-D>')
-      autolist.create_mapping_hook('n', 'dd', autolist.force_recalculate)
-      autolist.create_mapping_hook('n', 'o', autolist.new)
-      autolist.create_mapping_hook('n', 'O', autolist.new_before)
-      autolist.create_mapping_hook('n', '>>', autolist.indent)
-      autolist.create_mapping_hook('n', '<<', autolist.indent)
-      autolist.create_mapping_hook('n', '<C-r>', autolist.force_recalculate)
-      autolist.create_mapping_hook('n', '<leader>x', autolist.invert_entry, '')
+      vim.keymap.set('i', '<Tab>', '<Cmd>AutolistTab<CR>')
+      vim.keymap.set('i', '<S-Tab>', '<Cmd>AutolistShiftTab<CR>')
+      vim.keymap.set('i', '<CR>', '<CR><Cmd>AutolistNewBullet<CR>')
+      vim.keymap.set('n', 'o', 'o<Cmd>AutolistNewBullet<CR>')
+      vim.keymap.set('n', 'O', 'O<Cmd>AutolistNewBulletBefore<CR>')
+      vim.keymap.set('n', '<CR>', '<Cmd>AutolistToggleCheckbox<CR><CR>')
+      vim.keymap.set('n', '<C-r>', '<Cmd>AutolistRecalculate<CR><C-r>')
+
+      vim.keymap.set('n', '<leader>cn', autolist.cycle_next_dr, { expr = true })
+      vim.keymap.set('n', '<leader>cp', autolist.cycle_prev_dr, { expr = true })
+
+      vim.keymap.set('n', '>>', '>><Cmd>AutolistRecalculate<CR>')
+      vim.keymap.set('n', '<<', '<<<Cmd>AutolistRecalculate<CR>')
+      vim.keymap.set('n', 'dd', 'dd<Cmd>AutolistRecalculate<CR>')
+      vim.keymap.set('v', 'd', 'd<Cmd>AutolistRecalculate<CR>')
     end,
     ft = 'markdown',
   },
