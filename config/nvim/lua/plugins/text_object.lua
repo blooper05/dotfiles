@@ -54,4 +54,7 @@ return {
       { 'p', '<Plug>(operator-replace)', mode = { 'o', 'x' }, remap = true, silent = true },
     },
   },
+
+  -- TODO: { 'kylechui/nvim-surround' },
+  -- TODO: { 'nvim-treesitter/nvim-treesitter-textobjects' },
 }

@@ -177,4 +177,7 @@ return {
     config = true,
     cmd = 'ColorizerToggle',
   },
+
+  -- TODO: { 'edluffy/hologram.nvim' },
+  -- TODO: { 'kevinhwang91/nvim-ufo' },
 }

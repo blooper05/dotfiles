@@ -83,4 +83,6 @@ return {
       -- stylua: ignore end
     },
   },
+
+  -- TODO: { 'potamides/pantran.nvim' },
 }
