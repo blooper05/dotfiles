@@ -17,6 +17,7 @@ return {
           null_ls.builtins.diagnostics.hadolint,
           null_ls.builtins.diagnostics.jsonlint,
           null_ls.builtins.diagnostics.markdownlint_cli2,
+          null_ls.builtins.diagnostics.reek,
           null_ls.builtins.diagnostics.rubocop.with({ command = 'docker-rubocop' }),
           null_ls.builtins.diagnostics.shellcheck,
           null_ls.builtins.diagnostics.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
