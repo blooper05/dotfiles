@@ -2,6 +2,7 @@ return {
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
+      { 'Exafunction/codeium.nvim' },
       { 'f3fora/cmp-spell' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-calc' },
@@ -11,7 +12,6 @@ return {
       { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
       { 'hrsh7th/cmp-nvim-lua' },
       { 'hrsh7th/cmp-path' },
-      { 'jcdickinson/codeium.nvim' },
       { 'neovim/nvim-lspconfig' },
       { 'onsails/lspkind-nvim' },
       { 'ray-x/cmp-treesitter' },
