@@ -39,8 +39,7 @@ return {
       { 'kana/vim-operator-user' }, -- non-lua plugin
     },
     keys = {
-      { 's', '<Plug>(operator-surround-append)', mode = 'o', remap = true, silent = true },
-      { 's', '<Plug>(operator-surround-append)', mode = 'x', remap = true, silent = true },
+      { 's', '<Plug>(operator-surround-append)', mode = { 'o', 'x' }, remap = true, silent = true },
       { 'ds', '<Plug>(operator-surround-delete)a', mode = '', remap = true, silent = true },
       { 'cs', '<Plug>(operator-surround-replace)a', mode = '', remap = true, silent = true },
     },
@@ -52,8 +51,7 @@ return {
       { 'kana/vim-operator-user' }, -- non-lua plugin
     },
     keys = {
-      { 'p', '<Plug>(operator-replace)', mode = 'o', remap = true, silent = true },
-      { 'p', '<Plug>(operator-replace)', mode = 'x', remap = true, silent = true },
+      { 'p', '<Plug>(operator-replace)', mode = { 'o', 'x' }, remap = true, silent = true },
     },
   },
 }
