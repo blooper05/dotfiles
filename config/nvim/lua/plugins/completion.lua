@@ -168,7 +168,7 @@ return {
   {
     'f3fora/cmp-spell',
     dependencies = {
-      { 'psliwka/vim-dirtytalk' },
+      { 'psliwka/vim-dirtytalk' }, -- non-lua plugin
     },
     init = function()
       vim.opt.spelllang = { 'en_us' }
