@@ -17,6 +17,7 @@ return {
       { 'ray-x/cmp-treesitter' },
       { 'saadparwaiz1/cmp_luasnip' },
       { 'uga-rosa/cmp-dictionary' },
+      { 'uga-rosa/cmp-dynamic' },
     },
     init = function()
       -- Set completeopt to have a better completion experience.
@@ -53,6 +54,7 @@ return {
               cmdline = '[Cmd]',
               codeium = '[Codeium]',
               dictionary = '[Dictionary]',
+              dynamic = '[Dynamic]',
               emoji = '[Emoji]',
               luasnip = '[Snippet]',
               nvim_lsp = '[LSP]',
@@ -102,6 +104,7 @@ return {
         }, {
           { name = 'buffer' },
           { name = 'treesitter' },
+          { name = 'dynamic' },
           { name = 'dictionary' },
           { name = 'spell' },
           { name = 'calc' },
@@ -118,6 +121,7 @@ return {
         }, {
           { name = 'buffer' },
           { name = 'treesitter' },
+          { name = 'dynamic' },
           { name = 'dictionary' },
           { name = 'spell' },
           { name = 'calc' },
@@ -149,6 +153,20 @@ return {
       })
     end,
     event = { 'InsertEnter', 'CmdlineEnter' },
+  },
+
+  {
+    'uga-rosa/cmp-dynamic',
+    config = function()
+      require('cmp_dynamic').register({
+        {
+          label = 'today',
+          insertText = function()
+            return os.date('%Y/%m/%d')
+          end,
+        },
+      })
+    end,
   },
 
   {
