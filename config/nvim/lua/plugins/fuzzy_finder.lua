@@ -86,7 +86,6 @@ return {
   {
     'nvim-telescope/telescope-frecency.nvim',
     dependencies = {
-      { 'kkharji/sqlite.lua' },
       { 'nvim-telescope/telescope.nvim' },
     },
     keys = {
