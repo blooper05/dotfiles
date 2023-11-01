@@ -10,6 +10,7 @@ return {
       { 'hrsh7th/cmp-emoji' },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
+      { 'hrsh7th/cmp-nvim-lsp-signature-help' },
       { 'hrsh7th/cmp-nvim-lua' },
       { 'hrsh7th/cmp-path' },
       { 'neovim/nvim-lspconfig' },
@@ -98,6 +99,7 @@ return {
         sources = cmp.config.sources({
           { name = 'luasnip' },
           { name = 'nvim_lsp' },
+          { name = 'nvim_lsp_signature_help' },
           { name = 'nvim_lua' },
           { name = 'path' },
           { name = 'codeium' },
@@ -115,6 +117,7 @@ return {
         sources = cmp.config.sources({
           { name = 'luasnip' },
           { name = 'nvim_lsp' },
+          { name = 'nvim_lsp_signature_help' },
           { name = 'path' },
           { name = 'emoji' },
           { name = 'codeium' },
