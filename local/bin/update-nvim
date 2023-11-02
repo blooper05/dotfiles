@@ -3,3 +3,8 @@
 set -ex
 
 nvim --headless '+Lazy! sync' +quitall
+
+python3 -m pip install --user --upgrade pynvim
+gem install neovim && gem environment
+yarn global add neovim
+cpanm --notest Neovim::Ext
