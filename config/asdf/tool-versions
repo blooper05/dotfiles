@@ -1,6 +1,6 @@
 actionlint 1.6.26
 adr-tools 3.0.0
-awscli 2.13.29
+awscli 2.13.31
 deno 1.37.2
 dotenv-linter 3.3.0
 ecspresso 2.2.4
