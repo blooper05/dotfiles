@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -ex
+
+brew upgrade luajit neovim --fetch-HEAD
+brew bundle --cleanup
