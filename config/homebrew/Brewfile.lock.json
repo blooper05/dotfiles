@@ -2067,12 +2067,6 @@
           "full_name": "keepingyouawake"
         }
       },
-      "kindle": {
-        "version": "1.40.65626",
-        "options": {
-          "full_name": "kindle"
-        }
-      },
       "krisp": {
         "version": "2.27.2",
         "options": {
@@ -2172,6 +2166,10 @@
       "FANTASIAN": {
         "id": "1517339045",
         "version": "2.5.3"
+      },
+      "Kindle": {
+        "id": "302584613",
+        "version": "6.85.3"
       },
       "LINE": {
         "id": "539883307",
