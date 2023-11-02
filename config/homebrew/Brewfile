@@ -75,7 +75,6 @@ cask "insomnia"
 cask "kap"
 cask "karabiner-elements"
 cask "keepingyouawake"
-cask "kindle"
 cask "krisp"
 cask "microsoft-office"
 cask "miro"
@@ -107,6 +106,7 @@ mas "DaVinci Resolve", id: 571213070
 # mas "EdgeView 2", id: 1206246482
 mas "FANTASIAN", id: 1517339045
 # mas "Keynote", id: 409183694
+mas "Kindle", id: 302584613
 mas "LINE", id: 539883307
 mas "MindNode", id: 1289197285
 mas "Pocket", id: 568494494
