@@ -147,6 +147,8 @@ export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
 source $(brew --prefix asdf)/libexec/asdf.sh
 
 # Ruby {{{2
+export GEM_HOME=$XDG_DATA_HOME/gem
+export GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem
 export BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundler/config
 export BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundler
 export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundler
