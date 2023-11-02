@@ -6,7 +6,7 @@ dotenv-linter 3.3.0
 ecspresso 2.2.4
 editorconfig-checker 2.7.2
 elm 0.19.1
-github-cli 2.37.0
+github-cli 2.38.0
 golang 1.21.3
 hadolint 2.12.0
 helm 3.13.1
