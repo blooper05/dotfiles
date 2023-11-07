@@ -122,7 +122,7 @@ defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 # System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> All Input Sources >> Add period with double-space: off
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
-# System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> All Input Sources >> Use smart suotes and dashes: off
+# System Settings >> Keyboard >> Text Input >> Input Sources >> Edit... >> All Input Sources >> Use smart quotes and dashes: off
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
