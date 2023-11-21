@@ -6,12 +6,17 @@
   graph  = log --graph --pretty=pretty
   ignore = !curl --silent --location https://www.toptal.com/developers/gitignore/api/$@
 [commit]
+  gpgsign  = true
   template = ~/.config/git/template
 [diff]
   algorithm  = histogram
   colorMoved = default
 [fetch]
   prune = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [help]
   autocorrect = 1
 [init]
