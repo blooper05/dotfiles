@@ -23,6 +23,7 @@ return {
           null_ls.builtins.diagnostics.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
           null_ls.builtins.diagnostics.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.diagnostics.tfsec,
+          null_ls.builtins.diagnostics.trivy,
           null_ls.builtins.diagnostics.yamllint,
           null_ls.builtins.formatting.eslint.with({ prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.formatting.packer,
