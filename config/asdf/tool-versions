@@ -10,6 +10,7 @@ github-cli 2.38.0
 golang 1.21.3
 hadolint 2.12.0
 helm 3.13.1
+helm-diff 3.8.1
 jsonnet 0.20.0
 k6 0.47.0
 kubectl 1.28.3
