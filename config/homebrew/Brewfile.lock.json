@@ -7,17 +7,8 @@
       "homebrew/bundle": {
         "revision": "743f2aad47601c1e162f0ff05219d5a0bb15e0ad"
       },
-      "homebrew/cask": {
-        "revision": "7d65f97e23c83834e4f59339679cbc3d115a55c5"
-      },
-      "homebrew/cask-drivers": {
-        "revision": "70340b616bf57bfff6f36d779a17eba3fd205667"
-      },
       "homebrew/cask-fonts": {
         "revision": "6f04e418dc2bbb72fc438b25de315e0d48aff286"
-      },
-      "homebrew/core": {
-        "revision": "40ceaab6d111e234889ba805514851d2788f759d"
       },
       "k1low/tap": {
         "revision": "c21ec18db4d77f1558011c1b3d325d4f8a20d79a"
