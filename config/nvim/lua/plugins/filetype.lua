@@ -77,4 +77,11 @@ return {
       -- stylua: ignore end
     },
   },
+
+  -- PlantUML
+
+  {
+    'aklt/plantuml-syntax', -- non-lua plugin
+    ft = 'plantuml',
+  },
 }
