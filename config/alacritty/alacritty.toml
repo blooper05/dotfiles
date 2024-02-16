@@ -37,7 +37,11 @@ size = 15.0
 family = "HackGen35 Console NF"
 
 [shell]
-args = ["--login", "-c", "/opt/homebrew/bin/zellij --layout compact attach --create main"]
+args = [
+  "--login",
+  "-c",
+  "/opt/homebrew/bin/zellij --layout compact attach --create main",
+]
 program = "/opt/homebrew/bin/zsh"
 
 [window]
