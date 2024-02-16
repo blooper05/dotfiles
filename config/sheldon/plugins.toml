@@ -6,38 +6,38 @@ defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
 
 [plugins.LS_COLORS]
 github = 'trapd00r/LS_COLORS'
-apply  = ['defer']
+apply = ['defer']
 
 [plugins.fast-syntax-highlighting]
 github = 'zdharma-continuum/fast-syntax-highlighting'
-apply  = ['defer']
+apply = ['defer']
 
 [plugins.zsh-autosuggestions]
 github = 'zsh-users/zsh-autosuggestions'
-apply  = ['defer']
+apply = ['defer']
 
 [plugins.zsh-completions]
 github = 'zsh-users/zsh-completions'
-apply  = ['defer']
+apply = ['defer']
 
 [plugins.zsh-autopair]
 github = 'hlissner/zsh-autopair'
-apply  = ['defer']
+apply = ['defer']
 
 # [plugins.zsh-vi-mode]
 # github = 'jeffreytse/zsh-vi-mode'
-# apply  = ['defer']
+# apply = ['defer']
 
 [plugins.anyframe]
 github = 'blooper05/anyframe'
 branch = 'add-skim_support'
-apply  = ['defer']
+apply = ['defer']
 
 [plugins.git-cococo]
 github = 'blooper05/git-cococo'
-dir    = 'exe'
-use    = ['git-cococo']
-apply  = ['defer', 'PATH']
+dir = 'exe'
+use = ['git-cococo']
+apply = ['defer', 'PATH']
 
 [plugins.compinit]
 inline = 'autoload -Uz compinit && zsh-defer compinit'
