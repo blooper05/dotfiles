@@ -139,6 +139,10 @@ return {
     config = function()
       -- Use as the default notify function.
       vim.notify = require('notify')
+
+      require('notify').setup({
+        render = 'wrapped-compact',
+      })
     end,
     keys = {
       -- stylua: ignore start
