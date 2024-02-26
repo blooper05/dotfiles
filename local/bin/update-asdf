@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -ex
-
-asdf plugin-update --all
-
-cut -d ' ' -f 1 "$HOME/.config/asdf/tool-versions" | while read -r plugin; do /opt/homebrew/bin/asdf install "${plugin}" latest; done
-
-asdf list

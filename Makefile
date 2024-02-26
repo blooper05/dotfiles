@@ -9,7 +9,7 @@ init:
 	@local/bin/init-macos
 	@local/bin/init-homebrew
 	@local/bin/init-mackup
-	@local/bin/init-asdf
+	@local/bin/init-mise
 	@local/bin/init-zsh
 
 clean:
