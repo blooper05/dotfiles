@@ -139,13 +139,8 @@ export LESS=-inqMRS
 export LESSCHARSET=utf-8
 export LESSHISTFILE=$XDG_STATE_HOME/less/history
 
-# asdf {{{2
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
-export ASDF_CONFIG_DIR=$XDG_CONFIG_HOME/asdf
-export ASDF_CONFIG_FILE=$ASDF_CONFIG_DIR/asdfrc
-export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME=$ASDF_CONFIG_DIR/tool-versions
-export ASDF_DATA_DIR=$XDG_DATA_HOME/asdf
-source $(brew --prefix asdf)/libexec/asdf.sh
+# mise {{{2
+eval "$(mise activate zsh)"
 
 # Ruby {{{2
 export GEM_HOME=$XDG_DATA_HOME/gem
