@@ -47,3 +47,6 @@ inline = 'autoload -Uz compinit && zsh-defer compinit'
 
 [plugins.aws-completions]
 inline = 'zsh-defer complete -C aws_completer aws'
+
+[plugins.gh-completions]
+inline = 'eval "$(gh completion --shell zsh)" && zsh-defer compdef _gh gh'

@@ -175,9 +175,6 @@ bindkey '^g^b' anyframe-widget-checkout-git-branch
 # ghq {{{2
 export GHQ_ROOT=$XDG_DATA_HOME/ghq
 
-# gh {{{2
-eval "$(gh completion -s zsh)"
-
 # GnuPG {{{2
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 
