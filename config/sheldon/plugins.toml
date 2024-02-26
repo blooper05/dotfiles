@@ -50,3 +50,6 @@ inline = 'zsh-defer complete -C aws_completer aws'
 
 [plugins.gh-completions]
 inline = 'eval "$(gh completion --shell zsh)" && zsh-defer compdef _gh gh'
+
+[plugins.op-completions]
+inline = 'eval "$(op completion zsh)" && zsh-defer compdef _op op'
