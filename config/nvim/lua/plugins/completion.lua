@@ -177,13 +177,9 @@ return {
     init = function()
       vim.opt.spelllang = { 'en_us' }
     end,
-    config = function()
-      require('cmp_dictionary').switcher({
-        spelllang = {
-          en_us = '/usr/share/dict/words',
-        },
-      })
-    end,
+    opts = {
+      paths = { '/usr/share/dict/words' },
+    },
   },
 
   {
