@@ -200,6 +200,9 @@ export TASKRC=$XDG_CONFIG_HOME/task/taskrc
 # Timewarrior {{{2
 export TIMEWARRIORDB=$XDG_DATA_HOME/timew
 
+# Zellij {{{2
+eval "$(zellij setup --generate-auto-start zsh)"
+
 # Sheldon {{{2
 eval "$(sheldon source)"
 
