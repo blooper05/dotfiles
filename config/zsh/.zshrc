@@ -48,7 +48,7 @@ alias rg='rg --hidden --glob=!.git/'
 
 alias cat='bat'
 alias diff='delta'
-alias sed='sd'
+# alias sed='sd'
 
 alias du='dust'
 alias ps='procs --sortd=cpu'
