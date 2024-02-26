@@ -141,6 +141,7 @@ export LESSHISTFILE=$XDG_STATE_HOME/less/history
 
 # mise {{{2
 eval "$(mise activate zsh)"
+eval "$(mise hook-env)"
 
 # Ruby {{{2
 export GEM_HOME=$XDG_DATA_HOME/gem
