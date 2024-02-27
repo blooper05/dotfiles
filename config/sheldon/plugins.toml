@@ -85,6 +85,11 @@ inline = '''
   zsh-defer _kubectl
 '''
 
+[plugins.kubectx-completions]
+local = '~/.local/share/mise/installs/kubectx/latest/completion'
+use = ['{_kubectx,_kubens}.zsh']
+apply = ['fpath']
+
 [plugins.op-completions]
 inline = '''
   function _op() {
