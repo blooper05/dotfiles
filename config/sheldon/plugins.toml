@@ -94,3 +94,23 @@ inline = '''
   }
   zsh-defer compdef _op op
 '''
+
+[plugins.packer-completions]
+inline = '''
+  function _packer() {
+    unfunction "$0"
+    complete -C packer packer
+    $0 "$@"
+  }
+  zsh-defer _packer
+'''
+
+[plugins.terraform-completions]
+inline = '''
+  function _terraform() {
+    unfunction "$0"
+    complete -C terraform terraform
+    $0 "$@"
+  }
+  zsh-defer _terraform
+'''
