@@ -120,6 +120,16 @@ inline = '''
   zsh-defer _terraform
 '''
 
+[plugins.terraform-docs-completions]
+inline = '''
+  function _terraform-docs() {
+    unfunction "$0"
+    eval "$(terraform-docs completion zsh)"
+    $0 "$@"
+  }
+  zsh-defer compdef _terraform-docs terraform-docs
+'''
+
 [plugins.trivy-completions]
 inline = '''
   function _trivy() {
