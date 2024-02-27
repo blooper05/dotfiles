@@ -75,6 +75,16 @@ inline = '''
   zsh-defer _helm
 '''
 
+[plugins.helm-diff-completions]
+inline = '''
+  function _diff() {
+    unfunction "$0"
+    eval "$(helm-diff completion zsh)"
+    $0 "$@"
+  }
+  zsh-defer compdef _diff helm-diff
+'''
+
 [plugins.k6-completions]
 inline = '''
   function _k6() {
