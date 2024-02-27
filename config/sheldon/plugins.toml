@@ -46,13 +46,41 @@ inline = 'autoload -Uz bashcompinit && zsh-defer bashcompinit'
 inline = 'autoload -Uz compinit && zsh-defer compinit'
 
 [plugins.aws-completions]
-inline = 'zsh-defer complete -C aws_completer aws'
+inline = '''
+  function _aws() {
+    unfunction "$0"
+    complete -C aws_completer aws
+    $0 "$@"
+  }
+  zsh-defer _aws
+'''
 
 [plugins.gh-completions]
-inline = 'eval "$(gh completion --shell zsh)" && zsh-defer compdef _gh gh'
+inline = '''
+  function _gh() {
+    unfunction "$0"
+    eval "$(gh completion --shell zsh)"
+    $0 "$@"
+  }
+  zsh-defer compdef _gh gh
+'''
 
 [plugins.kubectl-completions]
-inline = 'zsh-defer eval "$(kubectl completion zsh)"'
+inline = '''
+  function _kubectl() {
+    unfunction "$0"
+    source <(kubectl completion zsh)
+    $0 "$@"
+  }
+  zsh-defer _kubectl
+'''
 
 [plugins.op-completions]
-inline = 'eval "$(op completion zsh)" && zsh-defer compdef _op op'
+inline = '''
+  function _op() {
+    unfunction "$0"
+    eval "$(op completion zsh)"
+    $0 "$@"
+  }
+  zsh-defer compdef _op op
+'''
