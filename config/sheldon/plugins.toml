@@ -65,6 +65,16 @@ inline = '''
   zsh-defer compdef _gh gh
 '''
 
+[plugins.k6-completions]
+inline = '''
+  function _k6() {
+    unfunction "$0"
+    eval "$(k6 completion zsh)"
+    $0 "$@"
+  }
+  zsh-defer compdef _k6 k6
+'''
+
 [plugins.kubectl-completions]
 inline = '''
   function _kubectl() {
