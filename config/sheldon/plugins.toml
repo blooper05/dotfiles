@@ -114,3 +114,13 @@ inline = '''
   }
   zsh-defer _terraform
 '''
+
+[plugins.trivy-completions]
+inline = '''
+  function _trivy() {
+    unfunction "$0"
+    source <(trivy completion zsh)
+    $0 "$@"
+  }
+  zsh-defer _trivy
+'''
