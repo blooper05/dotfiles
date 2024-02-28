@@ -17,7 +17,6 @@ return {
           null_ls.builtins.diagnostics.markdownlint_cli2,
           null_ls.builtins.diagnostics.reek,
           null_ls.builtins.diagnostics.rubocop.with({ command = 'docker-rubocop' }),
-          null_ls.builtins.diagnostics.shellcheck,
           null_ls.builtins.diagnostics.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
           null_ls.builtins.diagnostics.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
           null_ls.builtins.diagnostics.tfsec,
