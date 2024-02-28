@@ -21,7 +21,6 @@ brew "gitmoji"
 brew "gnupg"
 brew "gping"
 brew "jql"
-brew "jsonlint"
 brew "luajit", args: ["HEAD"]
 brew "mackup"
 brew "mas"
