@@ -30,6 +30,7 @@ return {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.formatting.terraform_fmt,
           null_ls.builtins.formatting.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
+          null_ls.builtins.formatting.yamlfmt,
           -- null_ls.builtins.formatting.trim_newlines,
           -- null_ls.builtins.formatting.trim_whitespace,
         },
