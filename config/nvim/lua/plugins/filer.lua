@@ -41,7 +41,9 @@ return {
       { 'nvim-telescope/telescope.nvim' },
     },
     main = 'project_nvim',
-    config = true,
+    opts = {
+      silent_chdir = false,
+    },
     event = 'BufReadPost',
     keys = {
       -- stylua: ignore start
