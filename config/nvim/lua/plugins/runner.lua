@@ -14,7 +14,6 @@ return {
           null_ls.builtins.diagnostics.editorconfig_checker.with({ command = 'ec' }),
           null_ls.builtins.diagnostics.gitlint.with({ filetypes = { 'gina-commit', 'gitcommit' } }),
           null_ls.builtins.diagnostics.hadolint,
-          null_ls.builtins.diagnostics.jsonlint,
           null_ls.builtins.diagnostics.markdownlint_cli2,
           null_ls.builtins.diagnostics.reek,
           null_ls.builtins.diagnostics.rubocop.with({ command = 'docker-rubocop' }),
