@@ -182,8 +182,6 @@ require('packages')
 -- Folding {{{1
 
 vim.opt.modeline = true
-vim.opt.modelines = 3
-vim.opt.fillchars = [[vert:|]]
--- vim: foldmethod=marker
--- vim: foldcolumn=3
--- vim: foldlevel=0
+vim.opt.modelines = 2
+-- vim: set foldmethod=marker:
+-- vim: set foldlevel=0:

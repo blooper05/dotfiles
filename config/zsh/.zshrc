@@ -210,4 +210,5 @@ export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
 
 # Folding {{{1
 
-# vim:set foldmethod=marker:
+# vim: set foldmethod=marker:
+# vim: set foldlevel=0:
