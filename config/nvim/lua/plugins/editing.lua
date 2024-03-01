@@ -89,8 +89,8 @@ return {
     end,
     cmd = { 'DialIncrement', 'DialDecrement' },
     keys = {
-      { '<C-a>', '<Plug>(dial-increment)', mode = { 'n', 'v' } },
-      { '<C-x>', '<Plug>(dial-decrement)', mode = { 'n', 'v' } },
+      { '<C-a>',  '<Plug>(dial-increment)',  mode = { 'n', 'v' } },
+      { '<C-x>',  '<Plug>(dial-decrement)',  mode = { 'n', 'v' } },
       { 'g<C-a>', 'g<Plug>(dial-increment)', mode = { 'n', 'v' } },
       { 'g<C-x>', 'g<Plug>(dial-decrement)', mode = { 'n', 'v' } },
     },
@@ -100,7 +100,7 @@ return {
     'junegunn/vim-easy-align', -- non-lua plugin
     cmd = { 'EasyAlign', 'LiveEasyAlign' },
     keys = {
-      { 'ga', '<Plug>(EasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
+      { 'ga', '<Plug>(EasyAlign)',     mode = { 'n', 'x' }, remap = true, silent = true },
       { 'gA', '<Plug>(LiveEasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
     },
   },
@@ -142,6 +142,9 @@ return {
       -- stylua: ignore end
     },
   },
+
+  -- TODO: { 'jiaoshijie/undotree' },
+  -- TODO: { 'kevinhwang91/nvim-fundo' },
 
   {
     'karb94/neoscroll.nvim',
