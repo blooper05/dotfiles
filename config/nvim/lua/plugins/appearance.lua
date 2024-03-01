@@ -62,12 +62,6 @@ return {
   },
 
   {
-    'b0o/incline.nvim',
-    config = true,
-    event = 'BufReadPost',
-  },
-
-  {
     'lukas-reineke/indent-blankline.nvim',
     dependencies = {
       { 'EdenEast/nightfox.nvim' },
@@ -149,6 +143,12 @@ return {
       { '[telescope]n', function() require('telescope').extensions.notify.notify() end, silent = true },
       -- stylua: ignore end
     },
+  },
+
+  {
+    'b0o/incline.nvim',
+    config = true,
+    event = 'BufReadPost',
   },
 
   {
