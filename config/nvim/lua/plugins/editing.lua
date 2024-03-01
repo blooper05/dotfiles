@@ -138,14 +138,13 @@ return {
   },
 
   {
-    'jiaoshijie/undotree',
+    'debugloop/telescope-undo.nvim',
     dependencies = {
-      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope.nvim' },
     },
-    config = true,
     keys = {
       -- stylua: ignore start
-      { '[telescope]U', function() require('undotree').toggle() end, silent = true },
+      { '[telescope]U', function() require('telescope').extensions.undo.undo() end, silent = true },
       -- stylua: ignore end
     },
   },
