@@ -47,6 +47,8 @@ return {
     event = 'BufReadPost',
   },
 
+  -- TODO: { 'chrisgrieser/nvim-origami' },
+
   {
     'monaqa/dial.nvim',
     config = function()
