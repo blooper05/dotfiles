@@ -153,14 +153,4 @@ return {
     config = true,
     event = 'BufReadPost',
   },
-
-  {
-    'm4xshen/hardtime.nvim',
-    dependencies = {
-      { 'MunifTanjim/nui.nvim' },
-      { 'nvim-lua/plenary.nvim' },
-    },
-    config = true,
-    event = 'BufReadPost',
-  },
 }
