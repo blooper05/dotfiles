@@ -169,6 +169,8 @@ return {
     event = 'WinNew',
   },
 
+  -- TODO: { 'miversen33/sunglasses.nvim' },
+
   {
     'nvim-zh/colorful-winsep.nvim',
     config = true,
