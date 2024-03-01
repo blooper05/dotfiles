@@ -42,7 +42,7 @@ return {
     },
     main = 'project_nvim',
     opts = {
-      silent_chdir = false,
+      detection_methods = { 'pattern' },
     },
     event = 'BufReadPost',
     keys = {
