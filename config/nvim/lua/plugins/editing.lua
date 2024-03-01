@@ -153,10 +153,4 @@ return {
     config = true,
     event = 'BufReadPost',
   },
-
-  {
-    'mrjones2014/smart-splits.nvim',
-    config = true,
-    event = 'BufReadPost',
-  },
 }
