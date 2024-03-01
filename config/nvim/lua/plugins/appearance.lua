@@ -62,6 +62,12 @@ return {
   },
 
   {
+    'b0o/incline.nvim',
+    config = true,
+    event = 'BufReadPost',
+  },
+
+  {
     'lukas-reineke/indent-blankline.nvim',
     dependencies = {
       { 'EdenEast/nightfox.nvim' },
