@@ -166,7 +166,13 @@ return {
       --   return is_floating
       -- end,
     },
-    event = { 'WinEnter', 'WinLeave' },
+    event = 'WinNew',
+  },
+
+  {
+    'nvim-zh/colorful-winsep.nvim',
+    config = true,
+    event = 'WinNew',
   },
 
   {

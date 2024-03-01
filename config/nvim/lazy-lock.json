@@ -22,6 +22,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "codeium.nvim": { "branch": "main", "commit": "cd5913ff5481229b15186293d1d46dd9500789f9" },
   "codic-vim": { "branch": "master", "commit": "ecbfbc46889110e372bf3f6dd527e6b0278f2ad6" },
+  "colorful-winsep.nvim": { "branch": "alpha", "commit": "424cf8d95c31cd8ac0d6a62c616f28540b0f8c73" },
   "dial.nvim": { "branch": "master", "commit": "27eb570085db2ef44bff4f620d3806039184651c" },
   "diffview.nvim": { "branch": "main", "commit": "3dc498c9777fe79156f3d32dddd483b8b3dbd95f" },
   "friendly-snippets": { "branch": "main", "commit": "dcd4a586439a1c81357d5b9d26319ae218cc9479" },
