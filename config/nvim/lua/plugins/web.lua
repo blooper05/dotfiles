@@ -37,6 +37,10 @@ return {
     cmd = 'ChatGPT',
   },
 
+  -- TODO: { 'Bryley/neoai.nvim' },
+  -- TODO: { 'dpayne/CodeGPT.nvim' },
+  -- TODO: { 'robitx/gp.nvim' },
+
   {
     'Exafunction/codeium.nvim',
     dependencies = {
