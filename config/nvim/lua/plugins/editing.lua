@@ -47,7 +47,11 @@ return {
     event = 'BufReadPost',
   },
 
-  -- TODO: { 'chrisgrieser/nvim-origami' },
+  {
+    'chrisgrieser/nvim-origami',
+    config = true,
+    event = 'BufReadPost',
+  },
 
   {
     'monaqa/dial.nvim',
