@@ -83,17 +83,11 @@ return {
   },
 
   {
-    'petertriho/nvim-scrollbar',
+    'lewis6991/satellite.nvim',
     dependencies = {
-      { 'kevinhwang91/nvim-hlslens' },
       { 'lewis6991/gitsigns.nvim' },
     },
-    opts = {
-      handlers = {
-        gitsigns = true,
-        search = true,
-      },
-    },
+    config = true,
     event = 'BufReadPost',
   },
 
