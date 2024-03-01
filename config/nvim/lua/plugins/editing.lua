@@ -164,8 +164,6 @@ return {
     },
   },
 
-  -- TODO: { 'kevinhwang91/nvim-fundo' },
-
   {
     'karb94/neoscroll.nvim',
     config = true,
