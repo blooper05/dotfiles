@@ -95,8 +95,8 @@ return {
     end,
     cmd = { 'DialIncrement', 'DialDecrement' },
     keys = {
-      { '<C-a>',  '<Plug>(dial-increment)',  mode = { 'n', 'v' } },
-      { '<C-x>',  '<Plug>(dial-decrement)',  mode = { 'n', 'v' } },
+      { '<C-a>', '<Plug>(dial-increment)', mode = { 'n', 'v' } },
+      { '<C-x>', '<Plug>(dial-decrement)', mode = { 'n', 'v' } },
       { 'g<C-a>', 'g<Plug>(dial-increment)', mode = { 'n', 'v' } },
       { 'g<C-x>', 'g<Plug>(dial-decrement)', mode = { 'n', 'v' } },
     },
@@ -106,7 +106,7 @@ return {
     'junegunn/vim-easy-align', -- non-lua plugin
     cmd = { 'EasyAlign', 'LiveEasyAlign' },
     keys = {
-      { 'ga', '<Plug>(EasyAlign)',     mode = { 'n', 'x' }, remap = true, silent = true },
+      { 'ga', '<Plug>(EasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
       { 'gA', '<Plug>(LiveEasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
     },
   },
@@ -142,6 +142,21 @@ return {
     dependencies = {
       { 'nvim-telescope/telescope.nvim' },
     },
+    config = function()
+      require('telescope').setup({
+        extensions = {
+          undo = {
+            mappings = {
+              i = {
+                ['<CR>'] = require('telescope-undo.actions').restore,
+              },
+            },
+          },
+        },
+      })
+
+      require('telescope').load_extension('undo')
+    end,
     keys = {
       -- stylua: ignore start
       { '[telescope]U', function() require('telescope').extensions.undo.undo() end, silent = true },
