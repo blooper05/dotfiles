@@ -2,6 +2,7 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
+      { 'b0o/schemastore.nvim' },
       { 'williamboman/mason-lspconfig.nvim' },
       { 'williamboman/mason.nvim' },
     },
@@ -9,6 +10,7 @@ return {
       local mason = require('mason')
       local masonLspconfig = require('mason-lspconfig')
       local nvimLspconfig = require('lspconfig')
+      local schemastore = require('schemastore')
 
       local servers = {
         'bashls',
@@ -56,6 +58,16 @@ return {
         function(server_name)
           nvimLspconfig[server_name].setup({})
         end,
+        ['jsonls'] = function()
+          nvimLspconfig.jsonls.setup({
+            settings = {
+              json = {
+                schemas = schemastore.json.schemas(),
+                validate = { enable = true },
+              },
+            },
+          })
+        end,
         ['lua_ls'] = function()
           nvimLspconfig.lua_ls.setup({
             settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
@@ -68,6 +80,19 @@ return {
         --     },
         --   })
         -- end,
+        ['yamlls'] = function()
+          nvimLspconfig.yamlls.setup({
+            settings = {
+              yaml = {
+                schemaStore = {
+                  enable = false,
+                  url = '',
+                },
+                schemas = schemastore.yaml.schemas(),
+              },
+            },
+          })
+        end,
       })
     end,
     event = 'BufReadPost',

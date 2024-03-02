@@ -73,6 +73,7 @@
   "rainbow_csv": { "branch": "master", "commit": "6955d13a65e0161e8dad488b6045441d527d62ec" },
   "retrail.nvim": { "branch": "main", "commit": "b2151199edee8d77a2fc70f77f2a4150c27ea334" },
   "satellite.nvim": { "branch": "main", "commit": "40eb89743e3439c66192abfc31eb3280622a5d3c" },
+  "schemastore.nvim": { "branch": "main", "commit": "f3a32e89db213900a7dae31f2243c2a41e8b16c9" },
   "sniprun": { "branch": "master", "commit": "0079f9c4675a6825f84e108bbff866f67dd8762f" },
   "suda.vim": { "branch": "master", "commit": "8b0fc3711760195aba104e2d190cff9af8267052" },
   "telescope-frecency.nvim": { "branch": "master", "commit": "771726f7d6e7e96e9273e454b1c1f49168663a37" },
