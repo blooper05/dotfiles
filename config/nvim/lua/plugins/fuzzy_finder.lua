@@ -27,10 +27,6 @@ return {
             ['<Esc>'] = 'close',
           },
         },
-
-        cache_picker = {
-          ignore_empty_prompt = false,
-        },
       },
       pickers = {
         live_grep = {
