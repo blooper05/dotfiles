@@ -146,12 +146,6 @@ return {
   },
 
   {
-    'mvllow/modes.nvim',
-    config = true,
-    event = 'BufReadPost',
-  },
-
-  {
     'b0o/incline.nvim',
     config = true,
     event = 'BufReadPost',
