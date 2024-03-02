@@ -2,16 +2,13 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
+      { 'VonHeikemen/lsp-zero.nvim' },
       { 'b0o/schemastore.nvim' },
+      { 'hrsh7th/cmp-nvim-lsp' },
       { 'williamboman/mason-lspconfig.nvim' },
       { 'williamboman/mason.nvim' },
     },
     config = function()
-      local mason = require('mason')
-      local masonLspconfig = require('mason-lspconfig')
-      local nvimLspconfig = require('lspconfig')
-      local schemastore = require('schemastore')
-
       local servers = {
         'bashls',
         'cssls',
@@ -45,54 +42,43 @@ return {
         'yamlls',
       }
 
-      mason.setup({
-        max_concurrent_installers = 8,
-      })
+      local lspconfig = require('lspconfig')
+      local lsp_zero = require('lsp-zero')
+      local schemastore = require('schemastore')
 
-      masonLspconfig.setup({
+      lsp_zero.on_attach(function(_, bufnr)
+        lsp_zero.default_keymaps({ buffer = bufnr })
+      end)
+
+      require('mason').setup()
+      require('mason-lspconfig').setup({
         ensure_installed = servers,
-        automatic_installation = true,
-      })
-
-      masonLspconfig.setup_handlers({
-        function(server_name)
-          nvimLspconfig[server_name].setup({})
-        end,
-        ['jsonls'] = function()
-          nvimLspconfig.jsonls.setup({
-            settings = {
-              json = {
-                schemas = schemastore.json.schemas(),
-                validate = { enable = true },
-              },
-            },
-          })
-        end,
-        ['lua_ls'] = function()
-          nvimLspconfig.lua_ls.setup({
-            settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
-          })
-        end,
-        -- ['ruby_ls'] = function()
-        --   nvimLspconfig.ruby_ls.setup({
-        --     init_options = {
-        --       enabledFeatures = { 'codeActions', 'diagnostics', 'documentHighlights', 'documentSymbols', 'inlayHint' },
-        --     },
-        --   })
-        -- end,
-        ['yamlls'] = function()
-          nvimLspconfig.yamlls.setup({
-            settings = {
-              yaml = {
-                schemaStore = {
-                  enable = false,
-                  url = '',
+        handlers = {
+          lsp_zero.default_setup,
+          lua_ls = function()
+            lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
+          end,
+          jsonls = function()
+            lspconfig.jsonls.setup({
+              settings = {
+                json = {
+                  schemas = schemastore.json.schemas(),
+                  validate = { enable = true },
                 },
-                schemas = schemastore.yaml.schemas(),
               },
-            },
-          })
-        end,
+            })
+          end,
+          yamlls = function()
+            lspconfig.yamlls.setup({
+              settings = {
+                yaml = {
+                  schemaStore = { enable = false, url = '' },
+                  schemas = schemastore.yaml.schemas(),
+                },
+              },
+            })
+          end,
+        },
       })
     end,
     event = 'BufReadPost',
