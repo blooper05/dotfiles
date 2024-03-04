@@ -47,8 +47,10 @@ return {
       { 'kana/vim-operator-user' }, -- non-lua plugin
     },
     keys = {
-      { 'y', '<Plug>(operator-flashy)', mode = '', remap = true },
+      -- stylua: ignore start
+      { 'y', '<Plug>(operator-flashy)',  mode = '',  remap = true },
       { 'Y', '<Plug>(operator-flashy)$', mode = 'n', remap = true },
+      -- stylua: ignore end
     },
   },
 
@@ -58,9 +60,11 @@ return {
       { 'kana/vim-operator-user' }, -- non-lua plugin
     },
     keys = {
-      { 's', '<Plug>(operator-surround-append)', mode = { 'o', 'x' }, remap = true, silent = true },
-      { 'ds', '<Plug>(operator-surround-delete)a', mode = '', remap = true, silent = true },
-      { 'cs', '<Plug>(operator-surround-replace)a', mode = '', remap = true, silent = true },
+      -- stylua: ignore start
+      { 's',  '<Plug>(operator-surround-append)',   mode = { 'o', 'x' }, remap = true, silent = true },
+      { 'ds', '<Plug>(operator-surround-delete)a',  mode = '',           remap = true, silent = true },
+      { 'cs', '<Plug>(operator-surround-replace)a', mode = '',           remap = true, silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -70,7 +74,9 @@ return {
       { 'kana/vim-operator-user' }, -- non-lua plugin
     },
     keys = {
+      -- stylua: ignore start
       { 'p', '<Plug>(operator-replace)', mode = { 'o', 'x' }, remap = true, silent = true },
+      -- stylua: ignore end
     },
   },
 
