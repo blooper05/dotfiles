@@ -50,6 +50,4 @@ return {
     config = true,
     cmd = 'Codeium',
   },
-
-  -- TODO: { 'GCBallesteros/jupytext.nvim' },
 }

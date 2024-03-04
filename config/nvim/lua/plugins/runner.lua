@@ -86,6 +86,7 @@ return {
     },
   },
 
+  -- TODO: { 'GCBallesteros/jupytext.nvim' },
   -- TODO: { 'epwalsh/obsidian.nvim' },
   -- TODO: { 'renerocksai/telekasten.nvim' },
 }
