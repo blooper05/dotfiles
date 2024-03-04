@@ -37,6 +37,28 @@ return {
       local lspkind = require('lspkind')
 
       cmp.setup({
+        mapping = cmp.mapping.preset.insert({
+          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-f>'] = cmp.mapping.scroll_docs(4),
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          ['<Tab>'] = cmp_action.luasnip_supertab(),
+          ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+        }),
+        sources = cmp.config.sources({
+          { name = 'luasnip' },
+          { name = 'nvim_lsp' },
+          { name = 'nvim_lsp_signature_help' },
+          { name = 'nvim_lua' },
+          { name = 'path' },
+          { name = 'codeium' },
+        }, {
+          { name = 'buffer' },
+          { name = 'treesitter' },
+          { name = 'dynamic' },
+          { name = 'dictionary' },
+          { name = 'spell' },
+          { name = 'calc' },
+        }),
         formatting = {
           format = lspkind.cmp_format({
             menu = {
@@ -63,28 +85,6 @@ return {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
         },
-        mapping = cmp.mapping.preset.insert({
-          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<CR>'] = cmp.mapping.confirm({ select = true }),
-          ['<Tab>'] = cmp_action.luasnip_supertab(),
-          ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
-        }),
-        sources = cmp.config.sources({
-          { name = 'luasnip' },
-          { name = 'nvim_lsp' },
-          { name = 'nvim_lsp_signature_help' },
-          { name = 'nvim_lua' },
-          { name = 'path' },
-          { name = 'codeium' },
-        }, {
-          { name = 'buffer' },
-          { name = 'treesitter' },
-          { name = 'dynamic' },
-          { name = 'dictionary' },
-          { name = 'spell' },
-          { name = 'calc' },
-        }),
       })
 
       cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
