@@ -1,7 +1,15 @@
 return {
   {
-    'chaoren/vim-wordmotion', -- non-lua plugin
-    keys = { 'w', 'W', 'b', 'B', 'e', 'E', 'ge', 'gE', 'aw', 'aW', 'iw', 'iW', '<C-R><C-W>', '<C-R><C-A>' },
+    'chrisgrieser/nvim-spider',
+    config = true,
+    keys = {
+      -- stylua: ignore start
+      { 'w',  function() require('spider').motion('w') end,  mode = { 'n', 'o', 'x' }, remap = true, silent = true },
+      { 'b',  function() require('spider').motion('b') end,  mode = { 'n', 'o', 'x' }, remap = true, silent = true },
+      { 'e',  function() require('spider').motion('e') end,  mode = { 'n', 'o', 'x' }, remap = true, silent = true },
+      { 'ge', function() require('spider').motion('ge') end, mode = { 'n', 'o', 'x' }, remap = true, silent = true },
+      -- stylua: ignore end
+    },
   },
 
   {
