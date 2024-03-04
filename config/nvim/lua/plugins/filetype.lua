@@ -49,7 +49,7 @@ return {
       vim.keymap.set('n', 'o', 'o<Cmd>AutolistNewBullet<CR>')
       vim.keymap.set('n', 'O', 'O<Cmd>AutolistNewBulletBefore<CR>')
       vim.keymap.set('n', '<CR>', '<Cmd>AutolistToggleCheckbox<CR><CR>')
-      vim.keymap.set('n', '<C-r>', '<Cmd>AutolistRecalculate<CR><C-r>')
+      vim.keymap.set('n', '<C-r>', '<Cmd>AutolistRecalculate<CR>')
 
       vim.keymap.set('n', '<leader>cn', autolist.cycle_next_dr, { expr = true })
       vim.keymap.set('n', '<leader>cp', autolist.cycle_prev_dr, { expr = true })
