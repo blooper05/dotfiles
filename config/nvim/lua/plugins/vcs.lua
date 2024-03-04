@@ -91,4 +91,10 @@ return {
       -- stylua: ignore end
     },
   },
+
+  {
+    'akinsho/git-conflict.nvim',
+    config = true,
+    event = 'BufReadPost',
+  },
 }
