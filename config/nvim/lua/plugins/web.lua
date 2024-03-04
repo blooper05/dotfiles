@@ -29,10 +29,7 @@ return {
       { 'nvim-telescope/telescope.nvim' },
     },
     opts = {
-      keymaps = {
-        scroll_up = false,
-        scroll_down = false,
-      },
+      api_key_cmd = [[op read 'op://Personal/OpenAI API/credential' --no-newline]],
     },
     cmd = 'ChatGPT',
   },
