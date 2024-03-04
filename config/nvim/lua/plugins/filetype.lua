@@ -38,9 +38,6 @@ return {
 
   {
     'gaoDean/autolist.nvim',
-    dependencies = {
-      { 'windwp/nvim-autopairs' }, -- FIXME: conflicted with
-    },
     config = function()
       local autolist = require('autolist')
 
