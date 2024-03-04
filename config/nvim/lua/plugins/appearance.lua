@@ -130,13 +130,12 @@ return {
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
     end,
-    config = function()
+    opts = {
+      render = 'wrapped-compact',
+    },
+    config = function(_, opts)
       -- Use as the default notify function.
-      vim.notify = require('notify')
-
-      require('notify').setup({
-        render = 'wrapped-compact',
-      })
+      vim.notify = require('notify').setup(opts)
     end,
     keys = {
       -- stylua: ignore start
