@@ -30,7 +30,7 @@ return {
       { '<Space>f', '[file]', remap = true },
 
       -- stylua: ignore start
-      { '[file]c',  function() require('nvim-tree.api').tree.toggle() end, silent = true },
+      { '[file]c', function() require('nvim-tree.api').tree.toggle() end, silent = true },
       -- stylua: ignore end
     },
   },
