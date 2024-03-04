@@ -63,12 +63,6 @@ return {
   },
 
   {
-    'dinhhuy258/git.nvim',
-    config = true,
-    cmd = 'Git',
-  },
-
-  {
     'NeogitOrg/neogit',
     dependencies = {
       { 'nvim-lua/plenary.nvim' },
