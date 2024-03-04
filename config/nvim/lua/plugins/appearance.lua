@@ -159,7 +159,7 @@ return {
       --   return is_floating
       -- end,
     },
-    event = 'WinNew',
+    event = { 'WinNew', 'WinEnter', 'WinLeave' },
   },
 
   {
