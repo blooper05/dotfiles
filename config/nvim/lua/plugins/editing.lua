@@ -165,6 +165,14 @@ return {
   },
 
   {
+    'mvllow/modes.nvim',
+    opts = {
+      set_cursorline = false,
+    },
+    event = 'BufReadPost',
+  },
+
+  {
     'karb94/neoscroll.nvim',
     config = true,
     event = 'BufReadPost',
