@@ -84,7 +84,11 @@ return {
   --   },
   -- },
 
-  -- TODO: { 'dinhhuy258/git.nvim' },
+  {
+    'dinhhuy258/git.nvim',
+    config = true,
+    cmd = 'Git',
+  },
 
   {
     'NeogitOrg/neogit',
