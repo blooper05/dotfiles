@@ -63,37 +63,6 @@ return {
   },
 
   {
-    'NeogitOrg/neogit',
-    dependencies = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'nvim-telescope/telescope.nvim' },
-      { 'sindrets/diffview.nvim' },
-    },
-    opts = {
-      remember_settings = false,
-      integrations = {
-        telescope = true,
-        diffview = true,
-      },
-    },
-    cmd = 'Neogit',
-    keys = {
-      -- stylua: ignore start
-      { '[git]g', function() require('neogit').open() end, silent = true },
-      -- stylua: ignore end
-    },
-  },
-
-  {
-    'sindrets/diffview.nvim',
-    dependencies = {
-      { 'nvim-tree/nvim-web-devicons' },
-    },
-    config = true,
-    cmd = { 'DiffviewOpen', 'DiffviewFileHistory', 'DiffviewClose' },
-  },
-
-  {
     'lewis6991/gitsigns.nvim',
     init = function()
       -- Always draw the signcolumn with a space.
