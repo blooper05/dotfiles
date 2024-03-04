@@ -13,9 +13,9 @@ return {
       { '<Space>d', '[dap]', remap = true },
 
       -- stylua: ignore start
-      { '[dap]c',   function() require('dap').continue() end,          silent = true },
-      { '[dap]b',   function() require('dap').toggle_breakpoint() end, silent = true },
-      { '[dap]r',   function() require('dap').repl.toggle() end,       silent = true },
+      { '[dap]c', function() require('dap').continue() end,          silent = true },
+      { '[dap]b', function() require('dap').toggle_breakpoint() end, silent = true },
+      { '[dap]r', function() require('dap').repl.toggle() end,       silent = true },
       -- stylua: ignore end
     },
   },
