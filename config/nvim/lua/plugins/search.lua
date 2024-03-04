@@ -46,10 +46,12 @@ return {
       vim.g['asterisk#keeppos'] = true
     end,
     keys = {
-      { '*', [[<Plug>(asterisk-z*)<Cmd>lua require('hlslens').start()<CR>]], mode = { 'n', 'x' }, remap = true },
-      { '#', [[<Plug>(asterisk-z#)<Cmd>lua require('hlslens').start()<CR>]], mode = { 'n', 'x' }, remap = true },
+      -- stylua: ignore start
+      { '*',  [[<Plug>(asterisk-z*)<Cmd>lua require('hlslens').start()<CR>]],  mode = { 'n', 'x' }, remap = true },
+      { '#',  [[<Plug>(asterisk-z#)<Cmd>lua require('hlslens').start()<CR>]],  mode = { 'n', 'x' }, remap = true },
       { 'g*', [[<Plug>(asterisk-gz*)<Cmd>lua require('hlslens').start()<CR>]], mode = { 'n', 'x' }, remap = true },
       { 'g#', [[<Plug>(asterisk-gz#)<Cmd>lua require('hlslens').start()<CR>]], mode = { 'n', 'x' }, remap = true },
+      -- stylua: ignore end
     },
   },
 }
