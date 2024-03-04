@@ -43,13 +43,14 @@ return {
 
       autolist.setup()
 
-      vim.keymap.set('i', '<Tab>', '<Cmd>AutolistTab<CR>')
+      -- stylua: ignore start
+      vim.keymap.set('i', '<Tab>',   '<Cmd>AutolistTab<CR>')
       vim.keymap.set('i', '<S-Tab>', '<Cmd>AutolistShiftTab<CR>')
-      vim.keymap.set('i', '<CR>', '<CR><Cmd>AutolistNewBullet<CR>')
-      vim.keymap.set('n', 'o', 'o<Cmd>AutolistNewBullet<CR>')
-      vim.keymap.set('n', 'O', 'O<Cmd>AutolistNewBulletBefore<CR>')
-      vim.keymap.set('n', '<CR>', '<Cmd>AutolistToggleCheckbox<CR><CR>')
-      vim.keymap.set('n', '<C-r>', '<Cmd>AutolistRecalculate<CR>')
+      vim.keymap.set('i', '<CR>',    '<CR><Cmd>AutolistNewBullet<CR>')
+      vim.keymap.set('n', 'o',       'o<Cmd>AutolistNewBullet<CR>')
+      vim.keymap.set('n', 'O',       'O<Cmd>AutolistNewBulletBefore<CR>')
+      vim.keymap.set('n', '<CR>',    '<Cmd>AutolistToggleCheckbox<CR><CR>')
+      vim.keymap.set('n', '<C-r>',   '<Cmd>AutolistRecalculate<CR>')
 
       vim.keymap.set('n', '<leader>cn', autolist.cycle_next_dr, { expr = true })
       vim.keymap.set('n', '<leader>cp', autolist.cycle_prev_dr, { expr = true })
@@ -57,7 +58,8 @@ return {
       vim.keymap.set('n', '>>', '>><Cmd>AutolistRecalculate<CR>')
       vim.keymap.set('n', '<<', '<<<Cmd>AutolistRecalculate<CR>')
       vim.keymap.set('n', 'dd', 'dd<Cmd>AutolistRecalculate<CR>')
-      vim.keymap.set('v', 'd', 'd<Cmd>AutolistRecalculate<CR>')
+      vim.keymap.set('v', 'd',  'd<Cmd>AutolistRecalculate<CR>')
+      -- stylua: ignore end
     end,
     ft = 'markdown',
   },
