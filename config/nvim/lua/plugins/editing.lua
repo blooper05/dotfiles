@@ -169,4 +169,10 @@ return {
     config = true,
     event = 'BufReadPost',
   },
+
+  {
+    'gen740/SmoothCursor.nvim',
+    config = true,
+    event = 'BufReadPost',
+  },
 }
