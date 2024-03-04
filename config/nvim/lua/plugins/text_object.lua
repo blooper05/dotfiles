@@ -55,20 +55,6 @@ return {
   },
 
   {
-    'rhysd/vim-operator-surround', -- non-lua plugin
-    dependencies = {
-      { 'kana/vim-operator-user' }, -- non-lua plugin
-    },
-    keys = {
-      -- stylua: ignore start
-      { 's',  '<Plug>(operator-surround-append)',   mode = { 'o', 'x' }, remap = true, silent = true },
-      { 'ds', '<Plug>(operator-surround-delete)a',  mode = '',           remap = true, silent = true },
-      { 'cs', '<Plug>(operator-surround-replace)a', mode = '',           remap = true, silent = true },
-      -- stylua: ignore end
-    },
-  },
-
-  {
     'kana/vim-operator-replace', -- non-lua plugin
     dependencies = {
       { 'kana/vim-operator-user' }, -- non-lua plugin
@@ -80,6 +66,29 @@ return {
     },
   },
 
-  -- TODO: { 'kylechui/nvim-surround' },
-  -- TODO: { 'nvim-treesitter/nvim-treesitter-textobjects' },
+  {
+    'kylechui/nvim-surround',
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter' },
+      { 'nvim-treesitter/nvim-treesitter-textobjects' },
+    },
+    opts = {
+      move_cursor = false,
+    },
+    keys = {
+      -- stylua: ignore start
+      { 'C-g>s',  mode = 'i' },
+      { '<C-g>S', mode = 'i' },
+      { 'ys',     mode = '' },
+      { 'yss',    mode = '' },
+      { 'yS',     mode = '' },
+      { 'ySS',    mode = '' },
+      { 'S',      mode = { 'o', 'x' } },
+      { 'gS',     mode = { 'o', 'x' } },
+      { 'ds',     mode = '' },
+      { 'cs',     mode = '' },
+      { 'cS',     mode = '' },
+      -- stylua: ignore end
+    },
+  },
 }
