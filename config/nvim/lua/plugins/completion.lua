@@ -167,7 +167,7 @@ return {
       vim.opt.spelllang = { 'en_us' }
 
       vim.api.nvim_create_user_command('SpellCheckingToggle', function()
-        vim.opt.spell = not vim.api.nvim_win_get_option(0, 'spell')
+        vim.opt.spell = not vim.api.nvim_get_option_value('spell', { win = 0 })
       end, { force = true })
     end,
   },
