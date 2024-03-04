@@ -62,28 +62,6 @@ return {
     },
   },
 
-  -- {
-  --   'lambdalisue/gin.vim',
-  --   dependencies = {
-  --     { 'vim-denops/denops.vim' },
-  --   },
-  --   cmd = 'Gin',
-  --   keys = {
-  --     -- stylua: ignore start
-  --     -- { '[git]B', function() vim.cmd('Gin blame') end,          silent = true },
-  --     -- { '[git]b', function() vim.cmd('GinBranch --all') end,    silent = true },
-  --     -- { '[git]c', function() vim.cmd('Gin commit') end,         silent = true },
-  --     -- { '[git]C', function() vim.cmd('Gin commit --amend') end, silent = true },
-  --     -- { '[git]l', function() vim.cmd('GinLog') end,             silent = true },
-  --     -- { '[git]L', function() vim.cmd('GinLog -- %:p') end,      silent = true },
-  --     -- { '[git]d', function() vim.cmd('GinDiff') end,            silent = true },
-  --     -- { '[git]D', function() vim.cmd('GinDiff --cached') end,   silent = true },
-  --     -- { '[git]R', function() vim.cmd('Gin reflog') end,         silent = true },
-  --     -- { '[git]s', function() vim.cmd('GinStatus') end,          silent = true },
-  --     -- stylua: ignore end
-  --   },
-  -- },
-
   {
     'dinhhuy258/git.nvim',
     config = true,
