@@ -63,6 +63,16 @@ return {
   },
 
   {
+    'tanvirtin/vgit.nvim',
+    dependencies = {
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-tree/nvim-web-devicons' },
+    },
+    config = true,
+    event = 'VeryLazy',
+  },
+
+  {
     'lewis6991/gitsigns.nvim',
     init = function()
       -- Always draw the signcolumn with a space.
