@@ -88,6 +88,5 @@ return {
 
   -- TODO: { 'epwalsh/obsidian.nvim' },
   -- TODO: { 'folke/which-key.nvim' },
-  -- TODO: { 'hugginsio/twig.nvim' },
   -- TODO: { 'renerocksai/telekasten.nvim' },
 }
