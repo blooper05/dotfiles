@@ -95,10 +95,12 @@ return {
     end,
     cmd = { 'DialIncrement', 'DialDecrement' },
     keys = {
-      { '<C-a>', '<Plug>(dial-increment)', mode = { 'n', 'v' } },
-      { '<C-x>', '<Plug>(dial-decrement)', mode = { 'n', 'v' } },
+      -- stylua: ignore start
+      { '<C-a>',  '<Plug>(dial-increment)',  mode = { 'n', 'v' } },
+      { '<C-x>',  '<Plug>(dial-decrement)',  mode = { 'n', 'v' } },
       { 'g<C-a>', 'g<Plug>(dial-increment)', mode = { 'n', 'v' } },
       { 'g<C-x>', 'g<Plug>(dial-decrement)', mode = { 'n', 'v' } },
+      -- stylua: ignore end
     },
   },
 
@@ -106,8 +108,10 @@ return {
     'junegunn/vim-easy-align', -- non-lua plugin
     cmd = { 'EasyAlign', 'LiveEasyAlign' },
     keys = {
-      { 'ga', '<Plug>(EasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
+      -- stylua: ignore start
+      { 'ga', '<Plug>(EasyAlign)',     mode = { 'n', 'x' }, remap = true, silent = true },
       { 'gA', '<Plug>(LiveEasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
+      -- stylua: ignore end
     },
   },
 
@@ -173,13 +177,13 @@ return {
   },
 
   {
-    'karb94/neoscroll.nvim',
+    'gen740/SmoothCursor.nvim',
     config = true,
     event = 'BufReadPost',
   },
 
   {
-    'gen740/SmoothCursor.nvim',
+    'karb94/neoscroll.nvim',
     config = true,
     event = 'BufReadPost',
   },
