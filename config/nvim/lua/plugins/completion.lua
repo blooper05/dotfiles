@@ -32,7 +32,6 @@ return {
     end,
     config = function()
       local cmp = require('cmp')
-      local luasnip = require('luasnip')
       local lspkind = require('lspkind')
 
       local has_words_before = function()
@@ -42,11 +41,6 @@ return {
       end
 
       cmp.setup({
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
-          end,
-        },
         formatting = {
           format = lspkind.cmp_format({
             menu = {
