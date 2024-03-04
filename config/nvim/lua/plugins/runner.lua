@@ -2,10 +2,13 @@ return {
   {
     'nvimtools/none-ls.nvim',
     dependencies = {
+      { 'lukas-reineke/lsp-format.nvim' },
       { 'nvim-lua/plenary.nvim' },
     },
     opts = function()
       local null_ls = require('null-ls')
+      local lsp_format = require('lsp-format')
+
       local diagnostics = null_ls.builtins.diagnostics
       local formatting = null_ls.builtins.formatting
 
@@ -35,20 +38,7 @@ return {
           formatting.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
           formatting.yamlfmt,
         },
-        on_attach = function(client, bufnr)
-          local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
-
-          if client.supports_method('textDocument/formatting') then
-            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-            vim.api.nvim_create_autocmd('BufWritePre', {
-              group = augroup,
-              buffer = bufnr,
-              callback = function()
-                vim.lsp.buf.format({ async = false })
-              end,
-            })
-          end
-        end,
+        on_attach = lsp_format.on_attach,
       }
     end,
     event = 'BufReadPost',
