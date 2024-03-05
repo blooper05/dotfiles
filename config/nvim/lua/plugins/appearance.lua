@@ -164,6 +164,7 @@ return {
           local filepath = vim.api.nvim_buf_get_name(props.buf)
           local filename = vim.fn.fnamemodify(filepath, ':t')
           local devicons = require('nvim-web-devicons')
+          local helpers = require('incline.helpers')
           local icon, color = devicons.get_icon_color(filename)
           local modified = vim.bo[props.buf].modified
 
@@ -175,15 +176,23 @@ return {
             icon = ''
           end
 
+          if not color then
+            color = helpers.contrast_color('#444c5e')
+          end
+
           return {
-            ' ',
-            { icon, guifg = color },
-            ' ',
+            { ' ', icon, ' ', guifg = helpers.contrast_color(color), guibg = color },
+            '  ',
             filename,
             ' ',
             modified and { '●', guifg = '#a3be8c' } or ' ',
+            ' ',
           }
         end,
+        window = {
+          padding = 0,
+          margin = { horizontal = 0 },
+        },
       })
     end,
     event = 'BufReadPost',
