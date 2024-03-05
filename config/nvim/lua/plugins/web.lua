@@ -29,7 +29,7 @@ return {
       api_key_cmd = [[op read 'op://Personal/OpenAI API/credential' --no-newline]],
     },
     cmd = 'ChatGPT',
-    enable = false, -- TODO:
+    enabled = false, -- TODO:
   },
 
   {

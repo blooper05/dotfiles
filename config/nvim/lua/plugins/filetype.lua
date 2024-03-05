@@ -89,6 +89,6 @@ return {
   {
     'mvaldes14/terraform.nvim',
     ft = 'terraform',
-    enable = false, -- TODO:
+    enabled = false, -- TODO:
   },
 }
