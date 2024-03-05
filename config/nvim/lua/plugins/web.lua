@@ -44,7 +44,7 @@ return {
       chat_shortcut_new     = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gc' },
       -- stylua: ignore start
     },
-    cmd = { 'GpChatNew', 'GpChatPTPaste', 'GpChatToggle', 'GpChatFinder' },
+    cmd = { 'GpChatNew', 'GpChatPaste', 'GpChatToggle', 'GpChatFinder' },
     keys = {
       -- stylua: ignore start
       { '<Leader>g',    function() vim.cmd('GpChatToggle') end,             silent = true },
