@@ -32,9 +32,6 @@ return {
     enable = false, -- TODO:
   },
 
-  -- TODO: { 'Bryley/neoai.nvim' },
-  -- TODO: { 'dpayne/CodeGPT.nvim' },
-
   {
     'robitx/gp.nvim',
     opts = {
