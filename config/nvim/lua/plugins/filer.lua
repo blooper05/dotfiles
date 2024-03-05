@@ -53,6 +53,22 @@ return {
   },
 
   {
+    'stevearc/oil.nvim',
+    dependencies = {
+      { 'nvim-tree/nvim-web-devicons' },
+    },
+    opts = {
+      columns = { 'permissions', 'size', 'mtime', 'icon' },
+    },
+    cmd = 'Oil',
+    keys = {
+      -- stylua: ignore start
+      { '[file]f', function() require('oil').toggle_float() end, silent = true },
+      -- stylua: ignore end
+    },
+  },
+
+  {
     'lambdalisue/suda.vim', -- non-lua plugin
     init = function()
       -- Automatically switch a buffer name when the target file is not readable or writable.
