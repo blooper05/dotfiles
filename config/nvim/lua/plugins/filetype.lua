@@ -84,5 +84,11 @@ return {
     ft = 'plantuml',
   },
 
-  -- TODO: { 'mvaldes14/terraform.nvim' },
+  -- Terraform
+
+  {
+    'mvaldes14/terraform.nvim',
+    ft = 'terraform',
+    enable = false, -- TODO:
+  },
 }
