@@ -36,7 +36,28 @@ return {
 
   -- TODO: { 'Bryley/neoai.nvim' },
   -- TODO: { 'dpayne/CodeGPT.nvim' },
-  -- TODO: { 'robitx/gp.nvim' },
+
+  {
+    'robitx/gp.nvim',
+    opts = {
+      openai_api_key = { 'op', 'read', 'op://Personal/OpenAI API/credential', '--no-newline' },
+
+      -- stylua: ignore start
+      chat_shortcut_respond = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gr' },
+      chat_shortcut_delete  = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gd' },
+      chat_shortcut_stop    = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gs' },
+      chat_shortcut_new     = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gc' },
+      -- stylua: ignore start
+    },
+    cmd = { 'GpChatNew', 'GpChatPTPaste', 'GpChatToggle', 'GpChatFinder' },
+    keys = {
+      -- stylua: ignore start
+      { '<Leader>g',    function() vim.cmd('GpChatToggle') end,             silent = true },
+      { '<Leader>g',    [[:<C-u>'<,'>GpChatToggle<CR>]],        mode = 'v', silent = true },
+      { '[telescope]G', function() vim.cmd('GpChatFinder') end,             silent = true },
+      -- stylua: ignore start
+    },
+  },
 
   {
     'Exafunction/codeium.nvim',
