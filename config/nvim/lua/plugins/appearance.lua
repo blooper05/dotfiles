@@ -146,7 +146,46 @@ return {
 
   {
     'b0o/incline.nvim',
-    config = true,
+    config = function()
+      require('incline').setup({
+        highlight = {
+          groups = {
+            InclineNormal = {
+              default = true,
+              group = 'CursorLine',
+            },
+            InclineNormalNC = {
+              default = true,
+              group = 'CursorLine',
+            },
+          },
+        },
+        render = function(props)
+          local filepath = vim.api.nvim_buf_get_name(props.buf)
+          local filename = vim.fn.fnamemodify(filepath, ':t')
+          local devicons = require('nvim-web-devicons')
+          local icon, color = devicons.get_icon_color(filename)
+          local modified = vim.bo[props.buf].modified
+
+          if not filename or filename == '' then
+            filename = '[No Name]'
+          end
+
+          if not icon then
+            icon = ''
+          end
+
+          return {
+            ' ',
+            { icon, guifg = color },
+            ' ',
+            filename,
+            ' ',
+            modified and { '●', guifg = '#a3be8c' } or ' ',
+          }
+        end,
+      })
+    end,
     event = 'BufReadPost',
   },
 
