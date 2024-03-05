@@ -164,8 +164,9 @@ return {
 
   {
     'miversen33/sunglasses.nvim',
-    -- TODO: config = true,
-    -- TODO: event = 'WinNew',
+    config = true,
+    event = 'WinNew',
+    enable = false, -- TODO:
   },
 
   {

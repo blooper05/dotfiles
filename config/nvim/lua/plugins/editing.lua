@@ -174,6 +174,7 @@ return {
       set_cursorline = false,
     },
     event = 'BufReadPost',
+    enable = false, -- TODO:
   },
 
   {
