@@ -37,28 +37,24 @@ return {
   -- Markdown
 
   {
-    'tadmccorkle/markdown.nvim',
-    dependencies = {
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
-    opts = {
-      mappings = false,
-      on_attach = function(bufnr)
-        -- stylua: ignore start
-        vim.keymap.set('i', '<Tab>',   '<Tab><Cmd>MDResetListNumbering<CR>',   { buffer = bufnr })
-        vim.keymap.set('i', '<S-Tab>', '<S-Tab><Cmd>MDResetListNumbering<CR>', { buffer = bufnr })
+    'gaoDean/autolist.nvim',
+    config = function()
+      require('autolist').setup()
 
-        vim.keymap.set('i', '<CR>', '<Cmd>MDListItemBelow<CR><CR><BS>', { buffer = bufnr })
-        vim.keymap.set('n', 'o',    '<Cmd>MDListItemBelow<CR>o<BS>',    { buffer = bufnr })
-        vim.keymap.set('n', 'O',    '<Cmd>MDListItemAbove<CR>O<BS>',    { buffer = bufnr })
+      -- stylua: ignore start
+      vim.keymap.set('i', '<Tab>',   '<Cmd>AutolistTab<CR>')
+      vim.keymap.set('i', '<S-Tab>', '<Cmd>AutolistShiftTab<CR>')
 
-        vim.keymap.set('n', '>>', '>><Cmd>MDResetListNumbering<CR>', { buffer = bufnr })
-        vim.keymap.set('n', '<<', '<<<Cmd>MDResetListNumbering<CR>', { buffer = bufnr })
-        vim.keymap.set('n', 'dd', 'dd<Cmd>MDResetListNumbering<CR>', { buffer = bufnr })
-        vim.keymap.set('v', 'd',  'd<Cmd>MDResetListNumbering<CR>',  { buffer = bufnr })
-        -- stylua: ignore end
-      end,
-    },
+      vim.keymap.set('i', '<CR>', '<CR><Cmd>AutolistNewBullet<CR>')
+      vim.keymap.set('n', 'o',    'o<Cmd>AutolistNewBullet<CR>')
+      vim.keymap.set('n', 'O',    'O<Cmd>AutolistNewBulletBefore<CR>')
+
+      vim.keymap.set('n', '>>', '>><Cmd>AutolistRecalculate<CR>')
+      vim.keymap.set('n', '<<', '<<<Cmd>AutolistRecalculate<CR>')
+      vim.keymap.set('n', 'dd', 'dd<Cmd>AutolistRecalculate<CR>')
+      vim.keymap.set('v', 'd',  'd<Cmd>AutolistRecalculate<CR>')
+      -- stylua: ignore end
+    end,
     ft = 'markdown',
   },
 
