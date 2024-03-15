@@ -42,9 +42,9 @@ alias tree='eza --tree'
 alias eza='eza --classify --icons --group-directories-first'
 
 alias find='fd'
-alias fd='fd --hidden --exclude=.git/'
+alias fd='fd --hidden --exclude=.git/ --exclude=.terraform/'
 alias grep='rg'
-alias rg='rg --hidden --glob=!.git/'
+alias rg='rg --hidden --glob=!.git/ --glob=!.terraform/'
 
 alias cat='bat'
 alias diff='delta'

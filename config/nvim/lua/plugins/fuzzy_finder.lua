@@ -31,18 +31,18 @@ return {
       pickers = {
         live_grep = {
           additional_args = function()
-            return { '--hidden', '--glob=!.git/' }
+            return { '--hidden', '--glob=!.git/', '--glob=!.terraform/' }
           end,
         },
 
         grep_string = {
           additional_args = function()
-            return { '--hidden', '--glob=!.git/' }
+            return { '--hidden', '--glob=!.git/', '--glob=!.terraform/' }
           end,
         },
 
         find_files = {
-          find_command = { 'fd', '--type=file', '--hidden', '--exclude=.git/' },
+          find_command = { 'fd', '--type=file', '--hidden', '--exclude=.git/', '--exclude=.terraform/' },
         },
       },
     },
