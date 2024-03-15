@@ -1,6 +1,7 @@
 [tools]
 actionlint = "1.6.27"
 adr-tools = "3.0.0"
+argocd = "2.10.3"
 awscli = "2.15.23"
 deno = "1.41.0"
 dotenv-linter = "3.3.0"

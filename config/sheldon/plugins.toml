@@ -45,6 +45,16 @@ inline = 'autoload -Uz bashcompinit && zsh-defer bashcompinit'
 [plugins.compinit]
 inline = 'autoload -Uz compinit && zsh-defer compinit'
 
+[plugins.argocd-completions]
+inline = '''
+  function _argocd() {
+    unfunction "$0"
+    source <(argocd completion zsh)
+    $0 "$@"
+  }
+  zsh-defer _argocd
+'''
+
 [plugins.aws-completions]
 inline = '''
   function _aws() {
