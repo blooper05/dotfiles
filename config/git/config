@@ -3,7 +3,7 @@
   hooksPath = ~/.config/git/hooks
   pager     = delta
 [alias]
-  graph  = log --graph --pretty=pretty
+  graph  = log --graph --pretty=pretty --no-show-signature
   ignore = !curl --silent --location https://www.toptal.com/developers/gitignore/api/$@
 [commit]
   gpgsign  = true
