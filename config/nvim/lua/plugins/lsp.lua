@@ -27,7 +27,7 @@ return {
         -- 'postgres_lsp',
         'pylsp',
         -- 'remark_ls',
-        'ruby_ls',
+        'ruby_lsp',
         'solargraph',
         'sorbet',
         'sqlls',
