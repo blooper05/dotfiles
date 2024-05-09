@@ -62,7 +62,7 @@ return {
   },
 
   {
-    'lukas-reineke/indent-blankline.nvim',
+    'shellRaining/hlchunk.nvim',
     dependencies = {
       { 'EdenEast/nightfox.nvim' },
       { 'nvim-treesitter/nvim-treesitter' },
@@ -71,8 +71,11 @@ return {
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
     end,
-    main = 'ibl',
-    config = true,
+    opts = {
+      blank = {
+        enable = false,
+      },
+    },
     event = 'BufReadPost',
   },
 
