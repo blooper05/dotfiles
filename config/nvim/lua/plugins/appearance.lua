@@ -213,13 +213,6 @@ return {
   },
 
   {
-    'miversen33/sunglasses.nvim',
-    config = true,
-    event = 'WinNew',
-    enabled = false, -- TODO:
-  },
-
-  {
     'nvim-zh/colorful-winsep.nvim',
     config = true,
     event = 'WinNew',
