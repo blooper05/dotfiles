@@ -203,11 +203,10 @@ return {
   {
     'levouh/tint.nvim',
     opts = {
-      highlight_ignore_patterns = { 'Telescope.*' },
-      -- window_ignore_function = function(winid)
-      --   local is_floating = vim.api.nvim_win_get_config(winid).relative ~= ''
-      --   return is_floating
-      -- end,
+      window_ignore_function = function(winid)
+        local is_floating = vim.api.nvim_win_get_config(winid).relative ~= ''
+        return is_floating
+      end,
     },
     event = { 'WinNew', 'WinEnter', 'WinLeave' },
   },
