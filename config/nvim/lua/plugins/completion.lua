@@ -34,6 +34,7 @@ return {
     config = function()
       local cmp = require('cmp')
       local cmp_action = require('lsp-zero').cmp_action()
+      local luasnip = require('luasnip')
       local lspkind = require('lspkind')
 
       cmp.setup({
@@ -46,6 +47,11 @@ return {
           ['<Tab>'] = cmp_action.luasnip_supertab(),
           ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
         }),
+        snippet = {
+          expand = function(args)
+            luasnip.lsp_expand(args.body)
+          end,
+        },
         sources = cmp.config.sources({
           { name = 'luasnip' },
           { name = 'nvim_lsp' },
