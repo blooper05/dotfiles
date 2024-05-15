@@ -76,7 +76,7 @@ return {
         enable = false,
       },
     },
-    event = 'BufReadPost',
+    event = 'UIEnter',
   },
 
   {
