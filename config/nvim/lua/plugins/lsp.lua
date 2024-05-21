@@ -7,6 +7,7 @@ return {
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'williamboman/mason-lspconfig.nvim' },
       { 'williamboman/mason.nvim' },
+      { 'zapling/mason-lock.nvim' },
     },
     config = function()
       local servers = {
@@ -51,6 +52,9 @@ return {
       end)
 
       require('mason').setup()
+      require('mason-lock').setup({
+        lockfile_path = vim.fn.stdpath('config') .. '/mason-lock.json',
+      })
       require('mason-lspconfig').setup({
         ensure_installed = servers,
         handlers = {
