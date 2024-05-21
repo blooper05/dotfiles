@@ -24,7 +24,6 @@
   "codic-vim": { "branch": "master", "commit": "5881023a86e0c40ec2107c4cc8ea051863238da4" },
   "colorful-winsep.nvim": { "branch": "alpha", "commit": "b0b76a8b19074920d2cb6878bf356cfb8af617a5" },
   "dial.nvim": { "branch": "master", "commit": "7af2daaaf933b0617ded0f78b49f4d5fc45f9f64" },
-  "focus.nvim": { "branch": "master", "commit": "c9bc6a969c3ff0d682f389129961c9e71ff2c918" },
   "friendly-snippets": { "branch": "main", "commit": "dd2fd1281d4b22e7b4a5bfafa3e142d958e251f2" },
   "gina.vim": { "branch": "master", "commit": "ff6c2ddeca98f886b57fb42283c12e167d6ab575" },
   "git-conflict.nvim": { "branch": "main", "commit": "4c8e252b87d54d944c1e56bfb477f78b6fdaf661" },

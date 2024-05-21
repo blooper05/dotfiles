@@ -187,10 +187,4 @@ return {
     config = true,
     event = 'BufReadPost',
   },
-
-  {
-    'nvim-focus/focus.nvim',
-    config = true,
-    event = 'BufReadPost',
-  },
 }
