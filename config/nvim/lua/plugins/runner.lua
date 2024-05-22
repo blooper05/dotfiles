@@ -33,7 +33,6 @@ return {
           formatting.shfmt,
           formatting.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
           formatting.stylua,
-          formatting.taplo,
           formatting.terraform_fmt,
           formatting.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
           formatting.yamlfmt,
