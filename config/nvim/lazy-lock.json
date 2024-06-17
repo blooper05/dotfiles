@@ -76,7 +76,7 @@
   "promise-async": { "branch": "main", "commit": "93540c168c5ed2b030ec3e6c40ab8bbb85e36355" },
   "rainbow_csv": { "branch": "master", "commit": "bb2f154fd9c2bedb6513aa533baa7769e57874f2" },
   "retrail.nvim": { "branch": "main", "commit": "b2151199edee8d77a2fc70f77f2a4150c27ea334" },
-  "satellite.nvim": { "branch": "main", "commit": "40eb89743e3439c66192abfc31eb3280622a5d3c" },
+  "satellite.nvim": { "branch": "main", "commit": "777ed56e1ef45ec808df701730b6597fc4fb0fbc" },
   "schemastore.nvim": { "branch": "main", "commit": "d9fd6651b47b68bfc1b952f81a0fdded3cb205b2" },
   "sniprun": { "branch": "master", "commit": "9006d4af4f7016523f8619ae1526ab4e7f0df785" },
   "suda.vim": { "branch": "master", "commit": "b97fab52f9cdeabe2bbb5eb98d82356899f30829" },
