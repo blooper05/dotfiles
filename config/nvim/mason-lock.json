@@ -1,5 +1,5 @@
 {
-  "bash-language-server": "5.3.4",
+  "bash-language-server": "5.4.0",
   "css-lsp": "4.10.0",
   "cssmodules-language-server": "1.4.0",
   "docker-compose-language-service": "0.2.0",
@@ -11,14 +11,14 @@
   "html-lsp": "4.10.0",
   "json-lsp": "4.10.0",
   "jsonnet-language-server": "v0.13.1",
-  "lua-language-server": "3.9.1",
+  "lua-language-server": "3.9.3",
   "python-lsp-server": "1.11.0",
   "sqlls": "1.7.0",
   "stylelint-lsp": "2.0.0",
   "tailwindcss-language-server": "0.0.16",
   "taplo": "0.8.1",
-  "terraform-ls": "v0.33.1",
+  "terraform-ls": "v0.33.2",
   "typescript-language-server": "4.3.3",
-  "vue-language-server": "2.0.19",
-  "yaml-language-server": "1.14.0"
+  "vue-language-server": "2.0.21",
+  "yaml-language-server": "1.15.0"
 }
