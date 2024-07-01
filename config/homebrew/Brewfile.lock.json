@@ -5,13 +5,13 @@
         "revision": "c805ed4ff356be7c2f8a627f01540dcd6f137c3e"
       },
       "homebrew/bundle": {
-        "revision": "5372559758cc6fb81024349431b6baad7ffd1bda"
+        "revision": "18d741fa58d82f7ebc4b46d3a4e4d81ba4e9d9ed"
       },
       "homebrew/cask-fonts": {
         "revision": "0ed20f35d21ebc3f4f829689b101078718ad5ce1"
       },
       "k1low/tap": {
-        "revision": "37f729abe7e9dab718fc635c5c5218dc0e1fbbfc"
+        "revision": "bc5b85bb7aaf8fb094e81279e873b2cfd7e2d549"
       }
     },
     "brew": {
@@ -1177,7 +1177,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-4618711",
+        "version": "HEAD-e702030",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1896,7 +1896,7 @@
         }
       },
       "insomnia": {
-        "version": "9.3.0",
+        "version": "9.3.1",
         "options": {
           "full_name": "insomnia"
         }
@@ -1950,7 +1950,7 @@
         }
       },
       "notion": {
-        "version": "3.9.5",
+        "version": "3.9.6",
         "options": {
           "full_name": "notion"
         }
