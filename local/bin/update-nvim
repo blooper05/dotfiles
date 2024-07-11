@@ -2,7 +2,7 @@
 
 set -ex
 
-nvim --headless '+Lazy! sync' +quitall
+# nvim --headless '+Lazy! sync' +quitall
 
 python3 -m pip install --user --upgrade pynvim
 gem install neovim && gem environment
