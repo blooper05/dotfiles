@@ -189,6 +189,7 @@ export TFLINT_PLUGIN_DIR=$XDG_DATA_HOME/tflint/plugins
 # Docker {{{2
 export DOCKER_CONFIG=$XDG_DATA_HOME/docker
 export LIMA_HOME=$XDG_DATA_HOME/lima
+export COLIMA_HOME=$XDG_DATA_HOME/colima
 
 # Taskwarrior {{{2
 export TASKDATA=$XDG_DATA_HOME/task
