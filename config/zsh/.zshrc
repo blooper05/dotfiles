@@ -180,6 +180,7 @@ export GNUPGHOME=$XDG_DATA_HOME/gnupg
 # AWS CLI {{{2
 export AWS_CONFIG_FILE=$XDG_CONFIG_HOME/aws/config
 export AWS_SHARED_CREDENTIALS_FILE=$XDG_CONFIG_HOME/aws/credentials
+export AWS_PAGER=''
 
 # Terraform {{{2
 export TF_CLI_ARGS_plan="--parallelism=30"
