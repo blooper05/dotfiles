@@ -25,6 +25,7 @@
   "colorful-winsep.nvim": { "branch": "alpha", "commit": "93a063e25a78c2a50441f3d1ece548465159aa1f" },
   "dial.nvim": { "branch": "master", "commit": "750f802879c90ea51f92b68c35fa562ee575804a" },
   "friendly-snippets": { "branch": "main", "commit": "45a1b96e46efe5fce8af325d4bed45feb9d29d0f" },
+  "fugit2.nvim": { "branch": "main", "commit": "e5eaed1ec9c210e43d75d47822de3800f02465ca" },
   "gina.vim": { "branch": "master", "commit": "ff6c2ddeca98f886b57fb42283c12e167d6ab575" },
   "git-conflict.nvim": { "branch": "main", "commit": "45cde6f0acf26d0e4b64acfa45349dd1da01e577" },
   "gitsigns.nvim": { "branch": "main", "commit": "375c44bdfdde25585466a966f00c2e291db74f2d" },
