@@ -4,13 +4,6 @@ return {
     config = function()
       local opts = { noremap = true, silent = true }
 
-      -- gina-buffer-blame specific settings.
-      vim.call('gina#custom#action#alias', 'blame', 'preview', 'botright show:commit:preview')
-      vim.call('gina#custom#action#alias', 'blame', 'changes', 'botright changes:of:preview')
-      vim.call('gina#custom#mapping#nmap', 'blame', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
-      vim.call('gina#custom#mapping#nmap', 'blame', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
-      vim.call('gina#custom#execute', 'blame', 'setlocal cursorline')
-
       -- gina-buffer-branch specific settings.
       vim.call('gina#custom#mapping#nmap', 'branch', 'co', '<Plug>(gina-commit-checkout)')
       vim.call('gina#custom#mapping#nmap', 'branch', 'ct', '<Plug>(gina-commit-checkout-track)')
@@ -47,14 +40,11 @@ return {
       { '<Space>g', '[git]', remap = true },
 
       -- stylua: ignore start
-      { '[git]B', function() vim.cmd('Gina blame') end,                                  silent = true },
       { '[git]b', function() vim.cmd('Gina branch --all --verbose --verbose') end,       silent = true },
       { '[git]c', function() vim.cmd('Gina commit') end,                                 silent = true },
       { '[git]C', function() vim.cmd('Gina commit --amend') end,                         silent = true },
       { '[git]l', function() vim.cmd('Gina log --graph --no-show-signature') end,        silent = true },
       { '[git]L', function() vim.cmd('Gina log --graph --no-show-signature -- %:p') end, silent = true },
-      { '[git]d', function() vim.cmd('Gina compare') end,                                silent = true },
-      { '[git]D', function() vim.cmd('Gina compare --cached') end,                       silent = true },
       { '[git]p', function() vim.cmd('Gina patch %:p') end,                              silent = true },
       { '[git]R', function() vim.cmd('Gina reflog') end,                                 silent = true },
       { '[git]s', function() vim.cmd('Gina status') end,                                 silent = true },
@@ -80,6 +70,9 @@ return {
     cmd = 'Gitsigns',
     keys = {
       -- stylua: ignore start
+      { '[git]B', function() require('gitsigns').blame() end,               silent = true },
+      { '[git]d', function() require('gitsigns').diffthis() end,            silent = true },
+      { '[git]D', function() require('gitsigns').diffthis('HEAD') end,      silent = true },
       { '[git]a', function() require('gitsigns').stage_buffer() end,        silent = true },
       { '[git]r', function() require('gitsigns').reset_buffer_index() end,  silent = true },
       { '[git]]', function() require('gitsigns').next_hunk() end,           silent = true },
