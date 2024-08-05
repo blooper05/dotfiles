@@ -26,6 +26,7 @@ return {
       { '[git]p', function() vim.cmd('GinPatch %:p') end,                                              silent = true },
       { '[git]R', function() vim.cmd('GinBuffer reflog') end,                                          silent = true },
       { '[git]s', function() vim.cmd('GinStatus') end,                                                 silent = true },
+      { '[git]o', function() vim.cmd('GinBrowse') end,                                                 silent = true },
       -- stylua: ignore end
     },
   },
