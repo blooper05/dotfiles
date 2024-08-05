@@ -22,6 +22,15 @@ return {
   },
 
   {
+    'rbong/vim-flog',
+    dependencies = {
+      'tpope/vim-fugitive',
+    },
+    config = true,
+    cmd = { 'Flog', 'Flogsplit', 'Floggit' },
+  },
+
+  {
     'lambdalisue/gina.vim', -- non-lua plugin
     config = function()
       local opts = { noremap = true, silent = true }
