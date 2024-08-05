@@ -1,15 +1,37 @@
 return {
   {
+    'SuperBo/fugit2.nvim',
+    dependencies = {
+      { 'MunifTanjim/nui.nvim' },
+      { 'nvim-lua/plenary.nvim' },
+      { 'nvim-tree/nvim-web-devicons' },
+    },
+    config = true,
+    cmd = { 'Fugit2', 'Fugit2Blame', 'Fugit2Diff', 'Fugit2Graph' },
+    keys = {
+      { '[git]', '<Nop>' },
+      { '<Space>g', '[git]', remap = true },
+
+      -- stylua: ignore start
+      { '[git]B', function() vim.cmd('Fugit2Blame') end, silent = true },
+      { '[git]l', function() vim.cmd('Fugit2Graph') end, silent = true },
+      { '[git]d', function() vim.cmd('Fugit2Diff') end,  silent = true },
+      { '[git]s', function() vim.cmd('Fugit2') end,      silent = true },
+      -- stylua: ignore end
+    },
+  },
+
+  {
     'lambdalisue/gina.vim', -- non-lua plugin
     config = function()
       local opts = { noremap = true, silent = true }
 
-      -- gina-buffer-blame specific settings.
-      vim.call('gina#custom#action#alias', 'blame', 'preview', 'botright show:commit:preview')
-      vim.call('gina#custom#action#alias', 'blame', 'changes', 'botright changes:of:preview')
-      vim.call('gina#custom#mapping#nmap', 'blame', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
-      vim.call('gina#custom#mapping#nmap', 'blame', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
-      vim.call('gina#custom#execute', 'blame', 'setlocal cursorline')
+      -- -- gina-buffer-blame specific settings.
+      -- vim.call('gina#custom#action#alias', 'blame', 'preview', 'botright show:commit:preview')
+      -- vim.call('gina#custom#action#alias', 'blame', 'changes', 'botright changes:of:preview')
+      -- vim.call('gina#custom#mapping#nmap', 'blame', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
+      -- vim.call('gina#custom#mapping#nmap', 'blame', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
+      -- vim.call('gina#custom#execute', 'blame', 'setlocal cursorline')
 
       -- gina-buffer-branch specific settings.
       vim.call('gina#custom#mapping#nmap', 'branch', 'co', '<Plug>(gina-commit-checkout)')
@@ -36,10 +58,10 @@ return {
       vim.call('gina#custom#mapping#nmap', 'reflog', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
       vim.call('gina#custom#execute', 'reflog', 'setlocal cursorline')
 
-      -- gina-buffer-status specific settings.
-      vim.call('gina#custom#command#option', 'status', '--branch')
-      vim.call('gina#custom#command#option', 'status', '--short')
-      vim.call('gina#custom#execute', 'status', 'setlocal cursorline')
+      -- -- gina-buffer-status specific settings.
+      -- vim.call('gina#custom#command#option', 'status', '--branch')
+      -- vim.call('gina#custom#command#option', 'status', '--short')
+      -- vim.call('gina#custom#execute', 'status', 'setlocal cursorline')
     end,
     cmd = 'Gina',
     keys = {
@@ -47,17 +69,17 @@ return {
       { '<Space>g', '[git]', remap = true },
 
       -- stylua: ignore start
-      { '[git]B', function() vim.cmd('Gina blame') end,                                  silent = true },
+      -- { '[git]B', function() vim.cmd('Gina blame') end,                                  silent = true },
       { '[git]b', function() vim.cmd('Gina branch --all --verbose --verbose') end,       silent = true },
       { '[git]c', function() vim.cmd('Gina commit') end,                                 silent = true },
       { '[git]C', function() vim.cmd('Gina commit --amend') end,                         silent = true },
-      { '[git]l', function() vim.cmd('Gina log --graph --no-show-signature') end,        silent = true },
+      -- { '[git]l', function() vim.cmd('Gina log --graph --no-show-signature') end,        silent = true },
       { '[git]L', function() vim.cmd('Gina log --graph --no-show-signature -- %:p') end, silent = true },
-      { '[git]d', function() vim.cmd('Gina compare') end,                                silent = true },
+      -- { '[git]d', function() vim.cmd('Gina compare') end,                                silent = true },
       { '[git]D', function() vim.cmd('Gina compare --cached') end,                       silent = true },
       { '[git]p', function() vim.cmd('Gina patch %:p') end,                              silent = true },
       { '[git]R', function() vim.cmd('Gina reflog') end,                                 silent = true },
-      { '[git]s', function() vim.cmd('Gina status') end,                                 silent = true },
+      -- { '[git]s', function() vim.cmd('Gina status') end,                                 silent = true },
       -- stylua: ignore end
     },
   },
