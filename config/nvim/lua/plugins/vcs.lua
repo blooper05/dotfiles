@@ -1,53 +1,31 @@
 return {
   {
-    'lambdalisue/gina.vim', -- non-lua plugin
-    config = function()
-      local opts = { noremap = true, silent = true }
+    'lambdalisue/vim-gin', -- non-lua plugin
+    dependencies = {
+      { 'vim-denops/denops.vim' }, -- non-lua plugin
+    },
+    init = function()
+      vim.g['gin_branch_default_args'] = { '--all', '--verbose', '--verbose' }
 
-      -- gina-buffer-branch specific settings.
-      vim.call('gina#custom#mapping#nmap', 'branch', 'co', '<Plug>(gina-commit-checkout)')
-      vim.call('gina#custom#mapping#nmap', 'branch', 'ct', '<Plug>(gina-commit-checkout-track)')
-      vim.call('gina#custom#mapping#nmap', 'branch', 'M', '<Plug>(gina-branch-move)')
-      vim.call('gina#custom#mapping#nmap', 'branch', 'D', '<Plug>(gina-branch-delete)')
-      vim.call('gina#custom#execute', 'branch', 'setlocal cursorline')
-      vim.call('gina#custom#command#option', 'branch', '--verbose')
+      vim.g['gin_log_default_args'] = { '--graph', '--pretty=pretty' }
+      vim.g['gin_log_persistent_args'] = { '--no-show-signature' }
 
-      -- gina-buffer-commit specific settings.
-      vim.call('gina#custom#command#option', 'commit', '--verbose')
-
-      -- gina-buffer-log specific settings.
-      vim.call('gina#custom#action#alias', 'log', 'preview', 'vertical show:commit:preview')
-      vim.call('gina#custom#action#alias', 'log', 'changes', 'vertical changes:of:preview')
-      vim.call('gina#custom#mapping#nmap', 'log', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
-      vim.call('gina#custom#mapping#nmap', 'log', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
-      vim.call('gina#custom#execute', 'log', 'setlocal cursorline')
-
-      -- gina-buffer-reflog specific settings.
-      vim.call('gina#custom#action#alias', 'reflog', 'preview', 'vertical show:commit:preview')
-      vim.call('gina#custom#action#alias', 'reflog', 'changes', 'vertical changes:of:preview')
-      vim.call('gina#custom#mapping#nmap', 'reflog', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
-      vim.call('gina#custom#mapping#nmap', 'reflog', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
-      vim.call('gina#custom#execute', 'reflog', 'setlocal cursorline')
-
-      -- gina-buffer-status specific settings.
-      vim.call('gina#custom#command#option', 'status', '--branch')
-      vim.call('gina#custom#command#option', 'status', '--short')
-      vim.call('gina#custom#execute', 'status', 'setlocal cursorline')
+      vim.g['gin_proxy_apply_without_confirm'] = true
     end,
-    cmd = 'Gina',
+    cmd = 'Gin',
     keys = {
       { '[git]', '<Nop>' },
       { '<Space>g', '[git]', remap = true },
 
       -- stylua: ignore start
-      { '[git]b', function() vim.cmd('Gina branch --all --verbose --verbose') end,       silent = true },
-      { '[git]c', function() vim.cmd('Gina commit') end,                                 silent = true },
-      { '[git]C', function() vim.cmd('Gina commit --amend') end,                         silent = true },
-      { '[git]l', function() vim.cmd('Gina log --graph --no-show-signature') end,        silent = true },
-      { '[git]L', function() vim.cmd('Gina log --graph --no-show-signature -- %:p') end, silent = true },
-      { '[git]p', function() vim.cmd('Gina patch %:p') end,                              silent = true },
-      { '[git]R', function() vim.cmd('Gina reflog') end,                                 silent = true },
-      { '[git]s', function() vim.cmd('Gina status') end,                                 silent = true },
+      { '[git]b', function() vim.cmd('GinBranch --all --verbose --verbose') end,                       silent = true },
+      { '[git]c', function() vim.cmd('Gin commit --verbose') end,                                      silent = true },
+      { '[git]C', function() vim.cmd('Gin commit --amend --verbose') end,                              silent = true },
+      { '[git]l', function() vim.cmd('GinLog --graph --pretty=pretty --no-show-signature') end,        silent = true },
+      { '[git]L', function() vim.cmd('GinLog --graph --pretty=pretty --no-show-signature -- %:p') end, silent = true },
+      { '[git]p', function() vim.cmd('GinPatch %:p') end,                                              silent = true },
+      { '[git]R', function() vim.cmd('GinBuffer reflog') end,                                          silent = true },
+      { '[git]s', function() vim.cmd('GinStatus') end,                                                 silent = true },
       -- stylua: ignore end
     },
   },

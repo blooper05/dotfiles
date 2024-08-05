@@ -95,7 +95,7 @@ return {
         },
       })
 
-      cmp.setup.filetype({ 'gina-commit', 'gitcommit', 'markdown' }, {
+      cmp.setup.filetype({ 'gitcommit', 'markdown' }, {
         sources = cmp.config.sources({
           { name = 'luasnip' },
           { name = 'nvim_lsp' },

@@ -17,7 +17,7 @@ return {
           diagnostics.actionlint,
           diagnostics.dotenv_linter,
           diagnostics.editorconfig_checker.with({ command = 'ec' }),
-          diagnostics.gitlint.with({ filetypes = { 'gina-commit', 'gitcommit' } }),
+          diagnostics.gitlint.with({ filetypes = { 'gitcommit' } }),
           diagnostics.hadolint,
           diagnostics.markdownlint_cli2,
           diagnostics.reek,
