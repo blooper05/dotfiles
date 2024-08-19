@@ -1147,7 +1147,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-3346418",
+        "version": "HEAD-6d997f8",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1932,7 +1932,7 @@
         }
       },
       "raycast": {
-        "version": "1.81.1",
+        "version": "1.81.2",
         "options": {
           "full_name": "raycast"
         }
@@ -1980,7 +1980,7 @@
         }
       },
       "zoom": {
-        "version": "6.1.6.37851",
+        "version": "6.1.10.38818",
         "options": {
           "full_name": "zoom"
         }
