@@ -13,6 +13,8 @@
   "jsonnet-language-server": "v0.14.0",
   "lua-language-server": "3.10.4",
   "python-lsp-server": "1.11.0",
+  "ruby-lsp": "0.17.13",
+  "solargraph": "0.50.0",
   "sqlls": "1.7.0",
   "stylelint-lsp": "2.0.0",
   "tailwindcss-language-server": "0.0.22",
