@@ -89,7 +89,7 @@
   "tint.nvim": { "branch": "master", "commit": "02bd0527a315a80e4e25bb2dd7b6994fb0daae01" },
   "todo-comments.nvim": { "branch": "main", "commit": "8f45f353dc3649cb9b44cecda96827ea88128584" },
   "toggleterm.nvim": { "branch": "main", "commit": "137d06fb103952a0fb567882bb8527e2f92d327d" },
-  "trouble.nvim": { "branch": "main", "commit": "a8264a65a0b894832ea642844f5b7c30112c458f" },
+  "trouble.nvim": { "branch": "main", "commit": "6efc446226679fda0547c0fd6a7892fd5f5b15d8" },
   "twilight.nvim": { "branch": "main", "commit": "1584c0b0a979b71fd86b18d302ba84e9aba85b1b" },
   "ultimate-autopair.nvim": { "branch": "v0.6", "commit": "1420fb9e07b1d80cc6d87e7d90827fb2c1109cb3" },
   "vim-asterisk": { "branch": "master", "commit": "77e97061d6691637a034258cc415d98670698459" },

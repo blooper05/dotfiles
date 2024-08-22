@@ -117,10 +117,11 @@ return {
       { 'neovim/nvim-lspconfig' },
       { 'nvim-tree/nvim-web-devicons' },
     },
-    cmd = 'TroubleToggle',
+    config = true,
+    cmd = 'Trouble',
     keys = {
       -- stylua: ignore start
-      { '[lsp]l', function() vim.cmd('TroubleToggle') end, silent = true },
+      { '[lsp]l', function() vim.cmd('Trouble diagnostics toggle') end, silent = true },
       -- stylua: ignore end
     },
   },
