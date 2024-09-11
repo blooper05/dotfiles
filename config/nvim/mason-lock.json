@@ -11,7 +11,7 @@
   "html-lsp": "4.10.0",
   "json-lsp": "4.10.0",
   "jsonnet-language-server": "v0.14.1",
-  "lua-language-server": "3.10.5",
+  "lua-language-server": "3.10.6",
   "python-lsp-server": "1.12.0",
   "ruby-lsp": "0.17.17",
   "solargraph": "0.50.0",
