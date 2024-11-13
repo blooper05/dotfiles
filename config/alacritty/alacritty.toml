@@ -4,7 +4,7 @@ size = 15.0
 [font.normal]
 family = "HackGen35 Console NF"
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/zsh"
 
 [window]
