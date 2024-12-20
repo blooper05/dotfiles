@@ -84,6 +84,7 @@ cask "obs"
 cask "obsidian"
 # cask "openemu"
 # cask "quip"
+cask "raindropio"
 cask "raycast"
 # cask "rubymotion"
 cask "session-manager-plugin"
@@ -107,6 +108,5 @@ mas "FANTASIAN", id: 1517339045
 mas "Kindle", id: 302584613
 mas "LINE", id: 539883307
 mas "MindNode", id: 1289197285
-mas "Pocket", id: 568494494
 # mas "ReceiptKeeper", id: 413449473
 mas "Reeder", id: 1529448980
