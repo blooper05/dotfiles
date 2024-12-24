@@ -1,0 +1,8 @@
+#!/bin/bash
+
+devcontainer up \
+	--mount="type=bind,source=$HOME/.aws/cli,target=/root/.aws/cli" \
+	--mount="type=bind,source=$HOME/.aws/sso,target=/root/.aws/sso" \
+	--mount="type=bind,source=$AWS_CONFIG_FILE,target=/root/.aws/config" \
+	--mount="type=bind,source=$AWS_SHARED_CREDENTIALS_FILE,target=/root/.aws/credentials" \
+	--workspace-folder=.
