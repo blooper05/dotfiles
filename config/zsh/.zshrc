@@ -192,9 +192,6 @@ export DOCKER_CONFIG=$XDG_DATA_HOME/docker
 export LIMA_HOME=$XDG_DATA_HOME/lima
 export COLIMA_HOME=$XDG_DATA_HOME/colima
 
-# Timewarrior {{{2
-export TIMEWARRIORDB=$XDG_DATA_HOME/timew
-
 # Zellij {{{2
 eval "$(zellij setup --generate-auto-start zsh)"
 
