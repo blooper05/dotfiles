@@ -36,8 +36,6 @@ brew "sk"
 brew "sqlfluff"
 # brew "ssh-copy-id", link: true
 brew "starship"
-brew "task"
-brew "taskwarrior-tui"
 brew "timewarrior"
 brew "xh"
 brew "yq"

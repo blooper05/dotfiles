@@ -192,10 +192,6 @@ export DOCKER_CONFIG=$XDG_DATA_HOME/docker
 export LIMA_HOME=$XDG_DATA_HOME/lima
 export COLIMA_HOME=$XDG_DATA_HOME/colima
 
-# Taskwarrior {{{2
-export TASKDATA=$XDG_DATA_HOME/task
-export TASKRC=$XDG_CONFIG_HOME/task/taskrc
-
 # Timewarrior {{{2
 export TIMEWARRIORDB=$XDG_DATA_HOME/timew
 
