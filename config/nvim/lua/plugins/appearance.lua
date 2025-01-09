@@ -203,13 +203,13 @@ return {
   {
     'TaDaa/vimade',
     config = true,
-    event = 'WinNew',
+    event = 'WinLeave',
   },
 
   {
     'nvim-zh/colorful-winsep.nvim',
     config = true,
-    event = 'WinNew',
+    event = 'WinLeave',
   },
 
   {
