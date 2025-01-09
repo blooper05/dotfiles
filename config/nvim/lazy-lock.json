@@ -77,7 +77,7 @@
   "previm": { "branch": "master", "commit": "8d414bf9b38d2a7c65a313775e26c03a0169f67f" },
   "project.nvim": { "branch": "main", "commit": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb" },
   "promise-async": { "branch": "main", "commit": "119e8961014c9bfaf1487bf3c2a393d254f337e2" },
-  "rainbow_csv": { "branch": "master", "commit": "3dbbfd7d17536aebfb80f571255548495574c32b" },
+  "rainbow_csv.nvim": { "branch": "main", "commit": "7f3fddfe813641035fac2cdf94c2ff69bb0bf0b9" },
   "retrail.nvim": { "branch": "main", "commit": "10609e9ee14cf3b1e7107ea0f7b256b663890797" },
   "satellite.nvim": { "branch": "main", "commit": "bce591cb5e379bd989623993c604c774633e7ed9" },
   "schemastore.nvim": { "branch": "main", "commit": "438f4f1f1fb890980cb23002597f99c9579834bd" },

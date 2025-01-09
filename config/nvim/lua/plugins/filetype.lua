@@ -23,7 +23,8 @@ return {
   -- CSV
 
   {
-    'mechatroner/rainbow_csv', -- non-lua plugin
+    'cameron-wags/rainbow_csv.nvim',
+    config = true,
     ft = 'csv',
   },
 
