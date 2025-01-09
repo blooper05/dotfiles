@@ -73,8 +73,8 @@ return {
       vim.opt.termguicolors = true
     end,
     opts = {
-      blank = {
-        enable = false,
+      indent = {
+        enable = true,
       },
     },
     event = 'UIEnter',
