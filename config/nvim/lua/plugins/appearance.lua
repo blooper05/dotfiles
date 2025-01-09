@@ -201,13 +201,8 @@ return {
   },
 
   {
-    'levouh/tint.nvim',
-    opts = {
-      window_ignore_function = function(winid)
-        local is_floating = vim.api.nvim_win_get_config(winid).relative ~= ''
-        return is_floating
-      end,
-    },
+    'TaDaa/vimade',
+    config = true,
     event = { 'WinNew', 'WinEnter', 'WinLeave' },
   },
 
