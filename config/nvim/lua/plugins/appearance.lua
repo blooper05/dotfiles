@@ -203,7 +203,7 @@ return {
   {
     'TaDaa/vimade',
     config = true,
-    event = { 'WinNew', 'WinEnter', 'WinLeave' },
+    event = 'WinNew',
   },
 
   {
