@@ -2,7 +2,7 @@ return {
   {
     'mfussenegger/nvim-dap',
     dependencies = {
-      { 'rcarriga/cmp-dap' },
+      -- { 'rcarriga/cmp-dap' },
       { 'rcarriga/nvim-dap-ui' },
       { 'suketa/nvim-dap-ruby', ft = 'ruby' },
       { 'theHamsta/nvim-dap-virtual-text' },
@@ -46,23 +46,23 @@ return {
     config = true,
   },
 
-  {
-    'rcarriga/cmp-dap',
-    dependencies = {
-      { 'hrsh7th/nvim-cmp' },
-    },
-    config = function()
-      require('cmp').setup({
-        enabled = function()
-          return vim.api.nvim_get_option_value('buftype', { buf = 0 }) ~= 'prompt' or require('cmp_dap').is_dap_buffer()
-        end,
-      })
-
-      require('cmp').setup.filetype({ 'dap-repl', 'dapui_watches', 'dapui_hover' }, {
-        sources = {
-          { name = 'dap' },
-        },
-      })
-    end,
-  },
+  -- {
+  --   'rcarriga/cmp-dap',
+  --   dependencies = {
+  --     { 'hrsh7th/nvim-cmp' },
+  --   },
+  --   config = function()
+  --     require('cmp').setup({
+  --       enabled = function()
+  --         return vim.api.nvim_get_option_value('buftype', { buf = 0 }) ~= 'prompt' or require('cmp_dap').is_dap_buffer()
+  --       end,
+  --     })
+  --
+  --     require('cmp').setup.filetype({ 'dap-repl', 'dapui_watches', 'dapui_hover' }, {
+  --       sources = {
+  --         { name = 'dap' },
+  --       },
+  --     })
+  --   end,
+  -- },
 }

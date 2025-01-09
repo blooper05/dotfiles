@@ -4,7 +4,6 @@ return {
     dependencies = {
       { 'VonHeikemen/lsp-zero.nvim' },
       { 'b0o/schemastore.nvim' },
-      { 'hrsh7th/cmp-nvim-lsp' },
       { 'williamboman/mason-lspconfig.nvim' },
       { 'williamboman/mason.nvim' },
       { 'zapling/mason-lock.nvim' },

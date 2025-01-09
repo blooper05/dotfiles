@@ -1,26 +1,15 @@
 return {
   {
-    'hrsh7th/nvim-cmp',
+    'saghen/blink.cmp',
     dependencies = {
       { 'Exafunction/codeium.nvim' },
-      { 'VonHeikemen/lsp-zero.nvim' },
       { 'f3fora/cmp-spell' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-calc' },
-      { 'hrsh7th/cmp-cmdline' },
-      { 'hrsh7th/cmp-emoji' },
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-nvim-lsp-document-symbol' },
-      { 'hrsh7th/cmp-nvim-lsp-signature-help' },
-      { 'hrsh7th/cmp-nvim-lua' },
-      { 'hrsh7th/cmp-path' },
-      { 'neovim/nvim-lspconfig' },
-      { 'onsails/lspkind-nvim' },
-      { 'ray-x/cmp-treesitter' },
-      { 'saadparwaiz1/cmp_luasnip' },
+      { 'moyiz/blink-emoji.nvim' },
+      { 'rafamadriz/friendly-snippets' },
+      { 'saghen/blink.compat' },
       { 'uga-rosa/cmp-dictionary' },
-      { 'uga-rosa/cmp-dynamic' },
     },
+    version = '*',
     init = function()
       -- Set completeopt to have a better completion experience.
       vim.opt.completeopt = {
@@ -31,127 +20,38 @@ return {
       -- Avoid showing extra message when using completion.
       vim.opt.shortmess:append('c')
     end,
-    config = function()
-      local cmp = require('cmp')
-      local cmp_action = require('lsp-zero').cmp_action()
-      local luasnip = require('luasnip')
-      local lspkind = require('lspkind')
+    opts = {
+      keymap = { preset = 'enter' },
 
-      cmp.setup({
-        mapping = cmp.mapping.preset.insert({
-          ['<CR>'] = cmp.mapping.confirm({ select = true }),
-          ['<C-b>'] = cmp.mapping.scroll_docs(-8),
-          ['<C-f>'] = cmp.mapping.scroll_docs(8),
-          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-d>'] = cmp.mapping.scroll_docs(4),
-          ['<Tab>'] = cmp_action.luasnip_supertab(),
-          ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
-        }),
-        snippet = {
-          expand = function(args)
-            luasnip.lsp_expand(args.body)
-          end,
+      completion = {
+        list = { selection = { preselect = false } },
+
+        menu = {
+          border = 'rounded',
+          draw = {
+            treesitter = { 'lsp' },
+            columns = { { 'label', 'label_description', gap = 1 }, { 'kind_icon', 'kind', gap = 1 }, { 'source_name' } },
+          },
         },
-        sources = cmp.config.sources({
-          { name = 'luasnip' },
-          { name = 'nvim_lsp' },
-          { name = 'nvim_lsp_signature_help' },
-          { name = 'nvim_lua' },
-          { name = 'path' },
-          { name = 'codeium' },
-        }, {
-          { name = 'buffer' },
-          { name = 'treesitter' },
-          { name = 'dynamic' },
-          { name = 'dictionary' },
-          { name = 'spell' },
-          { name = 'calc' },
-        }),
-        formatting = {
-          format = lspkind.cmp_format({
-            menu = {
-              buffer = '[Buffer]',
-              calc = '[Calc]',
-              cmdline = '[Cmd]',
-              codeium = '[Codeium]',
-              dictionary = '[Dictionary]',
-              dynamic = '[Dynamic]',
-              emoji = '[Emoji]',
-              luasnip = '[Snippet]',
-              nvim_lsp = '[LSP]',
-              nvim_lua = '[Lua]',
-              path = '[Path]',
-              spell = '[Spell]',
-              treesitter = '[TS]',
-            },
-            symbol_map = {
-              Codeium = '',
-            },
-          }),
+        documentation = { auto_show = true, window = { border = 'rounded' } },
+      },
+      signature = { enabled = true, window = { border = 'rounded' } },
+
+      sources = {
+        default = { 'snippets', 'lsp', 'path', 'codeium', 'buffer' },
+        per_filetype = {
+          gitcommit = { 'snippets', 'lsp', 'path', 'emoji', 'codeium', 'buffer', 'dictionary', 'spell' },
+          markdown = { 'snippets', 'lsp', 'path', 'emoji', 'codeium', 'buffer', 'dictionary', 'spell' },
         },
-        window = {
-          completion = cmp.config.window.bordered(),
-          documentation = cmp.config.window.bordered(),
+        providers = {
+          emoji = { module = 'blink-emoji', name = 'Emoji' },
+          codeium = { module = 'blink.compat.source', name = 'codeium' },
+          dictionary = { module = 'blink.compat.source', name = 'dictionary' },
+          spell = { module = 'blink.compat.source', name = 'spell' },
         },
-      })
-
-      cmp.setup.filetype({ 'gitcommit', 'markdown' }, {
-        sources = cmp.config.sources({
-          { name = 'luasnip' },
-          { name = 'nvim_lsp' },
-          { name = 'nvim_lsp_signature_help' },
-          { name = 'path' },
-          { name = 'emoji' },
-          { name = 'codeium' },
-        }, {
-          { name = 'buffer' },
-          { name = 'treesitter' },
-          { name = 'dynamic' },
-          { name = 'dictionary' },
-          { name = 'spell' },
-          { name = 'calc' },
-        }),
-      })
-
-      cmp.setup.cmdline({ '/', '?' }, {
-        mapping = cmp.mapping.preset.cmdline({
-          ['<C-n>'] = cmp.config.disable,
-          ['<C-p>'] = cmp.config.disable,
-        }),
-        sources = cmp.config.sources({
-          { name = 'nvim_lsp_document_symbol' },
-        }, {
-          { name = 'buffer' },
-        }),
-      })
-
-      cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline({
-          ['<C-n>'] = cmp.config.disable,
-          ['<C-p>'] = cmp.config.disable,
-        }),
-        sources = cmp.config.sources({
-          { name = 'path' },
-        }, {
-          { name = 'cmdline' },
-        }),
-      })
-    end,
+      },
+    },
     event = { 'InsertEnter', 'CmdlineEnter' },
-  },
-
-  {
-    'uga-rosa/cmp-dynamic',
-    config = function()
-      require('cmp_dynamic').register({
-        {
-          label = 'today',
-          insertText = function()
-            return os.date('%Y/%m/%d')
-          end,
-        },
-      })
-    end,
   },
 
   {
@@ -185,16 +85,6 @@ return {
       vim.opt.runtimepath:append(vim.fn.stdpath('data') .. '/site')
 
       vim.opt.spelllang:append('programming')
-    end,
-  },
-
-  {
-    'L3MON4D3/LuaSnip',
-    dependencies = {
-      { 'rafamadriz/friendly-snippets' },
-    },
-    config = function()
-      require('luasnip.loaders.from_vscode').lazy_load({ paths = './snippets' })
     end,
   },
 
