@@ -222,7 +222,7 @@ return {
   },
 
   {
-    'NvChad/nvim-colorizer.lua',
+    'catgoose/nvim-colorizer.lua',
     init = function()
       -- Enable 24-bit RGB color in the TUI.
       vim.opt.termguicolors = true
