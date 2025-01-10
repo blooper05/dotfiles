@@ -198,15 +198,6 @@ return {
   },
 
   {
-    'mvllow/modes.nvim',
-    opts = {
-      set_cursorline = false,
-    },
-    event = 'BufReadPost',
-    enabled = false, -- TODO:
-  },
-
-  {
     'gen740/SmoothCursor.nvim',
     config = true,
     event = 'BufReadPost',
