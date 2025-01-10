@@ -3,11 +3,11 @@ return {
     'saghen/blink.cmp',
     dependencies = {
       { 'Exafunction/codeium.nvim' },
+      { 'Kaiser-Yang/blink-cmp-dictionary' },
       { 'f3fora/cmp-spell' },
       { 'moyiz/blink-emoji.nvim' },
       { 'rafamadriz/friendly-snippets' },
       { 'saghen/blink.compat' },
-      { 'uga-rosa/cmp-dictionary' },
     },
     version = '*',
     init = function()
@@ -46,7 +46,23 @@ return {
         providers = {
           emoji = { module = 'blink-emoji', name = 'Emoji' },
           codeium = { module = 'blink.compat.source', name = 'codeium', async = true },
-          dictionary = { module = 'blink.compat.source', name = 'dictionary' },
+          dictionary = {
+            module = 'blink-cmp-dictionary',
+            name = 'Dict',
+            opts = {
+              get_command = {
+                'rg',
+                '--color=never',
+                '--no-line-number',
+                '--no-messages',
+                '--no-filename',
+                '--ignore-case',
+                '--',
+                '${prefix}',
+                '/usr/share/dict/words',
+              },
+            },
+          },
           spell = { module = 'blink.compat.source', name = 'spell' },
         },
       },
@@ -55,13 +71,10 @@ return {
   },
 
   {
-    'uga-rosa/cmp-dictionary',
+    'Kaiser-Yang/blink-cmp-dictionary',
     init = function()
       vim.opt.spelllang = { 'en_us' }
     end,
-    opts = {
-      paths = { '/usr/share/dict/words' },
-    },
   },
 
   {
