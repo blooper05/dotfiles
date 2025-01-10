@@ -4,9 +4,9 @@ return {
     dependencies = {
       { 'Exafunction/codeium.nvim' },
       { 'Kaiser-Yang/blink-cmp-dictionary' },
+      { 'L3MON4D3/LuaSnip' },
       { 'f3fora/cmp-spell' },
       { 'moyiz/blink-emoji.nvim' },
-      { 'rafamadriz/friendly-snippets' },
       { 'saghen/blink.compat' },
     },
     version = '*',
@@ -22,6 +22,8 @@ return {
     end,
     opts = {
       keymap = { preset = 'enter' },
+
+      snippets = { preset = 'luasnip' },
 
       completion = {
         list = { selection = { preselect = false } },
@@ -98,6 +100,16 @@ return {
       vim.opt.runtimepath:append(vim.fn.stdpath('data') .. '/site')
 
       vim.opt.spelllang:append('programming')
+    end,
+  },
+
+  {
+    'L3MON4D3/LuaSnip',
+    dependencies = {
+      { 'rafamadriz/friendly-snippets' },
+    },
+    config = function()
+      require('luasnip.loaders.from_vscode').lazy_load({ paths = './snippets' })
     end,
   },
 
