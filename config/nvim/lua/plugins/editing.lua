@@ -118,6 +118,22 @@ return {
   },
 
   {
+    'Wansmer/treesj',
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    opts = {
+      use_default_keymaps = false,
+    },
+    keys = {
+      -- stylua: ignore start
+      { 'gJ', function() require('treesj').join()  end, mode = 'n', silent = true },
+      { 'gS', function() require('treesj').split() end, mode = 'n', silent = true },
+      -- stylua: ignore end
+    },
+  },
+
+  {
     'junegunn/vim-easy-align', -- non-lua plugin
     cmd = { 'EasyAlign', 'LiveEasyAlign' },
     keys = {
