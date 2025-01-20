@@ -51,18 +51,10 @@ return {
           dictionary = {
             module = 'blink-cmp-dictionary',
             name = 'Dict',
+            min_keyword_length = 3,
             opts = {
-              get_command = {
-                'rg',
-                '--color=never',
-                '--no-line-number',
-                '--no-messages',
-                '--no-filename',
-                '--ignore-case',
-                '--',
-                '${prefix}',
-                '/usr/share/dict/words',
-              },
+              dictionary_files = { '/usr/share/dict/words' },
+              get_command = 'sk',
             },
           },
           spell = { module = 'blink.compat.source', name = 'spell' },
@@ -74,6 +66,9 @@ return {
 
   {
     'Kaiser-Yang/blink-cmp-dictionary',
+    dependencies = {
+      { 'nvim-lua/plenary.nvim' },
+    },
     init = function()
       vim.opt.spelllang = { 'en_us' }
     end,
