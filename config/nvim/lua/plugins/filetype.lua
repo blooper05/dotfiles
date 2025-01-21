@@ -60,7 +60,7 @@ return {
   },
 
   {
-    'OXY2DEV/markview.nvim',
+    'MeanderingProgrammer/render-markdown.nvim',
     dependencies = {
       { 'nvim-tree/nvim-web-devicons' },
       { 'nvim-treesitter/nvim-treesitter' },
@@ -68,7 +68,7 @@ return {
     ft = 'markdown',
     keys = {
       -- stylua: ignore start
-      { '<Leader>p', function() vim.cmd('Markview toggle') end, silent = true },
+      { '<Leader>p', function() vim.cmd('RenderMarkdown toggle') end, silent = true },
       -- stylua: ignore end
     },
   },
