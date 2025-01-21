@@ -14,7 +14,7 @@ return {
       -- stylua: ignore start
       { '[git]hi', function() vim.cmd('Octo issue list') end, silent = true },
       { '[git]hp', function() vim.cmd('Octo pr list') end,    silent = true },
-      -- stylua: ignore start
+      -- stylua: ignore end
     },
   },
 
