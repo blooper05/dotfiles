@@ -58,7 +58,7 @@ return {
       { '[git][', function() require('gitsigns').prev_hunk() end,           silent = true },
       { '[git]|', function() require('gitsigns').preview_hunk_inline() end, silent = true },
       { '[git]<', function() require('gitsigns').stage_hunk() end,          silent = true },
-      { '[git]>', function() require('gitsigns').undo_stage_hunk() end,     silent = true },
+      { '[git]>', function() require('gitsigns').stage_hunk() end,          silent = true },
       { '[git]=', function() require('gitsigns').reset_hunk() end,          silent = true },
       -- stylua: ignore end
     },
