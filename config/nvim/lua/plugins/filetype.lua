@@ -60,14 +60,15 @@ return {
   },
 
   {
-    'previm/previm', -- non-lua plugin
+    'OXY2DEV/markview.nvim',
     dependencies = {
-      { 'tyru/open-browser.vim' }, -- non-lua plugin
+      { 'nvim-tree/nvim-web-devicons' },
+      { 'nvim-treesitter/nvim-treesitter' },
     },
     ft = 'markdown',
     keys = {
       -- stylua: ignore start
-      { '<Leader>p', function() vim.cmd('PrevimOpen') end, silent = true },
+      { '<Leader>p', function() vim.cmd('Markview toggle') end, silent = true },
       -- stylua: ignore end
     },
   },
