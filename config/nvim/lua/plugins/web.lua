@@ -24,10 +24,10 @@ return {
       openai_api_key = { 'op', 'read', 'op://Personal/OpenAI API/credential', '--no-newline' },
 
       -- stylua: ignore start
-      chat_shortcut_respond = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gr' },
-      chat_shortcut_delete  = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gd' },
-      chat_shortcut_stop    = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gs' },
-      chat_shortcut_new     = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Space>gc' },
+      chat_shortcut_respond = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Leader>r' },
+      chat_shortcut_delete  = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Leader>d' },
+      chat_shortcut_stop    = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Leader>s' },
+      chat_shortcut_new     = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Leader>c' },
       -- stylua: ignore start
     },
     cmd = { 'GpChatNew', 'GpChatPaste', 'GpChatToggle', 'GpChatFinder' },
