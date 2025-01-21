@@ -19,19 +19,6 @@ return {
   },
 
   {
-    'jackMort/ChatGPT.nvim',
-    dependencies = {
-      { 'MunifTanjim/nui.nvim' },
-      { 'nvim-lua/plenary.nvim' },
-      { 'nvim-telescope/telescope.nvim' },
-    },
-    opts = {
-      api_key_cmd = [[op read 'op://Personal/OpenAI API/credential' --no-newline]],
-    },
-    cmd = 'ChatGPT',
-  },
-
-  {
     'robitx/gp.nvim',
     opts = {
       openai_api_key = { 'op', 'read', 'op://Personal/OpenAI API/credential', '--no-newline' },
