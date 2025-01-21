@@ -21,7 +21,10 @@ return {
   {
     'robitx/gp.nvim',
     opts = {
-      openai_api_key = { 'op', 'read', 'op://Personal/OpenAI API/credential', '--no-newline' },
+      providers = {
+        openai = { disable = true },
+        ollama = { disable = false },
+      },
 
       -- stylua: ignore start
       chat_shortcut_respond = { modes = { 'n', 'i', 'v', 'x' }, shortcut = '<Leader>r' },
