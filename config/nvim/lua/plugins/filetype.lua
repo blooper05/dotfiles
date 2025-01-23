@@ -2,20 +2,6 @@ return {
   -- Natural Language
 
   {
-    'potamides/pantran.nvim',
-    opts = {
-      default_engine = 'google',
-    },
-    cmd = 'Pantran',
-    keys = {
-      -- stylua: ignore start
-      { '<Leader>te', function() require('pantran').range_translate({ target = 'en' }) end, mode = 'x', silent = true },
-      { '<Leader>tj', function() require('pantran').range_translate({ target = 'ja' }) end, mode = 'x', silent = true },
-      -- stylua: ignore end
-    },
-  },
-
-  {
     'koron/codic-vim', -- non-lua plugin
     cmd = 'Codic',
   },
