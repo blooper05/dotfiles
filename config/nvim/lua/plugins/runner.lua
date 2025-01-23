@@ -86,7 +86,4 @@ return {
       -- stylua: ignore end
     },
   },
-
-  -- TODO: { 'GCBallesteros/jupytext.nvim' },
-  -- TODO: { 'epwalsh/obsidian.nvim' },
 }

@@ -42,4 +42,7 @@ return {
     config = true,
     cmd = 'Codeium',
   },
+
+  -- TODO: { 'GCBallesteros/jupytext.nvim' },
+  -- TODO: { 'epwalsh/obsidian.nvim' },
 }
