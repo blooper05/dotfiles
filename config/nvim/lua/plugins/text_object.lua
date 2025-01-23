@@ -1,7 +1,9 @@
 return {
   {
     'chrisgrieser/nvim-spider',
-    config = true,
+    opts = {
+      skipInsignificantPunctuation = false,
+    },
     keys = {
       -- stylua: ignore start
       { 'w',  function() require('spider').motion('w') end,  mode = { 'n', 'o', 'x' }, remap = true, silent = true },
