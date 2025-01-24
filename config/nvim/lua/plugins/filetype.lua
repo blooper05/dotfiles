@@ -62,12 +62,4 @@ return {
     'aklt/plantuml-syntax', -- non-lua plugin
     ft = 'plantuml',
   },
-
-  -- Terraform
-
-  {
-    'mvaldes14/terraform.nvim',
-    ft = 'terraform',
-    enabled = false, -- TODO:
-  },
 }
