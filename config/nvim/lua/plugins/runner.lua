@@ -69,9 +69,8 @@ return {
       return {
         adapters = {
           require('neotest-rspec')({
-            rspec_cmd = function()
-              return vim.tbl_flatten({ 'docker-rspec' })
-            end,
+            rspec_cmd = 'docker-rspec',
+            formatter = 'json',
           }),
         },
       }
