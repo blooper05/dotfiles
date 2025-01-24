@@ -24,20 +24,17 @@ return {
             ['<C-b>'] = { '<Left>', type = 'command' },
             ['<C-f>'] = { '<Right>', type = 'command' },
             ['<C-d>'] = { '<Del>', type = 'command' },
+            ['<C-q>'] = 'close',
           },
         },
       },
       pickers = {
         live_grep = {
-          additional_args = function()
-            return { '--hidden', '--glob=!.git/', '--glob=!.terraform/' }
-          end,
+          additional_args = { '--hidden', '--glob=!.git/', '--glob=!.terraform/' },
         },
 
         grep_string = {
-          additional_args = function()
-            return { '--hidden', '--glob=!.git/', '--glob=!.terraform/' }
-          end,
+          additional_args = { '--hidden', '--glob=!.git/', '--glob=!.terraform/' },
         },
 
         find_files = {
