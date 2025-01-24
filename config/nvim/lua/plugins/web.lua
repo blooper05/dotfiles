@@ -1,14 +1,19 @@
 return {
   {
     'potamides/pantran.nvim',
-    opts = {
-      default_engine = 'google',
-    },
+    opts = function()
+      return {
+        default_engine = 'deepl',
+        engines = {
+          deepl = { auth_key = vim.fn.system([[op read 'op://Personal/DeepL API/credential' --no-newline]]) },
+        },
+      }
+    end,
     cmd = 'Pantran',
     keys = {
       -- stylua: ignore start
-      { '<Leader>te', function() require('pantran').range_translate({ target = 'en' }) end, mode = 'x', silent = true },
-      { '<Leader>tj', function() require('pantran').range_translate({ target = 'ja' }) end, mode = 'x', silent = true },
+      { '<Leader>te', [[:<C-u>'<,'>Pantran source=ja target=en<CR>]], mode = 'x', silent = true },
+      { '<Leader>tj', [[:<C-u>'<,'>Pantran source=en target=ja<CR>]], mode = 'x', silent = true },
       -- stylua: ignore end
     },
   },
