@@ -14,13 +14,6 @@ return {
     ft = 'csv',
   },
 
-  -- Jsonnet
-
-  {
-    'google/vim-jsonnet', -- non-lua plugin
-    ft = 'jsonnet',
-  },
-
   -- Markdown
 
   {

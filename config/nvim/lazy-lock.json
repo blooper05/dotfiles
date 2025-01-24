@@ -85,7 +85,6 @@
   "vim-dirtytalk": { "branch": "master", "commit": "aa57ba902b04341a04ff97214360f56856493583" },
   "vim-easy-align": { "branch": "master", "commit": "9815a55dbcd817784458df7a18acacc6f82b1241" },
   "vim-gin": { "branch": "main", "commit": "8a826cb3c6810c830553e606fe584e08e807606b" },
-  "vim-jsonnet": { "branch": "master", "commit": "4ebc6619ddce5d032a985b42a9864154c3d20e4a" },
   "vim-matchup": { "branch": "master", "commit": "aca23ce53ebfe34e02c4fe07e29e9133a2026481" },
   "vim-operator-flashy": { "branch": "master", "commit": "b24673a9b0d5d60b26d202deb13d4ebf90d7a2ae" },
   "vim-operator-replace": { "branch": "master", "commit": "1345a556a321a092716e149d4765a5e17c0e9f0f" },
