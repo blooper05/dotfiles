@@ -24,7 +24,6 @@ return {
             ['<C-b>'] = { '<Left>', type = 'command' },
             ['<C-f>'] = { '<Right>', type = 'command' },
             ['<C-d>'] = { '<Del>', type = 'command' },
-            ['<Esc>'] = 'close',
           },
         },
       },
