@@ -16,8 +16,8 @@ return {
         sources = {
           diagnostics.actionlint,
           diagnostics.dotenv_linter,
-          -- diagnostics.editorconfig_checker.with({ command = 'ec' }),
-          -- diagnostics.gitlint.with({ filetypes = { 'gitcommit' } }),
+          diagnostics.editorconfig_checker.with({ command = 'ec' }),
+          diagnostics.gitlint.with({ filetypes = { 'gitcommit' } }),
           diagnostics.hadolint,
           diagnostics.markdownlint_cli2,
           diagnostics.reek,
@@ -34,6 +34,7 @@ return {
           formatting.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
           formatting.stylua,
           formatting.terraform_fmt,
+          formatting.terragrunt_fmt,
           formatting.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
           formatting.yamlfmt,
         },
