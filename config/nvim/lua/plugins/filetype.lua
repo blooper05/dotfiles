@@ -25,24 +25,21 @@ return {
 
   {
     'gaoDean/autolist.nvim',
-    config = function()
-      require('autolist').setup()
-
-      -- stylua: ignore start
-      vim.keymap.set('i', '<Tab>',   '<Cmd>AutolistTab<CR>')
-      vim.keymap.set('i', '<S-Tab>', '<Cmd>AutolistShiftTab<CR>')
-
-      vim.keymap.set('i', '<CR>', '<CR><Cmd>AutolistNewBullet<CR>')
-      vim.keymap.set('n', 'o',    'o<Cmd>AutolistNewBullet<CR>')
-      vim.keymap.set('n', 'O',    'O<Cmd>AutolistNewBulletBefore<CR>')
-
-      vim.keymap.set('n', '>>', '>><Cmd>AutolistRecalculate<CR>')
-      vim.keymap.set('n', '<<', '<<<Cmd>AutolistRecalculate<CR>')
-      vim.keymap.set('n', 'dd', 'dd<Cmd>AutolistRecalculate<CR>')
-      vim.keymap.set('v', 'd',  'd<Cmd>AutolistRecalculate<CR>')
-      -- stylua: ignore end
-    end,
+    config = true,
     ft = 'markdown',
+    keys = {
+      -- stylua: ignore start
+      { '<Tab>',   '<Cmd>AutolistTab<CR>',              mode = 'i', ft = 'markdown' },
+      { '<S-Tab>', '<Cmd>AutolistShiftTab<CR>',         mode = 'i', ft = 'markdown' },
+      { '<CR>',    '<CR><Cmd>AutolistNewBullet<CR>',    mode = 'i', ft = 'markdown' },
+      { 'o',       'o<Cmd>AutolistNewBullet<CR>',       mode = 'n', ft = 'markdown' },
+      { 'O',       'O<Cmd>AutolistNewBulletBefore<CR>', mode = 'n', ft = 'markdown' },
+      { '>>',      '>><Cmd>AutolistRecalculate<CR>',    mode = 'n', ft = 'markdown' },
+      { '<<',      '<<<Cmd>AutolistRecalculate<CR>',    mode = 'n', ft = 'markdown' },
+      { 'dd',      'dd<Cmd>AutolistRecalculate<CR>',    mode = 'n', ft = 'markdown' },
+      { 'd',       'd<Cmd>AutolistRecalculate<CR>',     mode = 'v', ft = 'markdown' },
+      -- stylua: ignore end
+    },
   },
 
   {
