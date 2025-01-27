@@ -225,15 +225,6 @@ return {
   },
 
   {
-    'folke/zen-mode.nvim',
-    dependencies = {
-      { 'folke/twilight.nvim' },
-    },
-    config = true,
-    cmd = 'ZenMode',
-  },
-
-  {
     'catgoose/nvim-colorizer.lua',
     init = function()
       -- Enable 24-bit RGB color in the TUI.
@@ -241,5 +232,14 @@ return {
     end,
     config = true,
     cmd = 'ColorizerToggle',
+  },
+
+  {
+    'folke/zen-mode.nvim',
+    dependencies = {
+      { 'folke/twilight.nvim' },
+    },
+    config = true,
+    cmd = 'ZenMode',
   },
 }
