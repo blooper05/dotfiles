@@ -139,18 +139,6 @@ return {
   },
 
   {
-    'gen740/SmoothCursor.nvim',
-    config = true,
-    event = 'BufReadPost',
-  },
-
-  {
-    'karb94/neoscroll.nvim',
-    config = true,
-    event = 'BufReadPost',
-  },
-
-  {
     'folke/todo-comments.nvim',
     dependencies = {
       { 'folke/trouble.nvim' },

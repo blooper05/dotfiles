@@ -81,6 +81,18 @@ return {
   },
 
   {
+    'gen740/SmoothCursor.nvim',
+    config = true,
+    event = 'BufReadPost',
+  },
+
+  {
+    'karb94/neoscroll.nvim',
+    config = true,
+    event = 'BufReadPost',
+  },
+
+  {
     'lewis6991/satellite.nvim',
     dependencies = {
       { 'lewis6991/gitsigns.nvim' },
