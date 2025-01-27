@@ -64,5 +64,6 @@ return {
 
   -- TODO: { 'GCBallesteros/jupytext.nvim' },
   -- TODO: { 'epwalsh/obsidian.nvim' },
+  -- TODO: { 'epwalsh/pomo.nvim' }
   -- TODO: { 'romgrk/todoist.nvim' }
 }
