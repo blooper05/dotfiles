@@ -213,13 +213,13 @@ return {
   },
 
   {
-    'TaDaa/vimade',
+    'nvim-zh/colorful-winsep.nvim',
     config = true,
     event = 'WinLeave',
   },
 
   {
-    'nvim-zh/colorful-winsep.nvim',
+    'TaDaa/vimade',
     config = true,
     event = 'WinLeave',
   },
