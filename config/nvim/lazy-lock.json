@@ -91,6 +91,5 @@
   "vim-operator-surround": { "branch": "master", "commit": "80337a40a829cfc77b065a71d8a609e2ad7d2c8b" },
   "vim-operator-user": { "branch": "master", "commit": "c3dfd41c1ed516b4b901c97562e644de62c367aa" },
   "vimade": { "branch": "master", "commit": "b750dca2828de47a7a596792108b6160263da4c2" },
-  "which-key.nvim": { "branch": "main", "commit": "6cebd86917df559a88de0f806b2989799c6e6423" },
   "zen-mode.nvim": { "branch": "main", "commit": "863f150ca321b3dd8aa1a2b69b5f411a220e144f" }
 }

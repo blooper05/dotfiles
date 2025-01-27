@@ -1,19 +1,5 @@
 return {
   {
-    'folke/which-key.nvim',
-    dependencies = {
-      { 'nvim-tree/nvim-web-devicons' },
-    },
-    config = true,
-    cmd = 'WhichKey',
-    keys = {
-      -- stylua: ignore start
-      { '<Leader>?', function() require('which-key').show() end, silent = true },
-      -- stylua: ignore end
-    },
-  },
-
-  {
     'numToStr/Comment.nvim',
     dependencies = {
       { 'JoosepAlviste/nvim-ts-context-commentstring' },
