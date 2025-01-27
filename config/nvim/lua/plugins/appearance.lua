@@ -63,6 +63,58 @@ return {
   },
 
   {
+    'b0o/incline.nvim',
+    opts = {
+      highlight = {
+        groups = {
+          InclineNormal = {
+            default = true,
+            group = 'CursorLine',
+          },
+          InclineNormalNC = {
+            default = true,
+            group = 'CursorLine',
+          },
+        },
+      },
+      render = function(props)
+        local filepath = vim.api.nvim_buf_get_name(props.buf)
+        local filename = vim.fn.fnamemodify(filepath, ':t')
+        local devicons = require('nvim-web-devicons')
+        local helpers = require('incline.helpers')
+        local icon, color = devicons.get_icon_color(filename)
+        local modified = vim.bo[props.buf].modified
+
+        if not filename or filename == '' then
+          filename = '[No Name]'
+        end
+
+        if not icon then
+          icon = ''
+        end
+
+        if not color then
+          color = helpers.contrast_color('#444c5e')
+        end
+
+        return {
+          { ' ', icon, ' ', guifg = helpers.contrast_color(color), guibg = color },
+          '  ',
+          filename,
+          ' ',
+          modified and { '●', guifg = '#a3be8c' } or ' ',
+          ' ',
+        }
+      end,
+      window = {
+        padding = 0,
+        margin = { horizontal = 0 },
+      },
+    },
+    event = 'BufReadPost',
+  },
+
+  {
     'shellRaining/hlchunk.nvim',
     dependencies = {
       { 'EdenEast/nightfox.nvim' },
@@ -158,58 +210,6 @@ return {
       { '[telescope]n', function() require('telescope').extensions.notify.notify() end, silent = true },
       -- stylua: ignore end
     },
-  },
-
-  {
-    'b0o/incline.nvim',
-    opts = {
-      highlight = {
-        groups = {
-          InclineNormal = {
-            default = true,
-            group = 'CursorLine',
-          },
-          InclineNormalNC = {
-            default = true,
-            group = 'CursorLine',
-          },
-        },
-      },
-      render = function(props)
-        local filepath = vim.api.nvim_buf_get_name(props.buf)
-        local filename = vim.fn.fnamemodify(filepath, ':t')
-        local devicons = require('nvim-web-devicons')
-        local helpers = require('incline.helpers')
-        local icon, color = devicons.get_icon_color(filename)
-        local modified = vim.bo[props.buf].modified
-
-        if not filename or filename == '' then
-          filename = '[No Name]'
-        end
-
-        if not icon then
-          icon = ''
-        end
-
-        if not color then
-          color = helpers.contrast_color('#444c5e')
-        end
-
-        return {
-          { ' ', icon, ' ', guifg = helpers.contrast_color(color), guibg = color },
-          '  ',
-          filename,
-          ' ',
-          modified and { '●', guifg = '#a3be8c' } or ' ',
-          ' ',
-        }
-      end,
-      window = {
-        padding = 0,
-        margin = { horizontal = 0 },
-      },
-    },
-    event = 'BufReadPost',
   },
 
   {
