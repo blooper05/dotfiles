@@ -176,18 +176,6 @@ return {
       { 'nvim-telescope/telescope.nvim' },
     },
     config = function()
-      require('telescope').setup({
-        extensions = {
-          undo = {
-            mappings = {
-              i = {
-                ['<CR>'] = require('telescope-undo.actions').restore,
-              },
-            },
-          },
-        },
-      })
-
       require('telescope').load_extension('undo')
     end,
     keys = {
