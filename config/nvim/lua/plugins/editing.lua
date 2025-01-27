@@ -30,6 +30,41 @@ return {
   },
 
   {
+    'Wansmer/treesj',
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter' },
+    },
+    opts = {
+      use_default_keymaps = false,
+    },
+    keys = {
+      -- stylua: ignore start
+      { 'gJ', function() require('treesj').join()  end, mode = 'n', silent = true },
+      { 'gS', function() require('treesj').split() end, mode = 'n', silent = true },
+      -- stylua: ignore end
+    },
+  },
+
+  {
+    'junegunn/vim-easy-align', -- non-lua plugin
+    cmd = { 'EasyAlign', 'LiveEasyAlign' },
+    keys = {
+      -- stylua: ignore start
+      { 'ga', '<Plug>(EasyAlign)',     mode = { 'n', 'x' }, remap = true, silent = true },
+      { 'gA', '<Plug>(LiveEasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
+      -- stylua: ignore end
+    },
+  },
+
+  {
+    'kaplanz/retrail.nvim',
+    opts = {
+      hlgroup = 'Substitute',
+    },
+    event = 'BufReadPost',
+  },
+
+  {
     'kevinhwang91/nvim-ufo',
     dependencies = {
       { 'kevinhwang91/promise-async' },
@@ -101,41 +136,6 @@ return {
       { 'g<C-x>', 'g<Plug>(dial-decrement)', mode = { 'n', 'v' } },
       -- stylua: ignore end
     },
-  },
-
-  {
-    'Wansmer/treesj',
-    dependencies = {
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
-    opts = {
-      use_default_keymaps = false,
-    },
-    keys = {
-      -- stylua: ignore start
-      { 'gJ', function() require('treesj').join()  end, mode = 'n', silent = true },
-      { 'gS', function() require('treesj').split() end, mode = 'n', silent = true },
-      -- stylua: ignore end
-    },
-  },
-
-  {
-    'junegunn/vim-easy-align', -- non-lua plugin
-    cmd = { 'EasyAlign', 'LiveEasyAlign' },
-    keys = {
-      -- stylua: ignore start
-      { 'ga', '<Plug>(EasyAlign)',     mode = { 'n', 'x' }, remap = true, silent = true },
-      { 'gA', '<Plug>(LiveEasyAlign)', mode = { 'n', 'x' }, remap = true, silent = true },
-      -- stylua: ignore end
-    },
-  },
-
-  {
-    'kaplanz/retrail.nvim',
-    opts = {
-      hlgroup = 'Substitute',
-    },
-    event = 'BufReadPost',
   },
 
   {
