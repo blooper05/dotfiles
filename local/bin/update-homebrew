@@ -2,5 +2,5 @@
 
 set -ex
 
-brew upgrade luajit neovim utf8proc --fetch-HEAD
+brew upgrade luajit neovim tree-sitter utf8proc --fetch-HEAD
 brew bundle --cleanup
