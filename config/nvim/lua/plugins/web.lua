@@ -40,7 +40,7 @@ return {
   {
     'David-Kunz/gen.nvim',
     opts = {
-      model = 'gemma2:27b',
+      model = 'mistral-small:24b',
       show_prompt = true,
       show_model = true,
     },
