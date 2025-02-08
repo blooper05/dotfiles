@@ -53,6 +53,17 @@ return {
   },
 
   {
+    'chrisgrieser/nvim-tinygit',
+    dependencies = {
+      { 'nvim-telescope/telescope.nvim' },
+      { 'nvim-treesitter/nvim-treesitter' },
+      { 'rcarriga/nvim-notify' },
+      { 'stevearc/dressing.nvim' },
+    },
+    cmd = 'Tinygit',
+  },
+
+  {
     'lewis6991/gitsigns.nvim',
     init = function()
       -- Always draw the signcolumn with a space.
