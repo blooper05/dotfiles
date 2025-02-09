@@ -40,7 +40,7 @@ return {
   {
     'David-Kunz/gen.nvim',
     opts = {
-      model = 'mistral-small:24b',
+      model = 'codestral:22b',
       show_prompt = true,
       show_model = true,
     },
