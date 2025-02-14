@@ -1,0 +1,59 @@
+#!/bin/bash
+
+git restore . &&
+	git clean -d --force --exclude=config/master.key -x
+
+rm -rf \
+	app/controllers/concerns/.keep \
+	app/controllers/application_controller.rb \
+	app/jobs/application_job.rb \
+	app/mailers/application_mailer.rb \
+	app/models/concerns/.keep \
+	app/models/application_record.rb \
+	app/views/layouts/mailer.html.erb \
+	app/views/layouts/mailer.text.erb \
+	bin/brakeman \
+	bin/dev \
+	bin/rails \
+	bin/rake \
+	bin/rubocop \
+	bin/setup \
+	config/environments/development.rb \
+	config/environments/production.rb \
+	config/environments/test.rb \
+	config/initializers/cors.rb \
+	config/initializers/filter_parameter_logging.rb \
+	config/initializers/inflections.rb \
+	config/locales/en.yml \
+	config/application.rb \
+	config/boot.rb \
+	config/database.yml \
+	config/environment.rb \
+	config/puma.rb \
+	config/routes.rb \
+	db/seeds.rb \
+	lib/tasks/.keep \
+	log/.keep \
+	public/robots.txt \
+	script/.keep \
+	tmp/pids/.keep \
+	tmp/.keep \
+	vendor/.keep \
+	README.md \
+	Rakefile \
+	config.ru
+
+git ignore ruby,rails,sublimetext,vim,visualstudiocode,jetbrains+all,linux,osx,windows | tee .gitignore
+
+docker compose run --rm dev bundle exec rails new . --database postgresql --api --force \
+	--skip-git --skip-docker --skip-test --skip-thruster --skip-ci --skip-kamal --skip-bundle \
+	--minimal --no-skip-action-mailer --no-skip-active-job --no-skip-bootsnap
+# --devcontainer
+
+git restore Gemfile Gemfile.lock &&
+	docker compose run --rm dev bundle
+
+docker compose run --rm dev bundle exec spring binstub --all
+
+git restore .rubocop.yml &&
+	docker compose run --rm dev bundle exec rubocop --autocorrect-all
