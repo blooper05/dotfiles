@@ -43,6 +43,9 @@ defaults write com.apple.dock autohide -bool true
 # System Settings >> Desktop & Dock >> Dock >> Animate opening applications: off
 defaults write com.apple.dock launchanim -bool false
 
+# System Settings >> Desktop & Dock >> Desktop & Stage Manager >> Click wallpaper to reveal desktop: Only in Stage Manager
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
 # System Settings >> Desktop & Dock >> Mission Control >> Automatically rearrange Spaces based on most recent use: off
 defaults write com.apple.dock mru-spaces -bool false
 
