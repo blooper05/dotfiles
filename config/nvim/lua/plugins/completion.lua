@@ -43,6 +43,7 @@ return {
         default = { 'snippets', 'lsp', 'path', 'codeium', 'buffer' },
         per_filetype = {
           gitcommit = { 'snippets', 'lsp', 'path', 'emoji', 'codeium', 'buffer', 'dictionary', 'spell' },
+          ['gina-commit'] = { 'snippets', 'lsp', 'path', 'emoji', 'codeium', 'buffer', 'dictionary', 'spell' },
           markdown = { 'snippets', 'lsp', 'path', 'emoji', 'codeium', 'buffer', 'dictionary', 'spell' },
         },
         providers = {
