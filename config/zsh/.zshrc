@@ -191,6 +191,7 @@ export TFLINT_PLUGIN_DIR=$XDG_DATA_HOME/tflint/plugins
 export DOCKER_CONFIG=$XDG_DATA_HOME/docker
 export LIMA_HOME=$XDG_DATA_HOME/lima
 export COLIMA_HOME=$XDG_DATA_HOME/colima
+export COMPOSE_BAKE=true
 
 # Zellij {{{2
 eval "$(zellij setup --generate-auto-start zsh)"
