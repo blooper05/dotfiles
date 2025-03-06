@@ -10,6 +10,7 @@ return {
       vim.call('gina#custom#mapping#nmap', 'branch', 'M', '<Plug>(gina-branch-move)')
       vim.call('gina#custom#mapping#nmap', 'branch', 'D', '<Plug>(gina-branch-delete)')
       vim.call('gina#custom#execute', 'branch', 'setlocal cursorline')
+      vim.call('gina#custom#execute', 'branch', 'setlocal number')
       vim.call('gina#custom#command#option', 'branch', '--verbose')
 
       -- gina-buffer-commit specific settings.
@@ -21,6 +22,7 @@ return {
       vim.call('gina#custom#mapping#nmap', 'log', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
       vim.call('gina#custom#mapping#nmap', 'log', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
       vim.call('gina#custom#execute', 'log', 'setlocal cursorline')
+      vim.call('gina#custom#execute', 'log', 'setlocal number')
 
       -- gina-buffer-reflog specific settings.
       vim.call('gina#custom#action#alias', 'reflog', 'preview', 'vertical show:commit:preview')
@@ -28,11 +30,13 @@ return {
       vim.call('gina#custom#mapping#nmap', 'reflog', 'p', [[<Cmd>call gina#action#call('preview')<CR>]], opts)
       vim.call('gina#custom#mapping#nmap', 'reflog', 'c', [[<Cmd>call gina#action#call('changes')<CR>]], opts)
       vim.call('gina#custom#execute', 'reflog', 'setlocal cursorline')
+      vim.call('gina#custom#execute', 'reflog', 'setlocal number')
 
       -- gina-buffer-status specific settings.
       vim.call('gina#custom#command#option', 'status', '--branch')
       vim.call('gina#custom#command#option', 'status', '--short')
       vim.call('gina#custom#execute', 'status', 'setlocal cursorline')
+      vim.call('gina#custom#execute', 'status', 'setlocal number')
     end,
     cmd = 'Gina',
     keys = {
