@@ -5,11 +5,11 @@ k9s:
   refreshRate: 2
   maxConnRetry: 5
   readOnly: false
-  noExitOnCtrlC: false
+  noExitOnCtrlC: true
   ui:
     enableMouse: false
     headless: false
-    logoless: false
+    logoless: true
     crumbsless: false
     reactive: false
     skin: nord
