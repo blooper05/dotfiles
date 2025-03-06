@@ -12,6 +12,7 @@ k9s:
     logoless: false
     crumbsless: false
     reactive: false
+    skin: nord
     noIcons: false
     defaultsToFullScreen: false
   skipLatestRevCheck: false
