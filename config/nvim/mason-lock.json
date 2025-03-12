@@ -11,7 +11,7 @@
   "html-lsp": "4.10.0",
   "json-lsp": "4.10.0",
   "jsonnet-language-server": "v0.15.0",
-  "lua-language-server": "3.13.6",
+  "lua-language-server": "3.13.7",
   "python-lsp-server": "1.12.2",
   "ruby-lsp": "0.23.11",
   "solargraph": "0.52.0",
@@ -22,5 +22,5 @@
   "terraform-ls": "v0.36.4",
   "typescript-language-server": "4.3.4",
   "vue-language-server": "2.2.8",
-  "yaml-language-server": "1.16.0"
+  "yaml-language-server": "1.17.0"
 }
