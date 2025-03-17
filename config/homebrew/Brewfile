@@ -39,6 +39,7 @@ brew "sk"
 brew "sqlfluff"
 # brew "ssh-copy-id", link: true
 brew "starship"
+brew "termshark"
 brew "wordnet"
 brew "xh"
 brew "yq"
