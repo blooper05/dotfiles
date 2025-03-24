@@ -56,6 +56,9 @@ return {
             opts = {
               dictionary_files = { '/usr/share/dict/words' },
               get_command = 'sk',
+              get_command_args = function(prefix, _)
+                return { '--filter=' .. prefix, '--sync', '--no-sort', '-i' }
+              end,
             },
           },
           spell = { module = 'blink.compat.source', name = 'Spell', opts = { cmp_name = 'spell' } },
