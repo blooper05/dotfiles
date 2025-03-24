@@ -15,7 +15,8 @@
   algorithm      = histogram
   colorMoved     = dimmed-zebra
 [fetch]
-  prune = true
+  prune     = true
+  pruneTags = true
 [gpg]
   format = ssh
 [gpg "ssh"]
