@@ -41,6 +41,9 @@ return {
       { 'nvim-tree/nvim-web-devicons' },
       { 'nvim-treesitter/nvim-treesitter' },
     },
+    opts = {
+      completions = { blink = { enabled = true } },
+    },
     ft = 'markdown',
     keys = {
       -- stylua: ignore start
