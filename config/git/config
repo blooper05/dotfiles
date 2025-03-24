@@ -10,7 +10,7 @@
   template = ~/.config/git/template
 [diff]
   algorithm  = histogram
-  colorMoved = default
+  colorMoved = dimmed-zebra
 [fetch]
   prune = true
 [gpg]
