@@ -10,6 +10,7 @@
   template = ~/.config/git/template
 [diff]
   mnemonicPrefix = true
+  renames        = copy
   algorithm      = histogram
   colorMoved     = dimmed-zebra
 [fetch]
