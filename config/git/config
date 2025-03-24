@@ -9,8 +9,9 @@
   gpgsign  = true
   template = ~/.config/git/template
 [diff]
-  algorithm  = histogram
-  colorMoved = dimmed-zebra
+  mnemonicPrefix = true
+  algorithm      = histogram
+  colorMoved     = dimmed-zebra
 [fetch]
   prune = true
 [gpg]
