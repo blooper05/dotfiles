@@ -17,6 +17,7 @@ return {
         'dockerls',
         'elmls',
         'eslint',
+        'gopls',
         'grammarly',
         'helm_ls',
         'html',
