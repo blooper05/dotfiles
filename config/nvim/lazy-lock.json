@@ -11,7 +11,7 @@
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "cmp-dap": { "branch": "master", "commit": "ea92773e84c0ad3288c3bc5e452ac91559669087" },
   "cmp-spell": { "branch": "master", "commit": "694a4e50809d6d645c1ea29015dad0c293f019d6" },
-  "codeium.nvim": { "branch": "main", "commit": "9569c9095a70370849345c861cdb2b06c4cadac7" },
+  "codeium.nvim": { "branch": "main", "commit": "ad4414878f7ece254deab8c922d82cec124d161f" },
   "codic-vim": { "branch": "master", "commit": "5881023a86e0c40ec2107c4cc8ea051863238da4" },
   "colorful-winsep.nvim": { "branch": "alpha", "commit": "7bbe4e1353c0fe37c98bad2758aafc410280f6b3" },
   "dial.nvim": { "branch": "master", "commit": "2c7e2750372918f072a20f3cf754d845e143d7c9" },
