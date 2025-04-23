@@ -48,7 +48,7 @@ return {
         },
         providers = {
           emoji = { module = 'blink-emoji', name = 'Emoji' },
-          codeium = { module = 'blink.compat.source', name = 'Codeium', async = true, opts = { cmp_name = 'codeium' } },
+          codeium = { module = 'codeium.blink', name = 'Codeium', async = true },
           dictionary = {
             module = 'blink-cmp-dictionary',
             name = 'Dict',
