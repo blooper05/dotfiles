@@ -5,9 +5,8 @@ return {
       { 'Exafunction/codeium.nvim' },
       { 'Kaiser-Yang/blink-cmp-dictionary' },
       { 'L3MON4D3/LuaSnip' },
-      { 'f3fora/cmp-spell' },
       { 'moyiz/blink-emoji.nvim' },
-      { 'saghen/blink.compat' },
+      { 'ribru17/blink-cmp-spell' },
     },
     version = '*',
     init = function()
@@ -63,7 +62,7 @@ return {
               end,
             },
           },
-          spell = { module = 'blink.compat.source', name = 'Spell', opts = { cmp_name = 'spell' } },
+          spell = { module = 'blink-cmp-spell', name = 'Spell' },
         },
       },
     },
@@ -81,7 +80,7 @@ return {
   },
 
   {
-    'f3fora/cmp-spell',
+    'ribru17/blink-cmp-spell',
     dependencies = {
       { 'psliwka/vim-dirtytalk' }, -- non-lua plugin
     },
