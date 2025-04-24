@@ -29,6 +29,10 @@ return {
       options = {
         globalstatus = true,
       },
+      sections = {
+        lualine_c = { { 'filename', path = 1 } },
+        lualine_y = { { 'selectioncount', icon = '‹›' }, 'progress' },
+      },
       extensions = {
         'lazy',
         'man',
