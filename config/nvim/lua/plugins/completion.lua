@@ -6,6 +6,7 @@ return {
       { 'Kaiser-Yang/blink-cmp-dictionary' },
       { 'L3MON4D3/LuaSnip' },
       { 'moyiz/blink-emoji.nvim' },
+      { 'olimorris/codecompanion.nvim' },
       { 'ribru17/blink-cmp-spell' },
     },
     version = '*',
@@ -45,6 +46,7 @@ return {
           gitcommit       = { 'snippets', 'lsp', 'path', 'emoji',            'buffer', 'dictionary', 'spell' },
           ['gina-commit'] = { 'snippets', 'lsp', 'path', 'emoji',            'buffer', 'dictionary', 'spell' },
           markdown        = { 'snippets', 'lsp', 'path', 'emoji', 'codeium', 'buffer', 'dictionary', 'spell' },
+          codecompanion   = { 'codecompanion', 'buffer', 'dictionary', 'spell' },
           -- stylua: ignore end
         },
         providers = {
