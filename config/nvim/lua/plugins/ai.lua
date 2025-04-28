@@ -33,6 +33,14 @@ return {
       },
     },
     cmd = { 'CodeCompanion', 'CodeCompanionChat', 'CodeCompanionCmd', 'CodeCompanionActions' },
+    keys = {
+      -- stylua: ignore start
+      { '<Leader>gg', [[:CodeCompanion ]],                                mode = 'n',          silent = false },
+      { '<Leader>gg', [[:<C-u>'<,'>CodeCompanion ]],                      mode = 'v',          silent = false },
+      { '<Leader>ga', function() vim.cmd('CodeCompanionActions')     end, mode = { 'n', 'v' }, silent = true },
+      { '<Leader>gc', function() vim.cmd('CodeCompanionChat Toggle') end, mode = { 'n', 'v' }, silent = true },
+      -- stylua: ignore end
+    },
   },
 
   -- {
