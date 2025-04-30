@@ -29,7 +29,6 @@ return {
       },
       opts = {
         language = 'Japanese',
-        send_code = false,
       },
     },
     cmd = { 'CodeCompanion', 'CodeCompanionChat', 'CodeCompanionCmd', 'CodeCompanionActions' },
