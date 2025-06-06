@@ -9,7 +9,7 @@ return {
       adapters = {
         ollama = function()
           return require('codecompanion.adapters').extend('ollama', {
-            schema = { model = { default = 'codestral:22b' } },
+            schema = { model = { default = 'devstral:24b' } },
           })
         end,
       },
