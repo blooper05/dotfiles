@@ -10,6 +10,7 @@
       "Bash(ls:*)",
       "Bash(mkdir:*)",
       "Bash(mv:*)",
+      "Bash(test:*)",
       "Edit(*)",
       "Fetch(https://*)",
       "List(*)"
