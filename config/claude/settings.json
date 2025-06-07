@@ -5,7 +5,15 @@
   },
   "includeCoAuthoredBy": false,
   "permissions": {
-    "allow": [],
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Edit(*)",
+      "Fetch(https://*)",
+      "List(*)"
+    ],
     "deny": []
   }
 }
