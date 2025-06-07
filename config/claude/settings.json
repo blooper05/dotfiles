@@ -7,6 +7,7 @@
   "permissions": {
     "allow": [
       "Bash(cat:*)",
+      "Bash(find:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
       "Bash(mv:*)",
