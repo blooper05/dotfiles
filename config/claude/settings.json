@@ -8,10 +8,12 @@
     "allow": [
       "Bash(awk:*)",
       "Bash(cat:*)",
+      "Bash(fd:*)",
       "Bash(find:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
       "Bash(mv:*)",
+      "Bash(rg:*)",
       "Bash(sed:*)",
       "Bash(test:*)",
       "Edit(*)",
