@@ -40,7 +40,7 @@ return {
         'terraformls',
         'ts_ls',
         -- 'typeprof',
-        'volar',
+        'vue_ls',
         'yamlls',
       }
 
