@@ -6,11 +6,13 @@
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
+      "Bash(awk:*)",
       "Bash(cat:*)",
       "Bash(find:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
       "Bash(mv:*)",
+      "Bash(sed:*)",
       "Bash(test:*)",
       "Edit(*)",
       "Fetch(https://*)",
