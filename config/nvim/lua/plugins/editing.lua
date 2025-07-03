@@ -65,24 +65,11 @@ return {
   },
 
   {
-    'kevinhwang91/nvim-ufo',
-    dependencies = {
-      { 'kevinhwang91/promise-async' },
-    },
+    'chrisgrieser/nvim-origami',
     init = function()
       vim.opt.foldlevel = 99
       vim.opt.foldlevelstart = 99
     end,
-    opts = {
-      provider_selector = function()
-        return { 'treesitter', 'indent' }
-      end,
-    },
-    event = 'BufReadPost',
-  },
-
-  {
-    'chrisgrieser/nvim-origami',
     config = true,
     event = 'BufReadPost',
   },
