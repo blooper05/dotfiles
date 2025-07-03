@@ -12,6 +12,8 @@
       "Bash(find:*)",
       "Bash(gh pr diff:*)",
       "Bash(gh pr view:*)",
+      "Bash(git add:*)",
+      "Bash(git checkout -b:*)",
       "Bash(jq:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
