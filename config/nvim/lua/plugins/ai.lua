@@ -42,22 +42,6 @@ return {
     },
   },
 
-  -- {
-  --   'David-Kunz/gen.nvim',
-  --   opts = {
-  --     model = 'mistral-small3.1:24b',
-  --     show_prompt = true,
-  --     show_model = true,
-  --   },
-  --   cmd = 'Gen',
-  --   keys = {
-  --     -- stylua: ignore start
-  --     { '<Leader>g', function() vim.cmd('Gen') end,             silent = true },
-  --     { '<Leader>g', [[:<C-u>'<,'>Gen<CR>]],        mode = 'v', silent = true },
-  --     -- stylua: ignore end
-  --   },
-  -- },
-
   {
     'Exafunction/codeium.nvim',
     dependencies = {
