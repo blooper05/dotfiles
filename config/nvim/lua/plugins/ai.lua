@@ -67,6 +67,17 @@ return {
   },
 
   {
+    'zbirenbaum/copilot.lua',
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+      filetypes = { markdown = true, help = true },
+    },
+    event = 'InsertEnter',
+    cmd = 'Copilot',
+  },
+
+  {
     'Exafunction/codeium.nvim',
     dependencies = {
       { 'nvim-lua/plenary.nvim' },

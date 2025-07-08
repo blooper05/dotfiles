@@ -5,6 +5,7 @@ return {
       { 'Exafunction/codeium.nvim' },
       { 'Kaiser-Yang/blink-cmp-dictionary' },
       { 'L3MON4D3/LuaSnip' },
+      { 'fang2hou/blink-copilot' },
       { 'moyiz/blink-emoji.nvim' },
       { 'olimorris/codecompanion.nvim' },
       { 'ribru17/blink-cmp-spell' },
@@ -40,7 +41,7 @@ return {
       signature = { enabled = true, window = { border = 'rounded' } },
 
       sources = {
-        default = { 'snippets', 'lsp', 'path', 'codeium', 'buffer' },
+        default = { 'snippets', 'lsp', 'path', 'copilot', 'codeium', 'buffer' },
         per_filetype = {
           -- stylua: ignore start
           gitcommit       = { 'snippets', 'lsp', 'path', 'emoji',            'buffer', 'dictionary', 'spell' },
@@ -51,6 +52,7 @@ return {
         },
         providers = {
           emoji = { module = 'blink-emoji', name = 'Emoji' },
+          copilot = { module = 'blink-copilot', name = 'Copilot', async = true },
           codeium = { module = 'codeium.blink', name = 'Codeium', async = true },
           dictionary = {
             module = 'blink-cmp-dictionary',
