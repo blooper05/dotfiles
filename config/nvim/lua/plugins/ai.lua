@@ -1,5 +1,29 @@
 return {
   {
+    'coder/claudecode.nvim',
+    dependencies = {
+      { 'folke/snacks.nvim' },
+    },
+    config = true,
+    keys = {
+      { '[claudecode]', '<Nop>' },
+      { '<Space>c', '[claudecode]', remap = true },
+
+      -- stylua: ignore start
+      { '[claudecode]c', function() vim.cmd('ClaudeCode')            end },
+      { '[claudecode]f', function() vim.cmd('ClaudeCodeFocus')       end },
+      { '[claudecode]r', function() vim.cmd('ClaudeCode --resume')   end },
+      { '[claudecode]C', function() vim.cmd('ClaudeCode --continue') end },
+      { '[claudecode]b', function() vim.cmd('ClaudeCodeAdd %')       end },
+      { '[claudecode]s', function() vim.cmd('ClaudeCodeSend')        end, mode = 'v' },
+      { '[claudecode]s', function() vim.cmd('ClaudeCodeTreeAdd')     end, ft = { 'NvimTree', 'oil' } },
+      { '[claudecode]a', function() vim.cmd('ClaudeCodeDiffAccept')  end },
+      { '[claudecode]d', function() vim.cmd('ClaudeCodeDiffDeny')    end },
+      -- stylua: ignore end
+    },
+  },
+
+  {
     'olimorris/codecompanion.nvim',
     dependencies = {
       { 'nvim-lua/plenary.nvim' },
