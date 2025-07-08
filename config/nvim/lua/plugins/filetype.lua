@@ -58,4 +58,29 @@ return {
     'aklt/plantuml-syntax', -- non-lua plugin
     ft = 'plantuml',
   },
+
+  -- Golang
+
+  {
+    'ray-x/go.nvim',
+    dependencies = {
+      { 'neovim/nvim-lspconfig' },
+      { 'nvim-treesitter/nvim-treesitter' },
+      { 'ray-x/guihua.lua' },
+    },
+    config = function(_, opts)
+      require('go').setup(opts)
+
+      local format_sync_grp = vim.api.nvim_create_augroup('GoFormat', {})
+
+      vim.api.nvim_create_autocmd('BufWritePre', {
+        pattern = '*.go',
+        callback = function()
+          require('go.format').goimports()
+        end,
+        group = format_sync_grp,
+      })
+    end,
+    ft = { 'go', 'gomod' },
+  },
 }
