@@ -88,7 +88,7 @@
   "vim-asterisk": { "branch": "master", "commit": "77e97061d6691637a034258cc415d98670698459" },
   "vim-dirtytalk": { "branch": "master", "commit": "aa57ba902b04341a04ff97214360f56856493583" },
   "vim-easy-align": { "branch": "master", "commit": "9815a55dbcd817784458df7a18acacc6f82b1241" },
-  "vim-matchup": { "branch": "master", "commit": "5456eaccf757606884ec1ac1ef3f564019973873" },
+  "vim-matchup": { "branch": "master", "commit": "81313f17443df6974cafa094de52df32b860e1b7" },
   "vim-operator-flashy": { "branch": "master", "commit": "b24673a9b0d5d60b26d202deb13d4ebf90d7a2ae" },
   "vim-operator-replace": { "branch": "master", "commit": "1345a556a321a092716e149d4765a5e17c0e9f0f" },
   "vim-operator-surround": { "branch": "master", "commit": "80337a40a829cfc77b065a71d8a609e2ad7d2c8b" },
