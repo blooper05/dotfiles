@@ -29,6 +29,7 @@ brew "jq"
 brew "luajit", args: ["HEAD"]
 brew "mackup"
 brew "mas"
+brew "terminal-notifier"
 brew "mise"
 brew "neovim", args: ["HEAD"]
 brew "ollama"
