@@ -1,11 +1,12 @@
 #!/bin/bash
 
-devcontainer up \
-	--mount="type=bind,source=$HOME/.aws/cli,target=/root/.aws/cli" \
-	--mount="type=bind,source=$HOME/.aws/sso,target=/root/.aws/sso" \
-	--mount="type=bind,source=$AWS_CONFIG_FILE,target=/root/.aws/config" \
-	--mount="type=bind,source=$AWS_SHARED_CREDENTIALS_FILE,target=/root/.aws/credentials" \
-	--mount="type=bind,source=$KUBECACHEDIR,target=/root/.kube/cache" \
-	--mount="type=bind,source=$KUBECONFIG,target=/root/.kube/config" \
-	--mount="type=bind,source=$XDG_CONFIG_HOME/netrc/config,target=/root/.netrc" \
-	--workspace-folder=.
+colima start --cpu=4 --memory=8 --network-address --dns=1.1.1.1,1.0.0.1,8.8.8.8,8.8.4.4 --vm-type=vz --vz-rosetta &&
+	devcontainer up \
+		--mount="type=bind,source=$HOME/.aws/cli,target=/root/.aws/cli" \
+		--mount="type=bind,source=$HOME/.aws/sso,target=/root/.aws/sso" \
+		--mount="type=bind,source=$AWS_CONFIG_FILE,target=/root/.aws/config" \
+		--mount="type=bind,source=$AWS_SHARED_CREDENTIALS_FILE,target=/root/.aws/credentials" \
+		--mount="type=bind,source=$KUBECACHEDIR,target=/root/.kube/cache" \
+		--mount="type=bind,source=$KUBECONFIG,target=/root/.kube/config" \
+		--mount="type=bind,source=$XDG_CONFIG_HOME/netrc/config,target=/root/.netrc" \
+		--workspace-folder=.
