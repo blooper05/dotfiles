@@ -6,5 +6,5 @@ nvim --headless '+Lazy! install' +quitall
 
 python3 -m pip install --user --upgrade pynvim
 gem install neovim && gem environment
-yarn global add neovim
+npm install --global neovim
 cpanm --notest Neovim::Ext
