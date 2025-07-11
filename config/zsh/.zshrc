@@ -199,6 +199,9 @@ export COMPOSE_BAKE=true
 # Kubernetes {{{2
 export KUBECACHEDIR=$XDG_CACHE_HOME/kube
 
+# Ollama {{{2
+export OLLAMA_MODELS=$XDG_DATA_HOME/ollama/models
+
 # Claude Code {{{2
 export CLAUDE_CONFIG_DIR=$XDG_CONFIG_HOME/claude
 
