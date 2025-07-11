@@ -36,13 +36,24 @@
     "deny": []
   },
   "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "deno run --allow-read --allow-env --allow-run $XDG_CONFIG_HOME/claude/hooks/notify.ts --event notification"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "afplay /System/Library/Sounds/Funk.aiff"
+            "command": "deno run --allow-read --allow-env --allow-run $XDG_CONFIG_HOME/claude/hooks/notify.ts --event stop"
           }
         ]
       }
