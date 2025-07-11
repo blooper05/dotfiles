@@ -21,7 +21,7 @@ return {
           diagnostics.hadolint,
           diagnostics.markdownlint_cli2,
           diagnostics.reek,
-          diagnostics.rubocop.with({ command = 'docker-rubocop' }),
+          diagnostics.rubocop.with({ command = 'docker-compose-rubocop' }),
           diagnostics.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
           diagnostics.textlint.with({ filetypes = { 'markdown' }, prefer_local = 'node_modules/.bin' }),
           diagnostics.tfsec,
@@ -29,7 +29,7 @@ return {
           diagnostics.yamllint,
           formatting.packer,
           formatting.prettier.with({ prefer_local = 'node_modules/.bin' }),
-          formatting.rubocop.with({ command = 'docker-rubocop' }),
+          formatting.rubocop.with({ command = 'docker-compose-rubocop' }),
           formatting.shfmt,
           formatting.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
           formatting.stylua,
@@ -69,7 +69,7 @@ return {
       return {
         adapters = {
           require('neotest-rspec')({
-            rspec_cmd = 'docker-rspec',
+            rspec_cmd = 'docker-compose-rspec',
             formatter = 'json',
           }),
         },
