@@ -196,6 +196,9 @@ export COMPOSE_BAKE=true
 # Kubernetes {{{2
 export KUBECACHEDIR=$XDG_CACHE_HOME/kube
 
+# Claude Code {{{2
+export CLAUDE_CONFIG_DIR=$XDG_CONFIG_HOME/claude
+
 # Zellij {{{2
 eval "$(zellij setup --generate-auto-start zsh)"
 
