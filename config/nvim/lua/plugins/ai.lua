@@ -36,6 +36,11 @@ return {
             schema = { model = { default = 'devstral:24b' } },
           })
         end,
+        anthropic = function()
+          return require('codecompanion.adapters').extend('anthropic', {
+            schema = { model = { default = 'us.anthropic.claude-opus-4-20250514-v1:0' } },
+          })
+        end,
       },
       strategies = {
         -- stylua: ignore start
