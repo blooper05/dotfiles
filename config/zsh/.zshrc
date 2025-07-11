@@ -193,6 +193,9 @@ export LIMA_HOME=$XDG_DATA_HOME/lima
 export COLIMA_HOME=$XDG_DATA_HOME/colima
 export COMPOSE_BAKE=true
 
+# Kubernetes {{{2
+export KUBECACHEDIR=$XDG_CACHE_HOME/kube
+
 # Zellij {{{2
 eval "$(zellij setup --generate-auto-start zsh)"
 
