@@ -158,6 +158,9 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export GOPATH=$XDG_DATA_HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# Rust {{{2
+export RUSTUP_HOME=$XDG_DATA_HOME/rustup
+
 # Perl {{{2
 export PERL_CPANM_HOME=$XDG_DATA_HOME/cpanm
 
