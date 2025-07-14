@@ -8,6 +8,7 @@
     "allow": [
       "Bash(awk:*)",
       "Bash(cat:*)",
+      "Bash(echo:*)",
       "Bash(fd:*)",
       "Bash(find:*)",
       "Bash(gh pr diff:*)",
