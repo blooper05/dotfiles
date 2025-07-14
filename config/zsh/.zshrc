@@ -197,6 +197,7 @@ export COLIMA_HOME=$XDG_DATA_HOME/colima
 export COMPOSE_BAKE=true
 
 # Kubernetes {{{2
+export KUBECONFIG=$HOME/.kube/config
 export KUBECACHEDIR=$XDG_CACHE_HOME/kube
 
 # Ollama {{{2
