@@ -1,3 +1,5 @@
+#!/usr/bin/env -S deno run --allow-read --allow-env --allow-run
+
 import { parseArgs } from "jsr:@std/cli/parse-args";
 import $ from "jsr:@david/dax";
 

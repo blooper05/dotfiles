@@ -44,7 +44,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "deno run --allow-read --allow-env --allow-run $XDG_CONFIG_HOME/claude/hooks/notify.ts --event notification"
+            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts --event notification"
           }
         ]
       }
@@ -55,7 +55,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "deno run --allow-read --allow-env --allow-run $XDG_CONFIG_HOME/claude/hooks/notify.ts --event stop"
+            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts --event stop"
           }
         ]
       }
