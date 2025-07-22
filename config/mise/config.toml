@@ -43,7 +43,6 @@ tfupdate = "0.9.1"
 trivy = "0.64.1"
 yamlfmt = "0.17.2"
 yamllint = "1.37.1"
-yarn = "4.9.2"
 
 [settings]
 idiomatic_version_file_enable_tools = ["golang", "ruby"]

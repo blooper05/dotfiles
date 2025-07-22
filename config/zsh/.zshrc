@@ -151,7 +151,6 @@ export BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundler
 export BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundler
 
 # Node.js {{{2
-alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # Go {{{2
