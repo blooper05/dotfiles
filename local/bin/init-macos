@@ -8,7 +8,7 @@ networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4
 # System Settings >> Network >> Firewall >> Firewall: on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
-# System Settings >> About >> Name: まっくぶっくぷろ
+# System Settings >> General >> About >> Name: まっくぶっくぷろ
 sudo scutil --set ComputerName まっくぶっくぷろ
 
 # System Settings >> General >> Software Update >> Automatic updates: On
