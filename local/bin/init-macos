@@ -59,17 +59,17 @@ defaults write com.apple.dock mru-spaces -bool false
 # System Settings >> Desktop & Dock >> Hot Corners...:
 defaults delete com.apple.dock wvous-br-corner
 
-# System Settings >> Sidecar >> Show Sidebar: Never
-defaults write com.apple.sidecar.display sidebarShown -int 0
-
-# System Settings >> Sidecar >> Show Touch Bar: Never
-defaults write com.apple.sidecar.display showTouchbar -int 0
-
 # TODO: # System Settings >> Displays >> Night Shift... >> Schedule: Custom
 # TODO: # System Settings >> Displays >> Night Shift... >> From: 5:00
 # TODO: # System Settings >> Displays >> Night Shift... >> to: 4:59
 # TODO: # System Settings >> Displays >> Night Shift... >> Turn on until tomorrow: on
 # TODO: # System Settings >> Displays >> Night Shift... >> Color temperature: More Warm
+
+# System Settings >> Displays >> Sidecar >> Show Sidebar: Never
+defaults write com.apple.sidecar.display sidebarShown -int 0
+
+# System Settings >> Displays >> Sidecar >> Show Touch Bar: Never
+defaults write com.apple.sidecar.display showTouchbar -int 0
 
 # System Settings >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
