@@ -203,6 +203,10 @@ sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool tru
 # Wipe all app icons from the Dock
 defaults write com.apple.dock persistent-apps -array
 
+# Reset Launchpad layout by removing its database
+sudo /usr/bin/find /private/var/folders/ -type d -name com.apple.dock.launchpad -exec rm -rf {} +
+killall Dock
+
 # Save screenshots to the Downloads directory
 defaults write com.apple.screencapture location -string "$HOME/Downloads/"
 
