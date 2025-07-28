@@ -207,6 +207,8 @@ defaults write com.apple.dock persistent-apps -array
 sudo /usr/bin/find /private/var/folders/ -type d -name com.apple.dock.launchpad -exec rm -rf {} +
 killall Dock
 
+# TODO: # Notification Center >> Edit Widgets... >> ...
+
 # Save screenshots to the Downloads directory
 defaults write com.apple.screencapture location -string "$HOME/Downloads/"
 
