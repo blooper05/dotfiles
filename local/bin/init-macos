@@ -16,11 +16,11 @@ sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyI
 
 # TODO: # System Settings >> General >> AirDrop & Handoff >> AirDrop: No One
 
-# System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
-defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
-
 # System Settings >> General >> Date & Time >> 24-hour time: on
 defaults write com.apple.menuextra.clock Show24Hour -bool true
+
+# System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
+defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 
 # System Settings >> Sharing >> Local hostname: MacBookPro.local
 sudo scutil --set LocalHostName MacBookPro
