@@ -110,7 +110,7 @@ cask "twingate"
 # cask "vmware-fusion"
 # cask "vox"
 # cask "zeplin"
-cask "zoom"
+# cask "zoom"
 # mas "DaVinci Resolve", id: 571213070
 # mas "EdgeView 2", id: 1206246482
 # mas "FANTASIAN", id: 1517339045
