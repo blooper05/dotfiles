@@ -26,7 +26,7 @@ defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 
 # TODO: # System Settings >> General >> Login Items & Extensions >> ...
 
-# System Settings >> Sharing >> Local hostname: MacBookPro.local
+# System Settings >> General >> Sharing >> Local hostname: MacBookPro.local
 sudo scutil --set LocalHostName MacBookPro
 
 # System Settings >> Appearance >> Sidebar icon size: Small
