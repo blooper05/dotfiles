@@ -97,6 +97,8 @@ defaults write /Library/Application\ Support/CrashReporter/DiagnosticMessagesHis
 
 # TODO: # System Settings >> Users & Groups >> ...
 
+# TODO: # Game Center >> Game Center: off
+
 # TODO: # System Settings >> iCloud >> Saved to iCloud >> Photos: on
 # TODO: # System Settings >> iCloud >> Saved to iCloud >> iCloud Drive: on
 # TODO: # System Settings >> iCloud >> Saved to iCloud >> Find My Mac: on
