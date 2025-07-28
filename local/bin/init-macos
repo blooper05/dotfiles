@@ -14,6 +14,8 @@ sudo scutil --set ComputerName まっくぶっくぷろ
 # System Settings >> General >> Software Update >> Automatic Updates: On
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true
 
+# TODO: # System Settings >> General >> AirDrop & Handoff >> AirDrop: No One
+
 # System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
 defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 
