@@ -85,6 +85,8 @@ osascript -e 'set volume with output muted'
 # System Settings >> Lock Screen >> Start Screen Saver when inactive: For 5 minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 
+# TODO: # System Settings >> Privacy & Security >> ...
+
 # TODO: # System Settings >> Touch ID & Password >> Touch ID: index finger
 # TODO: # System Settings >> Touch ID & Password >> Touch ID: middle finger
 # TODO: # System Settings >> Touch ID & Password >> Touch ID: index finger (left)
