@@ -74,6 +74,9 @@ defaults write com.apple.sidecar.display showTouchbar -int 0
 # System Settings >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/ExtensionKit/Extensions/Flurry.appex' type -int 0
 
+# System Settings >> Spotlight >> Help Apple Improve Search: off
+defaults write com.apple.assistant.support 'Search Queries Data Sharing Status' -int 2
+
 # TODO: # System Settings >> Notifications >> ...
 
 # System Settings >> Lock Screen >> Start Screen Saver when inactive: For 5 minutes
