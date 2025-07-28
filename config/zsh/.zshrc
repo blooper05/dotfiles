@@ -55,7 +55,7 @@ alias ps='procs --sortd=cpu'
 alias top='btm'
 
 alias curl='xhs --json --follow'
-alias dig='dog'
+alias dig='doggo'
 alias ping='gping'
 
 # Key Binding {{{1
