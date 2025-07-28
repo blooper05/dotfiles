@@ -11,7 +11,7 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 # System Settings >> General >> About >> Name: まっくぶっくぷろ
 sudo scutil --set ComputerName まっくぶっくぷろ
 
-# System Settings >> General >> Software Update >> Automatic updates: On
+# System Settings >> General >> Software Update >> Automatic Updates: On
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool true
 
 # System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
