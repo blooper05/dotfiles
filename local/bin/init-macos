@@ -24,6 +24,8 @@ defaults write com.apple.menuextra.clock Show24Hour -bool true
 # System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
 defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 
+# TODO: # System Settings >> General >> Login Items & Extensions >> ...
+
 # System Settings >> Sharing >> Local hostname: MacBookPro.local
 sudo scutil --set LocalHostName MacBookPro
 
