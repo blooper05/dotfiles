@@ -72,7 +72,7 @@ defaults write com.apple.sidecar.display sidebarShown -int 0
 defaults write com.apple.sidecar.display showTouchbar -int 0
 
 # System Settings >> Screen Saver >> Flurry
-defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/ExtensionKit/Extensions/Flurry.appex' type -int 0
 
 # TODO: # System Settings >> Notifications >> ...
 
