@@ -19,6 +19,8 @@ sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticallyI
 # System Settings >> General >> Date & Time >> 24-hour time: on
 defaults write com.apple.menuextra.clock Show24Hour -bool true
 
+# TODO: # System Settings >> General >> Date & Time >> Set time zone automatically using your current location: on
+
 # System Settings >> General >> Language & Region >> Preferred Languages: English / 日本語
 defaults write NSGlobalDomain AppleLanguages -array 'en-JP' 'ja-JP'
 
