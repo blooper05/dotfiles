@@ -95,6 +95,8 @@ defaults write /Library/Application\ Support/CrashReporter/DiagnosticMessagesHis
 # TODO: # System Settings >> Touch ID & Password >> Touch ID: index finger (left)
 # TODO: # System Settings >> Touch ID & Password >> Apple Watch: on
 
+# TODO: # System Settings >> Users & Groups >> ...
+
 # TODO: # System Settings >> Internet Accounts >> iCloud >> Apps Using iCloud >> Photos >> iCloud Photos >> Sync this Mac: on
 # TODO: # System Settings >> Internet Accounts >> iCloud >> Apps Using iCloud >> iCloud Drive >> iCloud Drive >> Sync this Mac: on
 # TODO: # System Settings >> Internet Accounts >> iCloud >> Apps Using iCloud >> Find My Mac >> Find My Mac: On
