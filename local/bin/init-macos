@@ -79,6 +79,9 @@ defaults write com.apple.assistant.support 'Search Queries Data Sharing Status' 
 
 # TODO: # System Settings >> Notifications >> ...
 
+# System Settings >> Sound >> Output & Input >> Output >> Output volume: Mute
+osascript -e 'set volume with output muted'
+
 # System Settings >> Lock Screen >> Start Screen Saver when inactive: For 5 minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
 
