@@ -9,8 +9,8 @@ init:
 	@local/bin/init-macos
 	@local/bin/init-homebrew
 	@local/bin/init-mackup
-	@local/bin/init-mise
 	@local/bin/init-zsh
+	@local/bin/init-mise
 
 clean:
 	@-$(foreach val, $(DOTFILES), rm -rfv $(HOME)/.$(val);)
