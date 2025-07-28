@@ -8,8 +8,6 @@ networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4
 # System Settings >> Network >> Firewall >> Firewall: on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
-# TODO: # System Settings >> Notifications >> ...
-
 # System Settings >> About >> Name: まっくぶっくぷろ
 sudo scutil --set ComputerName まっくぶっくぷろ
 
@@ -70,6 +68,8 @@ defaults write com.apple.sidecar.display showTouchbar -int 0
 
 # System Settings >> Screen Saver >> Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string 'Flurry' path -string '/System/Library/Screen Savers/Flurry.saver' type -int 0
+
+# TODO: # System Settings >> Notifications >> ...
 
 # System Settings >> Lock Screen >> Start Screen Saver when inactive: For 5 minutes
 defaults -currentHost write com.apple.screensaver idleTime -int 300
