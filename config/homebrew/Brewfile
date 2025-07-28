@@ -1,6 +1,4 @@
 tap "fujiwara/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "k1low/tap"
 brew "aider"
 brew "bat"
