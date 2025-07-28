@@ -1,7 +1,7 @@
 {
   "keyMappings": "unmap d\nmap <c-d> scrollPageDown\nmap <c-f> scrollFullPageDown\n\nunmap u\nmap <c-u> scrollPageUp\nmap <c-b> scrollFullPageUp",
   "searchEngines": "",
-  "settingsVersion": "2.0.4",
+  "settingsVersion": "2.3",
   "exclusionRules": [
     {
       "passKeys": "",
