@@ -4,4 +4,5 @@ set -ex
 
 mkdir -p "$HOME/.local/share/zsh"
 mkdir -p "$HOME/.local/state/zsh"
+rm -rf "$HOME/.terminfo/"
 rm -rf "$HOME/.zcompcache" "$HOME/.zsh_history" "$HOME/.zsh_sessions"
