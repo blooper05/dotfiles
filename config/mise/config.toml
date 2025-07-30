@@ -10,7 +10,6 @@ elm = "0.19.1"
 go-jsonnet = "0.21.0"
 perl = "5.42.0"
 
-pipx = "1.7.1"
 uv = "0.8.3"
 
 actionlint = "1.7.7"
