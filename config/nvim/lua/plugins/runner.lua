@@ -20,6 +20,7 @@ return {
           -- diagnostics.gitlint.with({ filetypes = { 'gitcommit' } }),
           diagnostics.hadolint,
           diagnostics.markdownlint_cli2,
+          diagnostics.markuplint,
           diagnostics.reek,
           diagnostics.rubocop.with({ command = 'docker-compose-rubocop' }),
           diagnostics.sqlfluff.with({ extra_args = { '--dialect', 'postgres' } }),
