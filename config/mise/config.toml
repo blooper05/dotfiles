@@ -1,7 +1,7 @@
 [tools]
 deno = "2.4.2"
-golang = "1.24.5"
-nodejs = "24.4.1"
+go = "1.24.5"
+node = "24.4.1"
 python = "3.13.5"
 ruby = "3.4.5"
 rust = "1.88.0"
@@ -49,4 +49,4 @@ yamlfmt = "0.17.2"
 yamllint = "1.37.1"
 
 [settings]
-idiomatic_version_file_enable_tools = ["golang", "ruby"]
+idiomatic_version_file_enable_tools = ["go", "ruby"]
