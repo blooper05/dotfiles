@@ -19,6 +19,7 @@ return {
           -- diagnostics.editorconfig_checker.with({ command = 'ec' }),
           -- diagnostics.gitlint.with({ filetypes = { 'gitcommit' } }),
           diagnostics.hadolint,
+          diagnostics.kube_linter,
           diagnostics.markdownlint_cli2,
           diagnostics.markuplint,
           diagnostics.reek,
