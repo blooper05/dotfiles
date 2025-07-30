@@ -49,4 +49,4 @@ yamlfmt = "0.17.2"
 yamllint = "1.37.1"
 
 [settings]
-idiomatic_version_file_enable_tools = ["go", "ruby"]
+idiomatic_version_file_enable_tools = ["go", "node", "ruby"]
