@@ -12,6 +12,7 @@ perl = "5.42.0"
 
 uv = "0.8.3"
 
+"pipx:gitlint-core" = "0.19.1"
 "pipx:sqlfluff" = "3.4.2"
 actionlint = "1.7.7"
 dotenv-linter = "3.3.0"
