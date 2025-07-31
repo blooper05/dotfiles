@@ -13,7 +13,7 @@ return {
         'bashls',
         'cssls',
         'cssmodules_ls',
-        'deno_ls',
+        'denols',
         'docker_compose_language_service',
         'dockerls',
         'elmls',
