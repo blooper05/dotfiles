@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# @raycast.schemaVersion 1
+# @raycast.title plamo-translate
+# @raycast.mode compact
+
+# @raycast.icon 🌐
+# @raycast.argument1 { "type": "text", "placeholder": "Text" }
+
+"$HOME/.local/share/mise/shims/plamo-translate" --from='English|Japanese' --to='English|Japanese' --input="$1"
