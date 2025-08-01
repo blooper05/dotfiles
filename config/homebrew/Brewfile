@@ -5,7 +5,7 @@ brew "bat"
 brew "bettercap"
 brew "binwalk"
 brew "bottom"
-brew "colima"
+brew "colima", restart_service: true
 brew "devcontainer"
 brew "docker"
 brew "docker-buildx"
@@ -27,7 +27,7 @@ brew "mas"
 brew "terminal-notifier"
 brew "mise"
 brew "neovim", args: ["HEAD"]
-brew "ollama"
+brew "ollama", restart_service: true
 brew "procs"
 brew "ripgrep"
 brew "sd"
