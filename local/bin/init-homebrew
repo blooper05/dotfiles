@@ -12,3 +12,6 @@ brew services stop --keep colima
 
 rm -rf "$HOME/.colima/"
 rm -rf "$HOME/.docker/"
+
+ollama pull devstral:24b
+ollama pull mistral-small3.2:24b
