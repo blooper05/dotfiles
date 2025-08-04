@@ -8,3 +8,6 @@ python3 -m pip install --user --upgrade pynvim
 gem install neovim && gem environment
 npm install --global neovim
 cpanm --notest Neovim::Ext
+
+# nvim --headless '+Codeium Auth' +quitall
+# nvim --headless '+Copilot auth' +quitall
