@@ -5,8 +5,9 @@ set -ex
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 /opt/homebrew/bin/brew bundle --file="$HOME/.config/homebrew/Brewfile"
 
-/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:COLIMA_HOME string $COLIMA_HOME" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
 /usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:DOCKER_CONFIG string $DOCKER_CONFIG" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
+/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:LIMA_HOME string $LIMA_HOME" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
+/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:COLIMA_HOME string $COLIMA_HOME" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
 
 brew services restart colima
 
