@@ -13,5 +13,9 @@ brew services restart colima
 rm -rf "$HOME/.colima/"
 rm -rf "$HOME/.docker/"
 
+/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:OLLAMA_MODELS string $OLLAMA_MODELS" /opt/homebrew/opt/ollama/homebrew.mxcl.ollama.plist
+
+brew services restart ollama
+
 ollama pull devstral:24b
 ollama pull mistral-small3.2:24b
