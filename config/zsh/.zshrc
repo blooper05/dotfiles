@@ -191,7 +191,7 @@ export TF_CLI_ARGS_apply="--parallelism=30"
 export TFLINT_PLUGIN_DIR=$XDG_DATA_HOME/tflint/plugins
 
 # Docker {{{2
-export DOCKER_CONFIG=$XDG_DATA_HOME/docker
+export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
 export LIMA_HOME=$XDG_DATA_HOME/lima
 export COLIMA_HOME=$XDG_DATA_HOME/colima
 export COMPOSE_BAKE=true
