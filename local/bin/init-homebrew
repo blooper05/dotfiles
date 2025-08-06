@@ -8,6 +8,7 @@ set -ex
 /usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:DOCKER_CONFIG string $DOCKER_CONFIG" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
 /usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:LIMA_HOME string $LIMA_HOME" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
 /usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:COLIMA_HOME string $COLIMA_HOME" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
+/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:COMPOSE_BAKE bool $COMPOSE_BAKE" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
 
 brew services restart colima
 
