@@ -1,4 +1,4 @@
 #!/bin/bash
 
 docker compose down --remove-orphans &&
-	docker ps -a && docker image ls && docker volume ls && docker network ls
+	docker-status
