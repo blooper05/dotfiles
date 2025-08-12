@@ -8,8 +8,8 @@
 # 🐛 fix:      [bug]                 Fix a bug.
 # 🚑 fix:      [ambulance]           Critical hotfix.
 # 🔒 fix:      [lock]                Fix security or privacy issues.
-# ✏️  fix:      [pencil2]             Fix typos.
-# ♻️  refactor: [recycle]             Refactor code.
+# ✏️ fix:      [pencil2]             Fix typos.
+# ♻️ refactor: [recycle]             Refactor code.
 # 🚚 refactor: [truck]               Move or rename resources (e.g.: files, paths, routes).
 # 🔥 refactor: [fire]                Remove code or files.
 # 🎨 style:    [art]                 Improve structure / format of the code.
@@ -27,8 +27,8 @@
 # 🔨 chore:    [hammer]              Add or update development scripts.
 # ➕ chore:    [heavy_plus_sign]     Add a dependency.
 # ➖ chore:    [heavy_minus_sign]    Remove a dependency.
-# ⬆️  chore:    [arrow_up]            Upgrade dependencies.
-# ⬇️  chore:    [arrow_down]          Downgrade dependencies.
+# ⬆️ chore:    [arrow_up]            Upgrade dependencies.
+# ⬇️ chore:    [arrow_down]          Downgrade dependencies.
 #
 # NOTE: refs. Gitmoji (https://gitmoji.dev/)
 # NOTE: refs. Conventional Commits (https://www.conventionalcommits.org/)
