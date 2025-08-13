@@ -2,4 +2,4 @@
 
 set -ex
 
-git worktree add "../$(basename "$PWD")-${1//\//-}" -b "$1" --track
+git worktree add "../$(basename "$PWD")-${1//\//-}" "$1"
