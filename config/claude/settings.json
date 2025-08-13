@@ -18,6 +18,8 @@
       "Bash(gh run view:*)",
       "Bash(git add:*)",
       "Bash(git checkout -b:*)",
+      "Bash(git fetch:*)",
+      "Bash(git status:*)",
       "Bash(grep:*)",
       "Bash(jq:*)",
       "Bash(kubectl cluster-info:*)",
