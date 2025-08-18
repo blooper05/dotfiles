@@ -40,8 +40,8 @@
       "Bash(uniq:*)",
       "Bash(yq:*)",
       "Edit",
-      "Fetch(https://*)",
-      "List(*)"
+      "Read",
+      "Fetch(https://*)"
     ],
     "deny": []
   },
