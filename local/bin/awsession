@@ -1,0 +1,3 @@
+#!/bin/bash
+
+eval "$(awsdo --disable-cache --duration=24hours --profile="$1")"
