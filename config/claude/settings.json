@@ -39,7 +39,7 @@
       "Bash(test:*)",
       "Bash(uniq:*)",
       "Bash(yq:*)",
-      "Edit(*)",
+      "Edit",
       "Fetch(https://*)",
       "List(*)"
     ],
