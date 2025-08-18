@@ -2,4 +2,6 @@
 
 set -ex
 
+git fetch origin --prune
+git branch "$1" origin/main
 git worktree add "../$(basename "$PWD")-worktree-${1//\//-}" "$1"
