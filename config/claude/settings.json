@@ -40,7 +40,6 @@
       "Bash(uniq:*)",
       "Bash(yq:*)",
       "Edit",
-      "Read",
       "WebFetch"
     ],
     "deny": []
