@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -euo pipefail
+
+kustomize_dir="$1"
+
+diff_output=$(devcontainer-exec kubectl diff --kustomize="$kustomize_dir")
+dryrun_output=$(devcontainer-exec kubectl apply --dry-run=server --kustomize="$kustomize_dir")
+
+tee >(pbcopy) <<EOF
+<details>
+<summary><code>❯ kubectl diff --kustomize=$kustomize_dir</code></summary>
+
+\`\`\`diff
+$diff_output
+\`\`\`
+</details>
+
+<details>
+<summary><code>❯ kubectl apply --dry-run=server --kustomize=$kustomize_dir</code></summary>
+
+\`\`\`
+$dryrun_output
+\`\`\`
+</details>
+EOF
