@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -euo pipefail
+
+kustomize_dir="$1"
+
+apply_output=$(devcontainer-exec kubectl apply --kustomize="$kustomize_dir")
+
+tee >(pbcopy) <<EOF
+<details>
+<summary><code>❯ kubectl apply --kustomize=$kustomize_dir</code></summary>
+
+\`\`\`
+$apply_output
+\`\`\`
+</details>
+EOF
