@@ -27,6 +27,7 @@ stylua = "2.1.0"
 yamlfmt = "0.17.2"
 yamllint = "1.37.1"
 
+"npm:ccusage" = "15.9.9"
 "pipx:plamo-translate" = "1.0.4"
 act = "0.2.79"
 adr-tools = "3.0.0"
