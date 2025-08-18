@@ -69,5 +69,9 @@
       }
     ]
   },
-  "model": "opusplan"
+  "model": "opusplan",
+  "statusLine": {
+    "type": "command",
+    "command": "ccusage statusline"
+  }
 }
