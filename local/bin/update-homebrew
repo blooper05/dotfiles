@@ -2,8 +2,14 @@
 
 set -ex
 
-brew upgrade luajit neovim tree-sitter utf8proc --fetch-HEAD
-brew bundle --cleanup
+brew outdated
+
+read -r -p "Upgrade outdated packages now? (y/N): " answer || true
+
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+	brew upgrade luajit neovim tree-sitter utf8proc --fetch-HEAD
+	brew bundle --cleanup
+fi
 
 /usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:DOCKER_CONFIG string $HOME/.config/docker" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
 /usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:LIMA_HOME string $HOME/.local/share/lima" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
