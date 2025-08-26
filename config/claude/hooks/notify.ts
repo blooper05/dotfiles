@@ -7,7 +7,6 @@ type Notification = {
   session_id: string;
   transcript_path: string;
   message: string;
-  title: string;
 };
 
 const flags = parseArgs(Deno.args, {
@@ -16,7 +15,7 @@ const flags = parseArgs(Deno.args, {
 
 async function notifyOnNotificationEvent() {
   const input: Notification = await new Response(Deno.stdin.readable).json();
-  await $`terminal-notifier -title ${input.title} -message ${input.message} -sound funk`;
+  await $`terminal-notifier -title "Claude Code" -message ${input.message} -sound funk`;
 }
 
 async function notifyOnStopEvent() {
