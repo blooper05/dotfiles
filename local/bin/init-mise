@@ -5,3 +5,6 @@ set -ex
 mkdir -p "$HOME/.local/share/gnupg"
 
 /opt/homebrew/bin/mise install
+
+rm -rf "$HOME/.cargo/"
+rm -rf "$HOME/.rustup/"

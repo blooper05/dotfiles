@@ -5,3 +5,6 @@ set -ex
 /opt/homebrew/bin/mise plugins update
 /opt/homebrew/bin/mise install
 /opt/homebrew/bin/mise prune
+
+rm -rf "$HOME/.cargo/"
+rm -rf "$HOME/.rustup/"
