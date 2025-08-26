@@ -14,7 +14,8 @@ const flags = parseArgs(Deno.args, {
 });
 
 async function notifyOnNotificationEvent() {
-  const input: Notification = await new Response(Deno.stdin.readable).json();
+  const stdin = await new Response(Deno.stdin.readable).text();
+  const input: Notification = JSON.parse(stdin)
   await $`terminal-notifier -title "Claude Code" -message ${input.message} -sound funk`;
 }
 
