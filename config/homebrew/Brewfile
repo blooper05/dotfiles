@@ -100,6 +100,7 @@ cask "todoist-app"
 cask "twingate"
 # cask "vmware-fusion"
 # cask "vox"
+cask "yaak"
 # cask "zeplin"
 # cask "zoom"
 # mas "DaVinci Resolve", id: 571213070
