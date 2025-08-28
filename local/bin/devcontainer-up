@@ -1,6 +1,6 @@
 #!/bin/bash
 
-colima start --cpu=4 --memory=8 --network-address --dns=1.1.1.1,1.0.0.1,8.8.8.8,8.8.4.4 --vm-type=vz --vz-rosetta &&
+colima start --profile=devcontainer --cpu=4 --memory=8 --network-address --dns=1.1.1.1,1.0.0.1,8.8.8.8,8.8.4.4 --vm-type=vz --vz-rosetta &&
 	devcontainer up \
 		--mount="type=bind,source=$AWS_CONFIG_FILE,target=/root/.aws/config" \
 		--mount="type=bind,source=$AWS_SHARED_CREDENTIALS_FILE,target=/root/.aws/credentials" \
