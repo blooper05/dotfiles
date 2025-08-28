@@ -2,6 +2,8 @@
 
 set -ex
 
+/opt/homebrew/bin/mise outdated --bump
+
 /opt/homebrew/bin/mise plugins update
 /opt/homebrew/bin/mise install
 /opt/homebrew/bin/mise prune
