@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -euo pipefail
+
+terragrunt_dir="$1"
+
+destroy_output=$(devcontainer-exec terragrunt --terragrunt-working-dir="$terragrunt_dir" destroy --no-color 2>&1)
+
+tee >(pbcopy) <<EOF
+<details>
+<summary><code>❯ terragrunt --terragrunt-working-dir=$terragrunt_dir destroy</code></summary>
+
+\`\`\`hcl
+$destroy_output
+\`\`\`
+</details>
+EOF
