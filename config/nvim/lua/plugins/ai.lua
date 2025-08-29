@@ -38,7 +38,7 @@ return {
         end,
         anthropic = function()
           return require('codecompanion.adapters').extend('anthropic', {
-            schema = { model = { default = 'us.anthropic.claude-opus-4-20250514-v1:0' } },
+            schema = { model = { default = 'us.anthropic.claude-opus-4-1-20250805-v1:0' } },
           })
         end,
       },
