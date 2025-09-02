@@ -30,6 +30,7 @@
       "Bash(kubectl describe:*)",
       "Bash(kubectl get:*)",
       "Bash(kubectl logs:*)",
+      "Bash(kustomize build:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
       "Bash(mv:*)",
