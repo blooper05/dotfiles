@@ -11,6 +11,10 @@
     "allow": [
       "Bash(awk:*)",
       "Bash(cat:*)",
+      "Bash(docker build:*)",
+      "Bash(docker logs:*)",
+      "Bash(docker run:*)",
+      "Bash(docker stop:*)",
       "Bash(echo:*)",
       "Bash(fd:*)",
       "Bash(find:*)",
