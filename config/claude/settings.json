@@ -4,6 +4,7 @@
     "DISABLE_BUG_COMMAND": "1",
     "DISABLE_ERROR_REPORTING": "1",
     "DISABLE_TELEMETRY": "1",
+    "MAX_THINKING_TOKENS": "31999",
     "USE_BUILTIN_RIPGREP": "1"
   },
   "includeCoAuthoredBy": false,
