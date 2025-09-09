@@ -1,0 +1,4 @@
+#!/bin/bash
+
+colima stop --profile=devcontainer
+colima stop --profile=docker-compose
