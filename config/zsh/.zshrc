@@ -164,6 +164,10 @@ export RUSTUP_HOME=$XDG_DATA_HOME/rustup
 # Perl {{{2
 export PERL_CPANM_HOME=$XDG_DATA_HOME/cpanm
 
+# Redis CLI {{{2
+export REDISCLI_HISTFILE=$XDG_DATA_HOME/redis/rediscli_history
+export REDISCLI_RCFILE=$XDG_CONFIG_HOME/redis/redisclirc
+
 # skim {{{2
 export SKIM_DEFAULT_OPTIONS='--multi --layout=reverse --ansi --select-1 --exit-0'
 
