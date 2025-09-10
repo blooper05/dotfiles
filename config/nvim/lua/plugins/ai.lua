@@ -74,6 +74,15 @@ return {
   },
 
   {
+    'ravitemer/mcphub.nvim',
+    dependencies = {
+      { 'nvim-lua/plenary.nvim' },
+    },
+    config = true,
+    cmd = 'MCPHub',
+  },
+
+  {
     'zbirenbaum/copilot.lua',
     opts = {
       suggestion = { enabled = false },
