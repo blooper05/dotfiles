@@ -67,7 +67,6 @@ return {
       display = {
         chat = {
           auto_scroll = false,
-          start_in_insert_mode = true,
         },
       },
       opts = {
