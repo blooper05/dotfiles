@@ -26,6 +26,7 @@ return {
   {
     'olimorris/codecompanion.nvim',
     dependencies = {
+      { 'MeanderingProgrammer/render-markdown.nvim', ft = 'codecompanion' },
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-treesitter/nvim-treesitter' },
       { 'ravitemer/mcphub.nvim' },
