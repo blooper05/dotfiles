@@ -34,7 +34,7 @@ return {
     opts = {
       adapters = {
         http = {
-          ollama = function()
+          devstral = function()
             return require('codecompanion.adapters').extend('ollama', {
               schema = { model = { default = 'devstral:24b' } },
             })
@@ -48,9 +48,9 @@ return {
       },
       strategies = {
         -- stylua: ignore start
-        chat   = { adapter = 'ollama' },
-        inline = { adapter = 'ollama' },
-        cmd    = { adapter = 'ollama' },
+        chat   = { adapter = 'devstral' },
+        inline = { adapter = 'devstral' },
+        cmd    = { adapter = 'devstral' },
         -- stylua: ignore end
       },
       display = {
