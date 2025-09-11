@@ -66,13 +66,6 @@ return {
           end,
         },
       },
-      strategies = {
-        -- stylua: ignore start
-        chat   = { adapter = 'copilot' },
-        inline = { adapter = 'copilot' },
-        cmd    = { adapter = 'copilot' },
-        -- stylua: ignore end
-      },
       opts = {
         language = 'Japanese',
       },
