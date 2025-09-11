@@ -34,6 +34,11 @@ return {
     opts = {
       adapters = {
         http = {
+          ['gpt-oss'] = function()
+            return require('codecompanion.adapters').extend('ollama', {
+              schema = { model = { default = 'gpt-oss:20b' } },
+            })
+          end,
           devstral = function()
             return require('codecompanion.adapters').extend('ollama', {
               schema = { model = { default = 'devstral:24b' } },
