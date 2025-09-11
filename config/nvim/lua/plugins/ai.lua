@@ -34,6 +34,15 @@ return {
     },
     opts = {
       adapters = {
+        acp = {
+          claude_code = function()
+            return require('codecompanion.adapters').extend('claude_code', {
+              env = {
+                CLAUDE_CODE_OAUTH_TOKEN = [[cmd:op read 'op://Personal/Claude Code/credential' --no-newline]],
+              },
+            })
+          end,
+        },
         http = {
           ['gpt-oss'] = function()
             return require('codecompanion.adapters').extend('ollama', {
@@ -59,9 +68,9 @@ return {
       },
       strategies = {
         -- stylua: ignore start
-        chat   = { adapter = 'devstral' },
-        inline = { adapter = 'devstral' },
-        cmd    = { adapter = 'devstral' },
+        chat   = { adapter = 'claude_code' },
+        inline = { adapter = 'copilot' },
+        cmd    = { adapter = 'copilot' },
         -- stylua: ignore end
       },
       opts = {
