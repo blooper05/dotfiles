@@ -39,6 +39,11 @@ return {
               schema = { model = { default = 'devstral:24b' } },
             })
           end,
+          mistral = function()
+            return require('codecompanion.adapters').extend('ollama', {
+              schema = { model = { default = 'mistral-small3.2:24b' } },
+            })
+          end,
           anthropic = function()
             return require('codecompanion.adapters').extend('anthropic', {
               schema = { model = { default = 'us.anthropic.claude-opus-4-1-20250805-v1:0' } },
