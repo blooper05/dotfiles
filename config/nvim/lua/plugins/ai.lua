@@ -28,6 +28,7 @@ return {
     dependencies = {
       { 'MeanderingProgrammer/render-markdown.nvim', ft = 'codecompanion' },
       { 'nvim-lua/plenary.nvim' },
+      { 'nvim-telescope/telescope.nvim' },
       { 'nvim-treesitter/nvim-treesitter' },
       { 'ravitemer/mcphub.nvim' },
     },
@@ -93,8 +94,8 @@ return {
       -- stylua: ignore start
       { '<Leader>gg', [[:CodeCompanion ]],                                mode = 'n',          silent = false },
       { '<Leader>gg', [[:<C-u>'<,'>CodeCompanion ]],                      mode = 'v',          silent = false },
-      { '<Leader>ga', function() vim.cmd('CodeCompanionActions')     end, mode = { 'n', 'v' }, silent = true },
       { '<Leader>gc', function() vim.cmd('CodeCompanionChat Toggle') end, mode = { 'n', 'v' }, silent = true },
+      { '[telescope]cc', function() require('telescope').extensions.codecompanion.codecompanion() end, silent = true },
       -- stylua: ignore end
     },
   },
