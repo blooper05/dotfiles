@@ -67,7 +67,6 @@ return {
       display = {
         chat = {
           auto_scroll = false,
-          show_header_separator = true,
           start_in_insert_mode = true,
         },
       },
