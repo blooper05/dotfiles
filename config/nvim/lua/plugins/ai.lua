@@ -68,7 +68,7 @@ return {
       },
       strategies = {
         -- stylua: ignore start
-        chat   = { adapter = 'claude_code' },
+        chat   = { adapter = 'copilot' },
         inline = { adapter = 'copilot' },
         cmd    = { adapter = 'copilot' },
         -- stylua: ignore end
