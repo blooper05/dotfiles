@@ -64,11 +64,6 @@ return {
         cmd    = { adapter = 'devstral' },
         -- stylua: ignore end
       },
-      display = {
-        chat = {
-          auto_scroll = false,
-        },
-      },
       opts = {
         language = 'Japanese',
       },
