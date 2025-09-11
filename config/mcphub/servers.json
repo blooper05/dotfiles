@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "new-relic-mcp": {
+      "url": "https://nrai-mcp-us.service.newrelic.com/remote/mcp/",
+      "name": "New Relic"
+    }
+  }
+}
