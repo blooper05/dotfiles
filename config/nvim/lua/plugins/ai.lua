@@ -92,7 +92,6 @@ return {
     cmd = { 'CodeCompanion', 'CodeCompanionChat', 'CodeCompanionCmd', 'CodeCompanionActions' },
     keys = {
       -- stylua: ignore start
-      { '<Leader>gg', [[:CodeCompanion ]],                                mode = 'n',          silent = false },
       { '<Leader>ca',    function() vim.cmd('CodeCompanionChat Add') end,    mode = 'v',               silent = true },
       { '<Leader>cc',    function() vim.cmd('CodeCompanionChat Toggle') end, mode = { 'n', 'v' },      silent = true },
       { '[telescope]cc', function() require('telescope').extensions.codecompanion.codecompanion() end, silent = true },
