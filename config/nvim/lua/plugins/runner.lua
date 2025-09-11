@@ -79,12 +79,12 @@ return {
     end,
     keys = {
       -- stylua: ignore start
-      { '<Leader>c', function() require('neotest').run.run(vim.fn.expand('%')) end,      silent = true },
-      { '<Leader>n', function() require('neotest').run.run() end,                        silent = true },
-      { '<Leader>l', function() require('neotest').run.run_last() end,                   silent = true },
-      { '<Leader>a', function() require('neotest').run.run(vim.fn.getcwd()) end,         silent = true },
-      { '<Leader>d', function() require('neotest').run.run({ strategy = 'dap' }) end,    silent = true },
-      { '<Leader>w', function() require('neotest').watch.toggle(vim.fn.expand('%')) end, silent = true },
+      { '<Leader>C', function() require('neotest').run.run(vim.fn.expand('%')) end,      silent = true },
+      { '<Leader>N', function() require('neotest').run.run() end,                        silent = true },
+      { '<Leader>L', function() require('neotest').run.run_last() end,                   silent = true },
+      { '<Leader>A', function() require('neotest').run.run(vim.fn.getcwd()) end,         silent = true },
+      { '<Leader>D', function() require('neotest').run.run({ strategy = 'dap' }) end,    silent = true },
+      { '<Leader>W', function() require('neotest').watch.toggle(vim.fn.expand('%')) end, silent = true },
       -- stylua: ignore end
     },
   },
