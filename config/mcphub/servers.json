@@ -4,6 +4,13 @@
       "name": "New Relic",
       "url": "https://nrai-mcp-us.service.newrelic.com/remote/mcp/"
     },
+    "github-mcp": {
+      "name": "GitHub",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${cmd:op read 'op://Personal/GitHub API/credential' --no-newline}"
+      }
+    },
     "atlassian-mcp": {
       "name": "Atlassian",
       "url": "https://mcp.atlassian.com/v1/sse"
