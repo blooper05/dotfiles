@@ -27,6 +27,7 @@ stylua = "2.1.0"
 yamlfmt = "0.17.2"
 yamllint = "1.37.1"
 
+"npm:@playwright/mcp" = "0.0.37"
 "npm:@zed-industries/claude-code-acp" = "0.4.0"
 "npm:ccusage" = "16.2.0"
 "npm:mcp-hub" = "4.2.1"
