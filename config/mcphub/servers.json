@@ -17,7 +17,7 @@
     },
     "serena-mcp": {
       "command": "serena-mcp-server",
-      "args": ["--context", "ide-assistant"]
+      "args": ["--context", "ide-assistant", "--project", "."]
     },
     "context7-mcp": {
       "command": "context7-mcp"
