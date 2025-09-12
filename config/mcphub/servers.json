@@ -15,6 +15,9 @@
       "name": "Atlassian",
       "url": "https://mcp.atlassian.com/v1/sse"
     },
+    "context7-mcp": {
+      "command": "context7-mcp"
+    },
     "playwright-mcp": {
       "command": "mcp-server-playwright"
     }
