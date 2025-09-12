@@ -39,7 +39,7 @@ vim.keymap.set('n', '<F6>', function()
 end, { silent = true })
 
 -- Exit terminal mode easily.
-vim.keymap.set('t', '<ESC>', [[<C-\><C-n>]], { silent = true })
+vim.keymap.set('t', '<C-q>', [[<C-\><C-n>]], { silent = true })
 
 -- Search {{{1
 
