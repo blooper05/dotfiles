@@ -45,6 +45,7 @@
       "Bash(sort:*)",
       "Bash(tail:*)",
       "Bash(test:*)",
+      "Bash(tree:*)",
       "Bash(uniq:*)",
       "Bash(yq:*)",
       "Edit",
