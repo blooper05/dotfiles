@@ -1,5 +1,6 @@
 tap "fujiwara/tap"
 tap "k1low/tap"
+
 brew "aider"
 brew "bat"
 brew "bettercap"
@@ -44,6 +45,7 @@ brew "zellij"
 brew "zsh"
 brew "fujiwara/tap/ecsta"
 brew "k1low/tap/awsdo"
+
 cask "1password"
 cask "1password-cli"
 cask "adobe-creative-cloud"
@@ -102,6 +104,7 @@ cask "twingate"
 cask "yaak"
 # cask "zeplin"
 # cask "zoom"
+
 # mas "DaVinci Resolve", id: 571213070
 # mas "EdgeView 2", id: 1206246482
 # mas "FANTASIAN", id: 1517339045
