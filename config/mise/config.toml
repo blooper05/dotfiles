@@ -51,7 +51,7 @@ popeye = "0.22.1"
 stern = "1.33.0"
 
 packer = "1.14.2"
-terraform = "1.13.0"
+terraform = "1.13.3"
 terraform-docs = "0.20.0"
 terragrunt = "0.86.2"
 tflint = "0.58.1"
