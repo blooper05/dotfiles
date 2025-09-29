@@ -37,7 +37,7 @@ act = "0.2.81"
 github-cli = "2.80.0"
 
 aws-cli = "2.31.3"
-aws-sam = "1.143.0"
+aws-sam = "1.144.0"
 ecspresso = "2.6.0"
 
 argocd = "2.13.3"
