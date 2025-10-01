@@ -52,8 +52,10 @@
       "WebFetch",
       "WebSearch"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "plan"
   },
+  "model": "opus",
   "hooks": {
     "Notification": [
       {
@@ -78,7 +80,6 @@
       }
     ]
   },
-  "model": "opusplan",
   "statusLine": {
     "type": "command",
     "command": "ccusage statusline"
