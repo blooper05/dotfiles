@@ -83,5 +83,6 @@
   "statusLine": {
     "type": "command",
     "command": "ccusage statusline"
-  }
+  },
+  "alwaysThinkingEnabled": true
 }
