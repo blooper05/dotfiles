@@ -10,7 +10,7 @@ elm = "0.19.1"
 go-jsonnet = "0.21.0"
 perl = "5.42.0"
 
-uv = "0.8.22"
+uv = "0.9.0"
 
 "npm:markuplint" = "4.13.1"
 "pipx:gitlint-core" = "0.19.1"
