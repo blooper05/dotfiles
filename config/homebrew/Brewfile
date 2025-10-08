@@ -2,6 +2,7 @@ tap "fujiwara/tap"
 tap "k1low/tap"
 
 brew "aider"
+brew "argocd-autopilot"
 brew "bat"
 brew "bettercap"
 brew "binwalk"
