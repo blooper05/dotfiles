@@ -4,7 +4,7 @@
   "cssmodules-language-server": "1.5.1",
   "deno": "v2.5.4",
   "docker-compose-language-service": "0.4.0",
-  "dockerfile-language-server": "0.14.1",
+  "dockerfile-language-server": "0.15.0",
   "elm-language-server": "2.8.0",
   "eslint-lsp": "4.10.0",
   "gopls": "v0.20.0",
