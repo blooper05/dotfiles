@@ -14,7 +14,7 @@ uv = "0.9.4"
 
 "npm:markuplint" = "4.13.1"
 "pipx:gitlint-core" = "0.19.1"
-"pipx:sqlfluff" = "3.4.2"
+"pipx:sqlfluff" = "3.5.0"
 actionlint = "1.7.8"
 dotenv-linter = "3.3.0"
 editorconfig-checker = "3.4.1"
