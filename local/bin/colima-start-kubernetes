@@ -1,3 +1,4 @@
 #!/bin/bash
 
 colima start --profile=kubernetes --cpu=4 --memory=8 --dns=1.1.1.1,1.0.0.1,8.8.8.8,8.8.4.4 --vm-type=vz --vz-rosetta --kubernetes
+kubectl config unset current-context
