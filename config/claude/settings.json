@@ -31,6 +31,7 @@
       "Bash(git add:*)",
       "Bash(git checkout -b:*)",
       "Bash(git fetch:*)",
+      "Bash(git log:*)",
       "Bash(git status:*)",
       "Bash(grep:*)",
       "Bash(head:*)",
