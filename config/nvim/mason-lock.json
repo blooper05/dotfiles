@@ -9,7 +9,7 @@
   "eslint-lsp": "4.10.0",
   "gopls": "v0.20.0",
   "grammarly-languageserver": "0.0.4",
-  "helm-ls": "v0.5.2",
+  "helm-ls": "v0.5.3",
   "html-lsp": "4.10.0",
   "json-lsp": "4.10.0",
   "jsonnet-language-server": "v0.16.0",
@@ -22,6 +22,6 @@
   "taplo": "0.10.0",
   "terraform-ls": "v0.38.2",
   "typescript-language-server": "5.0.1",
-  "vue-language-server": "3.1.1",
+  "vue-language-server": "3.1.2",
   "yaml-language-server": "1.19.2"
 }
