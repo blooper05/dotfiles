@@ -60,7 +60,9 @@
       "WebFetch",
       "WebSearch"
     ],
-    "deny": [],
+    "deny": [
+      "Bash(kubectl config use-context:*)"
+    ],
     "defaultMode": "plan"
   },
   "hooks": {
