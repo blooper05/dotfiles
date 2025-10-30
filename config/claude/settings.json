@@ -61,7 +61,11 @@
       "WebSearch"
     ],
     "deny": [
-      "Bash(kubectl config use-context:*)"
+      "Bash(kubectl apply:*)",
+      "Bash(kubectl config use-context:*)",
+      "Bash(kubectl delete:*)",
+      "Bash(kubectl patch:*)",
+      "Bash(kubectl replace:*)"
     ],
     "defaultMode": "plan"
   },
