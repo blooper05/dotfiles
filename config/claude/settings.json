@@ -37,6 +37,7 @@
       "Bash(head:*)",
       "Bash(jq:*)",
       "Bash(kubectl cluster-info:*)",
+      "Bash(kubectl config current-context:*)",
       "Bash(kubectl describe:*)",
       "Bash(kubectl diff:*)",
       "Bash(kubectl get:*)",
