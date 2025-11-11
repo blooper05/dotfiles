@@ -29,7 +29,7 @@ yamllint = "1.37.1"
 
 adr-tools = "3.0.0"
 k6 = "1.4.0"
-redis-cli = "8.2.2"
+redis-cli = "8.2.3"
 sops = "3.11.0"
 trivy = "0.67.2"
 
