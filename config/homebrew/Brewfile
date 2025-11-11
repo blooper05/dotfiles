@@ -24,7 +24,6 @@ brew "gnupg"
 brew "gping"
 brew "jq"
 brew "luajit", args: ["HEAD"]
-brew "luarocks"
 brew "mackup"
 brew "mas"
 brew "terminal-notifier"
