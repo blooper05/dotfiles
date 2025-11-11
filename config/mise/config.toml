@@ -38,7 +38,7 @@ github-cli = "2.83.0"
 
 aws-cli = "2.31.33"
 aws-sam = "1.146.0"
-ecspresso = "2.6.2"
+ecspresso = "2.6.3"
 
 argocd = "3.1.9"
 helm = "3.19.0"
