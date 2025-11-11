@@ -4,9 +4,6 @@ set -ex
 
 nvim --headless '+Lazy! install' +quitall
 
-uv tool install --upgrade pynvim
-gem install neovim && gem environment
-npm install --global neovim
 cpanm --notest Neovim::Ext
 
 # nvim --headless '+Codeium Auth' +quitall
