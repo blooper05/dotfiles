@@ -58,7 +58,7 @@ tflint = "0.59.1"
 tfsec = "1.28.14"
 tfupdate = "0.9.2"
 
-"npm:@playwright/mcp" = "0.0.44"
+"npm:@playwright/mcp" = "0.0.46"
 "npm:@upstash/context7-mcp" = "1.0.26"
 "npm:@zed-industries/claude-code-acp" = "0.8.0"
 "npm:ccusage" = "17.1.3"
