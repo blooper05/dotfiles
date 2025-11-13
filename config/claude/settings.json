@@ -35,6 +35,7 @@
       "Bash(git status:*)",
       "Bash(grep:*)",
       "Bash(head:*)",
+      "Bash(helm lint:*)",
       "Bash(jq:*)",
       "Bash(kubectl cluster-info:*)",
       "Bash(kubectl config current-context:*)",
