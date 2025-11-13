@@ -36,6 +36,7 @@
       "Bash(grep:*)",
       "Bash(head:*)",
       "Bash(helm lint:*)",
+      "Bash(helm template:*)",
       "Bash(jq:*)",
       "Bash(kubectl cluster-info:*)",
       "Bash(kubectl config current-context:*)",
