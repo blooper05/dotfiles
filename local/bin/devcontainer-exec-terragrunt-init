@@ -1,3 +1,3 @@
 #!/bin/bash
 
-devcontainer-exec terragrunt --terragrunt-working-dir="$1" init --all --queue-include-external
+devcontainer-exec terragrunt --working-dir="$1" init --all --queue-include-external

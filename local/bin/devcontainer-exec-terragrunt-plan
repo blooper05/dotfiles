@@ -5,13 +5,13 @@ set -euo pipefail
 terragrunt_dir="$1"
 plan_file=.terraform/terraform.plan.out
 
-devcontainer-exec terragrunt --terragrunt-working-dir="$terragrunt_dir" plan --out="$plan_file"
+devcontainer-exec terragrunt --working-dir="$terragrunt_dir" plan --out="$plan_file"
 
-plan_output=$(devcontainer-exec terragrunt --terragrunt-working-dir="$terragrunt_dir" show --no-color "$plan_file")
+plan_output=$(devcontainer-exec terragrunt --working-dir="$terragrunt_dir" show --no-color "$plan_file")
 
 tee >(pbcopy) <<EOF
 <details>
-<summary><code>❯ devcontainer-exec terragrunt --terragrunt-working-dir=$terragrunt_dir plan</code></summary>
+<summary><code>❯ devcontainer-exec terragrunt --working-dir=$terragrunt_dir plan</code></summary>
 
 \`\`\`hcl
 $plan_output

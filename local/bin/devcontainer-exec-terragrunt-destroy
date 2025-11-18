@@ -5,13 +5,13 @@ set -euo pipefail
 terragrunt_dir="$1"
 tmpfile=$(mktemp)
 
-devcontainer-exec terragrunt --terragrunt-working-dir="$terragrunt_dir" destroy --no-color 2>&1 | tee "$tmpfile"
+devcontainer-exec terragrunt --working-dir="$terragrunt_dir" destroy --no-color 2>&1 | tee "$tmpfile"
 
 destroy_output=$(cat "$tmpfile")
 
 tee >(pbcopy) <<EOF
 <details>
-<summary><code>❯ terragrunt --terragrunt-working-dir=$terragrunt_dir destroy</code></summary>
+<summary><code>❯ terragrunt --working-dir=$terragrunt_dir destroy</code></summary>
 
 \`\`\`hcl
 $destroy_output
