@@ -1,9 +1,5 @@
 {
   "mcpServers": {
-    "new-relic-mcp": {
-      "name": "New Relic",
-      "url": "https://mcp.newrelic.com/mcp/"
-    },
     "github-mcp": {
       "name": "GitHub",
       "url": "https://api.githubcopilot.com/mcp/",
@@ -14,6 +10,10 @@
     "atlassian-mcp": {
       "name": "Atlassian",
       "url": "https://mcp.atlassian.com/v1/sse"
+    },
+    "new-relic-mcp": {
+      "name": "New Relic",
+      "url": "https://mcp.newrelic.com/mcp/"
     },
     "serena-mcp": {
       "command": "serena-mcp-server",
