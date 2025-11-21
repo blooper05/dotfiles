@@ -10,3 +10,6 @@ eval "$(awsdo --disable-cache)"
 
 # otp="$(op item get "AWS - $1" --otp)"
 # eval "$(awsdo --disable-cache --token-code "$otp")"
+
+AWS_CREDENTIAL_EXPIRATION=$(date -u -v+8H '+%Y-%m-%dT%H:%M:%SZ')
+export AWS_CREDENTIAL_EXPIRATION
