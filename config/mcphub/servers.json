@@ -22,6 +22,10 @@
     "context7-mcp": {
       "command": "context7-mcp"
     },
+    "codex-mcp": {
+      "command": "codex",
+      "args": ["mcp-server"]
+    },
     "playwright-mcp": {
       "command": "mcp-server-playwright"
     }
