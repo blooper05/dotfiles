@@ -18,3 +18,5 @@ $destroy_output
 \`\`\`
 </details>
 EOF
+
+devcontainer-exec terragrunt --working-dir="$terragrunt_dir" run --all state list --queue-include-external
