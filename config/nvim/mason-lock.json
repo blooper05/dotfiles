@@ -9,7 +9,7 @@
   "eslint-lsp": "4.10.0",
   "gopls": "v0.20.0",
   "grammarly-languageserver": "0.0.4",
-  "helm-ls": "v0.5.3",
+  "helm-ls": "v0.5.4",
   "html-lsp": "4.10.0",
   "json-lsp": "4.10.0",
   "jsonnet-language-server": "v0.16.0",
