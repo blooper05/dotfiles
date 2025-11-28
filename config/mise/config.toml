@@ -64,7 +64,7 @@ tfupdate = "0.9.3"
 
 "npm:@playwright/mcp" = "0.0.48"
 "npm:@upstash/context7-mcp" = "1.0.30"
-"npm:@zed-industries/claude-code-acp" = "0.10.8"
+"npm:@zed-industries/claude-code-acp" = "0.10.9"
 "npm:ccusage" = "17.1.6"
 "npm:mcp-hub" = "4.2.1"
 "pipx:oraios/serena" = "v0.1.4"
