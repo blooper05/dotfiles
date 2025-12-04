@@ -90,9 +90,7 @@ return {
     dependencies = {
       { 'nvim-lua/plenary.nvim' },
     },
-    opts = {
-      auto_approve = true,
-    },
+    config = true,
     cmd = 'MCPHub',
   },
 
