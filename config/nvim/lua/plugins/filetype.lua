@@ -17,22 +17,8 @@ return {
   -- Markdown
 
   {
-    'gaoDean/autolist.nvim',
-    config = true,
+    'yousefhadder/markdown-plus.nvim',
     ft = 'markdown',
-    keys = {
-      -- stylua: ignore start
-      { '<Tab>',   '<Cmd>AutolistTab<CR>',              mode = 'i', ft = 'markdown' },
-      { '<S-Tab>', '<Cmd>AutolistShiftTab<CR>',         mode = 'i', ft = 'markdown' },
-      { '<CR>',    '<CR><Cmd>AutolistNewBullet<CR>',    mode = 'i', ft = 'markdown' },
-      { 'o',       'o<Cmd>AutolistNewBullet<CR>',       mode = 'n', ft = 'markdown' },
-      { 'O',       'O<Cmd>AutolistNewBulletBefore<CR>', mode = 'n', ft = 'markdown' },
-      { '>>',      '>><Cmd>AutolistRecalculate<CR>',    mode = 'n', ft = 'markdown' },
-      { '<<',      '<<<Cmd>AutolistRecalculate<CR>',    mode = 'n', ft = 'markdown' },
-      { 'dd',      'dd<Cmd>AutolistRecalculate<CR>',    mode = 'n', ft = 'markdown' },
-      { 'd',       'd<Cmd>AutolistRecalculate<CR>',     mode = 'v', ft = 'markdown' },
-      -- stylua: ignore end
-    },
   },
 
   {
