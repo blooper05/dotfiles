@@ -68,6 +68,7 @@ tfupdate = "0.9.3"
 "npm:@zed-industries/claude-code-acp" = "0.11.0"
 "npm:ccusage" = "17.1.6"
 "npm:mcp-hub" = "4.2.1"
+"pipx:awslabs.terraform-mcp-server" = "1.0.9"
 "pipx:oraios/serena" = "v0.1.4"
 "pipx:plamo-translate" = "1.0.5"
 

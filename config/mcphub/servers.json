@@ -26,6 +26,9 @@
       "name": "AWS Knowledge MCP Server",
       "url": "https://knowledge-mcp.global.api.aws"
     },
+    "aws-terraform-mcp-server": {
+      "command": "awslabs.terraform-mcp-server"
+    },
     "codex-mcp": {
       "command": "codex",
       "args": ["mcp-server"]
