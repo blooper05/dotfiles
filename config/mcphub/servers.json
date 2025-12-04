@@ -31,6 +31,9 @@
     },
     "playwright-mcp": {
       "command": "mcp-server-playwright"
+    },
+    "taskmaster-ai": {
+      "command": "task-master-ai"
     }
   }
 }
