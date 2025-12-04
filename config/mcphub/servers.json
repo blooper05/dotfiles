@@ -1,18 +1,15 @@
 {
   "mcpServers": {
     "github-mcp": {
-      "name": "GitHub",
       "url": "https://api.githubcopilot.com/mcp/",
       "headers": {
         "Authorization": "Bearer ${cmd:op read 'op://Personal/GitHub API/credential' --no-newline}"
       }
     },
     "atlassian-mcp": {
-      "name": "Atlassian",
       "url": "https://mcp.atlassian.com/v1/sse"
     },
     "new-relic-mcp": {
-      "name": "New Relic",
       "url": "https://mcp.newrelic.com/mcp/"
     },
     "serena-mcp": {
@@ -23,7 +20,6 @@
       "command": "context7-mcp"
     },
     "aws-knowledge-mcp-server": {
-      "name": "AWS Knowledge MCP Server",
       "url": "https://knowledge-mcp.global.api.aws"
     },
     "aws-terraform-mcp-server": {
