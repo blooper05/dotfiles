@@ -63,15 +63,17 @@ tflint = "0.60.0"
 tfsec = "1.28.14"
 tfupdate = "0.9.3"
 
-"npm:@playwright/mcp" = "0.0.49"
-"npm:@upstash/context7-mcp" = "1.0.31"
+"pipx:plamo-translate" = "1.0.5"
+
 "npm:@zed-industries/claude-code-acp" = "0.11.0"
 "npm:ccusage" = "17.1.6"
 "npm:mcp-hub" = "4.2.1"
+
+"npm:@playwright/mcp" = "0.0.49"
+"npm:@upstash/context7-mcp" = "1.0.31"
 "npm:task-master-ai" = "0.37.0"
 "pipx:awslabs.terraform-mcp-server" = "1.0.9"
 "pipx:oraios/serena" = "v0.1.4"
-"pipx:plamo-translate" = "1.0.5"
 
 [settings]
 idiomatic_version_file_enable_tools = ["go", "node", "ruby"]
