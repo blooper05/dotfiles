@@ -165,5 +165,16 @@
     "type": "command",
     "command": "ccusage statusline"
   },
+  "enabledPlugins": {
+    "commit-commands@claude-code-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code"
+      }
+    }
+  },
   "alwaysThinkingEnabled": true
 }
