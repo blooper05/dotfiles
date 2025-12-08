@@ -37,6 +37,7 @@ redis-cli = "8.4.0"
 sops = "3.11.0"
 trivy = "0.68.1"
 
+"aqua:suzuki-shunsuke/pinact" = "3.4.6"
 act = "0.2.83"
 github-cli = "2.83.1"
 
