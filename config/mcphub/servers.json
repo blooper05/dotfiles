@@ -1,41 +1,52 @@
 {
   "mcpServers": {
     "github-mcp": {
+      "disabled": false,
       "url": "https://api.githubcopilot.com/mcp/",
       "headers": {
         "Authorization": "Bearer ${cmd:op read 'op://Personal/GitHub API/credential' --no-newline}"
       }
     },
     "atlassian-mcp": {
+      "disabled": false,
       "url": "https://mcp.atlassian.com/v1/sse"
     },
     "new-relic-mcp": {
+      "disabled": true,
       "url": "https://mcp.newrelic.com/mcp/"
     },
     "sequential-thinking": {
+      "disabled": false,
       "command": "mcp-server-sequential-thinking"
     },
     "serena-mcp": {
+      "disabled": false,
       "command": "serena-mcp-server",
       "args": ["--context", "ide-assistant", "--project", ".", "--enable-web-dashboard", "false"]
     },
     "context7-mcp": {
+      "disabled": false,
       "command": "context7-mcp"
     },
     "aws-knowledge-mcp-server": {
+      "disabled": true,
       "url": "https://knowledge-mcp.global.api.aws"
     },
     "aws-terraform-mcp-server": {
+      "disabled": true,
       "command": "awslabs.terraform-mcp-server"
     },
     "codex-mcp": {
+      "disabled": false,
       "command": "codex",
       "args": ["mcp-server"]
     },
     "playwright-mcp": {
+      "disabled": true,
       "command": "mcp-server-playwright"
     },
     "taskmaster-ai": {
+      "disabled": true,
       "command": "task-master-ai"
     }
   }
