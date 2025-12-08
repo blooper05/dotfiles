@@ -40,7 +40,7 @@ trivy = "0.68.1"
 act = "0.2.83"
 github-cli = "2.83.1"
 
-aws-cli = "2.32.10"
+aws-cli = "2.32.11"
 aws-sam = "1.150.1"
 ecspresso = "2.6.5"
 
