@@ -5,7 +5,7 @@ set -euo pipefail
 terragrunt_dir="$1"
 plan_file=.terraform/terraform.plan.out
 
-devcontainer-exec terragrunt --working-dir="$terragrunt_dir" plan -destroy --out="$plan_file"
+devcontainer-exec terragrunt --working-dir="$terragrunt_dir" plan --all -destroy --queue-exclude-external --out="$plan_file"
 
 plan_output=$(devcontainer-exec terragrunt --working-dir="$terragrunt_dir" show --no-color "$plan_file")
 
