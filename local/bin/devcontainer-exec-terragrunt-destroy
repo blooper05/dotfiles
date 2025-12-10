@@ -5,7 +5,7 @@ set -euo pipefail
 terragrunt_dir="$1"
 tmpfile=$(mktemp)
 
-devcontainer-exec terragrunt --working-dir="$terragrunt_dir" run --all destroy --queue-include-external --no-color 2>&1 | tee "$tmpfile"
+devcontainer-exec terragrunt --working-dir="$terragrunt_dir" run --all destroy --queue-exclude-external --no-color 2>&1 | tee "$tmpfile"
 
 destroy_output=$(cat "$tmpfile")
 
@@ -19,4 +19,4 @@ $destroy_output
 </details>
 EOF
 
-devcontainer-exec terragrunt --working-dir="$terragrunt_dir" run --all state list --queue-include-external
+devcontainer-exec terragrunt --working-dir="$terragrunt_dir" run --all state list --queue-exclude-external
