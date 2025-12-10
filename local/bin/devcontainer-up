@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ "$KUBIE_ACTIVE" = 1 ] && exit 1
+
 colima-start-devcontainer &&
 	devcontainer up \
 		--mount="type=bind,source=$AWS_CONFIG_FILE,target=/root/.aws/config" \
