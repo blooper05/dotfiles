@@ -135,7 +135,9 @@
       "Bash(kubectl config use-context:*)",
       "Bash(kubectl delete:*)",
       "Bash(kubectl patch:*)",
-      "Bash(kubectl replace:*)"
+      "Bash(kubectl replace:*)",
+      "NotebookEdit",
+      "NotebookRead"
     ],
     "defaultMode": "plan"
   },
