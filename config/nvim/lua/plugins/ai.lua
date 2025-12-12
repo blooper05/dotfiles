@@ -51,7 +51,7 @@ return {
           end,
           devstral = function()
             return require('codecompanion.adapters').extend('ollama', {
-              schema = { model = { default = 'devstral:24b' } },
+              schema = { model = { default = 'devstral-small-2:24b' } },
             })
           end,
           mistral = function()

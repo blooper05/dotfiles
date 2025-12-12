@@ -19,6 +19,6 @@ rm -rf "$HOME/.docker/"
 brew services restart ollama
 
 ollama pull gpt-oss:20b
-ollama pull devstral:24b
+ollama pull devstral-small-2:24b
 ollama pull mistral-small3.2:24b
 ollama pull mitmul/plamo-2-translate:F16
