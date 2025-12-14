@@ -48,7 +48,7 @@ aws-sam = "1.150.1"
 ecspresso = "2.6.5"
 
 argocd = "3.2.1"
-helm = "4.0.2"
+helm = "4.0.4"
 helm-diff = "3.14.1"
 k9s = "0.50.16"
 kube-capacity = "0.8.0"
