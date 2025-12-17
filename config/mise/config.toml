@@ -68,7 +68,7 @@ tfupdate = "0.9.3"
 
 "pipx:plamo-translate" = "1.0.5"
 
-"npm:@zed-industries/claude-code-acp" = "0.12.4"
+"npm:@zed-industries/claude-code-acp" = "0.12.6"
 "npm:ccusage" = "17.2.0"
 "npm:mcp-hub" = "4.2.1"
 
