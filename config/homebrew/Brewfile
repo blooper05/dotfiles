@@ -47,7 +47,6 @@ brew "zsh"
 brew "fujiwara/tap/ecsta"
 brew "k1low/tap/awsdo"
 
-brew "libyaml"
 brew "tree-sitter", args: ["HEAD"]
 
 cask "1password"
