@@ -20,7 +20,7 @@
       "command": "mcp-server-sequential-thinking"
     },
     "serena-mcp": {
-      "disabled": false,
+      "disabled": true,
       "command": "serena-mcp-server",
       "args": ["--context", "ide-assistant", "--project", ".", "--enable-web-dashboard", "false"]
     },
@@ -37,7 +37,7 @@
       "command": "awslabs.terraform-mcp-server"
     },
     "codex-mcp": {
-      "disabled": false,
+      "disabled": true,
       "command": "codex",
       "args": ["mcp-server"]
     },
