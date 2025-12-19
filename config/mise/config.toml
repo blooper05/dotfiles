@@ -47,7 +47,7 @@ aws-cli = "2.32.20"
 aws-sam = "1.151.0"
 ecspresso = "2.7.0"
 
-argocd = "3.2.1"
+argocd = "3.2.2"
 helm = "4.0.4"
 helm-diff = "3.14.1"
 k9s = "0.50.16"
