@@ -36,7 +36,7 @@ adr-tools = "3.0.0"
 k6 = "1.4.2"
 redis-cli = "8.4.0"
 sops = "3.11.0"
-trivy = "0.68.1"
+trivy = "0.68.2"
 
 "aqua:suzuki-shunsuke/pinact" = "3.6.0"
 act = "0.2.83"
