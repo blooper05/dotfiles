@@ -73,7 +73,7 @@ tfupdate = "0.9.3"
 "npm:mcp-hub" = "4.2.1"
 
 "npm:@modelcontextprotocol/server-sequential-thinking" = "2025.12.18"
-"npm:@playwright/mcp" = "0.0.52"
+"npm:@playwright/mcp" = "0.0.53"
 "npm:@upstash/context7-mcp" = "1.0.33"
 "npm:task-master-ai" = "0.39.0"
 "pipx:awslabs.terraform-mcp-server" = "1.0.10"
