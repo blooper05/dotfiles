@@ -16,8 +16,7 @@ return {
       { '<Space>c', '[claudecode]', remap = true },
 
       -- stylua: ignore start
-      { '[claudecode]c', function() vim.cmd('ClaudeCode')            end },
-      { '[claudecode]f', function() vim.cmd('ClaudeCodeFocus')       end },
+      { '[claudecode]c', function() vim.cmd('ClaudeCodeFocus')       end },
       { '[claudecode]r', function() vim.cmd('ClaudeCode --resume')   end },
       { '[claudecode]C', function() vim.cmd('ClaudeCode --continue') end },
       { '[claudecode]b', function() vim.cmd('ClaudeCodeAdd %')       end },
