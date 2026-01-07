@@ -6,9 +6,7 @@ return {
     },
     opts = {
       terminal = {
-        snacks_win_opts = {
-          width = 0.4,
-        },
+        split_width_percentage = 0.4,
       },
     },
     keys = {
