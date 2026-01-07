@@ -86,20 +86,6 @@ return {
   },
 
   {
-    'folke/sidekick.nvim',
-    dependencies = {
-      { 'folke/snacks.nvim' },
-      { 'neovim/nvim-lspconfig' },
-      { 'nvim-treesitter/nvim-treesitter-textobjects' },
-      { 'zbirenbaum/copilot.lua' },
-    },
-    opts = {
-      cli = { mux = { enabled = true } },
-    },
-    cmd = 'Sidekick',
-  },
-
-  {
     'ravitemer/mcphub.nvim',
     dependencies = {
       { 'nvim-lua/plenary.nvim' },
