@@ -48,8 +48,6 @@ brew "fujiwara/tap/ecsta"
 brew "k1low/tap/awsdo"
 brew "k1low/tap/git-wt"
 
-brew "tree-sitter", args: ["HEAD"]
-
 cask "1password"
 cask "1password-cli"
 cask "adobe-creative-cloud"
