@@ -39,7 +39,7 @@ sops = "3.11.0"
 trivy = "0.68.2"
 
 "aqua:suzuki-shunsuke/pinact" = "3.8.0"
-act = "0.2.83"
+act = "0.2.84"
 github-cli = "2.83.2"
 
 "aqua:go-to-k/cls3" = "0.31.1"
