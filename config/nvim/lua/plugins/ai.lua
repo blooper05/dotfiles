@@ -4,7 +4,13 @@ return {
     dependencies = {
       { 'folke/snacks.nvim' },
     },
-    config = true,
+    opts = {
+      terminal = {
+        snacks_win_opts = {
+          width = 0.4,
+        },
+      },
+    },
     keys = {
       { '[claudecode]', '<Nop>' },
       { '<Space>c', '[claudecode]', remap = true },
