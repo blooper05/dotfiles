@@ -24,7 +24,6 @@ return {
         'html',
         'jsonls',
         'jsonnet_ls',
-        -- 'lsp_ai',
         'lua_ls',
         -- 'nginx-language-server',
         -- 'postgres_lsp',
