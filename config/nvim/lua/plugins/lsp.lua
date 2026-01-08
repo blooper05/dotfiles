@@ -20,7 +20,6 @@ return {
         'eslint',
         'gh_actions_ls',
         'gopls',
-        'grammarly',
         'helm_ls',
         'html',
         'jsonls',
