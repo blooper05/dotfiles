@@ -15,7 +15,7 @@ return {
         'cssmodules_ls',
         'denols',
         'docker_compose_language_service',
-        'dockerls',
+        'docker_language_server',
         'elmls',
         'eslint',
         'gopls',
