@@ -25,7 +25,7 @@ return {
         'jsonls',
         'jsonnet_ls',
         'lua_ls',
-        -- 'nginx-language-server',
+        'nginx-language-server',
         -- 'postgres_lsp',
         'pylsp',
         -- 'remark_ls',
