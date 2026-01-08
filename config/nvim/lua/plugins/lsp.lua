@@ -28,7 +28,7 @@ return {
         'nginx-language-server',
         'postgres_lsp',
         'pylsp',
-        -- 'remark_ls',
+        'remark_ls',
         'ruby_lsp',
         -- 'solargraph',
         -- 'sorbet',
