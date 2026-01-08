@@ -30,7 +30,7 @@ return {
         'pylsp',
         'remark_ls',
         'ruby_lsp',
-        -- 'solargraph',
+        'solargraph',
         -- 'sorbet',
         'sqls',
         -- 'steep',
