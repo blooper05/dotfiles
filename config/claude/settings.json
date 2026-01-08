@@ -175,6 +175,7 @@
     "type": "command",
     "command": "ccusage statusline"
   },
+  "alwaysThinkingEnabled": true,
   "enabledPlugins": {
     "code-review@claude-code-plugins": true,
     "commit-commands@claude-code-plugins": true,
@@ -195,6 +196,5 @@
         "repo": "anthropics/claude-plugins-official"
       }
     }
-  },
-  "alwaysThinkingEnabled": true
+  }
 }
