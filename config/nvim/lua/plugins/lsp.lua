@@ -31,7 +31,7 @@ return {
         'remark_ls',
         'ruby_lsp',
         'solargraph',
-        -- 'sorbet',
+        'sorbet',
         'sqls',
         -- 'steep',
         'stylelint_lsp',
