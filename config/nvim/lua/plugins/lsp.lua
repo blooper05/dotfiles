@@ -36,7 +36,6 @@ return {
         'sqls',
         -- 'steep',
         'stylelint_lsp',
-        'tailwindcss',
         'taplo',
         'terraformls',
         'ts_ls',
