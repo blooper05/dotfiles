@@ -33,7 +33,7 @@ return {
         'ruby_lsp',
         -- 'solargraph',
         -- 'sorbet',
-        'sqlls',
+        'sqls',
         -- 'steep',
         'stylelint_lsp',
         'tailwindcss',
