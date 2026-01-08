@@ -38,7 +38,6 @@ return {
         'taplo',
         'terraformls',
         'ts_ls',
-        -- 'typeprof',
         'yamlls',
       }
 
