@@ -18,6 +18,7 @@ return {
         'docker_language_server',
         'elmls',
         'eslint',
+        'gh_actions_ls',
         'gopls',
         'grammarly',
         'helm_ls',
