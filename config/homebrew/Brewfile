@@ -39,6 +39,7 @@ brew "sk"
 # brew "ssh-copy-id", link: true
 brew "starship"
 brew "termshark"
+brew "tree-sitter", args: ["HEAD"]
 brew "wordnet"
 brew "xh"
 brew "yq"
