@@ -1,3 +1,9 @@
 #!/bin/bash
 
-colima start --profile=devcontainer --cpu=4 --memory=8 --network-address --dns=1.1.1.1,1.0.0.1,8.8.8.8,8.8.4.4 --vm-type=vz --vz-rosetta
+colima start --profile=devcontainer \
+	--cpu=4 \
+	--memory=8 \
+	--network-address \
+	--dns=1.1.1.1,1.0.0.1,8.8.8.8,8.8.4.4 \
+	--vm-type=vz \
+	--vz-rosetta
