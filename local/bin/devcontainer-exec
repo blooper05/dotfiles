@@ -1,10 +1,11 @@
 #!/bin/bash
 
-devcontainer exec \
-	--remote-env=AWS_PROFILE="$AWS_PROFILE" \
-	--remote-env=AWS_REGION="$AWS_REGION" \
-	--remote-env=AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
-	--remote-env=AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" \
-	--remote-env=AWS_SESSION_TOKEN="$AWS_SESSION_TOKEN" \
-	--remote-env=AWS_CREDENTIAL_EXPIRATION="$AWS_CREDENTIAL_EXPIRATION" \
-	--workspace-folder=. "$@"
+colima-start-devcontainer &&
+	devcontainer exec \
+		--remote-env=AWS_PROFILE="$AWS_PROFILE" \
+		--remote-env=AWS_REGION="$AWS_REGION" \
+		--remote-env=AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
+		--remote-env=AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" \
+		--remote-env=AWS_SESSION_TOKEN="$AWS_SESSION_TOKEN" \
+		--remote-env=AWS_CREDENTIAL_EXPIRATION="$AWS_CREDENTIAL_EXPIRATION" \
+		--workspace-folder=. "$@"
