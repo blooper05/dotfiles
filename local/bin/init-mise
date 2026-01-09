@@ -9,4 +9,4 @@ mkdir -p "$HOME/.local/share/gnupg"
 rm -rf "$HOME/.cargo/"
 rm -rf "$HOME/.rustup/"
 
-claude mcp add --transport sse mcp-hub http://localhost:37373/mcp --scope user
+claude mcp add --scope user --transport sse mcp-hub http://localhost:37373/mcp
