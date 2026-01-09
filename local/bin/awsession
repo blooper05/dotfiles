@@ -9,7 +9,5 @@ export AWS_CREDENTIAL_EXPIRATION
 
 eval "$(awsdo --disable-cache)"
 
-# eval "$(aws configure export-credentials --format=env)"
-
 # otp="$(op item get "AWS - $1" --otp)"
 # eval "$(awsdo --disable-cache --token-code "$otp")"
