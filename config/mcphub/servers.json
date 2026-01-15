@@ -37,7 +37,7 @@
       "command": "awslabs.terraform-mcp-server"
     },
     "codex-mcp": {
-      "disabled": true,
+      "disabled": false,
       "command": "codex",
       "args": ["mcp-server"]
     },
