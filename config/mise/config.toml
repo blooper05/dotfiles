@@ -43,7 +43,7 @@ act = "0.2.84"
 github-cli = "2.85.0"
 
 "aqua:go-to-k/cls3" = "0.32.4"
-aws-cli = "2.33.0"
+aws-cli = "2.33.2"
 aws-sam = "1.151.0"
 ecspresso = "2.7.0"
 
