@@ -32,7 +32,6 @@ apply = ['defer']
 
 [plugins.anyframe]
 github = 'blooper05/anyframe'
-branch = 'add-skim_support'
 apply = ['defer']
 
 [plugins.git-cococo]
