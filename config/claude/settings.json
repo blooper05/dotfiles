@@ -149,17 +149,6 @@
     "defaultMode": "plan"
   },
   "hooks": {
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts --event notification"
-          }
-        ]
-      }
-    ],
     "Stop": [
       {
         "matcher": "",
@@ -167,6 +156,17 @@
           {
             "type": "command",
             "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts --event stop"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts --event notification"
           }
         ]
       }
