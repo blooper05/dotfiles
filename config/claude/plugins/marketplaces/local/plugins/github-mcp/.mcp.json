@@ -1,9 +1,0 @@
-{
-  "github-mcp": {
-    "type": "http",
-    "url": "https://api.githubcopilot.com/mcp/",
-    "headers": {
-      "Authorization": "Bearer ${cmd:op read 'op://Personal/GitHub API/credential' --no-newline}"
-    }
-  }
-}
