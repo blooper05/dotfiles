@@ -178,6 +178,7 @@
   "alwaysThinkingEnabled": true,
   "language": "japanese",
   "enabledPlugins": {
+    "context7-mcp@local": true,
     "code-review@claude-code-plugins": true,
     "commit-commands@claude-code-plugins": true,
     "feature-dev@claude-code-plugins": true,

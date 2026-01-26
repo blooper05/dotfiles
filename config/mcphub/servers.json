@@ -24,10 +24,6 @@
       "command": "serena-mcp-server",
       "args": ["--context", "ide-assistant", "--project", ".", "--enable-web-dashboard", "false"]
     },
-    "context7-mcp": {
-      "disabled": false,
-      "command": "context7-mcp"
-    },
     "aws-knowledge-mcp-server": {
       "disabled": true,
       "url": "https://knowledge-mcp.global.api.aws"
