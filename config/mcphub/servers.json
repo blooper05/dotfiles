@@ -1,12 +1,5 @@
 {
   "mcpServers": {
-    "github-mcp": {
-      "disabled": false,
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "Authorization": "Bearer ${cmd:op read 'op://Personal/GitHub API/credential' --no-newline}"
-      }
-    },
     "atlassian-mcp": {
       "disabled": false,
       "url": "https://mcp.atlassian.com/v1/sse"
