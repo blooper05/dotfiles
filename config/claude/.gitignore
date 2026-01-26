@@ -4,7 +4,11 @@
 /ide/
 /paste-cache/
 /plans/
-/plugins/
+/plugins/**
+!/plugins/marketplaces/
+/plugins/marketplaces/**
+!/plugins/marketplaces/local/
+!/plugins/marketplaces/local/**
 /projects/
 /session-env/
 /shell-snapshots/
