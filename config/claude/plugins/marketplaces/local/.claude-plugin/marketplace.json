@@ -4,9 +4,5 @@
     "name": "blooper05"
   },
   "plugins": [
-    {
-      "name": "context7-mcp",
-      "source": "./plugins/context7-mcp"
-    }
   ]
 }
