@@ -68,4 +68,3 @@
 [wt]
   basedir     = .git-wt
   copyignored = true
-  nocd        = create
