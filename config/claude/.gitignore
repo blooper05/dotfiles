@@ -9,6 +9,7 @@
 /session-env/
 /shell-snapshots/
 /statsig/
+/tasks/
 /todos/
 /.claude.json
 /.claude.json.backup
