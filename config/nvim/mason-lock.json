@@ -7,7 +7,7 @@
   "docker-language-server": "v0.20.1",
   "elm-language-server": "2.8.0",
   "eslint-lsp": "4.10.0",
-  "gh-actions-language-server": "0.3.42",
+  "gh-actions-language-server": "0.3.43",
   "gopls": "v0.21.0",
   "helm-ls": "v0.5.4",
   "html-lsp": "4.10.0",
