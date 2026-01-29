@@ -13,5 +13,6 @@
 /todos/
 /.claude.json
 /.claude.json.backup
+/.claude.json.backup.*
 /history.jsonl
 /stats-cache.json
