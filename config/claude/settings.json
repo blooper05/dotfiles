@@ -66,6 +66,7 @@
       "Bash(test:*)",
       "Bash(tree:*)",
       "Bash(uniq:*)",
+      "Bash(xargs:*)",
       "Bash(yq:*)",
       "Edit",
       "WebFetch",
