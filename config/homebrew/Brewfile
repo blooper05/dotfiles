@@ -22,6 +22,7 @@ brew "git"
 brew "git-delta"
 brew "git-secrets"
 brew "gnupg"
+brew "gogcli"
 brew "gping"
 brew "jq"
 brew "luajit", args: ["HEAD"]
