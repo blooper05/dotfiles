@@ -59,7 +59,7 @@ kustomize = "5.8.0"
 popeye = "0.22.1"
 stern = "1.33.1"
 
-packer = "1.14.3"
+packer = "1.15.0"
 terraform = "1.14.4"
 terraform-docs = "0.21.0"
 terragrunt = "0.99.1"
