@@ -187,6 +187,12 @@
     "ralph-wiggum@claude-code-plugins": true
   },
   "extraKnownMarketplaces": {
+    "local": {
+      "source": {
+        "source": "directory",
+        "path": "$XDG_CONFIG_HOME/claude/plugins/marketplaces/local"
+      }
+    },
     "claude-code-plugins": {
       "source": {
         "source": "github",
