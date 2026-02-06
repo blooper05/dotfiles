@@ -1,5 +1,12 @@
 #!/bin/bash
 
-set -ex
+set -euo pipefail
 
 ghq get --update -p --parallel --partial=blobless "$@"
+
+cd "$(ghq list --full-path "$@")"
+
+git fetch --all --prune --quiet &&
+	git switch --detach "$(git symbolic-ref refs/remotes/origin/HEAD)"
+
+git branch | grep -v HEAD | xargs git branch --delete || true
