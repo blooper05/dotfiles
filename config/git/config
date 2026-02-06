@@ -25,6 +25,8 @@
   program            = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [help]
   autocorrect = true
+[include]
+  path = ~/.config/git/config.d/default
 [init]
   defaultBranch = main
 [interactive]
