@@ -2,6 +2,7 @@
 /sessions/
 /skills/
 /tmp/
+/.personality_migration
 /auth.json
 /config.toml
 /history.jsonl
