@@ -2,4 +2,4 @@
 
 set -ex
 
-ghq get --update -p --parallel "$@"
+ghq get --update -p --parallel --partial=blobless "$@"
