@@ -16,7 +16,7 @@
   colorMoved     = dimmed-zebra
 [fetch]
   prune     = true
-  # pruneTags = true
+  pruneTags = true
   all       = true
 [gpg]
   format = ssh
