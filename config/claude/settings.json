@@ -139,6 +139,7 @@
       "mcp__mcp-hub__codex_mcp__codex-reply"
     ],
     "deny": [
+      "Bash(git -C:*)",
       "Bash(kubectl apply:*)",
       "Bash(kubectl config use-context:*)",
       "Bash(kubectl delete:*)",
