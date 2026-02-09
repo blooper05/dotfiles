@@ -77,7 +77,7 @@ tfupdate = "0.9.3"
 "npm:@playwright/mcp" = "0.0.64"
 "npm:@upstash/context7-mcp" = "2.1.1"
 "npm:task-master-ai" = "0.43.0"
-"pipx:awslabs.terraform-mcp-server" = "1.0.14"
+"pipx:awslabs.terraform-mcp-server" = "1.0.15"
 "pipx:oraios/serena" = "v0.1.4"
 
 [settings]
