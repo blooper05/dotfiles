@@ -14,6 +14,6 @@ and use it to guide your solution.
 
 # Communication
 
-Use the askUserQuestionTool aggressively
+Use the AskUserQuestion tool aggressively
 to ask as many follow-up questions as necessary
 to achieve full clarity before proceeding.
