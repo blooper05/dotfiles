@@ -6,7 +6,6 @@ ghq get --update -p --parallel --partial=blobless "$@"
 
 cd "$(ghq list --full-path "$@")"
 
-git fetch --all --prune --quiet &&
-	git switch --detach "$(git symbolic-ref refs/remotes/origin/HEAD)"
+git detached-head
 
 git branch | grep -v HEAD | xargs git branch --delete || true

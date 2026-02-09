@@ -3,6 +3,7 @@
   hooksPath = ~/.config/git/hooks
   pager     = delta
 [alias]
+  detached-head = !git fetch --all --prune --quiet && git switch --detach "$(git symbolic-ref refs/remotes/origin/HEAD)"
   graph  = log --graph --pretty=pretty --no-show-signature
   ignore = !curl --silent --location https://www.toptal.com/developers/gitignore/api/$@
 [commit]
