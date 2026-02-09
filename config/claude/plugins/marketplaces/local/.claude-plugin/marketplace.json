@@ -4,5 +4,9 @@
     "name": "blooper05"
   },
   "plugins": [
+    {
+      "name": "mcphub",
+      "source": "./plugins/mcphub"
+    }
   ]
 }

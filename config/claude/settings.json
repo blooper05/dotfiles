@@ -180,6 +180,7 @@
   "alwaysThinkingEnabled": true,
   "language": "japanese",
   "enabledPlugins": {
+    "mcphub@local": true,
     "code-review@claude-code-plugins": true,
     "commit-commands@claude-code-plugins": true,
     "feature-dev@claude-code-plugins": true,
