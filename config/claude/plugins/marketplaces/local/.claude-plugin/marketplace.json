@@ -5,6 +5,10 @@
   },
   "plugins": [
     {
+      "name": "git-workflows",
+      "source": "./plugins/git-workflows"
+    },
+    {
       "name": "mcphub",
       "source": "./plugins/mcphub"
     }
