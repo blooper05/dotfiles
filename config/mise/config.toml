@@ -73,6 +73,7 @@ tfupdate = "0.9.3"
 "npm:ccusage" = "18.0.5"
 "npm:mcp-hub" = "4.2.1"
 
+"npm:@drawio/mcp" = "1.1.0"
 "npm:@modelcontextprotocol/server-sequential-thinking" = "2025.12.18"
 "npm:@playwright/mcp" = "0.0.64"
 "npm:@upstash/context7-mcp" = "2.1.1"
