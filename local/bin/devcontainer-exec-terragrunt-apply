@@ -5,7 +5,7 @@ set -euo pipefail
 terragrunt_dir="$1"
 tmpfile=$(mktemp)
 
-devcontainer-exec terragrunt --working-dir="$terragrunt_dir" run --all apply --queue-exclude-external --no-color 2>&1 | tee "$tmpfile"
+devcontainer-exec terragrunt --working-dir="$terragrunt_dir" run --all --queue-exclude-external -- apply --no-color 2>&1 | tee "$tmpfile"
 
 apply_output=$(cat "$tmpfile")
 
