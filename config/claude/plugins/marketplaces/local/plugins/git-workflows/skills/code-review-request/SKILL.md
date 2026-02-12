@@ -1,7 +1,11 @@
 ---
 name: Code Review Request
 allowed-tools: Bash(git checkout -b:*), Bash(git add:*), Bash(git status:*), Bash(git push:*), Bash(git commit:*), Bash(gh pr create:*)
-description: Commit, push, and open a PR
+description: >-
+  This skill should be used when the user asks to "create a PR",
+  "open a pull request", "send for code review", "push and create PR",
+  "submit for review", "code review request",
+  or needs to commit, push, and open a GitHub pull request in one operation.
 ---
 
 # Code Review Request
