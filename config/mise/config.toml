@@ -45,7 +45,7 @@ github-cli = "2.86.0"
 
 "aqua:go-to-k/cls3" = "0.32.4"
 aws-cli = "2.33.20"
-aws-sam = "1.153.1"
+aws-sam = "1.154.0"
 ecspresso = "2.7.1"
 
 argocd = "3.3.0"
