@@ -12,7 +12,7 @@ description: Commit, push, and open a PR
 - Recent commits: !`git log --oneline -10`
 - PR template: !`cat .github/pull_request_template.md 2>/dev/null || echo "No template found"`
 
-## Your task
+## Workflow
 
 ### Step 1: Branch Creation (Conditional)
 

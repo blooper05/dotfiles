@@ -11,7 +11,7 @@ description: Create a git commit
 - Current branch: !`git branch --show-current`
 - Recent commits: !`git log --oneline -10`
 
-## Your task
+## Workflow
 
 1. Stage related files with `git add`.
 2. Create a single commit with an appropriate message.
