@@ -9,6 +9,7 @@ description: Commit, push, and open a PR
 - Current git status: !`git status`
 - Current git diff (staged and unstaged changes): !`git diff HEAD`
 - Current branch: !`git branch --show-current`
+- Recent commits: !`git log --oneline -10`
 - PR template: !`cat .github/pull_request_template.md 2>/dev/null || echo "No template found"`
 
 ## Your task
@@ -16,7 +17,13 @@ description: Commit, push, and open a PR
 Based on the above changes:
 
 1. Create a new branch if on main
-2. Create a single commit with an appropriate message
+
+### Step 2: Stage and Commit
+
+- Stage related files with `git add`.
+- Create a single commit with an appropriate message.
+  - Match the style of recent commits shown in Context above.
+  - Write in English.
 
 ### Step 3: Push
 

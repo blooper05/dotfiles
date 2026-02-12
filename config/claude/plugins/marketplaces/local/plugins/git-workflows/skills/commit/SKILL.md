@@ -13,7 +13,10 @@ description: Create a git commit
 
 ## Your task
 
-Based on the above changes, create a single git commit.
+1. Stage related files with `git add`.
+2. Create a single commit with an appropriate message.
+   - Match the style of recent commits shown in Context above.
+   - Write in English.
 
 ## Execution Constraints
 
