@@ -18,9 +18,12 @@ Based on the above changes:
 1. Create a new branch if on main
 2. Create a single commit with an appropriate message
 3. Push the branch to origin
-4. Create a pull request using `gh pr create`.
-   Write the title and body in English.
-   If a PR template is found above, use it as the base for the body.
+
+### Step 4: Create Pull Request
+
+- Create a pull request with `gh pr create`.
+- Write the title and body in English.
+- If a PR template is found in Context above, use it as the base for the body.
 
 ## Execution Constraints
 
