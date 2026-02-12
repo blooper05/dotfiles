@@ -113,6 +113,7 @@
       "mcp__plugin_mcphub_mcphub__atlassian_mcp__search",
       "mcp__plugin_mcphub_mcphub__atlassian_mcp__searchConfluenceUsingCql",
       "mcp__plugin_mcphub_mcphub__atlassian_mcp__searchJiraIssuesUsingJql",
+      "mcp__plugin_mcphub_mcphub__sequential_thinking__sequentialthinking",
       "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___get_regional_availability",
       "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___list_regions",
       "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___read_documentation",
