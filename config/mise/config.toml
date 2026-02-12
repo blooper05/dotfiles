@@ -55,7 +55,7 @@ k9s = "0.50.18"
 kube-capacity = "0.8.0"
 kubectl = "1.35.1"
 kubie = "0.26.1"
-kustomize = "5.8.0"
+kustomize = "5.8.1"
 popeye = "0.22.1"
 stern = "1.33.1"
 
