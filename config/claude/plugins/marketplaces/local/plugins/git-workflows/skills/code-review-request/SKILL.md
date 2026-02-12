@@ -21,7 +21,8 @@ Based on the above changes:
 4. Create a pull request using `gh pr create`.
    Write the title and body in English.
    If a PR template is found above, use it as the base for the body.
-5. You have the capability to call multiple tools in a single response.
-   You MUST do all of the above in a single message.
-   Do not use any other tools or do anything else.
-   Do not send any other text or messages besides these tool calls.
+
+## Execution Constraints
+
+- Complete all operations in a single tool-call response.
+- Issue tool calls only — do not emit any conversational text or messages.

@@ -15,7 +15,7 @@ description: Create a git commit
 
 Based on the above changes, create a single git commit.
 
-You have the capability to call multiple tools in a single response.
-Stage and create the commit using a single message.
-Do not use any other tools or do anything else.
-Do not send any other text or messages besides these tool calls.
+## Execution Constraints
+
+- Complete all operations in a single tool-call response.
+- Issue tool calls only — do not emit any conversational text or messages.
