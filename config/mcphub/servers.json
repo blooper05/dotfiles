@@ -11,6 +11,10 @@
       "disabled": false,
       "url": "https://mcp.atlassian.com/v1/sse"
     },
+    "drawio-mcp": {
+      "disabled": false,
+      "command": "drawio-mcp"
+    },
     "new-relic-mcp": {
       "disabled": true,
       "url": "https://mcp.newrelic.com/mcp/"
