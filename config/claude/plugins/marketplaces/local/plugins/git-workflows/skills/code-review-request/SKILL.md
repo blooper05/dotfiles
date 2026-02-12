@@ -14,9 +14,10 @@ description: Commit, push, and open a PR
 
 ## Your task
 
-Based on the above changes:
+### Step 1: Branch Creation (Conditional)
 
-1. Create a new branch if on main
+- If the current branch is main or master, create a new branch.
+- If already on a non-default branch, skip this step.
 
 ### Step 2: Stage and Commit
 
