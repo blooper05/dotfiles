@@ -4,6 +4,10 @@ allowed-tools: Bash(git checkout -b:*), Bash(git add:*), Bash(git status:*), Bas
 description: Commit, push, and open a PR
 ---
 
+# Code Review Request
+
+Commit, push, and open a GitHub pull request in a single operation.
+
 ## Context
 
 - Current git status: !`git status`

@@ -4,6 +4,10 @@ allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 description: Create a git commit
 ---
 
+# Git Commit
+
+Create a git commit from the current working tree changes.
+
 ## Context
 
 - Current git status: !`git status`
