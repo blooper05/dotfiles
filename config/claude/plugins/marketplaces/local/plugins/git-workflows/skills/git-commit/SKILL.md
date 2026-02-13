@@ -1,5 +1,5 @@
 ---
-name: commit
+name: git-commit
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 description: >-
   This skill should be used when the user asks to "commit", "create a commit",
