@@ -133,6 +133,7 @@ export HOMEBREW_BUNDLE_FILE=$XDG_CONFIG_HOME/homebrew/Brewfile
 # Neovim {{{2
 alias vi='nvim'
 alias vim='nvim'
+export PATH=$PATH:$XDG_DATA_HOME/nvim/mason/bin
 
 # Less {{{2
 export LESS=-inqMRS
