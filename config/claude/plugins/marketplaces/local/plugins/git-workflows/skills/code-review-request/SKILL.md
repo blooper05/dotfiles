@@ -1,5 +1,5 @@
 ---
-name: Code Review Request
+name: code-review-request
 allowed-tools: Bash(git checkout -b:*), Bash(git add:*), Bash(git status:*), Bash(git push:*), Bash(git commit:*), Bash(gh pr create:*)
 description: >-
   This skill should be used when the user asks to "create a PR",
