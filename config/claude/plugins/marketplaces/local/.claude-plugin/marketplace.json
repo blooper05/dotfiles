@@ -9,6 +9,10 @@
       "source": "./plugins/git-workflows"
     },
     {
+      "name": "langservers",
+      "source": "./plugins/langservers"
+    },
+    {
       "name": "mcphub",
       "source": "./plugins/mcphub"
     }

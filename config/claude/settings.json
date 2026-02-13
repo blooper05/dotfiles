@@ -184,6 +184,7 @@
   "language": "japanese",
   "enabledPlugins": {
     "git-workflows@local": true,
+    "langservers@local": true,
     "mcphub@local": true,
     "code-review@claude-code-plugins": true,
     "feature-dev@claude-code-plugins": true,
