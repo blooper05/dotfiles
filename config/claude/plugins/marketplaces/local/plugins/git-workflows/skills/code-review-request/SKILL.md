@@ -1,6 +1,6 @@
 ---
 name: code-review-request
-allowed-tools: Bash(git checkout -b:*), Bash(git add:*), Bash(git status:*), Bash(git push:*), Bash(git commit:*), Bash(gh pr create:*)
+allowed-tools: Bash(git checkout -b:*), Bash(git add:*), Bash(git status:*), Bash(git push:*), Bash(git commit:*), Bash(gh pr create:*), Bash(gh pr view:*)
 description: >-
   This skill should be used when the user asks to "create a PR",
   "open a pull request", "send for code review", "push and create PR",
@@ -43,6 +43,10 @@ Commit, push, and open a GitHub pull request in a single operation.
 - Create a pull request with `gh pr create`.
 - Write the title and body in English.
 - If a PR template is found in Context above, use it as the base for the body.
+
+### Step 5: Open in Browser
+
+- Open the created pull request in the browser with `gh pr view --web`.
 
 ## Execution Constraints
 
