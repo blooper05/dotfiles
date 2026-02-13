@@ -8,7 +8,7 @@
   "elm-language-server": "2.8.0",
   "eslint-lsp": "4.10.0",
   "gh-actions-language-server": "0.3.44",
-  "gopls": "v0.21.0",
+  "gopls": "v0.21.1",
   "helm-ls": "v0.5.4",
   "html-lsp": "4.10.0",
   "json-lsp": "4.10.0",
