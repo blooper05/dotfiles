@@ -25,6 +25,7 @@ return {
         'jsonls',
         'jsonnet_ls',
         'lua_ls',
+        'markdown_oxide',
         'marksman',
         'postgres_lsp',
         'pylsp',

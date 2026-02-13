@@ -1,4 +1,10 @@
 {
+  "markdown-oxide": {
+    "command": "markdown-oxide",
+    "extensionToLanguage": {
+      ".md": "markdown"
+    }
+  },
   "marksman": {
     "command": "marksman",
     "args": ["server"],
