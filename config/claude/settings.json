@@ -143,6 +143,7 @@
       "mcp__plugin_mcphub_mcphub__codex_mcp__codex-reply"
     ],
     "deny": [
+      "Bash(gh api:*)",
       "Bash(git -C:*)",
       "Bash(kubectl apply:*)",
       "Bash(kubectl config use-context:*)",
