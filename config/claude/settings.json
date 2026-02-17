@@ -139,6 +139,8 @@
       "mcp__plugin_mcphub_mcphub__serena_mcp__think_about_task_adherence",
       "mcp__plugin_mcphub_mcphub__serena_mcp__think_about_whether_you_are_done",
       "mcp__plugin_mcphub_mcphub__serena_mcp__write_memory",
+      "mcp__plugin_mcphub_mcphub__context7_mcp__query-docs",
+      "mcp__plugin_mcphub_mcphub__context7_mcp__resolve-library-id",
       "mcp__plugin_mcphub_mcphub__codex_mcp__codex",
       "mcp__plugin_mcphub_mcphub__codex_mcp__codex-reply"
     ],
