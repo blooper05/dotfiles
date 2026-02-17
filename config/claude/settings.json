@@ -64,6 +64,7 @@
       "Bash(open:*)",
       "Bash(rg:*)",
       "Bash(sed:*)",
+      "Bash(shellcheck:*)",
       "Bash(sort:*)",
       "Bash(tail:*)",
       "Bash(test:*)",
