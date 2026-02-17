@@ -69,6 +69,7 @@
       "Bash(test:*)",
       "Bash(tree:*)",
       "Bash(uniq:*)",
+      "Bash(wc:*)",
       "Bash(xargs:*)",
       "Bash(yq:*)",
       "Edit",
