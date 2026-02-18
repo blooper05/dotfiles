@@ -23,3 +23,7 @@ to achieve full clarity before proceeding.
 Follow [Semantic Line Breaks](https://sembr.org/) in Markdown.
 Break after sentences and at clause boundaries,
 targeting roughly 80 characters per line.
+
+## Commits
+
+Make small, atomic commits, each capturing one logical change.
