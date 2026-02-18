@@ -88,12 +88,12 @@ inline = '''
 
 [plugins.helm-diff-completions]
 inline = '''
-  function _diff() {
+  function _helm-diff() {
     unfunction "$0"
     eval "$(helm-diff completion zsh)"
     $0 "$@"
   }
-  zsh-defer compdef _diff helm-diff
+  zsh-defer compdef _helm-diff helm-diff
 '''
 
 [plugins.k6-completions]
