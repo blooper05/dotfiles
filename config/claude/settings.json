@@ -164,6 +164,7 @@
     "type": "command",
     "command": "ccusage statusline"
   },
+  "outputStyle": "Explanatory",
   "alwaysThinkingEnabled": true,
   "language": "japanese",
   "enabledPlugins": {
