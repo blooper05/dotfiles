@@ -181,9 +181,6 @@ bindkey '^s' anyframe-widget-cd-ghq-repository
 # ghq {{{2
 export GHQ_ROOT=$XDG_DATA_HOME/ghq
 
-# git-wt {{{2
-eval "$(git wt --init zsh)"
-
 # GnuPG {{{2
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 

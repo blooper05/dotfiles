@@ -66,6 +66,16 @@ inline = '''
   zsh-defer _aws
 '''
 
+[plugins.git-wt-completions]
+inline = '''
+  function _git-wt() {
+    unfunction "$0"
+    source <(git wt --init zsh)
+    $0 "$@"
+  }
+  zsh-defer _git-wt
+'''
+
 [plugins.gh-completions]
 inline = '''
   function _gh() {
