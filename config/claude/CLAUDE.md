@@ -17,3 +17,9 @@ and use it to guide your solution.
 Use the AskUserQuestion tool aggressively
 to ask as many follow-up questions as necessary
 to achieve full clarity before proceeding.
+
+## Writing
+
+Follow [Semantic Line Breaks](https://sembr.org/) in Markdown.
+Break after sentences and at clause boundaries,
+targeting roughly 80 characters per line.
