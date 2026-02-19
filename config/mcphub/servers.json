@@ -26,11 +26,11 @@
       "command": "context7-mcp"
     },
     "aws-knowledge-mcp-server": {
-      "disabled": true,
+      "disabled": false,
       "url": "https://knowledge-mcp.global.api.aws"
     },
     "aws-terraform-mcp-server": {
-      "disabled": true,
+      "disabled": false,
       "command": "awslabs.terraform-mcp-server"
     },
     "codex-mcp": {
