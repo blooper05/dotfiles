@@ -73,6 +73,7 @@
       "Bash(uniq *)",
       "Bash(wc *)",
       "Bash(xargs *)",
+      "Bash(yamllint *)",
       "Bash(yq *)",
       "Edit",
       "WebFetch",
