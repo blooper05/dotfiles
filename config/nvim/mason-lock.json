@@ -19,7 +19,7 @@
   "postgres-language-server": "0.21.0",
   "python-lsp-server": "1.14.0",
   "remark-language-server": "3.0.0",
-  "ruby-lsp": "0.26.6",
+  "ruby-lsp": "0.26.7",
   "sqls": "v0.2.45",
   "stylelint-lsp": "2.0.1",
   "taplo": "0.10.0",
