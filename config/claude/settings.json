@@ -121,6 +121,7 @@
       "mcp__plugin_mcphub_mcphub__codex_mcp__codex-reply"
     ],
     "deny": [
+      "Bash(bash -c *)",
       "Bash(echo *)",
       "Bash(git -C *)",
       "Bash(kubectl apply *)",
