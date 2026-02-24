@@ -122,6 +122,7 @@
     ],
     "deny": [
       "Bash(bash -c *)",
+      "Bash(cd *)",
       "Bash(echo *)",
       "Bash(git -C *)",
       "Bash(kubectl apply *)",
