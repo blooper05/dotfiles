@@ -71,3 +71,4 @@
 [wt]
   basedir     = .git-wt
   copyignored = true
+  relative    = true
