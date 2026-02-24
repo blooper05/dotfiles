@@ -130,6 +130,7 @@
       "Bash(git add --all *)",
       "Bash(git add -A *)",
       "Bash(git add . *)",
+      "Bash(git checkout *)",
       "Bash(kubectl apply *)",
       "Bash(kubectl config use-context *)",
       "Bash(kubectl delete *)",
