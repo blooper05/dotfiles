@@ -136,6 +136,7 @@
       "Bash(kubectl delete *)",
       "Bash(kubectl patch *)",
       "Bash(kubectl replace *)",
+      "Bash(sudo *)",
       "NotebookEdit",
       "NotebookRead"
     ],
