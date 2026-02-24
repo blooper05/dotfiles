@@ -127,6 +127,7 @@
       "Bash(git --git-dir *)",
       "Bash(git --work-tree *)",
       "Bash(git -C *)",
+      "Bash(git add --all *)",
       "Bash(git add -A *)",
       "Bash(git add . *)",
       "Bash(kubectl apply *)",
