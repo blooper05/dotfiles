@@ -1,3 +1,4 @@
+/backups/
 /cache/
 /debug/
 /file-history/
@@ -16,7 +17,5 @@
 /todos/
 /usage-data/
 /.claude.json
-/.claude.json.backup
-/.claude.json.backup.*
 /history.jsonl
 /stats-cache.json
