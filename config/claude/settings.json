@@ -125,6 +125,7 @@
       "Bash(cd *)",
       "Bash(echo *)",
       "Bash(git --git-dir *)",
+      "Bash(git --work-tree *)",
       "Bash(git -C *)",
       "Bash(kubectl apply *)",
       "Bash(kubectl config use-context *)",
