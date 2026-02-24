@@ -17,7 +17,6 @@
       "Bash(docker logs *)",
       "Bash(docker run *)",
       "Bash(docker stop *)",
-      "Bash(echo *)",
       "Bash(fd *)",
       "Bash(find *)",
       "Bash(gh * list *)",
@@ -122,6 +121,7 @@
       "mcp__plugin_mcphub_mcphub__codex_mcp__codex-reply"
     ],
     "deny": [
+      "Bash(echo *)",
       "Bash(git -C *)",
       "Bash(kubectl apply *)",
       "Bash(kubectl config use-context *)",
