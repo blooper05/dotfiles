@@ -9,7 +9,7 @@
       "command": "drawio-mcp"
     },
     "new-relic-mcp": {
-      "disabled": true,
+      "disabled": false,
       "url": "https://mcp.newrelic.com/mcp/"
     },
     "sequential-thinking": {
