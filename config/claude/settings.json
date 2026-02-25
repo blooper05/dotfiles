@@ -17,6 +17,7 @@
       "Bash(docker logs *)",
       "Bash(docker run *)",
       "Bash(docker stop *)",
+      "Bash(echo *)",
       "Bash(fd *)",
       "Bash(find *)",
       "Bash(gh * list *)",
@@ -124,7 +125,6 @@
     "deny": [
       "Bash(bash -c *)",
       "Bash(cd *)",
-      "Bash(echo *)",
       "Bash(git --git-dir *)",
       "Bash(git --work-tree *)",
       "Bash(git -C *)",
