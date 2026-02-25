@@ -37,7 +37,7 @@ yamllint = "1.38.0"
 adr-tools = "3.0.0"
 k6 = "1.6.1"
 redis-cli = "8.4.0"
-sops = "3.11.0"
+sops = "3.12.1"
 trivy = "0.69.1"
 
 "aqua:suzuki-shunsuke/pinact" = "3.9.0"
