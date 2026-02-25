@@ -71,3 +71,5 @@
 [wt]
   basedir     = .git-wt
   copyignored = true
+  hook        = zellij action new-tab --cwd="$PWD" --name="$(basename "$(dirname "$(realpath "$(git rev-parse --git-common-dir)")")"):$(git branch --show-current)"
+  nocd        = true
