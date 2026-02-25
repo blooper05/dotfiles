@@ -71,7 +71,7 @@ tfupdate = "0.9.3"
 "pipx:plamo-translate" = "1.0.5"
 
 "npm:@zed-industries/claude-code-acp" = "0.16.2"
-"npm:ccusage" = "18.0.5"
+"npm:ccusage" = "18.0.8"
 "npm:mcp-hub" = "4.2.1"
 
 "npm:@drawio/mcp" = "1.1.2"
