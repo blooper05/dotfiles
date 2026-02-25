@@ -1,4 +1,3 @@
-tap "fujiwara/tap"
 tap "k1low/tap"
 
 brew "bat"
@@ -45,7 +44,6 @@ brew "xh"
 brew "yq"
 brew "zellij"
 brew "zsh"
-brew "fujiwara/tap/ecsta"
 brew "k1low/tap/awsdo"
 brew "k1low/tap/git-wt"
 
