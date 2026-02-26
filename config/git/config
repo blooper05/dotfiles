@@ -71,4 +71,4 @@
 [wt]
   basedir     = .git-wt
   copyignored = true
-  hook        = zellij run --close-on-exit --direction=right -- claude
+  hook        = zellij run --close-on-exit --direction=right --name=claude -- claude
