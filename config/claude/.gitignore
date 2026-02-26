@@ -12,11 +12,8 @@
 /projects/
 /session-env/
 /shell-snapshots/
-/statsig/
 /tasks/
 /todos/
-/usage-data/
 /.claude.json
 /history.jsonl
-/mcp-needs-auth-cache.json
 /stats-cache.json
