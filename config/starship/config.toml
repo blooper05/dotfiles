@@ -10,7 +10,7 @@ disabled = false
 
 [custom.repo_root]
 command = 'basename "$(dirname "$(git rev-parse --git-common-dir)")"'
-when = 'test "$(git rev-parse --git-dir)" != "$(git rev-parse --git-common-dir)"'
+when = 'test "$(realpath "$(git rev-parse --git-dir)")" != "$(realpath "$(git rev-parse --git-common-dir)")"'
 require_repo = true
 symbol = " "
 style = "bold bright-black"
