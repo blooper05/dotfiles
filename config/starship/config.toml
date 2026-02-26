@@ -5,3 +5,8 @@ detect_folders = ['.devcontainer']
 
 [kubernetes]
 disabled = false
+
+[custom.worktree]
+command = 'basename "$(dirname "$(git rev-parse --git-common-dir)")"'
+when = 'test "$(git rev-parse --git-dir)" != "$(git rev-parse --git-common-dir)"'
+require_repo = true
