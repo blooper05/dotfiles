@@ -1,5 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+format = '${custom.repo_root}$all'
+
 [docker_context]
 detect_folders = ['.devcontainer']
 
@@ -10,3 +12,5 @@ disabled = false
 command = 'basename "$(dirname "$(git rev-parse --git-common-dir)")"'
 when = 'test "$(git rev-parse --git-dir)" != "$(git rev-parse --git-common-dir)"'
 require_repo = true
+symbol = " "
+style = "bold bright-black"
