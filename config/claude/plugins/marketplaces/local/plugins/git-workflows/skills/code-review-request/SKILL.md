@@ -16,7 +16,7 @@ Push and open a GitHub pull request in a single operation.
 
 - Current git status: !`git status`
 - Current branch: !`git branch --show-current`
-- Commits in this branch: !`git log --oneline main..HEAD`
+- Commits in this branch: !`git log --oneline --no-show-signature origin/HEAD..HEAD`
 - PR template: !`cat .github/pull_request_template.md 2>/dev/null || echo "No template found"`
 
 ## Workflow
