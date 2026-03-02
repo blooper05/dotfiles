@@ -1,50 +1,37 @@
 ---
 name: code-review-request
-allowed-tools: Bash(git checkout -b:*), Bash(git add:*), Bash(git status:*), Bash(git push:*), Bash(git commit:*), Bash(gh pr create:*), Bash(gh pr view:*)
+allowed-tools: Bash(git status:*), Bash(git push:*), Bash(gh pr create:*), Bash(gh pr view:*)
 description: >-
   This skill should be used when the user asks to "create a PR",
   "open a pull request", "send for code review", "push and create PR",
   "submit for review", "code review request",
-  or needs to commit, push, and open a GitHub pull request in one operation.
+  or needs to push and open a GitHub pull request in one operation.
 ---
 
 # Code Review Request
 
-Commit, push, and open a GitHub pull request in a single operation.
+Push and open a GitHub pull request in a single operation.
 
 ## Context
 
 - Current git status: !`git status`
-- Current git diff (staged and unstaged changes): !`git diff HEAD`
 - Current branch: !`git branch --show-current`
-- Recent commits: !`git log --oneline -10`
+- Commits in this branch: !`git log --oneline main..HEAD`
 - PR template: !`cat .github/pull_request_template.md 2>/dev/null || echo "No template found"`
 
 ## Workflow
 
-### Step 1: Branch Creation (Conditional)
-
-- If the current branch is main or master, create a new branch.
-- If already on a non-default branch, skip this step.
-
-### Step 2: Stage and Commit
-
-- Stage related files with `git add`.
-- Create a single commit with an appropriate message.
-  - Match the style of recent commits shown in Context above.
-  - Write in English.
-
-### Step 3: Push
+### Step 1: Push
 
 - Push the branch with `git push -u origin <branch-name>`.
 
-### Step 4: Create Pull Request
+### Step 2: Create Pull Request
 
 - Create a pull request with `gh pr create`.
 - Write the title and body in English.
 - If a PR template is found in Context above, use it as the base for the body.
 
-### Step 5: Open in Browser
+### Step 3: Open in Browser
 
 - Open the created pull request in the browser with `gh pr view --web`.
 
