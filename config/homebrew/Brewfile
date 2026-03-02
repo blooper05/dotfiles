@@ -26,7 +26,6 @@ brew "jq"
 brew "luajit", args: ["HEAD"]
 brew "mackup"
 brew "mas"
-brew "terminal-notifier"
 brew "mise"
 brew "neovim", args: ["HEAD"]
 brew "ollama", restart_service: true
@@ -37,6 +36,7 @@ brew "sheldon"
 brew "sk"
 # brew "ssh-copy-id", link: true
 brew "starship"
+brew "terminal-notifier"
 brew "termshark"
 brew "tree-sitter", args: ["HEAD"]
 brew "wordnet"
