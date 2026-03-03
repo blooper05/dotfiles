@@ -25,6 +25,7 @@
       "Bash(gh * view *)",
       "Bash(gh pr check *)",
       "Bash(gh pr diff *)",
+      "Bash(gh search *)",
       "Bash(git add *)",
       "Bash(git cat-file *)",
       "Bash(git checkout -b *)",
