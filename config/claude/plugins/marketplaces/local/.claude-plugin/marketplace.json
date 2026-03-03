@@ -5,6 +5,10 @@
   },
   "plugins": [
     {
+      "name": "code-review",
+      "source": "./plugins/code-review"
+    },
+    {
       "name": "git-workflows",
       "source": "./plugins/git-workflows"
     },
