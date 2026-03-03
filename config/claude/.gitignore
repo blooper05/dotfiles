@@ -4,6 +4,7 @@
 /debug/
 /file-history/
 /ide/
+/image-cache/
 /paste-cache/
 /plans/
 /plugins/*
