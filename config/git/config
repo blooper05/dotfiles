@@ -71,5 +71,4 @@
 [wt]
   basedir     = .git-wt
   copyignored = true
-  hook        = zellij run --close-on-exit --direction=right -- claude
   hook        = zellij action rename-tab "$(git branch --show-current)"

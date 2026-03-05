@@ -167,6 +167,26 @@
           }
         ]
       }
+    ],
+    "WorktreeCreate": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$XDG_CONFIG_HOME/claude/hooks/worktree.ts --event create"
+          }
+        ]
+      }
+    ],
+    "WorktreeRemove": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$XDG_CONFIG_HOME/claude/hooks/worktree.ts --event remove"
+          }
+        ]
+      }
     ]
   },
   "statusLine": {
