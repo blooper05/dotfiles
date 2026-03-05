@@ -3,7 +3,7 @@
 import { parseArgs } from "jsr:@std/cli/parse-args";
 import $ from "jsr:@david/dax";
 
-type WorktreeCreateEvent = {
+type WorktreeCreateInput = {
   session_id: string;
   transcript_path: string;
   cwd: string;
@@ -12,7 +12,7 @@ type WorktreeCreateEvent = {
   name: string;
 };
 
-type WorktreeRemoveEvent = {
+type WorktreeRemoveInput = {
   session_id: string;
   transcript_path: string;
   cwd: string;
@@ -27,7 +27,7 @@ const flags = parseArgs(Deno.args, {
 
 async function createWorktree() {
   const stdin = await new Response(Deno.stdin.readable).text();
-  const input: WorktreeCreateEvent = JSON.parse(stdin);
+  const input: WorktreeCreateInput = JSON.parse(stdin);
   const path = (await $`git wt ${input.name} --nocd`
     .stderr("null")
     .lines())
@@ -37,7 +37,7 @@ async function createWorktree() {
 
 async function removeWorktree() {
   const stdin = await new Response(Deno.stdin.readable).text();
-  const input: WorktreeRemoveEvent = JSON.parse(stdin);
+  const input: WorktreeRemoveInput = JSON.parse(stdin);
   await $`git wt --delete ${input.worktree_path}`
     .noThrow()
     .quiet();

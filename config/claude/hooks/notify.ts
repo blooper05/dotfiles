@@ -3,7 +3,7 @@
 import { parseArgs } from "jsr:@std/cli/parse-args";
 import $ from "jsr:@david/dax";
 
-type Notification = {
+type NotificationInput = {
   session_id: string;
   transcript_path: string;
   message: string;
@@ -15,7 +15,7 @@ const flags = parseArgs(Deno.args, {
 
 async function notifyOnNotificationEvent() {
   const stdin = await new Response(Deno.stdin.readable).text();
-  const input: Notification = JSON.parse(stdin)
+  const input: NotificationInput = JSON.parse(stdin)
   await $`terminal-notifier -title "Claude Code" -message ${input.message} -sound funk`;
 }
 
