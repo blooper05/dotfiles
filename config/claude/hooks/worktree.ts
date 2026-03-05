@@ -3,21 +3,19 @@
 import { parseArgs } from "jsr:@std/cli/parse-args";
 import $ from "jsr:@david/dax";
 
-type WorktreeCreateInput = {
+type CommonInputFields = {
   session_id: string;
   transcript_path: string;
   cwd: string;
   permission_mode: string;
   hook_event_name: string;
+};
+
+type WorktreeCreateInput = CommonInputFields & {
   name: string;
 };
 
-type WorktreeRemoveInput = {
-  session_id: string;
-  transcript_path: string;
-  cwd: string;
-  permission_mode: string;
-  hook_event_name: string;
+type WorktreeRemoveInput = CommonInputFields & {
   worktree_path: string;
 };
 

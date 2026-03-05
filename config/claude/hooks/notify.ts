@@ -3,10 +3,23 @@
 import { parseArgs } from "jsr:@std/cli/parse-args";
 import $ from "jsr:@david/dax";
 
-type NotificationInput = {
+type CommonInputFields = {
   session_id: string;
   transcript_path: string;
+  cwd: string;
+  permission_mode: string;
+  hook_event_name: string;
+};
+
+type NotificationInput = CommonInputFields & {
   message: string;
+  title?: string;
+  notification_type: string;
+};
+
+type StopInput = CommonInputFields & {
+  stop_hook_active: boolean;
+  last_assistant_message: string;
 };
 
 const flags = parseArgs(Deno.args, {
