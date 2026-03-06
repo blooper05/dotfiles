@@ -152,7 +152,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts --event stop"
+            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts"
           }
         ]
       }
@@ -163,7 +163,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts --event notification"
+            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts"
           }
         ]
       }
@@ -173,7 +173,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$XDG_CONFIG_HOME/claude/hooks/worktree.ts --event create"
+            "command": "$XDG_CONFIG_HOME/claude/hooks/worktree.ts"
           }
         ]
       }
@@ -183,7 +183,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "$XDG_CONFIG_HOME/claude/hooks/worktree.ts --event remove"
+            "command": "$XDG_CONFIG_HOME/claude/hooks/worktree.ts"
           }
         ]
       }

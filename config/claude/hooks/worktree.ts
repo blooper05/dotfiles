@@ -1,6 +1,5 @@
 #!/usr/bin/env -S deno run --allow-read --allow-env --allow-run
 
-import { parseArgs } from "jsr:@std/cli/parse-args";
 import $ from "jsr:@david/dax";
 
 type CommonInputFields = {
@@ -12,16 +11,16 @@ type CommonInputFields = {
 };
 
 type WorktreeCreateInput = CommonInputFields & {
+  hook_event_name: "WorktreeCreate";
   name: string;
 };
 
 type WorktreeRemoveInput = CommonInputFields & {
+  hook_event_name: "WorktreeRemove";
   worktree_path: string;
 };
 
-const flags = parseArgs(Deno.args, {
-  string: ["event"],
-});
+type WorktreeInput = WorktreeCreateInput | WorktreeRemoveInput;
 
 async function createWorktree(input: WorktreeCreateInput) {
   const path = (await $`git wt ${input.name} --nocd`
@@ -38,13 +37,13 @@ async function removeWorktree(input: WorktreeRemoveInput) {
 }
 
 const stdin = await new Response(Deno.stdin.readable).text();
-const input = JSON.parse(stdin);
+const input: WorktreeInput = JSON.parse(stdin);
 
-switch (flags.event) {
-  case "create":
-    await createWorktree(input as WorktreeCreateInput);
+switch (input.hook_event_name) {
+  case "WorktreeCreate":
+    await createWorktree(input);
     break;
-  case "remove":
-    await removeWorktree(input as WorktreeRemoveInput);
+  case "WorktreeRemove":
+    await removeWorktree(input);
     break;
 }

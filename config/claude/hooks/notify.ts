@@ -1,6 +1,5 @@
 #!/usr/bin/env -S deno run --allow-read --allow-env --allow-run
 
-import { parseArgs } from "jsr:@std/cli/parse-args";
 import $ from "jsr:@david/dax";
 
 type CommonInputFields = {
@@ -12,19 +11,19 @@ type CommonInputFields = {
 };
 
 type NotificationInput = CommonInputFields & {
+  hook_event_name: "Notification";
   message: string;
   title?: string;
   notification_type: string;
 };
 
 type StopInput = CommonInputFields & {
+  hook_event_name: "Stop";
   stop_hook_active: boolean;
   last_assistant_message: string;
 };
 
-const flags = parseArgs(Deno.args, {
-  string: ["event"],
-});
+type NotifyInput = NotificationInput | StopInput;
 
 async function notifyOnNotificationEvent(input: NotificationInput) {
   await $`terminal-notifier -title ${input.title ?? "Claude Code"} -message ${input.message} -sound funk`;
@@ -35,13 +34,13 @@ async function notifyOnStopEvent(_input: StopInput) {
 }
 
 const stdin = await new Response(Deno.stdin.readable).text();
-const input = JSON.parse(stdin);
+const input: NotifyInput = JSON.parse(stdin);
 
-switch (flags.event) {
-  case "notification":
-    await notifyOnNotificationEvent(input as NotificationInput);
+switch (input.hook_event_name) {
+  case "Notification":
+    await notifyOnNotificationEvent(input);
     break;
-  case "stop":
-    await notifyOnStopEvent(input as StopInput);
+  case "Stop":
+    await notifyOnStopEvent(input);
     break;
 }
