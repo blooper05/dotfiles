@@ -35,12 +35,13 @@ async function notifyOnStopEvent(_input: StopInput) {
 }
 
 const stdin = await new Response(Deno.stdin.readable).text();
+const input = JSON.parse(stdin);
 
 switch (flags.event) {
   case "notification":
-    await notifyOnNotificationEvent(JSON.parse(stdin) as NotificationInput);
+    await notifyOnNotificationEvent(input as NotificationInput);
     break;
   case "stop":
-    await notifyOnStopEvent(JSON.parse(stdin) as StopInput);
+    await notifyOnStopEvent(input as StopInput);
     break;
 }

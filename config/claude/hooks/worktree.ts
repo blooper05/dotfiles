@@ -38,12 +38,13 @@ async function removeWorktree(input: WorktreeRemoveInput) {
 }
 
 const stdin = await new Response(Deno.stdin.readable).text();
+const input = JSON.parse(stdin);
 
 switch (flags.event) {
   case "create":
-    await createWorktree(JSON.parse(stdin) as WorktreeCreateInput);
+    await createWorktree(input as WorktreeCreateInput);
     break;
   case "remove":
-    await removeWorktree(JSON.parse(stdin) as WorktreeRemoveInput);
+    await removeWorktree(input as WorktreeRemoveInput);
     break;
 }
