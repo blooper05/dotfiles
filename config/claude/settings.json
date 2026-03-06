@@ -147,8 +147,9 @@
     "defaultMode": "plan"
   },
   "hooks": {
-    "Stop": [
+    "Notification": [
       {
+        "matcher": "permission_prompt|idle_prompt",
         "hooks": [
           {
             "type": "command",
@@ -157,9 +158,8 @@
         ]
       }
     ],
-    "Notification": [
+    "Stop": [
       {
-        "matcher": "permission_prompt|idle_prompt",
         "hooks": [
           {
             "type": "command",
