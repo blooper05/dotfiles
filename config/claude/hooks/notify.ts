@@ -27,7 +27,7 @@ const flags = parseArgs(Deno.args, {
 });
 
 async function notifyOnNotificationEvent(input: NotificationInput) {
-  await $`terminal-notifier -title "Claude Code" -message ${input.message} -sound funk`;
+  await $`terminal-notifier -title ${input.title ?? "Claude Code"} -message ${input.message} -sound funk`;
 }
 
 async function notifyOnStopEvent(_input: StopInput) {
