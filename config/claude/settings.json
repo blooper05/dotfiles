@@ -147,6 +147,17 @@
     "defaultMode": "plan"
   },
   "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$XDG_CONFIG_HOME/claude/hooks/plan.ts"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "matcher": "permission_prompt|idle_prompt",
