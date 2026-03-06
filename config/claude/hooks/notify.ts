@@ -26,21 +26,21 @@ const flags = parseArgs(Deno.args, {
   string: ["event"],
 });
 
-async function notifyOnNotificationEvent() {
-  const stdin = await new Response(Deno.stdin.readable).text();
-  const input: NotificationInput = JSON.parse(stdin)
+async function notifyOnNotificationEvent(input: NotificationInput) {
   await $`terminal-notifier -title "Claude Code" -message ${input.message} -sound funk`;
 }
 
-async function notifyOnStopEvent() {
+async function notifyOnStopEvent(_input: StopInput) {
   await $`terminal-notifier -title "Claude Code" -message "✓ Task completed. Awaiting next action." -sound funk`;
 }
 
+const stdin = await new Response(Deno.stdin.readable).text();
+
 switch (flags.event) {
   case "notification":
-    await notifyOnNotificationEvent();
+    await notifyOnNotificationEvent(JSON.parse(stdin) as NotificationInput);
     break;
   case "stop":
-    await notifyOnStopEvent();
+    await notifyOnStopEvent(JSON.parse(stdin) as StopInput);
     break;
 }

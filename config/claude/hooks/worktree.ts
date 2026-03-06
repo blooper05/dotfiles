@@ -23,9 +23,7 @@ const flags = parseArgs(Deno.args, {
   string: ["event"],
 });
 
-async function createWorktree() {
-  const stdin = await new Response(Deno.stdin.readable).text();
-  const input: WorktreeCreateInput = JSON.parse(stdin);
+async function createWorktree(input: WorktreeCreateInput) {
   const path = (await $`git wt ${input.name} --nocd`
     .stderr("null")
     .lines())
@@ -33,19 +31,19 @@ async function createWorktree() {
   if (path) console.log(path);
 }
 
-async function removeWorktree() {
-  const stdin = await new Response(Deno.stdin.readable).text();
-  const input: WorktreeRemoveInput = JSON.parse(stdin);
+async function removeWorktree(input: WorktreeRemoveInput) {
   await $`git wt --delete ${input.worktree_path}`
     .noThrow()
     .quiet();
 }
 
+const stdin = await new Response(Deno.stdin.readable).text();
+
 switch (flags.event) {
   case "create":
-    await createWorktree();
+    await createWorktree(JSON.parse(stdin) as WorktreeCreateInput);
     break;
   case "remove":
-    await removeWorktree();
+    await removeWorktree(JSON.parse(stdin) as WorktreeRemoveInput);
     break;
 }
