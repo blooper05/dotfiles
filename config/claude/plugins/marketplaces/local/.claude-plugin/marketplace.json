@@ -5,12 +5,8 @@
   },
   "plugins": [
     {
-      "name": "code-review",
-      "source": "./plugins/code-review"
-    },
-    {
-      "name": "git-workflows",
-      "source": "./plugins/git-workflows"
+      "name": "dev-workflow",
+      "source": "./plugins/dev-workflow"
     },
     {
       "name": "langservers",
