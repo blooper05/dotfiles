@@ -205,8 +205,7 @@
     "command": "ccusage statusline"
   },
   "enabledPlugins": {
-    "code-review@local": true,
-    "git-workflows@local": true,
+    "dev-workflow@local": true,
     "langservers@local": true,
     "mcphub@local": true,
     "feature-dev@claude-code-plugins": true,
