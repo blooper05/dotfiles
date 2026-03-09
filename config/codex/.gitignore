@@ -7,4 +7,7 @@
 /config.toml
 /history.jsonl
 /models_cache.json
+/state_5.sqlite
+/state_5.sqlite-shm
+/state_5.sqlite-wal
 /version.json
