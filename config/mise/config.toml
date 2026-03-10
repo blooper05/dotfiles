@@ -52,7 +52,7 @@ aws-sam = "1.155.2"
 ecspresso = "2.7.1"
 
 "aqua:argoproj-labs/argocd-autopilot" = "0.4.20"
-argocd = "3.3.2"
+argocd = "3.3.3"
 helm = "4.1.1"
 helm-diff = "3.15.2"
 k9s = "0.50.18"
