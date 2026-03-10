@@ -1,5 +1,6 @@
 /log/
 /sessions/
+/shell_snapshots/
 /skills/
 /tmp/
 /.personality_migration
