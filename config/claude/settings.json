@@ -15,6 +15,7 @@
       "Bash(actionlint *)",
       "Bash(awk *)",
       "Bash(cat *)",
+      "Bash(do *)",
       "Bash(docker build *)",
       "Bash(docker logs *)",
       "Bash(docker run *)",
