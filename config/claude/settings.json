@@ -35,6 +35,7 @@
       "Bash(git ls-files *)",
       "Bash(git ls-remote *)",
       "Bash(git ls-tree *)",
+      "Bash(git mv *)",
       "Bash(git show *)",
       "Bash(git status *)",
       "Bash(grep *)",
