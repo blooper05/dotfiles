@@ -250,5 +250,6 @@
   "outputStyle": "Explanatory",
   "language": "japanese",
   "alwaysThinkingEnabled": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "effortLevel": "high"
 }
