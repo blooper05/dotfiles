@@ -42,7 +42,7 @@ trivy = "0.69.3"
 
 "aqua:suzuki-shunsuke/pinact" = "3.9.0"
 act = "0.2.84"
-github-cli = "2.88.0"
+github-cli = "2.88.1"
 
 "aqua:fujiwara/ecsta" = "0.8.0"
 "aqua:go-to-k/cls3" = "0.32.4"
