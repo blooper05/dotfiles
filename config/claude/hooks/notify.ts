@@ -30,7 +30,7 @@ async function notifyOnNotificationEvent(input: NotificationInput) {
 }
 
 async function notifyOnStopEvent(_input: StopInput) {
-  await $`terminal-notifier -title "Claude Code" -message "✓ Task completed. Awaiting next action." -sound funk`;
+  await $`terminal-notifier -title "Claude Code" -message "✓ Task completed. Awaiting next action." -sound glass`;
 }
 
 const stdin = await new Response(Deno.stdin.readable).text();
