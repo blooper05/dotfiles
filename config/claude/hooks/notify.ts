@@ -26,7 +26,7 @@ type StopInput = CommonInputFields & {
 type NotifyInput = NotificationInput | StopInput;
 
 async function notifyOnNotificationEvent(input: NotificationInput) {
-  await $`terminal-notifier -title ${input.title ?? "Claude Code"} -message ${input.message} -sound funk`;
+  await $`terminal-notifier -title ${input.title ?? "Claude Code"} -message ${input.message} -sound ping`;
 }
 
 async function notifyOnStopEvent(_input: StopInput) {
