@@ -43,9 +43,8 @@ return {
         default = { 'snippets', 'lsp', 'path', 'copilot', 'codeium', 'buffer' },
         per_filetype = {
           -- stylua: ignore start
-          gitcommit       = { 'snippets', 'lsp', 'path', 'emoji',            'buffer', 'dictionary', 'spell' },
-          ['gina-commit'] = { 'snippets', 'lsp', 'path', 'emoji',            'buffer', 'dictionary', 'spell' },
-          markdown        = { 'snippets', 'lsp', 'path', 'emoji', 'codeium', 'buffer', 'dictionary', 'spell' },
+          gitcommit = { 'snippets', 'lsp', 'path', 'emoji',            'buffer', 'dictionary', 'spell' },
+          markdown  = { 'snippets', 'lsp', 'path', 'emoji', 'codeium', 'buffer', 'dictionary', 'spell' },
           -- stylua: ignore end
         },
         providers = {

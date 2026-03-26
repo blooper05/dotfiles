@@ -4,8 +4,7 @@
     "snippets": [
       {
         "language": [
-          "gitcommit",
-          "gina-commit"
+          "gitcommit"
         ],
         "path": "./gitcommit.json"
       }
