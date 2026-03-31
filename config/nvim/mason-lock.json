@@ -21,6 +21,7 @@
   "remark-language-server": "3.0.0",
   "ruby-lsp": "0.26.9",
   "sqls": "v0.2.46",
+  "stylelint-language-server": "1.1.0",
   "stylelint-lsp": "2.0.1",
   "taplo": "0.10.0",
   "terraform-ls": "v0.38.6",
