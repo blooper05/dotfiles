@@ -8,4 +8,4 @@ colima-start-devcontainer &&
 		--remote-env=AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" \
 		--remote-env=AWS_SESSION_TOKEN="$AWS_SESSION_TOKEN" \
 		--remote-env=AWS_CREDENTIAL_EXPIRATION="$AWS_CREDENTIAL_EXPIRATION" \
-		--workspace-folder=. "$@"
+		--workspace-folder=. mise exec -- "$@"
