@@ -123,9 +123,7 @@
       "mcp__plugin_mcphub_mcphub__serena_mcp__think_about_whether_you_are_done",
       "mcp__plugin_mcphub_mcphub__serena_mcp__write_memory",
       "mcp__plugin_mcphub_mcphub__context7_mcp__query-docs",
-      "mcp__plugin_mcphub_mcphub__context7_mcp__resolve-library-id",
-      "mcp__plugin_mcphub_mcphub__codex_mcp__codex",
-      "mcp__plugin_mcphub_mcphub__codex_mcp__codex-reply"
+      "mcp__plugin_mcphub_mcphub__context7_mcp__resolve-library-id"
     ],
     "deny": [
       "Bash(bash -c *)",
@@ -219,7 +217,8 @@
     "feature-dev@claude-code-plugins": true,
     "pr-review-toolkit@claude-code-plugins": true,
     "ralph-wiggum@claude-code-plugins": true,
-    "skill-creator@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "codex@openai-codex": true
   },
   "extraKnownMarketplaces": {
     "local": {
@@ -244,6 +243,12 @@
       "source": {
         "source": "github",
         "repo": "anthropics/skills"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
       }
     }
   },

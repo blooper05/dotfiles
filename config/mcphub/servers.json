@@ -33,11 +33,6 @@
       "disabled": false,
       "command": "awslabs.terraform-mcp-server"
     },
-    "codex-mcp": {
-      "disabled": false,
-      "command": "codex",
-      "args": ["mcp-server"]
-    },
     "playwright-mcp": {
       "disabled": true,
       "command": "mcp-server-playwright"
