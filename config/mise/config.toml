@@ -11,7 +11,7 @@ elm = "0.19.1"
 go-jsonnet = "0.22.0"
 perl = "5.42.2"
 
-uv = "0.11.1"
+uv = "0.11.3"
 
 "gem:neovim" = "0.10.0"
 "npm:neovim" = "5.4.0"
