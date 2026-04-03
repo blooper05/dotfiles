@@ -1,4 +1,7 @@
+/.tmp/
+/cache/
 /log/
+/memories/
 /sessions/
 /shell_snapshots/
 /skills/
