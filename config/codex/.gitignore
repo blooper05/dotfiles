@@ -5,6 +5,7 @@
 /sessions/
 /shell_snapshots/
 /skills/
+/sqlite/
 /tmp/
 /.codex-global-state.json
 /.personality_migration
