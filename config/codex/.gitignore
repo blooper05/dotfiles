@@ -7,6 +7,7 @@
 /skills/
 /sqlite/
 /tmp/
+/vendor_imports/
 /.codex-global-state.json
 /.personality_migration
 /auth.json
