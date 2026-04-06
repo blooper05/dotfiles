@@ -47,7 +47,7 @@ github-cli = "2.89.0"
 "aqua:fujiwara/ecsta" = "0.8.0"
 "aqua:go-to-k/cls3" = "0.32.4"
 "aqua:k1LoW/awsdo" = "1.4.3"
-aws-cli = "2.34.22"
+aws-cli = "2.34.24"
 aws-sam = "1.157.1"
 ecspresso = "2.8.0"
 
