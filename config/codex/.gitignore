@@ -6,6 +6,7 @@
 /shell_snapshots/
 /skills/
 /tmp/
+/.codex-global-state.json
 /.personality_migration
 /auth.json
 /config.toml
