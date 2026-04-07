@@ -218,7 +218,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "ccusage statusline"
+    "command": "c-c-statusline --theme=nord"
   },
   "enabledPlugins": {
     "dev-workflow@local": true,
