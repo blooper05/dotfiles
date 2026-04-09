@@ -22,7 +22,7 @@ return {
       { '[git]c', function() vim.cmd('Gin commit --verbose') end,         silent = true },
       { '[git]C', function() vim.cmd('Gin commit --amend --verbose') end, silent = true },
       { '[git]l', function() vim.cmd('GinLog') end,                       silent = true },
-      { '[git]L', function() vim.cmd('GinLog -- %:p') end,                silent = true },
+      { '[git]L', function() vim.cmd('GinLog --follow -- %:p') end,       silent = true },
       { '[git]p', function() vim.cmd('GinPatch %:p') end,                 silent = true },
       { '[git]R', function() vim.cmd('GinReflog') end,                    silent = true },
       { '[git]s', function() vim.cmd('GinStatus') end,                    silent = true },
