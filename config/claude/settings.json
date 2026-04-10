@@ -159,8 +159,7 @@
       "Bash(kubectl replace *)",
       "Bash(su *)",
       "Bash(sudo *)",
-      "NotebookEdit",
-      "NotebookRead"
+      "NotebookEdit"
     ],
     "defaultMode": "plan"
   },
