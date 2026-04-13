@@ -7,7 +7,7 @@ return {
     init = function()
       vim.g['gin_branch_default_args'] = { '--all', '--verbose', '--verbose' }
 
-      vim.g['gin_log_default_args'] = { '--graph', '--pretty=pretty' }
+      vim.g['gin_log_default_args'] = { '--graph', '--pretty=pretty', '++emojify' }
       vim.g['gin_log_persistent_args'] = { '--no-show-signature' }
 
       vim.g['gin_proxy_apply_without_confirm'] = true
