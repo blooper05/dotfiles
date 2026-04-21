@@ -66,7 +66,7 @@ stern = "1.33.1"
 
 packer = "1.15.1"
 terraform = "1.14.9"
-terraform-docs = "0.21.0"
+terraform-docs = "0.22.0"
 terragrunt = "1.0.0"
 tflint = "0.61.0"
 tfsec = "1.28.14"
