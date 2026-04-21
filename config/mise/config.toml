@@ -76,7 +76,7 @@ tfupdate = "0.9.3"
 
 "github:babarot/c-c-statusline" = "0.3.0"
 "npm:@zed-industries/claude-code-acp" = "0.16.2"
-"npm:ccusage" = "18.0.10"
+"npm:ccusage" = "18.0.11"
 "npm:mcp-hub" = "4.2.1"
 
 "npm:@drawio/mcp" = "1.2.2"
