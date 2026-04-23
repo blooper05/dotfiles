@@ -130,11 +130,6 @@
       "mcp__plugin_mcphub_mcphub__new_relic_mcp__search_entity_with_tag",
       "mcp__plugin_mcphub_mcphub__new_relic_mcp__search_incident",
       "mcp__plugin_mcphub_mcphub__sequential_thinking__sequentialthinking",
-      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___get_regional_availability",
-      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___list_regions",
-      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___read_documentation",
-      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___recommend",
-      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___search_documentation",
       "mcp__plugin_mcphub_mcphub__serena_mcp__activate_project",
       "mcp__plugin_mcphub_mcphub__serena_mcp__check_onboarding_performed",
       "mcp__plugin_mcphub_mcphub__serena_mcp__delete_memory",
@@ -155,7 +150,12 @@
       "mcp__plugin_mcphub_mcphub__serena_mcp__think_about_whether_you_are_done",
       "mcp__plugin_mcphub_mcphub__serena_mcp__write_memory",
       "mcp__plugin_mcphub_mcphub__context7_mcp__query-docs",
-      "mcp__plugin_mcphub_mcphub__context7_mcp__resolve-library-id"
+      "mcp__plugin_mcphub_mcphub__context7_mcp__resolve-library-id",
+      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___get_regional_availability",
+      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___list_regions",
+      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___read_documentation",
+      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___recommend",
+      "mcp__plugin_mcphub_mcphub__aws_knowledge_mcp_server__aws___search_documentation"
     ],
     "deny": [
       "Bash(bash -c *)",
