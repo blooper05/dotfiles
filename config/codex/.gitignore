@@ -1,10 +1,7 @@
 /.tmp/
-/ambient-suggestions/
 /cache/
 /log/
 /memories/
-/plugins/cache/
-/sessions/
 /shell_snapshots/
 /skills/
 /sqlite/
@@ -13,7 +10,6 @@
 /.codex-global-state.json
 /.codex-global-state.json.bak
 /auth.json
-/history.jsonl
 /installation_id
 /logs_1.sqlite
 /logs_1.sqlite-shm
@@ -22,7 +18,6 @@
 /logs_2.sqlite-shm
 /logs_2.sqlite-wal
 /models_cache.json
-/session_index.jsonl
 /state_5.sqlite
 /state_5.sqlite-shm
 /state_5.sqlite-wal
