@@ -292,5 +292,6 @@
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
+  "theme": "dark-ansi",
   "voiceEnabled": true
 }
