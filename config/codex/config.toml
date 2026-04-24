@@ -2,6 +2,7 @@
 
 model = "gpt-5.5"
 model_reasoning_effort = "xhigh"
+personality = "pragmatic"
 
 [marketplaces.openai-bundled]
 last_updated = "2026-04-24T15:59:16Z"
