@@ -294,6 +294,7 @@
   "showThinkingSummaries": true,
   "theme": "dark-ansi",
   "editorMode": "normal",
+  "verbose": true,
   "autoCompactEnabled": false,
   "teammateMode": "auto",
   "voiceEnabled": true
