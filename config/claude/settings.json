@@ -293,5 +293,6 @@
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
   "theme": "dark-ansi",
+  "editorMode": "normal",
   "voiceEnabled": true
 }
