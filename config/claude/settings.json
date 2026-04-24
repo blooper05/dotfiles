@@ -289,8 +289,8 @@
   "language": "japanese",
   "alwaysThinkingEnabled": true,
   "effortLevel": "xhigh",
+  "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
-  "voiceEnabled": true,
-  "tui": "fullscreen"
+  "voiceEnabled": true
 }
