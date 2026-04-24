@@ -12,7 +12,6 @@
 /vendor_imports/
 /.codex-global-state.json
 /.codex-global-state.json.bak
-/.personality_migration
 /auth.json
 /history.jsonl
 /installation_id
