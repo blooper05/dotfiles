@@ -1,7 +1,9 @@
 /.tmp/
+/ambient-suggestions/
 /cache/
 /log/
 /memories/
+/plugins/cache/
 /sessions/
 /shell_snapshots/
 /skills/
@@ -9,6 +11,7 @@
 /tmp/
 /vendor_imports/
 /.codex-global-state.json
+/.codex-global-state.json.bak
 /.personality_migration
 /auth.json
 /config.toml
