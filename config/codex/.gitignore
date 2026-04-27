@@ -5,7 +5,7 @@
 /plugins/cache/
 /sessions/
 /shell_snapshots/
-/skills/
+/skills/.system/
 /sqlite/
 /tmp/
 /vendor_imports/
