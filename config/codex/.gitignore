@@ -2,6 +2,7 @@
 /cache/
 /log/
 /memories/
+/plugins/cache/
 /sessions/
 /shell_snapshots/
 /skills/
