@@ -176,7 +176,7 @@ export SKIM_DEFAULT_OPTIONS='--multi --layout=reverse --ansi --select-1 --exit-0
 # anyframe {{{2
 bindkey '^k' anyframe-widget-kill
 bindkey '^r' anyframe-widget-put-history
-bindkey '^s' anyframe-widget-cd-ghq-repository
+bindkey '^s' anyframe-widget-cd-ghq-worktree
 
 # ghq {{{2
 export GHQ_ROOT=$XDG_DATA_HOME/ghq
