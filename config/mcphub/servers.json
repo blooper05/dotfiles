@@ -29,9 +29,9 @@
       "disabled": false,
       "url": "https://knowledge-mcp.global.api.aws"
     },
-    "aws-terraform-mcp-server": {
+    "terraform-mcp-server": {
       "disabled": false,
-      "command": "awslabs.terraform-mcp-server"
+      "command": "terraform-mcp-server"
     },
     "playwright-mcp": {
       "disabled": true,
