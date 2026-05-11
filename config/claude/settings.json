@@ -298,6 +298,7 @@
   "theme": "dark-ansi",
   "editorMode": "normal",
   "verbose": false,
+  "preferredNotifChannel": "auto",
   "autoCompactEnabled": false,
   "teammateMode": "auto",
   "voiceEnabled": true
