@@ -80,7 +80,7 @@ tfupdate = "0.9.4"
 "npm:mcp-hub" = "4.2.1"
 
 "go:github.com/hashicorp/terraform-mcp-server/cmd/terraform-mcp-server" = "0.5.2"
-"npm:@drawio/mcp" = "1.2.6"
+"npm:@drawio/mcp" = "1.2.7"
 "npm:@modelcontextprotocol/server-sequential-thinking" = "2025.12.18"
 "npm:@playwright/mcp" = "0.0.75"
 "npm:@upstash/context7-mcp" = "2.2.4"
