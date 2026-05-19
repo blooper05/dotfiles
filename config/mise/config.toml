@@ -49,7 +49,7 @@ github-cli = "2.92.0"
 "aqua:go-to-k/cls3" = "0.32.4"
 "aqua:k1LoW/awsdo" = "1.4.4"
 aws-cli = "2.34.49"
-aws-sam = "1.159.1"
+aws-sam = "1.160.1"
 ecspresso = "2.8.3"
 
 "aqua:argoproj-labs/argocd-autopilot" = "0.4.20"
