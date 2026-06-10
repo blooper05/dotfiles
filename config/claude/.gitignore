@@ -7,10 +7,7 @@
 /image-cache/
 /paste-cache/
 /plans/
-/plugins/*
-!/plugins/marketplaces/
-/plugins/marketplaces/*
-!/plugins/marketplaces/local/
+/plugins/
 /projects/
 /session-env/
 /sessions/
