@@ -294,6 +294,7 @@
   "autoCompactEnabled": false,
   "switchModelsOnFlag": true,
   "fileCheckpointingEnabled": true,
+  "showTurnDuration": true,
   "teammateMode": "auto",
   "voiceEnabled": true
 }
