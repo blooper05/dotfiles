@@ -42,7 +42,7 @@ trivy = "0.71.0"
 
 "aqua:suzuki-shunsuke/pinact" = "4.1.0"
 "github:babarot/gh-infra" = "0.13.0"
-act = "0.2.88"
+act = "0.2.89"
 github-cli = "2.92.0"
 
 "aqua:fujiwara/ecsta" = "0.8.2"
