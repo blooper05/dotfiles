@@ -248,9 +248,6 @@
     "command": "c-c-statusline --theme=nord"
   },
   "enabledPlugins": {
-    "dev-workflow@local": true,
-    "langservers@local": true,
-    "mcphub@local": true,
     "feature-dev@claude-code-plugins": true,
     "pr-review-toolkit@claude-code-plugins": true,
     "ralph-wiggum@claude-code-plugins": true,
@@ -258,12 +255,6 @@
     "codex@openai-codex": true
   },
   "extraKnownMarketplaces": {
-    "local": {
-      "source": {
-        "source": "directory",
-        "path": "$XDG_CONFIG_HOME/claude/plugins/marketplaces/local"
-      }
-    },
     "claude-code-plugins": {
       "source": {
         "source": "github",
