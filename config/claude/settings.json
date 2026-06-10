@@ -293,6 +293,7 @@
   "preferredNotifChannel": "auto",
   "autoCompactEnabled": false,
   "switchModelsOnFlag": true,
+  "fileCheckpointingEnabled": true,
   "teammateMode": "auto",
   "voiceEnabled": true
 }
