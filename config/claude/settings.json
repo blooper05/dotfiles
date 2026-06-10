@@ -188,7 +188,6 @@
     ],
     "defaultMode": "plan"
   },
-  "model": "claude-fable-5[1m]",
   "hooks": {
     "PostToolUse": [
       {
@@ -286,7 +285,7 @@
   "outputStyle": "Explanatory",
   "language": "japanese",
   "alwaysThinkingEnabled": true,
-  "effortLevel": "low",
+  "effortLevel": "xhigh",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
@@ -301,5 +300,6 @@
   "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
   "useAutoModeDuringPlan": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "model": "claude-fable-5[1m]"
 }
