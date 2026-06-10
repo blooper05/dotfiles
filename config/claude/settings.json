@@ -295,6 +295,7 @@
   "switchModelsOnFlag": true,
   "fileCheckpointingEnabled": true,
   "showTurnDuration": true,
+  "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
   "voiceEnabled": true
 }
