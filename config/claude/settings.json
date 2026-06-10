@@ -297,5 +297,6 @@
   "showTurnDuration": true,
   "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
+  "useAutoModeDuringPlan": true,
   "voiceEnabled": true
 }
