@@ -14,6 +14,7 @@
 /.codex-global-state.json
 /.codex-global-state.json.bak
 /auth.json
+/goals_1.sqlite
 /installation_id
 /logs_1.sqlite
 /logs_1.sqlite-shm
