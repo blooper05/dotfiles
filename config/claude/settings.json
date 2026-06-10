@@ -292,6 +292,7 @@
   "verbose": false,
   "preferredNotifChannel": "auto",
   "autoCompactEnabled": false,
+  "switchModelsOnFlag": true,
   "teammateMode": "auto",
   "voiceEnabled": true
 }
