@@ -17,9 +17,9 @@
       "command": "mcp-server-sequential-thinking"
     },
     "serena-mcp": {
-      "disabled": true,
-      "command": "serena-mcp-server",
-      "args": ["--context", "ide-assistant", "--project", ".", "--enable-web-dashboard", "false"]
+      "disabled": false,
+      "command": "serena",
+      "args": ["start-mcp-server", "--project=.", "--context=ide-assistant", "--enable-web-dashboard=false"]
     },
     "context7-mcp": {
       "disabled": false,
