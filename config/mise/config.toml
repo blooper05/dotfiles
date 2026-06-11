@@ -85,7 +85,7 @@ tfupdate = "0.9.4"
 "npm:@playwright/mcp" = "0.0.76"
 "npm:@upstash/context7-mcp" = "3.1.0"
 "npm:task-master-ai" = "0.43.1"
-"pipx:oraios/serena" = "v0.1.4"
+"pipx:oraios/serena" = "v1.5.3"
 
 [settings]
 idiomatic_version_file_enable_tools = ["go", "node", "ruby"]
