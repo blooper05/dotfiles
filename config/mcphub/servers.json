@@ -33,10 +33,6 @@
       "disabled": false,
       "command": "terraform-mcp-server"
     },
-    "playwright-mcp": {
-      "disabled": true,
-      "command": "mcp-server-playwright"
-    },
     "taskmaster-ai": {
       "disabled": true,
       "command": "task-master-ai"
