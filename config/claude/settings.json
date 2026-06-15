@@ -297,7 +297,7 @@
   "verbose": false,
   "preferredNotifChannel": "auto",
   "autoCompactEnabled": false,
-  "switchModelsOnFlag": true,
+  "switchModelsOnFlag": false,
   "fileCheckpointingEnabled": true,
   "showTurnDuration": true,
   "terminalProgressBarEnabled": true,
