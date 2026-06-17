@@ -190,7 +190,7 @@
     ],
     "defaultMode": "plan"
   },
-  "model": "claude-fable-5[1m]",
+  "model": "claude-opus-4-6[1m]",
   "hooks": {
     "PostToolUse": [
       {
