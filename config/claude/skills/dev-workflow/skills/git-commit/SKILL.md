@@ -1,10 +1,10 @@
 ---
 name: git-commit
-allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 description: >-
   This skill should be used when the user asks to "commit", "create a commit",
   "git commit", "stage and commit changes", "commit my changes",
   or needs to create a git commit from current working tree changes.
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
 ---
 
 # Git Commit
