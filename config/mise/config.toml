@@ -83,7 +83,7 @@ tfupdate = "0.9.4"
 "npm:@drawio/mcp" = "1.2.8"
 "npm:@modelcontextprotocol/server-sequential-thinking" = "2025.12.18"
 "npm:@upstash/context7-mcp" = "3.2.1"
-"npm:agent-browser" = "0.27.3"
+"npm:agent-browser" = "0.28.0"
 "npm:task-master-ai" = "0.43.1"
 "pipx:oraios/serena" = "v1.5.3"
 
