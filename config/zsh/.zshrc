@@ -213,9 +213,6 @@ export CLAUDE_CONFIG_DIR=$XDG_CONFIG_HOME/claude
 # Codex {{{2
 export CODEX_HOME=$XDG_CONFIG_HOME/codex
 
-# Zellij {{{2
-eval "$(zellij setup --generate-auto-start zsh)"
-
 # Sheldon {{{2
 eval "$(sheldon source)"
 
