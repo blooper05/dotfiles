@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "env": {
     "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1",
+    "CLAUDE_CODE_ENABLE_EXPERIMENTAL_ADVISOR_TOOL": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_NEW_INIT": "1",
     "CLAUDE_CODE_NO_FLICKER": "1",
@@ -308,5 +309,6 @@
   "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
   "useAutoModeDuringPlan": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "advisorModel": "fable"
 }
