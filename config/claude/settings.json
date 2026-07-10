@@ -295,6 +295,7 @@
   "language": "japanese",
   "alwaysThinkingEnabled": true,
   "effortLevel": "xhigh",
+  "advisorModel": "fable",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
@@ -309,6 +310,5 @@
   "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
   "useAutoModeDuringPlan": true,
-  "voiceEnabled": true,
-  "advisorModel": "fable"
+  "voiceEnabled": true
 }
