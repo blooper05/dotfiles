@@ -1,9 +1,5 @@
 {
   "mcpServers": {
-    "atlassian-mcp": {
-      "disabled": false,
-      "url": "https://mcp.atlassian.com/v1/mcp"
-    },
     "drawio-mcp": {
       "disabled": false,
       "command": "drawio-mcp"
