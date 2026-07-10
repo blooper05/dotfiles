@@ -22,7 +22,6 @@ brew "git-secrets"
 brew "gnupg"
 brew "gping"
 brew "herdr"
-brew "hunk"
 brew "jq"
 brew "luajit", args: ["HEAD"]
 brew "mackup"
