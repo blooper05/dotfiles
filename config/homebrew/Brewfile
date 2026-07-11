@@ -1,3 +1,4 @@
+tap "blooper05/tap"
 tap "k1low/tap"
 
 brew "bat"
@@ -105,6 +106,7 @@ cask "twingate"
 cask "yaak"
 # cask "zeplin"
 # cask "zoom"
+cask "blooper05/tap/kanary"
 
 # mas "DaVinci Resolve", id: 571213070
 # mas "EdgeView 2", id: 1206246482

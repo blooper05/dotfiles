@@ -1,5 +1,6 @@
 {
   "trustedtaps": [
+    "blooper05/tap",
     "k1low/tap"
   ]
 }
