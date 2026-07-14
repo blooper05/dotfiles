@@ -163,6 +163,7 @@
       "Bash(git config set *)",
       "Bash(git config unset *)",
       "Bash(git switch *)",
+      "Bash(git worktree *)",
       "Bash(kubectl apply *)",
       "Bash(kubectl config use-context *)",
       "Bash(kubectl delete *)",
