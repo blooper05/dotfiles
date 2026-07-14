@@ -30,6 +30,7 @@
       "Bash(devcontainer-exec-terragrunt-init *)",
       "Bash(devcontainer-exec-terragrunt-plan *)",
       "Bash(devcontainer-exec-terragrunt-plan-destroy *)",
+      "Bash(diff *)",
       "Bash(do *)",
       "Bash(docker build *)",
       "Bash(docker logs *)",
