@@ -7,6 +7,7 @@ brew "bettercap"
 brew "binwalk"
 brew "bottom"
 brew "colima", restart_service: true
+brew "crit"
 brew "deck"
 brew "devcontainer"
 brew "docker"
