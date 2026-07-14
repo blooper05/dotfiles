@@ -41,6 +41,7 @@
       "Bash(find *)",
       "Bash(gh * list *)",
       "Bash(gh * view *)",
+      "Bash(gh auth status)",
       "Bash(gh pr check *)",
       "Bash(gh pr diff *)",
       "Bash(gh search *)",
