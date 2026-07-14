@@ -46,7 +46,6 @@ brew "xh"
 brew "yq"
 brew "zsh"
 brew "k1low/tap/git-wt"
-brew "k1low/tap/mo"
 brew "k1low/tap/roots"
 
 cask "1password"
