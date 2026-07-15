@@ -26,6 +26,8 @@
       "Bash(actionlint *)",
       "Bash(awk *)",
       "Bash(cat *)",
+      "Bash(ctx7 docs *)",
+      "Bash(ctx7 library *)",
       "Bash(date *)",
       "Bash(devcontainer-exec-terragrunt-init *)",
       "Bash(devcontainer-exec-terragrunt-plan *)",
