@@ -1,4 +1,5 @@
-Follow [Semantic Line Breaks](https://sembr.org/) in Markdown.
+Follow [Semantic Line Breaks](https://sembr.org/)
+only in Markdown files committed to a repository.
 Break after sentences and at clause boundaries,
 targeting roughly 80 characters per line.
 
