@@ -49,7 +49,6 @@
       "Bash(gh search *)",
       "Bash(git add *)",
       "Bash(git cat-file *)",
-      "Bash(git checkout -b *)",
       "Bash(git fetch *)",
       "Bash(git log *)",
       "Bash(git ls-files *)",
