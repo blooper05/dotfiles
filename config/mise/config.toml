@@ -80,7 +80,7 @@ tfupdate = "0.10.2"
 "npm:mcp-hub" = "4.2.1"
 
 "aqua:openclaw/gogcli" = "0.34.0"
-"go:github.com/hashicorp/terraform-mcp-server/cmd/terraform-mcp-server" = "1.0.0"
+"go:github.com/hashicorp/terraform-mcp-server/cmd/terraform-mcp-server" = "1.1.0"
 "http:twg" = { version = "1.0.24", url = "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v{{ version }}", bin = "twg", checksum = "sha256:f6cba4cb3da3589d7eb9f341bbd5cfbaf04e131d0e8e49a8fc59eb7d66f799a8" }
 "npm:@drawio/mcp" = "1.4.0"
 "npm:@modelcontextprotocol/server-sequential-thinking" = "2026.7.4"
