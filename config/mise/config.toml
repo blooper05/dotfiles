@@ -70,7 +70,7 @@ terraform-docs = "0.24.0"
 terragrunt = "1.1.1"
 tflint = "0.63.1"
 tfsec = "1.28.14"
-tfupdate = "0.10.1"
+tfupdate = "0.10.2"
 
 "pipx:plamo-translate" = "1.0.5"
 
