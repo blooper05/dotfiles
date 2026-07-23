@@ -76,7 +76,7 @@ tfupdate = "0.10.2"
 
 "github:babarot/c-c-statusline" = "0.3.0"
 "npm:@zed-industries/claude-code-acp" = "0.16.2"
-"npm:ccusage" = "20.0.17"
+"npm:ccusage" = "20.0.18"
 "npm:mcp-hub" = "4.2.1"
 
 "aqua:openclaw/gogcli" = "0.34.0"
