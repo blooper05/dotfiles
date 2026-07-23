@@ -68,7 +68,7 @@ packer = "1.15.4"
 terraform = "1.15.8"
 terraform-docs = "0.24.0"
 terragrunt = "1.1.1"
-tflint = "0.63.1"
+tflint = "0.64.0"
 tfsec = "1.28.14"
 tfupdate = "0.10.2"
 
