@@ -40,7 +40,7 @@ brew "sk"
 brew "starship"
 brew "terminal-notifier"
 brew "termshark"
-brew "tree-sitter", args: ["HEAD"]
+brew "tree-sitter-cli", args: ["HEAD"]
 brew "wordnet"
 brew "xh"
 brew "yq"
