@@ -84,7 +84,7 @@ tfupdate = "0.10.2"
 "http:twg" = { version = "1.1.0", url = "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v{{ version }}", bin = "twg", checksum = "sha256:cd79131d5b39794d95b2802f7639a2025d9a33e1f29f32d2fe8b79f2e3aaa55f" }
 "npm:@drawio/mcp" = "1.5.0"
 "npm:@modelcontextprotocol/server-sequential-thinking" = "2026.7.4"
-"npm:agent-browser" = "0.32.0"
+"npm:agent-browser" = "0.32.3"
 "npm:ctx7" = "0.5.4"
 "npm:task-master-ai" = "0.43.1"
 "pipx:oraios/serena" = "v1.5.3"
