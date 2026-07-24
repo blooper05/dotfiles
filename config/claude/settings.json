@@ -26,6 +26,7 @@
       "Bash(actionlint *)",
       "Bash(awk *)",
       "Bash(cat *)",
+      "Bash(crit *)",
       "Bash(ctx7 docs *)",
       "Bash(ctx7 library *)",
       "Bash(date *)",
