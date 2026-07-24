@@ -36,6 +36,41 @@ return {
           additional_args = { '--hidden', '--glob=!.git/', '--glob=!.terraform/' },
         },
 
+        git_commits = {
+          git_command = {
+            'git',
+            'log',
+            '--pretty=oneline',
+            '--abbrev-commit',
+            '--no-show-signature',
+            '--',
+            '.',
+          },
+        },
+
+        git_bcommits = {
+          git_command = {
+            'git',
+            'log',
+            '--pretty=oneline',
+            '--abbrev-commit',
+            '--follow',
+            '--no-show-signature',
+          },
+        },
+
+        git_bcommits_range = {
+          git_command = {
+            'git',
+            'log',
+            '--pretty=oneline',
+            '--abbrev-commit',
+            '--no-patch',
+            '--no-show-signature',
+            '-L',
+          },
+        },
+
         find_files = {
           find_command = { 'fd', '--type=file', '--hidden', '--exclude=.git/', '--exclude=.terraform/' },
         },
