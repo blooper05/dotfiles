@@ -198,13 +198,4 @@ return {
     config = true,
     event = 'WinLeave',
   },
-
-  {
-    'folke/zen-mode.nvim',
-    dependencies = {
-      { 'folke/twilight.nvim' },
-    },
-    config = true,
-    cmd = 'ZenMode',
-  },
 }
