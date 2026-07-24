@@ -43,19 +43,19 @@ return {
 
       local schemastore = require('schemastore')
 
-      vim.lsp.config('lua_ls', {
-        settings = {
-          Lua = {
-            runtime = { version = 'LuaJIT' },
-            workspace = { library = { vim.env.VIMRUNTIME } },
-          },
-        },
-      })
       vim.lsp.config('jsonls', {
         settings = {
           json = {
             schemas = schemastore.json.schemas(),
             validate = { enable = true },
+          },
+        },
+      })
+      vim.lsp.config('lua_ls', {
+        settings = {
+          Lua = {
+            runtime = { version = 'LuaJIT' },
+            workspace = { library = { vim.env.VIMRUNTIME } },
           },
         },
       })
