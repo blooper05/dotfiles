@@ -38,7 +38,6 @@ brew "sheldon"
 brew "sk"
 # brew "ssh-copy-id", link: true
 brew "starship"
-brew "terminal-notifier"
 brew "termshark"
 brew "tree-sitter-cli", args: ["HEAD"]
 brew "wordnet"

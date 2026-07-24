@@ -177,17 +177,6 @@
   },
   "model": "claude-sonnet-5[1m]",
   "hooks": {
-    "Notification": [
-      {
-        "matcher": "permission_prompt|idle_prompt",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts"
-          }
-        ]
-      }
-    ],
     "PreToolUse": [
       {
         "matcher": "Write|Edit",
@@ -195,16 +184,6 @@
           {
             "type": "command",
             "command": "$XDG_CONFIG_HOME/claude/hooks/require-worktree.ts"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "$XDG_CONFIG_HOME/claude/hooks/notify.ts"
           }
         ]
       }
