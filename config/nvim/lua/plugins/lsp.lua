@@ -2,10 +2,9 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      { 'VonHeikemen/lsp-zero.nvim' },
       { 'b0o/schemastore.nvim' },
-      { 'williamboman/mason-lspconfig.nvim' },
-      { 'williamboman/mason.nvim' },
+      { 'mason-org/mason-lspconfig.nvim' },
+      { 'mason-org/mason.nvim' },
       { 'zapling/mason-lock.nvim' },
     },
     config = function()
@@ -42,47 +41,39 @@ return {
         'yamlls',
       }
 
-      local lspconfig = require('lspconfig')
-      local lsp_zero = require('lsp-zero')
       local schemastore = require('schemastore')
-
-      lsp_zero.on_attach(function(_, bufnr)
-        lsp_zero.default_keymaps({ buffer = bufnr })
-      end)
 
       require('mason').setup()
       require('mason-lock').setup({
         lockfile_path = vim.fn.stdpath('config') .. '/mason-lock.json',
       })
-      require('mason-lspconfig').setup({
-        ensure_installed = servers,
-        handlers = {
-          lsp_zero.default_setup,
-          lua_ls = function()
-            lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls())
-          end,
-          jsonls = function()
-            lspconfig.jsonls.setup({
-              settings = {
-                json = {
-                  schemas = schemastore.json.schemas(),
-                  validate = { enable = true },
-                },
-              },
-            })
-          end,
-          yamlls = function()
-            lspconfig.yamlls.setup({
-              settings = {
-                yaml = {
-                  schemaStore = { enable = false, url = '' },
-                  schemas = schemastore.yaml.schemas(),
-                },
-              },
-            })
-          end,
+
+      vim.lsp.config('lua_ls', {
+        settings = {
+          Lua = {
+            runtime = { version = 'LuaJIT' },
+            workspace = { library = { vim.env.VIMRUNTIME } },
+          },
         },
       })
+      vim.lsp.config('jsonls', {
+        settings = {
+          json = {
+            schemas = schemastore.json.schemas(),
+            validate = { enable = true },
+          },
+        },
+      })
+      vim.lsp.config('yamlls', {
+        settings = {
+          yaml = {
+            schemaStore = { enable = false, url = '' },
+            schemas = schemastore.yaml.schemas(),
+          },
+        },
+      })
+
+      require('mason-lspconfig').setup({ ensure_installed = servers })
     end,
     event = 'BufReadPost',
     keys = {
