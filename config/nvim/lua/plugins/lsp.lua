@@ -43,11 +43,6 @@ return {
 
       local schemastore = require('schemastore')
 
-      require('mason').setup()
-      require('mason-lock').setup({
-        lockfile_path = vim.fn.stdpath('config') .. '/mason-lock.json',
-      })
-
       vim.lsp.config('lua_ls', {
         settings = {
           Lua = {
@@ -73,6 +68,10 @@ return {
         },
       })
 
+      require('mason').setup()
+      require('mason-lock').setup({
+        lockfile_path = vim.fn.stdpath('config') .. '/mason-lock.json',
+      })
       require('mason-lspconfig').setup({ ensure_installed = servers })
     end,
     event = 'BufReadPost',
