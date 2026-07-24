@@ -19,12 +19,6 @@ return {
     init = function()
       vim.g.matchup_matchparen_offscreen = { method = 'popup' }
     end,
-    main = 'nvim-treesitter.configs',
-    opts = {
-      matchup = {
-        enable = true,
-      },
-    },
     event = 'BufReadPost',
   },
 
