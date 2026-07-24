@@ -69,9 +69,7 @@ return {
       })
 
       require('mason').setup()
-      require('mason-lock').setup({
-        lockfile_path = vim.fn.stdpath('config') .. '/mason-lock.json',
-      })
+      require('mason-lock').setup({ lockfile_path = vim.fn.stdpath('config') .. '/mason-lock.json' })
       require('mason-lspconfig').setup({ ensure_installed = servers })
     end,
     event = 'BufReadPost',
