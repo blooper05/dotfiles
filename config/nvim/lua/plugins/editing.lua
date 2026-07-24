@@ -3,7 +3,6 @@ return {
     'numToStr/Comment.nvim',
     dependencies = {
       { 'JoosepAlviste/nvim-ts-context-commentstring' },
-      { 'nvim-treesitter/nvim-treesitter' },
     },
     opts = function()
       return {
@@ -18,9 +17,6 @@ return {
 
   {
     'JoosepAlviste/nvim-ts-context-commentstring',
-    dependencies = {
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
     opts = {
       context_commentstring = {
         enable = true,
@@ -31,9 +27,6 @@ return {
 
   {
     'Wansmer/treesj',
-    dependencies = {
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
     opts = {
       use_default_keymaps = false,
     },
@@ -131,7 +124,6 @@ return {
       { 'folke/trouble.nvim' },
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-telescope/telescope.nvim' },
-      { 'nvim-treesitter/nvim-treesitter' },
     },
     config = true,
     event = 'BufReadPost',

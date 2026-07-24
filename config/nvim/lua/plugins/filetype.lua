@@ -25,7 +25,6 @@ return {
     'MeanderingProgrammer/render-markdown.nvim',
     dependencies = {
       { 'nvim-tree/nvim-web-devicons' },
-      { 'nvim-treesitter/nvim-treesitter' },
     },
     opts = {
       completions = { blink = { enabled = true } },
@@ -51,7 +50,6 @@ return {
     'ray-x/go.nvim',
     dependencies = {
       { 'neovim/nvim-lspconfig' },
-      { 'nvim-treesitter/nvim-treesitter' },
       { 'ray-x/guihua.lua' },
     },
     config = function(_, opts)

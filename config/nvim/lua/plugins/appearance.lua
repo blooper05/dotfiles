@@ -95,7 +95,6 @@ return {
     'shellRaining/hlchunk.nvim',
     dependencies = {
       { 'EdenEast/nightfox.nvim' },
-      { 'nvim-treesitter/nvim-treesitter' },
     },
     init = function()
       -- Enable 24-bit RGB color in the TUI.
@@ -134,7 +133,6 @@ return {
     'folke/noice.nvim',
     dependencies = {
       { 'MunifTanjim/nui.nvim' },
-      { 'nvim-treesitter/nvim-treesitter' },
       { 'rcarriga/nvim-notify' },
     },
     init = function()

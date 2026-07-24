@@ -16,14 +16,11 @@ return {
         enable = true,
       },
     },
-    event = 'BufReadPost',
+    lazy = false,
   },
 
   {
     'm-demare/hlargs.nvim',
-    dependencies = {
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
     config = true,
     event = 'BufReadPost',
   },

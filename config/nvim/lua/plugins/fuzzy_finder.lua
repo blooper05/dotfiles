@@ -5,7 +5,6 @@ return {
       { 'neovim/nvim-lspconfig' },
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-tree/nvim-web-devicons' },
-      { 'nvim-treesitter/nvim-treesitter' },
     },
     opts = {
       defaults = {

@@ -16,9 +16,6 @@ return {
 
   {
     'andymass/vim-matchup', -- non-lua plugin
-    dependencies = {
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
     init = function()
       vim.g.matchup_matchparen_offscreen = { method = 'popup' }
     end,

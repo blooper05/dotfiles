@@ -64,7 +64,6 @@ return {
       { 'antoinemadec/FixCursorHold.nvim' },
       { 'nvim-lua/plenary.nvim' },
       { 'nvim-neotest/nvim-nio' },
-      { 'nvim-treesitter/nvim-treesitter' },
       { 'olimorris/neotest-rspec', ft = 'ruby' },
     },
     opts = function()

@@ -116,9 +116,6 @@ return {
 
   {
     'altermo/ultimate-autopair.nvim',
-    dependencies = {
-      { 'nvim-treesitter/nvim-treesitter' },
-    },
     config = true,
     event = { 'InsertEnter', 'CmdlineEnter' },
   },
@@ -127,7 +124,6 @@ return {
     'danymat/neogen',
     dependencies = {
       { 'L3MON4D3/LuaSnip' },
-      { 'nvim-treesitter/nvim-treesitter' },
     },
     opts = {
       snippet_engine = 'luasnip',
