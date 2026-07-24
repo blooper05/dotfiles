@@ -1,28 +1,22 @@
 return {
   {
-    'numToStr/Comment.nvim',
-    dependencies = {
-      { 'JoosepAlviste/nvim-ts-context-commentstring' },
-    },
-    opts = function()
-      return {
-        pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
-      }
-    end,
-    keys = {
-      { 'gc', mode = { 'n', 'x' } },
-      { 'gb', mode = { 'n', 'x' } },
-    },
-  },
-
-  {
     'JoosepAlviste/nvim-ts-context-commentstring',
     init = function()
       vim.g.skip_ts_context_commentstring_module = true
+
+      local get_option = vim.filetype.get_option
+      vim.filetype.get_option = function(filetype, option)
+        if option == 'commentstring' then
+          return require('ts_context_commentstring.internal').calculate_commentstring()
+            or get_option(filetype, option)
+        end
+        return get_option(filetype, option)
+      end
     end,
     opts = {
       enable_autocmd = false,
     },
+    event = 'BufReadPost',
   },
 
   {
