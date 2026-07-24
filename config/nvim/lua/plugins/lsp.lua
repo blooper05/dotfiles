@@ -59,6 +59,13 @@ return {
           },
         },
       })
+      vim.lsp.config('remark_ls', {
+        settings = {
+          remark = {
+            requireConfig = false,
+          },
+        },
+      })
       vim.lsp.config('yamlls', {
         settings = {
           yaml = {
