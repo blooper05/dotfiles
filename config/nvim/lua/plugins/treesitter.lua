@@ -63,10 +63,4 @@ return {
     end,
     lazy = false,
   },
-
-  {
-    'm-demare/hlargs.nvim',
-    config = true,
-    event = 'BufReadPost',
-  },
 }
