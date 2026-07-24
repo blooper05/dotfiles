@@ -57,41 +57,6 @@ return {
   },
 
   {
-    'b0o/incline.nvim',
-    dependencies = {
-      { 'nvim-tree/nvim-web-devicons', opts = { default = true } },
-    },
-    opts = {
-      hide = {
-        focused_win = true,
-        only_win = true,
-      },
-      render = function(props)
-        local helpers = require('incline.helpers')
-        local devicons = require('nvim-web-devicons')
-
-        local filepath = vim.api.nvim_buf_get_name(props.buf)
-        local filename = vim.fn.fnamemodify(filepath, ':t')
-
-        if filename == '' then
-          filename = '[No Name]'
-        end
-
-        local icon, icon_bg = devicons.get_icon_color(filename)
-        local icon_fg = helpers.contrast_color(icon_bg)
-
-        return { { ' ', icon, ' ', guifg = icon_fg, guibg = icon_bg }, '  ', filename, '  ' }
-      end,
-      window = {
-        margin = { horizontal = 0 },
-        padding = 0,
-        placement = { horizontal = 'center', vertical = 'bottom' },
-      },
-    },
-    event = 'BufReadPost',
-  },
-
-  {
     'shellRaining/hlchunk.nvim',
     dependencies = {
       { 'EdenEast/nightfox.nvim' },
