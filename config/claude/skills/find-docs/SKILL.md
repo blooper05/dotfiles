@@ -5,9 +5,9 @@ description: |-
     Use even when you think you know the answer — do not rely on training data for API details, signatures, or configuration options as they are frequently outdated. Always verify against current docs. Prefer this over web search for library documentation and API details.
 metadata:
     github-path: skills/find-docs
-    github-ref: refs/tags/ctx7@0.5.4
+    github-ref: refs/tags/@upstash/context7-mcp@3.2.5
     github-repo: https://github.com/upstash/context7
-    github-tree-sha: f1f7597c0575b2c138a551a222f56808a86e16b1
+    github-tree-sha: b635cd66f1414befd36d18646561398de2ddab54
 name: find-docs
 ---
 # Documentation Lookup
@@ -112,7 +112,7 @@ The query directly affects the quality of results. Be specific and include relev
 | Bad (too vague) | `"hooks"` |
 | Bad (too broad) | `"routing and auth and caching in Next.js"` |
 
-Use the user's full question as the query when possible — vague one-word queries return generic results, and multi-topic queries dilute ranking and return shallow results for each topic.
+Describe what to look up in the library's documentation, rather than the task to complete — vague one-word queries return generic results, and multi-topic queries dilute ranking and return shallow results for each topic.
 
 The output contains two types of content: **code snippets** (titled, with language-tagged blocks) and **info snippets** (prose explanations with breadcrumb context).
 
