@@ -250,6 +250,8 @@ prefix = "ctrl+t"
 # delivery = "off"
 # delay_seconds = 1
 
+delivery = "terminal"
+
 [ui.toast.herdr]
 # position = "bottom-right"
 
