@@ -213,6 +213,9 @@ export CLAUDE_CONFIG_DIR=$XDG_CONFIG_HOME/claude
 # Codex {{{2
 export CODEX_HOME=$XDG_CONFIG_HOME/codex
 
+# Serena {{{2
+export SERENA_HOME=$XDG_DATA_HOME/serena
+
 # Sheldon {{{2
 eval "$(sheldon source)"
 
