@@ -182,7 +182,7 @@
     ],
     "defaultMode": "plan"
   },
-  "model": "claude-sonnet-5[1m]",
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -271,8 +271,8 @@
   "outputStyle": "Explanatory",
   "language": "japanese",
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
-  "advisorModel": "fable",
+  "effortLevel": "xhigh",
+  "advisorModel": "opus",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
