@@ -1,6 +1,9 @@
 {
-  "trustedtaps": [
-    "blooper05/tap",
-    "k1low/tap"
+  "trustedformulae": [
+    "k1low/tap/git-wt",
+    "k1low/tap/roots"
+  ],
+  "trustedcasks": [
+    "blooper05/tap/kanary"
   ]
 }
