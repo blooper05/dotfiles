@@ -1,5 +1,6 @@
 {
   "trustedformulae": [
+    "agavra/tap/tuicr",
     "k1low/tap/git-wt",
     "k1low/tap/roots"
   ],
