@@ -10,3 +10,5 @@ set -ex
 
 rm -rf "$HOME/.cargo/"
 rm -rf "$HOME/.rustup/"
+
+gh skill install upstash/context7 find-docs '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
