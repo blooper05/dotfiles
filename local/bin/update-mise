@@ -15,3 +15,5 @@ gh skill install atlassian/twg-cli --all '--agent=claude-code' '--scope=user' --
 gh skill install upstash/context7 find-docs '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
 
 /usr/bin/curl -sL https://raw.githubusercontent.com/ogulcancelik/herdr/refs/tags/v0.7.5/SKILL.md --output "$CLAUDE_CONFIG_DIR/skills/herdr/SKILL.md"
+
+claude plugin update --scope=user crit@crit
