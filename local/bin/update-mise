@@ -10,6 +10,7 @@ set -ex
 
 rm -rf "$HOME/.cargo/"
 rm -rf "$HOME/.rustup/"
+rm -rf "$HOME/.serena/"
 rm -rf "$HOME/.terraform.d/"
 
 gh skill install atlassian/twg-cli --all '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
