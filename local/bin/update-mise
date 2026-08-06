@@ -10,6 +10,7 @@ set -ex
 
 rm -rf "$HOME/.cargo/"
 rm -rf "$HOME/.rustup/"
+rm -rf "$HOME/.terraform.d/"
 
 gh skill install atlassian/twg-cli --all '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
 gh skill install upstash/context7 find-docs '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
