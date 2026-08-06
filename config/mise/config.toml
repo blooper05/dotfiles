@@ -38,7 +38,7 @@ adr-tools = "3.0.0"
 k6 = "2.1.0"
 redis-cli = "8.4.0"
 sops = "3.13.3"
-trivy = "0.72.0"
+trivy = "0.73.0"
 
 "aqua:suzuki-shunsuke/pinact" = "4.1.1"
 "github:babarot/gh-infra" = "0.13.0"
