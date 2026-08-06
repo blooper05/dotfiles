@@ -9,6 +9,8 @@ read -r -p "Upgrade outdated packages now? (y/N): " answer || true
 if [[ "$answer" =~ ^[Yy]$ ]]; then
 	brew upgrade luajit neovim tree-sitter-cli utf8proc --fetch-HEAD
 	brew bundle upgrade --force-cleanup
+
+	herdr --skill | tee "$CLAUDE_CONFIG_DIR/skills/herdr/SKILL.md"
 fi
 
 /usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:DOCKER_CONFIG" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
