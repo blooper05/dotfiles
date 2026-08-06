@@ -9,6 +9,7 @@ set -ex
 /opt/homebrew/bin/mise prune
 
 rm -rf "$HOME/.cargo/"
+rm -rf "$HOME/.npm/"
 rm -rf "$HOME/.rustup/"
 rm -rf "$HOME/.serena/"
 rm -rf "$HOME/.terraform.d/"
