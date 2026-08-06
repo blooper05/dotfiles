@@ -13,6 +13,8 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 	claude plugin update --scope=user crit@crit
 
 	herdr --skill | tee "$CLAUDE_CONFIG_DIR/skills/herdr/SKILL.md"
+
+	gh skill install agavra/tuicr --all '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
 fi
 
 /usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:DOCKER_CONFIG" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
