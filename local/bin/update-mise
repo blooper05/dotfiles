@@ -10,6 +10,9 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 	/opt/homebrew/bin/mise plugins update
 	/opt/homebrew/bin/mise install
 	/opt/homebrew/bin/mise prune
+
+	gh skill install atlassian/twg-cli --all '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
+	gh skill install upstash/context7 find-docs '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
 fi
 
 rm -rf "$HOME/.agents/"
@@ -19,6 +22,3 @@ rm -rf "$HOME/.npm/"
 rm -rf "$HOME/.rustup/"
 rm -rf "$HOME/.serena/"
 rm -rf "$HOME/.terraform.d/"
-
-gh skill install atlassian/twg-cli --all '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
-gh skill install upstash/context7 find-docs '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
