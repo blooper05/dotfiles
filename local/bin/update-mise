@@ -4,9 +4,13 @@ set -ex
 
 /opt/homebrew/bin/mise outdated --bump
 
-/opt/homebrew/bin/mise plugins update
-/opt/homebrew/bin/mise install
-/opt/homebrew/bin/mise prune
+read -r -p "Upgrade outdated packages now? (y/N): " answer || true
+
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+	/opt/homebrew/bin/mise plugins update
+	/opt/homebrew/bin/mise install
+	/opt/homebrew/bin/mise prune
+fi
 
 rm -rf "$HOME/.agents/"
 rm -rf "$HOME/.aws/"
