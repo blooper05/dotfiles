@@ -40,8 +40,8 @@ redis-cli = "8.4.0"
 sops = "3.13.3"
 trivy = "0.73.0"
 
+"aqua:babarot/gh-infra" = "0.13.0"
 "aqua:suzuki-shunsuke/pinact" = "4.1.1"
-"github:babarot/gh-infra" = "0.13.0"
 act = "0.2.89"
 github-cli = "2.97.0"
 
