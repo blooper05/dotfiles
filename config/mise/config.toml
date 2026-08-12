@@ -87,7 +87,7 @@ tfupdate = "0.10.2"
 "npm:agent-browser" = "0.34.0"
 "npm:ctx7" = "0.5.7"
 "npm:task-master-ai" = "0.43.1"
-"pipx:oraios/serena" = "v1.6.1"
+"pipx:oraios/serena" = "v1.7.0"
 
 [settings]
 idiomatic_version_file_enable_tools = ["go", "node", "ruby"]
