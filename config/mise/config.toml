@@ -79,7 +79,7 @@ tfupdate = "0.10.2"
 "npm:ccusage" = "20.0.19"
 "npm:mcp-hub" = "4.2.1"
 
-"aqua:openclaw/gogcli" = "0.34.1"
+"aqua:openclaw/gogcli" = "0.35.0"
 "go:github.com/hashicorp/terraform-mcp-server/cmd/terraform-mcp-server" = "1.2.0"
 "http:twg" = { version = "1.1.0", url = "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v{{ version }}", bin = "twg", checksum = "sha256:cd79131d5b39794d95b2802f7639a2025d9a33e1f29f32d2fe8b79f2e3aaa55f" }
 "npm:@drawio/mcp" = "1.5.0"
