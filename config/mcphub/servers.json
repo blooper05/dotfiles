@@ -4,10 +4,6 @@
       "disabled": false,
       "command": "drawio-mcp"
     },
-    "mermaid-mcp": {
-      "disabled": false,
-      "url": "https://mcp.mermaid.ai/mcp/"
-    },
     "new-relic-mcp": {
       "disabled": false,
       "url": "https://mcp.newrelic.com/mcp/"
