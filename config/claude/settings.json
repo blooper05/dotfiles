@@ -226,14 +226,14 @@
   },
   "enabledPlugins": {
     "code-review@claude-code-plugins": false,
-    "feature-dev@claude-code-plugins": true,
+    "feature-dev@claude-code-plugins": false,
     "pr-review-toolkit@claude-code-plugins": false,
-    "ralph-wiggum@claude-code-plugins": true,
+    "ralph-wiggum@claude-code-plugins": false,
     "code-review@claude-plugins-official": false,
     "code-simplifier@claude-plugins-official": true,
     "pr-review-toolkit@claude-plugins-official": false,
     "skill-creator@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": false,
     "codex@openai-codex": true,
     "crit@crit": false
   },
