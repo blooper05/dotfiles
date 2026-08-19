@@ -13,7 +13,7 @@
   "html-lsp": "4.10.0",
   "json-lsp": "4.10.0",
   "jsonnet-language-server": "v0.17.0",
-  "lua-language-server": "3.19.0",
+  "lua-language-server": "3.19.1",
   "markdown-oxide": "v0.25.12",
   "marksman": "2026-02-08",
   "postgres-language-server": "0.25.7",
