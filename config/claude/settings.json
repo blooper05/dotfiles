@@ -235,7 +235,7 @@
     "skill-creator@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "codex@openai-codex": true,
-    "crit@crit": true
+    "crit@crit": false
   },
   "extraKnownMarketplaces": {
     "claude-code-plugins": {
