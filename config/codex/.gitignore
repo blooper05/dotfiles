@@ -14,6 +14,7 @@
 /shell_snapshots/
 /skills/.system/
 /sqlite/
+/thread-writer-locks/
 /tmp/
 /vendor_imports/
 /.codex-global-state.json
