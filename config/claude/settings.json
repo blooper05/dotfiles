@@ -282,6 +282,7 @@
   "preferredNotifChannel": "auto",
   "autoCompactEnabled": false,
   "switchModelsOnFlag": false,
+  "autoContinueAtUsageLimit": true,
   "fileCheckpointingEnabled": true,
   "showTurnDuration": true,
   "terminalProgressBarEnabled": true,
