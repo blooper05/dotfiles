@@ -272,7 +272,7 @@
   "language": "japanese",
   "alwaysThinkingEnabled": true,
   "effortLevel": "xhigh",
-  "advisorModel": "opus",
+  "advisorModel": "fable",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
