@@ -279,6 +279,7 @@
   "showThinkingSummaries": true,
   "theme": "dark-ansi",
   "editorMode": "normal",
+  "keybindingFlavor": "readline",
   "verbose": false,
   "preferredNotifChannel": "auto",
   "autoCompactEnabled": false,
