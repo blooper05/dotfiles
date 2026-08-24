@@ -269,7 +269,7 @@
       }
     }
   },
-  "outputStyle": "Explanatory",
+  "outputStyle": "Concise",
   "language": "japanese",
   "alwaysThinkingEnabled": true,
   "effortLevel": "medium",
