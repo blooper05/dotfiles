@@ -234,6 +234,7 @@
     "pr-review-toolkit@claude-plugins-official": false,
     "skill-creator@claude-plugins-official": true,
     "superpowers@claude-plugins-official": false,
+    "eli5@claude-community": true,
     "codex@openai-codex": true,
     "crit@crit": false
   },
