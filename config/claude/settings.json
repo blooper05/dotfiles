@@ -272,7 +272,7 @@
   "outputStyle": "Explanatory",
   "language": "japanese",
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
+  "effortLevel": "medium",
   "advisorModel": "fable",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
