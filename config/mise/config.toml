@@ -36,7 +36,7 @@ yamllint = "1.38.0"
 
 adr-tools = "3.0.0"
 k6 = "2.2.0"
-redis-cli = "8.4.0"
+redis-cli = "8.10.1"
 sops = "3.13.3"
 trivy = "0.74.0"
 
@@ -83,7 +83,7 @@ tfupdate = "0.10.2"
 "aqua:openclaw/gogcli" = "0.37.0"
 "aqua:vercel-labs/agent-browser" = "0.35.0"
 "go:github.com/hashicorp/terraform-mcp-server/cmd/terraform-mcp-server" = "1.2.0"
-"http:twg" = { version = "1.1.0", url = "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v{{ version }}", bin = "twg", checksum = "sha256:cd79131d5b39794d95b2802f7639a2025d9a33e1f29f32d2fe8b79f2e3aaa55f" }
+"http:twg" = { version = "1.2.5", url = "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v{{ version }}", bin = "twg", checksum = "sha256:bc17b9c058da19ae5725ae5d8aa9b26dd539b6982bdf864dff5424d112a9b6f6" }
 "npm:@drawio/mcp" = "1.5.0"
 "npm:@modelcontextprotocol/server-sequential-thinking" = "2026.7.4"
 "npm:ctx7" = "0.5.8"
