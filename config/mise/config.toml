@@ -53,6 +53,7 @@ aws-sam = "1.165.0"
 ecspresso = "2.8.5"
 
 "aqua:argoproj-labs/argocd-autopilot" = "0.4.20"
+"github:bakito/kube-metrics" = "0.2.1"
 argocd = "3.5.1"
 helm = "4.2.4"
 helm-diff = "3.15.11"
