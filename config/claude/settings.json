@@ -297,5 +297,6 @@
   "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
   "useAutoModeDuringPlan": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "skipWorkflowUsageWarning": true
 }
