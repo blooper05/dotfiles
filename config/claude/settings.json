@@ -284,6 +284,7 @@
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
+  "skipWorkflowUsageWarning": true,
   "theme": "dark-ansi",
   "editorMode": "normal",
   "keybindingFlavor": "readline",
@@ -297,6 +298,5 @@
   "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
   "useAutoModeDuringPlan": true,
-  "voiceEnabled": true,
-  "skipWorkflowUsageWarning": true
+  "voiceEnabled": true
 }
