@@ -281,6 +281,17 @@
   "language": "japanese",
   "alwaysThinkingEnabled": true,
   "effortLevel": "medium",
+  "modelSettings": {
+    "claude-fable-5-1": {
+      "effortLevel": "low"
+    },
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    },
+    "claude-opus-5": {
+      "effortLevel": "xhigh"
+    }
+  },
   "advisorModel": "fable",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
