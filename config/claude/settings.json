@@ -220,6 +220,7 @@
   "worktree": {
     "baseRef": "fresh"
   },
+  "enableArtifact": false,
   "statusLine": {
     "type": "command",
     "command": "c-c-statusline --theme=nord"
