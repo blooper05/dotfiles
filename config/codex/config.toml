@@ -4,6 +4,9 @@ model = "gpt-6-astra"
 model_reasoning_effort = "medium"
 personality = "pragmatic"
 
+[desktop]
+followUpQueueMode = "queue"
+
 [features]
 browser_use = false
 browser_use_external = false
