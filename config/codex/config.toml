@@ -6,7 +6,9 @@ personality = "pragmatic"
 
 [desktop]
 followUpQueueMode = "queue"
+git-worktree-root = "$XDG_STATE_HOME/codex/worktrees"
 projectlessWorkspaceRoot = "$XDG_DATA_HOME/codex/tasks"
+worktree-upstream-refresh-mode = "best-effort"
 
 [features]
 browser_use = false
