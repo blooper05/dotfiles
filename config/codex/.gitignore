@@ -42,4 +42,5 @@
 /state_5.sqlite
 /state_5.sqlite-shm
 /state_5.sqlite-wal
+/thread_history_1.sqlite
 /transcription-history.jsonl
