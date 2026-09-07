@@ -5,7 +5,7 @@ model_reasoning_effort = "medium"
 personality = "pragmatic"
 
 [plugins."browser-use@openai-bundled"]
-enabled = true
+enabled = false
 
 [desktop]
 appearanceDarkCodeThemeId = "codex"
