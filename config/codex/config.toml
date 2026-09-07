@@ -18,3 +18,7 @@ enabled = true
 [desktop]
 appearanceDarkCodeThemeId = "codex"
 appearanceLightCodeThemeId = "codex"
+
+[features]
+workspace_dependencies = false
+plugins = false
