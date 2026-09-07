@@ -4,10 +4,6 @@ model = "gpt-6-astra"
 model_reasoning_effort = "medium"
 personality = "pragmatic"
 
-[desktop]
-appearanceDarkCodeThemeId = "codex"
-appearanceLightCodeThemeId = "codex"
-
 [features]
 browser_use = false
 browser_use_external = false
@@ -16,6 +12,3 @@ computer_use = false
 in_app_browser = false
 plugins = false
 workspace_dependencies = false
-
-[plugins."browser-use@openai-bundled"]
-enabled = false
