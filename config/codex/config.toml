@@ -9,8 +9,8 @@ appearanceDarkCodeThemeId = "codex"
 appearanceLightCodeThemeId = "codex"
 
 [features]
-workspace_dependencies = false
 plugins = false
+workspace_dependencies = false
 
 [plugins."browser-use@openai-bundled"]
 enabled = false
