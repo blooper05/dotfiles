@@ -14,3 +14,7 @@ source = "$XDG_CACHE_HOME/codex-runtimes/codex-primary-runtime/plugins/openai-pr
 
 [plugins."browser-use@openai-bundled"]
 enabled = true
+
+[desktop]
+appearanceDarkCodeThemeId = "codex"
+appearanceLightCodeThemeId = "codex"
