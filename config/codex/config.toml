@@ -20,3 +20,17 @@ computer_use = false
 in_app_browser = false
 plugins = false
 workspace_dependencies = false
+
+[marketplaces.openai-bundled]
+source_type = "local"
+source = "$CODEX_HOME/.tmp/bundled-marketplaces/openai-bundled"
+
+[mcp_servers.cua_repl]
+command = "/Applications/ChatGPT.app/Contents/MacOS/ChatGPT"
+enabled = false
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
