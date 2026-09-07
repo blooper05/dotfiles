@@ -4,10 +4,6 @@ model = "gpt-6-astra"
 model_reasoning_effort = "medium"
 personality = "pragmatic"
 
-[marketplaces.openai-bundled]
-source_type = "local"
-source = "$XDG_CONFIG_HOME/codex/.tmp/bundled-marketplaces/openai-bundled"
-
 [marketplaces.openai-primary-runtime]
 source_type = "local"
 source = "$XDG_CACHE_HOME/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
