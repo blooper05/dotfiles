@@ -6,6 +6,7 @@ personality = "pragmatic"
 
 [desktop]
 followUpQueueMode = "queue"
+projectlessWorkspaceRoot = "$XDG_DATA_HOME/codex/tasks"
 
 [features]
 browser_use = false
