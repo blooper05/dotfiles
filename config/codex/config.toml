@@ -9,6 +9,9 @@ appearanceDarkCodeThemeId = "codex"
 appearanceLightCodeThemeId = "codex"
 
 [features]
+browser_use = false
+browser_use_external = false
+browser_use_full_cdp_access = false
 plugins = false
 workspace_dependencies = false
 
