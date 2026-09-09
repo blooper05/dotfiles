@@ -237,7 +237,7 @@
     "superpowers@claude-plugins-official": false,
     "eli5@claude-community": true,
     "codex@openai-codex": true,
-    "crit@crit": false
+    "crit@crit": true
   },
   "extraKnownMarketplaces": {
     "claude-code-plugins": {
