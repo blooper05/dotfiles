@@ -83,7 +83,7 @@ tfupdate = "0.10.2"
 "aqua:openclaw/gogcli" = "0.39.1"
 "aqua:vercel-labs/agent-browser" = "0.36.0"
 "go:github.com/hashicorp/terraform-mcp-server/cmd/terraform-mcp-server" = "1.3.0"
-"http:twg" = { version = "1.2.7", url = "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v{{ version }}", bin = "twg", checksum = "sha256:5cf4144c00a680571155e080987960a28a6a44d9227ed533a8ad52d8531715a3" }
+"http:twg" = { version = "1.3.1", url = "https://teamwork-graph.atlassian.com/cli/twg-darwin-arm64-v{{ version }}", bin = "twg", checksum = "sha256:07c08244dd7e435809f9356f69a645e47b643e78024eb774c902bdad3df0a1ac" }
 "npm:@drawio/mcp" = "1.5.0"
 "npm:@modelcontextprotocol/server-sequential-thinking" = "2026.8.31"
 "npm:ctx7" = "0.5.10"
