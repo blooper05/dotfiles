@@ -7,7 +7,7 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_NEW_INIT": "1",
     "CLAUDE_CODE_NO_FLICKER": "1",
-    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-sonnet-5",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-sonnet-5-5",
     "DISABLE_AUTOUPDATER": "1",
     "DISABLE_AUTO_COMPACT": "1",
     "DISABLE_ERROR_REPORTING": "1",
@@ -183,7 +183,7 @@
     ],
     "defaultMode": "plan"
   },
-  "model": "opus[1m]",
+  "model": "claude-opus-5-5",
   "hooks": {
     "PreToolUse": [
       {
@@ -285,14 +285,14 @@
     "claude-fable-5-1": {
       "effortLevel": "low"
     },
-    "claude-sonnet-5": {
-      "effortLevel": "medium"
+    "claude-sonnet-5-5": {
+      "effortLevel": "high"
     },
-    "claude-opus-5": {
-      "effortLevel": "xhigh"
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
     }
   },
-  "advisorModel": "fable",
+  "advisorModel": "claude-fable-5-1",
   "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
