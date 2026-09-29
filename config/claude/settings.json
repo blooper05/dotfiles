@@ -20,7 +20,10 @@
     "MAX_THINKING_TOKENS": "31999",
     "USE_BUILTIN_RIPGREP": "1"
   },
-  "includeCoAuthoredBy": false,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "Bash(actionlint *)",
