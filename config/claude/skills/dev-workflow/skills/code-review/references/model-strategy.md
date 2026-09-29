@@ -5,26 +5,26 @@ based on its reasoning requirements.
 
 ## Tiers
 
-| Tier     | Model   | Use Case                                    |
-| -------- | ------- | ------------------------------------------- |
-| Deep     | opus    | Multi-step logic, bug verification, history |
-| Pattern  | sonnet  | Rule matching, pattern scanning             |
-| Standard | inherit | Straightforward, template-based analysis    |
+| Tier     | Model             | Use Case                                    |
+| -------- | ----------------- | ------------------------------------------- |
+| Deep     | claude-opus-5-5   | Multi-step logic, bug verification, history |
+| Pattern  | claude-sonnet-5-5 | Rule matching, pattern scanning             |
+| Standard | claude-sonnet-5-5 | Straightforward, template-based analysis    |
 
 ## Agent Assignments
 
-| Agent                  | Model   | Rationale                                  |
-| ---------------------- | ------- | ------------------------------------------ |
-| bug-detector           | opus    | Multi-phase reasoning across diff + history |
-| issue-validator        | inherit | Dispatches to opus/sonnet per issue type   |
-| security-reviewer      | sonnet  | OWASP pattern matching + secret scanning   |
-| claude-md-auditor      | sonnet  | Rule scoping and text matching             |
-| silent-failure-hunter  | inherit | Error-pattern recognition                  |
-| comment-analyzer       | inherit | Comment-to-code cross-reference            |
-| test-coverage-analyzer | inherit | Behavioral gap identification              |
-| type-design-analyzer   | inherit | Structural analysis                        |
-| code-simplifier        | inherit | Complexity pattern detection               |
-| performance-analyzer   | inherit | Performance anti-pattern detection         |
+| Agent                  | Model             | Rationale                                  |
+| ---------------------- | ----------------- | ------------------------------------------ |
+| bug-detector           | claude-opus-5-5   | Multi-phase reasoning across diff + history |
+| issue-validator        | claude-opus-5-5   | Dispatches to opus/sonnet per issue type   |
+| security-reviewer      | claude-sonnet-5-5 | OWASP pattern matching + secret scanning   |
+| claude-md-auditor      | claude-sonnet-5-5 | Rule scoping and text matching             |
+| silent-failure-hunter  | claude-sonnet-5-5 | Error-pattern recognition                  |
+| comment-analyzer       | claude-sonnet-5-5 | Comment-to-code cross-reference            |
+| test-coverage-analyzer | claude-sonnet-5-5 | Behavioral gap identification              |
+| type-design-analyzer   | claude-sonnet-5-5 | Structural analysis                        |
+| code-simplifier        | claude-sonnet-5-5 | Complexity pattern detection               |
+| performance-analyzer   | claude-sonnet-5-5 | Performance anti-pattern detection         |
 
 ## Issue Validator Internal Dispatch
 
