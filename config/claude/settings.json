@@ -312,5 +312,7 @@
   "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
   "useAutoModeDuringPlan": true,
-  "voiceEnabled": true
+  "voice": {
+    "enabled": true
+  }
 }
