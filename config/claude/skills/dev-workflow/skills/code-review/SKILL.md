@@ -8,6 +8,7 @@ description: >-
   "audit code quality", "review local changes",
   "review diff", or needs any form of code quality check.
   Supports both local changes and GitHub pull requests.
+disable-model-invocation: true
 allowed-tools:
   - Bash(git diff:*)
   - Bash(git status:*)
