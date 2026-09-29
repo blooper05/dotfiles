@@ -21,7 +21,7 @@ description: >
   N+1 queries, and other performance anti-patterns.
   </commentary>
   </example>
-model: inherit
+model: claude-sonnet-5-5
 color: purple
 ---
 

@@ -20,7 +20,7 @@ description: >
   including logic errors and race conditions.
   </commentary>
   </example>
-model: opus
+model: claude-opus-5-5
 color: red
 ---
 

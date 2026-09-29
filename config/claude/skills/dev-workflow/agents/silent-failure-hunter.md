@@ -20,7 +20,7 @@ description: |
   to thoroughly examine the error handling in your changes."
   <Task tool invocation to launch silent-failure-hunter agent>
   </example>
-model: inherit
+model: claude-sonnet-5-5
 color: orange
 ---
 

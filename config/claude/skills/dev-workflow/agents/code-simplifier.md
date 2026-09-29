@@ -23,7 +23,7 @@ description: |
   and maintainability while preserving functionality.
   </commentary>
   </example>
-model: inherit
+model: claude-sonnet-5-5
 color: white
 ---
 

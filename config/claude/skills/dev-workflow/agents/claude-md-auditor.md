@@ -21,7 +21,7 @@ description: >
   project-specific guidelines before committing.
   </commentary>
   </example>
-model: sonnet
+model: claude-sonnet-5-5
 color: blue
 ---
 

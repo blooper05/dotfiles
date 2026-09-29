@@ -37,18 +37,18 @@ Output format template: see `references/output-format.md`
 
 ## Available Agents
 
-| Agent                    | Model   | Color   | Focus Area                        |
-| ------------------------ | ------- | ------- | --------------------------------- |
-| `bug-detector`           | opus    | red     | Bugs, logic errors                |
-| `security-reviewer`      | sonnet  | magenta | OWASP Top 10, secrets             |
-| `claude-md-auditor`      | sonnet  | blue    | CLAUDE.md compliance              |
-| `silent-failure-hunter`  | inherit | orange  | Error handling, silent failures   |
-| `comment-analyzer`       | inherit | green   | Comment accuracy                  |
-| `test-coverage-analyzer` | inherit | cyan    | Test coverage gaps                |
-| `type-design-analyzer`   | inherit | pink    | Type design, invariants           |
-| `code-simplifier`        | inherit | white   | Simplification                    |
-| `performance-analyzer`   | inherit | purple  | Performance issues                |
-| `issue-validator`        | inherit | yellow  | Post-validation gate, FP removal  |
+| Agent                    | Model             | Color   | Focus Area                        |
+| ------------------------ | ----------------- | ------- | --------------------------------- |
+| `bug-detector`           | claude-opus-5-5   | red     | Bugs, logic errors                |
+| `security-reviewer`      | claude-sonnet-5-5 | magenta | OWASP Top 10, secrets             |
+| `claude-md-auditor`      | claude-sonnet-5-5 | blue    | CLAUDE.md compliance              |
+| `silent-failure-hunter`  | claude-sonnet-5-5 | orange  | Error handling, silent failures   |
+| `comment-analyzer`       | claude-sonnet-5-5 | green   | Comment accuracy                  |
+| `test-coverage-analyzer` | claude-sonnet-5-5 | cyan    | Test coverage gaps                |
+| `type-design-analyzer`   | claude-sonnet-5-5 | pink    | Type design, invariants           |
+| `code-simplifier`        | claude-sonnet-5-5 | white   | Simplification                    |
+| `performance-analyzer`   | claude-sonnet-5-5 | purple  | Performance issues                |
+| `issue-validator`        | claude-opus-5-5   | yellow  | Post-validation gate, FP removal  |
 
 ---
 
@@ -177,17 +177,17 @@ Each agent receives the full context package from Step 2.
 Agent-specific instructions are in their `.md` files
 under the `agents/` directory.
 
-| #  | Agent                  | Model   |
-| -- | ---------------------- | ------- |
-| 1  | bug-detector           | opus    |
-| 2  | security-reviewer      | sonnet  |
-| 3  | claude-md-auditor      | sonnet  |
-| 4  | silent-failure-hunter  | inherit |
-| 5  | comment-analyzer       | inherit |
-| 6  | test-coverage-analyzer | inherit |
-| 7  | type-design-analyzer   | inherit |
-| 8  | code-simplifier        | inherit |
-| 9  | performance-analyzer   | inherit |
+| #  | Agent                  | Model             |
+| -- | ---------------------- | ----------------- |
+| 1  | bug-detector           | claude-opus-5-5   |
+| 2  | security-reviewer      | claude-sonnet-5-5 |
+| 3  | claude-md-auditor      | claude-sonnet-5-5 |
+| 4  | silent-failure-hunter  | claude-sonnet-5-5 |
+| 5  | comment-analyzer       | claude-sonnet-5-5 |
+| 6  | test-coverage-analyzer | claude-sonnet-5-5 |
+| 7  | type-design-analyzer   | claude-sonnet-5-5 |
+| 8  | code-simplifier        | claude-sonnet-5-5 |
+| 9  | performance-analyzer   | claude-sonnet-5-5 |
 
 ---
 
@@ -199,7 +199,7 @@ collect all issues with confidence >= 80.
 If no issues meet this threshold, skip to Step 5
 with an empty validated list.
 
-Otherwise, launch the **`issue-validator`** agent (opus)
+Otherwise, launch the **`issue-validator`** agent (`claude-opus-5-5`)
 with:
 
 - The full diff text

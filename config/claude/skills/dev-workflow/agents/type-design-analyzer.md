@@ -20,7 +20,7 @@ description: >
   for type-design-analyzer review.
   </commentary>
   </example>
-model: inherit
+model: claude-sonnet-5-5
 color: pink
 ---
 

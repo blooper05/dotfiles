@@ -20,7 +20,7 @@ description: >
   and hardcoded secrets in PR changes.
   </commentary>
   </example>
-model: sonnet
+model: claude-sonnet-5-5
 color: magenta
 ---
 

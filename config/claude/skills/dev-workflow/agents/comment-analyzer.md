@@ -17,7 +17,7 @@ description: |
   to thoroughly review all the comments in this pull request
   for accuracy and completeness."
   </example>
-model: inherit
+model: claude-sonnet-5-5
 color: green
 ---
 

@@ -19,7 +19,7 @@ description: >
   missing edge cases and error paths.
   </commentary>
   </example>
-model: inherit
+model: claude-sonnet-5-5
 color: cyan
 ---
 

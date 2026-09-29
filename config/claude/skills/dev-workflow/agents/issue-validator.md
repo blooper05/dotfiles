@@ -22,7 +22,7 @@ description: >
   to produce a high-signal final list.
   </commentary>
   </example>
-model: inherit
+model: claude-opus-5-5
 color: yellow
 ---
 
