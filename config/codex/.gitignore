@@ -19,6 +19,7 @@
 /vendor_imports/
 /.codex-global-state.json
 /.codex-global-state.json.bak
+/.sqlite-maintenance.lock
 /auth.json
 /chrome-native-hosts-v2.json
 /goals_1.sqlite
