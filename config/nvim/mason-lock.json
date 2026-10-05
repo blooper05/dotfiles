@@ -16,7 +16,7 @@
   "lua-language-server": "3.19.1",
   "markdown-oxide": "v0.25.12",
   "marksman": "2026-02-08",
-  "postgres-language-server": "0.25.7",
+  "postgres-language-server": "0.26.0",
   "python-lsp-server": "1.15.0",
   "remark-language-server": "3.0.0",
   "ruby-lsp": "0.26.11",
