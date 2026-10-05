@@ -227,6 +227,7 @@
     "command": "c-c-statusline --theme=nord"
   },
   "enabledPlugins": {
+    "cc-plugin-you-should-know@builtin": true,
     "code-review@claude-code-plugins": false,
     "feature-dev@claude-code-plugins": false,
     "pr-review-toolkit@claude-code-plugins": false,
