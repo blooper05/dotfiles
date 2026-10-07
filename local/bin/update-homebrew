@@ -18,21 +18,21 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 	gh skill install agavra/tuicr --all '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
 fi
 
-/usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:DOCKER_CONFIG" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
-/usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:LIMA_HOME" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
-/usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:COLIMA_HOME" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
+/usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:DOCKER_CONFIG" /opt/homebrew/opt/colima/sh.brew.colima.plist
+/usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:LIMA_HOME" /opt/homebrew/opt/colima/sh.brew.colima.plist
+/usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:COLIMA_HOME" /opt/homebrew/opt/colima/sh.brew.colima.plist
 
-/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:DOCKER_CONFIG string $HOME/.config/docker" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
-/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:LIMA_HOME string $HOME/.local/share/lima" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
-/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:COLIMA_HOME string $HOME/.local/share/colima" /opt/homebrew/opt/colima/homebrew.mxcl.colima.plist
+/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:DOCKER_CONFIG string $HOME/.config/docker" /opt/homebrew/opt/colima/sh.brew.colima.plist
+/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:LIMA_HOME string $HOME/.local/share/lima" /opt/homebrew/opt/colima/sh.brew.colima.plist
+/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:COLIMA_HOME string $HOME/.local/share/colima" /opt/homebrew/opt/colima/sh.brew.colima.plist
 
 brew services restart colima
 
 rm -rf "$HOME/.colima/"
 rm -rf "$HOME/.docker/"
 
-/usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:OLLAMA_MODELS" /opt/homebrew/opt/ollama/homebrew.mxcl.ollama.plist
+/usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:OLLAMA_MODELS" /opt/homebrew/opt/ollama/sh.brew.ollama.plist
 
-/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:OLLAMA_MODELS string $HOME/.local/share/ollama/models" /opt/homebrew/opt/ollama/homebrew.mxcl.ollama.plist
+/usr/libexec/PlistBuddy -c "Add :EnvironmentVariables:OLLAMA_MODELS string $HOME/.local/share/ollama/models" /opt/homebrew/opt/ollama/sh.brew.ollama.plist
 
 brew services restart ollama
