@@ -297,6 +297,9 @@
   },
   "advisorModel": "claude-fable-5-1",
   "tui": "fullscreen",
+  "voice": {
+    "enabled": true
+  },
   "autoMemoryEnabled": false,
   "showThinkingSummaries": true,
   "skipWorkflowUsageWarning": true,
@@ -312,8 +315,5 @@
   "showTurnDuration": true,
   "terminalProgressBarEnabled": true,
   "teammateMode": "auto",
-  "useAutoModeDuringPlan": true,
-  "voice": {
-    "enabled": true
-  }
+  "useAutoModeDuringPlan": true
 }
