@@ -1,0 +1,14 @@
+{
+  "$schema" : "schema.json",
+  "appExceptions" : [
+    {
+      "bundleID" : "com.apple.finder",
+      "hide" : "whenNoWindows",
+      "ignore" : "never"
+    }
+  ],
+  "nextScopedShortcutID" : 0,
+  "scopedShortcutList" : [
+
+  ]
+}
