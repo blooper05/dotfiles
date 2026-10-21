@@ -22,5 +22,7 @@
 /daemon.log
 /history.jsonl
 /mcp-needs-auth-cache.json
+/policy-limits.json.signature-iat.json
+/policy-limits.json.signature.json
 /policy-limits.json.stamp.json
 /stats-cache.json
