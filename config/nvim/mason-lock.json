@@ -13,10 +13,10 @@
   "html-lsp": "4.10.0",
   "json-lsp": "4.10.0",
   "jsonnet-language-server": "v0.17.0",
-  "lua-language-server": "3.19.1",
+  "lua-language-server": "3.19.2",
   "markdown-oxide": "v0.25.12",
   "marksman": "2026-02-08",
-  "postgres-language-server": "0.27.1",
+  "postgres-language-server": "0.28.2",
   "python-lsp-server": "1.15.0",
   "remark-language-server": "3.0.0",
   "ruby-lsp": "0.26.11",
@@ -25,6 +25,6 @@
   "stylelint-lsp": "2.0.1",
   "taplo": "0.10.0",
   "terraform-ls": "v0.39.0",
-  "typescript-language-server": "6.0.1",
-  "yaml-language-server": "1.24.0"
+  "typescript-language-server": "6.0.2",
+  "yaml-language-server": "2.0.0"
 }
