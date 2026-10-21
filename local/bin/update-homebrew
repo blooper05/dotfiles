@@ -19,6 +19,7 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 	gh skill install mattpocock/skills grill-me '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
 	gh skill install mattpocock/skills grill-with-docs '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
 	gh skill install mattpocock/skills grilling '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
+	gh skill install nanaism/yomiyasu yomiyasu '--agent=claude-code' '--scope=user' --allow-hidden-dirs --force
 fi
 
 /usr/libexec/PlistBuddy -c "Delete :EnvironmentVariables:DOCKER_CONFIG" /opt/homebrew/opt/colima/sh.brew.colima.plist
