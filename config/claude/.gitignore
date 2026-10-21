@@ -25,4 +25,7 @@
 /policy-limits.json.signature-iat.json
 /policy-limits.json.signature.json
 /policy-limits.json.stamp.json
+/remote-settings.json.signature-iat.json
+/remote-settings.json.signature.json
+/remote-settings.json.synced-at
 /stats-cache.json
