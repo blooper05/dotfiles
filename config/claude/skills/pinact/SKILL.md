@@ -6,7 +6,7 @@ description: |-
     Use it too when a workflow fails a pinact check in CI, or when an action isn't pinned and it isn't clear why.
 metadata:
     github-path: skills/pinact
-    github-ref: refs/tags/v5.0.0
+    github-ref: refs/tags/v5.0.1
     github-repo: https://github.com/suzuki-shunsuke/pinact
     github-tree-sha: 18df7e16e6048abf1740043ce814853ee63e80aa
 name: pinact
