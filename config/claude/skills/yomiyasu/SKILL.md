@@ -3,10 +3,10 @@ description: AIが生成した日本語を推敲するスキル。利用者が y
 license: MIT
 metadata:
     github-path: skills/yomiyasu
-    github-ref: refs/tags/v2.1.1
+    github-ref: refs/tags/v2.1.2
     github-repo: https://github.com/nanaism/yomiyasu
-    github-tree-sha: c0de4f4faa5fdce2c79a2d68ba2f4ffd0d5486eb
-    version: 2.1.1
+    github-tree-sha: 665ed5b9506537ae26c18e59b8697f94a7ff55d3
+    version: 2.1.2
 name: yomiyasu
 ---
 # yomiyasu
