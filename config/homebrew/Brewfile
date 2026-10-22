@@ -45,9 +45,9 @@ brew "wordnet"
 brew "xh"
 brew "yq"
 brew "zsh"
-brew "agavra/tap/tuicr"
-brew "k1low/tap/git-wt"
-brew "k1low/tap/roots"
+brew "agavra/tap/tuicr", trusted: true
+brew "k1low/tap/git-wt", trusted: true
+brew "k1low/tap/roots", trusted: true
 
 cask "1password"
 cask "1password-cli"
@@ -107,7 +107,7 @@ cask "twingate"
 cask "yaak"
 # cask "zeplin"
 # cask "zoom"
-cask "blooper05/tap/kanary"
+cask "blooper05/tap/kanary", trusted: true
 
 # mas "DaVinci Resolve", id: 571213070
 # mas "EdgeView 2", id: 1206246482
