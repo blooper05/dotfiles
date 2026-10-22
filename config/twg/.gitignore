@@ -1,3 +1,4 @@
+/tenant-contexts/
 /accessible-sites-*.json
 /auth.conf
 /auth_oauth.conf
