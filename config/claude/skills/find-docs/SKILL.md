@@ -5,7 +5,7 @@ description: |-
     Use even when you think you know the answer — do not rely on training data for API details, signatures, or configuration options as they are frequently outdated. Always verify against current docs. Prefer this over web search for library documentation and API details.
 metadata:
     github-path: skills/find-docs
-    github-ref: refs/tags/@upstash/context7-mcp@4.4.4
+    github-ref: refs/tags/@upstash/context7-sdk@0.6.0
     github-repo: https://github.com/upstash/context7
     github-tree-sha: 9bd51dc72e6807bb88171b59ca2ed8dc117361e2
 name: find-docs
