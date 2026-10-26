@@ -2,7 +2,7 @@
 description: Use tuicr's review CLI to read and add comments in active TUI review sessions, and launch tuicr in cmux, tmux, Zellij, or Herdr when a user needs an interactive review pane.
 metadata:
     github-path: skills/tuicr
-    github-ref: refs/tags/v0.27.0
+    github-ref: refs/tags/v0.28.0
     github-repo: https://github.com/agavra/tuicr
     github-tree-sha: 0034f4b0686e5856ab7950653f5b517bbde99a03
 name: tuicr
